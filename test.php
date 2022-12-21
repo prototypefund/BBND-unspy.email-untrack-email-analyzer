@@ -7,4 +7,5 @@ use Geeks4change\BbndAnalyzer\NullAnalysisBuilder;
 include 'vendor/autoload.php';
 $analyzer = new Analyzer();
 $analysis = new NullAnalysisBuilder();
-$analyzer->analyze($analysis, file_get_contents('/home/merlin/Code-Incubator/bbnd/_Emails/Prototype Fund - Infoletter.eml'));
+//$analyzer->analyze($analysis, file_get_contents('/home/merlin/Code-Incubator/bbnd/_Emails/Prototype Fund - Infoletter.eml'));
+$analyzer->analyze($analysis, file_get_contents('/home/merlin/Code-Incubator/bbnd/_Emails/VÖÖ Newsletter _ Juni 2022.eml'));

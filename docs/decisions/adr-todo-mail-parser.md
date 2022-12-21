@@ -1,0 +1,13 @@
+## ADR: Parse Emails
+- https://github.com/php-mime-mail-parser/php-mime-mail-parser
+  - Only extension wrapper
+- https://stackoverflow.com/questions/4721410/best-way-to-handle-email-parsing-decoding-in-php
+- https://github.com/daniele-occhipinti/php-email-parser
+  - Dead
+- https://packagist.org/packages/zbateson/mail-mime-parser
+  - https://github.com/zbateson/mail-mime-parser
+  - https://mail-mime-parser.org/
+- https://sigparser.com/developers/email-parsing/parse-raw-email/
+- https://gist.github.com/tylermakin/d820f65eb3c9dd98d58721c7fb1939a8
+- https://www.w3.org/Protocols/rfc1341/7_2_Multipart.html
+- 

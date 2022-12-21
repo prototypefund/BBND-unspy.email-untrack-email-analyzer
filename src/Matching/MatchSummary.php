@@ -9,12 +9,7 @@ class MatchSummary {
   /**
    * @var array<\Geeks4change\BbndAnalyzer\Matching\MatchByDomain>
    */
-  protected array $matchByDomainList;
-
-  /**
-   * @var array<\Geeks4change\BbndAnalyzer\Matching\MatchByPattern>
-   */
-  protected array $matchByPatternList;
+  protected array $matchList;
 
   protected string $matchLevel;
 
@@ -23,27 +18,26 @@ class MatchSummary {
   protected bool $mayNeedResearch;
 
   /**
-   * @param \Geeks4change\BbndAnalyzer\Matching\MatchByDomain[] $matchByDomainList
-   * @param \Geeks4change\BbndAnalyzer\Matching\MatchByPattern[] $matchByPatternList
+   * @param \Geeks4change\BbndAnalyzer\Matching\MatchByDomain[] $matchList
    * @param string $matchLevel
    * @param string $toolId
    * @param bool $mayNeedResearch
    */
-  public function __construct(array $matchByDomainList, array $matchByPatternList, string $matchLevel, string $toolId, bool $mayNeedResearch) {
-    $this->matchByDomainList = $matchByDomainList;
-    $this->matchByPatternList = $matchByPatternList;
+  public function __construct(array $matchList, string $matchLevel, string $toolId, bool $mayNeedResearch) {
+    $this->matchList = $matchList;
     $this->matchLevel = $matchLevel;
     $this->toolId = $toolId;
     $this->mayNeedResearch = $mayNeedResearch;
   }
+
 
   /**
    * The only way to construct a MatchSummary.
    */
   public static function builder(): MatchSummaryBuilder {
     return new MatchSummaryBuilder(\Closure::fromCallable(
-      fn($matchByDomainList, $matchByPatternList, $matchLevel, $toolId, $mayNeedResearch) =>
-      new self($matchByDomainList, $matchByPatternList, $matchLevel, $toolId, $mayNeedResearch)
+      fn($matchList, $matchLevel, $toolId, $mayNeedResearch) =>
+      new self($matchList, $matchLevel, $toolId, $mayNeedResearch)
     ));
   }
 

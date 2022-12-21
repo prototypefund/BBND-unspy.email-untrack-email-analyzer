@@ -5,14 +5,9 @@ namespace Geeks4change\BbndAnalyzer\Matching;
 class MatchSummaryBuilder {
 
   /**
-   * @var array<\Geeks4change\BbndAnalyzer\Matching\MatchByDomain>
+   * @var array<\Geeks4change\BbndAnalyzer\Matching\MatchBase>
    */
-  protected array $matchByDomainList = [];
-
-  /**
-   * @var array<\Geeks4change\BbndAnalyzer\Matching\MatchByPattern>
-   */
-  protected array $matchByPatternList = [];
+  protected array $matchList = [];
 
   protected \Closure $constructor;
 
@@ -23,12 +18,8 @@ class MatchSummaryBuilder {
     $this->constructor = $constructor;
   }
 
-  public function addMatchByDomain(MatchByDomain $match) {
-    $this->matchByDomainList[] = $match;
-  }
-
-  public function addMatchByPattern(MatchByPattern $match) {
-    $this->matchByPatternList[] = $match;
+  public function addMatch(MatchBase $match) {
+    $this->matchList[] = $match;
   }
 
   public function freeze(): MatchSummary {
@@ -36,7 +27,7 @@ class MatchSummaryBuilder {
     $matchLevel = 0;
     $toolId = '';
     $mayNeedResearch = FALSE;
-    return ($this->constructor)($this->matchByDomainList, $this->matchByPatternList, $matchLevel, $toolId, $mayNeedResearch);
+    return ($this->constructor)($this->matchList, $matchLevel, $toolId, $mayNeedResearch);
   }
 
 }

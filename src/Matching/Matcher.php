@@ -15,6 +15,7 @@ class Matcher {
     $matchSummaryBuilder = MatchSummary::builder();
     /** @var \Geeks4change\BbndAnalyzer\DomElement\DomElementInterface $domElement */
     foreach ($domElementCollection as $domElement) {
+      $domElementHasMatch = FALSE;
 
       // @todo Only match domain when no link match.
       // @todo Add a "none" match when no match.
@@ -27,41 +28,44 @@ class Matcher {
         // - NoMatch
         // Note that if one domElement can be matched by more than one
         // toolPattern, but if it is, then one of them must be broken.
-        $currentMatch = NULL;
+        $domElementToolPatternMatch = NULL;
 
         // Try matching a specific PatternMatch
         if ($domElement instanceof Link) {
           /** @var \Geeks4change\BbndAnalyzer\Pattern\UrlPatternForLink $linkPattern */
           foreach ($toolPattern->getLinkPatterns() as $linkPattern) {
             if ($linkPattern->matches($domElement)) {
-              $currentMatch = new MatchByPattern($domElement, $linkPattern);
+              $domElementToolPatternMatch = new MatchByPattern($domElement, $linkPattern);
             }
           }
         }
-        if ($domElement instanceof Image) {
+        elseif ($domElement instanceof Image) {
           /** @var \Geeks4change\BbndAnalyzer\Pattern\UrlPatternForImage $imagePattern */
           foreach ($toolPattern->getImagePatterns() as $imagePattern) {
             if ($imagePattern->matches($domElement)) {
-              $currentMatch = new MatchByPattern($domElement, $imagePattern);
+              $domElementToolPatternMatch = new MatchByPattern($domElement, $imagePattern);
             }
           }
         }
 
         // If none, try matching an unspecific DomainMatch.
-        if (!$currentMatch) {
+        if (!$domElementToolPatternMatch) {
           foreach ($toolPattern->getDomainPatterns() as $domainPattern) {
             if ($domainPattern->matches($domElement->getUrl()->getHost())) {
-              $currentMatch = new MatchByDomain($domElement, $domainPattern);
+              $domElementToolPatternMatch = new MatchByDomain($domElement, $domainPattern);
             }
           }
         }
 
         // Otherwise record MatchNone
-        if (!$currentMatch) {
-          $currentMatch = new MatchNone($domElement);
+        if ($domElementToolPatternMatch) {
+          $domElementHasMatch = TRUE;
+          $matchSummaryBuilder->addMatch($domElementToolPatternMatch);
         }
-        $matchSummaryBuilder->addMatch($currentMatch);
 
+      }
+      if (!$domElementHasMatch) {
+        $matchSummaryBuilder->addMatch(new MatchNone($domElement));
       }
     }
     return $matchSummaryBuilder->freeze();

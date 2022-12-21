@@ -25,8 +25,13 @@ abstract class UrlPatternBase {
   }
 
   protected function doMatches(DomElementInterface $domElement): bool {
-    $regex = preg_replace('#{.*?}#u', '[^/]+', $this->pattern);
-    return preg_match("#{$regex}$#u", $domElement->getUrl()->getUrl());
+    $quotedPattern = preg_quote($this->pattern, '#');
+    $regexPart = preg_replace('#\\\\{.*?\\\\}#u', '[^/]+', $quotedPattern);
+    $url = $domElement->getUrl()->getUrl();
+    $regex = "#{$regexPart}$#u";
+    /** @noinspection PhpUnnecessaryLocalVariableInspection */
+    $match = preg_match($regex, $url);
+    return $match;
   }
 
 }

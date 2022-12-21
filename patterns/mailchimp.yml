@@ -36,7 +36,7 @@ link_patterns:
     pattern: 'www.mailchimp.com/email-referral/?utm_source={}&utm_medium=email&utm_campaign=referral_marketing&aid={}&afl=1'
     tracking: 'user'
     type: 'marketing'
-image-patterns:
+image_patterns:
   # https://mcusercontent.com/b00ccdbb39a8456492b99ae9e/images/e855e0cb-25e8-47a9-8f3f-eb89de3776b6.png
   'user_content.2022':
     pattern: 'mcusercontent.com/{}/images/{}.{image_extension}'

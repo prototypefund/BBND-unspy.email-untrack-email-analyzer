@@ -9,32 +9,36 @@ notes:
 link_patterns:
   # https://te917244a.emailsys1a.net/mailing/172/5915295/8119411/2257/5df4c8bb52/index.html
   'webview.2022':
-    pattern: 'emailsys1a.net/mailing/{}/{}/{}/{}/{}/index.html'
+    pattern: '{}.emailsys1a.net/mailing/{}/{}/{}/{}/{}/index.html'
     tracking: 'user'
     type: 'webview'
   # https://te917244a.emailsys1a.net/c/172/5915295/4365/0/8119411/2257/239319/e4709c54da.html
   'user_tracking_link.2022':
-    pattern: 'emailsys1a.net/c/{}/{}/{}/{}/{}/{}/{}.html'
+    pattern: '{}.emailsys1a.net/c/{}/{}/{}/{}/{}/{}/{}/{}.html'
     tracking: 'user'
     type: link
   # https://te917244a.emailsys1a.net/172/5915295/4365/8119411/2257/15b69c7eb7/unsubscribe.html
+  'subscribe.2022':
+    pattern: '{}.emailsys1a.net/{}/{}/{}/subscribe/form.html?_g={}'
+    tracking: 'user'
+    type: 'subscribe'
   'unsubscribe.2022':
-    pattern: 'emailsys1a.net/c/{}/{}/{}/{}/{}/{}/{}.html'
+    pattern: '{}.emailsys1a.net/{}/{}/{}/{}/{}/{}/unsubscribe.html'
     tracking: 'user'
     type: 'unsubscribe'
-image-patterns:
+image_patterns:
   # https://c.emailsys1a.net/mailingassets/175e8cd0faf670c547c895b9506942d0c6a7bcbc.jpg
   'user_content.2022':
-    pattern: 'emailsys1a.net/mailingassets/{}.{image_extension}'
+    pattern: 'c.emailsys1a.net/mailingassets/{}.{image_extension}'
     tracking: 'unknown'
     type: 'user_content'
   # https://c.emailsys1a.net/mailingeditor/social/icon/colored/web.png
-  'image.no_tracking.system_provided_2022':
-    pattern: 'emailsys1a.net/mailingeditor/social/icon/colored/{}.{image_extension}'
+  'tool_image.2022':
+    pattern: 'c.emailsys1a.net/mailingeditor/social/icon/colored/{}.{image_extension}'
     tracking: 'none'
     type: 'tool_content'
   # https://te917244a.emailsys1a.net/o/172/5915295/4365/0/8119411/2257/a0e72ccaaa.gif
   'tracking_pixel_2022':
-    pattern: 'emailsys1a.net/o/{}/{}/{}/{}/{}/{}/{}.gif'
+    pattern: '{}.emailsys1a.net/o/{}/{}/{}/{}/{}/{}/{}.gif'
     tracking: 'user'
     type: 'tracking_pixel'

@@ -29,7 +29,7 @@ class Analyzer {
 
     $matcher = new Matcher();
     $matchSummary = $matcher->match($domElementCollection);
-    dump($matchSummary);
+    $analysis->setMatchSummary($matchSummary);
 
     // LATER Possibly resolve CNames from target URLs.
     # $analysis->audit('Resolved CNames.');

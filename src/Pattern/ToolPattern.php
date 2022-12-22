@@ -49,12 +49,12 @@ final class ToolPattern {
     );
     $linkPatterns = array_map(
       fn($value, $key) => UrlPatternForLink::fromItem($value, $key),
-      $array['link_patterns'] ?? [],
+      $array['links'] ?? [],
       array_keys($array['link_patterns'] ?? []),
     );
     $imagePatterns = array_map(
       fn($value, $key) => UrlPatternForImage::fromItem($value, $key),
-    $array['image_patterns'] ?? [],
+    $array['images'] ?? [],
       array_keys($array['image_patterns'] ?? []),
     );
     return new self(

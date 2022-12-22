@@ -2,12 +2,10 @@
 
 namespace Geeks4change\BbndAnalyzer\Matching;
 
-use Geeks4change\BbndAnalyzer\Pattern\ToolPatternCollectionBuilder;
-
 class MatchSummary {
 
   /**
-   * @var array<\Geeks4change\BbndAnalyzer\Matching\MatchByDomain>
+   * @var array<\Geeks4change\BbndAnalyzer\Matching\MatchBase>
    */
   protected array $matchList;
 
@@ -18,7 +16,7 @@ class MatchSummary {
   protected bool $mayNeedResearch;
 
   /**
-   * @param \Geeks4change\BbndAnalyzer\Matching\MatchByDomain[] $matchList
+   * @param \Geeks4change\BbndAnalyzer\Matching\MatchBase[] $matchList
    * @param string $matchLevel
    * @param string $toolId
    * @param bool $mayNeedResearch
@@ -35,10 +33,18 @@ class MatchSummary {
    * The only way to construct a MatchSummary.
    */
   public static function builder(): MatchSummaryBuilder {
+    // @fixme Remove obsoleted properties.
     return new MatchSummaryBuilder(\Closure::fromCallable(
       fn($matchList, $matchLevel, $toolId, $mayNeedResearch) =>
       new self($matchList, $matchLevel, $toolId, $mayNeedResearch)
     ));
+  }
+
+  /**
+   * @return  array<\Geeks4change\BbndAnalyzer\Matching\MatchBase>
+   */
+  public function getMatchList(): array {
+    return $this->matchList;
   }
 
 }

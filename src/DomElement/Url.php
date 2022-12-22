@@ -5,6 +5,7 @@ namespace Geeks4change\BbndAnalyzer\DomElement;
 final class Url {
 
   protected string $url;
+  protected string $relevantUrl;
 
   protected string $host;
 
@@ -16,11 +17,13 @@ final class Url {
    * @param string $url
    */
   public function __construct(string $url) {
-    $this->url = $url;
     $parts = parse_url($url);
+    $this->url = $url;
     $this->host = $parts['host'] ?? '';
     $this->path = $parts['path'] ?? '';
     $this->query = $parts['query'] ?? '';
+    $this->relevantUrl = "{$this->host}{$this->path}"
+      . ($this->query ? "?$this->query" : '');
   }
 
   /**
@@ -28,6 +31,13 @@ final class Url {
    */
   public function getUrl(): string {
     return $this->url;
+  }
+
+  /**
+   * @return string
+   */
+  public function getRelevantUrl(): string {
+    return $this->relevantUrl;
   }
 
   /**

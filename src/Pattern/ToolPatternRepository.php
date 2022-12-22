@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Geeks4change\BbndAnalyzer\Pattern;
 
+use Symfony\Component\Yaml\Exception\ParseException;
 use Symfony\Component\Yaml\Yaml;
 
 final class ToolPatternRepository {
@@ -24,7 +25,12 @@ final class ToolPatternRepository {
           continue;
         }
         $yaml = file_get_contents($filePath);
-        $array = Yaml::parse($yaml);
+        try {
+          $array = Yaml::parse($yaml);
+
+        } catch (ParseException $exception) {
+          throw new \LogicException("Oops in $id.xml", 0, $exception);
+        }
         $pattern = ToolPattern::fromArray($id, $array);
         $patternCollectionBuilder->add($pattern);
       }

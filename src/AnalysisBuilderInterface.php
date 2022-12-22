@@ -2,13 +2,17 @@
 
 namespace Geeks4change\BbndAnalyzer;
 
+use Geeks4change\BbndAnalyzer\Matching\MatchSummary;
+
 interface AnalysisBuilderInterface {
 
   public function audit(string $message): void;
 
-  public function isValid(): bool;
+  public function setIsValid(): bool;
 
-  public function setEmailWithHeaders(): void;
-  public function setNewsletterMetadata(): void;
+  public function getDebugOutput(): string;
+
+  public function setEmailWithHeaders(string $emailWithHeaders): void;
+  public function setMatchSummary(MatchSummary $matchSummary): void;
 
 }

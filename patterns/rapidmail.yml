@@ -5,40 +5,65 @@ domains:
   - emailsys.net
   - emailsys1a.net
 notes:
-  - Webview is a user tracking link, and DOES contain user track links.
-link_patterns:
-  # https://te917244a.emailsys1a.net/mailing/172/5915295/8119411/2257/5df4c8bb52/index.html
+  - Webview is a user-tracking link, and the webview itself (other than eg mailchimp) DOES contain user-tracking links.
+links:
   'webview.2022':
     pattern: '{}.emailsys1a.net/mailing/{}/{}/{}/{}/{}/index.html'
     tracking: 'user'
     type: 'webview'
-  # https://te917244a.emailsys1a.net/c/172/5915295/4365/0/8119411/2257/239319/e4709c54da.html
+    examples:
+      - https://te917244a.emailsys1a.net/mailing/172/5915295/8119411/2257/5df4c8bb52/index.html
   'user_tracking_link.2022':
     pattern: '{}.emailsys1a.net/c/{}/{}/{}/{}/{}/{}/{}/{}.html'
     tracking: 'user'
     type: link
-  # https://te917244a.emailsys1a.net/172/5915295/4365/8119411/2257/15b69c7eb7/unsubscribe.html
+    examples:
+      - https://te917244a.emailsys1a.net/c/172/5915295/4365/0/8119411/2257/239319/e4709c54da.html
   'subscribe.2022':
     pattern: '{}.emailsys1a.net/{}/{}/{}/subscribe/form.html?_g={}'
     tracking: 'user'
     type: 'subscribe'
+    examples:
+      - https://te917244a.emailsys1a.net/172/4365/50b2a37e1e/subscribe/form.html?_g=1648633110
   'unsubscribe.2022':
     pattern: '{}.emailsys1a.net/{}/{}/{}/{}/{}/{}/unsubscribe.html'
     tracking: 'user'
     type: 'unsubscribe'
-image_patterns:
-  # https://c.emailsys1a.net/mailingassets/175e8cd0faf670c547c895b9506942d0c6a7bcbc.jpg
+    examples:
+      - https://te917244a.emailsys1a.net/172/5915295/4365/8119411/2257/15b69c7eb7/unsubscribe.html
+images:
   'user_content.2022':
     pattern: 'c.emailsys1a.net/mailingassets/{}.{image_extension}'
     tracking: 'unknown'
     type: 'user_content'
-  # https://c.emailsys1a.net/mailingeditor/social/icon/colored/web.png
+    examples:
+      - https://c.emailsys1a.net/mailingassets/175e8cd0faf670c547c895b9506942d0c6a7bcbc.jpg
   'tool_image.2022':
     pattern: 'c.emailsys1a.net/mailingeditor/social/icon/colored/{}.{image_extension}'
     tracking: 'none'
     type: 'tool_content'
-  # https://te917244a.emailsys1a.net/o/172/5915295/4365/0/8119411/2257/a0e72ccaaa.gif
+    examples:
+      - https://c.emailsys1a.net/mailingeditor/social/icon/colored/web.png
   'tracking_pixel_2022':
     pattern: '{}.emailsys1a.net/o/{}/{}/{}/{}/{}/{}/{}.gif'
     tracking: 'user'
     type: 'tracking_pixel'
+    examples:
+      - https://te917244a.emailsys1a.net/o/172/5915295/4365/0/8119411/2257/a0e72ccaaa.gif
+headers:
+  notes: []
+  patterns:
+    Feedback-ID: '{=172:5915295:4365-8119411}:rm'
+    X-Complaints-To: abuse@rapidmail.de
+    List-Unsubscribe: <https://{=te917244a}.emailsys1a.net/{?sender?:dec(3)=172}/{=5915295}/{?subscription?:dec(4)=4365}/{=8119411}/{=2257}/{=15b69c7eb7}/unsubscribe.html>, <mailto:unsubscribe-v2-{=3f6816c3d05915295f2257}@{=u283355}.rmh1.net>
+    List-Unsubscribe-Post: List-Unsubscribe=One-Click
+  examples:
+    - '
+      X-CSA-Complaints: csa-complaints@eco.de
+      X-Mailer: Framework::Mail
+      Feedback-ID: 172:5915295:4365-8119411:rm
+      Message-ID: <evafemohaoehomgaahuaameeof.uikekidio@unknown>
+      X-Complaints-To: abuse@rapidmail.de
+      List-Unsubscribe: <https://te917244a.emailsys1a.net/172/5915295/4365/8119411/2257/15b69c7eb7/unsubscribe.html>, <mailto:unsubscribe-v2-3f6816c3d05915295f2257@u283355.rmh1.net>
+      List-Unsubscribe-Post: List-Unsubscribe=One-Click
+      '

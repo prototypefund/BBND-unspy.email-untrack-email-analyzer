@@ -25,10 +25,10 @@ abstract class UrlPatternBase {
   }
 
   protected function doMatches(DomElementInterface $domElement): bool {
-    $quotedPattern = preg_quote($this->pattern, '#');
+    $quotedPattern = preg_quote($this->pattern, '~');
     $regexPart = preg_replace('#\\\\{.*?\\\\}#u', '[^/]+', $quotedPattern);
-    $url = $domElement->getUrl()->getUrl();
-    $regex = "#{$regexPart}$#u";
+    $url = $domElement->getUrl()->getRelevantUrl();
+    $regex = "~^{$regexPart}($|[?]|#)~u";
     /** @noinspection PhpUnnecessaryLocalVariableInspection */
     $match = preg_match($regex, $url);
     return $match;

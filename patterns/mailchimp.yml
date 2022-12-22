@@ -5,7 +5,7 @@ domains:
   - mailchi.mp
 notes:
   - Webview is a user tracking link, but seems to NOT contain user tracking links, and no network phone-back.
-link_patterns:
+links:
   # https://mailchi.mp/f84d35f613cc/voeoe-03-8987958?e=be24ad69fc
   'webview.2022':
     pattern: 'mailchi.mp/{}/{}?e={}'
@@ -13,34 +13,36 @@ link_patterns:
     type: 'webview'
   # https://voeoe.us1.list-manage.com/track/click?u=b00ccdbb39a8456492b99ae9e&id=e269fce298&e=be24ad69fc
   'user_tracking_link.2022':
-    pattern: '{customer}.{region}.list-manage.com/track/click?u={}&id={}&e={}'
+    pattern: '{customer}.{region}.list-manage.com/track/click?u={sender}&id={}&e={}'
     tracking: 'user'
     type: link
   # https://voeoe.us1.list-manage.com/vcard?u=b00ccdbb39a8456492b99ae9e&id=ede4b53575
   'vcard.2022':
-    pattern: '{customer}.{region}.list-manage.com/vcard?u={}&id={}'
+    pattern: '{customer}.{region}.list-manage.com/vcard?u={sender}&id={}'
     tracking: 'user'
     type: 'vcard'
   # https://voeoe.us1.list-manage.com/profile?u=b00ccdbb39a8456492b99ae9e&id=ede4b53575&e=be24ad69fc&c=a8d0ad03b7
   'profile.2022':
-    pattern: '{customer}.{region}.list-manage.com/profile?u={}&id={}&e={}'
+    pattern: '{customer}.{region}.list-manage.com/profile?u={sender}&id={}&e={}'
     tracking: 'user'
     type: 'profile'
   # https://voeoe.us1.list-manage.com/unsubscribe?u=b00ccdbb39a8456492b99ae9e&id=ede4b53575&e=be24ad69fc&c=a8d0ad03b7
   'unsubscribe.2022':
-    pattern: '{customer}.{region}.list-manage.com/unsubscribe?u={}&id={}&e={}'
+    pattern: '{customer}.{region}.list-manage.com/unsubscribe?u={sender}&id={}&e={}'
     tracking: 'user'
     type: 'unsubscribe'
   # http://www.mailchimp.com/email-referral/?utm_source=freemium_newsletter&utm_medium=email&utm_campaign=referral_marketing&aid=b00ccdbb39a8456492b99ae9e&afl=1
   'marketing.2022':
-    pattern: 'www.mailchimp.com/email-referral/?utm_source={}&utm_medium=email&utm_campaign=referral_marketing&aid={}&afl=1'
+    pattern: 'www.mailchimp.com/email-referral/?utm_source={}&utm_medium=email&utm_campaign=referral_marketing&aid={sender}&afl=1'
     tracking: 'user'
     type: 'marketing'
-image_patterns:
+images:
+  # Verified that different recipients get the same URL, so no user tracking.
+  # https://mcusercontent.com/b00ccdbb39a8456492b99ae9e/images/e855e0cb-25e8-47a9-8f3f-eb89de3776b6.png
   # https://mcusercontent.com/b00ccdbb39a8456492b99ae9e/images/e855e0cb-25e8-47a9-8f3f-eb89de3776b6.png
   'user_content.2022':
-    pattern: 'mcusercontent.com/{}/images/{}.{image_extension}'
-    tracking: 'unknown'
+    pattern: 'mcusercontent.com/{sender}/images/{}.{image_extension}'
+    tracking: 'campaign:implicit'
   # https://cdn-images.mailchimp.com/icons/social-block-v2/color-twitter-48.png
   'social_media_icon.2022':
     pattern: 'cdn-images.mailchimp.com/icons/{}/{}.{image_extension}'
@@ -51,6 +53,6 @@ image_patterns:
     tracking: 'none'
   # https://voeoe.us1.list-manage.com/track/open.php?u=b00ccdbb39a8456492b99ae9e&id=a8d0ad03b7&e=be24ad69fc
   'tracking_pixel.2022':
-    pattern: '{customer}.{region}.list-manage.com/track/open.php?u={}&id={}&e={}'
+    pattern: '{customer}.{region}.list-manage.com/track/open.php?u={sender}&id={}&e={}'
     tracking: 'user'
     type: 'tracking_pixel'

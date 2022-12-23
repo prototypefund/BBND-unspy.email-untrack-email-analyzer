@@ -2,6 +2,8 @@
 
 namespace Geeks4change\BbndAnalyzer\DomElement;
 
+use Geeks4change\BbndAnalyzer\DomainNames\DomainNameResolver;
+
 final class Link implements DomElementInterface  {
 
   protected Url $url;
@@ -14,11 +16,11 @@ final class Link implements DomElementInterface  {
   }
 
 
-  public static function fromDomNode(\DOMNode $domNode): ?self {
+  public static function fromDomNode(\DOMNode $domNode, DomainNameResolver $domainNameResolver): ?self {
     $href = $domNode->attributes->getNamedItem('href')->value;
     $scheme = parse_url($href)['scheme'] ?? NULL;
-    return ($scheme === 'http' || $scheme === 'https') ?
-      new self(new Url($href), $domNode->textContent) : NULL;
+    $url = Url::create($href, $domainNameResolver);
+    return $url ? new self($url, $domNode->textContent) : NULL;
   }
 
   /**

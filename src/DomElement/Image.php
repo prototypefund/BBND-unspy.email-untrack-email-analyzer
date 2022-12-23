@@ -2,6 +2,8 @@
 
 namespace Geeks4change\BbndAnalyzer\DomElement;
 
+use Geeks4change\BbndAnalyzer\DomainNames\DomainNameResolver;
+
 final class Image implements DomElementInterface {
 
   protected Url $url;
@@ -18,7 +20,7 @@ final class Image implements DomElementInterface {
   }
 
 
-  public static function fromDomNode(\DOMNode $domNode): ?self {
+  public static function fromDomNode(\DOMNode $domNode, DomainNameResolver $domainNameResolver): ?self {
     $isPixel =
       ($attributes = $domNode->attributes)
       && ($heightAttr = $attributes->getNamedItem('height'))
@@ -27,7 +29,8 @@ final class Image implements DomElementInterface {
       && ($widthAttr->value == 1)
     ;
     $src = $domNode->attributes->getNamedItem('src')->value;
-    return new self(new Url($src), $isPixel);
+    $url = Url::create($src, $domainNameResolver);
+    return $url ? new self($url, $domNode->textContent) : NULL;
   }
 
   /**

@@ -2,63 +2,67 @@
 
 namespace Geeks4change\BbndAnalyzer\DomElement;
 
+use Geeks4change\BbndAnalyzer\DomainNames\DomainNameResolver;
+
 final class Url {
 
-  protected string $url;
-  protected string $relevantUrl;
+  protected string $originalUrl;
 
-  protected string $host;
+  protected string $originalRelevantUrlPart;
 
-  protected string $path;
+  protected array $effectiveHosts;
 
-  protected string $query;
+  protected string $pathAndQuery;
 
-  /**
-   * @param string $url
-   */
-  public function __construct(string $url) {
-    $parts = parse_url($url);
-    $this->url = $url;
-    $this->host = $parts['host'] ?? '';
-    $this->path = $parts['path'] ?? '';
-    $this->query = $parts['query'] ?? '';
-    $this->relevantUrl = "{$this->host}{$this->path}"
-      . ($this->query ? "?$this->query" : '');
+  public function __construct(string $originalUrl, string $originalRelevantUrlPart, array $effectiveHosts, string $pathAndQuery) {
+    $this->originalUrl = $originalUrl;
+    $this->originalRelevantUrlPart = $originalRelevantUrlPart;
+    $this->effectiveHosts = $effectiveHosts;
+    $this->pathAndQuery = $pathAndQuery;
+  }
+
+
+  public static function create(string $originalUrl, DomainNameResolver $domainNameResolver): ?self {
+    $parts = parse_url($originalUrl);
+    $scheme = $parts['scheme'];
+    if (!($scheme === 'http' || $scheme === 'https')) {
+      return NULL;
+    }
+    $host = $parts['host'] ?? '';
+    $effectiveHosts = $domainNameResolver->resolve($host);
+    $path = $parts['path'] ?? '';
+    $query = $parts['query'] ?? '';
+    $pathAndQuery = "{$path}" . ($query ? "?$query" : '');
+    $originalRelevantUrlPart = "$host$pathAndQuery";
+    return new self($originalUrl, $originalRelevantUrlPart, $effectiveHosts, $pathAndQuery);
   }
 
   /**
    * @return string
    */
-  public function getUrl(): string {
-    return $this->url;
+  public function getOriginalUrl(): string {
+    return $this->originalUrl;
   }
 
   /**
    * @return string
    */
-  public function getRelevantUrl(): string {
-    return $this->relevantUrl;
+  public function getOriginalRelevantUrlPart(): string {
+    return $this->originalRelevantUrlPart;
   }
 
   /**
    * @return string
    */
-  public function getHost(): string {
-    return $this->host;
+  public function getPathAndQuery(): string {
+    return $this->pathAndQuery;
   }
 
   /**
-   * @return string
+   * @return array<string>
    */
-  public function getPath(): string {
-    return $this->path;
-  }
-
-  /**
-   * @return string
-   */
-  public function getQuery(): string {
-    return $this->query;
+  public function getEffectiveHosts(): array {
+    return $this->effectiveHosts;
   }
 
 }

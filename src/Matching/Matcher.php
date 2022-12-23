@@ -51,7 +51,7 @@ class Matcher {
         // If none, try matching an unspecific DomainMatch.
         if (!$domElementToolPatternMatch) {
           foreach ($toolPattern->getDomainPatterns() as $domainPattern) {
-            if ($domainPattern->matches($domElement->getUrl()->getHost())) {
+            if ($domainPattern->matches($domElement->getUrl()->getEffectiveHosts())) {
               $domElementToolPatternMatch = new MatchByDomain($domElement, $domainPattern);
             }
           }

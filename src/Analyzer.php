@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Geeks4change\BbndAnalyzer;
 
+use Geeks4change\BbndAnalyzer\DomainNames\DomainNameResolver;
 use Geeks4change\BbndAnalyzer\DomElement\DomElementCollection;
 use Geeks4change\BbndAnalyzer\Matching\Matcher;
 use ZBateson\MailMimeParser\Header\HeaderConsts;
@@ -24,7 +25,8 @@ class Analyzer {
     #############################################
     // LATER Report unusual Mime parts, like more than one text/html part.
     $html = $message->getHtmlContent();
-    $domElementCollection = DomElementCollection::fromHtml($html);
+    $domainNameResolver = new DomainNameResolver();
+    $domElementCollection = DomElementCollection::fromHtml($html, $domainNameResolver);
     $analysis->audit('Extracted link and image URLs.');
 
     $matcher = new Matcher();

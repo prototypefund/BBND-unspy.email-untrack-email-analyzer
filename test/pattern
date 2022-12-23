@@ -1,0 +1,38 @@
+#!/usr/bin/env php
+<?php
+
+use Geeks4change\BbndAnalyzer\Pattern\ToolPatternRepository;
+
+include 'vendor/autoload.php';
+
+if ($argc < 3) {
+  print "Usage: pattern [service] [image|link] [pattern]\n";
+  die(1);
+}
+[, $service, $type, $name] = $argv;
+
+$repo = new ToolPatternRepository();
+
+/** @var \Geeks4change\BbndAnalyzer\Pattern\ToolPattern $toolPattern */
+$toolPatternCollection = $repo->getToolPatternCollection();
+$toolPattern = $toolPatternCollection[$service] ?? NULL;
+if (!$toolPattern) {
+  printf("Available services: %s\n", implode('|', array_keys(iterator_to_array($toolPatternCollection))));
+  exit(1);
+}
+/** @var \Geeks4change\BbndAnalyzer\Pattern\UrlPatternBase[] $patterns */
+$patterns = [
+  'link' => $toolPattern->getLinkPatterns(),
+  'image' => $toolPattern->getImagePatterns(),
+][$type] ?? NULL;
+if (!$patterns) {
+  printf("Available types: link|image\n");
+  exit(1);
+}
+$pattern = $patterns[$name] ?? NULL;
+if (!$pattern) {
+  printf("Available patterns: %s\n", implode('|', array_keys($patterns)));
+  exit(1);
+}
+$regex = $pattern->getRegex();
+print "$regex\n";

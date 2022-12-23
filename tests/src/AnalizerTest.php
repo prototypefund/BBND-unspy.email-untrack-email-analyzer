@@ -6,6 +6,7 @@ use Geeks4change\BbndAnalyzer\Analyzer;
 use Geeks4change\BbndAnalyzer\DebugAnalysisBuilder;
 use Geeks4change\BbndAnalyzer\Utility\ThrowMethodTrait;
 use PHPUnit\Framework\TestCase;
+use Symfony\Component\Yaml\Yaml;
 
 class AnalizerTest extends TestCase {
 
@@ -18,7 +19,13 @@ class AnalizerTest extends TestCase {
     $analyzer = new Analyzer();
     $analysis = new DebugAnalysisBuilder();
     $analyzer->analyze($analysis, $email);
-    self::assertEquals($expected, $analysis->getDebugOutput());
+    $debugOutput = $analysis->getDebugOutput();
+    $counts = array_map(
+      fn(array $results) => count($results),
+      $debugOutput
+    );
+    $yaml = Yaml::dump($counts);
+    self::assertEquals($expected, $yaml);
   }
 
   public function provideEmailExamples(): \Iterator {

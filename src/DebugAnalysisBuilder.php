@@ -4,6 +4,8 @@ declare(strict_types=1);
 
 namespace Geeks4change\BbndAnalyzer;
 
+use Geeks4change\BbndAnalyzer\DomElement\Image;
+use Geeks4change\BbndAnalyzer\DomElement\Link;
 use Geeks4change\BbndAnalyzer\Matching\MatchByDomain;
 use Geeks4change\BbndAnalyzer\Matching\MatchByPattern;
 use Geeks4change\BbndAnalyzer\Matching\MatchNone;
@@ -39,16 +41,26 @@ final class DebugAnalysisBuilder implements AnalysisBuilderInterface {
     return $this->auditLines;
   }
 
-  public function getDebugOutput(): string {
-    $matchesByClass = [];
+  public function getDebugOutput(): array {
+    $matchMap = [
+      MatchByPattern::class => 'pattern',
+      MatchByDomain::class => 'domain',
+      MatchNone::class => 'none',
+    ];
+    $domElementMap = [
+      Link::class => 'link',
+      Image::class => 'image',
+    ];
+    $matchesByClass = array_fill_keys($matchMap, []);
     foreach ($this->matchSummary->getMatchList() as $match) {
-      $matchesByClass[get_class($match)][] = $match;
+      $group = $matchMap[get_class($match)];
+      $url = $match->getDomElement()
+        ->getUrl()
+        ->getOriginalUrl();
+      $type = $domElementMap[get_class($match->getDomElement())];
+      $matchesByClass[$group][] = "$type: $url";
     }
-    $countsByClass = array_map(
-      fn(string $class) => count($matchesByClass[$class] ?? []),
-      [MatchByPattern::class, MatchByDomain::class, MatchNone::class]
-    );
-    return implode('/', $countsByClass);
+    return $matchesByClass;
   }
 
 }

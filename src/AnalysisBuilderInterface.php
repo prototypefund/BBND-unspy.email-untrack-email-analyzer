@@ -10,7 +10,7 @@ interface AnalysisBuilderInterface {
 
   public function setIsValid(): bool;
 
-  public function getDebugOutput(): string;
+  public function getDebugOutput(): array;
 
   public function setEmailWithHeaders(string $emailWithHeaders): void;
   public function setMatchSummary(MatchSummary $matchSummary): void;

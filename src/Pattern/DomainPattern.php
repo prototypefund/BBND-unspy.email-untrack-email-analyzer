@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Geeks4change\BbndAnalyzer\Pattern;
 
 final class DomainPattern {
@@ -21,9 +23,19 @@ final class DomainPattern {
     return $this->domain;
   }
 
-  public function matches(string $host): bool {
+  /**
+   * @param array<string> $effectiveHosts
+   *
+   * @return bool
+   */
+  public function matches(array $effectiveHosts): bool {
     $quotedDomain = preg_quote($this->domain, '#');
-    return preg_match("#(?:^|[.]){$quotedDomain}$#ui", $host);
+    foreach ($effectiveHosts as $effectiveHost) {
+      if (preg_match("#(?:^|[.]){$quotedDomain}$#ui", $effectiveHost)) {
+        return TRUE;
+      }
+    }
+    return FALSE;
   }
 
 }

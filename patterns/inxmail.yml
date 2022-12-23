@@ -5,17 +5,18 @@ domains: []
 notes:
   - Found some links that contained user-tracking plus web analytics campaign-tracking.
   - Params look like jwt, but are not. They all have trailing '=', but no clear structure in between.
+  - Strange, webview seems to wrap images in a tracking redirect, mail view does not.
   - '`dig news.phineo.org` => `news.phineo.org.	60	IN	CNAME	rdir.inxmail.com.`'
 links:
   'webview.2022':
-    pattern: 'rdir.inxmail.com/html_mail.jsp?params={}%3d'
+    pattern: 'rdir.inxmail.com/html_mail.jsp?params={}'
     tracking: 'user'
     type: 'webview'
     examples:
       - https://news.phineo.org/html_mail.jsp?params=vZJbLVEnw%2Bx2GD98kFFo0AJyHcXDn4OH%2F8G6M1rFpew%2FCd36ojY5HBq0OFNdOv%2FArtiXBqTtTc9pxBqmfKwtpdEaSAbQfh0sV4h6mjHkbD4%3D
       - https://news.phineo.org/html_mail.jsp?params=79ZO73HzAdcQAPIxnzGaFVoRoUdEBU7Z%2F5lLkLD7tOi3f9e3MYBBrZQAOdf0ssW%2FHUO0He%2FSyR6fwzI%2F%2Fk3wWhvzrP3lVFVhbuEq%2FaGhdYc%3D
   'user_tracking_link.2022':
-    pattern: 'rdir.inxmail.com/d=o{}'
+    pattern: 'rdir.inxmail.com/d?o{}'
     tracking: 'user'
     type: 'webview'
     notes:
@@ -32,15 +33,26 @@ links:
         - https://news.phineo.org/d?o000khpi00clmkbik0000lyi000000000efk30vhrrn2kwtw0mphpzeopcu402&utm_source=campus-nl&utm_medium=email&utm_campaign=mailing-182022
 images:
   'user_content.2022':
-    pattern: 'rdir.inxmail.com/d=o{}'
+    pattern: 'media.inx-cdn.de/{}/{}.{image-extension}'
     tracking: 'user'
     type: 'user_content'
     notes:
       - All the links look the same here.
     examples:
-      - img src
-        - https://news.phineo.org/d?o000khkq00clmmbid0000lyi000000000efkxqvyhtzxyxq2pm4x2dgdidi402&utm_source=campus-nl&utm_medium=email&utm_campaign=mailing-182022
-        - https://news.phineo.org/d?o000khky00clmkbid0000lyi000000000efk30vhrrn2kwtw0mphpzep0xy402&utm_source=campus-nl&utm_medium=email&utm_campaign=mailing-182022
-      - after redirection, they look like this
-        - https://media.inx-cdn.de/4a2d96f7-ddf8-4826-8553-24e968a97940/b0473e81-3693-4dc8-b6d9-a31f3e21ba9c.jpg
-
+      - https://media.inx-cdn.de/4a2d96f7-ddf8-4826-8553-24e968a97940/b0473e81-3693-4dc8-b6d9-a31f3e21ba9c.jpg
+  'transparent_pixel.2022':
+    pattern: 'ts-svc.inxserver.com/transparent.gif'
+    tracking: 'none'
+    type: 'technical_image'
+    notes:
+      - Used in tables.
+    examples:
+      - https://ts-svc.inxserver.com/transparent.gif
+  'tracking_pixel.2022':
+    pattern: 'rdir.inxmail.com/d/d.gif?o{}'
+    tracking: 'none'
+    type: 'technical_image'
+    notes:
+      - Used in tables.
+    examples:
+      - https://news.phineo.org/d/d.gif?o000khpq00clmm00h0000lyi000000000efkxqvyhtzxyxq2pm4x2dge4si402

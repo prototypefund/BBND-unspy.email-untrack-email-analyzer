@@ -4,6 +4,8 @@ declare(strict_types=1);
 
 namespace Geeks4change\BbndAnalyzer\Pattern;
 
+use Geeks4change\BbndAnalyzer\Utility\ArrayTool;
+
 final class ToolPattern {
 
   protected string $id;
@@ -42,21 +44,14 @@ final class ToolPattern {
 
   public static function fromArray(string $id, array $array) {
     $disconnectId = $array['disconnect_id'] ?? NULL;
-    $domainPatterns = array_map(
-      fn($value, $key) => DomainPattern::fromItem($value, $key),
-      $array['domains'] ?? [],
-      array_keys($array['domains'] ?? []),
-    );
-    $linkPatterns = array_map(
-      fn($value, $key) => UrlPatternForLink::fromItem($value, $key),
-      $array['links'] ?? [],
-      array_keys($array['link_patterns'] ?? []),
-    );
-    $imagePatterns = array_map(
-      fn($value, $key) => UrlPatternForImage::fromItem($value, $key),
-    $array['images'] ?? [],
-      array_keys($array['image_patterns'] ?? []),
-    );
+
+    $domainPatterns = ArrayTool::create($array['domains'] ?? [])
+      ->map(fn($value, $key) => DomainPattern::fromItem($value, $key));
+    $linkPatterns = ArrayTool::create($array['links'] ?? [])
+      ->map(fn($value, $key) => UrlPatternForLink::fromItem($value, $key));
+    $imagePatterns = ArrayTool::create($array['images'] ?? [])
+      ->map(fn($value, $key) => UrlPatternForImage::fromItem($value, $key));
+
     return new self(
       $id,
       $disconnectId,

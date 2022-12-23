@@ -19,9 +19,10 @@ class HeaderPattern {
   public function match(Message $message) {
     // @fixme
     $header = $message->getHeader($this->name);
-    $value = $header->getValue();
-
-    dump([$this->name => $header]);
+    if ($header) {
+      $value = $header->getValue();
+      dump([$this->name => $header]);
+    }
   }
 
   public static function fromItem($value, string $key): self {

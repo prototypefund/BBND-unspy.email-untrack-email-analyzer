@@ -30,7 +30,7 @@ class Analyzer {
     $analysis->audit('Extracted link and image URLs.');
 
     $matcher = new Matcher();
-    $matchSummary = $matcher->match($domElementCollection);
+    $matchSummary = $matcher->matchDomElements($domElementCollection);
     $analysis->setMatchSummary($matchSummary);
 
     // LATER Otherwise, find suspicious URL patterns.

@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Geeks4change\BbndAnalyzer\Matching;
 
 use Geeks4change\BbndAnalyzer\DomElement\DomElementCollection;
@@ -7,18 +9,22 @@ use Geeks4change\BbndAnalyzer\DomElement\Image;
 use Geeks4change\BbndAnalyzer\DomElement\Link;
 use Geeks4change\BbndAnalyzer\Pattern\ToolPatternRepository;
 
-class Matcher {
+final class Matcher {
 
-  public function match(DomElementCollection $domElementCollection): MatchSummary {
-    $patternRepository = new ToolPatternRepository();
+  protected ToolPatternRepository $toolPatternRepository;
 
+  public function __construct() {
+    $this->toolPatternRepository = new ToolPatternRepository();
+  }
+
+  public function matchDomElements(DomElementCollection $domElementCollection): MatchSummary {
     $matchSummaryBuilder = MatchSummary::builder();
     /** @var \Geeks4change\BbndAnalyzer\DomElement\DomElementInterface $domElement */
     foreach ($domElementCollection as $domElement) {
       $domElementHasMatch = FALSE;
 
       /** @var \Geeks4change\BbndAnalyzer\Pattern\ToolPattern $toolPattern */
-      foreach ($patternRepository->getToolPatternCollection() as $toolPattern) {
+      foreach ($this->toolPatternRepository->getToolPatternCollection() as $toolPattern) {
         // We check every domElement against every toolPattern.
         // Every pairing just gets one match recorded, either
         // - a specific PatternMatch

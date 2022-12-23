@@ -56,3 +56,19 @@ images:
       - Used in tables.
     examples:
       - https://news.phineo.org/d/d.gif?o000khpq00clmm00h0000lyi000000000efkxqvyhtzxyxq2pm4x2dge4si402
+headers:
+  notes:
+  patterns:
+    List-Unsubscribe:
+      - '<https://rdir.inxmail.com/d?o{}>'
+      - '<mailto:news_{=phineo}@inxserver.com?subject=unsubscribe%20params%3D{}>'
+    Feedback-ID: '{=xpro-7184-34660}:{=xpro-7184}:{=MAILING}:inxmailde'
+    X-Mailer: 'Inxmail {=EE 4.8.45.741}'
+  examples:
+    - '
+    List-Unsubscribe: <https://news.phineo.org/d?o000khqq00clmm00l0000lyi000000000efkxqvyhtzxyxq2pm4x2dg06du402>, <mailto:news_phineo@inxserver.com?subject=unsubscribe%20params%3Db0000deq00clmm000q5s00000000000bbkxbmqme7>
+    List-Unsubscribe-Post: List-Unsubscribe=One-Click
+    Feedback-ID: xpro-7184-34660:xpro-7184:MAILING:inxmailde
+    X-CSA-Complaints: csa-complaints@eco.de
+    X-Mailer: Inxmail EE 4.8.45.741
+    '

@@ -17,8 +17,6 @@ class Matcher {
     foreach ($domElementCollection as $domElement) {
       $domElementHasMatch = FALSE;
 
-      // @todo Only match domain when no link match.
-      // @todo Add a "none" match when no match.
       /** @var \Geeks4change\BbndAnalyzer\Pattern\ToolPattern $toolPattern */
       foreach ($patternRepository->getToolPatternCollection() as $toolPattern) {
         // We check every domElement against every toolPattern.

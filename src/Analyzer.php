@@ -33,11 +33,6 @@ class Analyzer {
     $matchSummary = $matcher->match($domElementCollection);
     $analysis->setMatchSummary($matchSummary);
 
-    // LATER Possibly resolve CNames from target URLs.
-    # $analysis->audit('Resolved CNames.');
-
-    // @todo Match URLs with well-known tool URL patterns.
-    $analysis->audit('Found well-known tool pattern in link and image URLs: xxx');
     // LATER Otherwise, find suspicious URL patterns.
     # $analysis->audit('Found suspicious URL pattern.');
     # $analysis->audit('Found no suspicious URL patterns.');

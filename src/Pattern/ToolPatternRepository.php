@@ -29,7 +29,7 @@ final class ToolPatternRepository {
           $array = Yaml::parse($yaml);
 
         } catch (ParseException $exception) {
-          throw new \LogicException("Oops in $id.xml", 0, $exception);
+          throw new \LogicException("Oops in $id.yml", 0, $exception);
         }
         $pattern = ToolPattern::fromArray($id, $array);
         $patternCollectionBuilder->add($pattern);

@@ -68,7 +68,6 @@ headers:
     Feedback-ID: '153975342:153975342.8987958:us1:mc'
     List-ID: '{sender}mc list <{sender}.{?1621274}.list-id.mcsv.net>'
     List-Unsubscribe: '<https://{sender-slug}.us1.list-manage.com/unsubscribe?u={sender}&id={subscription}&e={recipient}&c={campaign}>, <mailto:unsubscribe-mc.{region}_{sender}.{campaign}-{recipient}@unsubscribe.mailchimpapp.net?subject=unsubscribe>'
-    List-Unsubscribe-Post: 'List-Unsubscribe=One-Click'
   examples:
     - '
     Message-ID: <b00ccdbb39a8456492b99ae9e.be24ad69fc.20220626160230.a8d0ad03b7.fd6563fe@mail16.sea31.mcsv.net>

@@ -23,7 +23,10 @@ final class Matcher {
     foreach ($this->toolPatternRepository->getToolPatternCollection() as $toolPattern) {
       foreach ($toolPattern->getHeaderPatterns() as $headerPattern) {
         // @fixme
-        $headerPattern->match($message);
+        $match = $headerPattern->match($message);
+        if ($match) {
+          dump($toolPattern->getId() . ':' . $headerPattern->getName());
+        }
       }
     }
   }

@@ -34,10 +34,6 @@ final class DebugAnalysisBuilder implements AnalysisBuilderInterface {
     $this->matchSummary = $matchSummary;
   }
 
-  public function getAuditLines(): array {
-    return $this->auditLines;
-  }
-
   public function getDebugOutput(bool $explicit = FALSE): array {
     $matchMap = [
       MatchByPattern::class => 'pattern',

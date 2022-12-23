@@ -4,7 +4,10 @@ namespace Geeks4change\BbndAnalyzer\Pattern;
 
 trait RegexTrait {
 
-  protected function getRegex($pattern, $separator): string {
+  /**
+   * Get Regex (public for debugging).
+   */
+  protected function doGetRegex($pattern, $separator): string {
     $quotedPattern = preg_quote($pattern, '~');
     $wildcard = $separator ? "[^{$separator}]+" : '.+';
     $regexPart = preg_replace('#\\\\{.*?\\\\}#u', $wildcard, $quotedPattern);

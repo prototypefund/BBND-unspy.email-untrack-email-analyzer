@@ -3,7 +3,12 @@
 declare(strict_types=1);
 
 namespace Geeks4change\BbndAnalyzer\Pattern\HeaderPattern;
+use Geeks4change\BbndAnalyzer\DomainNames\DomainNameResolver;
+use Geeks4change\BbndAnalyzer\DomElement\Url;
 use Geeks4change\BbndAnalyzer\Pattern\RegexTrait;
+use Geeks4change\BbndAnalyzer\Utility\UriTool;
+use League\Uri\Uri;
+use ZBateson\MailMimeParser\Header\IHeader;
 use ZBateson\MailMimeParser\Message;
 
 class HeaderPattern {
@@ -19,18 +24,53 @@ class HeaderPattern {
     $this->pattern = $pattern;
   }
 
-  public function match(Message $message): bool {
+  public function matchHeader(Message $message): bool {
     $header = $message->getHeader($this->name);
     if ($header) {
-      // Currently we don't need to support multi value headers.
-      $value = $header->getValue();
-      // @todo Reconsider separator once we need it.
-      $regex = $this->getRegex($this->pattern, '');
-      /** @noinspection PhpUnnecessaryLocalVariableInspection */
-      $match = preg_match($regex, $value);
-      return !empty($match);
+      foreach ($header->getParts() as $part) {
+        $match = $this->match($part->getValue());
+        if ($match) {
+          return TRUE;
+        }
+      }
     }
     return FALSE;
+  }
+
+  /**
+   * Match string (public for debugging).
+   */
+  public function match(string $value): bool {
+    foreach ($this->getHeaderValues($value) as $value) {
+      $regex = $this->getRegex();
+      $match = boolval(preg_match($regex, $value));
+      if ($match) {
+        return TRUE;
+      }
+    }
+    return FALSE;
+  }
+
+  protected function getHeaderValues(string $rawValue): \Iterator {
+    // Care for domain names, like in ListUnsubscribe multi header.
+    // Ignore port etc.
+    if (preg_match_all('~http(?:s)://(.+?)/~u', $rawValue, $matches)) {
+      // @todo Care for aliasing multiple domains once we need it.
+      // By default it's group.match keys.
+      $host = $matches[1][0];
+      foreach (DomainNameResolver::get()->resolve($host) as $alias) {
+        yield str_replace($host, $alias, $rawValue);
+      }
+    }
+    yield $rawValue;
+  }
+
+  /**
+   * Get Regex (public for debugging).
+   */
+  public function getRegex(): string {
+    // @todo Reconsider separator once we need it.
+    return $this->doGetRegex($this->pattern, '');
   }
 
   public static function fromItem($value, string $key): self {

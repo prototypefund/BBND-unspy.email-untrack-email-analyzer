@@ -35,17 +35,25 @@ abstract class UrlPatternBase {
   }
 
   protected function doMatches(DomElementInterface $domElement): bool {
-    // @fixme Separator must change in different parts of URL.
-    $regex = $this->getRegex($this->pattern, '/');
+    $regex = $this->getRegex($this->pattern);
     $pathAndQuery = $domElement->getUrl()->getPathAndQuery();
     $effectiveHosts = $domElement->getUrl()->getEffectiveHosts();
     foreach ($effectiveHosts as $effectiveHost) {
+      // @todo Do this in Url::getRelevantUrlPartForAllCNames
       $relevantUrl = "{$effectiveHost}{$pathAndQuery}";
       if (preg_match($regex, $relevantUrl)) {
         return TRUE;
       }
     }
     return FALSE;
+  }
+
+  /**
+   * Get Regex (public for debugging).
+   */
+  public function getRegex(): string {
+    // @fixme Separator must change in different parts of URL.
+    return $this->doGetRegex($this->pattern, '/');
   }
 
 }

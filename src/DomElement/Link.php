@@ -16,10 +16,10 @@ final class Link implements DomElementInterface  {
   }
 
 
-  public static function fromDomNode(\DOMNode $domNode, DomainNameResolver $domainNameResolver): ?self {
+  public static function fromDomNode(\DOMNode $domNode): ?self {
     $href = $domNode->attributes->getNamedItem('href')->value;
     $scheme = parse_url($href)['scheme'] ?? NULL;
-    $url = Url::create($href, $domainNameResolver);
+    $url = Url::create($href);
     return $url ? new self($url, $domNode->textContent) : NULL;
   }
 

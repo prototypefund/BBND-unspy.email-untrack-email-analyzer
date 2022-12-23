@@ -5,11 +5,8 @@ use Geeks4change\BbndAnalyzer\Pattern\ToolPatternRepository;
 
 include 'vendor/autoload.php';
 
-if ($argc < 3) {
-  print "Usage: pattern [service] [image|link] [pattern]\n";
-  die(1);
-}
-[, $service, $type, $name] = $argv;
+$usage = "Usage: $argv[0] [service] [image|link] [pattern] [?string-to-match]\n";
+[, $service, $typeName, $patternName, $string] = $argv + ['', '', '', '', ''];
 
 $repo = new ToolPatternRepository();
 
@@ -17,22 +14,34 @@ $repo = new ToolPatternRepository();
 $toolPatternCollection = $repo->getToolPatternCollection();
 $toolPattern = $toolPatternCollection[$service] ?? NULL;
 if (!$toolPattern) {
+  print $usage;
   printf("Available services: %s\n", implode('|', array_keys(iterator_to_array($toolPatternCollection))));
   exit(1);
 }
-/** @var \Geeks4change\BbndAnalyzer\Pattern\UrlPatternBase[] $patterns */
-$patterns = [
+/** @var \Geeks4change\BbndAnalyzer\Pattern\UrlPatternBase[] $types */
+$types = [
   'link' => $toolPattern->getLinkPatterns(),
   'image' => $toolPattern->getImagePatterns(),
-][$type] ?? NULL;
+  'header' => $toolPattern->getHeaderPatterns(),
+];
+$patterns = $types[$typeName] ?? NULL;
 if (!$patterns) {
-  printf("Available types: link|image\n");
+  print $usage;
+  printf("Available types: %s\n", implode('|', array_keys($types)));
   exit(1);
 }
-$pattern = $patterns[$name] ?? NULL;
+$pattern = $patterns[$patternName] ?? NULL;
 if (!$pattern) {
+  print $usage;
+  /** @noinspection PhpParamsInspection */
   printf("Available patterns: %s\n", implode('|', array_keys($patterns)));
   exit(1);
 }
 $regex = $pattern->getRegex();
-print "$regex\n";
+print "Pattern: $regex\n";
+if ($string) {
+  $match = $pattern->match($string);
+  print "Match: ";
+  print ($match ? 'Yes!' : 'nope');
+  print "\n";
+}

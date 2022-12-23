@@ -20,7 +20,8 @@
         "zbateson/mail-mime-parser": "^2.2",
         "masterminds/html5": "^2.7",
         "ext-dom": "*",
-        "symfony/yaml": "^6.2"
+        "symfony/yaml": "^6.2",
+        "league/uri": "^6.8"
     },
     "require-dev": {
         "symfony/var-dumper": "^6.2",

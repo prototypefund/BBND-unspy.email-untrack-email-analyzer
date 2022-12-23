@@ -41,13 +41,13 @@ final class DomElementCollection implements \IteratorAggregate, \ArrayAccess, \C
     $linksList = $xpath->query('//a[@href]') ?? self::throwUnexpectedValue();
     $imagesList = $xpath->query('//img[@src]') ?? self::throwUnexpectedValue();
     foreach (iterator_to_array($linksList) as $linkNode) {
-      $maybeLink = Link::fromDomNode($linkNode, $domainNameResolver);
+      $maybeLink = Link::fromDomNode($linkNode);
       if ($maybeLink) {
         $domElementCollectionBuilder->add($maybeLink);
       }
     }
     foreach (iterator_to_array($imagesList) as $imageNode) {
-      $maybeImage = Image::fromDomNode($imageNode, $domainNameResolver);
+      $maybeImage = Image::fromDomNode($imageNode);
       if ($maybeImage) {
         $domElementCollectionBuilder->add($maybeImage);
       }

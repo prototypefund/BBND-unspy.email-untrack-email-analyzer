@@ -4,6 +4,11 @@ namespace Geeks4change\BbndAnalyzer\DomElement;
 
 use Geeks4change\BbndAnalyzer\DomainNames\DomainNameResolver;
 
+/**
+ * Url class.
+ *
+ * @todo Refactor or replace with league/uri and UriTool.
+ */
 final class Url {
 
   protected string $originalUrl;
@@ -22,14 +27,14 @@ final class Url {
   }
 
 
-  public static function create(string $originalUrl, DomainNameResolver $domainNameResolver): ?self {
+  public static function create(string $originalUrl): ?self {
     $parts = parse_url($originalUrl);
     $scheme = $parts['scheme'];
     if (!($scheme === 'http' || $scheme === 'https')) {
       return NULL;
     }
     $host = $parts['host'] ?? '';
-    $effectiveHosts = $domainNameResolver->resolve($host);
+    $effectiveHosts = DomainNameResolver::get()->resolve($host);
     $path = $parts['path'] ?? '';
     $query = $parts['query'] ?? '';
     $pathAndQuery = "{$path}" . ($query ? "?$query" : '');
@@ -49,6 +54,25 @@ final class Url {
    */
   public function getOriginalRelevantUrlPart(): string {
     return $this->originalRelevantUrlPart;
+  }
+
+  /**
+   * @return array<string>
+   */
+  public function getRelevantUrlPartForAllEffectiveHosts(): array {
+    return array_map(fn(string $host) => "{$host}.{$this->pathAndQuery}", $this->effectiveHosts);
+  }
+
+  /**
+   * @return array<string>
+   */
+  public function getUrlForAllEffectiveHosts(): array {
+    $originalHost = $this->effectiveHosts[0];
+    return array_map(
+      // Replaces only first occurrence.
+      fn(string $host) => implode($host, explode($originalHost, $this->originalUrl, 2)),
+      $this->effectiveHosts
+    );
   }
 
   /**

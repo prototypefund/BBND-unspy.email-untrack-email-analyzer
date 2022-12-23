@@ -22,9 +22,9 @@ final class Matcher {
     /** @var \Geeks4change\BbndAnalyzer\Pattern\ToolPattern $toolPattern */
     foreach ($this->toolPatternRepository->getToolPatternCollection() as $toolPattern) {
       foreach ($toolPattern->getHeaderPatterns() as $headerPattern) {
-        // @fixme
-        $match = $headerPattern->match($message);
+        $match = $headerPattern->matchHeader($message);
         if ($match) {
+          // @fixme
           dump($toolPattern->getId() . ':' . $headerPattern->getName());
         }
       }

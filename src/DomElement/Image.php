@@ -20,7 +20,7 @@ final class Image implements DomElementInterface {
   }
 
 
-  public static function fromDomNode(\DOMNode $domNode, DomainNameResolver $domainNameResolver): ?self {
+  public static function fromDomNode(\DOMNode $domNode): ?self {
     $isPixel =
       ($attributes = $domNode->attributes)
       && ($heightAttr = $attributes->getNamedItem('height'))
@@ -29,7 +29,7 @@ final class Image implements DomElementInterface {
       && ($widthAttr->value == 1)
     ;
     $src = $domNode->attributes->getNamedItem('src')->value;
-    $url = Url::create($src, $domainNameResolver);
+    $url = Url::create($src);
     return $url ? new self($url, $domNode->textContent) : NULL;
   }
 

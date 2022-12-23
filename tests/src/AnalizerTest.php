@@ -20,11 +20,7 @@ class AnalizerTest extends TestCase {
     $analysis = new DebugAnalysisBuilder();
     $analyzer->analyze($analysis, $email);
     $debugOutput = $analysis->getDebugOutput();
-    $counts = array_map(
-      fn(array $results) => count($results),
-      $debugOutput
-    );
-    $yaml = Yaml::dump($counts);
+    $yaml = Yaml::dump($debugOutput);
     self::assertEquals($expected, $yaml);
   }
 

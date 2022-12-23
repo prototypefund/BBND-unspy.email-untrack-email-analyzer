@@ -21,9 +21,6 @@ final class DebugAnalysisBuilder implements AnalysisBuilderInterface {
   protected string $emailWithHeaders;
 
   protected MatchSummary $matchSummary;
-  public function audit(string $message): void {
-    $this->auditLines[] = $message;
-  }
 
   public function setIsValid(): bool {
     return isset($this->emailWithHeaders) && isset($this->matchSummary);

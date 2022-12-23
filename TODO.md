@@ -4,3 +4,5 @@
 - Rename tool to service
 - move test-examples to patterns dir, rename to service-patterns
 - Declare-strict-types everywhere
+- Rework ArrayAccessTrait
+- Merge in disconnect data

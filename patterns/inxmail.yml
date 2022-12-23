@@ -59,9 +59,7 @@ images:
 headers:
   notes:
   patterns:
-    List-Unsubscribe:
-      - '<https://rdir.inxmail.com/d?o{}>'
-      - '<mailto:news_{=phineo}@inxserver.com?subject=unsubscribe%20params%3D{}>'
+    List-Unsubscribe: '<https://rdir.inxmail.com/d?o{}>, <mailto:news_{sender-slug}@inxserver.com?subject=unsubscribe%20params%3D{}>'
     Feedback-ID: '{=xpro-7184-34660}:{=xpro-7184}:{=MAILING}:inxmailde'
     X-Mailer: 'Inxmail {=EE 4.8.45.741}'
   examples:

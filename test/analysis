@@ -12,7 +12,7 @@ $fileName = "$dir/$fileId.eml";
 if (!file_exists($fileName)) {
   print("Possible examples:\n");
   foreach (glob("$dir/*.eml") as $fileName) {
-    print basename($fileName, '.eml');
+    print basename($fileName, ".eml") . "\n";
   }
   die(1);
 }

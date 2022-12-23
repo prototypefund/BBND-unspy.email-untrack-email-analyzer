@@ -67,9 +67,7 @@ headers:
     X-MC-User: '{sender}'
     Feedback-ID: '153975342:153975342.8987958:us1:mc'
     List-ID: '{sender}mc list <{sender}.{?1621274}.list-id.mcsv.net>'
-    List-Unsubscribe:
-      - '<https://{sender-name}.us1.list-manage.com/unsubscribe?u={sender}&id={subscription}&e={recipient}&c={campaign}>'
-      - '<mailto:unsubscribe-mc.us1_{sender}.{campaign}-{recipient}@unsubscribe.mailchimpapp.net?subject=unsubscribe>'
+    List-Unsubscribe: '<https://{sender-slug}.us1.list-manage.com/unsubscribe?u={sender}&id={subscription}&e={recipient}&c={campaign}>, <mailto:unsubscribe-mc.{region}_{sender}.{campaign}-{recipient}@unsubscribe.mailchimpapp.net?subject=unsubscribe>'
     List-Unsubscribe-Post: 'List-Unsubscribe=One-Click'
   examples:
     - '
@@ -81,6 +79,6 @@ headers:
     X-MC-User: b00ccdbb39a8456492b99ae9e
     Feedback-ID: 153975342:153975342.8987958:us1:mc
     List-ID: b00ccdbb39a8456492b99ae9emc list <b00ccdbb39a8456492b99ae9e.1621274.list-id.mcsv.net>
-    List-Unsubscribe: <https://voeoe.us1.list-manage.com/unsubscribe?u=b00ccdbb39a8456492b99ae9e&id=ede4b53575&e=be24ad69fc&c=a8d0ad03b7>, <mailto:unsubscribe-mc.us1_b00ccdbb39a8456492b99ae9e.a8d0ad03b7-be24ad69fc@unsubscribe.mailchimpapp.net?subject=unsubscribe>
+    List-Unsubscribe: <https://voeoe.us1.list-manage.com/unsubscribe?u=b00ccdbb39a8456492b99ae9e&id=ede4b53575&e=be24ad69fc&c=a8d0ad03b7>, <mailto:unsubscribe-mc.{region}_b00ccdbb39a8456492b99ae9e.a8d0ad03b7-be24ad69fc@unsubscribe.mailchimpapp.net?subject=unsubscribe>
     List-Unsubscribe-Post: List-Unsubscribe=One-Click
     '

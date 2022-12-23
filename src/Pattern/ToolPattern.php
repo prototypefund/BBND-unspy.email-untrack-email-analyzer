@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Geeks4change\BbndAnalyzer\Pattern;
 
+use Geeks4change\BbndAnalyzer\Pattern\HeaderPattern\HeaderPattern;
 use Geeks4change\BbndAnalyzer\Utility\ArrayTool;
 
 final class ToolPattern {
@@ -28,19 +29,27 @@ final class ToolPattern {
   protected array $imagePatterns;
 
   /**
+   * @var array<\Geeks4change\BbndAnalyzer\Pattern\HeaderPattern\HeaderPattern>
+   */
+  protected array $headerPatterns;
+
+  /**
    * @param string $id
    * @param string|null $disconnectId
    * @param \Geeks4change\BbndAnalyzer\Pattern\DomainPattern[] $domainPatterns
    * @param \Geeks4change\BbndAnalyzer\Pattern\UrlPatternForLink[] $linkPatterns
    * @param \Geeks4change\BbndAnalyzer\Pattern\UrlPatternForImage[] $imagePatterns
+   * @param \Geeks4change\BbndAnalyzer\Pattern\HeaderPattern\HeaderPattern[] $headerPatterns
    */
-  public function __construct(string $id, ?string $disconnectId, array $domainPatterns, array $linkPatterns, array $imagePatterns) {
+  public function __construct(string $id, ?string $disconnectId, array $domainPatterns, array $linkPatterns, array $imagePatterns, array $headerPatterns) {
     $this->id = $id;
     $this->disconnectId = $disconnectId;
     $this->domainPatterns = $domainPatterns;
     $this->linkPatterns = $linkPatterns;
     $this->imagePatterns = $imagePatterns;
+    $this->headerPatterns = $headerPatterns;
   }
+
 
   public static function fromArray(string $id, array $array) {
     $disconnectId = $array['disconnect_id'] ?? NULL;
@@ -51,6 +60,8 @@ final class ToolPattern {
       ->map(fn($value, $key) => UrlPatternForLink::fromItem($value, $key));
     $imagePatterns = ArrayTool::create($array['images'] ?? [])
       ->map(fn($value, $key) => UrlPatternForImage::fromItem($value, $key));
+    $headerPatterns = ArrayTool::create($array['headers']['patterns'] ?? [])
+      ->map(fn($value, $key) => HeaderPattern::fromItem($value, $key));
 
     return new self(
       $id,
@@ -58,6 +69,7 @@ final class ToolPattern {
       $domainPatterns,
       $linkPatterns,
       $imagePatterns,
+      $headerPatterns,
     );
   }
 
@@ -94,6 +106,13 @@ final class ToolPattern {
    */
   public function getImagePatterns(): array {
     return $this->imagePatterns;
+  }
+
+  /**
+   * @return array
+   */
+  public function getHeaderPatterns(): array {
+    return $this->headerPatterns;
   }
 
 }

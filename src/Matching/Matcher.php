@@ -8,6 +8,7 @@ use Geeks4change\BbndAnalyzer\DomElement\DomElementCollection;
 use Geeks4change\BbndAnalyzer\DomElement\Image;
 use Geeks4change\BbndAnalyzer\DomElement\Link;
 use Geeks4change\BbndAnalyzer\Pattern\ToolPatternRepository;
+use ZBateson\MailMimeParser\Message;
 
 final class Matcher {
 
@@ -15,6 +16,16 @@ final class Matcher {
 
   public function __construct() {
     $this->toolPatternRepository = new ToolPatternRepository();
+  }
+
+  public function matchHeaders(Message $message) {
+    /** @var \Geeks4change\BbndAnalyzer\Pattern\ToolPattern $toolPattern */
+    foreach ($this->toolPatternRepository->getToolPatternCollection() as $toolPattern) {
+      foreach ($toolPattern->getHeaderPatterns() as $headerPattern) {
+        // @fixme
+        $headerPattern->match($message);
+      }
+    }
   }
 
   public function matchDomElements(DomElementCollection $domElementCollection): MatchSummary {

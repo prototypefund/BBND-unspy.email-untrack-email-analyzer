@@ -2,7 +2,7 @@
     "name": "geeks4change/bbnd_analyzer",
     "autoload": {
         "psr-4": {
-            "Geeks4change\\BbndAnalyzer\\": "src/",
+            "Geeks4change\\BbndAnalyzer\\": "src/"
         }
     },
     "autoload-dev": {

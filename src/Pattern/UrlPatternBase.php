@@ -8,6 +8,8 @@ use Geeks4change\BbndAnalyzer\DomElement\DomElementInterface;
 
 abstract class UrlPatternBase {
 
+  use RegexTrait;
+
   protected string $name;
 
   protected string $pattern;
@@ -32,15 +34,8 @@ abstract class UrlPatternBase {
     return new static($key, $value['pattern'], $value['tracking'] ?? 'unknown', $value['type'] ?? 'other');
   }
 
-  public function getRegex($pattern, $separator): string {
-    $quotedPattern = preg_quote($pattern, '~');
-    $regexPart = preg_replace('#\\\\{.*?\\\\}#u', "[^{$separator}]+", $quotedPattern);
-    /** @noinspection PhpUnnecessaryLocalVariableInspection */
-    $regex = "~^{$regexPart}($|[?]|[&]|#)~u";
-    return $regex;
-  }
-
   protected function doMatches(DomElementInterface $domElement): bool {
+    // @fixme Separator must change in different parts of URL.
     $regex = $this->getRegex($this->pattern, '/');
     $pathAndQuery = $domElement->getUrl()->getPathAndQuery();
     $effectiveHosts = $domElement->getUrl()->getEffectiveHosts();

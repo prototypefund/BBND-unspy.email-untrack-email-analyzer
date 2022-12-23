@@ -10,3 +10,4 @@
 /.composer-plugin.env
 /.editorconfig
 /.gitattributes
+/.phpunit.result.cache

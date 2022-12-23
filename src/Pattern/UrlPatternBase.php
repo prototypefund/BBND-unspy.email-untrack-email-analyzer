@@ -24,20 +24,24 @@ abstract class UrlPatternBase {
   }
 
 
+  /**
+   * @return static
+   */
   #[\ReturnTypeWillChange]
-  public static function fromItem($value, $key) {
+  public static function fromItem($value, string $key) {
     return new static($key, $value['pattern'], $value['tracking'] ?? 'unknown', $value['type'] ?? 'other');
   }
 
-  public function getRegex(): string {
-    $quotedPattern = preg_quote($this->pattern, '~');
-    $regexPart = preg_replace('#\\\\{.*?\\\\}#u', '[^/]+', $quotedPattern);
+  public function getRegex($pattern, $separator): string {
+    $quotedPattern = preg_quote($pattern, '~');
+    $regexPart = preg_replace('#\\\\{.*?\\\\}#u', "[^{$separator}]+", $quotedPattern);
+    /** @noinspection PhpUnnecessaryLocalVariableInspection */
     $regex = "~^{$regexPart}($|[?]|[&]|#)~u";
     return $regex;
   }
 
   protected function doMatches(DomElementInterface $domElement): bool {
-    $regex = $this->getRegex();
+    $regex = $this->getRegex($this->pattern, '/');
     $pathAndQuery = $domElement->getUrl()->getPathAndQuery();
     $effectiveHosts = $domElement->getUrl()->getEffectiveHosts();
     foreach ($effectiveHosts as $effectiveHost) {

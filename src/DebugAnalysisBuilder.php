@@ -38,7 +38,7 @@ final class DebugAnalysisBuilder implements AnalysisBuilderInterface {
     return $this->auditLines;
   }
 
-  public function getDebugOutput(): array {
+  public function getDebugOutput(bool $explicit = FALSE): array {
     $matchMap = [
       MatchByPattern::class => 'pattern',
       MatchByDomain::class => 'domain',
@@ -56,6 +56,11 @@ final class DebugAnalysisBuilder implements AnalysisBuilderInterface {
         ->getOriginalUrl();
       $type = $domElementMap[get_class($match->getDomElement())];
       $matchesByClass[$group][] = "$type: $url";
+    }
+    if (!$explicit) {
+      foreach ($matchesByClass as &$matches) {
+        $matches = count($matches);
+      }
     }
     return $matchesByClass;
   }

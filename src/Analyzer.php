@@ -7,6 +7,9 @@ namespace Geeks4change\BbndAnalyzer;
 use Geeks4change\BbndAnalyzer\DomainNames\DomainNameResolver;
 use Geeks4change\BbndAnalyzer\DomElement\DomElementCollection;
 use Geeks4change\BbndAnalyzer\Matching\Matcher;
+use Geeks4change\BbndAnalyzer\Utility\DKIMValidatorTool;
+use PHPMailer\DKIMValidator\DKIMException;
+use PHPMailer\DKIMValidator\Validator;
 use ZBateson\MailMimeParser\Header\HeaderConsts;
 use ZBateson\MailMimeParser\MailMimeParser;
 
@@ -14,12 +17,21 @@ class Analyzer {
 
   public function analyze(AnalysisBuilderInterface $analysis, string $emailWithHeaders) {
 
+    // Validate DKIM signature.
+    $dkimValidator = new Validator($emailWithHeaders);
+    try {
+      $dkimResults = $dkimValidator->validate();
+    } catch (DKIMException $e) {
+      $dkimResults = [];
+    }
+    // @fixme
+    print implode("\n", DKIMValidatorTool::extractSummary($dkimResults)) . "\n";
+    print DKIMValidatorTool::extractStatus($dkimResults) . "\n";
+
+    // Parse and find patterns.
     $mailParser = new MailMimeParser();
     $message = $mailParser->parse($emailWithHeaders, FALSE);
     // @todo Consider reporting unusual Mime parts, like more than one text/html part.
-
-    // @todo Verify DKIM signature.
-    // @todo Consider leveraging DKIM normalizer for parsing.
 
     $html = $message->getHtmlContent();
     $domainNameResolver = new DomainNameResolver();
@@ -28,6 +40,8 @@ class Analyzer {
     $matcher = new Matcher();
     $matchSummary = $matcher->matchDomElements($domElementCollection);
     $analysis->setMatchSummary($matchSummary);
+
+    // @todo Match typical analytics patterns.
 
     // @todo If no pattern match, choose an URL / pixel and check redirection.
 

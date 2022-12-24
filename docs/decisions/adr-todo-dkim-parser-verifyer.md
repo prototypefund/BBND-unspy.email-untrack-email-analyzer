@@ -1,6 +1,11 @@
 # Parse and verify DKIM
 
 https://packagist.org/packages/angrychimp/php-dkim
+https://packagist.org/packages/pimlie/php-dkim
+
+https://github.com/PHPMailer/DKIMValidator
+https://github.com/PHPMailer/DKIMValidator/issues/18
+https://github.com/PHPMailer/DKIMValidator/pull/17
 
 https://symfony.com/doc/current/components/mime.html
 https://stackoverflow.com/questions/24627098/retrieve-and-parse-emails-from-pop3-or-imap-mailbox-in-symfony2

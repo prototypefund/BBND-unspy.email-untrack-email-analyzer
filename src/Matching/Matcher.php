@@ -18,18 +18,6 @@ final class Matcher {
     $this->toolPatternRepository = new ToolPatternRepository();
   }
 
-  public function matchHeaders(Message $message) {
-    /** @var \Geeks4change\BbndAnalyzer\Pattern\ToolPattern $toolPattern */
-    foreach ($this->toolPatternRepository->getToolPatternCollection() as $toolPattern) {
-      foreach ($toolPattern->getHeaderPatterns() as $headerPattern) {
-        $match = $headerPattern->matchHeader($message);
-        if ($match) {
-          // @fixme
-          dump($toolPattern->getId() . ':' . $headerPattern->getName());
-        }
-      }
-    }
-  }
 
   public function matchDomElements(DomElementCollection $domElementCollection): DomElementMatchResult {
     $matchSummaryBuilder = DomElementMatchResult::builder();

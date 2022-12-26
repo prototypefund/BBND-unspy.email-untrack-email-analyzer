@@ -25,6 +25,11 @@ class Analyzer {
     $message = $mailParser->parse($emailWithHeaders, FALSE);
     // @todo Consider reporting unusual Mime parts, like more than one text/html part.
 
+    $serviceAnalyzer = new ServiceAnalyzer();
+    $headerSummary = $serviceAnalyzer->analyzeHeaders($message);
+
+    // @fixme
+
     $html = $message->getHtmlContent();
     $domainNameResolver = new DomainNameResolver();
     $domElementCollection = DomElementCollection::fromHtml($html, $domainNameResolver);

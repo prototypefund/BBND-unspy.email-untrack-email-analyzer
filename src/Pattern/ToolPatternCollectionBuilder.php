@@ -20,7 +20,7 @@ final class ToolPatternCollectionBuilder {
   }
 
   public function add(ToolPattern $pattern) {
-    $this->patterns[$pattern->getId()] = $pattern;
+    $this->patterns[$pattern->getName()] = $pattern;
   }
 
   public function freeze(): ToolPatternCollection {

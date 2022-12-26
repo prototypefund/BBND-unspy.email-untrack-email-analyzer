@@ -76,7 +76,7 @@ final class ToolPattern {
   /**
    * @return string
    */
-  public function getId(): string {
+  public function getName(): string {
     return $this->id;
   }
 

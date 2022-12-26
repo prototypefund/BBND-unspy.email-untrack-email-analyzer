@@ -2,16 +2,16 @@
 
 declare(strict_types=1);
 
-namespace Geeks4change\BbndAnalyzer;
+namespace Geeks4change\BbndAnalyzer\Analysis;
 
 use Geeks4change\BbndAnalyzer\Analysis\SummaryExtractor\DKIMSummaryExtractor;
 use Geeks4change\BbndAnalyzer\Analysis\SummaryExtractor\DomElementSummaryExtractor;
+use Geeks4change\BbndAnalyzer\AnalysisBuilderInterface;
 use Geeks4change\BbndAnalyzer\DomainNames\DomainNameResolver;
 use Geeks4change\BbndAnalyzer\DomElement\DomElementCollection;
 use Geeks4change\BbndAnalyzer\DomElement\Image;
 use Geeks4change\BbndAnalyzer\DomElement\Link;
 use Geeks4change\BbndAnalyzer\Matching\Matcher;
-use Geeks4change\BbndAnalyzer\Utility\DKIMValidatorTool;
 use PHPMailer\DKIMValidator\DKIMException;
 use PHPMailer\DKIMValidator\Validator;
 use ZBateson\MailMimeParser\Header\HeaderConsts;

@@ -2,7 +2,7 @@
 
 namespace Geeks4change\tests\BbndAnalyzer;
 
-use Geeks4change\BbndAnalyzer\Analyzer;
+use Geeks4change\BbndAnalyzer\Analysis\Analyzer;
 use Geeks4change\BbndAnalyzer\DebugAnalysisBuilder;
 use Geeks4change\BbndAnalyzer\Utility\ThrowMethodTrait;
 use PHPUnit\Framework\TestCase;

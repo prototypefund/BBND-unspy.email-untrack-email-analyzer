@@ -2,7 +2,7 @@
 
 namespace Geeks4change\BbndAnalyzer\Matching;
 
-class MatchSummaryBuilder {
+class DomElementMatchResultBuilder {
 
   /**
    * @var array<\Geeks4change\BbndAnalyzer\Matching\MatchBase>
@@ -22,12 +22,8 @@ class MatchSummaryBuilder {
     $this->matchList[] = $match;
   }
 
-  public function freeze(): MatchSummary {
-    // @fixme
-    $matchLevel = 0;
-    $toolId = '';
-    $mayNeedResearch = FALSE;
-    return ($this->constructor)($this->matchList, $matchLevel, $toolId, $mayNeedResearch);
+  public function freeze(): DomElementMatchResult {
+    return ($this->constructor)($this->matchList);
   }
 
 }

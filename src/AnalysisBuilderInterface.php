@@ -2,7 +2,7 @@
 
 namespace Geeks4change\BbndAnalyzer;
 
-use Geeks4change\BbndAnalyzer\Matching\MatchSummary;
+use Geeks4change\BbndAnalyzer\Matching\DomElementMatchResult;
 
 interface AnalysisBuilderInterface {
 
@@ -11,6 +11,6 @@ interface AnalysisBuilderInterface {
   public function getDebugOutput(): array;
 
   public function setEmailWithHeaders(string $emailWithHeaders): void;
-  public function setMatchSummary(MatchSummary $matchSummary): void;
+  public function setMatchSummary(DomElementMatchResult $matchSummary): void;
 
 }

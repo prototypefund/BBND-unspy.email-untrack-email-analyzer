@@ -4,8 +4,12 @@ declare(strict_types=1);
 
 namespace Geeks4change\BbndAnalyzer;
 
+use Geeks4change\BbndAnalyzer\Analysis\SummaryExtractor\DKIMSummaryExtractor;
+use Geeks4change\BbndAnalyzer\Analysis\SummaryExtractor\DomElementSummaryExtractor;
 use Geeks4change\BbndAnalyzer\DomainNames\DomainNameResolver;
 use Geeks4change\BbndAnalyzer\DomElement\DomElementCollection;
+use Geeks4change\BbndAnalyzer\DomElement\Image;
+use Geeks4change\BbndAnalyzer\DomElement\Link;
 use Geeks4change\BbndAnalyzer\Matching\Matcher;
 use Geeks4change\BbndAnalyzer\Utility\DKIMValidatorTool;
 use PHPMailer\DKIMValidator\DKIMException;
@@ -24,9 +28,8 @@ class Analyzer {
     } catch (DKIMException $e) {
       $dkimResults = [];
     }
-    // @fixme
-    print implode("\n", DKIMValidatorTool::extractSummary($dkimResults)) . "\n";
-    print DKIMValidatorTool::extractStatus($dkimResults) . "\n";
+    $dkimSummary = (new DKIMSummaryExtractor())->extractSummary($dkimResults);
+
 
     // Parse and find patterns.
     $mailParser = new MailMimeParser();
@@ -38,8 +41,9 @@ class Analyzer {
     $domElementCollection = DomElementCollection::fromHtml($html, $domainNameResolver);
 
     $matcher = new Matcher();
-    $matchSummary = $matcher->matchDomElements($domElementCollection);
-    $analysis->setMatchSummary($matchSummary);
+    $domElementMatchResult = $matcher->matchDomElements($domElementCollection);
+    $linkSummaryList = (new DomElementSummaryExtractor())->extractSummary($domElementMatchResult, Link::class);
+    $imageSummaryList = (new DomElementSummaryExtractor())->extractSummary($domElementMatchResult, Image::class);
 
     // @todo Match typical analytics patterns.
 

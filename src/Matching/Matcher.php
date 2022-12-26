@@ -31,8 +31,8 @@ final class Matcher {
     }
   }
 
-  public function matchDomElements(DomElementCollection $domElementCollection): MatchSummary {
-    $matchSummaryBuilder = MatchSummary::builder();
+  public function matchDomElements(DomElementCollection $domElementCollection): DomElementMatchResult {
+    $matchSummaryBuilder = DomElementMatchResult::builder();
     /** @var \Geeks4change\BbndAnalyzer\DomElement\DomElementInterface $domElement */
     foreach ($domElementCollection as $domElement) {
       $domElementHasMatch = FALSE;

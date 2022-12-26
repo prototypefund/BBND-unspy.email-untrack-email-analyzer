@@ -9,7 +9,7 @@ use Geeks4change\BbndAnalyzer\DomElement\Link;
 use Geeks4change\BbndAnalyzer\Matching\MatchByDomain;
 use Geeks4change\BbndAnalyzer\Matching\MatchByPattern;
 use Geeks4change\BbndAnalyzer\Matching\MatchNone;
-use Geeks4change\BbndAnalyzer\Matching\MatchSummary;
+use Geeks4change\BbndAnalyzer\Matching\DomElementMatchResult;
 
 final class DebugAnalysisBuilder implements AnalysisBuilderInterface {
 
@@ -20,7 +20,7 @@ final class DebugAnalysisBuilder implements AnalysisBuilderInterface {
 
   protected string $emailWithHeaders;
 
-  protected MatchSummary $matchSummary;
+  protected DomElementMatchResult $matchSummary;
 
   public function setIsValid(): bool {
     return isset($this->emailWithHeaders) && isset($this->matchSummary);
@@ -30,7 +30,7 @@ final class DebugAnalysisBuilder implements AnalysisBuilderInterface {
     $this->emailWithHeaders = $emailWithHeaders;
   }
 
-  public function setMatchSummary(MatchSummary $matchSummary): void {
+  public function setMatchSummary(DomElementMatchResult $matchSummary): void {
     $this->matchSummary = $matchSummary;
   }
 

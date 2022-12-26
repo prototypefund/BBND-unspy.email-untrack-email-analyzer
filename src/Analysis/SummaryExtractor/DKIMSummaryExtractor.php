@@ -2,14 +2,19 @@
 
 declare(strict_types=1);
 
-namespace Geeks4change\BbndAnalyzer\Utility;
+namespace Geeks4change\BbndAnalyzer\Analysis\SummaryExtractor;
 
-/**
- * DKIMValidator summary tool.
- */
-final class DKIMValidatorTool {
+use Geeks4change\BbndAnalyzer\Analysis\Summary\DKIMSummary;
 
-  public static function extractSummary(array $result): array {
+final class DKIMSummaryExtractor {
+
+  public function extractSummary(array $result) {
+    return new DKIMSummary(
+      $this->extractStatus($result),
+      $this->extractSummaryLines($result),
+    );
+  }
+  protected function extractSummaryLines(array $result): array {
     $summaryLines = [];
     foreach ($result as $headerIndex => $messages) {
       $messageLines = [];
@@ -27,7 +32,7 @@ final class DKIMValidatorTool {
    * - yellow: Any header succeeds validation, but has problems.
    * - red: No validation success.
    */
-  public static function extractStatus(array $result): string {
+  protected function extractStatus(array $result): string {
     $headerStatusList = [];
     foreach ($result as $headerIndex => $messages) {
       $headerHasSuccessMessage = $headerHasProblemMessage = FALSE;

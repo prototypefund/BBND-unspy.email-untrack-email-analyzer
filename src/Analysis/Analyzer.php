@@ -4,7 +4,6 @@ declare(strict_types=1);
 
 namespace Geeks4change\BbndAnalyzer\Analysis;
 
-use Geeks4change\BbndAnalyzer\Analysis\SummaryExtractor\DKIMSummaryExtractor;
 use Geeks4change\BbndAnalyzer\Analysis\SummaryExtractor\DomElementSummaryExtractor;
 use Geeks4change\BbndAnalyzer\AnalysisBuilderInterface;
 use Geeks4change\BbndAnalyzer\DomainNames\DomainNameResolver;
@@ -12,23 +11,13 @@ use Geeks4change\BbndAnalyzer\DomElement\DomElementCollection;
 use Geeks4change\BbndAnalyzer\DomElement\Image;
 use Geeks4change\BbndAnalyzer\DomElement\Link;
 use Geeks4change\BbndAnalyzer\Matching\Matcher;
-use PHPMailer\DKIMValidator\DKIMException;
-use PHPMailer\DKIMValidator\Validator;
 use ZBateson\MailMimeParser\Header\HeaderConsts;
 use ZBateson\MailMimeParser\MailMimeParser;
 
 class Analyzer {
 
   public function analyze(AnalysisBuilderInterface $analysis, string $emailWithHeaders) {
-
-    // Validate DKIM signature.
-    $dkimValidator = new Validator($emailWithHeaders);
-    try {
-      $dkimResults = $dkimValidator->validate();
-    } catch (DKIMException $e) {
-      $dkimResults = [];
-    }
-    $dkimSummary = (new DKIMSummaryExtractor())->extractSummary($dkimResults);
+    (new DKIMAnalyzer())->analyzeDKIM($emailWithHeaders);
 
 
     // Parse and find patterns.

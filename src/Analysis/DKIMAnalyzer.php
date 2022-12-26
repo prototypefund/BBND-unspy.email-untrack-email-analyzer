@@ -2,13 +2,25 @@
 
 declare(strict_types=1);
 
-namespace Geeks4change\BbndAnalyzer\Analysis\SummaryExtractor;
+namespace Geeks4change\BbndAnalyzer\Analysis;
 
 use Geeks4change\BbndAnalyzer\Analysis\Summary\DKIMSummary;
+use PHPMailer\DKIMValidator\DKIMException;
+use PHPMailer\DKIMValidator\Validator;
 
-final class DKIMSummaryExtractor {
+final class DKIMAnalyzer {
 
-  public function extractSummary(array $result) {
+  public function analyzeDKIM(string $emailWithHeaders): DKIMSummary {
+    try {
+      $dkimValidator = new Validator($emailWithHeaders);
+      $dkimResults = $dkimValidator->validate();
+    } catch (DKIMException $e) {
+      $dkimResults = [];
+    }
+    return ($this->extractSummary($dkimResults));
+  }
+
+  protected function extractSummary(array $result) {
     return new DKIMSummary(
       $this->extractStatus($result),
       $this->extractSummaryLines($result),
@@ -52,5 +64,7 @@ final class DKIMSummaryExtractor {
     $messageStatus = max(0, ...$headerStatusList);
     return ['red', 'yellow', 'green'][$messageStatus];
   }
+
+
 
 }

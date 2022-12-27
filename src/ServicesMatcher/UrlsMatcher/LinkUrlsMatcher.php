@@ -9,7 +9,7 @@ use Geeks4change\BbndAnalyzer\ServicesMatcher\ServiceMatcherProvider;
 final class LinkUrlsMatcher extends UrlsMatcherBase{
 
   protected function getUrlPatterns(ServiceMatcherProvider $toolPattern): array {
-    return $toolPattern->getLinkPatterns();
+    return $toolPattern->getLinkUrlMatchers();
   }
 
 }

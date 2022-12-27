@@ -11,18 +11,18 @@ $usage = "Usage: $argv[0] [service] [image|link] [pattern] [?string-to-match]\n"
 $repo = new ServiceMatcherProviderRepository();
 
 /** @var \Geeks4change\BbndAnalyzer\ServicesMatcher\ServiceMatcherProvider $toolPattern */
-$toolPatternCollection = $repo->getToolPatternCollection();
+$toolPatternCollection = $repo->getServiceMatcherProviderCollection();
 $toolPattern = $toolPatternCollection[$service] ?? NULL;
 if (!$toolPattern) {
   print $usage;
   printf("Available services: %s\n", implode('|', array_keys(iterator_to_array($toolPatternCollection))));
   exit(1);
 }
-/** @var \Geeks4change\BbndAnalyzer\ServicesMatcher\UrlsInfo\UrlPatternBase[] $types */
+/** @var \Geeks4change\BbndAnalyzer\ServicesMatcher\UrlsInfo\UrlMatcherBase[] $types */
 $types = [
-  'link' => $toolPattern->getLinkPatterns(),
-  'image' => $toolPattern->getImagePatterns(),
-  'header' => $toolPattern->getHeaderPatterns(),
+  'link' => $toolPattern->getLinkUrlMatchers(),
+  'image' => $toolPattern->getImageUrlMatchers(),
+  'header' => $toolPattern->getHeaderMatchers(),
 ];
 $patterns = $types[$typeName] ?? NULL;
 if (!$patterns) {

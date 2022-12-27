@@ -19,7 +19,7 @@ abstract class UrlsMatcherBase {
     $hasRedirectList = new UrlList();
     $hasAnalyticsList = new UrlList();
     /** @var \Geeks4change\BbndAnalyzer\ServicesMatcher\ServiceMatcherProvider $toolPattern */
-    foreach (Globals::get()->getServiceInfoRepository()->getToolPatternCollection() as $toolPattern) {
+    foreach (Globals::get()->getServiceMatcherProviderRepository()->getServiceMatcherProviderCollection() as $toolPattern) {
       $matchedExactly = new UrlList();
       $matchedByDomain = new UrlList();
       foreach ($urlList as $url) {
@@ -52,13 +52,13 @@ abstract class UrlsMatcherBase {
   }
 
   /**
-   * @return \Geeks4change\BbndAnalyzer\ServicesMatcher\UrlsInfo\UrlPatternBase[]
+   * @return \Geeks4change\BbndAnalyzer\ServicesMatcher\UrlsInfo\UrlMatcherBase[]
    */
   abstract protected function getUrlPatterns(ServiceMatcherProvider $toolPattern): array;
 
   protected function isDomainPatternMatch(ServiceMatcherProvider $toolPattern, UriInterface $url): bool {
     $isDomainPatternMatch = FALSE;
-    foreach ($toolPattern->getDomainPatterns() as $domainPattern) {
+    foreach ($toolPattern->getDomainMatchers() as $domainPattern) {
       if ($domainPattern->nowDoMatches($url)) {
         $isDomainPatternMatch = TRUE;
       }

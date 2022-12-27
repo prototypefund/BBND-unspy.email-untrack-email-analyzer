@@ -9,12 +9,12 @@ use Symfony\Component\Yaml\Yaml;
 
 final class ServiceMatcherProviderRepository {
 
-  protected ServiceMatcherProviderCollection $patternCollection;
+  protected ServiceMatcherProviderCollection $serviceMatcherProviderCollection;
 
-  public function getToolPatternCollection(): ServiceMatcherProviderCollection {
-    if (!isset($this->patternCollection)) {
+  public function getServiceMatcherProviderCollection(): ServiceMatcherProviderCollection {
+    if (!isset($this->serviceMatcherProviderCollection)) {
       $directory = dirname(dirname(__DIR__)) . '/patterns';
-      $patternCollectionBuilder = ServiceMatcherProviderCollection::builder();
+      $serviceMatcherProviderCollectionBuilder = ServiceMatcherProviderCollection::builder();
       $filePaths = glob("$directory/*.yml");
       foreach ($filePaths as $filePath) {
         $id = basename($filePath, '.yml');
@@ -31,12 +31,12 @@ final class ServiceMatcherProviderRepository {
         } catch (ParseException $exception) {
           throw new \LogicException("Oops in $id.yml", 0, $exception);
         }
-        $pattern = ServiceMatcherProvider::fromArray($id, $array);
-        $patternCollectionBuilder->add($pattern);
+        $serviceMatcherProvider = ServiceMatcherProvider::fromArray($id, $array);
+        $serviceMatcherProviderCollectionBuilder->add($serviceMatcherProvider);
       }
-      $this->patternCollection = $patternCollectionBuilder->freeze();
+      $this->serviceMatcherProviderCollection = $serviceMatcherProviderCollectionBuilder->freeze();
     }
-    return $this->patternCollection;
+    return $this->serviceMatcherProviderCollection;
   }
 
 }

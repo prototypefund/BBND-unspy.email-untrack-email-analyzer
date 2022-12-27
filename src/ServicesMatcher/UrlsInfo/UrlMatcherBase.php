@@ -7,7 +7,7 @@ namespace Geeks4change\BbndAnalyzer\ServicesMatcher\UrlsInfo;
 use Geeks4change\BbndAnalyzer\Utility\UrlTool;
 use Psr\Http\Message\UriInterface;
 
-abstract class UrlPatternBase {
+abstract class UrlMatcherBase {
 
   use RegexTrait;
 

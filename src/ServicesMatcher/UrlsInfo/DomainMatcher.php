@@ -7,7 +7,7 @@ namespace Geeks4change\BbndAnalyzer\ServicesMatcher\UrlsInfo;
 use Geeks4change\BbndAnalyzer\Utility\UrlTool;
 use Psr\Http\Message\UriInterface;
 
-final class DomainPattern {
+final class DomainMatcher {
 
   protected string $domain;
 

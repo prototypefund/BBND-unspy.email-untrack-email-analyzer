@@ -14,9 +14,9 @@ final class HeadersMatcher {
   public function matchHeaders(Message $message): HeaderResult {
     $headerSummaryPerServiceList = [];
     /** @var \Geeks4change\BbndAnalyzer\ServicesMatcher\ServiceMatcherProvider $serviceMatcher */
-    foreach (Globals::get()->getServiceInfoRepository()->getToolPatternCollection() as $serviceMatcher) {
+    foreach (Globals::get()->getServiceMatcherProviderRepository()->getServiceMatcherProviderCollection() as $serviceMatcher) {
       $headerMatchSummaryList = [];
-      foreach ($serviceMatcher->getHeaderPatterns() as $headerPattern) {
+      foreach ($serviceMatcher->getHeaderMatchers() as $headerPattern) {
         $isMatch = $headerPattern->matchHeader($message);
         $headerMatchSummaryList[] = new HeaderMatchSummary($headerPattern->getName(), $isMatch);
       }

@@ -7,7 +7,7 @@ use Geeks4change\BbndAnalyzer\Globals;
 use Geeks4change\BbndAnalyzer\ServicesMatcher\UrlsInfo\RegexTrait;
 use ZBateson\MailMimeParser\Message;
 
-class HeadersPattern {
+class HeaderMatcher {
 
   use RegexTrait;
 

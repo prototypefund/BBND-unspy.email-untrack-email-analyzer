@@ -9,7 +9,7 @@ use Geeks4change\BbndAnalyzer\ServicesMatcher\ServiceMatcherProvider;
 final class ImageUrlsMatcher extends UrlsMatcherBase {
 
   protected function getUrlPatterns(ServiceMatcherProvider $toolPattern): array {
-    return $toolPattern->getImagePatterns();
+    return $toolPattern->getImageUrlMatchers();
   }
 
 }

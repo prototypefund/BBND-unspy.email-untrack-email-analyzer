@@ -8,7 +8,7 @@ final class ServiceMatcherProviderCollectionBuilder {
 
   /**
    */
-  protected array $patterns = [];
+  protected array $serviceMatcherProviders = [];
 
   protected \Closure $constructor;
 
@@ -19,12 +19,12 @@ final class ServiceMatcherProviderCollectionBuilder {
     $this->constructor = $constructor;
   }
 
-  public function add(ServiceMatcherProvider $pattern) {
-    $this->patterns[$pattern->getName()] = $pattern;
+  public function add(ServiceMatcherProvider $serviceMatcherProvider) {
+    $this->serviceMatcherProviders[$serviceMatcherProvider->getName()] = $serviceMatcherProvider;
   }
 
   public function freeze(): ServiceMatcherProviderCollection {
-    return ($this->constructor)($this->patterns);
+    return ($this->constructor)($this->serviceMatcherProviders);
   }
 
 }

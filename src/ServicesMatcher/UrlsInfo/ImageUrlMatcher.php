@@ -4,8 +4,7 @@ declare(strict_types=1);
 
 namespace Geeks4change\BbndAnalyzer\ServicesMatcher\UrlsInfo;
 
-use Geeks4change\BbndAnalyzer\DomElement\Link;
 
-class UrlPatternForLink extends UrlPatternBase {
+class ImageUrlMatcher extends UrlMatcherBase {
 
 }

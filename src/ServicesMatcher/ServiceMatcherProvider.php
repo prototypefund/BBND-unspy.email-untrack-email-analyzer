@@ -4,10 +4,10 @@ declare(strict_types=1);
 
 namespace Geeks4change\BbndAnalyzer\ServicesMatcher;
 
-use Geeks4change\BbndAnalyzer\ServicesMatcher\HeadersInfo\HeadersPattern;
-use Geeks4change\BbndAnalyzer\ServicesMatcher\UrlsInfo\DomainPattern;
-use Geeks4change\BbndAnalyzer\ServicesMatcher\UrlsInfo\UrlPatternForImage;
-use Geeks4change\BbndAnalyzer\ServicesMatcher\UrlsInfo\UrlPatternForLink;
+use Geeks4change\BbndAnalyzer\ServicesMatcher\HeadersInfo\HeaderMatcher;
+use Geeks4change\BbndAnalyzer\ServicesMatcher\UrlsInfo\DomainMatcher;
+use Geeks4change\BbndAnalyzer\ServicesMatcher\UrlsInfo\ImageUrlMatcher;
+use Geeks4change\BbndAnalyzer\ServicesMatcher\UrlsInfo\LinkUrlMatcher;
 use Geeks4change\BbndAnalyzer\Utility\ArrayTool;
 
 final class ServiceMatcherProvider {
@@ -17,62 +17,62 @@ final class ServiceMatcherProvider {
   protected ?string $disconnectId;
 
   /**
-   * @var array<\Geeks4change\BbndAnalyzer\ServicesMatcher\UrlsInfo\DomainPattern>
+   * @var array<\Geeks4change\BbndAnalyzer\ServicesMatcher\UrlsInfo\DomainMatcher>
    */
-  protected array $domainPatterns;
+  protected array $domainMatchers;
 
   /**
-   * @var array<\Geeks4change\BbndAnalyzer\ServicesMatcher\UrlsInfo\UrlPatternForLink>
+   * @var array<\Geeks4change\BbndAnalyzer\ServicesMatcher\UrlsInfo\LinkUrlMatcher>
    */
-  protected array $linkPatterns;
+  protected array $linkUrlMatchers;
 
   /**
-   * @var array<\Geeks4change\BbndAnalyzer\ServicesMatcher\UrlsInfo\UrlPatternForImage>
+   * @var array<\Geeks4change\BbndAnalyzer\ServicesMatcher\UrlsInfo\ImageUrlMatcher>
    */
-  protected array $imagePatterns;
+  protected array $imageUrlMatchers;
 
   /**
-   * @var array<\Geeks4change\BbndAnalyzer\ServicesMatcher\HeadersInfo\HeadersPattern>
+   * @var array<\Geeks4change\BbndAnalyzer\ServicesMatcher\HeadersInfo\HeaderMatcher>
    */
-  protected array $headerPatterns;
+  protected array $headerMatchers;
 
   /**
    * @param string $id
    * @param string|null $disconnectId
-   * @param \Geeks4change\BbndAnalyzer\ServicesMatcher\UrlsInfo\DomainPattern[] $domainPatterns
-   * @param \Geeks4change\BbndAnalyzer\ServicesMatcher\UrlsInfo\UrlPatternForLink[] $linkPatterns
-   * @param \Geeks4change\BbndAnalyzer\ServicesMatcher\UrlsInfo\UrlPatternForImage[] $imagePatterns
-   * @param \Geeks4change\BbndAnalyzer\ServicesMatcher\HeadersInfo\HeadersPattern[] $headerPatterns
+   * @param \Geeks4change\BbndAnalyzer\ServicesMatcher\UrlsInfo\DomainMatcher[] $domainMatchers
+   * @param \Geeks4change\BbndAnalyzer\ServicesMatcher\UrlsInfo\LinkUrlMatcher[] $linkUrlMatchers
+   * @param \Geeks4change\BbndAnalyzer\ServicesMatcher\UrlsInfo\ImageUrlMatcher[] $imageUrlMatchers
+   * @param \Geeks4change\BbndAnalyzer\ServicesMatcher\HeadersInfo\HeaderMatcher[] $headerMatchers
    */
-  public function __construct(string $id, ?string $disconnectId, array $domainPatterns, array $linkPatterns, array $imagePatterns, array $headerPatterns) {
+  public function __construct(string $id, ?string $disconnectId, array $domainMatchers, array $linkUrlMatchers, array $imageUrlMatchers, array $headerMatchers) {
     $this->id = $id;
     $this->disconnectId = $disconnectId;
-    $this->domainPatterns = $domainPatterns;
-    $this->linkPatterns = $linkPatterns;
-    $this->imagePatterns = $imagePatterns;
-    $this->headerPatterns = $headerPatterns;
+    $this->domainMatchers = $domainMatchers;
+    $this->linkUrlMatchers = $linkUrlMatchers;
+    $this->imageUrlMatchers = $imageUrlMatchers;
+    $this->headerMatchers = $headerMatchers;
   }
 
 
   public static function fromArray(string $id, array $array) {
     $disconnectId = $array['disconnect_id'] ?? NULL;
 
-    $domainPatterns = ArrayTool::create($array['domains'] ?? [])
-      ->map(fn($value, $key) => DomainPattern::fromItem($value, $key));
-    $linkPatterns = ArrayTool::create($array['links'] ?? [])
-      ->map(fn($value, $key) => UrlPatternForLink::fromItem($value, $key));
-    $imagePatterns = ArrayTool::create($array['images'] ?? [])
-      ->map(fn($value, $key) => UrlPatternForImage::fromItem($value, $key));
-    $headerPatterns = ArrayTool::create($array['headers']['patterns'] ?? [])
-      ->map(fn($value, $key) => HeadersPattern::fromItem($value, $key));
+    $domainMatchers = ArrayTool::create($array['domains'] ?? [])
+      ->map(fn($value, $key) => DomainMatcher::fromItem($value, $key));
+    $linkUrlMatchers = ArrayTool::create($array['links'] ?? [])
+      ->map(fn($value, $key) => LinkUrlMatcher::fromItem($value, $key));
+    $imageUrlMatchers = ArrayTool::create($array['images'] ?? [])
+      ->map(fn($value, $key) => ImageUrlMatcher::fromItem($value, $key));
+    $headerMatchers = ArrayTool::create($array['headers']['patterns'] ?? [])
+      ->map(fn($value, $key) => HeaderMatcher::fromItem($value, $key));
 
     return new self(
       $id,
       $disconnectId,
-      $domainPatterns,
-      $linkPatterns,
-      $imagePatterns,
-      $headerPatterns,
+      $domainMatchers,
+      $linkUrlMatchers,
+      $imageUrlMatchers,
+      $headerMatchers,
     );
   }
 
@@ -91,31 +91,31 @@ final class ServiceMatcherProvider {
   }
 
   /**
-   * @return array<\Geeks4change\BbndAnalyzer\ServicesMatcher\UrlsInfo\DomainPattern>
+   * @return array<\Geeks4change\BbndAnalyzer\ServicesMatcher\UrlsInfo\DomainMatcher>
    */
-  public function getDomainPatterns(): array {
-    return $this->domainPatterns;
+  public function getDomainMatchers(): array {
+    return $this->domainMatchers;
   }
 
   /**
    * @return array
    */
-  public function getLinkPatterns(): array {
-    return $this->linkPatterns;
+  public function getLinkUrlMatchers(): array {
+    return $this->linkUrlMatchers;
   }
 
   /**
    * @return array
    */
-  public function getImagePatterns(): array {
-    return $this->imagePatterns;
+  public function getImageUrlMatchers(): array {
+    return $this->imageUrlMatchers;
   }
 
   /**
    * @return array
    */
-  public function getHeaderPatterns(): array {
-    return $this->headerPatterns;
+  public function getHeaderMatchers(): array {
+    return $this->headerMatchers;
   }
 
 }

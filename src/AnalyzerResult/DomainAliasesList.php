@@ -9,7 +9,7 @@ namespace Geeks4change\BbndAnalyzer\AnalyzerResult;
  *
  * @api Will be serialized in persistent storage, any change needs a migration.
  */
-final class DomainAliasesList {
+final class DomainAliasesList implements \IteratorAggregate {
 
   /**
    * @var array<\Geeks4change\BbndAnalyzer\AnalyzerResult\DomainAliases>

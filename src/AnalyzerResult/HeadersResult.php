@@ -4,6 +4,8 @@ declare(strict_types=1);
 
 namespace Geeks4change\BbndAnalyzer\AnalyzerResult;
 
+use Geeks4change\BbndAnalyzer\TestHelpers\TestSummaryInterface;
+
 /**
  * HeaderSummary, child of
  *
@@ -11,25 +13,24 @@ namespace Geeks4change\BbndAnalyzer\AnalyzerResult;
  *
  * @api Will be serialized in persistent storage, any change needs a migration.
  */
-final class HeadersResult {
+final class HeadersResult implements TestSummaryInterface {
 
   /**
-   * @var array<\Geeks4change\BbndAnalyzer\AnalyzerResult\HeadersSummaryPerService>
+   * @var array<\Geeks4change\BbndAnalyzer\AnalyzerResult\HeadersResultPerService>
    */
-  protected array $headerSummaryPerServiceList;
+  protected array $headersMatchResultPerServiceList = [];
 
-  /**
-   * @param \Geeks4change\BbndAnalyzer\AnalyzerResult\HeadersSummaryPerService[] $headerSummaryPerServiceList
-   */
-  public function __construct(array $headerSummaryPerServiceList) {
-    $this->headerSummaryPerServiceList = $headerSummaryPerServiceList;
+  public function add(HeadersResultPerService $headersResultPerService) {
+    $this->headersMatchResultPerServiceList[$headersResultPerService->getServiceName()] = $headersResultPerService;
   }
 
-  /**
-   * @return array
-   */
-  public function getHeaderSummaryPerServiceList(): array {
-    return $this->headerSummaryPerServiceList;
+  public function getTestSummary(): array {
+    return [
+      '_keys' => implode('*', array_keys($this->headersMatchResultPerServiceList)),
+    ] + array_map(
+      fn(HeadersResultPerService $hsps) => $hsps->getTestSummary(),
+      $this->headersMatchResultPerServiceList
+    );
   }
 
 }

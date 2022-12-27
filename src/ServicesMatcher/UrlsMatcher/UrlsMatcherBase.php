@@ -6,6 +6,7 @@ namespace Geeks4change\BbndAnalyzer\ServicesMatcher\UrlsMatcher;
 
 use Geeks4change\BbndAnalyzer\AnalyzerResult\UrlList;
 use Geeks4change\BbndAnalyzer\AnalyzerResult\UrlListMatchersResult;
+use Geeks4change\BbndAnalyzer\AnalyzerResult\UrlListPerServiceMatches;
 use Geeks4change\BbndAnalyzer\AnalyzerResult\UrlListPerServiceMatchesList;
 use Geeks4change\BbndAnalyzer\Globals;
 use Geeks4change\BbndAnalyzer\ServicesMatcher\ServiceMatcherProvider;
@@ -33,7 +34,10 @@ abstract class UrlsMatcherBase {
           $noMatchList->add($url);
         }
       }
-      $perServiceResultList->add($toolPattern->getName(), $matchedExactly, $matchedByDomain);
+      $perServiceMatches = new UrlListPerServiceMatches($toolPattern->getName(), $matchedExactly, $matchedByDomain);
+      if ($perServiceMatches->isNonEmpty()) {
+        $perServiceResultList->add($perServiceMatches);
+      }
     }
     // @todo Create $hasRedirectList.
     // @todo Create $hasAnalyticsList.

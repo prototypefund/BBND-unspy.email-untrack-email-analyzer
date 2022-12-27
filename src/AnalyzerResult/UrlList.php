@@ -4,6 +4,8 @@ declare(strict_types=1);
 
 namespace Geeks4change\BbndAnalyzer\AnalyzerResult;
 
+use Geeks4change\BbndAnalyzer\TestHelpers\TestSummaryInterface;
+
 /**
  * Url list summary, child of
  *
@@ -16,7 +18,7 @@ namespace Geeks4change\BbndAnalyzer\AnalyzerResult;
  * @api Will be serialized in persistent storage, any change needs a migration.
  * @internal
  */
-final class UrlList implements \IteratorAggregate {
+final class UrlList implements \IteratorAggregate, TestSummaryInterface {
 
   /**
    * @var array<\Geeks4change\BbndAnalyzer\AnalyzerResult\Url>
@@ -31,8 +33,18 @@ final class UrlList implements \IteratorAggregate {
     $this->urls[] = new Url($urlString);
   }
 
+  public function count(): int {
+    return count($this->urls);
+  }
+
   public function getIterator(): \ArrayIterator {
     return new \ArrayIterator($this->urls);
+  }
+
+  public function getTestSummary(): array {
+    return [
+      '_count' => count($this->urls),
+    ];
   }
 
 }

@@ -2,6 +2,7 @@
 <?php
 
 use Geeks4change\BbndAnalyzer\Analyzer\Analyzer;
+use Symfony\Component\Yaml\Yaml;
 
 include 'vendor/autoload.php';
 
@@ -20,4 +21,5 @@ $fileContent = file_get_contents($fileName);
 
 $analyzer = new Analyzer();
 $result = $analyzer->analyze($fileContent);
-// dump($result);
+$testSummary = $result->getTestSummary();
+dump(Yaml::dump($testSummary, 99));

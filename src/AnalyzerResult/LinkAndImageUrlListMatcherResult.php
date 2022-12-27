@@ -4,12 +4,14 @@ declare(strict_types=1);
 
 namespace Geeks4change\BbndAnalyzer\AnalyzerResult;
 
+use Geeks4change\BbndAnalyzer\TestHelpers\TestSummaryInterface;
+
 /**
  * LinkAndImageUrlsMatcherResult, child of
  *
  * @see \Geeks4change\BbndAnalyzer\AnalyzerResult\AnalyzerResult
  */
-final class LinkAndImageUrlListMatcherResult {
+final class LinkAndImageUrlListMatcherResult implements TestSummaryInterface {
 
   protected UrlListMatchersResult $linkUrlsResult;
 
@@ -36,6 +38,13 @@ final class LinkAndImageUrlListMatcherResult {
    */
   public function getImageUrlsResult(): UrlListMatchersResult {
     return $this->imageUrlsResult;
+  }
+
+  public function getTestSummary(): array {
+    return [
+      'linkUrlsResult' => $this->linkUrlsResult->getTestSummary(),
+      'imageUrlsResult' => $this->imageUrlsResult->getTestSummary(),
+    ];
   }
 
 }

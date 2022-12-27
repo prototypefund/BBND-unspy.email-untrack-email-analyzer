@@ -4,6 +4,8 @@ declare(strict_types=1);
 
 namespace Geeks4change\BbndAnalyzer\AnalyzerResult;
 
+use Geeks4change\BbndAnalyzer\TestHelpers\TestSummaryInterface;
+
 /**
  * Summary of url lists (links, images) matching per service; child of
  *
@@ -11,7 +13,7 @@ namespace Geeks4change\BbndAnalyzer\AnalyzerResult;
  *
  * @api Will be serialized in persistent storage, any change needs a migration.
  */
-final class UrlListPerServiceMatches {
+final class UrlListPerServiceMatches implements TestSummaryInterface {
 
   protected string $serviceName;
 
@@ -37,6 +39,10 @@ final class UrlListPerServiceMatches {
     return $this->serviceName;
   }
 
+  public function isNonEmpty(): bool {
+    return $this->urlsMatchedExactly->count() > 0 || $this->urlsMatchedByDomain->count() > 0;
+  }
+
   /**
    * @return \Geeks4change\BbndAnalyzer\AnalyzerResult\UrlList
    */
@@ -49,6 +55,13 @@ final class UrlListPerServiceMatches {
    */
   public function getUrlsMatchedByDomain(): UrlList {
     return $this->urlsMatchedByDomain;
+  }
+
+  public function getTestSummary(): array {
+    return [
+      'urlsMatchedExactly' => $this->urlsMatchedExactly->getTestSummary(),
+      'urlsMatchedByDomain' => $this->urlsMatchedByDomain->getTestSummary(),
+    ];
   }
 
 }

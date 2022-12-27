@@ -4,6 +4,8 @@ declare(strict_types=1);
 
 namespace Geeks4change\BbndAnalyzer\AnalyzerResult;
 
+use Geeks4change\BbndAnalyzer\TestHelpers\TestSummaryInterface;
+
 /**
  * Url list matching summary (links, images); child of
  *
@@ -11,7 +13,7 @@ namespace Geeks4change\BbndAnalyzer\AnalyzerResult;
  *
  * @api Will be serialized in persistent storage, any change needs a migration.
  */
-final class UrlListMatchersResult {
+final class UrlListMatchersResult implements TestSummaryInterface {
 
   protected UrlListPerServiceMatchesList $perServiceResultList;
 
@@ -62,5 +64,14 @@ final class UrlListMatchersResult {
     return $this->perServiceResultList;
   }
 
+
+  public function getTestSummary(): array {
+    return [
+      'noMatchList' => $this->noMatchList->getTestSummary(),
+      'hasAnalyticsList' => $this->hasAnalyticsList->getTestSummary(),
+      'hasRedirectList' => $this->hasRedirectList->getTestSummary(),
+      'perServiceResultList' => $this->perServiceResultList->getTestSummary(),
+    ];
+  }
 
 }

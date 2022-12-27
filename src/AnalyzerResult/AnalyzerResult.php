@@ -3,12 +3,14 @@
 declare(strict_types=1);
 namespace Geeks4change\BbndAnalyzer\AnalyzerResult;
 
+use Geeks4change\BbndAnalyzer\TestHelpers\TestSummaryInterface;
+
 /**
  * Analysis summary.
  *
  * @api Will be serialized in persistent storage, any change needs a migration.
  */
-final class AnalyzerResult {
+final class AnalyzerResult implements TestSummaryInterface {
 
   protected AggregatedSummary $aggregated;
 
@@ -92,5 +94,11 @@ final class AnalyzerResult {
     return $this->domainAliasesList;
   }
 
+  public function getTestSummary(): array {
+    return [
+      'headersResult' => $this->headersResult->getTestSummary(),
+      'linkAndImageUrlsResult' => $this->linkAndImageUrlsResult->getTestSummary(),
+    ];
+  }
 
 }

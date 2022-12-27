@@ -4,13 +4,16 @@ declare(strict_types=1);
 
 namespace Geeks4change\BbndAnalyzer\AnalyzerResult;
 
+use Geeks4change\BbndAnalyzer\TestHelpers\TestSummaryInterface;
+
 /**
  * HeaderMatchSummary, child of
- * @see \Geeks4change\BbndAnalyzer\AnalyzerResult\HeadersSummaryPerService
+ *
+ * @see \Geeks4change\BbndAnalyzer\AnalyzerResult\HeadersResultPerService
  *
  * @api Will be serialized in persistent storage, any change needs a migration.
  */
-final class HeaderMatchSummary {
+final class HeaderSingleResult implements TestSummaryInterface {
 
   protected string $headerName;
 
@@ -37,6 +40,9 @@ final class HeaderMatchSummary {
    */
   public function isMatch(): bool {
     return $this->isMatch;
+  }
+
+  public function getTestSummary(): array {
   }
 
 }

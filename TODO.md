@@ -6,3 +6,6 @@
 - Declare-strict-types everywhere
 - Rework ArrayAccessTrait
 - Merge in disconnect data
+- and...
+- Exclude unsubscribe link from analysis, at least redirect test
+- 

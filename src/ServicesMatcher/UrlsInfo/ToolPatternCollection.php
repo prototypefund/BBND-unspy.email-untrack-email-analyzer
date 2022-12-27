@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Geeks4change\BbndAnalyzer\Pattern;
+namespace Geeks4change\BbndAnalyzer\ServicesMatcher\UrlsInfo;
 
 use Geeks4change\BbndAnalyzer\Utility\ArrayAccessTrait;
 
@@ -11,12 +11,12 @@ class ToolPatternCollection implements \IteratorAggregate, \ArrayAccess, \Counta
   use ArrayAccessTrait;
 
   /**
-   * @var array<\Geeks4change\BbndAnalyzer\Pattern\ToolPattern>
+   * @var array<\Geeks4change\BbndAnalyzer\ServicesMatcher\UrlsInfo\ToolPattern>
    */
   protected array $patterns;
 
   /**
-   * @param \Geeks4change\BbndAnalyzer\Pattern\ToolPattern[] $patterns
+   * @param \Geeks4change\BbndAnalyzer\ServicesMatcher\UrlsInfo\ToolPattern[] $patterns
    */
   private function __construct(array $patterns) {
     $this->patterns = $patterns;

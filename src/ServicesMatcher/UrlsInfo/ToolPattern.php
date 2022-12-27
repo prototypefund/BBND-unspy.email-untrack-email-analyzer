@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Geeks4change\BbndAnalyzer\Pattern;
+namespace Geeks4change\BbndAnalyzer\ServicesMatcher\UrlsInfo;
 
-use Geeks4change\BbndAnalyzer\Pattern\HeaderPattern\HeaderPattern;
+use Geeks4change\BbndAnalyzer\ServicesMatcher\HeadersInfo\HeadersPattern;
 use Geeks4change\BbndAnalyzer\Utility\ArrayTool;
 
 final class ToolPattern {
@@ -14,32 +14,32 @@ final class ToolPattern {
   protected ?string $disconnectId;
 
   /**
-   * @var array<\Geeks4change\BbndAnalyzer\Pattern\DomainPattern>
+   * @var array<\Geeks4change\BbndAnalyzer\ServicesMatcher\UrlsInfo\DomainPattern>
    */
   protected array $domainPatterns;
 
   /**
-   * @var array<\Geeks4change\BbndAnalyzer\Pattern\UrlPatternForLink>
+   * @var array<\Geeks4change\BbndAnalyzer\ServicesMatcher\UrlsInfo\UrlPatternForLink>
    */
   protected array $linkPatterns;
 
   /**
-   * @var array<\Geeks4change\BbndAnalyzer\Pattern\UrlPatternForImage>
+   * @var array<\Geeks4change\BbndAnalyzer\ServicesMatcher\UrlsInfo\UrlPatternForImage>
    */
   protected array $imagePatterns;
 
   /**
-   * @var array<\Geeks4change\BbndAnalyzer\Pattern\HeaderPattern\HeaderPattern>
+   * @var array<\Geeks4change\BbndAnalyzer\ServicesMatcher\HeadersInfo\HeadersPattern>
    */
   protected array $headerPatterns;
 
   /**
    * @param string $id
    * @param string|null $disconnectId
-   * @param \Geeks4change\BbndAnalyzer\Pattern\DomainPattern[] $domainPatterns
-   * @param \Geeks4change\BbndAnalyzer\Pattern\UrlPatternForLink[] $linkPatterns
-   * @param \Geeks4change\BbndAnalyzer\Pattern\UrlPatternForImage[] $imagePatterns
-   * @param \Geeks4change\BbndAnalyzer\Pattern\HeaderPattern\HeaderPattern[] $headerPatterns
+   * @param \Geeks4change\BbndAnalyzer\ServicesMatcher\UrlsInfo\DomainPattern[] $domainPatterns
+   * @param \Geeks4change\BbndAnalyzer\ServicesMatcher\UrlsInfo\UrlPatternForLink[] $linkPatterns
+   * @param \Geeks4change\BbndAnalyzer\ServicesMatcher\UrlsInfo\UrlPatternForImage[] $imagePatterns
+   * @param \Geeks4change\BbndAnalyzer\ServicesMatcher\HeadersInfo\HeadersPattern[] $headerPatterns
    */
   public function __construct(string $id, ?string $disconnectId, array $domainPatterns, array $linkPatterns, array $imagePatterns, array $headerPatterns) {
     $this->id = $id;
@@ -61,7 +61,7 @@ final class ToolPattern {
     $imagePatterns = ArrayTool::create($array['images'] ?? [])
       ->map(fn($value, $key) => UrlPatternForImage::fromItem($value, $key));
     $headerPatterns = ArrayTool::create($array['headers']['patterns'] ?? [])
-      ->map(fn($value, $key) => HeaderPattern::fromItem($value, $key));
+      ->map(fn($value, $key) => HeadersPattern::fromItem($value, $key));
 
     return new self(
       $id,
@@ -88,7 +88,7 @@ final class ToolPattern {
   }
 
   /**
-   * @return array<\Geeks4change\BbndAnalyzer\Pattern\DomainPattern>
+   * @return array<\Geeks4change\BbndAnalyzer\ServicesMatcher\UrlsInfo\DomainPattern>
    */
   public function getDomainPatterns(): array {
     return $this->domainPatterns;

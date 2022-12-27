@@ -2,17 +2,12 @@
 
 declare(strict_types=1);
 
-namespace Geeks4change\BbndAnalyzer\Pattern\HeaderPattern;
-use Geeks4change\BbndAnalyzer\DomainAliases\DomainAliasesResolver;
-use Geeks4change\BbndAnalyzer\DomElement\DomUrl;
+namespace Geeks4change\BbndAnalyzer\ServicesMatcher\HeadersInfo;
 use Geeks4change\BbndAnalyzer\Globals;
-use Geeks4change\BbndAnalyzer\Pattern\RegexTrait;
-use Geeks4change\BbndAnalyzer\Utility\UrlTool;
-use League\Uri\Uri;
-use ZBateson\MailMimeParser\Header\IHeader;
+use Geeks4change\BbndAnalyzer\ServicesMatcher\UrlsInfo\RegexTrait;
 use ZBateson\MailMimeParser\Message;
 
-class HeaderPattern {
+class HeadersPattern {
 
   use RegexTrait;
 

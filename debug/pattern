@@ -1,7 +1,7 @@
 #!/usr/bin/env php
 <?php
 
-use Geeks4change\BbndAnalyzer\Pattern\ToolPatternRepository;
+use Geeks4change\BbndAnalyzer\ServicesMatcher\UrlsInfo\ToolPatternRepository;
 
 include 'vendor/autoload.php';
 
@@ -10,7 +10,7 @@ $usage = "Usage: $argv[0] [service] [image|link] [pattern] [?string-to-match]\n"
 
 $repo = new ToolPatternRepository();
 
-/** @var \Geeks4change\BbndAnalyzer\Pattern\ToolPattern $toolPattern */
+/** @var \Geeks4change\BbndAnalyzer\ServicesMatcher\UrlsInfo\ToolPattern $toolPattern */
 $toolPatternCollection = $repo->getToolPatternCollection();
 $toolPattern = $toolPatternCollection[$service] ?? NULL;
 if (!$toolPattern) {
@@ -18,7 +18,7 @@ if (!$toolPattern) {
   printf("Available services: %s\n", implode('|', array_keys(iterator_to_array($toolPatternCollection))));
   exit(1);
 }
-/** @var \Geeks4change\BbndAnalyzer\Pattern\UrlPatternBase[] $types */
+/** @var \Geeks4change\BbndAnalyzer\ServicesMatcher\UrlsInfo\UrlPatternBase[] $types */
 $types = [
   'link' => $toolPattern->getLinkPatterns(),
   'image' => $toolPattern->getImagePatterns(),

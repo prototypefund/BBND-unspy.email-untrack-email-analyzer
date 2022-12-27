@@ -4,6 +4,6 @@ namespace Geeks4change\BbndAnalyzer\DomElement;
 
 interface DomElementInterface {
 
-  public function getUrl(): Url;
+  public function getUrl(): DomUrl;
 
 }

@@ -1,0 +1,1 @@
+https://dustri.org/b/a-short-tale-on-phps-dns_get_record.html

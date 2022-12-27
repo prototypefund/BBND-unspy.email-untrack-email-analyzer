@@ -18,7 +18,7 @@ class AnalizerTest extends TestCase {
   public function testAnalyzerWithExamples(string $id, string $email, string $expected): void {
     $analyzer = new Analyzer();
     $analysis = new DebugAnalysisBuilder();
-    $analyzer->analyze($analysis, $email);
+    $analyzer->analyze($email);
     $debugOutput = $analysis->getDebugOutput();
     $yaml = Yaml::dump($debugOutput);
     self::assertEquals($expected, $yaml);

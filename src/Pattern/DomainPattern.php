@@ -4,6 +4,9 @@ declare(strict_types=1);
 
 namespace Geeks4change\BbndAnalyzer\Pattern;
 
+use Geeks4change\BbndAnalyzer\Utility\UrlTool;
+use Psr\Http\Message\UriInterface;
+
 final class DomainPattern {
 
   protected string $domain;
@@ -32,6 +35,16 @@ final class DomainPattern {
     $quotedDomain = preg_quote($this->domain, '#');
     foreach ($effectiveHosts as $effectiveHost) {
       if (preg_match("#(?:^|[.]){$quotedDomain}$#ui", $effectiveHost)) {
+        return TRUE;
+      }
+    }
+    return FALSE;
+  }
+
+  public function nowDoMatches(UriInterface $url): bool {
+    $quotedDomain = preg_quote($this->domain, '#');
+    foreach (UrlTool::getAllDomainAliases($url) as $aliasUrl) {
+      if (preg_match("#(?:^|[.]){$quotedDomain}$#ui", $aliasUrl->getHost())) {
         return TRUE;
       }
     }

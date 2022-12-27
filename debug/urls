@@ -1,7 +1,7 @@
 #!/usr/bin/env php
 <?php
 
-use Geeks4change\BbndAnalyzer\DomainNames\DomainNameResolver;
+use Geeks4change\BbndAnalyzer\DomainAliases\DomainAliasesResolver;
 use Geeks4change\BbndAnalyzer\DomElement\DomElementCollection;
 use ZBateson\MailMimeParser\MailMimeParser;
 
@@ -24,7 +24,7 @@ if (!$fileId || !$emailWithHeaders) {
 $mailParser = new MailMimeParser();
 $message = $mailParser->parse($emailWithHeaders, FALSE);
 $html = $message->getHtmlContent();
-$domainNameResolver = new DomainNameResolver();
+$domainNameResolver = new DomainAliasesResolver();
 $domElementCollection = DomElementCollection::fromHtml($html, $domainNameResolver);
 
 /** @var \Geeks4change\BbndAnalyzer\DomElement\DomElementInterface $domElement */

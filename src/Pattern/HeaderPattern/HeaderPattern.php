@@ -3,10 +3,11 @@
 declare(strict_types=1);
 
 namespace Geeks4change\BbndAnalyzer\Pattern\HeaderPattern;
-use Geeks4change\BbndAnalyzer\DomainNames\DomainNameResolver;
-use Geeks4change\BbndAnalyzer\DomElement\Url;
+use Geeks4change\BbndAnalyzer\DomainAliases\DomainAliasesResolver;
+use Geeks4change\BbndAnalyzer\DomElement\DomUrl;
+use Geeks4change\BbndAnalyzer\Globals;
 use Geeks4change\BbndAnalyzer\Pattern\RegexTrait;
-use Geeks4change\BbndAnalyzer\Utility\UriTool;
+use Geeks4change\BbndAnalyzer\Utility\UrlTool;
 use League\Uri\Uri;
 use ZBateson\MailMimeParser\Header\IHeader;
 use ZBateson\MailMimeParser\Message;
@@ -58,7 +59,7 @@ class HeaderPattern {
       // @todo Care for aliasing multiple domains once we need it.
       // By default it's group.match keys.
       $host = $matches[1][0];
-      foreach (DomainNameResolver::get()->resolve($host) as $alias) {
+      foreach (Globals::get()->getDomainAliasesResolver()->getAliases($host) as $alias) {
         yield str_replace($host, $alias, $rawValue);
       }
     }

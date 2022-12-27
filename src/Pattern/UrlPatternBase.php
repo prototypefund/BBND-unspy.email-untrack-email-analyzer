@@ -5,6 +5,8 @@ declare(strict_types=1);
 namespace Geeks4change\BbndAnalyzer\Pattern;
 
 use Geeks4change\BbndAnalyzer\DomElement\DomElementInterface;
+use Geeks4change\BbndAnalyzer\Utility\UrlTool;
+use Psr\Http\Message\UriInterface;
 
 abstract class UrlPatternBase {
 
@@ -54,6 +56,17 @@ abstract class UrlPatternBase {
   public function getRegex(): string {
     // @fixme Separator must change in different parts of URL.
     return $this->doGetRegex($this->pattern, '/');
+  }
+
+  public function nowDoMatches(UriInterface $url): bool {
+    $regex = $this->getRegex();
+    foreach (UrlTool::getAllDomainAliases($url) as $aliasUrl) {
+      $relevantUrl = UrlTool::relevantPart($aliasUrl);
+      if (preg_match($regex, $relevantUrl)) {
+        return TRUE;
+      }
+    }
+    return FALSE;
   }
 
 }

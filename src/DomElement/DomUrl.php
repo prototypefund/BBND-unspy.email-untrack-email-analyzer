@@ -2,14 +2,15 @@
 
 namespace Geeks4change\BbndAnalyzer\DomElement;
 
-use Geeks4change\BbndAnalyzer\DomainNames\DomainNameResolver;
+use Geeks4change\BbndAnalyzer\DomainAliases\DomainAliasesResolver;
+use Geeks4change\BbndAnalyzer\Globals;
 
 /**
  * Url class.
  *
  * @todo Refactor or replace with league/uri and UriTool.
  */
-final class Url {
+final class DomUrl {
 
   protected string $originalUrl;
 
@@ -34,7 +35,7 @@ final class Url {
       return NULL;
     }
     $host = $parts['host'] ?? '';
-    $effectiveHosts = DomainNameResolver::get()->resolve($host);
+    $effectiveHosts = Globals::get()->getDomainAliasesResolver()->getAliases($host);
     $path = $parts['path'] ?? '';
     $query = $parts['query'] ?? '';
     $pathAndQuery = "{$path}" . ($query ? "?$query" : '');

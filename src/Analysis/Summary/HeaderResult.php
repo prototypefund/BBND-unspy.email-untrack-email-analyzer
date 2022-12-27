@@ -6,11 +6,11 @@ namespace Geeks4change\BbndAnalyzer\Analysis\Summary;
 
 /**
  * HeaderSummary, child of
- * @see \Geeks4change\BbndAnalyzer\Analysis\Summary\Summary
+ * @see \Geeks4change\BbndAnalyzer\Analysis\Summary\AnalyzerResult
  *
  * @api Will be serialized in persistent storage, any change needs a migration.
  */
-final class HeaderSummary {
+final class HeaderResult {
 
   /**
    * @var array<\Geeks4change\BbndAnalyzer\Analysis\Summary\HeaderSummaryPerService>

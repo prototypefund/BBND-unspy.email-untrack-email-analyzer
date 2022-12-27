@@ -2,18 +2,12 @@
 
 declare(strict_types=1);
 
-namespace Geeks4change\BbndAnalyzer\DomainAlias;
+namespace Geeks4change\BbndAnalyzer\Analysis\Summary;
 
 /**
- * DomainAliasResolution, used in analysis, and as child of
- * @see \Geeks4change\BbndAnalyzer\Analysis\Summary\Summary
- *
  * @api Will be serialized in persistent storage, any change needs a migration.
- * @see \Geeks4change\BbndAnalyzer\Analysis\Summary\DomainAliasSummary
- *
- * @internal
  */
-class DomainAliasResolutionBase {
+final class DomainAliases {
 
   protected string $domain;
 

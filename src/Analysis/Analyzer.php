@@ -4,68 +4,55 @@ declare(strict_types=1);
 
 namespace Geeks4change\BbndAnalyzer\Analysis;
 
-use Geeks4change\BbndAnalyzer\Analysis\SummaryExtractor\DomElementSummaryExtractor;
-use Geeks4change\BbndAnalyzer\AnalysisBuilderInterface;
-use Geeks4change\BbndAnalyzer\DomainNames\DomainNameResolver;
-use Geeks4change\BbndAnalyzer\DomElement\DomElementCollection;
-use Geeks4change\BbndAnalyzer\DomElement\Image;
-use Geeks4change\BbndAnalyzer\DomElement\Link;
-use Geeks4change\BbndAnalyzer\Matching\Matcher;
-use ZBateson\MailMimeParser\Header\HeaderConsts;
+use Geeks4change\BbndAnalyzer\Analysis\Summary\LinkAndImageUrlList;
+use Geeks4change\BbndAnalyzer\Analysis\Summary\AggregatedSummary;
+use Geeks4change\BbndAnalyzer\Analysis\Summary\AnalyzerResult;
+use Geeks4change\BbndAnalyzer\Globals;
+use Geeks4change\BbndAnalyzer\Html\ImageExtractor;
+use Geeks4change\BbndAnalyzer\Html\LinkExtractor;
+use Geeks4change\BbndAnalyzer\Html\PixelExtractor;
+use Geeks4change\BbndAnalyzer\ServicesMatching\LinkAndImageUrlListMatcher;
+use Masterminds\HTML5;
 use ZBateson\MailMimeParser\MailMimeParser;
 
 class Analyzer {
 
-  public function analyze(AnalysisBuilderInterface $analysis, string $emailWithHeaders) {
-    (new DKIMAnalyzer())->analyzeDKIM($emailWithHeaders);
-
+  public function analyze(string $emailWithHeaders): AnalyzerResult {
+    // Check DKIM.
+    $dkimResult = (new DKIMAnalyzer())->analyzeDKIM($emailWithHeaders);
 
     // Parse and find patterns.
     $mailParser = new MailMimeParser();
     $message = $mailParser->parse($emailWithHeaders, FALSE);
     // @todo Consider reporting unusual Mime parts, like more than one text/html part.
 
-    $serviceAnalyzer = new ServiceAnalyzer();
-    $headerSummary = $serviceAnalyzer->analyzeHeaders($message);
+    // Analyze headers.
+    $headersResult = (new ServiceHeaderAnalyzer())->analyzeHeaders($message);
 
-    // @fixme
-
+    // Analyze body html.
     $html = $message->getHtmlContent();
-    $domainNameResolver = new DomainNameResolver();
-    $domElementCollection = DomElementCollection::fromHtml($html, $domainNameResolver);
+    $dom = (new HTML5(['disable_html_ns' => TRUE]))->loadHTML($html);
 
-    $matcher = new Matcher();
-    $domElementMatchResult = $matcher->matchDomElements($domElementCollection);
-    $linkSummaryList = (new DomElementSummaryExtractor())->extractSummary($domElementMatchResult, Link::class);
-    $imageSummaryList = (new DomElementSummaryExtractor())->extractSummary($domElementMatchResult, Image::class);
+    // Extract links, images, pixels.
+    $linkUrls = (new LinkExtractor($dom))->extract($html);
+    $imageUrls = (new ImageExtractor($dom))->extract($html);
+    $linkAndImageUrlList = new LinkAndImageUrlList($linkUrls, $imageUrls);
+    $pixelsResult = (new PixelExtractor($dom))->extract($html);
 
-    // @todo Match typical analytics patterns.
+    // Match link and image urls.
+    $matcher = new LinkAndImageUrlListMatcher();
+    $linkAndImageUrlListResult = $matcher->generateLinkAndImageUrlListResults($linkAndImageUrlList);
 
-    // @todo If no pattern match, choose an URL / pixel and check redirection.
+    // Fetch all resolved aliases.
+    $domainAliasList = (new DomainAliasesResultFetcher())->fetch();
 
-    #############################################
+    $mayNeedResearch = Globals::get()->getMayNeedResearch();
+    // @todo
+    $aggregated = new AggregatedSummary(NULL, '');
 
-    $message->getHeader(HeaderConsts::DATE);
-    $message->getHeader(HeaderConsts::SUBJECT);
-    $message->getHeader(HeaderConsts::FROM);
-    $message->getHeader(HeaderConsts::TO);
-    $message->getHeader(HeaderConsts::SENDER);
-    $message->getHeader(HeaderConsts::RETURN_PATH);
-    $message->getHeader('DKIM-Signature');
-    $message->getHeader('X-CSA-Complaints');
-    $message->getHeader('X-Sender');
-    $message->getHeader('X-Receiver');
-    $message->getHeader('X-Mailer');
-    $message->getHeader('Feedback-ID');
-    $message->getHeader('X-Complaints-To');
-    $message->getHeader('List-Unsubscribe');
-    $message->getHeader('List-Unsubscribe-Post');
-    $message->getHeader(HeaderConsts::MESSAGE_ID);
-
-
-    // @todo Match headers with well-known tool header patterns.
-    $matcher->matchHeaders($message);
-
+    // Clean up.
+    Globals::deleteAll();
+    return new AnalyzerResult($aggregated, $mayNeedResearch, $dkimResult, $headersResult, $linkAndImageUrlListResult, $pixelsResult, $domainAliasList);
   }
 
 }

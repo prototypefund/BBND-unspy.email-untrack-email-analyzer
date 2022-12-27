@@ -2,15 +2,15 @@
 
 namespace Geeks4change\BbndAnalyzer\DomElement;
 
-use Geeks4change\BbndAnalyzer\DomainNames\DomainNameResolver;
+use Geeks4change\BbndAnalyzer\DomainAliases\DomainAliasesResolver;
 
 final class Link implements DomElementInterface  {
 
-  protected Url $url;
+  protected DomUrl $url;
 
   protected string $text;
 
-  private function __construct(Url $url, string $text) {
+  public function __construct(DomUrl $url, string $text = '') {
     $this->url = $url;
     $this->text = $text;
   }
@@ -19,14 +19,14 @@ final class Link implements DomElementInterface  {
   public static function fromDomNode(\DOMNode $domNode): ?self {
     $href = $domNode->attributes->getNamedItem('href')->value;
     $scheme = parse_url($href)['scheme'] ?? NULL;
-    $url = Url::create($href);
+    $url = DomUrl::create($href);
     return $url ? new self($url, $domNode->textContent) : NULL;
   }
 
   /**
-   * @return \Geeks4change\BbndAnalyzer\DomElement\Url
+   * @return \Geeks4change\BbndAnalyzer\DomElement\DomUrl
    */
-  public function getUrl(): Url {
+  public function getUrl(): DomUrl {
     return $this->url;
   }
 

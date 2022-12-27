@@ -2,19 +2,19 @@
 
 namespace Geeks4change\BbndAnalyzer\DomElement;
 
-use Geeks4change\BbndAnalyzer\DomainNames\DomainNameResolver;
+use Geeks4change\BbndAnalyzer\DomainAliases\DomainAliasesResolver;
 
 final class Image implements DomElementInterface {
 
-  protected Url $url;
+  protected DomUrl $url;
 
   protected bool $isPixel;
 
   /**
-   * @param \Geeks4change\BbndAnalyzer\DomElement\Url $url
+   * @param \Geeks4change\BbndAnalyzer\DomElement\DomUrl $url
    * @param bool $isPixel
    */
-  private function __construct(Url $url, bool $isPixel) {
+  private function __construct(DomUrl $url, bool $isPixel) {
     $this->url = $url;
     $this->isPixel = $isPixel;
   }
@@ -29,14 +29,14 @@ final class Image implements DomElementInterface {
       && ($widthAttr->value == 1)
     ;
     $src = $domNode->attributes->getNamedItem('src')->value;
-    $url = Url::create($src);
+    $url = DomUrl::create($src);
     return $url ? new self($url, $domNode->textContent) : NULL;
   }
 
   /**
-   * @return \Geeks4change\BbndAnalyzer\DomElement\Url
+   * @return \Geeks4change\BbndAnalyzer\DomElement\DomUrl
    */
-  public function getUrl(): Url {
+  public function getUrl(): DomUrl {
     return $this->url;
   }
 

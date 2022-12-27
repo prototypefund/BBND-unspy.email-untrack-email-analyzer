@@ -6,11 +6,11 @@ namespace Geeks4change\BbndAnalyzer\Analysis\Summary;
 
 /**
  * ServiceSummary, child of
- * @see \Geeks4change\BbndAnalyzer\Analysis\Summary\Summary
+ * @see \Geeks4change\BbndAnalyzer\Analysis\Summary\AnalyzerResult
  *
  * @api Will be serialized in persistent storage, any change needs a migration.
  */
-final class ServiceSummary {
+final class AggregatedSummary {
 
   protected ?string $serviceName;
 

@@ -97,15 +97,6 @@ final class ToolPattern {
     return $this->domainPatterns;
   }
 
-  public function matchByUrlPattern(): bool {
-    foreach ($this->getLinkPatterns() as $linkPattern) {
-      if ($linkPattern->matches($domElement)) {
-        $linkPatternMatch = TRUE;
-      }
-    }
-
-  }
-
   /**
    * @return array
    */

@@ -26,21 +26,6 @@ final class DomainPattern {
     return $this->domain;
   }
 
-  /**
-   * @param array<string> $effectiveHosts
-   *
-   * @return bool
-   */
-  public function matches(array $effectiveHosts): bool {
-    $quotedDomain = preg_quote($this->domain, '#');
-    foreach ($effectiveHosts as $effectiveHost) {
-      if (preg_match("#(?:^|[.]){$quotedDomain}$#ui", $effectiveHost)) {
-        return TRUE;
-      }
-    }
-    return FALSE;
-  }
-
   public function nowDoMatches(UriInterface $url): bool {
     $quotedDomain = preg_quote($this->domain, '#');
     foreach (UrlTool::getAllDomainAliases($url) as $aliasUrl) {

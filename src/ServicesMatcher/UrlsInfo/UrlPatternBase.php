@@ -4,7 +4,6 @@ declare(strict_types=1);
 
 namespace Geeks4change\BbndAnalyzer\ServicesMatcher\UrlsInfo;
 
-use Geeks4change\BbndAnalyzer\DomElement\DomElementInterface;
 use Geeks4change\BbndAnalyzer\Utility\UrlTool;
 use Psr\Http\Message\UriInterface;
 
@@ -20,7 +19,7 @@ abstract class UrlPatternBase {
 
   protected string $type;
 
-  public function __construct(string $name, string $pattern, string $tracking, string $type) {
+  protected function __construct(string $name, string $pattern, string $tracking, string $type) {
     $this->name = $name;
     $this->pattern = $pattern;
     $this->tracking = $tracking;
@@ -34,20 +33,6 @@ abstract class UrlPatternBase {
   #[\ReturnTypeWillChange]
   public static function fromItem($value, string $key) {
     return new static($key, $value['pattern'], $value['tracking'] ?? 'unknown', $value['type'] ?? 'other');
-  }
-
-  protected function doMatches(DomElementInterface $domElement): bool {
-    $regex = $this->getRegex($this->pattern);
-    $pathAndQuery = $domElement->getUrl()->getPathAndQuery();
-    $effectiveHosts = $domElement->getUrl()->getEffectiveHosts();
-    foreach ($effectiveHosts as $effectiveHost) {
-      // @todo Do this in Url::getRelevantUrlPartForAllCNames
-      $relevantUrl = "{$effectiveHost}{$pathAndQuery}";
-      if (preg_match($regex, $relevantUrl)) {
-        return TRUE;
-      }
-    }
-    return FALSE;
   }
 
   /**

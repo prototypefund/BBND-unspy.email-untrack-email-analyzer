@@ -20,7 +20,7 @@ class HeaderMatcher {
     $this->pattern = $pattern;
   }
 
-  public function matchHeader(Message $message): bool {
+  public function matchHeaders(Message $message): bool {
     $header = $message->getHeader($this->name);
     if ($header) {
       foreach ($header->getParts() as $part) {

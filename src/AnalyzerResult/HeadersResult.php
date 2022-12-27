@@ -11,15 +11,15 @@ namespace Geeks4change\BbndAnalyzer\AnalyzerResult;
  *
  * @api Will be serialized in persistent storage, any change needs a migration.
  */
-final class HeaderResult {
+final class HeadersResult {
 
   /**
-   * @var array<\Geeks4change\BbndAnalyzer\AnalyzerResult\HeaderSummaryPerService>
+   * @var array<\Geeks4change\BbndAnalyzer\AnalyzerResult\HeadersSummaryPerService>
    */
   protected array $headerSummaryPerServiceList;
 
   /**
-   * @param \Geeks4change\BbndAnalyzer\AnalyzerResult\HeaderSummaryPerService[] $headerSummaryPerServiceList
+   * @param \Geeks4change\BbndAnalyzer\AnalyzerResult\HeadersSummaryPerService[] $headerSummaryPerServiceList
    */
   public function __construct(array $headerSummaryPerServiceList) {
     $this->headerSummaryPerServiceList = $headerSummaryPerServiceList;

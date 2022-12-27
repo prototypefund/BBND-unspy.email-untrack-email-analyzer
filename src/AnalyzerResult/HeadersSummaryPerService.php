@@ -7,11 +7,11 @@ namespace Geeks4change\BbndAnalyzer\AnalyzerResult;
 /**
  * HeaderSummaryPerService, child of
  *
- * @see \Geeks4change\BbndAnalyzer\AnalyzerResult\HeaderResult
+ * @see \Geeks4change\BbndAnalyzer\AnalyzerResult\HeadersResult
  *
  * @api Will be serialized in persistent storage, any change needs a migration.
  */
-final class HeaderSummaryPerService {
+final class HeadersSummaryPerService {
 
   protected string $serviceName;
 

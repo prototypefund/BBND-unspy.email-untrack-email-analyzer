@@ -22,7 +22,7 @@ if (!$toolPattern) {
 $types = [
   'link' => $toolPattern->getLinkUrlMatchers(),
   'image' => $toolPattern->getImageUrlMatchers(),
-  'header' => $toolPattern->getHeaderMatchers(),
+  'header' => $toolPattern->getHeadersMatchers(),
 ];
 $patterns = $types[$typeName] ?? NULL;
 if (!$patterns) {

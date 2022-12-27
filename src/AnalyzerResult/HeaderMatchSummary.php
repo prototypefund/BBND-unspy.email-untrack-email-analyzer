@@ -6,7 +6,7 @@ namespace Geeks4change\BbndAnalyzer\AnalyzerResult;
 
 /**
  * HeaderMatchSummary, child of
- * @see \Geeks4change\BbndAnalyzer\AnalyzerResult\HeaderSummaryPerService
+ * @see \Geeks4change\BbndAnalyzer\AnalyzerResult\HeadersSummaryPerService
  *
  * @api Will be serialized in persistent storage, any change needs a migration.
  */

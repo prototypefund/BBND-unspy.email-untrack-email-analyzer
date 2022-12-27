@@ -16,7 +16,7 @@ final class AnalyzerResult {
 
   protected DKIMResult $dkimResult;
 
-  protected HeaderResult $headersResult;
+  protected HeadersResult $headersResult;
 
   protected LinkAndImageUrlListMatcherResult  $linkAndImageUrlsResult;
 
@@ -28,12 +28,12 @@ final class AnalyzerResult {
    * @param \Geeks4change\BbndAnalyzer\AnalyzerResult\AggregatedSummary $aggregated
    * @param \Geeks4change\BbndAnalyzer\AnalyzerResult\MayNeedResearch $mayNeedResearch
    * @param \Geeks4change\BbndAnalyzer\AnalyzerResult\DKIMResult $dkimResult
-   * @param \Geeks4change\BbndAnalyzer\AnalyzerResult\HeaderResult $headersResult
+   * @param \Geeks4change\BbndAnalyzer\AnalyzerResult\HeadersResult $headersResult
    * @param \Geeks4change\BbndAnalyzer\AnalyzerResult\LinkAndImageUrlListMatcherResult $linkAndImageUrlsResult
    * @param \Geeks4change\BbndAnalyzer\AnalyzerResult\UrlList $pixelsResult
    * @param \Geeks4change\BbndAnalyzer\AnalyzerResult\DomainAliasesList $domainAliasesList
    */
-  public function __construct(AggregatedSummary $aggregated, MayNeedResearch $mayNeedResearch, DKIMResult $dkimResult, HeaderResult $headersResult, LinkAndImageUrlListMatcherResult $linkAndImageUrlsResult, UrlList $pixelsResult, DomainAliasesList $domainAliasesList) {
+  public function __construct(AggregatedSummary $aggregated, MayNeedResearch $mayNeedResearch, DKIMResult $dkimResult, HeadersResult $headersResult, LinkAndImageUrlListMatcherResult $linkAndImageUrlsResult, UrlList $pixelsResult, DomainAliasesList $domainAliasesList) {
     $this->aggregated = $aggregated;
     $this->mayNeedResearch = $mayNeedResearch;
     $this->dkimResult = $dkimResult;
@@ -65,9 +65,9 @@ final class AnalyzerResult {
   }
 
   /**
-   * @return \Geeks4change\BbndAnalyzer\AnalyzerResult\HeaderResult
+   * @return \Geeks4change\BbndAnalyzer\AnalyzerResult\HeadersResult
    */
-  public function getHeadersResult(): HeaderResult {
+  public function getHeadersResult(): HeadersResult {
     return $this->headersResult;
   }
 

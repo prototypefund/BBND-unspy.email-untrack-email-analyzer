@@ -114,7 +114,7 @@ final class ServiceMatcherProvider {
   /**
    * @return array
    */
-  public function getHeaderMatchers(): array {
+  public function getHeadersMatchers(): array {
     return $this->headerMatchers;
   }
 

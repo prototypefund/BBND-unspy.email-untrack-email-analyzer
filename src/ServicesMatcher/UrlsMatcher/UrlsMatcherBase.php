@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Geeks4change\BbndAnalyzer\UrlMatcher;
+namespace Geeks4change\BbndAnalyzer\ServicesMatcher\UrlsMatcher;
 
 use Geeks4change\BbndAnalyzer\AnalyzerResult\UrlList;
 use Geeks4change\BbndAnalyzer\AnalyzerResult\UrlListMatchersResult;

@@ -11,7 +11,8 @@ use Geeks4change\BbndAnalyzer\Globals;
 use Geeks4change\BbndAnalyzer\Html\ImageExtractor;
 use Geeks4change\BbndAnalyzer\Html\LinkExtractor;
 use Geeks4change\BbndAnalyzer\Html\PixelExtractor;
-use Geeks4change\BbndAnalyzer\UrlMatcher\LinkAndImageUrlListMatcher;
+use Geeks4change\BbndAnalyzer\ServicesMatcher\HeadersMatcher\HeadersMatcher;
+use Geeks4change\BbndAnalyzer\ServicesMatcher\UrlsMatcher\LinkAndImageUrlListMatcher;
 use Masterminds\HTML5;
 use ZBateson\MailMimeParser\MailMimeParser;
 
@@ -27,7 +28,7 @@ class Analyzer {
     // @todo Consider reporting unusual Mime parts, like more than one text/html part.
 
     // Analyze headers.
-    $headersResult = (new ServiceHeaderAnalyzer())->analyzeHeaders($message);
+    $headersResult = (new HeadersMatcher())->matchHeaders($message);
 
     // Analyze body html.
     $html = $message->getHtmlContent();

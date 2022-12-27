@@ -1,8 +1,7 @@
 #!/usr/bin/env php
 <?php
 
-use Geeks4change\BbndAnalyzer\Analysis\Analyzer;
-use Geeks4change\BbndAnalyzer\DebugAnalysisBuilder;
+use Geeks4change\BbndAnalyzer\Analyzer\Analyzer;
 
 include 'vendor/autoload.php';
 

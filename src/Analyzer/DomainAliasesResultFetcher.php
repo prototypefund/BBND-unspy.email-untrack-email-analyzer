@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Geeks4change\BbndAnalyzer\Analysis;
+namespace Geeks4change\BbndAnalyzer\Analyzer;
 
-use Geeks4change\BbndAnalyzer\Analysis\Summary\DomainAliasesList;
+use Geeks4change\BbndAnalyzer\AnalyzerResult\DomainAliasesList;
 use Geeks4change\BbndAnalyzer\Globals;
 
 final class DomainAliasesResultFetcher {

@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace Geeks4change\BbndAnalyzer\Analysis\Summary;
+namespace Geeks4change\BbndAnalyzer\AnalyzerResult;
 
 /**
  * HeaderMatchSummary, child of
- * @see \Geeks4change\BbndAnalyzer\Analysis\Summary\HeaderSummaryPerService
+ * @see \Geeks4change\BbndAnalyzer\AnalyzerResult\HeaderSummaryPerService
  *
  * @api Will be serialized in persistent storage, any change needs a migration.
  */

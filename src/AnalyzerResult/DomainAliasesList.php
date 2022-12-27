@@ -2,17 +2,17 @@
 
 declare(strict_types=1);
 
-namespace Geeks4change\BbndAnalyzer\Analysis\Summary;
+namespace Geeks4change\BbndAnalyzer\AnalyzerResult;
 
 /**
- * @implements \IteratorAggregate<int, \Geeks4change\BbndAnalyzer\Analysis\Summary\DomainAliases>
+ * @implements \IteratorAggregate<int, \Geeks4change\BbndAnalyzer\AnalyzerResult\DomainAliases>
  *
  * @api Will be serialized in persistent storage, any change needs a migration.
  */
 final class DomainAliasesList {
 
   /**
-   * @var array<\Geeks4change\BbndAnalyzer\Analysis\Summary\DomainAliases>
+   * @var array<\Geeks4change\BbndAnalyzer\AnalyzerResult\DomainAliases>
    */
   protected array $domainAliasesList = [];
 

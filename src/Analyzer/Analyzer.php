@@ -2,16 +2,16 @@
 
 declare(strict_types=1);
 
-namespace Geeks4change\BbndAnalyzer\Analysis;
+namespace Geeks4change\BbndAnalyzer\Analyzer;
 
-use Geeks4change\BbndAnalyzer\Analysis\Summary\LinkAndImageUrlList;
-use Geeks4change\BbndAnalyzer\Analysis\Summary\AggregatedSummary;
-use Geeks4change\BbndAnalyzer\Analysis\Summary\AnalyzerResult;
+use Geeks4change\BbndAnalyzer\AnalyzerResult\AggregatedSummary;
+use Geeks4change\BbndAnalyzer\AnalyzerResult\AnalyzerResult;
+use Geeks4change\BbndAnalyzer\AnalyzerResult\LinkAndImageUrlList;
 use Geeks4change\BbndAnalyzer\Globals;
 use Geeks4change\BbndAnalyzer\Html\ImageExtractor;
 use Geeks4change\BbndAnalyzer\Html\LinkExtractor;
 use Geeks4change\BbndAnalyzer\Html\PixelExtractor;
-use Geeks4change\BbndAnalyzer\ServicesMatching\LinkAndImageUrlListMatcher;
+use Geeks4change\BbndAnalyzer\UrlMatcher\LinkAndImageUrlListMatcher;
 use Masterminds\HTML5;
 use ZBateson\MailMimeParser\MailMimeParser;
 

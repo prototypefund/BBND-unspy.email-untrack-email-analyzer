@@ -5,7 +5,6 @@ declare(strict_types=1);
 namespace Geeks4change\BbndAnalyzer\Html;
 
 use Geeks4change\BbndAnalyzer\Analysis\Summary\ImageUrlList;
-use Geeks4change\BbndAnalyzer\Analysis\Summary\UrlList;
 use Geeks4change\BbndAnalyzer\Utility\ThrowMethodTrait;
 
 final class ImageExtractor extends HtmlExtractorBase {

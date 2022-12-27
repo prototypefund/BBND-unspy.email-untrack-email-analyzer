@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace Geeks4change\BbndAnalyzer\ServicesMatching;
+namespace Geeks4change\BbndAnalyzer\UrlMatcher;
 
-use Geeks4change\BbndAnalyzer\Analysis\Summary\LinkAndImageUrlList;
-use Geeks4change\BbndAnalyzer\Analysis\Summary\LinkAndImageUrlListMatcherResult;
+use Geeks4change\BbndAnalyzer\AnalyzerResult\LinkAndImageUrlList;
+use Geeks4change\BbndAnalyzer\AnalyzerResult\LinkAndImageUrlListMatcherResult;
 
 final class LinkAndImageUrlListMatcher {
 

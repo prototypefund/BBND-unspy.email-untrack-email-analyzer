@@ -2,16 +2,16 @@
 
 declare(strict_types=1);
 
-namespace Geeks4change\BbndAnalyzer\Analysis\Summary;
+namespace Geeks4change\BbndAnalyzer\AnalyzerResult;
 
 /**
  * Url list summary, child of
  *
- * @see \Geeks4change\BbndAnalyzer\Analysis\Summary\AnalyzerResult
- * @see \Geeks4change\BbndAnalyzer\Analysis\Summary\UrlListMatchersResult
- * @see \Geeks4change\BbndAnalyzer\Analysis\Summary\UrlListPerServiceMatches
+ * @see \Geeks4change\BbndAnalyzer\AnalyzerResult\AnalyzerResult
+ * @see \Geeks4change\BbndAnalyzer\AnalyzerResult\UrlListMatchersResult
+ * @see \Geeks4change\BbndAnalyzer\AnalyzerResult\UrlListPerServiceMatches
  *
- * @implements \IteratorAggregate<int, \Geeks4change\BbndAnalyzer\Analysis\Summary\Url>
+ * @implements \IteratorAggregate<int, \Geeks4change\BbndAnalyzer\AnalyzerResult\Url>
  *
  * @api Will be serialized in persistent storage, any change needs a migration.
  * @internal
@@ -19,7 +19,7 @@ namespace Geeks4change\BbndAnalyzer\Analysis\Summary;
 final class UrlList implements \IteratorAggregate {
 
   /**
-   * @var array<\Geeks4change\BbndAnalyzer\Analysis\Summary\Url>
+   * @var array<\Geeks4change\BbndAnalyzer\AnalyzerResult\Url>
    */
   protected array $urls = [];
 

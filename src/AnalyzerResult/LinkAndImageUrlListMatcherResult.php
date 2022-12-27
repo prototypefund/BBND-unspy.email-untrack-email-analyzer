@@ -2,11 +2,12 @@
 
 declare(strict_types=1);
 
-namespace Geeks4change\BbndAnalyzer\Analysis\Summary;
+namespace Geeks4change\BbndAnalyzer\AnalyzerResult;
 
 /**
  * LinkAndImageUrlsMatcherResult, child of
- * @see \Geeks4change\BbndAnalyzer\Analysis\Summary\AnalyzerResult
+ *
+ * @see \Geeks4change\BbndAnalyzer\AnalyzerResult\AnalyzerResult
  */
 final class LinkAndImageUrlListMatcherResult {
 
@@ -15,8 +16,8 @@ final class LinkAndImageUrlListMatcherResult {
   protected UrlListMatchersResult $imageUrlsResult;
 
   /**
-   * @param \Geeks4change\BbndAnalyzer\Analysis\Summary\UrlListMatchersResult $linkUrlsResult
-   * @param \Geeks4change\BbndAnalyzer\Analysis\Summary\UrlListMatchersResult $imageUrlsResult
+   * @param \Geeks4change\BbndAnalyzer\AnalyzerResult\UrlListMatchersResult $linkUrlsResult
+   * @param \Geeks4change\BbndAnalyzer\AnalyzerResult\UrlListMatchersResult $imageUrlsResult
    */
   public function __construct(UrlListMatchersResult $linkUrlsResult, UrlListMatchersResult $imageUrlsResult) {
     $this->linkUrlsResult = $linkUrlsResult;
@@ -24,14 +25,14 @@ final class LinkAndImageUrlListMatcherResult {
   }
 
   /**
-   * @return \Geeks4change\BbndAnalyzer\Analysis\Summary\UrlListMatchersResult
+   * @return \Geeks4change\BbndAnalyzer\AnalyzerResult\UrlListMatchersResult
    */
   public function getLinkUrlsResult(): UrlListMatchersResult {
     return $this->linkUrlsResult;
   }
 
   /**
-   * @return \Geeks4change\BbndAnalyzer\Analysis\Summary\UrlListMatchersResult
+   * @return \Geeks4change\BbndAnalyzer\AnalyzerResult\UrlListMatchersResult
    */
   public function getImageUrlsResult(): UrlListMatchersResult {
     return $this->imageUrlsResult;

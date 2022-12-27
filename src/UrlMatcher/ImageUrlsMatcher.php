@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Geeks4change\BbndAnalyzer\ServicesMatching;
+namespace Geeks4change\BbndAnalyzer\UrlMatcher;
 
 use Geeks4change\BbndAnalyzer\Pattern\ToolPattern;
 

@@ -1,11 +1,11 @@
 <?php
 
 declare(strict_types=1);
-namespace Geeks4change\BbndAnalyzer\Analysis\Summary;
+namespace Geeks4change\BbndAnalyzer\AnalyzerResult;
 
 /**
  * DKIMSummary, child of
- * @see \Geeks4change\BbndAnalyzer\Analysis\Summary\AnalyzerResult
+ * @see \Geeks4change\BbndAnalyzer\AnalyzerResult\AnalyzerResult
  *
  * @api Will be serialized in persistent storage, any change needs a migration.
  */

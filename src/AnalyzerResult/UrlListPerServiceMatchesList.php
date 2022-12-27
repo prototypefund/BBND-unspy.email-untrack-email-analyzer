@@ -2,16 +2,17 @@
 
 declare(strict_types=1);
 
-namespace Geeks4change\BbndAnalyzer\Analysis\Summary;
+namespace Geeks4change\BbndAnalyzer\AnalyzerResult;
 
 /**
  * Result of links / images per service, child of
- * @see \Geeks4change\BbndAnalyzer\Analysis\Summary\UrlListMatchersResult
+ *
+ * @see \Geeks4change\BbndAnalyzer\AnalyzerResult\UrlListMatchersResult
  */
 final class UrlListPerServiceMatchesList implements \IteratorAggregate {
 
   /**
-   * @var array<\Geeks4change\BbndAnalyzer\Analysis\Summary\UrlListPerServiceMatches>
+   * @var array<\Geeks4change\BbndAnalyzer\AnalyzerResult\UrlListPerServiceMatches>
    */
   protected array $perService;
 

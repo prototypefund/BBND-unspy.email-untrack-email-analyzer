@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace Geeks4change\BbndAnalyzer\ServicesMatching;
+namespace Geeks4change\BbndAnalyzer\UrlMatcher;
 
-use Geeks4change\BbndAnalyzer\Analysis\Summary\UrlList;
-use Geeks4change\BbndAnalyzer\Analysis\Summary\UrlListPerServiceMatchesList;
-use Geeks4change\BbndAnalyzer\Analysis\Summary\UrlListMatchersResult;
+use Geeks4change\BbndAnalyzer\AnalyzerResult\UrlList;
+use Geeks4change\BbndAnalyzer\AnalyzerResult\UrlListMatchersResult;
+use Geeks4change\BbndAnalyzer\AnalyzerResult\UrlListPerServiceMatchesList;
 use Geeks4change\BbndAnalyzer\Globals;
 use Geeks4change\BbndAnalyzer\Pattern\ToolPattern;
 use Psr\Http\Message\UriInterface;

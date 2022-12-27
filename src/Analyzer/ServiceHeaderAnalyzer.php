@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace Geeks4change\BbndAnalyzer\Analysis;
+namespace Geeks4change\BbndAnalyzer\Analyzer;
 
-use Geeks4change\BbndAnalyzer\Analysis\Summary\HeaderMatchSummary;
-use Geeks4change\BbndAnalyzer\Analysis\Summary\HeaderResult;
-use Geeks4change\BbndAnalyzer\Analysis\Summary\HeaderSummaryPerService;
+use Geeks4change\BbndAnalyzer\AnalyzerResult\HeaderMatchSummary;
+use Geeks4change\BbndAnalyzer\AnalyzerResult\HeaderResult;
+use Geeks4change\BbndAnalyzer\AnalyzerResult\HeaderSummaryPerService;
 use Geeks4change\BbndAnalyzer\Globals;
 use ZBateson\MailMimeParser\Message;
 

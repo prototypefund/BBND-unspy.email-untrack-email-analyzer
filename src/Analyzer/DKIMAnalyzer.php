@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Geeks4change\BbndAnalyzer\Analysis;
+namespace Geeks4change\BbndAnalyzer\Analyzer;
 
-use Geeks4change\BbndAnalyzer\Analysis\Summary\DKIMResult;
+use Geeks4change\BbndAnalyzer\AnalyzerResult\DKIMResult;
 use PHPMailer\DKIMValidator\DKIMException;
 use PHPMailer\DKIMValidator\Validator;
 

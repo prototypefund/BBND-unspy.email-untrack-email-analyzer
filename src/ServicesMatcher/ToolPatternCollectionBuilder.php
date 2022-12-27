@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Geeks4change\BbndAnalyzer\ServicesMatcher\UrlsInfo;
+namespace Geeks4change\BbndAnalyzer\ServicesMatcher;
 
 final class ToolPatternCollectionBuilder {
 

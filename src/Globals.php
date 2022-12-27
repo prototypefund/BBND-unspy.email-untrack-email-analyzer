@@ -6,7 +6,7 @@ namespace Geeks4change\BbndAnalyzer;
 
 use Geeks4change\BbndAnalyzer\AnalyzerResult\MayNeedResearch;
 use Geeks4change\BbndAnalyzer\DomainAliases\DomainAliasesResolver;
-use Geeks4change\BbndAnalyzer\ServicesMatcher\UrlsInfo\ToolPatternRepository;
+use Geeks4change\BbndAnalyzer\ServicesMatcher\ToolPatternRepository;
 
 final class Globals {
 

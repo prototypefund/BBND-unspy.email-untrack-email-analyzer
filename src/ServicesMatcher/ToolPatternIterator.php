@@ -1,6 +1,6 @@
 <?php
 
-namespace Geeks4change\BbndAnalyzer\ServicesMatcher\UrlsInfo;
+namespace Geeks4change\BbndAnalyzer\ServicesMatcher;
 
 class ToolPatternIterator extends \ArrayIterator {
 

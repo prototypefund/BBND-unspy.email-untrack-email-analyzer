@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace Geeks4change\BbndAnalyzer\ServicesMatcher\UrlsMatcher;
 
-use Geeks4change\BbndAnalyzer\ServicesMatcher\UrlsInfo\ToolPattern;
+use Geeks4change\BbndAnalyzer\ServicesMatcher\ToolPattern;
 
 final class ImageUrlsMatcher extends UrlsMatcherBase {
 

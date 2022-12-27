@@ -1,7 +1,7 @@
 #!/usr/bin/env php
 <?php
 
-use Geeks4change\BbndAnalyzer\ServicesMatcher\UrlsInfo\ToolPatternRepository;
+use Geeks4change\BbndAnalyzer\ServicesMatcher\ToolPatternRepository;
 
 include 'vendor/autoload.php';
 
@@ -10,7 +10,7 @@ $usage = "Usage: $argv[0] [service] [image|link] [pattern] [?string-to-match]\n"
 
 $repo = new ToolPatternRepository();
 
-/** @var \Geeks4change\BbndAnalyzer\ServicesMatcher\UrlsInfo\ToolPattern $toolPattern */
+/** @var \Geeks4change\BbndAnalyzer\ServicesMatcher\ToolPattern $toolPattern */
 $toolPatternCollection = $repo->getToolPatternCollection();
 $toolPattern = $toolPatternCollection[$service] ?? NULL;
 if (!$toolPattern) {

@@ -8,7 +8,7 @@ use Geeks4change\BbndAnalyzer\AnalyzerResult\UrlList;
 use Geeks4change\BbndAnalyzer\AnalyzerResult\UrlListMatchersResult;
 use Geeks4change\BbndAnalyzer\AnalyzerResult\UrlListPerServiceMatchesList;
 use Geeks4change\BbndAnalyzer\Globals;
-use Geeks4change\BbndAnalyzer\ServicesMatcher\UrlsInfo\ToolPattern;
+use Geeks4change\BbndAnalyzer\ServicesMatcher\ToolPattern;
 use Psr\Http\Message\UriInterface;
 
 abstract class UrlsMatcherBase {
@@ -18,7 +18,7 @@ abstract class UrlsMatcherBase {
     $noMatchList = new UrlList();
     $hasRedirectList = new UrlList();
     $hasAnalyticsList = new UrlList();
-    /** @var \Geeks4change\BbndAnalyzer\ServicesMatcher\UrlsInfo\ToolPattern $toolPattern */
+    /** @var \Geeks4change\BbndAnalyzer\ServicesMatcher\ToolPattern $toolPattern */
     foreach (Globals::get()->getServiceInfoRepository()->getToolPatternCollection() as $toolPattern) {
       $matchedExactly = new UrlList();
       $matchedByDomain = new UrlList();

@@ -2,9 +2,12 @@
 
 declare(strict_types=1);
 
-namespace Geeks4change\BbndAnalyzer\ServicesMatcher\UrlsInfo;
+namespace Geeks4change\BbndAnalyzer\ServicesMatcher;
 
 use Geeks4change\BbndAnalyzer\ServicesMatcher\HeadersInfo\HeadersPattern;
+use Geeks4change\BbndAnalyzer\ServicesMatcher\UrlsInfo\DomainPattern;
+use Geeks4change\BbndAnalyzer\ServicesMatcher\UrlsInfo\UrlPatternForImage;
+use Geeks4change\BbndAnalyzer\ServicesMatcher\UrlsInfo\UrlPatternForLink;
 use Geeks4change\BbndAnalyzer\Utility\ArrayTool;
 
 final class ToolPattern {

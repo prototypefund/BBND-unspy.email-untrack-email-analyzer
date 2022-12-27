@@ -13,7 +13,7 @@ use ZBateson\MailMimeParser\Message;
 final class HeadersMatcher {
   public function matchHeaders(Message $message): HeaderResult {
     $headerSummaryPerServiceList = [];
-    /** @var \Geeks4change\BbndAnalyzer\ServicesMatcher\ToolPattern $serviceMatcher */
+    /** @var \Geeks4change\BbndAnalyzer\ServicesMatcher\ServiceMatcherProvider $serviceMatcher */
     foreach (Globals::get()->getServiceInfoRepository()->getToolPatternCollection() as $serviceMatcher) {
       $headerMatchSummaryList = [];
       foreach ($serviceMatcher->getHeaderPatterns() as $headerPattern) {

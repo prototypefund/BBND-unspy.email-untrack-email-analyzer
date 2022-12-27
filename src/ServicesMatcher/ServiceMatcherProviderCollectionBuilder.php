@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace Geeks4change\BbndAnalyzer\ServicesMatcher;
 
-final class ToolPatternCollectionBuilder {
+final class ServiceMatcherProviderCollectionBuilder {
 
   /**
    */
@@ -19,11 +19,11 @@ final class ToolPatternCollectionBuilder {
     $this->constructor = $constructor;
   }
 
-  public function add(ToolPattern $pattern) {
+  public function add(ServiceMatcherProvider $pattern) {
     $this->patterns[$pattern->getName()] = $pattern;
   }
 
-  public function freeze(): ToolPatternCollection {
+  public function freeze(): ServiceMatcherProviderCollection {
     return ($this->constructor)($this->patterns);
   }
 

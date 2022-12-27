@@ -8,7 +8,7 @@ use Geeks4change\BbndAnalyzer\AnalyzerResult\UrlList;
 use Geeks4change\BbndAnalyzer\AnalyzerResult\UrlListMatchersResult;
 use Geeks4change\BbndAnalyzer\AnalyzerResult\UrlListPerServiceMatchesList;
 use Geeks4change\BbndAnalyzer\Globals;
-use Geeks4change\BbndAnalyzer\ServicesMatcher\ToolPattern;
+use Geeks4change\BbndAnalyzer\ServicesMatcher\ServiceMatcherProvider;
 use Psr\Http\Message\UriInterface;
 
 abstract class UrlsMatcherBase {
@@ -18,7 +18,7 @@ abstract class UrlsMatcherBase {
     $noMatchList = new UrlList();
     $hasRedirectList = new UrlList();
     $hasAnalyticsList = new UrlList();
-    /** @var \Geeks4change\BbndAnalyzer\ServicesMatcher\ToolPattern $toolPattern */
+    /** @var \Geeks4change\BbndAnalyzer\ServicesMatcher\ServiceMatcherProvider $toolPattern */
     foreach (Globals::get()->getServiceInfoRepository()->getToolPatternCollection() as $toolPattern) {
       $matchedExactly = new UrlList();
       $matchedByDomain = new UrlList();
@@ -40,7 +40,7 @@ abstract class UrlsMatcherBase {
     return new UrlListMatchersResult($perServiceResultList, $noMatchList, $hasRedirectList, $hasAnalyticsList);
 }
 
-  protected function isUrlPatternMatch(ToolPattern $toolPattern, UriInterface $url): bool {
+  protected function isUrlPatternMatch(ServiceMatcherProvider $toolPattern, UriInterface $url): bool {
     $linkPatternMatch = FALSE;
     // @fixme Move to matcher method.
     foreach ($this->getUrlPatterns($toolPattern) as $urlPattern) {
@@ -54,9 +54,9 @@ abstract class UrlsMatcherBase {
   /**
    * @return \Geeks4change\BbndAnalyzer\ServicesMatcher\UrlsInfo\UrlPatternBase[]
    */
-  abstract protected function getUrlPatterns(ToolPattern $toolPattern): array;
+  abstract protected function getUrlPatterns(ServiceMatcherProvider $toolPattern): array;
 
-  protected function isDomainPatternMatch(ToolPattern $toolPattern, UriInterface $url): bool {
+  protected function isDomainPatternMatch(ServiceMatcherProvider $toolPattern, UriInterface $url): bool {
     $isDomainPatternMatch = FALSE;
     foreach ($toolPattern->getDomainPatterns() as $domainPattern) {
       if ($domainPattern->nowDoMatches($url)) {

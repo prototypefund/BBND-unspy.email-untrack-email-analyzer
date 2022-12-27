@@ -10,7 +10,7 @@ use Geeks4change\BbndAnalyzer\ServicesMatcher\UrlsInfo\UrlPatternForImage;
 use Geeks4change\BbndAnalyzer\ServicesMatcher\UrlsInfo\UrlPatternForLink;
 use Geeks4change\BbndAnalyzer\Utility\ArrayTool;
 
-final class ToolPattern {
+final class ServiceMatcherProvider {
 
   protected string $id;
 

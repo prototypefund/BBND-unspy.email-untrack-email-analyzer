@@ -7,14 +7,14 @@ namespace Geeks4change\BbndAnalyzer\ServicesMatcher;
 use Symfony\Component\Yaml\Exception\ParseException;
 use Symfony\Component\Yaml\Yaml;
 
-final class ToolPatternRepository {
+final class ServiceMatcherProviderRepository {
 
-  protected ToolPatternCollection $patternCollection;
+  protected ServiceMatcherProviderCollection $patternCollection;
 
-  public function getToolPatternCollection(): ToolPatternCollection {
+  public function getToolPatternCollection(): ServiceMatcherProviderCollection {
     if (!isset($this->patternCollection)) {
       $directory = dirname(dirname(__DIR__)) . '/patterns';
-      $patternCollectionBuilder = ToolPatternCollection::builder();
+      $patternCollectionBuilder = ServiceMatcherProviderCollection::builder();
       $filePaths = glob("$directory/*.yml");
       foreach ($filePaths as $filePath) {
         $id = basename($filePath, '.yml');
@@ -31,7 +31,7 @@ final class ToolPatternRepository {
         } catch (ParseException $exception) {
           throw new \LogicException("Oops in $id.yml", 0, $exception);
         }
-        $pattern = ToolPattern::fromArray($id, $array);
+        $pattern = ServiceMatcherProvider::fromArray($id, $array);
         $patternCollectionBuilder->add($pattern);
       }
       $this->patternCollection = $patternCollectionBuilder->freeze();

@@ -6,7 +6,7 @@ namespace Geeks4change\BbndAnalyzer;
 
 use Geeks4change\BbndAnalyzer\AnalyzerResult\MayNeedResearch;
 use Geeks4change\BbndAnalyzer\DomainAliases\DomainAliasesResolver;
-use Geeks4change\BbndAnalyzer\ServicesMatcher\ToolPatternRepository;
+use Geeks4change\BbndAnalyzer\ServicesMatcher\ServiceMatcherProviderRepository;
 
 final class Globals {
 
@@ -23,11 +23,11 @@ final class Globals {
     self::$singleton = NULL;
   }
 
-  protected ToolPatternRepository $serviceInfoRepository;
+  protected ServiceMatcherProviderRepository $serviceInfoRepository;
 
-  public function getServiceInfoRepository(): ToolPatternRepository {
+  public function getServiceInfoRepository(): ServiceMatcherProviderRepository {
     if (!isset($this->serviceInfoRepository)) {
-      $this->serviceInfoRepository = new ToolPatternRepository();
+      $this->serviceInfoRepository = new ServiceMatcherProviderRepository();
     }
     return $this->serviceInfoRepository;
   }

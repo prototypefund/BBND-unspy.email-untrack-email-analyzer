@@ -8,9 +8,9 @@ use Geeks4change\BbndAnalyzer\AnalyzerResult\DKIMResult;
 use PHPMailer\DKIMValidator\DKIMException;
 use PHPMailer\DKIMValidator\Validator;
 
-final class DKIMAnalyzer {
+final class DKIMSignatureValidator {
 
-  public function analyzeDKIM(string $emailWithHeaders): DKIMResult {
+  public function validateDKIMSignature(string $emailWithHeaders): DKIMResult {
     try {
       $dkimValidator = new Validator($emailWithHeaders);
       $dkimResults = $dkimValidator->validate();

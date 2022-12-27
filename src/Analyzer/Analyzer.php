@@ -20,7 +20,7 @@ class Analyzer {
 
   public function analyze(string $emailWithHeaders): AnalyzerResult {
     // Check DKIM.
-    $dkimResult = (new DKIMAnalyzer())->analyzeDKIM($emailWithHeaders);
+    $dkimResult = (new DKIMSignatureValidator())->validateDKIMSignature($emailWithHeaders);
 
     // Parse and find patterns.
     $mailParser = new MailMimeParser();

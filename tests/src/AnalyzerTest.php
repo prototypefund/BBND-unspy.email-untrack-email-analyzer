@@ -4,6 +4,7 @@ namespace Geeks4change\tests\BbndAnalyzer;
 
 use Geeks4change\BbndAnalyzer\Analyzer\Analyzer;
 use Geeks4change\BbndAnalyzer\DebugAnalysisBuilder;
+use Geeks4change\BbndAnalyzer\TestHelpers\TestSummaryTrait;
 use Geeks4change\BbndAnalyzer\Utility\ThrowMethodTrait;
 use PHPUnit\Framework\TestCase;
 use Symfony\Component\Yaml\Yaml;
@@ -11,17 +12,16 @@ use Symfony\Component\Yaml\Yaml;
 class AnalyzerTest extends TestCase {
 
   use ThrowMethodTrait;
+  use TestSummaryTrait;
 
   /**
    * @dataProvider provideEmailExamples
    */
-  public function testAnalyzerWithExamples(string $id, string $email, string $expected): void {
+  public function testAnalyzerWithExamples(string $id, string $email, array $expected): void {
     $analyzer = new Analyzer();
-    $analysis = new DebugAnalysisBuilder();
-    $analyzer->analyze($email);
-    $debugOutput = $analysis->getDebugOutput();
-    $yaml = Yaml::dump($debugOutput);
-    self::assertEquals($expected, $yaml);
+    $result = $analyzer->analyze($email);
+    $testSummary = $result->getTestSummary();
+    $this->assertTestSummaryContains($expected, $testSummary);
   }
 
   public function provideEmailExamples(): \Iterator {
@@ -30,7 +30,8 @@ class AnalyzerTest extends TestCase {
       $id = basename($emailFile, '.eml');
       $email = file_get_contents($emailFile);
       $expectedFile = "$examplesDir/$id.expected.txt";
-      $expected = file_get_contents($expectedFile);
+      $expectedAsYaml = file_get_contents($expectedFile);
+      $expected = Yaml::parse($expectedAsYaml);
       yield [$id, $email, $expected];
     }
   }

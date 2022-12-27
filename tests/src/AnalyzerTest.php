@@ -8,7 +8,7 @@ use Geeks4change\BbndAnalyzer\Utility\ThrowMethodTrait;
 use PHPUnit\Framework\TestCase;
 use Symfony\Component\Yaml\Yaml;
 
-class AnalizerTest extends TestCase {
+class AnalyzerTest extends TestCase {
 
   use ThrowMethodTrait;
 

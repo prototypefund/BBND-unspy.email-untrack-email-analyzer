@@ -17,8 +17,6 @@ abstract class UrlsMatcherBase {
   public function generateUrlListResult(UrlList $urlList): UrlListMatchersResult {
     $perServiceResultList = new UrlListPerServiceMatchesList();
     $noMatchList = new UrlList();
-    $hasRedirectList = new UrlList();
-    $hasAnalyticsList = new UrlList();
     /** @var \Geeks4change\BbndAnalyzer\ServicesMatcher\ServiceMatcherProvider $toolPattern */
     foreach (Globals::get()->getServiceMatcherProviderRepository()->getServiceMatcherProviderCollection() as $toolPattern) {
       $matchedExactly = new UrlList();
@@ -39,9 +37,7 @@ abstract class UrlsMatcherBase {
         $perServiceResultList->add($perServiceMatches);
       }
     }
-    // @todo Create $hasRedirectList.
-    // @todo Create $hasAnalyticsList.
-    return new UrlListMatchersResult($perServiceResultList, $noMatchList, $hasRedirectList, $hasAnalyticsList);
+    return new UrlListMatchersResult($perServiceResultList, $noMatchList);
 }
 
   protected function isUrlPatternMatch(ServiceMatcherProvider $toolPattern, UriInterface $url): bool {

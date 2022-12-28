@@ -7,6 +7,7 @@ namespace Geeks4change\BbndAnalyzer\Analyzer;
 use Geeks4change\BbndAnalyzer\AnalyzerResult\AggregatedSummary;
 use Geeks4change\BbndAnalyzer\AnalyzerResult\AnalyzerResult;
 use Geeks4change\BbndAnalyzer\AnalyzerResult\LinkAndImageUrlList;
+use Geeks4change\BbndAnalyzer\AnalyzerResult\UrlList;
 use Geeks4change\BbndAnalyzer\Globals;
 use Geeks4change\BbndAnalyzer\Html\ImageExtractor;
 use Geeks4change\BbndAnalyzer\Html\LinkExtractor;
@@ -47,13 +48,18 @@ class Analyzer {
     // Fetch all resolved aliases.
     $domainAliasList = (new DomainAliasesResultFetcher())->fetch();
 
+    // @fixme
+    $urlsWithRedirectList = new UrlList();
+    $urlWithAnalyticsList = new UrlList();
+
+
     $mayNeedResearch = Globals::get()->getMayNeedResearch();
     // @todo
     $aggregated = new AggregatedSummary(NULL, '');
 
     // Clean up.
     Globals::deleteAll();
-    return new AnalyzerResult($aggregated, $mayNeedResearch, $dkimResult, $headersResult, $linkAndImageUrlListResult, $pixelsResult, $domainAliasList);
+    return new AnalyzerResult($aggregated, $mayNeedResearch, $dkimResult, $headersResult, $linkAndImageUrlListResult, $pixelsResult, $urlsWithRedirectList, $urlWithAnalyticsList, $domainAliasList);
   }
 
 }

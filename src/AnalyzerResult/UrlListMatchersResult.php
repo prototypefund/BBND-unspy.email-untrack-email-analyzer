@@ -19,42 +19,21 @@ final class UrlListMatchersResult implements TestSummaryInterface {
 
   protected UrlList $noMatchList;
 
-  protected UrlList $hasRedirectList;
-
-  protected UrlList $hasAnalyticsList;
-
   /**
    * @param \Geeks4change\BbndAnalyzer\AnalyzerResult\UrlListPerServiceMatchesList $perServiceResultList
    * @param \Geeks4change\BbndAnalyzer\AnalyzerResult\UrlList $noMatchList
-   * @param \Geeks4change\BbndAnalyzer\AnalyzerResult\UrlList $hasRedirectList
-   * @param \Geeks4change\BbndAnalyzer\AnalyzerResult\UrlList $hasAnalyticsList
    */
-  public function __construct(UrlListPerServiceMatchesList $perServiceResultList, UrlList $noMatchList, UrlList $hasRedirectList, UrlList $hasAnalyticsList) {
-    $this->noMatchList = $noMatchList;
-    $this->hasAnalyticsList = $hasAnalyticsList;
-    $this->hasRedirectList = $hasRedirectList;
+  public function __construct(UrlListPerServiceMatchesList $perServiceResultList, UrlList $noMatchList) {
     $this->perServiceResultList = $perServiceResultList;
+    $this->noMatchList = $noMatchList;
   }
+
 
   /**
    * @return \Geeks4change\BbndAnalyzer\AnalyzerResult\UrlList
    */
   public function getNoMatchList(): UrlList {
     return $this->noMatchList;
-  }
-
-  /**
-   * @return \Geeks4change\BbndAnalyzer\AnalyzerResult\UrlList
-   */
-  public function getHasAnalyticsList(): UrlList {
-    return $this->hasAnalyticsList;
-  }
-
-  /**
-   * @return \Geeks4change\BbndAnalyzer\AnalyzerResult\UrlList
-   */
-  public function getHasRedirectList(): UrlList {
-    return $this->hasRedirectList;
   }
 
   /**
@@ -68,8 +47,6 @@ final class UrlListMatchersResult implements TestSummaryInterface {
   public function getTestSummary(): array {
     return [
       'noMatchList' => $this->noMatchList->getTestSummary(),
-      'hasAnalyticsList' => $this->hasAnalyticsList->getTestSummary(),
-      'hasRedirectList' => $this->hasRedirectList->getTestSummary(),
       'perServiceResultList' => $this->perServiceResultList->getTestSummary(),
     ];
   }

@@ -1,11 +1,8 @@
 # BBND-Analyzer TODO
 
 - Anonymize newlstters and clear commit history
-- Rename tool to service
 - move test-examples to patterns dir, rename to service-patterns
-- Declare-strict-types everywhere
-- Rework ArrayAccessTrait
 - Merge in disconnect data
-- and...
 - Exclude unsubscribe link from analysis, at least redirect test
-- 
+- Make `./debug/matching inxmail`
+- Make Summary::getCliText

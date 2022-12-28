@@ -2,18 +2,18 @@
 
 declare(strict_types=1);
 
-namespace Geeks4change\BbndAnalyzer\AnalyzerResult;
+namespace Geeks4change\BbndAnalyzer\Analyzer\AnalyzerResult;
 
 use Geeks4change\BbndAnalyzer\TestHelpers\TestSummaryInterface;
 
 /**
  * Url list summary, child of
  *
- * @see \Geeks4change\BbndAnalyzer\AnalyzerResult\AnalyzerResult
- * @see \Geeks4change\BbndAnalyzer\AnalyzerResult\UrlListMatchersResult
- * @see \Geeks4change\BbndAnalyzer\AnalyzerResult\UrlListPerServiceMatches
+ * @see \Geeks4change\BbndAnalyzer\Analyzer\AnalyzerResult\AnalyzerResult
+ * @see \Geeks4change\BbndAnalyzer\Analyzer\AnalyzerResult\UrlListMatchersResult
+ * @see \Geeks4change\BbndAnalyzer\Analyzer\AnalyzerResult\UrlListPerServiceMatches
  *
- * @implements \IteratorAggregate<int, \Geeks4change\BbndAnalyzer\AnalyzerResult\Url>
+ * @implements \IteratorAggregate<int, \Geeks4change\BbndAnalyzer\Analyzer\AnalyzerResult\Url>
  *
  * @api Will be serialized in persistent storage, any change needs a migration.
  * @internal
@@ -21,7 +21,7 @@ use Geeks4change\BbndAnalyzer\TestHelpers\TestSummaryInterface;
 final class UrlList implements \IteratorAggregate, TestSummaryInterface {
 
   /**
-   * @var array<\Geeks4change\BbndAnalyzer\AnalyzerResult\Url>
+   * @var array<\Geeks4change\BbndAnalyzer\Analyzer\AnalyzerResult\Url>
    */
   protected array $urls = [];
 

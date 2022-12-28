@@ -2,14 +2,14 @@
 
 declare(strict_types=1);
 
-namespace Geeks4change\BbndAnalyzer\AnalyzerResult;
+namespace Geeks4change\BbndAnalyzer\Analyzer\AnalyzerResult;
 
 use Geeks4change\BbndAnalyzer\TestHelpers\TestSummaryInterface;
 
 /**
  * HeaderSummaryPerService, child of
  *
- * @see \Geeks4change\BbndAnalyzer\AnalyzerResult\HeadersResult
+ * @see \Geeks4change\BbndAnalyzer\Analyzer\AnalyzerResult\HeadersResult
  *
  * @api Will be serialized in persistent storage, any change needs a migration.
  */
@@ -18,13 +18,13 @@ final class HeadersResultPerService implements TestSummaryInterface {
   protected string $serviceName;
 
   /**
-   * @var array<\Geeks4change\BbndAnalyzer\AnalyzerResult\HeaderSingleResult>
+   * @var array<\Geeks4change\BbndAnalyzer\Analyzer\AnalyzerResult\HeaderSingleResult>
    */
   protected array $headerSinlgleResultList;
 
   /**
    * @param string $serviceName
-   * @param \Geeks4change\BbndAnalyzer\AnalyzerResult\HeaderSingleResult[] $headerSingleResults
+   * @param \Geeks4change\BbndAnalyzer\Analyzer\AnalyzerResult\HeaderSingleResult[] $headerSingleResults
    */
   public function __construct(string $serviceName, array $headerSingleResults) {
     $this->serviceName = $serviceName;

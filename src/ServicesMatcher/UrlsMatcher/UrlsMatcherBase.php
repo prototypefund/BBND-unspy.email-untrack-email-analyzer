@@ -4,10 +4,10 @@ declare(strict_types=1);
 
 namespace Geeks4change\BbndAnalyzer\ServicesMatcher\UrlsMatcher;
 
-use Geeks4change\BbndAnalyzer\AnalyzerResult\UrlList;
-use Geeks4change\BbndAnalyzer\AnalyzerResult\UrlListMatchersResult;
-use Geeks4change\BbndAnalyzer\AnalyzerResult\UrlListPerServiceMatches;
-use Geeks4change\BbndAnalyzer\AnalyzerResult\UrlListPerServiceMatchesList;
+use Geeks4change\BbndAnalyzer\Analyzer\AnalyzerResult\UrlList;
+use Geeks4change\BbndAnalyzer\Analyzer\AnalyzerResult\UrlListMatchersResult;
+use Geeks4change\BbndAnalyzer\Analyzer\AnalyzerResult\UrlListPerServiceMatches;
+use Geeks4change\BbndAnalyzer\Analyzer\AnalyzerResult\UrlListPerServiceMatchesList;
 use Geeks4change\BbndAnalyzer\Globals;
 use Geeks4change\BbndAnalyzer\ServicesMatcher\ServiceMatcherProvider;
 use Psr\Http\Message\UriInterface;

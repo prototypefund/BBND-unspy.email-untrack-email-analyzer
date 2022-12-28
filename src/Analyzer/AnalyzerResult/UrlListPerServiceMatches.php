@@ -2,14 +2,14 @@
 
 declare(strict_types=1);
 
-namespace Geeks4change\BbndAnalyzer\AnalyzerResult;
+namespace Geeks4change\BbndAnalyzer\Analyzer\AnalyzerResult;
 
 use Geeks4change\BbndAnalyzer\TestHelpers\TestSummaryInterface;
 
 /**
  * Summary of url lists (links, images) matching per service; child of
  *
- * @see \Geeks4change\BbndAnalyzer\AnalyzerResult\UrlListPerServiceMatchesList
+ * @see \Geeks4change\BbndAnalyzer\Analyzer\AnalyzerResult\UrlListPerServiceMatchesList
  *
  * @api Will be serialized in persistent storage, any change needs a migration.
  */
@@ -23,8 +23,8 @@ final class UrlListPerServiceMatches implements TestSummaryInterface {
 
   /**
    * @param string $serviceName
-   * @param \Geeks4change\BbndAnalyzer\AnalyzerResult\UrlList $matchedExactly
-   * @param \Geeks4change\BbndAnalyzer\AnalyzerResult\UrlList $matchedByDomain
+   * @param \Geeks4change\BbndAnalyzer\Analyzer\AnalyzerResult\UrlList $matchedExactly
+   * @param \Geeks4change\BbndAnalyzer\Analyzer\AnalyzerResult\UrlList $matchedByDomain
    */
   public function __construct(string $serviceName, UrlList $matchedExactly, UrlList $matchedByDomain) {
     $this->serviceName = $serviceName;
@@ -44,14 +44,14 @@ final class UrlListPerServiceMatches implements TestSummaryInterface {
   }
 
   /**
-   * @return \Geeks4change\BbndAnalyzer\AnalyzerResult\UrlList
+   * @return \Geeks4change\BbndAnalyzer\Analyzer\AnalyzerResult\UrlList
    */
   public function getUrlsMatchedExactly(): UrlList {
     return $this->urlsMatchedExactly;
   }
 
   /**
-   * @return \Geeks4change\BbndAnalyzer\AnalyzerResult\UrlList
+   * @return \Geeks4change\BbndAnalyzer\Analyzer\AnalyzerResult\UrlList
    */
   public function getUrlsMatchedByDomain(): UrlList {
     return $this->urlsMatchedByDomain;

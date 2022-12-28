@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace Geeks4change\BbndAnalyzer\AnalyzerResult;
+namespace Geeks4change\BbndAnalyzer\Analyzer\AnalyzerResult;
 
 /**
  * ServiceSummary, child of
- * @see \Geeks4change\BbndAnalyzer\AnalyzerResult\AnalyzerResult
+ * @see \Geeks4change\BbndAnalyzer\Analyzer\AnalyzerResult\AnalyzerResult
  *
  * @api Will be serialized in persistent storage, any change needs a migration.
  */

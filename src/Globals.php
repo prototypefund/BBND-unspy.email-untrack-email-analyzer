@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace Geeks4change\BbndAnalyzer;
 
-use Geeks4change\BbndAnalyzer\AnalyzerResult\MayNeedResearch;
+use Geeks4change\BbndAnalyzer\Analyzer\AnalyzerResult\MayNeedResearch;
 use Geeks4change\BbndAnalyzer\DomainAliases\DomainAliasesResolver;
 use Geeks4change\BbndAnalyzer\ServicesMatcher\ServiceMatcherProviderRepository;
 
@@ -44,7 +44,7 @@ final class Globals {
   protected MayNeedResearch $mayNeedResearch;
 
   /**
-   * @return \Geeks4change\BbndAnalyzer\AnalyzerResult\MayNeedResearch
+   * @return \Geeks4change\BbndAnalyzer\Analyzer\AnalyzerResult\MayNeedResearch
    */
   public function getMayNeedResearch(): MayNeedResearch {
     if (!isset($this->mayNeedResearch)) {

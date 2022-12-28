@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Geeks4change\BbndAnalyzer\AnalyzerResult;
+namespace Geeks4change\BbndAnalyzer\Analyzer\AnalyzerResult;
 
 use GuzzleHttp\Psr7\Uri;
 use Psr\Http\Message\UriInterface;
@@ -10,8 +10,8 @@ use Psr\Http\Message\UriInterface;
 /**
  * Url summary; child of
  *
- * @see \Geeks4change\BbndAnalyzer\AnalyzerResult\UrlList
- * @see \Geeks4change\BbndAnalyzer\AnalyzerResult\UrlListMatchersResult
+ * @see \Geeks4change\BbndAnalyzer\Analyzer\AnalyzerResult\UrlList
+ * @see \Geeks4change\BbndAnalyzer\Analyzer\AnalyzerResult\UrlListMatchersResult
  *
  * Effectively a string, but convenience methods may be added.
  *

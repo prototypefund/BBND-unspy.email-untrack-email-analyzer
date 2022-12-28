@@ -4,10 +4,10 @@ declare(strict_types=1);
 
 namespace Geeks4change\BbndAnalyzer\Analyzer;
 
-use Geeks4change\BbndAnalyzer\AnalyzerResult\AggregatedSummary;
-use Geeks4change\BbndAnalyzer\AnalyzerResult\AnalyzerResult;
-use Geeks4change\BbndAnalyzer\AnalyzerResult\LinkAndImageUrlList;
-use Geeks4change\BbndAnalyzer\AnalyzerResult\UrlList;
+use Geeks4change\BbndAnalyzer\Analyzer\AnalyzerResult\AggregatedSummary;
+use Geeks4change\BbndAnalyzer\Analyzer\AnalyzerResult\AnalyzerResult;
+use Geeks4change\BbndAnalyzer\Analyzer\AnalyzerResult\LinkAndImageUrlList;
+use Geeks4change\BbndAnalyzer\Analyzer\AnalyzerResult\UrlList;
 use Geeks4change\BbndAnalyzer\Globals;
 use Geeks4change\BbndAnalyzer\ServicesMatcher\HeadersMatcher\HeadersAllServicesMatcher;
 use Geeks4change\BbndAnalyzer\ServicesMatcher\UrlsMatcher\LinkAndImageUrlListMatcher;

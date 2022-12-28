@@ -2,21 +2,21 @@
 
 declare(strict_types=1);
 
-namespace Geeks4change\BbndAnalyzer\AnalyzerResult;
+namespace Geeks4change\BbndAnalyzer\Analyzer\AnalyzerResult;
 
 use Geeks4change\BbndAnalyzer\TestHelpers\TestSummaryInterface;
 
 /**
  * HeaderSummary, child of
  *
- * @see \Geeks4change\BbndAnalyzer\AnalyzerResult\AnalyzerResult
+ * @see \Geeks4change\BbndAnalyzer\Analyzer\AnalyzerResult\AnalyzerResult
  *
  * @api Will be serialized in persistent storage, any change needs a migration.
  */
 final class HeadersResult implements TestSummaryInterface {
 
   /**
-   * @var array<\Geeks4change\BbndAnalyzer\AnalyzerResult\HeadersResultPerService>
+   * @var array<\Geeks4change\BbndAnalyzer\Analyzer\AnalyzerResult\HeadersResultPerService>
    */
   protected array $headersMatchResultPerServiceList = [];
 

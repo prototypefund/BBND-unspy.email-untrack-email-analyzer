@@ -2,19 +2,19 @@
 
 declare(strict_types=1);
 
-namespace Geeks4change\BbndAnalyzer\AnalyzerResult;
+namespace Geeks4change\BbndAnalyzer\Analyzer\AnalyzerResult;
 
 use Geeks4change\BbndAnalyzer\TestHelpers\TestSummaryInterface;
 
 /**
  * Result of links / images per service, child of
  *
- * @see \Geeks4change\BbndAnalyzer\AnalyzerResult\UrlListMatchersResult
+ * @see \Geeks4change\BbndAnalyzer\Analyzer\AnalyzerResult\UrlListMatchersResult
  */
 final class UrlListPerServiceMatchesList implements \IteratorAggregate, TestSummaryInterface {
 
   /**
-   * @var array<\Geeks4change\BbndAnalyzer\AnalyzerResult\UrlListPerServiceMatches>
+   * @var array<\Geeks4change\BbndAnalyzer\Analyzer\AnalyzerResult\UrlListPerServiceMatches>
    */
   protected array $perService = [];
 

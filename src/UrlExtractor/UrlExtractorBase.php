@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace Geeks4change\BbndAnalyzer\UrlExtractor;
 
-use Geeks4change\BbndAnalyzer\AnalyzerResult\UrlList;
+use Geeks4change\BbndAnalyzer\Analyzer\AnalyzerResult\UrlList;
 use GuzzleHttp\Psr7\Uri;
 
 /**

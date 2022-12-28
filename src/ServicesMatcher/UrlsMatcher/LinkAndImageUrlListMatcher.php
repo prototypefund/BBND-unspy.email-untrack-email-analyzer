@@ -4,8 +4,8 @@ declare(strict_types=1);
 
 namespace Geeks4change\BbndAnalyzer\ServicesMatcher\UrlsMatcher;
 
-use Geeks4change\BbndAnalyzer\AnalyzerResult\LinkAndImageUrlList;
-use Geeks4change\BbndAnalyzer\AnalyzerResult\LinkAndImageUrlListMatcherResult;
+use Geeks4change\BbndAnalyzer\Analyzer\AnalyzerResult\LinkAndImageUrlList;
+use Geeks4change\BbndAnalyzer\Analyzer\AnalyzerResult\LinkAndImageUrlListMatcherResult;
 
 final class LinkAndImageUrlListMatcher {
 

@@ -4,9 +4,9 @@ declare(strict_types=1);
 
 namespace Geeks4change\BbndAnalyzer\ServicesMatcher\HeadersMatcher;
 
-use Geeks4change\BbndAnalyzer\AnalyzerResult\HeaderSingleResult;
-use Geeks4change\BbndAnalyzer\AnalyzerResult\HeadersResult;
-use Geeks4change\BbndAnalyzer\AnalyzerResult\HeadersResultPerService;
+use Geeks4change\BbndAnalyzer\Analyzer\AnalyzerResult\HeaderSingleResult;
+use Geeks4change\BbndAnalyzer\Analyzer\AnalyzerResult\HeadersResult;
+use Geeks4change\BbndAnalyzer\Analyzer\AnalyzerResult\HeadersResultPerService;
 use Geeks4change\BbndAnalyzer\Globals;
 use ZBateson\MailMimeParser\Message;
 

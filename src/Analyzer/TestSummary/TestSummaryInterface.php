@@ -1,6 +1,6 @@
 <?php
 
-namespace Geeks4change\BbndAnalyzer\TestHelpers;
+namespace Geeks4change\BbndAnalyzer\Analyzer\TestSummary;
 
 interface TestSummaryInterface {
 

@@ -2,17 +2,16 @@
 
 declare(strict_types=1);
 
-namespace Geeks4change\BbndAnalyzer\Html;
+namespace Geeks4change\BbndAnalyzer\UrlExtractor;
 
-use Geeks4change\BbndAnalyzer\Analysis\Summary\ImageUrlList;
 use Geeks4change\BbndAnalyzer\Utility\ThrowMethodTrait;
 
-final class ImageExtractor extends HtmlExtractorBase {
+final class PixelsUrlExtractor extends UrlExtractorBase {
 
   use ThrowMethodTrait;
 
   protected function extractDomNodeList(\DOMXPath $xpath): \DomNodeList {
-    return $xpath->query('//img[@src]') ?? self::throwUnexpectedValue();
+    return $xpath->query("//img[@src and @width='1' and @height='1']") ?? self::throwUnexpectedValue();
   }
 
   protected function extractUrlSpec(\DomNode $domNode): string {

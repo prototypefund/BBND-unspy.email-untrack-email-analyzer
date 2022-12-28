@@ -9,11 +9,11 @@ use Geeks4change\BbndAnalyzer\AnalyzerResult\AnalyzerResult;
 use Geeks4change\BbndAnalyzer\AnalyzerResult\LinkAndImageUrlList;
 use Geeks4change\BbndAnalyzer\AnalyzerResult\UrlList;
 use Geeks4change\BbndAnalyzer\Globals;
-use Geeks4change\BbndAnalyzer\Html\ImageExtractor;
-use Geeks4change\BbndAnalyzer\Html\LinkExtractor;
-use Geeks4change\BbndAnalyzer\Html\PixelExtractor;
 use Geeks4change\BbndAnalyzer\ServicesMatcher\HeadersMatcher\HeadersAllServicesMatcher;
 use Geeks4change\BbndAnalyzer\ServicesMatcher\UrlsMatcher\LinkAndImageUrlListMatcher;
+use Geeks4change\BbndAnalyzer\UrlExtractor\ImagesUrlExtractor;
+use Geeks4change\BbndAnalyzer\UrlExtractor\LinksUrlExtractor;
+use Geeks4change\BbndAnalyzer\UrlExtractor\PixelsUrlExtractor;
 use Masterminds\HTML5;
 use ZBateson\MailMimeParser\MailMimeParser;
 
@@ -36,10 +36,10 @@ class Analyzer {
     $dom = (new HTML5(['disable_html_ns' => TRUE]))->loadHTML($html);
 
     // Extract links, images, pixels.
-    $linkUrls = (new LinkExtractor($dom))->extract($html);
-    $imageUrls = (new ImageExtractor($dom))->extract($html);
+    $linkUrls = (new LinksUrlExtractor($dom))->extract($html);
+    $imageUrls = (new ImagesUrlExtractor($dom))->extract($html);
     $linkAndImageUrlList = new LinkAndImageUrlList($linkUrls, $imageUrls);
-    $pixelsResult = (new PixelExtractor($dom))->extract($html);
+    $pixelsResult = (new PixelsUrlExtractor($dom))->extract($html);
 
     // Match link and image urls.
     $matcher = new LinkAndImageUrlListMatcher();

@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Geeks4change\BbndAnalyzer\Html;
+namespace Geeks4change\BbndAnalyzer\UrlExtractor;
 
 use Geeks4change\BbndAnalyzer\AnalyzerResult\UrlList;
 use GuzzleHttp\Psr7\Uri;
@@ -10,7 +10,7 @@ use GuzzleHttp\Psr7\Uri;
 /**
  * @internal
  */
-abstract class HtmlExtractorBase {
+abstract class UrlExtractorBase {
 
   protected \DOMDocument $dom;
 

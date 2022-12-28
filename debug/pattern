@@ -18,7 +18,7 @@ if (!$toolPattern) {
   printf("Available services: %s\n", implode('|', array_keys(iterator_to_array($toolPatternCollection))));
   exit(1);
 }
-/** @var \Geeks4change\BbndAnalyzer\Analyzer\NewsletterServicesMatcher\UrlsInfo\UrlMatcherBase[] $types */
+/** @var \Geeks4change\BbndAnalyzer\Analyzer\NewsletterServicesMatcher\UrlsMatcher\PerServiceUrlsMatcher\PerServiceUrlMatcherBase[] $types */
 $types = [
   'link' => $toolPattern->getLinkUrlMatchers(),
   'image' => $toolPattern->getImageUrlMatchers(),

@@ -9,7 +9,7 @@ use Geeks4change\BbndAnalyzer\Analyzer\AnalyzerResult\AnalyzerResult;
 use Geeks4change\BbndAnalyzer\Analyzer\AnalyzerResult\LinkAndImageUrlList;
 use Geeks4change\BbndAnalyzer\Analyzer\AnalyzerResult\UrlList;
 use Geeks4change\BbndAnalyzer\Analyzer\NewsletterServicesMatcher\HeadersMatcher\AllServicesHeadersMatcher;
-use Geeks4change\BbndAnalyzer\Analyzer\NewsletterServicesMatcher\UrlsMatcher\LinkAndImageUrlListMatcher;
+use Geeks4change\BbndAnalyzer\Analyzer\NewsletterServicesMatcher\UrlsMatcher\AllServicesLinkAndImageUrlListMatcher;
 use Geeks4change\BbndAnalyzer\Globals;
 use Geeks4change\BbndAnalyzer\UrlExtractor\ImagesUrlExtractor;
 use Geeks4change\BbndAnalyzer\UrlExtractor\LinksUrlExtractor;
@@ -42,7 +42,7 @@ class Analyzer {
     $pixelsResult = (new PixelsUrlExtractor($dom))->extract($html);
 
     // Match link and image urls.
-    $matcher = new LinkAndImageUrlListMatcher();
+    $matcher = new AllServicesLinkAndImageUrlListMatcher();
     $linkAndImageUrlListResult = $matcher->generateLinkAndImageUrlListResults($linkAndImageUrlList);
 
     // Fetch all resolved aliases.

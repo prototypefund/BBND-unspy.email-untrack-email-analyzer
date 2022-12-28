@@ -7,11 +7,11 @@ namespace Geeks4change\BbndAnalyzer\Analyzer\NewsletterServicesMatcher\UrlsMatch
 use Geeks4change\BbndAnalyzer\Analyzer\AnalyzerResult\LinkAndImageUrlList;
 use Geeks4change\BbndAnalyzer\Analyzer\AnalyzerResult\LinkAndImageUrlListMatcherResult;
 
-final class LinkAndImageUrlListMatcher {
+final class AllServicesLinkAndImageUrlListMatcher {
 
   public function generateLinkAndImageUrlListResults(LinkAndImageUrlList $linkAndImageUrlList): LinkAndImageUrlListMatcherResult {
-    $linkUrlListResult = (new LinkUrlsMatcher())->generateUrlListResult($linkAndImageUrlList->getLinkUrlList());
-    $imageUrlListResult = (new ImageUrlsMatcher())->generateUrlListResult($linkAndImageUrlList->getImageUrlList());
+    $linkUrlListResult = (new AllServicesLinkUrlsMatcher())->generateUrlListResult($linkAndImageUrlList->getLinkUrlList());
+    $imageUrlListResult = (new AllServicesImageUrlsMatcher())->generateUrlListResult($linkAndImageUrlList->getImageUrlList());
     return new LinkAndImageUrlListMatcherResult($linkUrlListResult, $imageUrlListResult);
   }
 

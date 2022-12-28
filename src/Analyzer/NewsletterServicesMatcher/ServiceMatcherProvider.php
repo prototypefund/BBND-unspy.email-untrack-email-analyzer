@@ -5,9 +5,9 @@ declare(strict_types=1);
 namespace Geeks4change\BbndAnalyzer\Analyzer\NewsletterServicesMatcher;
 
 use Geeks4change\BbndAnalyzer\Analyzer\NewsletterServicesMatcher\HeadersMatcher\SingleHeaderMatcher;
-use Geeks4change\BbndAnalyzer\Analyzer\NewsletterServicesMatcher\UrlsInfo\DomainMatcher;
-use Geeks4change\BbndAnalyzer\Analyzer\NewsletterServicesMatcher\UrlsInfo\ImageUrlMatcher;
-use Geeks4change\BbndAnalyzer\Analyzer\NewsletterServicesMatcher\UrlsInfo\LinkUrlMatcher;
+use Geeks4change\BbndAnalyzer\Analyzer\NewsletterServicesMatcher\UrlsMatcher\PerServiceUrlsMatcher\PerServiceDomainMatcher;
+use Geeks4change\BbndAnalyzer\Analyzer\NewsletterServicesMatcher\UrlsMatcher\PerServiceUrlsMatcher\PerServiceImageUrlMatcher;
+use Geeks4change\BbndAnalyzer\Analyzer\NewsletterServicesMatcher\UrlsMatcher\PerServiceUrlsMatcher\PerServiceLinkUrlMatcher;
 use Geeks4change\BbndAnalyzer\Utility\ArrayTool;
 
 final class ServiceMatcherProvider {
@@ -17,17 +17,17 @@ final class ServiceMatcherProvider {
   protected ?string $disconnectId;
 
   /**
-   * @var array<\Geeks4change\BbndAnalyzer\Analyzer\NewsletterServicesMatcher\UrlsInfo\DomainMatcher>
+   * @var array<\Geeks4change\BbndAnalyzer\Analyzer\NewsletterServicesMatcher\UrlsMatcher\PerServiceUrlsMatcher\PerServiceDomainMatcher>
    */
   protected array $domainMatchers;
 
   /**
-   * @var array<\Geeks4change\BbndAnalyzer\Analyzer\NewsletterServicesMatcher\UrlsInfo\LinkUrlMatcher>
+   * @var array<\Geeks4change\BbndAnalyzer\Analyzer\NewsletterServicesMatcher\UrlsMatcher\PerServiceUrlsMatcher\PerServiceLinkUrlMatcher>
    */
   protected array $linkUrlMatchers;
 
   /**
-   * @var array<\Geeks4change\BbndAnalyzer\Analyzer\NewsletterServicesMatcher\UrlsInfo\ImageUrlMatcher>
+   * @var array<\Geeks4change\BbndAnalyzer\Analyzer\NewsletterServicesMatcher\UrlsMatcher\PerServiceUrlsMatcher\PerServiceImageUrlMatcher>
    */
   protected array $imageUrlMatchers;
 
@@ -39,9 +39,9 @@ final class ServiceMatcherProvider {
   /**
    * @param string $id
    * @param string|null $disconnectId
-   * @param \Geeks4change\BbndAnalyzer\Analyzer\NewsletterServicesMatcher\UrlsInfo\DomainMatcher[] $domainMatchers
-   * @param \Geeks4change\BbndAnalyzer\Analyzer\NewsletterServicesMatcher\UrlsInfo\LinkUrlMatcher[] $linkUrlMatchers
-   * @param \Geeks4change\BbndAnalyzer\Analyzer\NewsletterServicesMatcher\UrlsInfo\ImageUrlMatcher[] $imageUrlMatchers
+   * @param \Geeks4change\BbndAnalyzer\Analyzer\NewsletterServicesMatcher\UrlsMatcher\PerServiceUrlsMatcher\PerServiceDomainMatcher[] $domainMatchers
+   * @param \Geeks4change\BbndAnalyzer\Analyzer\NewsletterServicesMatcher\UrlsMatcher\PerServiceUrlsMatcher\PerServiceLinkUrlMatcher[] $linkUrlMatchers
+   * @param \Geeks4change\BbndAnalyzer\Analyzer\NewsletterServicesMatcher\UrlsMatcher\PerServiceUrlsMatcher\PerServiceImageUrlMatcher[] $imageUrlMatchers
    * @param \Geeks4change\BbndAnalyzer\Analyzer\NewsletterServicesMatcher\HeadersMatcher\SingleHeaderMatcher[] $headerMatchers
    */
   public function __construct(string $id, ?string $disconnectId, array $domainMatchers, array $linkUrlMatchers, array $imageUrlMatchers, array $headerMatchers) {
@@ -58,11 +58,11 @@ final class ServiceMatcherProvider {
     $disconnectId = $array['disconnect_id'] ?? NULL;
 
     $domainMatchers = ArrayTool::create($array['domains'] ?? [])
-      ->map(fn($value, $key) => DomainMatcher::fromItem($value, $key));
+      ->map(fn($value, $key) => PerServiceDomainMatcher::fromItem($value, $key));
     $linkUrlMatchers = ArrayTool::create($array['links'] ?? [])
-      ->map(fn($value, $key) => LinkUrlMatcher::fromItem($value, $key));
+      ->map(fn($value, $key) => PerServiceLinkUrlMatcher::fromItem($value, $key));
     $imageUrlMatchers = ArrayTool::create($array['images'] ?? [])
-      ->map(fn($value, $key) => ImageUrlMatcher::fromItem($value, $key));
+      ->map(fn($value, $key) => PerServiceImageUrlMatcher::fromItem($value, $key));
     $headerMatchers = ArrayTool::create($array['headers']['patterns'] ?? [])
       ->map(fn($value, $key) => SingleHeaderMatcher::fromItem($value, $key));
 
@@ -91,7 +91,7 @@ final class ServiceMatcherProvider {
   }
 
   /**
-   * @return array<\Geeks4change\BbndAnalyzer\Analyzer\NewsletterServicesMatcher\UrlsInfo\DomainMatcher>
+   * @return array<\Geeks4change\BbndAnalyzer\Analyzer\NewsletterServicesMatcher\UrlsMatcher\PerServiceUrlsMatcher\PerServiceDomainMatcher>
    */
   public function getDomainMatchers(): array {
     return $this->domainMatchers;

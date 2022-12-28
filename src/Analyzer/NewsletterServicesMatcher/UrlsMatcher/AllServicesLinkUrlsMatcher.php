@@ -6,10 +6,10 @@ namespace Geeks4change\BbndAnalyzer\Analyzer\NewsletterServicesMatcher\UrlsMatch
 
 use Geeks4change\BbndAnalyzer\Analyzer\NewsletterServicesMatcher\ServiceMatcherProvider;
 
-final class ImageUrlsMatcher extends UrlsMatcherBase {
+final class AllServicesLinkUrlsMatcher extends AllServicesUrlsMatcherBase{
 
   protected function getUrlPatterns(ServiceMatcherProvider $toolPattern): array {
-    return $toolPattern->getImageUrlMatchers();
+    return $toolPattern->getLinkUrlMatchers();
   }
 
 }

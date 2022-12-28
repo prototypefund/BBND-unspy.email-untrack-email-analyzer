@@ -2,12 +2,12 @@
 
 declare(strict_types=1);
 
-namespace Geeks4change\BbndAnalyzer\Analyzer\NewsletterServicesMatcher\UrlsInfo;
+namespace Geeks4change\BbndAnalyzer\Analyzer\NewsletterServicesMatcher\UrlsMatcher\PerServiceUrlsMatcher;
 
 use Geeks4change\BbndAnalyzer\Utility\UrlTool;
 use Psr\Http\Message\UriInterface;
 
-abstract class UrlMatcherBase {
+abstract class PerServiceUrlMatcherBase {
 
   use RegexTrait;
 
@@ -25,7 +25,6 @@ abstract class UrlMatcherBase {
     $this->tracking = $tracking;
     $this->type = $type;
   }
-
 
   /**
    * @return static

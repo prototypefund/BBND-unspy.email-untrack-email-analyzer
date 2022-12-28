@@ -1,6 +1,6 @@
 <?php
 
-namespace Geeks4change\BbndAnalyzer\Analyzer\NewsletterServicesMatcher\UrlsInfo;
+namespace Geeks4change\BbndAnalyzer\Analyzer\NewsletterServicesMatcher\UrlsMatcher\PerServiceUrlsMatcher;
 
 trait RegexTrait {
 

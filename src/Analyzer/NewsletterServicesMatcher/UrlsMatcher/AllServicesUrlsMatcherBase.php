@@ -12,7 +12,7 @@ use Geeks4change\BbndAnalyzer\Analyzer\NewsletterServicesMatcher\ServiceMatcherP
 use Geeks4change\BbndAnalyzer\Globals;
 use Psr\Http\Message\UriInterface;
 
-abstract class UrlsMatcherBase {
+abstract class AllServicesUrlsMatcherBase {
 
   public function generateUrlListResult(UrlList $urlList): UrlListMatchersResult {
     $perServiceResultList = new UrlListPerServiceMatchesList();
@@ -52,7 +52,7 @@ abstract class UrlsMatcherBase {
   }
 
   /**
-   * @return \Geeks4change\BbndAnalyzer\Analyzer\NewsletterServicesMatcher\UrlsInfo\UrlMatcherBase[]
+   * @return \Geeks4change\BbndAnalyzer\Analyzer\NewsletterServicesMatcher\UrlsMatcher\PerServiceUrlsMatcher\PerServiceUrlMatcherBase[]
    */
   abstract protected function getUrlPatterns(ServiceMatcherProvider $toolPattern): array;
 

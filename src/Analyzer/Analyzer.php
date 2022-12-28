@@ -8,7 +8,7 @@ use Geeks4change\BbndAnalyzer\Analyzer\AnalyzerResult\AggregatedSummary;
 use Geeks4change\BbndAnalyzer\Analyzer\AnalyzerResult\AnalyzerResult;
 use Geeks4change\BbndAnalyzer\Analyzer\AnalyzerResult\LinkAndImageUrlList;
 use Geeks4change\BbndAnalyzer\Analyzer\AnalyzerResult\UrlList;
-use Geeks4change\BbndAnalyzer\Analyzer\NewsletterServicesMatcher\HeadersMatcher\HeadersAllServicesMatcher;
+use Geeks4change\BbndAnalyzer\Analyzer\NewsletterServicesMatcher\HeadersMatcher\AllServicesHeadersMatcher;
 use Geeks4change\BbndAnalyzer\Analyzer\NewsletterServicesMatcher\UrlsMatcher\LinkAndImageUrlListMatcher;
 use Geeks4change\BbndAnalyzer\Globals;
 use Geeks4change\BbndAnalyzer\UrlExtractor\ImagesUrlExtractor;
@@ -29,7 +29,7 @@ class Analyzer {
     // @todo Consider reporting unusual Mime parts, like more than one text/html part.
 
     // Analyze headers.
-    $headersResult = (new HeadersAllServicesMatcher())->matchHeaders($message);
+    $headersResult = (new AllServicesHeadersMatcher())->matchHeaders($message);
 
     // Analyze body html.
     $html = $message->getHtmlContent();

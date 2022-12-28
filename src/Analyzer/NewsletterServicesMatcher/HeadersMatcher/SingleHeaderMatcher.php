@@ -2,12 +2,12 @@
 
 declare(strict_types=1);
 
-namespace Geeks4change\BbndAnalyzer\Analyzer\NewsletterServicesMatcher\HeadersInfo;
+namespace Geeks4change\BbndAnalyzer\Analyzer\NewsletterServicesMatcher\HeadersMatcher;
 use Geeks4change\BbndAnalyzer\Analyzer\NewsletterServicesMatcher\UrlsInfo\RegexTrait;
 use Geeks4change\BbndAnalyzer\Globals;
 use ZBateson\MailMimeParser\Message;
 
-class HeaderMatcher {
+class SingleHeaderMatcher {
 
   use RegexTrait;
 

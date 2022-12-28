@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace Geeks4change\BbndAnalyzer\Analyzer\NewsletterServicesMatcher;
 
-use Geeks4change\BbndAnalyzer\Analyzer\NewsletterServicesMatcher\HeadersInfo\HeaderMatcher;
+use Geeks4change\BbndAnalyzer\Analyzer\NewsletterServicesMatcher\HeadersMatcher\SingleHeaderMatcher;
 use Geeks4change\BbndAnalyzer\Analyzer\NewsletterServicesMatcher\UrlsInfo\DomainMatcher;
 use Geeks4change\BbndAnalyzer\Analyzer\NewsletterServicesMatcher\UrlsInfo\ImageUrlMatcher;
 use Geeks4change\BbndAnalyzer\Analyzer\NewsletterServicesMatcher\UrlsInfo\LinkUrlMatcher;
@@ -32,7 +32,7 @@ final class ServiceMatcherProvider {
   protected array $imageUrlMatchers;
 
   /**
-   * @var array<\Geeks4change\BbndAnalyzer\Analyzer\NewsletterServicesMatcher\HeadersInfo\HeaderMatcher>
+   * @var array<\Geeks4change\BbndAnalyzer\Analyzer\NewsletterServicesMatcher\HeadersMatcher\SingleHeaderMatcher>
    */
   protected array $headerMatchers;
 
@@ -42,7 +42,7 @@ final class ServiceMatcherProvider {
    * @param \Geeks4change\BbndAnalyzer\Analyzer\NewsletterServicesMatcher\UrlsInfo\DomainMatcher[] $domainMatchers
    * @param \Geeks4change\BbndAnalyzer\Analyzer\NewsletterServicesMatcher\UrlsInfo\LinkUrlMatcher[] $linkUrlMatchers
    * @param \Geeks4change\BbndAnalyzer\Analyzer\NewsletterServicesMatcher\UrlsInfo\ImageUrlMatcher[] $imageUrlMatchers
-   * @param \Geeks4change\BbndAnalyzer\Analyzer\NewsletterServicesMatcher\HeadersInfo\HeaderMatcher[] $headerMatchers
+   * @param \Geeks4change\BbndAnalyzer\Analyzer\NewsletterServicesMatcher\HeadersMatcher\SingleHeaderMatcher[] $headerMatchers
    */
   public function __construct(string $id, ?string $disconnectId, array $domainMatchers, array $linkUrlMatchers, array $imageUrlMatchers, array $headerMatchers) {
     $this->id = $id;
@@ -64,7 +64,7 @@ final class ServiceMatcherProvider {
     $imageUrlMatchers = ArrayTool::create($array['images'] ?? [])
       ->map(fn($value, $key) => ImageUrlMatcher::fromItem($value, $key));
     $headerMatchers = ArrayTool::create($array['headers']['patterns'] ?? [])
-      ->map(fn($value, $key) => HeaderMatcher::fromItem($value, $key));
+      ->map(fn($value, $key) => SingleHeaderMatcher::fromItem($value, $key));
 
     return new self(
       $id,

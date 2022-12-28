@@ -10,7 +10,7 @@ use Geeks4change\BbndAnalyzer\Analyzer\AnalyzerResult\HeadersResultPerService;
 use Geeks4change\BbndAnalyzer\Globals;
 use ZBateson\MailMimeParser\Message;
 
-final class HeadersAllServicesMatcher {
+final class AllServicesHeadersMatcher {
   public function matchHeaders(Message $message): HeadersResult {
     $headerResult = new HeadersResult();
     /** @var \Geeks4change\BbndAnalyzer\Analyzer\NewsletterServicesMatcher\ServiceMatcherProvider $serviceMatcher */

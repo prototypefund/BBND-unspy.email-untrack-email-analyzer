@@ -5,7 +5,6 @@ declare(strict_types=1);
 namespace Geeks4change\BbndAnalyzer;
 
 use Geeks4change\BbndAnalyzer\Analyzer\AnalyzerResult\MayNeedResearch;
-use Geeks4change\BbndAnalyzer\DomainAliases\DomainAliasesResolver;
 use Geeks4change\BbndAnalyzer\ServicesMatcher\ServiceMatcherProviderRepository;
 
 final class Globals {

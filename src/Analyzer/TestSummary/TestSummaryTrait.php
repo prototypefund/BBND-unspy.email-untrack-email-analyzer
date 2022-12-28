@@ -1,8 +1,6 @@
 <?php
 
-namespace Geeks4change\BbndAnalyzer\TestHelpers;
-
-use PHPUnit\Framework\Constraint\Callback;
+namespace Geeks4change\BbndAnalyzer\Analyzer\TestSummary;
 
 trait TestSummaryTrait {
 

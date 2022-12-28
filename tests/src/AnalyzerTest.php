@@ -3,8 +3,8 @@
 namespace Geeks4change\tests\BbndAnalyzer;
 
 use Geeks4change\BbndAnalyzer\Analyzer\Analyzer;
+use Geeks4change\BbndAnalyzer\Analyzer\TestSummary\TestSummaryTrait;
 use Geeks4change\BbndAnalyzer\DebugAnalysisBuilder;
-use Geeks4change\BbndAnalyzer\TestHelpers\TestSummaryTrait;
 use Geeks4change\BbndAnalyzer\Utility\ThrowMethodTrait;
 use PHPUnit\Framework\TestCase;
 use Symfony\Component\Yaml\Yaml;

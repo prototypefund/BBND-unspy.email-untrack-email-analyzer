@@ -1,7 +1,7 @@
 #!/usr/bin/env php
 <?php
 
-use Geeks4change\BbndAnalyzer\DomainAliases\DomainAliasesResolver;
+use Geeks4change\BbndAnalyzer\DomainAliasesResolver;
 use Geeks4change\BbndAnalyzer\DomElement\DomElementCollection;
 use ZBateson\MailMimeParser\MailMimeParser;
 

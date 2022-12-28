@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace Geeks4change\BbndAnalyzer\Analyzer\AnalyzerResult;
 
-use Geeks4change\BbndAnalyzer\TestHelpers\TestSummaryInterface;
+use Geeks4change\BbndAnalyzer\Analyzer\TestSummary\TestSummaryInterface;
 
 /**
  * Url list summary, child of

@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Geeks4change\BbndAnalyzer\DomainAliases;
+namespace Geeks4change\BbndAnalyzer;
 
 /**
  * Resolves domain aliases aka CNames.

@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Geeks4change\BbndAnalyzer\ServicesMatcher;
+namespace Geeks4change\BbndAnalyzer\Analyzer\NewsletterServicesMatcher;
 
 use Geeks4change\BbndAnalyzer\Utility\ArrayAccessTrait;
 
@@ -11,12 +11,12 @@ class ServiceMatcherProviderCollection implements \IteratorAggregate, \ArrayAcce
   use ArrayAccessTrait;
 
   /**
-   * @var array<\Geeks4change\BbndAnalyzer\ServicesMatcher\ServiceMatcherProvider>
+   * @var array<\Geeks4change\BbndAnalyzer\Analyzer\NewsletterServicesMatcher\ServiceMatcherProvider>
    */
   protected array $patterns;
 
   /**
-   * @param \Geeks4change\BbndAnalyzer\ServicesMatcher\ServiceMatcherProvider[] $patterns
+   * @param \Geeks4change\BbndAnalyzer\Analyzer\NewsletterServicesMatcher\ServiceMatcherProvider[] $patterns
    */
   private function __construct(array $patterns) {
     $this->patterns = $patterns;

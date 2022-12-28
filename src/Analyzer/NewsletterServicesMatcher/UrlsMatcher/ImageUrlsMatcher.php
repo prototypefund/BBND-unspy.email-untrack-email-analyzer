@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Geeks4change\BbndAnalyzer\ServicesMatcher\UrlsMatcher;
+namespace Geeks4change\BbndAnalyzer\Analyzer\NewsletterServicesMatcher\UrlsMatcher;
 
-use Geeks4change\BbndAnalyzer\ServicesMatcher\ServiceMatcherProvider;
+use Geeks4change\BbndAnalyzer\Analyzer\NewsletterServicesMatcher\ServiceMatcherProvider;
 
 final class ImageUrlsMatcher extends UrlsMatcherBase {
 

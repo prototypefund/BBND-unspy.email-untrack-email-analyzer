@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Geeks4change\BbndAnalyzer\ServicesMatcher;
+namespace Geeks4change\BbndAnalyzer\Analyzer\NewsletterServicesMatcher;
 
 use Symfony\Component\Yaml\Exception\ParseException;
 use Symfony\Component\Yaml\Yaml;
@@ -13,7 +13,7 @@ final class ServiceMatcherProviderRepository {
 
   public function getServiceMatcherProviderCollection(): ServiceMatcherProviderCollection {
     if (!isset($this->serviceMatcherProviderCollection)) {
-      $directory = dirname(dirname(__DIR__)) . '/patterns';
+      $directory = dirname(dirname(dirname(__DIR__))) . '/patterns';
       $serviceMatcherProviderCollectionBuilder = ServiceMatcherProviderCollection::builder();
       $filePaths = glob("$directory/*.yml");
       foreach ($filePaths as $filePath) {

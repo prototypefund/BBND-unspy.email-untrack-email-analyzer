@@ -5,7 +5,7 @@ declare(strict_types=1);
 namespace Geeks4change\BbndAnalyzer;
 
 use Geeks4change\BbndAnalyzer\Analyzer\AnalyzerResult\MayNeedResearch;
-use Geeks4change\BbndAnalyzer\ServicesMatcher\ServiceMatcherProviderRepository;
+use Geeks4change\BbndAnalyzer\Analyzer\NewsletterServicesMatcher\ServiceMatcherProviderRepository;
 
 final class Globals {
 

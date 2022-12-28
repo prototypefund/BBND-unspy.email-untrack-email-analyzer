@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Geeks4change\BbndAnalyzer\ServicesMatcher;
+namespace Geeks4change\BbndAnalyzer\Analyzer\NewsletterServicesMatcher;
 
 final class ServiceMatcherProviderCollectionBuilder {
 

@@ -2,14 +2,14 @@
 
 declare(strict_types=1);
 
-namespace Geeks4change\BbndAnalyzer\ServicesMatcher\UrlsMatcher;
+namespace Geeks4change\BbndAnalyzer\Analyzer\NewsletterServicesMatcher\UrlsMatcher;
 
 use Geeks4change\BbndAnalyzer\Analyzer\AnalyzerResult\UrlList;
 use Geeks4change\BbndAnalyzer\Analyzer\AnalyzerResult\UrlListMatchersResult;
 use Geeks4change\BbndAnalyzer\Analyzer\AnalyzerResult\UrlListPerServiceMatches;
 use Geeks4change\BbndAnalyzer\Analyzer\AnalyzerResult\UrlListPerServiceMatchesList;
+use Geeks4change\BbndAnalyzer\Analyzer\NewsletterServicesMatcher\ServiceMatcherProvider;
 use Geeks4change\BbndAnalyzer\Globals;
-use Geeks4change\BbndAnalyzer\ServicesMatcher\ServiceMatcherProvider;
 use Psr\Http\Message\UriInterface;
 
 abstract class UrlsMatcherBase {
@@ -17,7 +17,7 @@ abstract class UrlsMatcherBase {
   public function generateUrlListResult(UrlList $urlList): UrlListMatchersResult {
     $perServiceResultList = new UrlListPerServiceMatchesList();
     $noMatchList = new UrlList();
-    /** @var \Geeks4change\BbndAnalyzer\ServicesMatcher\ServiceMatcherProvider $toolPattern */
+    /** @var \Geeks4change\BbndAnalyzer\Analyzer\NewsletterServicesMatcher\ServiceMatcherProvider $toolPattern */
     foreach (Globals::get()->getServiceMatcherProviderRepository()->getServiceMatcherProviderCollection() as $toolPattern) {
       $matchedExactly = new UrlList();
       $matchedByDomain = new UrlList();
@@ -52,7 +52,7 @@ abstract class UrlsMatcherBase {
   }
 
   /**
-   * @return \Geeks4change\BbndAnalyzer\ServicesMatcher\UrlsInfo\UrlMatcherBase[]
+   * @return \Geeks4change\BbndAnalyzer\Analyzer\NewsletterServicesMatcher\UrlsInfo\UrlMatcherBase[]
    */
   abstract protected function getUrlPatterns(ServiceMatcherProvider $toolPattern): array;
 

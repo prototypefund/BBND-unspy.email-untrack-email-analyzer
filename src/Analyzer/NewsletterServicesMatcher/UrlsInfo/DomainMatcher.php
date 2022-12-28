@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Geeks4change\BbndAnalyzer\ServicesMatcher\UrlsInfo;
+namespace Geeks4change\BbndAnalyzer\Analyzer\NewsletterServicesMatcher\UrlsInfo;
 
 use Geeks4change\BbndAnalyzer\Utility\UrlTool;
 use Psr\Http\Message\UriInterface;

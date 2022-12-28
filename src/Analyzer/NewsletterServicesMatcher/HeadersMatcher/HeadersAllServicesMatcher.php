@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Geeks4change\BbndAnalyzer\ServicesMatcher\HeadersMatcher;
+namespace Geeks4change\BbndAnalyzer\Analyzer\NewsletterServicesMatcher\HeadersMatcher;
 
 use Geeks4change\BbndAnalyzer\Analyzer\AnalyzerResult\HeaderSingleResult;
 use Geeks4change\BbndAnalyzer\Analyzer\AnalyzerResult\HeadersResult;
@@ -13,7 +13,7 @@ use ZBateson\MailMimeParser\Message;
 final class HeadersAllServicesMatcher {
   public function matchHeaders(Message $message): HeadersResult {
     $headerResult = new HeadersResult();
-    /** @var \Geeks4change\BbndAnalyzer\ServicesMatcher\ServiceMatcherProvider $serviceMatcher */
+    /** @var \Geeks4change\BbndAnalyzer\Analyzer\NewsletterServicesMatcher\ServiceMatcherProvider $serviceMatcher */
     foreach (Globals::get()->getServiceMatcherProviderRepository()->getServiceMatcherProviderCollection() as $serviceMatcher) {
       $headerMatchSummaryList = [];
       foreach ($serviceMatcher->getHeadersMatchers() as $headersMatcher) {

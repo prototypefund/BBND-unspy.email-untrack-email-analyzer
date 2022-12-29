@@ -37,7 +37,7 @@ final class RedirectResolver {
         $headers = self::normalizeHeaders($headers);
         [, $statusCode] = explode(' ', $headers[0]);
         $isRedirect = substr($statusCode, 0, 1) === '3';
-        $currentUrl = $isRedirect ? ($headers['location'] ?? NULL) : NULL;
+        $currentUrl = $isRedirect ? $this->extractLocation($headers) : NULL;
       }
       $isValidRedirect = !empty($isRedirect) && !empty($currentUrl);
       if ($isValidRedirect) {
@@ -52,6 +52,19 @@ final class RedirectResolver {
     $keys = array_keys($headers);
     $normalizedKeys = array_map('strtolower', $keys);
     return array_combine($normalizedKeys, $headers);
+  }
+
+  public function extractLocation($headers): ?string {
+    // Either string or array of strings.
+    // Mailchimp does freaky things like this:
+    // 'location' => ['http://info@voeoe.de', 'https://voeoe.de/']
+    $locations = (array) ($headers['location'] ?? []);
+    foreach ($locations as $location) {
+      if (is_string($location) && preg_match('~https?://~ui', $location)) {
+        return $location;
+      }
+    }
+    return NULL;
   }
 
 }

@@ -21,15 +21,19 @@ final class UrlListPerServiceMatches implements TestSummaryInterface {
 
   protected UrlList $urlsMatchedByDomain;
 
+  protected UrlList $urlsNotMatchedList;
+
   /**
    * @param string $serviceName
-   * @param \Geeks4change\BbndAnalyzer\Analyzer\AnalyzerResult\UrlList $matchedExactly
-   * @param \Geeks4change\BbndAnalyzer\Analyzer\AnalyzerResult\UrlList $matchedByDomain
+   * @param \Geeks4change\BbndAnalyzer\Analyzer\AnalyzerResult\UrlList $urlsMatchedExactly
+   * @param \Geeks4change\BbndAnalyzer\Analyzer\AnalyzerResult\UrlList $urlsMatchedByDomain
+   * @param \Geeks4change\BbndAnalyzer\Analyzer\AnalyzerResult\UrlList $urlsNotMatchedList
    */
-  public function __construct(string $serviceName, UrlList $matchedExactly, UrlList $matchedByDomain) {
+  public function __construct(string $serviceName, UrlList $urlsMatchedExactly, UrlList $urlsMatchedByDomain, UrlList $urlsNotMatchedList) {
     $this->serviceName = $serviceName;
-    $this->urlsMatchedExactly = $matchedExactly;
-    $this->urlsMatchedByDomain = $matchedByDomain;
+    $this->urlsMatchedExactly = $urlsMatchedExactly;
+    $this->urlsMatchedByDomain = $urlsMatchedByDomain;
+    $this->urlsNotMatchedList = $urlsNotMatchedList;
   }
 
   /**
@@ -57,10 +61,18 @@ final class UrlListPerServiceMatches implements TestSummaryInterface {
     return $this->urlsMatchedByDomain;
   }
 
+  /**
+   * @return \Geeks4change\BbndAnalyzer\Analyzer\AnalyzerResult\UrlList
+   */
+  public function getUrlsNotMatchedList(): UrlList {
+    return $this->urlsNotMatchedList;
+  }
+
   public function getTestSummary(): array {
     return [
       'urlsMatchedExactly' => $this->urlsMatchedExactly->getTestSummary(),
       'urlsMatchedByDomain' => $this->urlsMatchedByDomain->getTestSummary(),
+      'urlsNotMatchedList' => $this->urlsNotMatchedList->getTestSummary(),
     ];
   }
 

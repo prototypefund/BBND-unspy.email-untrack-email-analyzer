@@ -16,11 +16,11 @@ abstract class AllServicesUrlsMatcherBase {
 
   public function generateUrlListResult(UrlList $urlList): UrlListMatchersResult {
     $perServiceResultList = new UrlListPerServiceMatchesList();
-    $noMatchList = new UrlList();
     /** @var \Geeks4change\BbndAnalyzer\Analyzer\NewsletterServicesMatcher\ServiceMatcherProvider $toolPattern */
     foreach (Globals::get()->getServiceMatcherProviderRepository()->getServiceMatcherProviderCollection() as $toolPattern) {
       $matchedExactly = new UrlList();
       $matchedByDomain = new UrlList();
+      $notMatched = new UrlList();
       foreach ($urlList as $url) {
         if ($this->isUrlPatternMatch($toolPattern, $url->getUrlObject())) {
           $matchedExactly->add(strval($url));
@@ -29,15 +29,20 @@ abstract class AllServicesUrlsMatcherBase {
           $matchedByDomain->add(strval($url));
         }
         else {
-          $noMatchList->add(strval($url));
+          $notMatched->add(strval($url));
         }
       }
-      $perServiceMatches = new UrlListPerServiceMatches($toolPattern->getName(), $matchedExactly, $matchedByDomain);
+      $perServiceMatches = new UrlListPerServiceMatches(
+        $toolPattern->getName(),
+        $matchedExactly,
+        $matchedByDomain,
+        $notMatched,
+      );
       if ($perServiceMatches->isNonEmpty()) {
         $perServiceResultList->add($perServiceMatches);
       }
     }
-    return new UrlListMatchersResult($perServiceResultList, $noMatchList);
+    return new UrlListMatchersResult($perServiceResultList);
 }
 
   protected function isUrlPatternMatch(ServiceMatcherProvider $toolPattern, UriInterface $url): bool {

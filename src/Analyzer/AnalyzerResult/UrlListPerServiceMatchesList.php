@@ -27,7 +27,7 @@ final class UrlListPerServiceMatchesList implements \IteratorAggregate, TestSumm
   }
 
   public function getTestSummary(): array {
-    return array_map(fn(UrlListPerServiceMatches $ulpsm) => $ulpsm->getTestSummary(), $this->perService);
+    return array_map(fn(UrlListPerServiceMatches $item) => $item->getTestSummary(), $this->perService);
   }
 
 }

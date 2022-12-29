@@ -38,6 +38,7 @@ class Analyzer {
     $dom = (new HTML5(['disable_html_ns' => TRUE]))->loadHTML($html);
 
     // Extract links, images, pixels.
+    // @todo Rewrite using Goutte.
     $linkUrls = (new LinksUrlExtractor($dom))->extract($html);
     $imageUrls = (new ImagesUrlExtractor($dom))->extract($html);
     $allLinkAndImageUrlsList = new LinkAndImageUrlList($linkUrls, $imageUrls);
@@ -50,12 +51,12 @@ class Analyzer {
     // Fetch all resolved aliases.
     $domainAliasList = (new DomainAliasesResultFetcher())->fetch();
 
-    // @fixme
     $urlsWithRedirectList = (new RedirectDetector())->detectRedirect($allLinkAndImageUrlsList, $unsubscribeUrlList);
     $urlWithAnalyticsList = (new AnalyticsDetector())->detectAnalytics($allLinkAndImageUrlsList);
 
+    // @todo Replace with logger.
     $mayNeedResearch = Globals::get()->getMayNeedResearch();
-    // @todo
+    // @todo Implement summary.
     $aggregated = new AggregatedSummary(NULL, '');
 
     // Clean up.

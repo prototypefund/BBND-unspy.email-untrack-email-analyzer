@@ -24,7 +24,7 @@ final class AnalyzerResult implements TestSummaryInterface {
 
   protected UrlList $pixelsList;
 
-  protected LinkAndImageUrlList $urlsWithRedirectList;
+  protected LinkAndImageRedirectInfoList $urlsRedirectInfoList;
 
   protected LinkAndImageUrlList $urlsWithAnalyticsList;
 
@@ -37,21 +37,22 @@ final class AnalyzerResult implements TestSummaryInterface {
    * @param \Geeks4change\BbndAnalyzer\Analyzer\AnalyzerResult\HeadersResult $headersResult
    * @param \Geeks4change\BbndAnalyzer\Analyzer\AnalyzerResult\LinkAndImageUrlListMatcherResult $linkAndImageUrlsResult
    * @param \Geeks4change\BbndAnalyzer\Analyzer\AnalyzerResult\UrlList $pixelsList
-   * @param \Geeks4change\BbndAnalyzer\Analyzer\AnalyzerResult\LinkAndImageUrlList $urlsWithRedirectList
+   * @param \Geeks4change\BbndAnalyzer\Analyzer\AnalyzerResult\LinkAndImageRedirectInfoList $urlsRedirectInfoList
    * @param \Geeks4change\BbndAnalyzer\Analyzer\AnalyzerResult\LinkAndImageUrlList $urlsWithAnalyticsList
    * @param \Geeks4change\BbndAnalyzer\Analyzer\AnalyzerResult\DomainAliasesList $domainAliasesList
    */
-  public function __construct(AggregatedSummary $aggregated, MayNeedResearch $mayNeedResearch, DKIMResult $dkimResult, HeadersResult $headersResult, LinkAndImageUrlListMatcherResult $linkAndImageUrlsResult, UrlList $pixelsList, LinkAndImageUrlList $urlsWithRedirectList, LinkAndImageUrlList $urlsWithAnalyticsList, DomainAliasesList $domainAliasesList) {
+  public function __construct(AggregatedSummary $aggregated, MayNeedResearch $mayNeedResearch, DKIMResult $dkimResult, HeadersResult $headersResult, LinkAndImageUrlListMatcherResult $linkAndImageUrlsResult, UrlList $pixelsList, LinkAndImageRedirectInfoList $urlsRedirectInfoList, LinkAndImageUrlList $urlsWithAnalyticsList, DomainAliasesList $domainAliasesList) {
     $this->aggregated = $aggregated;
     $this->mayNeedResearch = $mayNeedResearch;
     $this->dkimResult = $dkimResult;
     $this->headersResult = $headersResult;
     $this->linkAndImageUrlsResult = $linkAndImageUrlsResult;
     $this->pixelsList = $pixelsList;
-    $this->urlsWithRedirectList = $urlsWithRedirectList;
+    $this->urlsRedirectInfoList = $urlsRedirectInfoList;
     $this->urlsWithAnalyticsList = $urlsWithAnalyticsList;
     $this->domainAliasesList = $domainAliasesList;
   }
+
 
   /**
    * @return \Geeks4change\BbndAnalyzer\Analyzer\AnalyzerResult\AggregatedSummary
@@ -96,10 +97,10 @@ final class AnalyzerResult implements TestSummaryInterface {
   }
 
   /**
-   * @return \Geeks4change\BbndAnalyzer\Analyzer\AnalyzerResult\LinkAndImageUrlList
+   * @return \Geeks4change\BbndAnalyzer\Analyzer\AnalyzerResult\LinkAndImageRedirectInfoList
    */
-  public function getUrlsWithRedirectList(): LinkAndImageUrlList {
-    return $this->urlsWithRedirectList;
+  public function getUrlsRedirectInfoList(): LinkAndImageRedirectInfoList {
+    return $this->urlsRedirectInfoList;
   }
 
   /**
@@ -121,7 +122,7 @@ final class AnalyzerResult implements TestSummaryInterface {
     return [
       'headersResult' => $this->headersResult->getTestSummary(),
       'linkAndImageUrlsResult' => $this->linkAndImageUrlsResult->getTestSummary(),
-      'urlsWithRedirectList' => $this->urlsWithRedirectList->getTestSummary(),
+      'urlsWithRedirectList' => $this->urlsRedirectInfoList->getTestSummary(),
       'urlsWithAnalyticsList' => $this->urlsWithAnalyticsList->getTestSummary(),
     ];
   }

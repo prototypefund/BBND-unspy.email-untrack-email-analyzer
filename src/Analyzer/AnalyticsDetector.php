@@ -29,7 +29,7 @@ final class AnalyticsDetector {
       $allQueryKeysOnSeparateLines = implode("\n", array_keys($query));
       $hasAnalytics = preg_match($this->getPattern(), $allQueryKeysOnSeparateLines);
       if ($hasAnalytics) {
-        $analyticsUrlList->add($urlWrapper);
+        $analyticsUrlList->add(strval($urlWrapper));
       }
     }
     return $analyticsUrlList;

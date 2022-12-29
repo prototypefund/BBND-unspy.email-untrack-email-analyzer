@@ -51,7 +51,7 @@ class Analyzer {
     $domainAliasList = (new DomainAliasesResultFetcher())->fetch();
 
     // @fixme
-    $urlsWithRedirectList = new LinkAndImageUrlList(new UrlList(), new UrlList());
+    $urlsWithRedirectList = (new RedirectDetector())->detectRedirect($linkAndImageUrlList, $unsubscribeUrlList);
     $urlWithAnalyticsList = (new AnalyticsDetector())->detectAnalytics($linkAndImageUrlList);
 
     $mayNeedResearch = Globals::get()->getMayNeedResearch();

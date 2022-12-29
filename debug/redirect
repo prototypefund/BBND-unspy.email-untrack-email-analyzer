@@ -1,0 +1,15 @@
+#!/usr/bin/env php
+<?php
+declare(strict_types=1);
+
+use Geeks4change\BbndAnalyzer\RedirectResolver;
+
+include 'vendor/autoload.php';
+
+if ($argc !== 2) {
+  print "Debugs resolution of url redirects.";
+  print "Usage: {$argv[0]} [https://some.url]";
+  exit(1);
+}
+$redirectInfo = (new RedirectResolver())->resolveRedirect($argv[1]);
+dump($redirectInfo);

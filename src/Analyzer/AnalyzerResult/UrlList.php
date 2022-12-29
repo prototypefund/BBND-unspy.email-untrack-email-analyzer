@@ -26,15 +26,18 @@ final class UrlList implements \IteratorAggregate, TestSummaryInterface {
   protected array $urls = [];
 
   /**
-   * @param string|\Stringable $urlString
+   * @param string $url
    */
-  public function add($urlString) {
-    // @todo Consider removing duplicates.
-    $this->urls[] = new Url($urlString);
+  public function add(string $url) {
+    $this->urls[$url] = new Url($url);
   }
 
   public function count(): int {
     return count($this->urls);
+  }
+
+  public function contains(string $urlAsString) {
+    return isset($this->urls[$urlAsString]);
   }
 
   public function getIterator(): \ArrayIterator {

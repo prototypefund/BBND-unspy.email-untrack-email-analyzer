@@ -15,8 +15,13 @@ use Geeks4change\BbndAnalyzer\UrlExtractor\ImagesUrlExtractor;
 use Geeks4change\BbndAnalyzer\UrlExtractor\LinksUrlExtractor;
 use Geeks4change\BbndAnalyzer\UrlExtractor\PixelsUrlExtractor;
 use Masterminds\HTML5;
+use Symfony\Component\DomCrawler\Crawler;
+use Wa72\HtmlPageDom\HtmlPageCrawler;
 use ZBateson\MailMimeParser\MailMimeParser;
 
+/**
+ * @api This and its return classes are the only API for the outside.
+ */
 class Analyzer {
 
   public function analyze(string $emailWithHeaders): AnalyzerResult {
@@ -35,14 +40,17 @@ class Analyzer {
 
     // Analyze body html.
     $html = $message->getHtmlContent();
-    $dom = (new HTML5(['disable_html_ns' => TRUE]))->loadHTML($html);
+    // Do we need all the bells and whistles of HtmlPageCrawler and underlying
+    // DomCrawler? Not really, but seems to add some namespace and encoding
+    // safeguards that can not be wrong.
+    $crawler = HtmlPageCrawler::create($html);
 
     // Extract links, images, pixels.
     // @todo Rewrite using Goutte.
-    $linkUrls = (new LinksUrlExtractor($dom))->extract($html);
-    $imageUrls = (new ImagesUrlExtractor($dom))->extract($html);
+    $linkUrls = (new LinksUrlExtractor($crawler))->extract();
+    $imageUrls = (new ImagesUrlExtractor($crawler))->extract();
     $allLinkAndImageUrlsList = new LinkAndImageUrlList($linkUrls, $imageUrls);
-    $pixelsResult = (new PixelsUrlExtractor($dom))->extract($html);
+    $pixelsResult = (new PixelsUrlExtractor($crawler))->extract();
 
     // Match link and image urls.
     $matcher = new AllServicesLinkAndImageUrlListMatcher();

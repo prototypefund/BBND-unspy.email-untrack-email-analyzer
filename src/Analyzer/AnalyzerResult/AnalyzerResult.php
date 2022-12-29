@@ -134,6 +134,7 @@ final class AnalyzerResult implements TestSummaryInterface {
       'headersResult' => $this->headersResult->getTestSummary(),
       'allLinkAndImageUrlsList' => $this->allLinkAndImageUrlsList->getTestSummary(),
       'linkAndImageUrlsResult' => $this->linkAndImageUrlsResult->getTestSummary(),
+      'pixelsList' => $this->pixelsList->getTestSummary(),
       'urlsWithRedirectList' => $this->urlsRedirectInfoList->getTestSummary(),
       'urlsWithAnalyticsList' => $this->urlsWithAnalyticsList->getTestSummary(),
     ];

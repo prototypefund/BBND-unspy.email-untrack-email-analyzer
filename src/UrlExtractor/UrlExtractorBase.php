@@ -5,42 +5,37 @@ declare(strict_types=1);
 namespace Geeks4change\BbndAnalyzer\UrlExtractor;
 
 use Geeks4change\BbndAnalyzer\Analyzer\AnalyzerResult\UrlList;
+use Geeks4change\BbndAnalyzer\Utility\UrlTool;
 use GuzzleHttp\Psr7\Uri;
+use Wa72\HtmlPageDom\HtmlPageCrawler;
 
 /**
  * @internal
  */
 abstract class UrlExtractorBase {
 
-  protected \DOMDocument $dom;
+  protected HtmlPageCrawler $crawler;
 
   /**
-   * @param \DOMDocument $dom
+   * @param \Wa72\HtmlPageDom\HtmlPageCrawler $crawler
    */
-  public function __construct(\DOMDocument $dom) {
-    $this->dom = $dom;
+  public function __construct(HtmlPageCrawler $crawler) {
+    $this->crawler = $crawler;
   }
 
-  public function extract(string $html): UrlList {
-    // Extract HTML part.
-    $xpath = new \DOMXPath($this->dom);
 
-    $linksList = $this->extractDomNodeList($xpath);
-
+  public function extract(): UrlList {
+    $rawUrls = $this->extractUrls();
     $result = new UrlList();
-    foreach (iterator_to_array($linksList) as $domNode) {
-      $urlSpec = $this->extractUrlSpec($domNode);
-      $uri = new Uri($urlSpec);
-      if (in_array($uri->getScheme(), ['http', 'https'])) {
-        $result->add($urlSpec);
+    foreach ($rawUrls as $urlNode) {
+      $url = $urlNode->value;
+      if (UrlTool::isWebUrl(new Uri($url))) {
+        $result->add($url);
       }
     }
     return $result;
   }
 
-
-  abstract protected function extractDomNodeList(\DOMXPath $xpath): \DomNodeList;
-
-  abstract protected function extractUrlSpec(\DomNode $domNode): string;
+  abstract protected function extractUrls(): \Traversable;
 
 }

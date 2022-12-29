@@ -22,7 +22,8 @@
         "ext-dom": "*",
         "symfony/yaml": "^5 || ^6.2",
         "phpmailer/dkimvalidator": "0.3",
-        "cweagans/composer-patches": "^1.7"
+        "cweagans/composer-patches": "^1.7",
+        "psr/log": "^1.1"
     },
     "require-dev": {
         "symfony/var-dumper": "^5 || ^6.2",

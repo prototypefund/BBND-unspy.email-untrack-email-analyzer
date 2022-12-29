@@ -31,6 +31,8 @@ class Analyzer {
     // Analyze headers.
     $headersResult = (new AllServicesHeadersMatcher())->matchHeaders($message);
 
+    $unsubscribeUrlList = (new UnsubscribeLinkExtractor())->extractUnsubscribeLink($message);
+
     // Analyze body html.
     $html = $message->getHtmlContent();
     $dom = (new HTML5(['disable_html_ns' => TRUE]))->loadHTML($html);
@@ -49,9 +51,8 @@ class Analyzer {
     $domainAliasList = (new DomainAliasesResultFetcher())->fetch();
 
     // @fixme
-    $urlsWithRedirectList = new UrlList();
-    $urlWithAnalyticsList = new UrlList();
-
+    $urlsWithRedirectList = new LinkAndImageUrlList(new UrlList(), new UrlList());
+    $urlWithAnalyticsList = (new AnalyticsDetector())->detectAnalytics($linkAndImageUrlList);
 
     $mayNeedResearch = Globals::get()->getMayNeedResearch();
     // @todo
@@ -59,7 +60,17 @@ class Analyzer {
 
     // Clean up.
     Globals::deleteAll();
-    return new AnalyzerResult($aggregated, $mayNeedResearch, $dkimResult, $headersResult, $linkAndImageUrlListResult, $pixelsResult, $urlsWithRedirectList, $urlWithAnalyticsList, $domainAliasList);
+    return new AnalyzerResult(
+      $aggregated,
+      $mayNeedResearch,
+      $dkimResult,
+      $headersResult,
+      $linkAndImageUrlListResult,
+      $pixelsResult,
+      $urlsWithRedirectList,
+      $urlWithAnalyticsList,
+      $domainAliasList
+    );
   }
 
 }

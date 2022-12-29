@@ -4,10 +4,12 @@ declare(strict_types=1);
 
 namespace Geeks4change\BbndAnalyzer\Analyzer\AnalyzerResult;
 
+use Geeks4change\BbndAnalyzer\Analyzer\TestSummary\TestSummaryInterface;
+
 /**
  * Intermediary result.
  */
-final class LinkAndImageUrlList {
+final class LinkAndImageUrlList implements TestSummaryInterface {
 
   protected UrlList $linkUrlList;
 
@@ -34,6 +36,13 @@ final class LinkAndImageUrlList {
    */
   public function getImageUrlList(): UrlList {
     return $this->imageUrlList;
+  }
+
+  public function getTestSummary(): array {
+    return [
+      'linkUrlList' => $this->linkUrlList->getTestSummary(),
+      'imageUrlList' => $this->imageUrlList->getTestSummary(),
+    ];
   }
 
 }

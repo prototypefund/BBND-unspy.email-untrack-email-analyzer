@@ -9,7 +9,7 @@ use Geeks4change\BbndAnalyzer\Analyzer\TestSummary\TestSummaryInterface;
 /**
  * LinkAndImageUrlsMatcherResult, child of
  *
- * @see \Geeks4change\BbndAnalyzer\Analyzer\AnalyzerResult\AnalyzerResult
+ * @see \Geeks4change\BbndAnalyzer\Analyzer\AnalyzerResult\Report
  */
 final class LinkAndImageUrlListMatcherResult implements TestSummaryInterface {
 

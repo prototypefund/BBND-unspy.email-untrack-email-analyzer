@@ -5,17 +5,16 @@ declare(strict_types=1);
 namespace Geeks4change\BbndAnalyzer\Analyzer;
 
 use Geeks4change\BbndAnalyzer\Analyzer\AnalyzerResult\AggregatedSummary;
+use Geeks4change\BbndAnalyzer\Analyzer\AnalyzerResult\AnalyzerLogger;
 use Geeks4change\BbndAnalyzer\Analyzer\AnalyzerResult\AnalyzerResult;
+use Geeks4change\BbndAnalyzer\Analyzer\AnalyzerResult\Report;
 use Geeks4change\BbndAnalyzer\Analyzer\AnalyzerResult\LinkAndImageUrlList;
-use Geeks4change\BbndAnalyzer\Analyzer\AnalyzerResult\UrlList;
 use Geeks4change\BbndAnalyzer\Analyzer\NewsletterServicesMatcher\HeadersMatcher\AllServicesHeadersMatcher;
 use Geeks4change\BbndAnalyzer\Analyzer\NewsletterServicesMatcher\UrlsMatcher\AllServicesLinkAndImageUrlListMatcher;
 use Geeks4change\BbndAnalyzer\Globals;
 use Geeks4change\BbndAnalyzer\UrlExtractor\ImagesUrlExtractor;
 use Geeks4change\BbndAnalyzer\UrlExtractor\LinksUrlExtractor;
 use Geeks4change\BbndAnalyzer\UrlExtractor\PixelsUrlExtractor;
-use Masterminds\HTML5;
-use Symfony\Component\DomCrawler\Crawler;
 use Wa72\HtmlPageDom\HtmlPageCrawler;
 use ZBateson\MailMimeParser\MailMimeParser;
 
@@ -25,6 +24,8 @@ use ZBateson\MailMimeParser\MailMimeParser;
 class Analyzer {
 
   public function analyze(string $emailWithHeaders): AnalyzerResult {
+    $logger = new AnalyzerLogger();
+
     // Check DKIM.
     $dkimResult = (new DKIMSignatureValidator())->validateDKIMSignature($emailWithHeaders);
 
@@ -46,7 +47,6 @@ class Analyzer {
     $crawler = HtmlPageCrawler::create($html);
 
     // Extract links, images, pixels.
-    // @todo Rewrite using Goutte.
     $linkUrls = (new LinksUrlExtractor($crawler))->extract();
     $imageUrls = (new ImagesUrlExtractor($crawler))->extract();
     $allLinkAndImageUrlsList = new LinkAndImageUrlList($linkUrls, $imageUrls);
@@ -62,16 +62,13 @@ class Analyzer {
     $urlsWithRedirectList = (new RedirectDetector())->detectRedirect($allLinkAndImageUrlsList, $unsubscribeUrlList);
     $urlWithAnalyticsList = (new AnalyticsDetector())->detectAnalytics($allLinkAndImageUrlsList);
 
-    // @todo Replace with logger.
-    $mayNeedResearch = Globals::get()->getMayNeedResearch();
     // @todo Implement summary.
     $aggregated = new AggregatedSummary(NULL, '');
 
-    // Clean up.
     Globals::deleteAll();
-    return new AnalyzerResult(
+
+    $report = new Report(
       $aggregated,
-      $mayNeedResearch,
       $dkimResult,
       $headersResult,
       $allLinkAndImageUrlsList,
@@ -81,6 +78,7 @@ class Analyzer {
       $urlWithAnalyticsList,
       $domainAliasList
     );
+    return new AnalyzerResult($report, $logger->freeze());
   }
 
 }

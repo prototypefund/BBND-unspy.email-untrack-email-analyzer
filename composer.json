@@ -24,7 +24,9 @@
         "phpmailer/dkimvalidator": "0.3",
         "cweagans/composer-patches": "^1.7",
         "psr/log": "^1.1",
-        "wa72/htmlpagedom": "^2.0"
+        "wa72/htmlpagedom": "^2.0",
+        "logger/essentials": "^0.2.0",
+        "loophp/collection": "^6.0"
     },
     "require-dev": {
         "symfony/var-dumper": "^5 || ^6.2",

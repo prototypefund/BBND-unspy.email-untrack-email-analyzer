@@ -9,7 +9,7 @@ use Geeks4change\BbndAnalyzer\Analyzer\TestSummary\TestSummaryInterface;
 /**
  * HeaderSummary, child of
  *
- * @see \Geeks4change\BbndAnalyzer\Analyzer\AnalyzerResult\AnalyzerResult
+ * @see \Geeks4change\BbndAnalyzer\Analyzer\AnalyzerResult\Report
  *
  * @api Will be serialized in persistent storage, any change needs a migration.
  */

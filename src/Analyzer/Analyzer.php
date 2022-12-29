@@ -40,19 +40,19 @@ class Analyzer {
     // Extract links, images, pixels.
     $linkUrls = (new LinksUrlExtractor($dom))->extract($html);
     $imageUrls = (new ImagesUrlExtractor($dom))->extract($html);
-    $linkAndImageUrlList = new LinkAndImageUrlList($linkUrls, $imageUrls);
+    $allLinkAndImageUrlsList = new LinkAndImageUrlList($linkUrls, $imageUrls);
     $pixelsResult = (new PixelsUrlExtractor($dom))->extract($html);
 
     // Match link and image urls.
     $matcher = new AllServicesLinkAndImageUrlListMatcher();
-    $linkAndImageUrlListResult = $matcher->generateLinkAndImageUrlListResults($linkAndImageUrlList);
+    $linkAndImageUrlListResult = $matcher->generateLinkAndImageUrlListResults($allLinkAndImageUrlsList);
 
     // Fetch all resolved aliases.
     $domainAliasList = (new DomainAliasesResultFetcher())->fetch();
 
     // @fixme
-    $urlsWithRedirectList = (new RedirectDetector())->detectRedirect($linkAndImageUrlList, $unsubscribeUrlList);
-    $urlWithAnalyticsList = (new AnalyticsDetector())->detectAnalytics($linkAndImageUrlList);
+    $urlsWithRedirectList = (new RedirectDetector())->detectRedirect($allLinkAndImageUrlsList, $unsubscribeUrlList);
+    $urlWithAnalyticsList = (new AnalyticsDetector())->detectAnalytics($allLinkAndImageUrlsList);
 
     $mayNeedResearch = Globals::get()->getMayNeedResearch();
     // @todo
@@ -65,6 +65,7 @@ class Analyzer {
       $mayNeedResearch,
       $dkimResult,
       $headersResult,
+      $allLinkAndImageUrlsList,
       $linkAndImageUrlListResult,
       $pixelsResult,
       $urlsWithRedirectList,

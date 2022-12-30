@@ -42,7 +42,7 @@ abstract class PerServiceUrlMatcherBase {
     return $this->doGetRegex($this->pattern, '/');
   }
 
-  public function nowDoMatches(UriInterface $url): bool {
+  public function match(UriInterface $url): bool {
     $regex = $this->getRegex();
     foreach (UrlTool::getAllDomainAliases($url) as $aliasUrl) {
       $relevantUrl = UrlTool::relevantPart($aliasUrl);

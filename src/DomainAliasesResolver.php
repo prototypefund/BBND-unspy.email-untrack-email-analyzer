@@ -42,9 +42,14 @@ final class DomainAliasesResolver {
 
   protected function getAlias(string $domain): ?string {
     if (!array_key_exists($domain, $this->aliasMap)) {
-      $records = dns_get_record($domain, DNS_CNAME);
-      $maybeCName = $records[0]['target'] ?? NULL;
-      $this->aliasMap[$domain] = $maybeCName;
+      if (!$domain) {
+        $this->aliasMap[$domain] = NULL;
+      }
+      else {
+        $records = dns_get_record($domain, DNS_CNAME);
+        $maybeCName = $records[0]['target'] ?? NULL;
+        $this->aliasMap[$domain] = $maybeCName;
+      }
     }
     return $this->aliasMap[$domain];
   }

@@ -49,7 +49,7 @@ abstract class AllServicesUrlsMatcherBase {
     $linkPatternMatch = FALSE;
     // @fixme Move to matcher method.
     foreach ($this->getUrlPatterns($toolPattern) as $urlPattern) {
-      if ($urlPattern->nowDoMatches($url)) {
+      if ($urlPattern->match($url)) {
         $linkPatternMatch = TRUE;
       }
     }

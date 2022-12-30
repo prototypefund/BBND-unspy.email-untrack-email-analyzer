@@ -2,6 +2,7 @@
 <?php
 
 use Geeks4change\BbndAnalyzer\Analyzer\NewsletterServicesMatcher\ServiceMatcherProviderRepository;
+use GuzzleHttp\Psr7\Uri;
 
 include 'vendor/autoload.php';
 
@@ -40,7 +41,8 @@ if (!$pattern) {
 $regex = $pattern->getRegex();
 print "Pattern: $regex\n";
 if ($string) {
-  $match = $pattern->match($string);
+  $url = new Uri($string);
+  $match = $pattern->match($url);
   print "Match: ";
   print ($match ? 'Yes!' : 'nope');
   print "\n";

@@ -8,7 +8,6 @@ use Geeks4change\BbndAnalyzer\Analyzer\TestSummary\TestSummaryInterface;
 
 /**
  * HeaderMatchSummary, child of
- *
  * @see \Geeks4change\BbndAnalyzer\Analyzer\AnalyzerResult\HeadersResultPerService
  *
  * @api Will be serialized in persistent storage, any change needs a migration.
@@ -43,6 +42,7 @@ final class HeaderSingleResult implements TestSummaryInterface {
   }
 
   public function getTestSummary(): array {
+    return [];
   }
 
 }

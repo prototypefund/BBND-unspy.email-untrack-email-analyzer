@@ -38,6 +38,10 @@ final class Url implements \Stringable {
     return new Uri($this->url);
   }
 
+  public function toString(): string {
+    return $this->url;
+  }
+
   public function __toString(): string {
     return $this->url;
   }

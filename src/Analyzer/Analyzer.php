@@ -74,6 +74,7 @@ class Analyzer {
       $allLinkAndImageUrlsList,
       $linkAndImageUrlListResult,
       $pixelsResult,
+      $unsubscribeUrlList,
       $urlsWithRedirectList,
       $urlWithAnalyticsList,
       $domainAliasList

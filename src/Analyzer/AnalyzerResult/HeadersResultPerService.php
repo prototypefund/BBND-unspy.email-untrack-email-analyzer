@@ -20,7 +20,7 @@ final class HeadersResultPerService implements TestSummaryInterface {
   /**
    * @var array<\Geeks4change\BbndAnalyzer\Analyzer\AnalyzerResult\HeaderSingleResult>
    */
-  protected array $headerSinlgleResultList;
+  protected array $headerSingleResultList;
 
   /**
    * @param string $serviceName
@@ -28,11 +28,11 @@ final class HeadersResultPerService implements TestSummaryInterface {
    */
   public function __construct(string $serviceName, array $headerSingleResults) {
     $this->serviceName = $serviceName;
-    $this->headerSinlgleResultList = $headerSingleResults;
+    $this->headerSingleResultList = $headerSingleResults;
   }
 
   public function isNonEmpty(): bool {
-    return boolval(array_filter($this->headerSinlgleResultList, fn(HeaderSingleResult $hsm) => $hsm->isMatch()));
+    return boolval(array_filter($this->headerSingleResultList, fn(HeaderSingleResult $hsm) => $hsm->isMatch()));
   }
 
   /**
@@ -42,10 +42,17 @@ final class HeadersResultPerService implements TestSummaryInterface {
     return $this->serviceName;
   }
 
+  /**
+   * @return array
+   */
+  public function getHeaderSingleResultList(): array {
+    return $this->headerSingleResultList;
+  }
+
   public function getTestSummary(): array {
-    $countMatch = count(array_filter($this->headerSinlgleResultList, fn(HeaderSingleResult $hms) => $hms->isMatch()));
+    $countMatch = count(array_filter($this->headerSingleResultList, fn(HeaderSingleResult $hms) => $hms->isMatch()));
     return $countMatch ? [
-      '_countTotal' => count($this->headerSinlgleResultList),
+      '_countTotal' => count($this->headerSingleResultList),
       '_countMatch' => $countMatch,
     ] : [];
   }

@@ -9,6 +9,8 @@ use Geeks4change\BbndAnalyzer\Analyzer\TestSummary\TestSummaryInterface;
 /**
  * Result of links / images per service, child of
  *
+ * @implements \IteratorAggregate<string, \Geeks4change\BbndAnalyzer\Analyzer\AnalyzerResult\UrlListPerServiceMatches>
+ *
  * @see \Geeks4change\BbndAnalyzer\Analyzer\AnalyzerResult\UrlListMatchersResult
  */
 final class UrlListPerServiceMatchesList implements \IteratorAggregate, TestSummaryInterface {

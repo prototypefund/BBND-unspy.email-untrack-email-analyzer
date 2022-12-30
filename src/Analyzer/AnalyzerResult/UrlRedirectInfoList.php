@@ -7,7 +7,7 @@ namespace Geeks4change\BbndAnalyzer\Analyzer\AnalyzerResult;
 use Geeks4change\BbndAnalyzer\Analyzer\TestSummary\TestSummaryInterface;
 
 /**
- * @implements \IteratorAggregate<int, \Geeks4change\BbndAnalyzer\Analyzer\AnalyzerResult\DomainAliases>
+ * @implements \IteratorAggregate<int, \Geeks4change\BbndAnalyzer\Analyzer\AnalyzerResult\UrlRedirectInfo>
  *
  * @api Will be serialized in persistent storage, any change needs a migration.
  */

@@ -21,7 +21,6 @@
         "ext-dom": "*",
         "cweagans/composer-patches": "^1.7",
         "guzzlehttp/psr7": "^2.4",
-        "logger/essentials": "^0.2.0",
         "loophp/collection": "^6.0",
         "masterminds/html5": "^2.7",
         "phpmailer/dkimvalidator": "0.3",

@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Geeks4change\BbndAnalyzer\Utility;
+namespace Geeks4change\UntrackEmailAnalyzer\Utility;
 
-use Geeks4change\BbndAnalyzer\Globals;
+use Geeks4change\UntrackEmailAnalyzer\Globals;
 use Psr\Http\Message\UriInterface;
 
 class UrlTool {

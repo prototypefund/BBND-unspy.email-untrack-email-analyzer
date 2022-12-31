@@ -31,10 +31,10 @@ Stack trace:
 #18 /home/merlin/Code-Incubator/bbnd/bbnd_analyzer/vendor/guzzlehttp/promises/src/Promise.php(62): GuzzleHttp\Promise\Promise->waitIfPending()
 #19 /home/merlin/Code-Incubator/bbnd/bbnd_analyzer/vendor/guzzlehttp/guzzle/src/Client.php(182): GuzzleHttp\Promise\Promise->wait()
 #20 /home/merlin/Code-Incubator/bbnd/bbnd_analyzer/src/RedirectResolver.php(28): GuzzleHttp\Client->request()
-#21 /home/merlin/Code-Incubator/bbnd/bbnd_analyzer/src/Analyzer/RedirectDetector.php(28): Geeks4change\BbndAnalyzer\RedirectResolver->resolveRedirect()
-#22 /home/merlin/Code-Incubator/bbnd/bbnd_analyzer/src/Analyzer/RedirectDetector.php(17): Geeks4change\BbndAnalyzer\Analyzer\RedirectDetector->doDetectRedirect()
-#23 /home/merlin/Code-Incubator/bbnd/bbnd_analyzer/src/Analyzer/Analyzer.php(54): Geeks4change\BbndAnalyzer\Analyzer\RedirectDetector->detectRedirect()
-#24 /home/merlin/Code-Incubator/bbnd/bbnd_analyzer/debug/testSummary(23): Geeks4change\BbndAnalyzer\Analyzer\Analyzer->analyze()
+#21 /home/merlin/Code-Incubator/bbnd/bbnd_analyzer/src/Analyzer/RedirectDetector.php(28): Geeks4change\UntrackEmailAnalyzer\RedirectResolver->resolveRedirect()
+#22 /home/merlin/Code-Incubator/bbnd/bbnd_analyzer/src/Analyzer/RedirectDetector.php(17): Geeks4change\UntrackEmailAnalyzer\Analyzer\RedirectDetector->doDetectRedirect()
+#23 /home/merlin/Code-Incubator/bbnd/bbnd_analyzer/src/Analyzer/Analyzer.php(54): Geeks4change\UntrackEmailAnalyzer\Analyzer\RedirectDetector->detectRedirect()
+#24 /home/merlin/Code-Incubator/bbnd/bbnd_analyzer/debug/testSummary(23): Geeks4change\UntrackEmailAnalyzer\Analyzer\Analyzer->analyze()
 #25 {main}
 thrown in /home/merlin/Code-Incubator/bbnd/bbnd_analyzer/vendor/guzzlehttp/psr7/src/Response.php on line 152
 

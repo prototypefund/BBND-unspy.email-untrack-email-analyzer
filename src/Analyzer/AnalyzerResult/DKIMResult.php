@@ -1,11 +1,11 @@
 <?php
 
 declare(strict_types=1);
-namespace Geeks4change\BbndAnalyzer\Analyzer\AnalyzerResult;
+namespace Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult;
 
 /**
  * DKIMSummary, child of
- * @see \Geeks4change\BbndAnalyzer\Analyzer\AnalyzerResult\Report
+ * @see \Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\Report
  *
  * @api Will be serialized in persistent storage, any change needs a migration.
  */

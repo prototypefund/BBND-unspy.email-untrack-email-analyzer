@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Geeks4change\BbndAnalyzer\UrlExtractor;
+namespace Geeks4change\UntrackEmailAnalyzer\UrlExtractor;
 
 final class ImagesUrlExtractor extends UrlExtractorBase {
 

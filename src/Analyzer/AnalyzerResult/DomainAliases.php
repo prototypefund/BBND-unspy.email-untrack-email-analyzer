@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Geeks4change\BbndAnalyzer\Analyzer\AnalyzerResult;
+namespace Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult;
 
 /**
  * @api Will be serialized in persistent storage, any change needs a migration.

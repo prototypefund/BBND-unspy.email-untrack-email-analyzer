@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Geeks4change\BbndAnalyzer\Analyzer\AnalyzerResult;
+namespace Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult;
 
-use Geeks4change\BbndAnalyzer\Analyzer\TestSummary\TestSummaryInterface;
+use Geeks4change\UntrackEmailAnalyzer\Analyzer\TestSummary\TestSummaryInterface;
 
 final class LinkAndImageRedirectInfoList  implements TestSummaryInterface {
 
@@ -13,8 +13,8 @@ final class LinkAndImageRedirectInfoList  implements TestSummaryInterface {
   protected UrlRedirectInfoList $imageRedirectInfoList;
 
   /**
-   * @param \Geeks4change\BbndAnalyzer\Analyzer\AnalyzerResult\UrlRedirectInfoList $linkRedirectInfoList
-   * @param \Geeks4change\BbndAnalyzer\Analyzer\AnalyzerResult\UrlRedirectInfoList $imageRedirectInfoList
+   * @param \Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\UrlRedirectInfoList $linkRedirectInfoList
+   * @param \Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\UrlRedirectInfoList $imageRedirectInfoList
    */
   public function __construct(UrlRedirectInfoList $linkRedirectInfoList, UrlRedirectInfoList $imageRedirectInfoList) {
     $this->linkRedirectInfoList = $linkRedirectInfoList;
@@ -22,14 +22,14 @@ final class LinkAndImageRedirectInfoList  implements TestSummaryInterface {
   }
 
   /**
-   * @return \Geeks4change\BbndAnalyzer\Analyzer\AnalyzerResult\UrlRedirectInfoList
+   * @return \Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\UrlRedirectInfoList
    */
   public function getLinkRedirectInfoList(): UrlRedirectInfoList {
     return $this->linkRedirectInfoList;
   }
 
   /**
-   * @return \Geeks4change\BbndAnalyzer\Analyzer\AnalyzerResult\UrlRedirectInfoList
+   * @return \Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\UrlRedirectInfoList
    */
   public function getImageRedirectInfoList(): UrlRedirectInfoList {
     return $this->imageRedirectInfoList;

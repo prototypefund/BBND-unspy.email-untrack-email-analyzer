@@ -2,18 +2,18 @@
 
 declare(strict_types=1);
 
-namespace Geeks4change\BbndAnalyzer\Analyzer\AnalyzerResult;
+namespace Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult;
 
-use Geeks4change\BbndAnalyzer\Analyzer\TestSummary\TestSummaryInterface;
+use Geeks4change\UntrackEmailAnalyzer\Analyzer\TestSummary\TestSummaryInterface;
 
 /**
  * Url list summary, child of
  *
- * @see \Geeks4change\BbndAnalyzer\Analyzer\AnalyzerResult\Report
- * @see \Geeks4change\BbndAnalyzer\Analyzer\AnalyzerResult\UrlListMatchersResult
- * @see \Geeks4change\BbndAnalyzer\Analyzer\AnalyzerResult\UrlListPerServiceMatches
+ * @see \Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\Report
+ * @see \Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\UrlListMatchersResult
+ * @see \Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\UrlListPerServiceMatches
  *
- * @implements \IteratorAggregate<int, \Geeks4change\BbndAnalyzer\Analyzer\AnalyzerResult\Url>
+ * @implements \IteratorAggregate<int, \Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\Url>
  *
  * @api Will be serialized in persistent storage, any change needs a migration.
  * @internal
@@ -21,7 +21,7 @@ use Geeks4change\BbndAnalyzer\Analyzer\TestSummary\TestSummaryInterface;
 final class UrlList implements \IteratorAggregate, TestSummaryInterface {
 
   /**
-   * @var array<\Geeks4change\BbndAnalyzer\Analyzer\AnalyzerResult\Url>
+   * @var array<\Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\Url>
    */
   protected array $urls = [];
 

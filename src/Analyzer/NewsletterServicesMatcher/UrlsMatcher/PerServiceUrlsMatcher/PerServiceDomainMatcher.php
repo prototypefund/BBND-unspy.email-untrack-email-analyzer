@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Geeks4change\BbndAnalyzer\Analyzer\NewsletterServicesMatcher\UrlsMatcher\PerServiceUrlsMatcher;
+namespace Geeks4change\UntrackEmailAnalyzer\Analyzer\NewsletterServicesMatcher\UrlsMatcher\PerServiceUrlsMatcher;
 
-use Geeks4change\BbndAnalyzer\Utility\UrlTool;
+use Geeks4change\UntrackEmailAnalyzer\Utility\UrlTool;
 use Psr\Http\Message\UriInterface;
 
 final class PerServiceDomainMatcher {

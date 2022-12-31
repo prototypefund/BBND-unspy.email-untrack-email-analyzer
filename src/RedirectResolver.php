@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Geeks4change\BbndAnalyzer;
+namespace Geeks4change\UntrackEmailAnalyzer;
 
-use Geeks4change\BbndAnalyzer\Analyzer\AnalyzerResult\UrlRedirectInfo;
+use Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\UrlRedirectInfo;
 use GuzzleHttp\Client;
 use GuzzleHttp\HandlerStack;
 use GuzzleHttp\Middleware;
@@ -22,11 +22,12 @@ final class RedirectResolver {
     // Note that stream_context_create and passing the context has different
     // result, as it breaks default crypto context.
     stream_context_set_default(
-      array(
-        'http' => array(
-          'method' => 'HEAD'
-        )
-      )
+      [
+        'http' => [
+          'method' => 'HEAD',
+          'timeout' => 3,
+        ]
+      ]
     );
     $redirectUrls = [];
     $currentUrl = $url;

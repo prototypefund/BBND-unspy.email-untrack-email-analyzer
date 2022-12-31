@@ -1,6 +1,6 @@
 <?php
 
-namespace Geeks4change\BbndAnalyzer\Analyzer\TestSummary;
+namespace Geeks4change\UntrackEmailAnalyzer\Analyzer\TestSummary;
 
 trait TestSummaryTrait {
 

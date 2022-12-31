@@ -2,17 +2,17 @@
 
 declare(strict_types=1);
 
-namespace Geeks4change\BbndAnalyzer\Analyzer\AnalyzerResult;
+namespace Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult;
 
 /**
- * @implements \IteratorAggregate<int, \Geeks4change\BbndAnalyzer\Analyzer\AnalyzerResult\DomainAliases>
+ * @implements \IteratorAggregate<int, \Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\DomainAliases>
  *
  * @api Will be serialized in persistent storage, any change needs a migration.
  */
 final class DomainAliasesList implements \IteratorAggregate {
 
   /**
-   * @var array<\Geeks4change\BbndAnalyzer\Analyzer\AnalyzerResult\DomainAliases>
+   * @var array<\Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\DomainAliases>
    */
   protected array $domainAliasesList = [];
 

@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Geeks4change\BbndAnalyzer\Analyzer\NewsletterServicesMatcher;
+namespace Geeks4change\UntrackEmailAnalyzer\Analyzer\NewsletterServicesMatcher;
 
-use Geeks4change\BbndAnalyzer\DirInfo;
+use Geeks4change\UntrackEmailAnalyzer\DirInfo;
 use Symfony\Component\Yaml\Exception\ParseException;
 use Symfony\Component\Yaml\Yaml;
 

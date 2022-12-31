@@ -1,7 +1,7 @@
 #!/usr/bin/env php
 <?php
 
-use Geeks4change\BbndAnalyzer\Analyzer\Analyzer;
+use Geeks4change\UntrackEmailAnalyzer\Analyzer\Analyzer;
 use Symfony\Component\Yaml\Yaml;
 
 include 'vendor/autoload.php';

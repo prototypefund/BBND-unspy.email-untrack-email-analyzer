@@ -2,22 +2,23 @@
 
 declare(strict_types=1);
 
-namespace Geeks4change\BbndAnalyzer\Analyzer\AnalyzerResult;
+namespace Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult;
 
-use Geeks4change\BbndAnalyzer\Analyzer\TestSummary\TestSummaryInterface;
+use Geeks4change\UntrackEmailAnalyzer\Analyzer\TestSummary\TestSummaryInterface;
 
 /**
  * HeaderSummary, child of
- * @see \Geeks4change\BbndAnalyzer\Analyzer\AnalyzerResult\Report
  *
- * @implements \IteratorAggregate<int, \Geeks4change\BbndAnalyzer\Analyzer\AnalyzerResult\HeadersResultPerService>
+ * @see \Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\Report
+ *
+ * @implements \IteratorAggregate<int, \Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\HeadersResultPerService>
  *
  * @api Will be serialized in persistent storage, any change needs a migration.
  */
 final class HeadersResult implements \IteratorAggregate, TestSummaryInterface {
 
   /**
-   * @var array<\Geeks4change\BbndAnalyzer\Analyzer\AnalyzerResult\HeadersResultPerService>
+   * @var array<\Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\HeadersResultPerService>
    */
   protected array $headersMatchResultPerServiceList = [];
 

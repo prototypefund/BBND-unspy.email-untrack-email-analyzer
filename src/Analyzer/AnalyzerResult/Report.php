@@ -1,10 +1,10 @@
 <?php
 
 declare(strict_types=1);
-namespace Geeks4change\BbndAnalyzer\Analyzer\AnalyzerResult;
+namespace Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult;
 
-use Geeks4change\BbndAnalyzer\Analyzer\TestSummary\TestSummaryInterface;
-use Geeks4change\BbndAnalyzer\Utility\PrintCollector;
+use Geeks4change\UntrackEmailAnalyzer\Analyzer\TestSummary\TestSummaryInterface;
+use Geeks4change\UntrackEmailAnalyzer\Utility\PrintCollector;
 
 /**
  * Analysis summary.
@@ -73,16 +73,16 @@ final class Report implements TestSummaryInterface {
   protected DomainAliasesList $domainAliasesList;
 
   /**
-   * @param \Geeks4change\BbndAnalyzer\Analyzer\AnalyzerResult\AggregatedSummary $aggregated
-   * @param \Geeks4change\BbndAnalyzer\Analyzer\AnalyzerResult\DKIMResult $dkimResult
-   * @param \Geeks4change\BbndAnalyzer\Analyzer\AnalyzerResult\HeadersResult $headersResult
-   * @param \Geeks4change\BbndAnalyzer\Analyzer\AnalyzerResult\LinkAndImageUrlList $allLinkAndImageUrlsList
-   * @param \Geeks4change\BbndAnalyzer\Analyzer\AnalyzerResult\LinkAndImageUrlListMatcherResult $linkAndImageUrlsMatcherResult
-   * @param \Geeks4change\BbndAnalyzer\Analyzer\AnalyzerResult\UrlList $pixelsList
-   * @param \Geeks4change\BbndAnalyzer\Analyzer\AnalyzerResult\UrlList $unsubscribeUrlList
-   * @param \Geeks4change\BbndAnalyzer\Analyzer\AnalyzerResult\LinkAndImageRedirectInfoList $urlsRedirectInfoList
-   * @param \Geeks4change\BbndAnalyzer\Analyzer\AnalyzerResult\LinkAndImageUrlList $urlsWithAnalyticsList
-   * @param \Geeks4change\BbndAnalyzer\Analyzer\AnalyzerResult\DomainAliasesList $domainAliasesList
+   * @param \Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\AggregatedSummary $aggregated
+   * @param \Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\DKIMResult $dkimResult
+   * @param \Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\HeadersResult $headersResult
+   * @param \Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\LinkAndImageUrlList $allLinkAndImageUrlsList
+   * @param \Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\LinkAndImageUrlListMatcherResult $linkAndImageUrlsMatcherResult
+   * @param \Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\UrlList $pixelsList
+   * @param \Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\UrlList $unsubscribeUrlList
+   * @param \Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\LinkAndImageRedirectInfoList $urlsRedirectInfoList
+   * @param \Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\LinkAndImageUrlList $urlsWithAnalyticsList
+   * @param \Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\DomainAliasesList $domainAliasesList
    */
   public function __construct(AggregatedSummary $aggregated, DKIMResult $dkimResult, HeadersResult $headersResult, LinkAndImageUrlList $allLinkAndImageUrlsList, LinkAndImageUrlListMatcherResult $linkAndImageUrlsMatcherResult, UrlList $pixelsList, UrlList $unsubscribeUrlList, LinkAndImageRedirectInfoList $urlsRedirectInfoList, LinkAndImageUrlList $urlsWithAnalyticsList, DomainAliasesList $domainAliasesList) {
     $this->aggregated = $aggregated;
@@ -98,70 +98,70 @@ final class Report implements TestSummaryInterface {
   }
 
   /**
-   * @return \Geeks4change\BbndAnalyzer\Analyzer\AnalyzerResult\AggregatedSummary
+   * @return \Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\AggregatedSummary
    */
   public function getAggregated(): AggregatedSummary {
     return $this->aggregated;
   }
 
   /**
-   * @return \Geeks4change\BbndAnalyzer\Analyzer\AnalyzerResult\DKIMResult
+   * @return \Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\DKIMResult
    */
   public function getDkimResult(): DKIMResult {
     return $this->dkimResult;
   }
 
   /**
-   * @return \Geeks4change\BbndAnalyzer\Analyzer\AnalyzerResult\HeadersResult
+   * @return \Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\HeadersResult
    */
   public function getHeadersResult(): HeadersResult {
     return $this->headersResult;
   }
 
   /**
-   * @return \Geeks4change\BbndAnalyzer\Analyzer\AnalyzerResult\LinkAndImageUrlList
+   * @return \Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\LinkAndImageUrlList
    */
   public function getAllLinkAndImageUrlsList(): LinkAndImageUrlList {
     return $this->allLinkAndImageUrlsList;
   }
 
   /**
-   * @return \Geeks4change\BbndAnalyzer\Analyzer\AnalyzerResult\LinkAndImageUrlListMatcherResult
+   * @return \Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\LinkAndImageUrlListMatcherResult
    */
   public function getLinkAndImageUrlsMatcherResult(): LinkAndImageUrlListMatcherResult {
     return $this->linkAndImageUrlsMatcherResult;
   }
 
   /**
-   * @return \Geeks4change\BbndAnalyzer\Analyzer\AnalyzerResult\UrlList
+   * @return \Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\UrlList
    */
   public function getPixelsList(): UrlList {
     return $this->pixelsList;
   }
 
   /**
-   * @return \Geeks4change\BbndAnalyzer\Analyzer\AnalyzerResult\UrlList
+   * @return \Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\UrlList
    */
   public function getUnsubscribeUrlList(): UrlList {
     return $this->unsubscribeUrlList;
   }
 
   /**
-   * @return \Geeks4change\BbndAnalyzer\Analyzer\AnalyzerResult\LinkAndImageRedirectInfoList
+   * @return \Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\LinkAndImageRedirectInfoList
    */
   public function getUrlsRedirectInfoList(): LinkAndImageRedirectInfoList {
     return $this->urlsRedirectInfoList;
   }
 
   /**
-   * @return \Geeks4change\BbndAnalyzer\Analyzer\AnalyzerResult\LinkAndImageUrlList
+   * @return \Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\LinkAndImageUrlList
    */
   public function getUrlsWithAnalyticsList(): LinkAndImageUrlList {
     return $this->urlsWithAnalyticsList;
   }
 
   /**
-   * @return \Geeks4change\BbndAnalyzer\Analyzer\AnalyzerResult\DomainAliasesList
+   * @return \Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\DomainAliasesList
    */
   public function getDomainAliasesList(): DomainAliasesList {
     return $this->domainAliasesList;
@@ -288,6 +288,7 @@ final class Report implements TestSummaryInterface {
                  ->getImageRedirectInfoList(),
              ] as $urlRedirectionInfoType => $urlRedirectionInfoList) {
       assert($urlRedirectionInfoList instanceof UrlRedirectInfoList);
+      $p->add("## $urlRedirectionInfoType with redirection");
       foreach ($urlRedirectionInfoList as $urlRedirectionInfo) {
         $p->add("- " . implode(' => ', $urlRedirectionInfo->getOriginalUrlAndRedirectUrls()));
       }
@@ -303,6 +304,7 @@ final class Report implements TestSummaryInterface {
                  ->getImageUrlList(),
              ] as $analyticsType => $analyticsUrlList) {
       assert($analyticsUrlList instanceof UrlList);
+      $p->add("## $analyticsType with analytics");
       foreach ($analyticsUrlList as $analyticsUrl) {
         $p->add("- {$analyticsUrl->toString()}");
       }

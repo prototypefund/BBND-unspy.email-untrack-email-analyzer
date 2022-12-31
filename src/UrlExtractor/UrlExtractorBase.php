@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace Geeks4change\BbndAnalyzer\UrlExtractor;
+namespace Geeks4change\UntrackEmailAnalyzer\UrlExtractor;
 
-use Geeks4change\BbndAnalyzer\Analyzer\AnalyzerResult\UrlList;
-use Geeks4change\BbndAnalyzer\Utility\UrlTool;
+use Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\UrlList;
+use Geeks4change\UntrackEmailAnalyzer\Utility\UrlTool;
 use GuzzleHttp\Psr7\Uri;
 use Wa72\HtmlPageDom\HtmlPageCrawler;
 

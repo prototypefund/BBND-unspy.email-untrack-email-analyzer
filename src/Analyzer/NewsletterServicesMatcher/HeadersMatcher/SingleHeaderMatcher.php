@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Geeks4change\BbndAnalyzer\Analyzer\NewsletterServicesMatcher\HeadersMatcher;
-use Geeks4change\BbndAnalyzer\Analyzer\NewsletterServicesMatcher\UrlsMatcher\PerServiceUrlsMatcher\RegexTrait;
-use Geeks4change\BbndAnalyzer\Globals;
+namespace Geeks4change\UntrackEmailAnalyzer\Analyzer\NewsletterServicesMatcher\HeadersMatcher;
+use Geeks4change\UntrackEmailAnalyzer\Analyzer\NewsletterServicesMatcher\UrlsMatcher\PerServiceUrlsMatcher\RegexTrait;
+use Geeks4change\UntrackEmailAnalyzer\Globals;
 use ZBateson\MailMimeParser\Message;
 
 class SingleHeaderMatcher {

@@ -2,21 +2,21 @@
 
 declare(strict_types=1);
 
-namespace Geeks4change\BbndAnalyzer\Analyzer\AnalyzerResult;
+namespace Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult;
 
-use Geeks4change\BbndAnalyzer\Analyzer\TestSummary\TestSummaryInterface;
+use Geeks4change\UntrackEmailAnalyzer\Analyzer\TestSummary\TestSummaryInterface;
 
 /**
  * Result of links / images per service, child of
  *
- * @implements \IteratorAggregate<string, \Geeks4change\BbndAnalyzer\Analyzer\AnalyzerResult\UrlListPerServiceMatches>
+ * @implements \IteratorAggregate<string, \Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\UrlListPerServiceMatches>
  *
- * @see \Geeks4change\BbndAnalyzer\Analyzer\AnalyzerResult\UrlListMatchersResult
+ * @see \Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\UrlListMatchersResult
  */
 final class UrlListPerServiceMatchesList implements \IteratorAggregate, TestSummaryInterface {
 
   /**
-   * @var array<\Geeks4change\BbndAnalyzer\Analyzer\AnalyzerResult\UrlListPerServiceMatches>
+   * @var array<\Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\UrlListPerServiceMatches>
    */
   protected array $perService = [];
 

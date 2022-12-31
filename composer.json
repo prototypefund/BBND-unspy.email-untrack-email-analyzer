@@ -1,13 +1,13 @@
 {
-    "name": "geeks4change/bbnd_analyzer",
+    "name": "geeks4change/untrack-email-analyzer",
     "autoload": {
         "psr-4": {
-            "Geeks4change\\BbndAnalyzer\\": "src/"
+            "Geeks4change\\UntrackEmailAnalyzer\\": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Geeks4change\\tests\\BbndAnalyzer\\": "tests/src/"
+            "Geeks4change\\tests\\UntrackEmailAnalyzer\\": "tests/src/"
         }
     },
     "authors": [

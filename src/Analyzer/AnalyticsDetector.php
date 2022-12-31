@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace Geeks4change\BbndAnalyzer\Analyzer;
+namespace Geeks4change\UntrackEmailAnalyzer\Analyzer;
 
-use Geeks4change\BbndAnalyzer\Analyzer\AnalyzerResult\LinkAndImageUrlList;
-use Geeks4change\BbndAnalyzer\Analyzer\AnalyzerResult\UrlList;
+use Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\LinkAndImageUrlList;
+use Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\UrlList;
 use GuzzleHttp\Psr7\Query;
 
 /**

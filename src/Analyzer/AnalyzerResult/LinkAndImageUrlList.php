@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Geeks4change\BbndAnalyzer\Analyzer\AnalyzerResult;
+namespace Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult;
 
-use Geeks4change\BbndAnalyzer\Analyzer\TestSummary\TestSummaryInterface;
+use Geeks4change\UntrackEmailAnalyzer\Analyzer\TestSummary\TestSummaryInterface;
 
 /**
  * Intermediary result.
@@ -16,8 +16,8 @@ final class LinkAndImageUrlList implements TestSummaryInterface {
   protected UrlList $imageUrlList;
 
   /**
-   * @param \Geeks4change\BbndAnalyzer\Analyzer\AnalyzerResult\UrlList $linkUrlList
-   * @param \Geeks4change\BbndAnalyzer\Analyzer\AnalyzerResult\UrlList $imageUrlList
+   * @param \Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\UrlList $linkUrlList
+   * @param \Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\UrlList $imageUrlList
    */
   public function __construct(UrlList $linkUrlList, UrlList $imageUrlList) {
     $this->linkUrlList = $linkUrlList;
@@ -25,14 +25,14 @@ final class LinkAndImageUrlList implements TestSummaryInterface {
   }
 
   /**
-   * @return \Geeks4change\BbndAnalyzer\Analyzer\AnalyzerResult\UrlList
+   * @return \Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\UrlList
    */
   public function getLinkUrlList(): UrlList {
     return $this->linkUrlList;
   }
 
   /**
-   * @return \Geeks4change\BbndAnalyzer\Analyzer\AnalyzerResult\UrlList
+   * @return \Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\UrlList
    */
   public function getImageUrlList(): UrlList {
     return $this->imageUrlList;

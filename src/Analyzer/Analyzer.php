@@ -2,19 +2,19 @@
 
 declare(strict_types=1);
 
-namespace Geeks4change\BbndAnalyzer\Analyzer;
+namespace Geeks4change\UntrackEmailAnalyzer\Analyzer;
 
-use Geeks4change\BbndAnalyzer\Analyzer\AnalyzerResult\AggregatedSummary;
-use Geeks4change\BbndAnalyzer\Analyzer\AnalyzerResult\AnalyzerLogger;
-use Geeks4change\BbndAnalyzer\Analyzer\AnalyzerResult\AnalyzerResult;
-use Geeks4change\BbndAnalyzer\Analyzer\AnalyzerResult\Report;
-use Geeks4change\BbndAnalyzer\Analyzer\AnalyzerResult\LinkAndImageUrlList;
-use Geeks4change\BbndAnalyzer\Analyzer\NewsletterServicesMatcher\HeadersMatcher\AllServicesHeadersMatcher;
-use Geeks4change\BbndAnalyzer\Analyzer\NewsletterServicesMatcher\UrlsMatcher\AllServicesLinkAndImageUrlListMatcher;
-use Geeks4change\BbndAnalyzer\Globals;
-use Geeks4change\BbndAnalyzer\UrlExtractor\ImagesUrlExtractor;
-use Geeks4change\BbndAnalyzer\UrlExtractor\LinksUrlExtractor;
-use Geeks4change\BbndAnalyzer\UrlExtractor\PixelsUrlExtractor;
+use Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\AggregatedSummary;
+use Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\AnalyzerLogger;
+use Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\AnalyzerResult;
+use Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\LinkAndImageUrlList;
+use Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\Report;
+use Geeks4change\UntrackEmailAnalyzer\Analyzer\NewsletterServicesMatcher\HeadersMatcher\AllServicesHeadersMatcher;
+use Geeks4change\UntrackEmailAnalyzer\Analyzer\NewsletterServicesMatcher\UrlsMatcher\AllServicesLinkAndImageUrlListMatcher;
+use Geeks4change\UntrackEmailAnalyzer\Globals;
+use Geeks4change\UntrackEmailAnalyzer\UrlExtractor\ImagesUrlExtractor;
+use Geeks4change\UntrackEmailAnalyzer\UrlExtractor\LinksUrlExtractor;
+use Geeks4change\UntrackEmailAnalyzer\UrlExtractor\PixelsUrlExtractor;
 use Wa72\HtmlPageDom\HtmlPageCrawler;
 use ZBateson\MailMimeParser\MailMimeParser;
 
@@ -23,15 +23,15 @@ use ZBateson\MailMimeParser\MailMimeParser;
  */
 class Analyzer {
 
-  public function analyze(string $emailWithHeaders): AnalyzerResult {
+  public function analyze(string $rawMessage): AnalyzerResult {
     $logger = new AnalyzerLogger();
 
     // Check DKIM.
-    $dkimResult = (new DKIMSignatureValidator())->validateDKIMSignature($emailWithHeaders);
+    $dkimResult = (new DKIMSignatureValidator())->validateDKIMSignature($rawMessage);
 
     // Parse and find patterns.
     $mailParser = new MailMimeParser();
-    $message = $mailParser->parse($emailWithHeaders, FALSE);
+    $message = $mailParser->parse($rawMessage, FALSE);
     // @todo Consider reporting unusual Mime parts, like more than one text/html part.
 
     // Analyze headers.

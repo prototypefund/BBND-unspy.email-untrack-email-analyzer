@@ -1,11 +1,10 @@
 <?php
 
-namespace Geeks4change\tests\BbndAnalyzer;
+namespace Geeks4change\tests\UntrackEmailAnalyzer;
 
-use Geeks4change\BbndAnalyzer\Analyzer\Analyzer;
-use Geeks4change\BbndAnalyzer\Analyzer\TestSummary\TestSummaryTrait;
-use Geeks4change\BbndAnalyzer\DebugAnalysisBuilder;
-use Geeks4change\BbndAnalyzer\Utility\ThrowMethodTrait;
+use Geeks4change\UntrackEmailAnalyzer\Analyzer\Analyzer;
+use Geeks4change\UntrackEmailAnalyzer\Analyzer\TestSummary\TestSummaryTrait;
+use Geeks4change\UntrackEmailAnalyzer\Utility\ThrowMethodTrait;
 use PHPUnit\Framework\TestCase;
 use Symfony\Component\Yaml\Yaml;
 

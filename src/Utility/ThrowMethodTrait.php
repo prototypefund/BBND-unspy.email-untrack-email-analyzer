@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Geeks4change\BbndAnalyzer\Utility;
+namespace Geeks4change\UntrackEmailAnalyzer\Utility;
 
 /**
  * Provides a throw method, obsolete in PHP8 by throw as expression.

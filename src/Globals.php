@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace Geeks4change\BbndAnalyzer;
+namespace Geeks4change\UntrackEmailAnalyzer;
 
 use Geeks4change\BbndAnalyzer\Analyzer\AnalyzerResult\MayNeedResearch;
-use Geeks4change\BbndAnalyzer\Analyzer\NewsletterServicesMatcher\ServiceMatcherProviderRepository;
+use Geeks4change\UntrackEmailAnalyzer\Analyzer\NewsletterServicesMatcher\ServiceMatcherProviderRepository;
 
 final class Globals {
 

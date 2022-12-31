@@ -2,13 +2,13 @@
 
 declare(strict_types=1);
 
-namespace Geeks4change\BbndAnalyzer\Analyzer\NewsletterServicesMatcher;
+namespace Geeks4change\UntrackEmailAnalyzer\Analyzer\NewsletterServicesMatcher;
 
-use Geeks4change\BbndAnalyzer\Analyzer\NewsletterServicesMatcher\HeadersMatcher\SingleHeaderMatcher;
-use Geeks4change\BbndAnalyzer\Analyzer\NewsletterServicesMatcher\UrlsMatcher\PerServiceUrlsMatcher\PerServiceDomainMatcher;
-use Geeks4change\BbndAnalyzer\Analyzer\NewsletterServicesMatcher\UrlsMatcher\PerServiceUrlsMatcher\PerServiceImageUrlMatcher;
-use Geeks4change\BbndAnalyzer\Analyzer\NewsletterServicesMatcher\UrlsMatcher\PerServiceUrlsMatcher\PerServiceLinkUrlMatcher;
-use Geeks4change\BbndAnalyzer\Utility\ArrayTool;
+use Geeks4change\UntrackEmailAnalyzer\Analyzer\NewsletterServicesMatcher\HeadersMatcher\SingleHeaderMatcher;
+use Geeks4change\UntrackEmailAnalyzer\Analyzer\NewsletterServicesMatcher\UrlsMatcher\PerServiceUrlsMatcher\PerServiceDomainMatcher;
+use Geeks4change\UntrackEmailAnalyzer\Analyzer\NewsletterServicesMatcher\UrlsMatcher\PerServiceUrlsMatcher\PerServiceImageUrlMatcher;
+use Geeks4change\UntrackEmailAnalyzer\Analyzer\NewsletterServicesMatcher\UrlsMatcher\PerServiceUrlsMatcher\PerServiceLinkUrlMatcher;
+use Geeks4change\UntrackEmailAnalyzer\Utility\ArrayTool;
 
 final class ServiceMatcherProvider {
 
@@ -17,32 +17,32 @@ final class ServiceMatcherProvider {
   protected ?string $disconnectId;
 
   /**
-   * @var array<\Geeks4change\BbndAnalyzer\Analyzer\NewsletterServicesMatcher\UrlsMatcher\PerServiceUrlsMatcher\PerServiceDomainMatcher>
+   * @var array<\Geeks4change\UntrackEmailAnalyzer\Analyzer\NewsletterServicesMatcher\UrlsMatcher\PerServiceUrlsMatcher\PerServiceDomainMatcher>
    */
   protected array $domainMatchers;
 
   /**
-   * @var array<\Geeks4change\BbndAnalyzer\Analyzer\NewsletterServicesMatcher\UrlsMatcher\PerServiceUrlsMatcher\PerServiceLinkUrlMatcher>
+   * @var array<\Geeks4change\UntrackEmailAnalyzer\Analyzer\NewsletterServicesMatcher\UrlsMatcher\PerServiceUrlsMatcher\PerServiceLinkUrlMatcher>
    */
   protected array $linkUrlMatchers;
 
   /**
-   * @var array<\Geeks4change\BbndAnalyzer\Analyzer\NewsletterServicesMatcher\UrlsMatcher\PerServiceUrlsMatcher\PerServiceImageUrlMatcher>
+   * @var array<\Geeks4change\UntrackEmailAnalyzer\Analyzer\NewsletterServicesMatcher\UrlsMatcher\PerServiceUrlsMatcher\PerServiceImageUrlMatcher>
    */
   protected array $imageUrlMatchers;
 
   /**
-   * @var array<\Geeks4change\BbndAnalyzer\Analyzer\NewsletterServicesMatcher\HeadersMatcher\SingleHeaderMatcher>
+   * @var array<\Geeks4change\UntrackEmailAnalyzer\Analyzer\NewsletterServicesMatcher\HeadersMatcher\SingleHeaderMatcher>
    */
   protected array $headerMatchers;
 
   /**
    * @param string $id
    * @param string|null $disconnectId
-   * @param \Geeks4change\BbndAnalyzer\Analyzer\NewsletterServicesMatcher\UrlsMatcher\PerServiceUrlsMatcher\PerServiceDomainMatcher[] $domainMatchers
-   * @param \Geeks4change\BbndAnalyzer\Analyzer\NewsletterServicesMatcher\UrlsMatcher\PerServiceUrlsMatcher\PerServiceLinkUrlMatcher[] $linkUrlMatchers
-   * @param \Geeks4change\BbndAnalyzer\Analyzer\NewsletterServicesMatcher\UrlsMatcher\PerServiceUrlsMatcher\PerServiceImageUrlMatcher[] $imageUrlMatchers
-   * @param \Geeks4change\BbndAnalyzer\Analyzer\NewsletterServicesMatcher\HeadersMatcher\SingleHeaderMatcher[] $headerMatchers
+   * @param \Geeks4change\UntrackEmailAnalyzer\Analyzer\NewsletterServicesMatcher\UrlsMatcher\PerServiceUrlsMatcher\PerServiceDomainMatcher[] $domainMatchers
+   * @param \Geeks4change\UntrackEmailAnalyzer\Analyzer\NewsletterServicesMatcher\UrlsMatcher\PerServiceUrlsMatcher\PerServiceLinkUrlMatcher[] $linkUrlMatchers
+   * @param \Geeks4change\UntrackEmailAnalyzer\Analyzer\NewsletterServicesMatcher\UrlsMatcher\PerServiceUrlsMatcher\PerServiceImageUrlMatcher[] $imageUrlMatchers
+   * @param \Geeks4change\UntrackEmailAnalyzer\Analyzer\NewsletterServicesMatcher\HeadersMatcher\SingleHeaderMatcher[] $headerMatchers
    */
   public function __construct(string $id, ?string $disconnectId, array $domainMatchers, array $linkUrlMatchers, array $imageUrlMatchers, array $headerMatchers) {
     $this->id = $id;
@@ -91,7 +91,7 @@ final class ServiceMatcherProvider {
   }
 
   /**
-   * @return array<\Geeks4change\BbndAnalyzer\Analyzer\NewsletterServicesMatcher\UrlsMatcher\PerServiceUrlsMatcher\PerServiceDomainMatcher>
+   * @return array<\Geeks4change\UntrackEmailAnalyzer\Analyzer\NewsletterServicesMatcher\UrlsMatcher\PerServiceUrlsMatcher\PerServiceDomainMatcher>
    */
   public function getDomainMatchers(): array {
     return $this->domainMatchers;

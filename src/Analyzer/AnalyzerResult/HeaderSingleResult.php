@@ -2,13 +2,14 @@
 
 declare(strict_types=1);
 
-namespace Geeks4change\BbndAnalyzer\Analyzer\AnalyzerResult;
+namespace Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult;
 
-use Geeks4change\BbndAnalyzer\Analyzer\TestSummary\TestSummaryInterface;
+use Geeks4change\UntrackEmailAnalyzer\Analyzer\TestSummary\TestSummaryInterface;
 
 /**
  * HeaderMatchSummary, child of
- * @see \Geeks4change\BbndAnalyzer\Analyzer\AnalyzerResult\HeadersResultPerService
+ *
+ * @see \Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\HeadersResultPerService
  *
  * @api Will be serialized in persistent storage, any change needs a migration.
  */

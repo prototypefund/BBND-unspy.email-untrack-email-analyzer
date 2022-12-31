@@ -2,21 +2,21 @@
 
 declare(strict_types=1);
 
-namespace Geeks4change\BbndAnalyzer\Analyzer\NewsletterServicesMatcher\UrlsMatcher;
+namespace Geeks4change\UntrackEmailAnalyzer\Analyzer\NewsletterServicesMatcher\UrlsMatcher;
 
-use Geeks4change\BbndAnalyzer\Analyzer\AnalyzerResult\UrlList;
-use Geeks4change\BbndAnalyzer\Analyzer\AnalyzerResult\UrlListMatchersResult;
-use Geeks4change\BbndAnalyzer\Analyzer\AnalyzerResult\UrlListPerServiceMatches;
-use Geeks4change\BbndAnalyzer\Analyzer\AnalyzerResult\UrlListPerServiceMatchesList;
-use Geeks4change\BbndAnalyzer\Analyzer\NewsletterServicesMatcher\ServiceMatcherProvider;
-use Geeks4change\BbndAnalyzer\Globals;
+use Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\UrlList;
+use Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\UrlListMatchersResult;
+use Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\UrlListPerServiceMatches;
+use Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\UrlListPerServiceMatchesList;
+use Geeks4change\UntrackEmailAnalyzer\Analyzer\NewsletterServicesMatcher\ServiceMatcherProvider;
+use Geeks4change\UntrackEmailAnalyzer\Globals;
 use Psr\Http\Message\UriInterface;
 
 abstract class AllServicesUrlsMatcherBase {
 
   public function generateUrlListResult(UrlList $urlList): UrlListMatchersResult {
     $perServiceResultList = new UrlListPerServiceMatchesList();
-    /** @var \Geeks4change\BbndAnalyzer\Analyzer\NewsletterServicesMatcher\ServiceMatcherProvider $toolPattern */
+    /** @var \Geeks4change\UntrackEmailAnalyzer\Analyzer\NewsletterServicesMatcher\ServiceMatcherProvider $toolPattern */
     foreach (Globals::get()->getServiceMatcherProviderRepository()->getServiceMatcherProviderCollection() as $toolPattern) {
       $matchedExactly = new UrlList();
       $matchedByDomain = new UrlList();
@@ -57,7 +57,7 @@ abstract class AllServicesUrlsMatcherBase {
   }
 
   /**
-   * @return \Geeks4change\BbndAnalyzer\Analyzer\NewsletterServicesMatcher\UrlsMatcher\PerServiceUrlsMatcher\PerServiceUrlMatcherBase[]
+   * @return \Geeks4change\UntrackEmailAnalyzer\Analyzer\NewsletterServicesMatcher\UrlsMatcher\PerServiceUrlsMatcher\PerServiceUrlMatcherBase[]
    */
   abstract protected function getUrlPatterns(ServiceMatcherProvider $toolPattern): array;
 

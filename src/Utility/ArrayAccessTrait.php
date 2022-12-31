@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Geeks4change\BbndAnalyzer\Utility;
+namespace Geeks4change\UntrackEmailAnalyzer\Utility;
 
 /**
  * ArrayAccessTrait provides the implementation for \IteratorAggregate, \ArrayAccess, \Countable.

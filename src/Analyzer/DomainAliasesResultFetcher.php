@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace Geeks4change\BbndAnalyzer\Analyzer;
+namespace Geeks4change\UntrackEmailAnalyzer\Analyzer;
 
-use Geeks4change\BbndAnalyzer\Analyzer\AnalyzerResult\DomainAliasesList;
-use Geeks4change\BbndAnalyzer\Globals;
+use Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\DomainAliasesList;
+use Geeks4change\UntrackEmailAnalyzer\Globals;
 
 final class DomainAliasesResultFetcher {
 

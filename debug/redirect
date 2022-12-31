@@ -2,7 +2,7 @@
 <?php
 declare(strict_types=1);
 
-use Geeks4change\BbndAnalyzer\RedirectResolver;
+use Geeks4change\UntrackEmailAnalyzer\RedirectResolver;
 
 include 'vendor/autoload.php';
 

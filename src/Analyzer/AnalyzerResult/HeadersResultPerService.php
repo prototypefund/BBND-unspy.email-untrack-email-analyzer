@@ -2,14 +2,14 @@
 
 declare(strict_types=1);
 
-namespace Geeks4change\BbndAnalyzer\Analyzer\AnalyzerResult;
+namespace Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult;
 
-use Geeks4change\BbndAnalyzer\Analyzer\TestSummary\TestSummaryInterface;
+use Geeks4change\UntrackEmailAnalyzer\Analyzer\TestSummary\TestSummaryInterface;
 
 /**
  * HeaderSummaryPerService, child of
  *
- * @see \Geeks4change\BbndAnalyzer\Analyzer\AnalyzerResult\HeadersResult
+ * @see \Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\HeadersResult
  *
  * @api Will be serialized in persistent storage, any change needs a migration.
  */
@@ -18,13 +18,13 @@ final class HeadersResultPerService implements TestSummaryInterface {
   protected string $serviceName;
 
   /**
-   * @var array<\Geeks4change\BbndAnalyzer\Analyzer\AnalyzerResult\HeaderSingleResult>
+   * @var array<\Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\HeaderSingleResult>
    */
   protected array $headerSingleResultList;
 
   /**
    * @param string $serviceName
-   * @param \Geeks4change\BbndAnalyzer\Analyzer\AnalyzerResult\HeaderSingleResult[] $headerSingleResults
+   * @param \Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\HeaderSingleResult[] $headerSingleResults
    */
   public function __construct(string $serviceName, array $headerSingleResults) {
     $this->serviceName = $serviceName;

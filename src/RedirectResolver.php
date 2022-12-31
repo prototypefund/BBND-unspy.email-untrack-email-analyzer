@@ -25,14 +25,13 @@ final class RedirectResolver {
       [
         'http' => [
           'method' => 'HEAD',
-          'timeout' => 3,
+          'timeout' => 6,
         ]
       ]
     );
     $redirectUrls = [];
     $currentUrl = $url;
     do {
-      /** @noinspection PhpStrictTypeCheckingInspection */
       $headers = get_headers($currentUrl, TRUE);
       if ($headers) {
         $headers = self::normalizeHeaders($headers);

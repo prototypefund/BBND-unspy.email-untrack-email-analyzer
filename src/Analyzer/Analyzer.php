@@ -15,7 +15,7 @@ use Geeks4change\UntrackEmailAnalyzer\Globals;
 use Geeks4change\UntrackEmailAnalyzer\UrlExtractor\ImagesUrlExtractor;
 use Geeks4change\UntrackEmailAnalyzer\UrlExtractor\LinksUrlExtractor;
 use Geeks4change\UntrackEmailAnalyzer\UrlExtractor\PixelsUrlExtractor;
-use Wa72\HtmlPageDom\HtmlPageCrawler;
+use Symfony\Component\DomCrawler\Crawler;
 use ZBateson\MailMimeParser\MailMimeParser;
 
 /**
@@ -44,7 +44,7 @@ class Analyzer {
     // Do we need all the bells and whistles of HtmlPageCrawler and underlying
     // DomCrawler? Not really, but seems to add some namespace and encoding
     // safeguards that can not be wrong.
-    $crawler = HtmlPageCrawler::create($html);
+    $crawler = new Crawler($html);
 
     // Extract links, images, pixels.
     $linkUrls = (new LinksUrlExtractor($crawler))->extract();

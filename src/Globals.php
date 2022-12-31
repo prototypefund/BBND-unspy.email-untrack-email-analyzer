@@ -4,7 +4,6 @@ declare(strict_types=1);
 
 namespace Geeks4change\UntrackEmailAnalyzer;
 
-use Geeks4change\BbndAnalyzer\Analyzer\AnalyzerResult\MayNeedResearch;
 use Geeks4change\UntrackEmailAnalyzer\Analyzer\NewsletterServicesMatcher\ServiceMatcherProviderRepository;
 
 final class Globals {
@@ -38,18 +37,6 @@ final class Globals {
       $this->domainAliasesResolver = new DomainAliasesResolver();
     }
     return $this->domainAliasesResolver;
-  }
-
-  protected MayNeedResearch $mayNeedResearch;
-
-  /**
-   * @return \Geeks4change\BbndAnalyzer\Analyzer\AnalyzerResult\MayNeedResearch
-   */
-  public function getMayNeedResearch(): MayNeedResearch {
-    if (!isset($this->mayNeedResearch)) {
-      $this->mayNeedResearch = new MayNeedResearch();
-    }
-    return $this->mayNeedResearch;
   }
 
 }

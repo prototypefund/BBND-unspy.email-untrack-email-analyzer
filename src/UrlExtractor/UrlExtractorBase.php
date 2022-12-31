@@ -7,19 +7,16 @@ namespace Geeks4change\UntrackEmailAnalyzer\UrlExtractor;
 use Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\UrlList;
 use Geeks4change\UntrackEmailAnalyzer\Utility\UrlTool;
 use GuzzleHttp\Psr7\Uri;
-use Wa72\HtmlPageDom\HtmlPageCrawler;
+use Symfony\Component\DomCrawler\Crawler;
 
 /**
  * @internal
  */
 abstract class UrlExtractorBase {
 
-  protected HtmlPageCrawler $crawler;
+  protected Crawler $crawler;
 
-  /**
-   * @param \Wa72\HtmlPageDom\HtmlPageCrawler $crawler
-   */
-  public function __construct(HtmlPageCrawler $crawler) {
+  public function __construct(Crawler $crawler) {
     $this->crawler = $crawler;
   }
 

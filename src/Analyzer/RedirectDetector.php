@@ -6,9 +6,11 @@ namespace Geeks4change\UntrackEmailAnalyzer\Analyzer;
 
 use Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\LinkAndImageRedirectInfoList;
 use Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\LinkAndImageUrlList;
+use Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\Url;
 use Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\UrlList;
 use Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\UrlRedirectInfoList;
 use Geeks4change\UntrackEmailAnalyzer\RedirectResolver;
+use loophp\collection\Collection;
 
 final class RedirectDetector {
 
@@ -21,16 +23,7 @@ final class RedirectDetector {
 
   protected function doDetectRedirect(UrlList $urlList, UrlList $excludeUrlList): UrlRedirectInfoList {
     $redirectResolver = new RedirectResolver();
-    $urlRedirectInfoList = new UrlRedirectInfoList();
-    foreach ($urlList as $urlWrapper) {
-      $url = strval($urlWrapper);
-      if (!$excludeUrlList->contains($url)) {
-        $redirectInfo = $redirectResolver->resolveRedirect($url);
-        if ($redirectInfo->hasRedirect()) {
-          $urlRedirectInfoList->add($redirectInfo);
-        }
-      }
-    }
+    $urlRedirectInfoList = $redirectResolver->resolveRedirects($urlList, $excludeUrlList);
     return $urlRedirectInfoList;
   }
 }

@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Geeks4change\UntrackEmailAnalyzer\Utility;
+namespace Geeks4change\UntrackEmailAnalyzer\RedirectResolver\ClientDecorator;
 
 use Symfony\Contracts\HttpClient\HttpClientInterface;
 use Symfony\Contracts\HttpClient\ResponseInterface;

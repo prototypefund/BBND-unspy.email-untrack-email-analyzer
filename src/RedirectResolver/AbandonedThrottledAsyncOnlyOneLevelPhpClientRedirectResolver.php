@@ -7,7 +7,7 @@ namespace Geeks4change\UntrackEmailAnalyzer\RedirectResolver;
 use Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\UrlList;
 use Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\UrlRedirectInfo;
 use Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\UrlRedirectInfoList;
-use Geeks4change\UntrackEmailAnalyzer\Utility\SimpleThrottlingHttpClient;
+use Geeks4change\UntrackEmailAnalyzer\RedirectResolver\ClientDecorator\SimpleThrottlingHttpClient;
 use Psr\Http\Message\ResponseInterface;
 use Symfony\Component\HttpClient\HttpClient;
 use Symfony\Component\HttpClient\NoPrivateNetworkHttpClient;

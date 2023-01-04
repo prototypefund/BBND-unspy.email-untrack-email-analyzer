@@ -93,6 +93,7 @@ final class RedirectResolver {
    * @fixme Clean this up:
    *   - Move everything to caller.
    *   - Throttle async so it won't hit rate limits.
+   *   - Use $excludeUrlList
    */
   public function resolveRedirects(UrlList $urlList, UrlList $excludeUrlList): UrlRedirectInfoList {
     $urlRedirectInfoList = new UrlRedirectInfoList();

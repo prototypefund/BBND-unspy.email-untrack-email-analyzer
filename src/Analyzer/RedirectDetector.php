@@ -8,14 +8,14 @@ use Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\LinkAndImageRedire
 use Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\LinkAndImageUrlList;
 use Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\UrlList;
 use Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\UrlRedirectInfoList;
-use Geeks4change\UntrackEmailAnalyzer\RedirectResolver;
+use Geeks4change\UntrackEmailAnalyzer\RedirectResolver\AsyncGuzzleRedirectResolver;
 
 final class RedirectDetector {
 
   public function detectRedirect(LinkAndImageUrlList $linkAndImageUrlList, UrlList $excludeUrlList): LinkAndImageRedirectInfoList {
     $urlList = $this->combineUrls($linkAndImageUrlList);
 
-    $redirectResolver = new RedirectResolver();
+    $redirectResolver = new AsyncGuzzleRedirectResolver();
     $urlRedirectInfoList = $redirectResolver->resolveRedirects($urlList, $excludeUrlList);
 
     return new LinkAndImageRedirectInfoList(

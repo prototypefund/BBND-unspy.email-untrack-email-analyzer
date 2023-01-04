@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Geeks4change\UntrackEmailAnalyzer;
+namespace Geeks4change\UntrackEmailAnalyzer\RedirectResolver;
 
 use Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\Url;
 use Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\UrlList;
@@ -23,7 +23,7 @@ use Psr\Http\Message\ResponseInterface;
 use Symfony\Component\HttpClient\HttpClient;
 use function GuzzleHttp\Promise\unwrap;
 
-final class RedirectResolver {
+final class AsyncGuzzleRedirectResolver {
 
   /**
    * Resolve a redirect chain via plain PHP.

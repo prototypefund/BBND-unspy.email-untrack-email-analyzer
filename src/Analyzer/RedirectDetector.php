@@ -9,14 +9,21 @@ use Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\LinkAndImageUrlLis
 use Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\UrlList;
 use Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\UrlRedirectInfoList;
 use Geeks4change\UntrackEmailAnalyzer\RedirectResolver\AsyncGuzzleRedirectResolver;
+use Geeks4change\UntrackEmailAnalyzer\RedirectResolver\RedirectResolverInterface;
 
 final class RedirectDetector {
+
+  protected RedirectResolverInterface $redirectResolver;
+
+  public function __construct() {
+    $this->redirectResolver = new AsyncGuzzleRedirectResolver();
+  }
+
 
   public function detectRedirect(LinkAndImageUrlList $linkAndImageUrlList, UrlList $excludeUrlList): LinkAndImageRedirectInfoList {
     $urlList = $this->combineUrls($linkAndImageUrlList);
 
-    $redirectResolver = new AsyncGuzzleRedirectResolver();
-    $urlRedirectInfoList = $redirectResolver->resolveRedirects($urlList, $excludeUrlList);
+    $urlRedirectInfoList = $this->redirectResolver->resolveRedirects($urlList, $excludeUrlList);
 
     return new LinkAndImageRedirectInfoList(
       $this->assignRedirects($linkAndImageUrlList->getLinkUrlList(), $urlRedirectInfoList),

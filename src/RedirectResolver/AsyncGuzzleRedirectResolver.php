@@ -23,7 +23,7 @@ use Psr\Http\Message\ResponseInterface;
 use Symfony\Component\HttpClient\HttpClient;
 use function GuzzleHttp\Promise\unwrap;
 
-final class AsyncGuzzleRedirectResolver {
+final class AsyncGuzzleRedirectResolver implements RedirectResolverInterface {
 
   /**
    * Resolve a redirect chain via plain PHP.

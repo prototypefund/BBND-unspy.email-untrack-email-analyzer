@@ -19,7 +19,6 @@ final class RedirectDetector {
     $this->redirectResolver = new AsyncGuzzleRedirectResolver();
   }
 
-
   public function detectRedirect(LinkAndImageUrlList $linkAndImageUrlList): LinkAndImageRedirectInfoList {
     $urlList = $this->combineUrls($linkAndImageUrlList);
 

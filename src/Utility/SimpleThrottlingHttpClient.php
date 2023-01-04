@@ -18,18 +18,19 @@ final class SimpleThrottlingHttpClient implements HttpClientInterface {
 
   public function __construct(HttpClientInterface $decorated, int $waitMsecs) {
     $this->decorated = $decorated;
+    $this->waitMsecs = $waitMsecs;
   }
 
   public function request(string $method, string $url, array $options = []): ResponseInterface {
+    $current = time();
     if ($this->lastRequestTimestamp) {
-      $current = time();
       $nextAllowedTimestamp = $this->lastRequestTimestamp + $this->waitMsecs;
       $toWait = $nextAllowedTimestamp - $current;
       if ($toWait > 0) {
         usleep(1000 * $toWait);
       }
-      $this->lastRequestTimestamp = $current;
     }
+    $this->lastRequestTimestamp = $current;
     return $this->decorated->request($method, $url, $options);
   }
 

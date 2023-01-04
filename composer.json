@@ -30,6 +30,7 @@
         "symfony/dom-crawler": "^6.2",
         "symfony/http-client": "^6.2",
         "symfony/http-foundation": "^6.2",
+        "symfony/rate-limiter": "^6.2",
         "symfony/yaml": "^5 || ^6.2",
         "zbateson/mail-mime-parser": "^2.2"
     },

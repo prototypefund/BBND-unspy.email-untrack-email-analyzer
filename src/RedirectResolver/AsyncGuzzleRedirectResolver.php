@@ -7,9 +7,14 @@ namespace Geeks4change\UntrackEmailAnalyzer\RedirectResolver;
 use Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\UrlList;
 use Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\UrlRedirectInfo;
 use Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\UrlRedirectInfoList;
+use Geeks4change\UntrackEmailAnalyzer\Utility\HttpClientDefaultHeaders;
+use Geeks4change\UntrackEmailAnalyzer\Utility\RateLimitThrottlingGuzzleClientDecorator;
+use Geeks4change\UntrackEmailAnalyzer\Utility\SimpleThrottlingGuzzleClientDecorator;
 use GuzzleHttp\Client;
+use GuzzleHttp\ClientInterface;
 use GuzzleHttp\Promise\Is;
 use GuzzleHttp\Promise\Utils;
+use GuzzleHttp\RequestOptions;
 use Psr\Http\Message\ResponseInterface;
 
 /**
@@ -22,16 +27,26 @@ use Psr\Http\Message\ResponseInterface;
  */
 final class AsyncGuzzleRedirectResolver implements RedirectResolverInterface {
 
+  protected ClientInterface $client;
+
   protected bool $followMoreRedirects = FALSE;
 
+  public function __construct() {
+    $this->client = new Client([
+      RequestOptions::ALLOW_REDIRECTS => FALSE,
+      RequestOptions::TIMEOUT => 8,
+      RequestOptions::HEADERS => HttpClientDefaultHeaders::get(),
+    ]);
+    $this->client = new SimpleThrottlingGuzzleClientDecorator($this->client, 600);
+  }
+
   public function resolveRedirects(UrlList $urlList): UrlRedirectInfoList {
-    $client = new Client(['allow_redirects' => FALSE, 'timeout' => 8]);
     $promises = new \ArrayIterator();
     $redirectMap = [];
-    $addToPool = function (string $url) use (&$redirectMap, $promises, $client, &$addToPool) {
+    $addToPool = function (string $url) use (&$redirectMap, $promises, &$addToPool) {
       if (!isset($promises[$url])) {
         dump("Requesting $url");
-        $promises[$url] = $client->requestAsync('GET', $url)
+        $promises[$url] = $this->client->requestAsync('GET', $url)
           ->then(
             function (ResponseInterface $response) use (&$redirectMap, $url, &$addToPool) {
               if ($response->getStatusCode() >= 300 && $response->getStatusCode() < 400) {

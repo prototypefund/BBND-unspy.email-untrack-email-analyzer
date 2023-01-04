@@ -20,10 +20,10 @@ final class RedirectDetector {
   }
 
 
-  public function detectRedirect(LinkAndImageUrlList $linkAndImageUrlList, UrlList $excludeUrlList): LinkAndImageRedirectInfoList {
+  public function detectRedirect(LinkAndImageUrlList $linkAndImageUrlList): LinkAndImageRedirectInfoList {
     $urlList = $this->combineUrls($linkAndImageUrlList);
 
-    $urlRedirectInfoList = $this->redirectResolver->resolveRedirects($urlList, $excludeUrlList);
+    $urlRedirectInfoList = $this->redirectResolver->resolveRedirects($urlList);
 
     return new LinkAndImageRedirectInfoList(
       $this->assignRedirects($linkAndImageUrlList->getLinkUrlList(), $urlRedirectInfoList),

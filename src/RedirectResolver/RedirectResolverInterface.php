@@ -15,6 +15,6 @@ interface RedirectResolverInterface {
    *   - Throttle async so it won't hit rate limits.
    *   - Use $excludeUrlList
    */
-  public function resolveRedirects(UrlList $urlList, UrlList $excludeUrlList): UrlRedirectInfoList;
+  public function resolveRedirects(UrlList $urlList): UrlRedirectInfoList;
 
 }

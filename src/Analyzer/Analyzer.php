@@ -59,7 +59,7 @@ class Analyzer {
     // Fetch all resolved aliases.
     $domainAliasList = (new DomainAliasesResultFetcher())->fetch();
 
-    $urlsWithRedirectList = (new RedirectDetector())->detectRedirect($allLinkAndImageUrlsList, $unsubscribeUrlList);
+    $urlsWithRedirectList = (new RedirectDetector())->detectRedirect($allLinkAndImageUrlsList);
     $urlWithAnalyticsList = (new AnalyticsDetector())->detectAnalytics($allLinkAndImageUrlsList);
 
     // @todo Implement summary.

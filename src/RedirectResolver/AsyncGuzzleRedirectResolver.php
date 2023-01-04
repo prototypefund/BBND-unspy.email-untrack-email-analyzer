@@ -95,15 +95,13 @@ final class AsyncGuzzleRedirectResolver implements RedirectResolverInterface {
    *   - Throttle async so it won't hit rate limits.
    *   - Use $excludeUrlList
    */
-  public function resolveRedirects(UrlList $urlList, UrlList $excludeUrlList): UrlRedirectInfoList {
+  public function resolveRedirects(UrlList $urlList): UrlRedirectInfoList {
     $urlRedirectInfoList = new UrlRedirectInfoList();
     foreach ($urlList as $urlWrapper) {
       $url = $urlWrapper->toString();
-      if (!$excludeUrlList->contains($url)) {
-        $redirectInfo = $this->resolveRedirect($url);
-        if ($redirectInfo->hasRedirect()) {
-          $urlRedirectInfoList->add($redirectInfo);
-        }
+      $redirectInfo = $this->resolveRedirect($url);
+      if ($redirectInfo->hasRedirect()) {
+        $urlRedirectInfoList->add($redirectInfo);
       }
     }
     return $urlRedirectInfoList;

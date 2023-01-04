@@ -8,15 +8,15 @@ use Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\LinkAndImageRedire
 use Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\LinkAndImageUrlList;
 use Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\UrlList;
 use Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\UrlRedirectInfoList;
+use Geeks4change\UntrackEmailAnalyzer\RedirectResolver\AsyncGuzzleRedirectResolver;
 use Geeks4change\UntrackEmailAnalyzer\RedirectResolver\RedirectResolverInterface;
-use Geeks4change\UntrackEmailAnalyzer\RedirectResolver\ThrottledAsyncOnlyOneLevelPhpClientRedirectResolver;
 
 final class RedirectDetector {
 
   protected RedirectResolverInterface $redirectResolver;
 
   public function __construct() {
-    $this->redirectResolver = new ThrottledAsyncOnlyOneLevelPhpClientRedirectResolver();
+    $this->redirectResolver = new AsyncGuzzleRedirectResolver();
   }
 
 

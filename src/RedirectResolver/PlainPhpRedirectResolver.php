@@ -25,7 +25,7 @@ final class PlainPhpRedirectResolver {
   /**
    * Resolve a redirect chain via plain PHP.
    *
-   * ABANDONED, only for reference.
+   * Superseded by async resolver.
    *
    * Successor of a plain guzzle redirect resolver, which turned out to be bad
    * at the following.

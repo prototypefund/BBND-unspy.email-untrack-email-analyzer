@@ -35,4 +35,8 @@ final class UrlRedirectInfoList implements \IteratorAggregate, TestSummaryInterf
     ];
   }
 
+  public function get(string $url): ?UrlRedirectInfo {
+    return $this->urlRedirectInfoList[$url] ?? NULL;
+  }
+
 }

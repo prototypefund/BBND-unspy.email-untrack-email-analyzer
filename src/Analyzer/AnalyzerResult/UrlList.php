@@ -13,7 +13,7 @@ use Geeks4change\UntrackEmailAnalyzer\Analyzer\TestSummary\TestSummaryInterface;
  * @see \Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\UrlListMatchersResult
  * @see \Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\UrlListPerServiceMatches
  *
- * @implements \IteratorAggregate<int, \Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\Url>
+ * @implements \IteratorAggregate<int, \Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\UrlItem>
  *
  * @api Will be serialized in persistent storage, any change needs a migration.
  * @internal
@@ -21,7 +21,7 @@ use Geeks4change\UntrackEmailAnalyzer\Analyzer\TestSummary\TestSummaryInterface;
 final class UrlList implements \IteratorAggregate, TestSummaryInterface {
 
   /**
-   * @var array<\Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\Url>
+   * @var array<\Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\UrlItem>
    */
   protected array $urls = [];
 
@@ -29,7 +29,7 @@ final class UrlList implements \IteratorAggregate, TestSummaryInterface {
    * @param string $url
    */
   public function add(string $url) {
-    $this->urls[$url] = new Url($url);
+    $this->urls[$url] = new UrlItem($url);
   }
 
   public function count(): int {

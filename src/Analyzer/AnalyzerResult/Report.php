@@ -36,7 +36,7 @@ use Geeks4change\UntrackEmailAnalyzer\Utility\PrintCollector;
  *         - $urlsMatchedByDomain @see UrlList
  *         - $urlsNotMatchedList @see UrlList
  * - $pixelsList @see UrlList
- *   - array $urls @see Url (stringable)
+ *   - array $urls @see UrlItem (stringable)
  *     - getUrlObject()
  * - $urlsRedirectInfoList @see LinkAndImageRedirectInfoList
  *   - $linkRedirectInfoList @see UrlRedirectInfoList

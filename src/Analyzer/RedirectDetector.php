@@ -43,7 +43,7 @@ final class RedirectDetector {
                $linkAndImageUrlList->getLinkUrlList(),
                $linkAndImageUrlList->getImageUrlList(),
              ] as $urlList) {
-      /** @var \Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\Url $urlItem */
+      /** @var \Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\UrlItem $urlItem */
       foreach ($urlList as $urlItem) {
         $combinedUrlList->add($urlItem->toString());
       }

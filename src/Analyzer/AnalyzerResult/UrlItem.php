@@ -19,7 +19,7 @@ use Psr\Http\Message\UriInterface;
  *
  * @api Will be serialized in persistent storage, any change needs a migration.
  */
-final class Url implements \Stringable {
+final class UrlItem implements \Stringable {
 
   /**
    * Store a string, nothing more.

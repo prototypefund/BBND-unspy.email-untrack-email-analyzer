@@ -22,6 +22,8 @@ use Psr\Http\Message\ResponseInterface;
  */
 final class AsyncGuzzleRedirectResolver implements RedirectResolverInterface {
 
+  protected bool $followMoreRedirects = FALSE;
+
   public function resolveRedirects(UrlList $urlList): UrlRedirectInfoList {
     $client = new Client(['allow_redirects' => FALSE, 'timeout' => 8]);
     $promises = new \ArrayIterator();
@@ -35,8 +37,10 @@ final class AsyncGuzzleRedirectResolver implements RedirectResolverInterface {
               if ($response->getStatusCode() >= 300 && $response->getStatusCode() < 400) {
                 $redirectTarget = $response->getHeader('location')[0];
                 dump("Resolve $url => $redirectTarget");
-                $redirectMap[$url] = $redirectTarget;
-                $addToPool($redirectTarget);
+                if ($this->followMoreRedirects) {
+                  $redirectMap[$url] = $redirectTarget;
+                  $addToPool($redirectTarget);
+                }
               }
               else {
                 // We currently don't make a difference, if we get a 200, a 400,

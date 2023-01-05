@@ -9,7 +9,6 @@ use Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\LinkAndImageUrlLis
 use Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\UrlList;
 use Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\UrlRedirectInfoList;
 use Geeks4change\UntrackEmailAnalyzer\RedirectResolver\AsyncPhpClientRedirectResolver;
-use Geeks4change\UntrackEmailAnalyzer\RedirectResolver\AsyncGuzzleRedirectResolver;
 use Geeks4change\UntrackEmailAnalyzer\RedirectResolver\RedirectResolverInterface;
 
 final class RedirectDetector {
@@ -20,8 +19,8 @@ final class RedirectDetector {
     $this->redirectResolver = new AsyncPhpClientRedirectResolver();
   }
 
-  public function detectRedirect(LinkAndImageUrlList $linkAndImageUrlList): LinkAndImageRedirectInfoList {
-    $urlList = $this->combineUrls($linkAndImageUrlList);
+  public function detectRedirect(LinkAndImageUrlList $linkAndImageUrlList, UrlList $urlsToExclude): LinkAndImageRedirectInfoList {
+    $urlList = $this->combineUrls($linkAndImageUrlList, $urlsToExclude);
 
     $urlRedirectInfoList = $this->redirectResolver->resolveRedirects($urlList);
 
@@ -36,7 +35,7 @@ final class RedirectDetector {
    *
    * @return \Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\UrlList
    */
-  protected function combineUrls(LinkAndImageUrlList $linkAndImageUrlList): UrlList {
+  protected function combineUrls(LinkAndImageUrlList $linkAndImageUrlList, UrlList $urlsToExclude): UrlList {
     $combinedUrlList = new UrlList();
     /** @var UrlList $urlList */
     foreach ([
@@ -45,7 +44,10 @@ final class RedirectDetector {
              ] as $urlList) {
       /** @var \Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\UrlItem $urlItem */
       foreach ($urlList as $urlItem) {
-        $combinedUrlList->add($urlItem->toString());
+        $url = $urlItem->toString();
+        if (!$urlsToExclude->contains($url)) {
+          $combinedUrlList->add($url);
+        }
       }
     }
     return $combinedUrlList;

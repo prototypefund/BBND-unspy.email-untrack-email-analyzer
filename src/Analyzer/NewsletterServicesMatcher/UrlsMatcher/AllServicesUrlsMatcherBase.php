@@ -22,16 +22,13 @@ abstract class AllServicesUrlsMatcherBase {
       $matchedByDomain = new UrlList();
       $notMatched = new UrlList();
       foreach ($urlList as $url) {
-        $isMatch = FALSE;
         if ($this->isUrlPatternMatch($toolPattern, $url->getUrlObject())) {
           $matchedExactly->add(strval($url));
-          $isMatch = TRUE;
         }
-        if ($this->isDomainPatternMatch($toolPattern, $url->getUrlObject())) {
+        elseif ($this->isDomainPatternMatch($toolPattern, $url->getUrlObject())) {
           $matchedByDomain->add(strval($url));
-          $isMatch = TRUE;
         }
-        if (!$isMatch) {
+        else {
           $notMatched->add(strval($url));
         }
       }

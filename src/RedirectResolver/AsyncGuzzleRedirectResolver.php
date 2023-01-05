@@ -50,9 +50,9 @@ final class AsyncGuzzleRedirectResolver implements RedirectResolverInterface {
             function (ResponseInterface $response) use (&$redirectMap, $url, &$addToPool) {
               if ($response->getStatusCode() >= 300 && $response->getStatusCode() < 400) {
                 $redirectTarget = $response->getHeader('location')[0];
+                $redirectMap[$url] = $redirectTarget;
                 //dump("Resolve $url => $redirectTarget");
                 if ($this->followMoreRedirects) {
-                  $redirectMap[$url] = $redirectTarget;
                   $addToPool($redirectTarget);
                 }
               }

@@ -44,13 +44,13 @@ final class AsyncGuzzleRedirectResolver implements RedirectResolverInterface {
     $redirectMap = [];
     $addToPool = function (string $url) use (&$redirectMap, $promises, &$addToPool) {
       if (!isset($promises[$url])) {
-        dump("Requesting $url");
+        //dump("Requesting $url");
         $promises[$url] = $this->client->requestAsync('GET', $url)
           ->then(
             function (ResponseInterface $response) use (&$redirectMap, $url, &$addToPool) {
               if ($response->getStatusCode() >= 300 && $response->getStatusCode() < 400) {
                 $redirectTarget = $response->getHeader('location')[0];
-                dump("Resolve $url => $redirectTarget");
+                //dump("Resolve $url => $redirectTarget");
                 if ($this->followMoreRedirects) {
                   $redirectMap[$url] = $redirectTarget;
                   $addToPool($redirectTarget);
@@ -90,7 +90,7 @@ final class AsyncGuzzleRedirectResolver implements RedirectResolverInterface {
     };
     $all = $settleWithRecursion($promises);
     $all->wait();
-    dump('RESOLVED');
+    //dump('RESOLVED');
 
     $urlRedirectInfoList = new UrlRedirectInfoList();
     foreach ($urlList as $urlItem) {
@@ -105,7 +105,7 @@ final class AsyncGuzzleRedirectResolver implements RedirectResolverInterface {
         $urlRedirectInfoList->add($urlRedirectInfo);
       }
     }
-    dump($urlRedirectInfoList);
+    //dump($urlRedirectInfoList);
     return $urlRedirectInfoList;
   }
 

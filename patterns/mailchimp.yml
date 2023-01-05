@@ -2,7 +2,11 @@ name: MailChimp
 url: https://mailchimp.com/
 disconnect_id: MailChimp
 domains:
+  - mailchimp.com
   - mailchi.mp
+  - list-manage.com
+  - list-manage.com.edgekey.net
+  - mcusercontent.com
 notes:
   - Webview is a user tracking link, but seems to NOT contain user tracking links, and no network phone-back.
 links:

@@ -51,7 +51,6 @@ final class AsyncGuzzleRedirectResolver implements RedirectResolverInterface {
               if ($response->getStatusCode() >= 300 && $response->getStatusCode() < 400) {
                 $redirectTarget = $response->getHeader('location')[0];
                 $redirectMap[$url] = $redirectTarget;
-                //dump("Resolve $url => $redirectTarget");
                 if ($this->followMoreRedirects) {
                   $addToPool($redirectTarget);
                 }
@@ -81,7 +80,7 @@ final class AsyncGuzzleRedirectResolver implements RedirectResolverInterface {
       ->then(function ($results) use ($concurrencyLimit, &$promises, $settleWithRecursion) {
         foreach ($promises as $url => $promise) {
           if (Is::pending($promise)) {
-            dump("Recurse $url");
+            //dump("Recurse $url");
             return $settleWithRecursion($promises, $concurrencyLimit);
           }
         }
@@ -91,6 +90,7 @@ final class AsyncGuzzleRedirectResolver implements RedirectResolverInterface {
     $all = $settleWithRecursion($promises);
     $all->wait();
     //dump('RESOLVED');
+    //dump($redirectMap);
 
     $urlRedirectInfoList = new UrlRedirectInfoList();
     foreach ($urlList as $urlItem) {

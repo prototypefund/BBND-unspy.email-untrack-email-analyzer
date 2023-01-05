@@ -9,6 +9,7 @@ use Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\UrlRedirectInfo;
 use Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\UrlRedirectInfoList;
 use Geeks4change\UntrackEmailAnalyzer\RedirectResolver\ClientDecorator\HttpClientDefaultHeaders;
 use Geeks4change\UntrackEmailAnalyzer\RedirectResolver\ClientDecorator\SimpleThrottlingHttpClient;
+use Symfony\Component\HttpClient\Exception\TimeoutException;
 use Symfony\Component\HttpClient\HttpClient;
 use Symfony\Component\HttpClient\NoPrivateNetworkHttpClient;
 use Symfony\Component\HttpClient\RetryableHttpClient;
@@ -16,6 +17,9 @@ use Symfony\Contracts\HttpClient\ResponseInterface;
 
 /**
  * Redirect resolver, throttled, only one level.
+ *
+ * This has problems...
+ * https://github.com/symfony/symfony/issues/48885
  *
  * Resolve redirects but prevent bans by
  * - throttling
@@ -26,20 +30,20 @@ use Symfony\Contracts\HttpClient\ResponseInterface;
  */
 final class AsyncPhpClientRedirectResolver implements RedirectResolverInterface {
 
-  protected int $throttleMilliSeconds = 600;
+  protected int $throttleMilliSeconds = 800;
 
   protected $client;
 
   public function __construct() {
     $this->client = HttpClient::create([
       'max_redirects' => 0,
-      'timeout' => 8,
+      'timeout' => 3,
       'headers' => HttpClientDefaultHeaders::get(),
     ]);
     // Prevent SSRF attacks.
     $this->client = new NoPrivateNetworkHttpClient($this->client);
     // Retry on failuree. Defaults are fine.
-    $this->client = new RetryableHttpClient($this->client);
+    $this->client = new RetryableHttpClient($this->client, NULL, maxRetries: 2);
     // Throttle.
     $this->client = new SimpleThrottlingHttpClient($this->client, $this->throttleMilliSeconds);
   }
@@ -57,7 +61,14 @@ final class AsyncPhpClientRedirectResolver implements RedirectResolverInterface 
     $urlRedirectInfoList = new UrlRedirectInfoList();
     foreach ($responses as $url => $response) {
       $redirectUrls = [];
-      if ($redirectUrl = $this->extractRedirect($response)) {
+      try {
+        $redirectUrl = $this->extractRedirect($response);
+      } catch (TimeoutException $e) {
+        // @fixme Log and ignore.
+        // Rethrow for now.
+        throw new RuntimeException('Problem resolving redirect', 0, $e);
+      }
+      if ($redirectUrl) {
         $redirectUrls[] = $redirectUrl;
         $urlRedirectInfo = new UrlRedirectInfo($url, ...$redirectUrls);
         $urlRedirectInfoList->add($urlRedirectInfo);

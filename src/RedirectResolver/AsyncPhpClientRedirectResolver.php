@@ -15,19 +15,16 @@ use Symfony\Component\HttpClient\RetryableHttpClient;
 use Symfony\Contracts\HttpClient\ResponseInterface;
 
 /**
- * Redirect resolver.
- *
- * ABANDONED, only for reference.
- * Symfony HttpClient has a nice async response that does not need promises.
- * Unfortunately it is deeply baked into it to not expose redirects.
- * @see \Symfony\Component\HttpClient\Response\CommonResponseTrait::checkStatusCode
+ * Redirect resolver, throttled, only one level.
  *
  * Resolve redirects but prevent bans by
  * - throttling
  * - use GET
  * - add headers
+ * Prevents accidental unsubscribing by
+ * - Only fetching the first url, not the redirect.
  */
-final class AbandonedThrottledAsyncOnlyOneLevelPhpClientRedirectResolver implements RedirectResolverInterface {
+final class AsyncPhpClientRedirectResolver implements RedirectResolverInterface {
 
   protected int $throttleMilliSeconds = 600;
 

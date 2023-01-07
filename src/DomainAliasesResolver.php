@@ -46,7 +46,9 @@ final class DomainAliasesResolver {
         $this->aliasMap[$domain] = NULL;
       }
       else {
-        $records = dns_get_record($domain, DNS_CNAME);
+        // @todo COnsider adding retry on error.
+        // Add a trailing dot to prevent local resolving.
+        $records = dns_get_record("{$domain}.", DNS_CNAME);
         $maybeCName = $records[0]['target'] ?? NULL;
         $this->aliasMap[$domain] = $maybeCName;
       }

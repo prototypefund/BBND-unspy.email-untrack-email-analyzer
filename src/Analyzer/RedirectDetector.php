@@ -17,7 +17,9 @@ final class RedirectDetector {
   protected RedirectResolverInterface $redirectResolver;
 
   public function __construct() {
-    $this->redirectResolver = new AsyncPhpClientRedirectResolver();
+    // Use guzzle instead of symfony client, as the other seems to trigger bot
+    // service denial for rapidmail. Dunno why.
+    $this->redirectResolver = new AsyncGuzzleRedirectResolver();
   }
 
   public function detectRedirect(LinkAndImageUrlList $linkAndImageUrlList, UrlList $urlsToExclude): LinkAndImageRedirectInfoList {

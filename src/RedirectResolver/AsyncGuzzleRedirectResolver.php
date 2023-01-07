@@ -18,11 +18,6 @@ use Psr\Http\Message\ResponseInterface;
 
 /**
  * Async guzzle redirect resolver.
- *
- * ABANDONED, only for reference.
- *
- * This is fast. So fast, that APIS ban us. Throttling turned out to be not that
- * easy.
  */
 final class AsyncGuzzleRedirectResolver implements RedirectResolverInterface {
 
@@ -30,13 +25,15 @@ final class AsyncGuzzleRedirectResolver implements RedirectResolverInterface {
 
   protected bool $followMoreRedirects = FALSE;
 
+  protected int $throttleInMilliseconds = 2000;
+
   public function __construct() {
     $this->client = new Client([
       RequestOptions::ALLOW_REDIRECTS => FALSE,
       RequestOptions::TIMEOUT => 8,
       RequestOptions::HEADERS => HttpClientDefaultHeaders::get(),
     ]);
-    $this->client = new SimpleThrottlingGuzzleClientDecorator($this->client, 600);
+    $this->client = new SimpleThrottlingGuzzleClientDecorator($this->client, $this->throttleInMilliseconds);
   }
 
   public function resolveRedirects(UrlList $urlList): UrlRedirectInfoList {
@@ -50,6 +47,7 @@ final class AsyncGuzzleRedirectResolver implements RedirectResolverInterface {
             function (ResponseInterface $response) use (&$redirectMap, $url, &$addToPool) {
               if ($response->getStatusCode() >= 300 && $response->getStatusCode() < 400) {
                 $redirectTarget = $response->getHeader('location')[0];
+                //dump("Found redirect: $url => $redirectTarget");
                 $redirectMap[$url] = $redirectTarget;
                 if ($this->followMoreRedirects) {
                   $addToPool($redirectTarget);

@@ -9,6 +9,7 @@ use Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\LinkAndImageUrlLis
 use Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\UrlList;
 use Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\UrlRedirectInfoList;
 use Geeks4change\UntrackEmailAnalyzer\RedirectResolver\AsyncGuzzleRedirectResolver;
+use Geeks4change\UntrackEmailAnalyzer\RedirectResolver\AsyncPhpClientRedirectResolver;
 use Geeks4change\UntrackEmailAnalyzer\RedirectResolver\RedirectResolverInterface;
 
 final class RedirectDetector {
@@ -16,7 +17,7 @@ final class RedirectDetector {
   protected RedirectResolverInterface $redirectResolver;
 
   public function __construct() {
-    $this->redirectResolver = new AsyncGuzzleRedirectResolver();
+    $this->redirectResolver = new AsyncPhpClientRedirectResolver();
   }
 
   public function detectRedirect(LinkAndImageUrlList $linkAndImageUrlList, UrlList $urlsToExclude): LinkAndImageRedirectInfoList {

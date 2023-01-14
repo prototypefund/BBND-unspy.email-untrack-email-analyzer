@@ -8,7 +8,7 @@ use Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\AggregatedSummary;
 use Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\AnalyzerLogger;
 use Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\AnalyzerResult;
 use Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\LinkAndImageUrlList;
-use Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\Report;
+use Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\ResultSummaryPart;
 use Geeks4change\UntrackEmailAnalyzer\Analyzer\NewsletterServicesMatcher\HeadersMatcher\AllServicesHeadersMatcher;
 use Geeks4change\UntrackEmailAnalyzer\Analyzer\NewsletterServicesMatcher\UrlsMatcher\AllServicesLinkAndImageUrlListMatcher;
 use Geeks4change\UntrackEmailAnalyzer\Globals;
@@ -67,7 +67,7 @@ class Analyzer {
 
     Globals::deleteAll();
 
-    $report = new Report(
+    $resultSummaryPart = new ResultSummaryPart(
       $aggregated,
       $dkimResult,
       $headersResult,
@@ -79,7 +79,7 @@ class Analyzer {
       $urlWithAnalyticsList,
       $domainAliasList
     );
-    return new AnalyzerResult($report, $logger->freeze());
+    return new AnalyzerResult($resultSummaryPart, $logger->freeze());
   }
 
 }

@@ -9,29 +9,29 @@ namespace Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult;
  *
  * For structure,
  *
- * @see \Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\ResultSummaryPart
+ * @see \Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\ResultSummary
  *
  * @api Will be serialized in persistent storage, any change needs a migration.
  */
 final class AnalyzerResult {
 
-  protected ResultSummaryPart $report;
+  protected ResultSummary $report;
 
   protected AnalyzerLog $log;
 
   /**
-   * @param \Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\ResultSummaryPart $report
+   * @param \Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\ResultSummary $report
    * @param \Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\AnalyzerLog $log
    */
-  public function __construct(ResultSummaryPart $report, AnalyzerLog $log) {
+  public function __construct(ResultSummary $report, AnalyzerLog $log) {
     $this->report = $report;
     $this->log = $log;
   }
 
   /**
-   * @return \Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\ResultSummaryPart
+   * @return \Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\ResultSummary
    */
-  public function getReport(): ResultSummaryPart {
+  public function getReport(): ResultSummary {
     return $this->report;
   }
 

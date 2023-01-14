@@ -50,7 +50,7 @@ use Geeks4change\UntrackEmailAnalyzer\Utility\PrintCollector;
  *     - string $domain
  *     - array<string> $aliases
  */
-final class ResultSummaryPart implements TestSummaryInterface {
+final class ResultSummary implements TestSummaryInterface {
 
   protected AggregatedSummary $aggregated;
 

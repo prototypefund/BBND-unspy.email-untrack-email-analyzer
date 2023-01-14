@@ -6,7 +6,7 @@ namespace Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult;
 
 /**
  * ServiceSummary, child of
- * @see \Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\ResultSummaryPart
+ * @see \Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\ResultSummary
  *
  * @api Will be serialized in persistent storage, any change needs a migration.
  */

@@ -1,7 +1,8 @@
 # Glossary
 - Service
 - Sender
-- Subscription
+- Newsletter
+- Campaign
 - Recipient (but: User-Tracking)
 - Issue
 

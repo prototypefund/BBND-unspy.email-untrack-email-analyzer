@@ -19,6 +19,47 @@ use Symfony\Component\DomCrawler\Crawler;
 use ZBateson\MailMimeParser\MailMimeParser;
 
 /**
+ * Analyzer.
+ *
+ * Return structure:
+ * - $aggregated @see ResultDetails
+ *   - string $serviceName
+ *   - string $matchLevel
+ * - $dkimResult @see DKIMResult
+ *   - string $status
+ *   - array<string> $summaryLines
+ * - $headersResult @see HeadersResult
+ *   - (iterable) @see HeadersResultPerService
+ *     - string $serviceName
+ *     - array $headerSingleResultList @see HeaderSingleResult
+ *       - string $headerName
+ *       - bool $isMatch
+ * - $allLinkAndImageUrlsList @see LinkAndImageUrlList
+ *   - $linkUrlList @see UrlList
+ *   - $imageUrlList @see UrlList
+ * - $linkAndImageUrlsMatcherResult @see LinkAndImageUrlListMatcherResult
+ *   - $linkUrlsResult @see UrlListMatchersResult
+ *   - $imageUrlsResult @see UrlListMatchersResult
+ *     - $perServiceResultList @see UrlListPerServiceMatchesList
+ *       - (iterable) @see UrlListPerServiceMatches
+ *         - $urlsMatchedExactly @see UrlList
+ *         - $urlsMatchedByDomain @see UrlList
+ *         - $urlsNotMatchedList @see UrlList
+ * - $pixelsList @see UrlList
+ *   - array $urls @see UrlItem (stringable)
+ *     - getUrlObject()
+ * - $urlsRedirectInfoList @see LinkAndImageRedirectInfoList
+ *   - $linkRedirectInfoList @see UrlRedirectInfoList
+ *   - $imageRedirectInfoList @see UrlRedirectInfoList
+ *     - (iterable) @see UrlRedirectInfo
+ *       - string $originalUrl
+ *       - array<string> $redirectUrls
+ * - $urlsWithAnalyticsList @see LinkAndImageUrlList
+ * - $domainAliasesList @see DomainAliasesList
+ *   - (iterable) @see DomainAliases
+ *     - string $domain
+ *     - array<string> $aliases
+ *
  * @api This and its return classes are the only API for the outside.
  */
 class Analyzer {

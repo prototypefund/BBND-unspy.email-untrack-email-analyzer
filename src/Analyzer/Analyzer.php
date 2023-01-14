@@ -101,7 +101,7 @@ class Analyzer {
     $urlWithAnalyticsList = (new AnalyticsDetector())->detectAnalytics($allLinkAndImageUrlsList);
 
     // @todo Implement summary.
-    $aggregated = new ResultDetails(NULL, '');
+    $resultDetails = new ResultDetails(NULL, '');
 
     Globals::deleteAll();
 
@@ -116,7 +116,8 @@ class Analyzer {
       $urlWithAnalyticsList,
       $domainAliasList
     );
-    return new AnalyzerResult($resultSummary, $logger->freeze());
+    $fullLog = $logger->freeze();
+    return new AnalyzerResult($resultSummary, $fullLog);
   }
 
 }

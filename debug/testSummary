@@ -24,5 +24,5 @@ $fileContent = file_get_contents($fileName);
 
 $analyzer = new Analyzer();
 $result = $analyzer->analyze($fileContent);
-$testSummary = $result->getReport()->getTestSummary();
+$testSummary = $result->getResultSummary()->getTestSummary();
 print Yaml::dump($testSummary, 99);

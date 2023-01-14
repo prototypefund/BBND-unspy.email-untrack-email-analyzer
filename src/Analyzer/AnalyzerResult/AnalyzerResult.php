@@ -17,7 +17,7 @@ final class AnalyzerResult {
 
   protected ResultSummary $report;
 
-  protected AnalyzerLog $log;
+  protected AnalyzerLog $fullLog;
 
   /**
    * @param \Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\ResultSummary $report
@@ -25,21 +25,21 @@ final class AnalyzerResult {
    */
   public function __construct(ResultSummary $report, AnalyzerLog $log) {
     $this->report = $report;
-    $this->log = $log;
+    $this->fullLog = $log;
   }
 
   /**
    * @return \Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\ResultSummary
    */
-  public function getReport(): ResultSummary {
+  public function getResultSummary(): ResultSummary {
     return $this->report;
   }
 
   /**
    * @return \Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\AnalyzerLog
    */
-  public function getLog(): AnalyzerLog {
-    return $this->log;
+  public function getFullLog(): AnalyzerLog {
+    return $this->fullLog;
   }
 
 

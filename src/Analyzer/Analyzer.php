@@ -100,7 +100,7 @@ class Analyzer {
     $urlsWithRedirectList = (new RedirectDetector())->detectRedirect($allLinkAndImageUrlsList, $unsubscribeUrlList);
     $urlWithAnalyticsList = (new AnalyticsDetector())->detectAnalytics($allLinkAndImageUrlsList);
 
-    // @todo Implement summary.
+    // @fixme Implement summary.
     $resultDetails = new ResultDetails(NULL, '');
 
     $resultSummary = new ResultSummary(
@@ -115,7 +115,9 @@ class Analyzer {
       $domainAliasList
     );
     $fullLog = $logger->freeze();
-    $analyzerResult = new AnalyzerResult($resultSummary, $fullLog);
+    // @fixme Add LogSanitizer.
+    $sanitizedLog = $fullLog;
+    $analyzerResult = new AnalyzerResult($resultSummary, $fullLog, $resultDetails, $sanitizedLog);
 
     Globals::deleteAll();
     return $analyzerResult;

@@ -15,24 +15,32 @@ namespace Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult;
  */
 final class AnalyzerResult {
 
-  protected ResultSummary $report;
+  protected ResultSummary $resultSummary;
 
   protected AnalyzerLog $fullLog;
 
+  protected ResultDetails $resultDetails;
+
+  protected AnalyzerLog $sanitizedLog;
+
   /**
-   * @param \Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\ResultSummary $report
-   * @param \Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\AnalyzerLog $log
+   * @param \Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\ResultSummary $resultSummary
+   * @param \Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\AnalyzerLog $fullLog
+   * @param \Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\ResultDetails $resultDetails
+   * @param \Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\AnalyzerLog $sanitizedLog
    */
-  public function __construct(ResultSummary $report, AnalyzerLog $log) {
-    $this->report = $report;
-    $this->fullLog = $log;
+  public function __construct(ResultSummary $resultSummary, AnalyzerLog $fullLog, ResultDetails $resultDetails, AnalyzerLog $sanitizedLog) {
+    $this->resultSummary = $resultSummary;
+    $this->fullLog = $fullLog;
+    $this->resultDetails = $resultDetails;
+    $this->sanitizedLog = $sanitizedLog;
   }
 
   /**
    * @return \Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\ResultSummary
    */
   public function getResultSummary(): ResultSummary {
-    return $this->report;
+    return $this->resultSummary;
   }
 
   /**
@@ -40,6 +48,20 @@ final class AnalyzerResult {
    */
   public function getFullLog(): AnalyzerLog {
     return $this->fullLog;
+  }
+
+  /**
+   * @return \Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\ResultDetails
+   */
+  public function getResultDetails(): ResultDetails {
+    return $this->resultDetails;
+  }
+
+  /**
+   * @return \Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\AnalyzerLog
+   */
+  public function getSanitizedLog(): AnalyzerLog {
+    return $this->sanitizedLog;
   }
 
 

@@ -22,9 +22,6 @@ use ZBateson\MailMimeParser\MailMimeParser;
  * Analyzer.
  *
  * Return structure:
- * - $aggregated @see ResultDetails
- *   - string $serviceName
- *   - string $matchLevel
  * - $dkimResult @see DKIMResult
  *   - string $status
  *   - array<string> $summaryLines
@@ -109,7 +106,6 @@ class Analyzer {
     Globals::deleteAll();
 
     $resultSummary = new ResultSummary(
-      $aggregated,
       $dkimResult,
       $headersResult,
       $allLinkAndImageUrlsList,

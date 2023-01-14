@@ -13,8 +13,6 @@ use Geeks4change\UntrackEmailAnalyzer\Utility\PrintCollector;
  */
 final class ResultSummary implements TestSummaryInterface {
 
-  protected ResultDetails $aggregated;
-
   protected DKIMResult $dkimResult;
 
   protected HeadersResult $headersResult;
@@ -34,7 +32,6 @@ final class ResultSummary implements TestSummaryInterface {
   protected DomainAliasesList $domainAliasesList;
 
   /**
-   * @param \Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\ResultDetails $aggregated
    * @param \Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\DKIMResult $dkimResult
    * @param \Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\HeadersResult $headersResult
    * @param \Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\LinkAndImageUrlList $allLinkAndImageUrlsList
@@ -45,8 +42,7 @@ final class ResultSummary implements TestSummaryInterface {
    * @param \Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\LinkAndImageUrlList $urlsWithAnalyticsList
    * @param \Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\DomainAliasesList $domainAliasesList
    */
-  public function __construct(ResultDetails $aggregated, DKIMResult $dkimResult, HeadersResult $headersResult, LinkAndImageUrlList $allLinkAndImageUrlsList, LinkAndImageUrlListMatcherResult $linkAndImageUrlsMatcherResult, UrlList $pixelsList, UrlList $unsubscribeUrlList, LinkAndImageRedirectInfoList $urlsRedirectInfoList, LinkAndImageUrlList $urlsWithAnalyticsList, DomainAliasesList $domainAliasesList) {
-    $this->aggregated = $aggregated;
+  public function __construct(DKIMResult $dkimResult, HeadersResult $headersResult, LinkAndImageUrlList $allLinkAndImageUrlsList, LinkAndImageUrlListMatcherResult $linkAndImageUrlsMatcherResult, UrlList $pixelsList, UrlList $unsubscribeUrlList, LinkAndImageRedirectInfoList $urlsRedirectInfoList, LinkAndImageUrlList $urlsWithAnalyticsList, DomainAliasesList $domainAliasesList) {
     $this->dkimResult = $dkimResult;
     $this->headersResult = $headersResult;
     $this->allLinkAndImageUrlsList = $allLinkAndImageUrlsList;
@@ -56,13 +52,6 @@ final class ResultSummary implements TestSummaryInterface {
     $this->urlsRedirectInfoList = $urlsRedirectInfoList;
     $this->urlsWithAnalyticsList = $urlsWithAnalyticsList;
     $this->domainAliasesList = $domainAliasesList;
-  }
-
-  /**
-   * @return \Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\ResultDetails
-   */
-  public function getAggregated(): ResultDetails {
-    return $this->aggregated;
   }
 
   /**

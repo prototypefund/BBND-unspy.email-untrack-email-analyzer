@@ -103,8 +103,6 @@ class Analyzer {
     // @todo Implement summary.
     $resultDetails = new ResultDetails(NULL, '');
 
-    Globals::deleteAll();
-
     $resultSummary = new ResultSummary(
       $dkimResult,
       $headersResult,
@@ -117,7 +115,10 @@ class Analyzer {
       $domainAliasList
     );
     $fullLog = $logger->freeze();
-    return new AnalyzerResult($resultSummary, $fullLog);
+    $analyzerResult = new AnalyzerResult($resultSummary, $fullLog);
+
+    Globals::deleteAll();
+    return $analyzerResult;
   }
 
 }

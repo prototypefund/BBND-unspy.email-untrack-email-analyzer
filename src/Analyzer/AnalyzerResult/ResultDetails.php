@@ -10,7 +10,7 @@ namespace Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult;
  *
  * @api Will be serialized in persistent storage, any change needs a migration.
  */
-final class AggregatedSummary {
+final class ResultDetails {
 
   protected ?string $serviceName;
 

@@ -12,7 +12,7 @@ use Geeks4change\UntrackEmailAnalyzer\Utility\PrintCollector;
  * @api Will be serialized in persistent storage, any change needs a migration.
  *
  * Structure:
- * - $aggregated @see AggregatedSummary
+ * - $aggregated @see ResultDetails
  *   - string $serviceName
  *   - string $matchLevel
  * - $dkimResult @see DKIMResult
@@ -52,7 +52,7 @@ use Geeks4change\UntrackEmailAnalyzer\Utility\PrintCollector;
  */
 final class ResultSummary implements TestSummaryInterface {
 
-  protected AggregatedSummary $aggregated;
+  protected ResultDetails $aggregated;
 
   protected DKIMResult $dkimResult;
 
@@ -73,7 +73,7 @@ final class ResultSummary implements TestSummaryInterface {
   protected DomainAliasesList $domainAliasesList;
 
   /**
-   * @param \Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\AggregatedSummary $aggregated
+   * @param \Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\ResultDetails $aggregated
    * @param \Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\DKIMResult $dkimResult
    * @param \Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\HeadersResult $headersResult
    * @param \Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\LinkAndImageUrlList $allLinkAndImageUrlsList
@@ -84,7 +84,7 @@ final class ResultSummary implements TestSummaryInterface {
    * @param \Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\LinkAndImageUrlList $urlsWithAnalyticsList
    * @param \Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\DomainAliasesList $domainAliasesList
    */
-  public function __construct(AggregatedSummary $aggregated, DKIMResult $dkimResult, HeadersResult $headersResult, LinkAndImageUrlList $allLinkAndImageUrlsList, LinkAndImageUrlListMatcherResult $linkAndImageUrlsMatcherResult, UrlList $pixelsList, UrlList $unsubscribeUrlList, LinkAndImageRedirectInfoList $urlsRedirectInfoList, LinkAndImageUrlList $urlsWithAnalyticsList, DomainAliasesList $domainAliasesList) {
+  public function __construct(ResultDetails $aggregated, DKIMResult $dkimResult, HeadersResult $headersResult, LinkAndImageUrlList $allLinkAndImageUrlsList, LinkAndImageUrlListMatcherResult $linkAndImageUrlsMatcherResult, UrlList $pixelsList, UrlList $unsubscribeUrlList, LinkAndImageRedirectInfoList $urlsRedirectInfoList, LinkAndImageUrlList $urlsWithAnalyticsList, DomainAliasesList $domainAliasesList) {
     $this->aggregated = $aggregated;
     $this->dkimResult = $dkimResult;
     $this->headersResult = $headersResult;
@@ -98,9 +98,9 @@ final class ResultSummary implements TestSummaryInterface {
   }
 
   /**
-   * @return \Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\AggregatedSummary
+   * @return \Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\ResultDetails
    */
-  public function getAggregated(): AggregatedSummary {
+  public function getAggregated(): ResultDetails {
     return $this->aggregated;
   }
 

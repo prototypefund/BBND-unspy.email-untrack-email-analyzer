@@ -20,5 +20,5 @@ $fileContent = file_get_contents($fileName);
 
 $analyzer = new Analyzer();
 $result = $analyzer->analyze($fileContent);
-$testSummary = $result->getResultSummary()->getTestSummary();
-print $result->getResultSummary()->getAsPlainText();
+$testSummary = $result->getResultDetails()->getTestSummary();
+print $result->getResultDetails()->getAsPlainText();

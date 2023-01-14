@@ -9,38 +9,38 @@ namespace Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult;
  *
  * For structure,
  *
- * @see \Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\ResultSummary
+ * @see \Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\ResultDetails
  *
  * @api Will be serialized in persistent storage, any change needs a migration.
  */
 final class AnalyzerResult {
 
-  protected ResultSummary $resultSummary;
+  protected ResultDetails $resultDetails;
 
   protected AnalyzerLog $fullLog;
 
-  protected ResultDetails $resultDetails;
+  protected ResultSummary $resultSummary;
 
   protected AnalyzerLog $sanitizedLog;
 
   /**
-   * @param \Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\ResultSummary $resultSummary
+   * @param \Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\ResultDetails $resultSummary
    * @param \Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\AnalyzerLog $fullLog
-   * @param \Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\ResultDetails $resultDetails
+   * @param \Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\ResultSummary $resultDetails
    * @param \Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\AnalyzerLog $sanitizedLog
    */
-  public function __construct(ResultSummary $resultSummary, AnalyzerLog $fullLog, ResultDetails $resultDetails, AnalyzerLog $sanitizedLog) {
-    $this->resultSummary = $resultSummary;
+  public function __construct(ResultDetails $resultSummary, AnalyzerLog $fullLog, ResultSummary $resultDetails, AnalyzerLog $sanitizedLog) {
+    $this->resultDetails = $resultSummary;
     $this->fullLog = $fullLog;
-    $this->resultDetails = $resultDetails;
+    $this->resultSummary = $resultDetails;
     $this->sanitizedLog = $sanitizedLog;
   }
 
   /**
-   * @return \Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\ResultSummary
+   * @return \Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\ResultDetails
    */
-  public function getResultSummary(): ResultSummary {
-    return $this->resultSummary;
+  public function getResultDetails(): ResultDetails {
+    return $this->resultDetails;
   }
 
   /**
@@ -51,10 +51,10 @@ final class AnalyzerResult {
   }
 
   /**
-   * @return \Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\ResultDetails
+   * @return \Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\ResultSummary
    */
-  public function getResultDetails(): ResultDetails {
-    return $this->resultDetails;
+  public function getResultSummary(): ResultSummary {
+    return $this->resultSummary;
   }
 
   /**

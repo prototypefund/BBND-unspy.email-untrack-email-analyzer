@@ -4,11 +4,11 @@ declare(strict_types=1);
 
 namespace Geeks4change\UntrackEmailAnalyzer\Analyzer;
 
-use Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\ResultDetails;
+use Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\ResultSummary;
 use Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\AnalyzerLogger;
 use Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\AnalyzerResult;
 use Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\LinkAndImageUrlList;
-use Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\ResultSummary;
+use Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\ResultDetails;
 use Geeks4change\UntrackEmailAnalyzer\Analyzer\NewsletterServicesMatcher\HeadersMatcher\AllServicesHeadersMatcher;
 use Geeks4change\UntrackEmailAnalyzer\Analyzer\NewsletterServicesMatcher\UrlsMatcher\AllServicesLinkAndImageUrlListMatcher;
 use Geeks4change\UntrackEmailAnalyzer\Globals;
@@ -101,9 +101,9 @@ class Analyzer {
     $urlWithAnalyticsList = (new AnalyticsDetector())->detectAnalytics($allLinkAndImageUrlsList);
 
     // @fixme Implement summary.
-    $resultDetails = new ResultDetails(NULL, '');
+    $resultSummary = new ResultSummary(NULL, '');
 
-    $resultSummary = new ResultSummary(
+    $resultDetails = new ResultDetails(
       $dkimResult,
       $headersResult,
       $allLinkAndImageUrlsList,
@@ -117,7 +117,7 @@ class Analyzer {
     $fullLog = $logger->freeze();
     // @fixme Add LogSanitizer.
     $sanitizedLog = $fullLog;
-    $analyzerResult = new AnalyzerResult($resultSummary, $fullLog, $resultDetails, $sanitizedLog);
+    $analyzerResult = new AnalyzerResult($resultDetails, $fullLog, $resultSummary, $sanitizedLog);
 
     Globals::deleteAll();
     return $analyzerResult;

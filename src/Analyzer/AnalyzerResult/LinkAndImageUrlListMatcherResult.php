@@ -9,7 +9,7 @@ use Geeks4change\UntrackEmailAnalyzer\Analyzer\TestSummary\TestSummaryInterface;
 /**
  * LinkAndImageUrlsMatcherResult, child of
  *
- * @see \Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\ResultSummary
+ * @see \Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\ResultDetails
  */
 final class LinkAndImageUrlListMatcherResult implements TestSummaryInterface {
 

@@ -60,6 +60,15 @@ use ZBateson\MailMimeParser\MailMimeParser;
  */
 class Analyzer {
 
+  protected RedirectDetectorInterface $redirectDetector;
+
+  /**
+   * @param \Geeks4change\UntrackEmailAnalyzer\Analyzer\RedirectDetectorInterface $redirectDetector
+   */
+  public function __construct(RedirectDetectorInterface $redirectDetector) {
+    $this->redirectDetector = $redirectDetector;
+  }
+
   public function analyze(string $rawMessage): AnalyzerResult {
     $logger = new AnalyzerLogger();
 
@@ -96,7 +105,7 @@ class Analyzer {
     // Fetch all resolved aliases.
     $domainAliasList = (new DomainAliasesResultFetcher())->fetch();
 
-    $urlsWithRedirectList = (new RedirectDetector())->detectRedirect($allLinkAndImageUrlsList, $unsubscribeUrlList);
+    $urlsWithRedirectList = ($this->redirectDetector)->detectRedirect($allLinkAndImageUrlsList, $unsubscribeUrlList);
     $urlWithAnalyticsList = (new AnalyticsDetector())->detectAnalytics($allLinkAndImageUrlsList);
 
     $resultDetails = new ResultDetails(

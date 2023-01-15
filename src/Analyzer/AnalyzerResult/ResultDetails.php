@@ -3,6 +3,8 @@
 declare(strict_types=1);
 namespace Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult;
 
+use Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\Arrayable\ToArrayInterface;
+use Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\Arrayable\ToArrayTrait;
 use Geeks4change\UntrackEmailAnalyzer\Analyzer\TestSummary\TestSummaryInterface;
 use Geeks4change\UntrackEmailAnalyzer\Utility\PrintCollector;
 
@@ -11,7 +13,9 @@ use Geeks4change\UntrackEmailAnalyzer\Utility\PrintCollector;
  *
  * @api Will be serialized in persistent storage, any change needs a migration.
  */
-final class ResultDetails implements TestSummaryInterface {
+final class ResultDetails implements TestSummaryInterface, ToArrayInterface {
+
+  use ToArrayTrait;
 
   protected DKIMResult $dkimResult;
 
@@ -19,7 +23,7 @@ final class ResultDetails implements TestSummaryInterface {
 
   protected LinkAndImageUrlList $allLinkAndImageUrlsList;
 
-  protected LinkAndImageUrlListMatcherResult  $linkAndImageUrlsMatcherResult;
+  protected LinkAndImageUrlListMatcherResult $linkAndImageUrlsMatcherResult;
 
   protected UrlList $pixelsList;
 

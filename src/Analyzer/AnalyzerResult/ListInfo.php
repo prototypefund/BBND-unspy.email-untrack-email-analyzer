@@ -4,7 +4,12 @@ declare(strict_types=1);
 
 namespace Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult;
 
-final class ListInfo {
+use Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\Arrayable\ToArrayInterface;
+use Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\Arrayable\ToArrayTrait;
+
+final class ListInfo implements ToArrayInterface {
+
+  use ToArrayTrait;
 
   protected string $emailLabel;
   protected string $emailAddress;

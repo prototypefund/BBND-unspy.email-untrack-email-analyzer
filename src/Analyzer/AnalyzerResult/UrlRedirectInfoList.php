@@ -4,6 +4,8 @@ declare(strict_types=1);
 
 namespace Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult;
 
+use Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\Arrayable\ToArrayInterface;
+use Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\Arrayable\ToArrayTrait;
 use Geeks4change\UntrackEmailAnalyzer\Analyzer\TestSummary\TestSummaryInterface;
 
 /**
@@ -11,7 +13,9 @@ use Geeks4change\UntrackEmailAnalyzer\Analyzer\TestSummary\TestSummaryInterface;
  *
  * @api Will be serialized in persistent storage, any change needs a migration.
  */
-final class UrlRedirectInfoList implements \IteratorAggregate, TestSummaryInterface {
+final class UrlRedirectInfoList implements \IteratorAggregate, TestSummaryInterface, ToArrayInterface {
+
+  use ToArrayTrait;
 
   /**
    * @var array<\Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\UrlRedirectInfo>

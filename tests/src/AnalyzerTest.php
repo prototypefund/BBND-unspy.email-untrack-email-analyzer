@@ -4,6 +4,7 @@ namespace Geeks4change\tests\UntrackEmailAnalyzer;
 
 use Geeks4change\UntrackEmailAnalyzer\Analyzer\Analyzer;
 use Geeks4change\UntrackEmailAnalyzer\Analyzer\TestSummary\TestSummaryTrait;
+use Geeks4change\UntrackEmailAnalyzer\Api;
 use Geeks4change\UntrackEmailAnalyzer\Utility\ThrowMethodTrait;
 use PHPUnit\Framework\TestCase;
 use Symfony\Component\Yaml\Yaml;
@@ -17,7 +18,7 @@ class AnalyzerTest extends TestCase {
    * @dataProvider provideEmailExamples
    */
   public function testAnalyzerWithExamples(string $id, string $email, array $expected): void {
-    $analyzer = new Analyzer();
+    $analyzer = Api::getAnalyzer();
     $result = $analyzer->analyze($email);
     $testSummary = $result->getResultDetails()->getTestSummary();
     $this->assertTestSummaryContains($expected, $testSummary);

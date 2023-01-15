@@ -2,6 +2,7 @@
 <?php
 
 use Geeks4change\UntrackEmailAnalyzer\Analyzer\Analyzer;
+use Geeks4change\UntrackEmailAnalyzer\Api;
 
 include 'vendor/autoload.php';
 
@@ -18,7 +19,7 @@ if (!file_exists($fileName)) {
 }
 $fileContent = file_get_contents($fileName);
 
-$analyzer = new Analyzer();
+$analyzer = Api::getAnalyzer();
 $result = $analyzer->analyze($fileContent);
 $testSummary = $result->getResultDetails()->getTestSummary();
 print $result->getResultDetails()->getAsPlainText();

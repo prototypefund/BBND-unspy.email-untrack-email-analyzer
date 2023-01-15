@@ -4,7 +4,6 @@ declare(strict_types=1);
 
 namespace Geeks4change\UntrackEmailAnalyzer\Analyzer;
 
-use Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\ResultSummary;
 use Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\AnalyzerLogger;
 use Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\AnalyzerResult;
 use Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\LinkAndImageUrlList;
@@ -100,9 +99,6 @@ class Analyzer {
     $urlsWithRedirectList = (new RedirectDetector())->detectRedirect($allLinkAndImageUrlsList, $unsubscribeUrlList);
     $urlWithAnalyticsList = (new AnalyticsDetector())->detectAnalytics($allLinkAndImageUrlsList);
 
-    // @fixme Implement summary.
-    $resultSummary = new ResultSummary(NULL, '');
-
     $resultDetails = new ResultDetails(
       $dkimResult,
       $headersResult,
@@ -114,6 +110,10 @@ class Analyzer {
       $urlWithAnalyticsList,
       $domainAliasList
     );
+
+    $resultSummary = (new ResultSummaryExtractor)
+      ->createResultSummary($message, $resultDetails);
+
     $fullLog = $logger->freeze();
     // @fixme Add LogSanitizer.
     $sanitizedLog = $fullLog;

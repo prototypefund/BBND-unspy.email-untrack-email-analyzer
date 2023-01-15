@@ -26,14 +26,19 @@ final class ResultSummary {
    */
   protected string $matchLevel;
 
+  protected ListInfo $listInfo;
+
   /**
    * @param string|null $serviceName
    * @param string $matchLevel
+   * @param \Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\ListInfo $listInfo
    */
-  public function __construct(?string $serviceName, string $matchLevel) {
+  public function __construct(?string $serviceName, string $matchLevel, ListInfo $listInfo) {
     $this->serviceName = $serviceName;
     $this->matchLevel = $matchLevel;
+    $this->listInfo = $listInfo;
   }
+
 
   /**
    * @return string|null
@@ -47,6 +52,13 @@ final class ResultSummary {
    */
   public function getMatchLevel(): string {
     return $this->matchLevel;
+  }
+
+  /**
+   * @return \Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\ListInfo
+   */
+  public function getListInfo(): ListInfo {
+    return $this->listInfo;
   }
 
 

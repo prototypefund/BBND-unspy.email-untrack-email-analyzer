@@ -1,0 +1,3 @@
+- List id only sometimes
+- Feedback id sometimes personalized
+- Fall back to from email address and label

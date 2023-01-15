@@ -23,7 +23,7 @@ if (!file_exists($fileName)) {
 }
 $fileContent = file_get_contents($fileName);
 
-$analyzer = Api::getAnalyzer();
+$analyzer = Api::getDebugAnalyzer();
 $result = $analyzer->analyze($fileContent);
 $testSummary = $result->getResultDetails()->getTestSummary();
 print Yaml::dump($testSummary, 99);

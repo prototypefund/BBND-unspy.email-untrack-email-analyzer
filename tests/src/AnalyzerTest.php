@@ -18,7 +18,7 @@ class AnalyzerTest extends TestCase {
    * @dataProvider provideEmailExamples
    */
   public function testAnalyzerWithExamples(string $id, string $email, array $expected): void {
-    $analyzer = Api::getAnalyzer();
+    $analyzer = Api::getDebugAnalyzer();
     $result = $analyzer->analyze($email);
     $testSummary = $result->getResultDetails()->getTestSummary();
     $this->assertTestSummaryContains($expected, $testSummary);

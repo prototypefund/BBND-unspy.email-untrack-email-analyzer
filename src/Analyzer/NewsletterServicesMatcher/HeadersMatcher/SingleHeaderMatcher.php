@@ -50,7 +50,7 @@ class SingleHeaderMatcher {
   protected function getHeaderValues(string $rawValue): \Iterator {
     // Care for domain names, like in ListUnsubscribe multi header.
     // Ignore port etc.
-    if (preg_match_all('~http(?:s)://(.+?)/~u', $rawValue, $matches)) {
+    if (preg_match_all('~https?://(.+?)/~u', $rawValue, $matches)) {
       // @todo Care for aliasing multiple domains once we need it.
       // By default it's group.match keys.
       $host = $matches[1][0];

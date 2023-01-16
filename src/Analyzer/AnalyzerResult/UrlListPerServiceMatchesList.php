@@ -4,6 +4,8 @@ declare(strict_types=1);
 
 namespace Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult;
 
+use Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\Arrayable\ToArrayInterface;
+use Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\Arrayable\ToArrayTrait;
 use Geeks4change\UntrackEmailAnalyzer\Analyzer\TestSummary\TestSummaryInterface;
 
 /**
@@ -13,7 +15,9 @@ use Geeks4change\UntrackEmailAnalyzer\Analyzer\TestSummary\TestSummaryInterface;
  *
  * @see \Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\UrlListMatchersResult
  */
-final class UrlListPerServiceMatchesList implements \IteratorAggregate, TestSummaryInterface {
+final class UrlListPerServiceMatchesList implements \IteratorAggregate, TestSummaryInterface, ToArrayInterface {
+
+  use ToArrayTrait;
 
   /**
    * @var array<\Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\UrlListPerServiceMatches>

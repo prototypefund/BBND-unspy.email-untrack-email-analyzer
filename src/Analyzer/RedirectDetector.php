@@ -12,14 +12,14 @@ use Geeks4change\UntrackEmailAnalyzer\RedirectResolver\AsyncGuzzleRedirectResolv
 use Geeks4change\UntrackEmailAnalyzer\RedirectResolver\AsyncPhpClientRedirectResolver;
 use Geeks4change\UntrackEmailAnalyzer\RedirectResolver\RedirectResolverInterface;
 
-final class RedirectDetector {
+final class RedirectDetector implements RedirectDetectorInterface {
 
   protected RedirectResolverInterface $redirectResolver;
 
-  public function __construct() {
+  public function __construct(RedirectResolverInterface $redirectResolver = NULL) {
     // Use guzzle instead of symfony client, as the other seems to trigger bot
     // service denial for rapidmail. Dunno why.
-    $this->redirectResolver = new AsyncGuzzleRedirectResolver();
+    $this->redirectResolver = $redirectResolver ?? new AsyncGuzzleRedirectResolver();
   }
 
   public function detectRedirect(LinkAndImageUrlList $linkAndImageUrlList, UrlList $urlsToExclude): LinkAndImageRedirectInfoList {

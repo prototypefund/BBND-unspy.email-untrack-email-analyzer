@@ -9,37 +9,59 @@ namespace Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult;
  *
  * For structure,
  *
- * @see \Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\Report
+ * @see \Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\ResultDetails
  *
  * @api Will be serialized in persistent storage, any change needs a migration.
  */
 final class AnalyzerResult {
 
-  protected Report $report;
+  protected ResultDetails $resultDetails;
 
-  protected AnalyzerLog $log;
+  protected AnalyzerLog $fullLog;
+
+  protected ResultSummary $resultSummary;
+
+  protected AnalyzerLog $sanitizedLog;
 
   /**
-   * @param \Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\Report $report
-   * @param \Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\AnalyzerLog $log
+   * @param \Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\ResultDetails $resultSummary
+   * @param \Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\AnalyzerLog $fullLog
+   * @param \Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\ResultSummary $resultDetails
+   * @param \Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\AnalyzerLog $sanitizedLog
    */
-  public function __construct(Report $report, AnalyzerLog $log) {
-    $this->report = $report;
-    $this->log = $log;
+  public function __construct(ResultDetails $resultSummary, AnalyzerLog $fullLog, ResultSummary $resultDetails, AnalyzerLog $sanitizedLog) {
+    $this->resultDetails = $resultSummary;
+    $this->fullLog = $fullLog;
+    $this->resultSummary = $resultDetails;
+    $this->sanitizedLog = $sanitizedLog;
   }
 
   /**
-   * @return \Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\Report
+   * @return \Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\ResultDetails
    */
-  public function getReport(): Report {
-    return $this->report;
+  public function getResultDetails(): ResultDetails {
+    return $this->resultDetails;
   }
 
   /**
    * @return \Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\AnalyzerLog
    */
-  public function getLog(): AnalyzerLog {
-    return $this->log;
+  public function getFullLog(): AnalyzerLog {
+    return $this->fullLog;
+  }
+
+  /**
+   * @return \Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\ResultSummary
+   */
+  public function getResultSummary(): ResultSummary {
+    return $this->resultSummary;
+  }
+
+  /**
+   * @return \Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\AnalyzerLog
+   */
+  public function getSanitizedLog(): AnalyzerLog {
+    return $this->sanitizedLog;
   }
 
 

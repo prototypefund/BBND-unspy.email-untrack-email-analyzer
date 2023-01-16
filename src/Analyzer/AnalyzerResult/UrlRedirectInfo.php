@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult;
 
-final class UrlRedirectInfo {
+final class UrlRedirectInfo implements \Stringable {
 
   protected string $originalUrl;
 
@@ -50,6 +50,10 @@ final class UrlRedirectInfo {
    */
   public function getOriginalUrlAndRedirectUrls(): array {
     return array_merge([$this->originalUrl], $this->redirectUrls);
+  }
+
+  public function __toString(): string {
+    return implode(' => ', $this->getOriginalUrlAndRedirectUrls());
   }
 
 }

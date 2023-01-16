@@ -2,6 +2,7 @@
 <?php
 
 use Geeks4change\UntrackEmailAnalyzer\Analyzer\Analyzer;
+use Geeks4change\UntrackEmailAnalyzer\Api;
 use Symfony\Component\Yaml\Yaml;
 
 include 'vendor/autoload.php';
@@ -22,7 +23,7 @@ if (!file_exists($fileName)) {
 }
 $fileContent = file_get_contents($fileName);
 
-$analyzer = new Analyzer();
+$analyzer = Api::getDebugAnalyzer();
 $result = $analyzer->analyze($fileContent);
-$testSummary = $result->getReport()->getTestSummary();
+$testSummary = $result->getResultDetails()->getTestSummary();
 print Yaml::dump($testSummary, 99);

@@ -4,12 +4,16 @@ declare(strict_types=1);
 
 namespace Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult;
 
+use Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\Arrayable\ToArrayInterface;
+use Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\Arrayable\ToArrayTrait;
 use Geeks4change\UntrackEmailAnalyzer\Analyzer\TestSummary\TestSummaryInterface;
 
 /**
  * Intermediary result.
  */
-final class LinkAndImageUrlList implements TestSummaryInterface {
+final class LinkAndImageUrlList implements TestSummaryInterface, ToArrayInterface {
+
+  use ToArrayTrait;
 
   protected UrlList $linkUrlList;
 

@@ -5,6 +5,7 @@ namespace Geeks4change\tests\UntrackEmailAnalyzer;
 use Geeks4change\UntrackEmailAnalyzer\Analyzer\Analyzer;
 use Geeks4change\UntrackEmailAnalyzer\Analyzer\TestSummary\TestSummaryTrait;
 use Geeks4change\UntrackEmailAnalyzer\Api;
+use Geeks4change\UntrackEmailAnalyzer\DirInfo;
 use Geeks4change\UntrackEmailAnalyzer\Utility\ThrowMethodTrait;
 use PHPUnit\Framework\TestCase;
 use Symfony\Component\Yaml\Yaml;
@@ -25,15 +26,7 @@ class AnalyzerTest extends TestCase {
   }
 
   public function provideEmailTestCases(): \Iterator {
-    $examplesDir = dirname(__DIR__) . '/examples';
-    foreach (glob($examplesDir . '/*.eml') as $emailFile) {
-      $id = basename($emailFile, '.eml');
-      $email = file_get_contents($emailFile);
-      $expectedFile = "$examplesDir/$id.expected.txt";
-      $expectedAsYaml = file_get_contents($expectedFile);
-      $expected = Yaml::parse($expectedAsYaml);
-      yield [$id, $email, $expected];
-    }
+    return DirInfo::provideEmailTestCases();
   }
 
 }

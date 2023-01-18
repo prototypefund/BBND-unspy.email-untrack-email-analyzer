@@ -20,7 +20,7 @@ final class Api {
   }
 
   public static function getTestEmailFileNames(): array {
-    return Collection::fromIterable(DirInfo::provideEmailTestCases())
+    return Collection::fromIterable(DirInfo::getTestEmailFileNames())
       ->map(fn($filePaths) => $filePaths[0])
       ->all(FALSE);
   }

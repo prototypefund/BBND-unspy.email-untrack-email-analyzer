@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace Geeks4change\UntrackEmailAnalyzer\Analyzer;
 
 use Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\DKIMResult;
+use Geeks4change\UntrackEmailAnalyzer\Utility\Max;
 use PHPMailer\DKIMValidator\DKIMException;
 use PHPMailer\DKIMValidator\Validator;
 
@@ -61,7 +62,7 @@ final class DKIMSignatureValidator {
         ($headerHasProblemMessage ? 1 : 2) :
         0;
     }
-    $messageStatus = max(0, ...$headerStatusList);
+    $messageStatus = Max::max(0, ...$headerStatusList);
     return ['red', 'yellow', 'green'][$messageStatus];
   }
 

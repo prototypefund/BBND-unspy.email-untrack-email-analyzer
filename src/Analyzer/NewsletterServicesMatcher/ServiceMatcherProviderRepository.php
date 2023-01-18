@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace Geeks4change\UntrackEmailAnalyzer\Analyzer\NewsletterServicesMatcher;
 
 use Geeks4change\UntrackEmailAnalyzer\DirInfo;
+use loophp\collection\Collection;
 use Symfony\Component\Yaml\Exception\ParseException;
 use Symfony\Component\Yaml\Yaml;
 
@@ -14,17 +15,8 @@ final class ServiceMatcherProviderRepository {
 
   public function getServiceMatcherProviderCollection(): ServiceMatcherProviderCollection {
     if (!isset($this->serviceMatcherProviderCollection)) {
-      $directory = DirInfo::getNewsletterServiceInfoDir();
       $serviceMatcherProviderCollectionBuilder = ServiceMatcherProviderCollection::builder();
-      $filePaths = glob("$directory/*.yml");
-      foreach ($filePaths as $filePath) {
-        $id = basename($filePath, '.yml');
-        if (!preg_match('/[a-z0-9_]+/u', $id)) {
-          throw new \LogicException("Invalid pattern ID: $id");
-        }
-        if (substr($id, 0, 1) === '_') {
-          continue;
-        }
+      foreach ($this->getPatternFilePaths() as $id => $filePath) {
         $yaml = file_get_contents($filePath);
         try {
           $array = Yaml::parse($yaml);
@@ -38,6 +30,20 @@ final class ServiceMatcherProviderRepository {
       $this->serviceMatcherProviderCollection = $serviceMatcherProviderCollectionBuilder->freeze();
     }
     return $this->serviceMatcherProviderCollection;
+  }
+
+  /**
+   * @return array<string, string>
+   */
+  public function getPatternFilePaths(): array {
+    $directory = DirInfo::getNewsletterServiceInfoDir();
+    // Re-key, filter, validate.
+    $indexedFilteredFilePaths = Collection::fromIterable(glob("$directory/*.yml"))
+      ->associate(static fn($id, $filePath) => basename($filePath, '.yml'))
+      ->filter(static fn($filePath, $id) => !str_starts_with($id, '_'))
+      ->filter(static fn($filePath, $id) => preg_match('/[a-z0-9_]+/u', $id) || throw new \LogicException("Invalid pattern ID: $id"))
+      ;
+    return $indexedFilteredFilePaths->all(FALSE);
   }
 
 }

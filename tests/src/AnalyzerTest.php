@@ -2,13 +2,11 @@
 
 namespace Geeks4change\tests\UntrackEmailAnalyzer;
 
-use Geeks4change\UntrackEmailAnalyzer\Analyzer\Analyzer;
 use Geeks4change\UntrackEmailAnalyzer\Analyzer\TestSummary\TestSummaryTrait;
 use Geeks4change\UntrackEmailAnalyzer\Api;
 use Geeks4change\UntrackEmailAnalyzer\DirInfo;
 use Geeks4change\UntrackEmailAnalyzer\Utility\ThrowMethodTrait;
 use PHPUnit\Framework\TestCase;
-use Symfony\Component\Yaml\Yaml;
 
 class AnalyzerTest extends TestCase {
 

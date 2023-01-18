@@ -15,16 +15,16 @@ class AnalyzerTest extends TestCase {
   use TestSummaryTrait;
 
   /**
-   * @dataProvider provideEmailExamples
+   * @dataProvider provideEmailTestCases
    */
-  public function testAnalyzerWithExamples(string $id, string $email, array $expected): void {
+  public function testAnalyzer(string $id, string $email, array $expected): void {
     $analyzer = Api::getDebugAnalyzer();
     $result = $analyzer->analyze($email);
     $testSummary = $result->getResultDetails()->getTestSummary();
     $this->assertTestSummaryContains($expected, $testSummary);
   }
 
-  public function provideEmailExamples(): \Iterator {
+  public function provideEmailTestCases(): \Iterator {
     $examplesDir = dirname(__DIR__) . '/examples';
     foreach (glob($examplesDir . '/*.eml') as $emailFile) {
       $id = basename($emailFile, '.eml');

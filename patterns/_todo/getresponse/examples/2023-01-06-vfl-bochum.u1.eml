@@ -1,0 +1,707 @@
+Return-Path: <bounce-107632601@bounce.newsletter.vfl-bochum.de>
+X-Spam-Checker-Version: SpamAssassin 3.4.4 (2020-01-24) on
+	dd20708.kasserver.com
+X-Original-To: hpot2212u1@untrack.email
+Delivered-To: m0666425@dd20708.kasserver.com
+X-policyd-weight: using cached result; rate: -7
+Authentication-Results: dd20708.kasserver.com;
+	dkim=pass (1024-bit key; unprotected) header.d=vfl-bochum.de header.i=@vfl-bochum.de header.a=rsa-sha256 header.s=85d3289f header.b=NbLXLonq;
+	dkim=pass (1024-bit key; unprotected) header.d=newsletter.vfl-bochum.de header.i=@newsletter.vfl-bochum.de header.a=rsa-sha256 header.s=s1024a header.b=axd95uEk;
+	dkim-atps=neutral
+Received: from mta-2.newsletter.vfl-bochum.de (mta-2.newsletter.vfl-bochum.de [91.239.185.133])
+	by dd20708.kasserver.com (Postfix) with ESMTPS id 46C38188045A
+	for <hpot2212u1@untrack.email>; Fri,  6 Jan 2023 14:00:45 +0100 (CET)
+Content-Type: multipart/alternative; boundary=cdfde55cac62829ecf33ea8fc6abd4a3
+Date: Fri, 06 Jan 2023 13:00:44 +0000
+DKIM-Signature: a=rsa-sha256; b=NbLXLonqQ6f4/HK8GdBgHbV4jw6uz+lnMAQ0a2UKI+YJ+Zckcg60Fh3YGjmu0e+8kdP6XAhoNSsmOYofWbzMljO8jWEjmyXTF0I/AdveTptR5RVVVVo0KM+B6ZrXTlmrke+ZnkT5qZ5DdLR+GveDN5RJ1NRMtZx87ck9gbzA33w=; bh=48BWZfYP5y33ejfs0LmofEb/2bkFcTNax/0F6H9jw80=; c=simple/simple; d=vfl-bochum.de; h=Sender:From:From:To:To:CC:Subject:Subject:Message-ID:Message-ID:Form-Sub:List-Unsubscribe:List-Unsubscribe:List-Unsubscribe-Post:List-Unsubscribe-Post:X-CSA-Complaints:X-CSA-Complaints; s=85d3289f; t=1673010044; v=1; x=1673096444;
+DKIM-Signature: a=rsa-sha256; b=axd95uEkQrxqp8RY7a3BiWCZLVwgqNDIMb3LuqVACJsU2/ZF9BHpsYtjzFLkKYe6+dSM73+YLSbTKLnY8kS9F3eP/cmfSvH+vWCyxDPDUL4N9HbNx5EcWigM58eZGtZfQDaVNQrTxwmF0+R4vCngupOiiWox8VUjyiW9m5Si5jw=; bh=48BWZfYP5y33ejfs0LmofEb/2bkFcTNax/0F6H9jw80=; c=simple/simple; d=newsletter.vfl-bochum.de; h=Sender:From:From:To:To:CC:Subject:Subject:Message-ID:Message-ID:Form-Sub:List-Unsubscribe:List-Unsubscribe:List-Unsubscribe-Post:List-Unsubscribe-Post:X-CSA-Complaints:X-CSA-Complaints; s=s1024a; t=1673010044; v=1; x=1673096444;
+From: "VfL Bochum 1848" <newsletter@vfl-bochum.de>
+List-Unsubscribe: <https://newsletter.vfl-bochum.de/one_click_unsubscribe.html?x=a62e&m=zZObcL&s=zVyFum2&u=dFaV9&z=Nii7nZt&>, <mailto:listunsubscribe@newsletter.vfl-bochum.de?subject=bochumvfl.xserial.s56evmI1nl%2BZKCMFG1ucR87Lix5%2BhY8ucKl0icU8h%2BnFSWtjr8%2BxZJaOPp5mZngT6Ypr%2BuKCllRzyFWzOJvwZ0Epsit0IshPNAeKzoKPeH5%2B3VdjFDRXLzPygGgVeMdMR%2FwS6%2F%2FCBqK4allYBwVfrY00Ug%3D%3D>
+List-Unsubscribe-Post: List-Unsubscribe=One-Click
+Message-ID: <bochumvfl.xserial.s56evmI1nl+ZKCMFG1ucR87Lix5+hY8ucKl0icU8h+nFSWtjr8+xZJaOPp5mZngT6Ypr+uKCllRzyFWzOJvwZ0Epsit0IshPNAeKzoKPeH5+3VdjFDRXLzPygGgVeMdMR/wS6//CBqK4allYBwVfrY00Ug==@newsletter.vfl-bochum.de>
+MIME-Version: 1.0
+Reply-To: newsletter@vfl-bochum.de
+Require-Recipient-Valid-Since: hpot2212u1@untrack.email; Mon, 02 Jan 2023 21:18:54 +0000
+Subject: Auf Leihbasis: VfL holt Kunde Malong
+To: hpot2212u1@untrack.email
+X-Complaints-To: abuse@newsletter.vfl-bochum.de
+X-CSA-Complaints: csa-complaints@eco.de
+X-Spamd-Bar: /
+X-Dmarc-Test: Allow
+X-KasLoop: m0666425
+
+
+--cdfde55cac62829ecf33ea8fc6abd4a3
+Content-Disposition: inline
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/plain; charset="UTF-8"
+
+=0A=0ADeine E-Mail wird nicht korrekt angezeigt? Im Browser ansehen! [https=
+://newsletter.vfl-bochum.de/view.html?x=3Da62e&m=3DzZObcL&mc=3Dn&s=3DzVyFum=
+2&u=3DdFaV9&z=3DNsG6CxT&]=0A=0A=0A=0A=0AVfL Bochum 1848 Newsletter [https:/=
+/multimedia.newsletter.vfl-bochum.de/bochumvfl-yRUMx/photos/9ab34a04-7178-4=
+0c3-b7db-7565ce2ebaff.png]=0A=0A=0A=0A=0A=0A[https://multimedia.newsletter.=
+vfl-bochum.de/bochumvfl-yRUMx/photos/7f64b4f6-6e40-4262-a53f-aa356abcac59.p=
+ng]=0AGl=C3=BCck auf ,=0A=0A=0Ader VfL Bochum 1848 darf einen weiteren Neuz=
+ugang begr=C3=BC=C3=9Fen: Pierre Kunde Malong wechselt bis zum 30.06.2023 a=
+uf Leihbasis zu den Blau-Wei=C3=9Fen. Darauf haben sich der VfL und der abg=
+ebende Verein Olympiakos Pir=C3=A4us geeinigt. Die Leihe des kamerunischen =
+Nationalspielers (35 Eins=C3=A4tze) beinhaltet zudem eine Kaufoption. F=C3=
+=BCr den 27-j=C3=A4hrigen Mittelfeldspieler ist es eine R=C3=BCckkehr in di=
+e Bundesliga, bereits von 2018 bis 2021 spielte Pierre Kunde f=C3=BCr den 1=
+.FSV Mainz 05 im deutschen Oberhaus und konnte in 68 Spielen vier Tore erzi=
+elen. Mit Olympiakos Pir=C3=A4us gewann er 2022 die Griechische Meisterscha=
+ft.=0A=0APatrick Fabian, Gesch=C3=A4ftsf=C3=BChrer Sport beim VfL Bochum 18=
+48, zeigt sich hocherfreut, dass =E2=80=9Eder Wechsel noch vor unserer Abre=
+ise ins Trainingslager realisiert werden konnte. Pierre Kunde Malong ist au=
+fgrund seiner technischen und taktischen F=C3=A4higkeiten sowie seiner Dyna=
+mik und Robustheit ein Gewinn f=C3=BCr unser Team. Dass er die Bundesliga k=
+ennt und mit Mainz auch schon den Kampf um den Klassenerhalt erfolgreich be=
+stritten hat, sind neben seiner internationalen Erfahrung weitere Pluspunkt=
+e, die f=C3=BCr ihn und seine Leihe sprechen. Wir wollen Pierre nun schnell=
+stm=C3=B6glich an die Mannschaft heranf=C3=BChren, daf=C3=BCr ist das Train=
+ingslager optimal.=E2=80=9C=0A=0APierre Kunde Malong wurde in Limb=C3=A9 in=
+ Kamerun geboren. Bei den =C3=B6rtlichen Best Stars lernte der das Fu=C3=9F=
+ball-ABC und wechselte bereits im Alter von 16 Jahren nach Europa. =C3=9Cbe=
+r die Station Alcobendas CF gelangte er zu Atl=C3=A9tico Madrid. F=C3=BCr d=
+ie =E2=80=9EColchoneros=E2=80=9C durchlief er die U19 und die Zweite Mannsc=
+haft, wurde nach Extremadura und Granada verliehen, ehe er sich 2018 dem 1.=
+FSV Mainz 05 anschloss. F=C3=BCr die Nationalmannschaft Kameruns hat er zwe=
+imal am Afrika-Cup (2019 und 2022) teilgenommen und geh=C3=B6rte zum WM-Kad=
+er 2022, wo er in den Gruppenspielen gegen Serbien und Brasilien zum Einsat=
+z kam.=0A=0ASpielerdatenPIERRE KUNDE MALONG=0A=0A=0AGeburtsdatum und -ort: =
+26.07.1995 in Limb=C3=A9/Kamerun=0AGr=C3=B6=C3=9Fe: 180 cm=0AGewicht: 79 kg=
+=0ANationalit=C3=A4t: Kamerun=0A=0ABundesliga Spiele/Tore: 68/4=0ASuper Lea=
+gue 1/GRE Spiele/Tore: 14/0=0ALaLiga 2/ESP Spiele/Tore: 37/5=0A=0AChampions=
+ League Spiele/Tore: 5/0=0AEuropa League Spiele/Tore: 16/0=0AL=C3=A4nderspi=
+ele/Tore: 35/1=0A=0ABisherige Vereine: Olympiakos Pir=C3=A4us (GRE, seit 20=
+21), 1.FSV Mainz 05 (2018-21), Atl=C3=A9tico Madrid (ESP, 2013-18), FC Gran=
+ada (ESP, 2017/18), Extremadura UD (ESP, 2016/17), Alcobendas CF (ESP, 2012=
+/13), Best Stars Limb=C3=A9 (CMR, bis 2012)=0A=0A=0A=0ATickets: zweites Hei=
+mspiel 2023 gegen Hoffenheim=0A=0A=0A[https://multimedia.newsletter.vfl-boc=
+hum.de/bochumvfl-yRUMx/photos/f0028c6f-4f48-4dc8-91fd-c5037133fa52.png] [ht=
+tps://newsletter.vfl-bochum.de/click.html?x=3Da62e&lc=3DsOsMIy&mc=3Dn&s=3Dz=
+VyFum2&u=3DdFaV9&z=3DNz5ZIkb&]=0AZum ersten R=C3=BCckrunden-Heimspiel empf=
+=C3=A4ngt der VfL Bochum 1848 die TSG 1899 Hoffenheim. Anpfiff der Partie i=
+m heimischen Vonovia Ruhrstadion ist am Samstag, den 04.02.2023 um 15:30 Uh=
+r.=0ASei dabei und unterst=C3=BCtze unsere Jungs=0A=0A=0AJetzt Kaufen [http=
+s://newsletter.vfl-bochum.de/click.html?x=3Da62e&lc=3DsOsMIj&mc=3Dn&s=3DzVy=
+Fum2&u=3DdFaV9&z=3DNNn4zMD&]=0A=0A=0A=0A=0A[https://multimedia.newsletter.v=
+fl-bochum.de/bochumvfl-yRUMx/photos/a08ab34b-16b2-4f40-846b-995957e91253.pn=
+g] [https://newsletter.vfl-bochum.de/click.html?x=3Da62e&lc=3DsOsMIf&mc=3Dn=
+&s=3DzVyFum2&u=3DdFaV9&z=3DNZgRCj0&]=0A=0A=0A[https://multimedia.newsletter=
+.vfl-bochum.de/bochumvfl-yRUMx/photos/ed270430-3b83-4d2a-aaa8-96d96881a84a.=
+png] [https://newsletter.vfl-bochum.de/click.html?x=3Da62e&lc=3DsOsMIb&mc=
+=3Dn&s=3DzVyFum2&u=3DdFaV9&z=3DNdT8VGh&]=0A=0A=0A[https://multimedia.newsle=
+tter.vfl-bochum.de/bochumvfl-yRUMx/photos/4a754b36-2608-4c66-961a-2a2fa1b93=
+0fd.png] [https://newsletter.vfl-bochum.de/click.html?x=3Da62e&lc=3DsOsMIY&=
+mc=3Dn&s=3DzVyFum2&u=3DdFaV9&z=3DNEDaiPP&]=0A=0A=0A[https://multimedia.news=
+letter.vfl-bochum.de/bochumvfl-yRUMx/photos/cb324391-c6ad-40d4-8b16-ba87b50=
+2900e.png] [https://newsletter.vfl-bochum.de/click.html?x=3Da62e&lc=3DsOsMI=
+m&mc=3Dn&s=3DzVyFum2&u=3DdFaV9&z=3DNsSAzic&]=0A=0A=0A[https://multimedia.ne=
+wsletter.vfl-bochum.de/bochumvfl-yRUMx/photos/cb8d7363-2357-43fa-b607-e3fa5=
+b489e38.png] [https://newsletter.vfl-bochum.de/click.html?x=3Da62e&lc=3DsOs=
+MIM&mc=3Dn&s=3DzVyFum2&u=3DdFaV9&z=3DNzUXiCO&]=0A=0A=0A[https://multimedia.=
+newsletter.vfl-bochum.de/bochumvfl-yRUMx/photos/dbed4af0-e289-48fc-9b5a-664=
+bf7fb82e4.png] [https://newsletter.vfl-bochum.de/click.html?x=3Da62e&lc=3Ds=
+OsMIW&mc=3Dn&s=3DzVyFum2&u=3DdFaV9&z=3DNz1UkHH&]=0A=0A=0A=0A=0A[https://mul=
+timedia.newsletter.vfl-bochum.de/bochumvfl-yRUMx/photos/860e1595-c615-4d6a-=
+900a-0f1a9ee945ac.png]=0A=0A=0A=0AVfL Bochum 1848 GmbH & Co. KGaA, Castrope=
+r Stra=C3=9Fe, 145, 44791, Bochum, Germany=0A=0ASie k=C3=B6nnen sich jederz=
+eit abmelden [https://newsletter.vfl-bochum.de/unsubscribe.html?x=3Da62e&m=
+=3DzZObcL&mc=3Dn&s=3DzVyFum2&u=3DdFaV9&z=3DNzfDDJ&pt=3Dunsubscribe] oder Ih=
+re Kontaktdaten bearbeiten [https://newsletter.vfl-bochum.de/change_details=
+.html?x=3Da62e&m=3DzZObcL&s=3DzVyFum2&u=3DdFaV9&z=3DNNgx8tV&pt=3Dchange_det=
+ails].=0A=
+
+--cdfde55cac62829ecf33ea8fc6abd4a3
+Content-Disposition: inline
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/html; charset="UTF-8"
+
+<!doctype html><html xmlns=3D"http://www.w3.org/1999/xhtml" xmlns:v=3D"urn:=
+schemas-microsoft-com:vml" xmlns:o=3D"urn:schemas-microsoft-com:office:offi=
+ce"><head><title></title><!--[if !mso]><!--><meta http-equiv=3D"X-UA-Compat=
+ible" content=3D"IE=3Dedge"><!--<![endif]--><meta http-equiv=3D"Content-Typ=
+e" content=3D"text/html; charset=3DUTF-8"><meta name=3D"viewport" content=
+=3D"width=3Ddevice-width,initial-scale=3D1"><style type=3D"text/css">#outlo=
+ok a { padding:0; }=0A          body { margin:0;padding:0;-webkit-text-size=
+-adjust:100%;-ms-text-size-adjust:100%; }=0A          table, td { border-co=
+llapse:collapse;mso-table-lspace:0pt;mso-table-rspace:0pt; }=0A          im=
+g { border:0;height:auto;line-height:100%; outline:none;text-decoration:non=
+e;-ms-interpolation-mode:bicubic; }=0A          p { display:block;margin:13=
+px 0; }</style><!--[if mso]>=0A        <noscript>=0A        <xml>=0A       =
+ <o:OfficeDocumentSettings>=0A          <o:AllowPNG/>=0A          <o:Pixels=
+PerInch>96</o:PixelsPerInch>=0A        </o:OfficeDocumentSettings>=0A      =
+  </xml>=0A        </noscript>=0A        <![endif]--><!--[if lte mso 11]>=
+=0A        <style type=3D"text/css">=0A          .mj-outlook-group-fix { wi=
+dth:100% !important; }=0A        </style>=0A        <![endif]--><style type=
+=3D"text/css">@media only screen and (min-width:480px) {=0A        .mj-colu=
+mn-per-100 { width:100% !important; max-width: 100%; }=0A.mj-column-per-16-=
+666666666666764 { width:16.666666666666764% !important; max-width: 16.66666=
+6666666764%; }=0A      }</style><style media=3D"screen and (min-width:480px=
+)">.moz-text-html .mj-column-per-100 { width:100% !important; max-width: 10=
+0%; }=0A.moz-text-html .mj-column-per-16-666666666666764 { width:16.6666666=
+66666764% !important; max-width: 16.666666666666764%; }</style><style type=
+=3D"text/css">@media only screen and (max-width:480px) {=0A      table.mj-f=
+ull-width-mobile { width: 100% !important; }=0A      td.mj-full-width-mobil=
+e { width: auto !important; }=0A    }</style><style type=3D"text/css">@medi=
+a (max-width: 479px) {=0D=0A.hide-on-mobile {=0D=0Adisplay: none !important=
+;=0D=0A}=0D=0A}.gr-headerviewonline-jeeqsg a,=0D=0A.gr-headerviewonline-jee=
+qsg a:visited {=0D=0Acolor: #4F4F4F;=0D=0Atext-decoration: none;=0D=0A}.gr-=
+mlimage-wmcoci img {=0D=0Abox-sizing: border-box;=0D=0A}=0D=0A@media (min-w=
+idth: 480px) {=0D=0A.gr-mlimage-rkoslu {=0D=0Aheight: 106px !important;=0D=
+=0A}=0D=0A}.gr-mlimage-wmcoci img {=0D=0Abox-sizing: border-box;=0D=0A}=0D=
+=0A@media (min-width: 480px) {=0D=0A.gr-mlimage-mdelhc {=0D=0Aheight: 371px=
+ !important;=0D=0A}=0D=0A}.gr-mltext-mshdhr a,=0D=0A.gr-mltext-mshdhr a:vis=
+ited {=0D=0Atext-decoration: none;=0D=0A}.gr-mltext-tyixxi a,=0D=0A.gr-mlte=
+xt-tyixxi a:visited {=0D=0Atext-decoration: none;=0D=0A}.gr-mlimage-wmcoci =
+img {=0D=0Abox-sizing: border-box;=0D=0A}=0D=0A@media (min-width: 480px) {=
+=0D=0A.gr-mlimage-mbojfb {=0D=0Aheight: 365px !important;=0D=0A}=0D=0A}.gr-=
+mltext-bdrwgo a,=0D=0A.gr-mltext-bdrwgo a:visited {=0D=0Atext-decoration: n=
+one;=0D=0A}.gr-mlbutton-jltatm p {=0D=0Adirection: ltr;=0D=0A}.gr-mlimage-w=
+mcoci img {=0D=0Abox-sizing: border-box;=0D=0A}=0D=0A@media (min-width: 480=
+px) {=0D=0A.gr-mlimage-juygmo {=0D=0Aheight: 61px !important;=0D=0A}=0D=0A}=
+.gr-mlimage-wmcoci img {=0D=0Abox-sizing: border-box;=0D=0A}=0D=0A@media (m=
+in-width: 480px) {=0D=0A.gr-mlimage-gecehl {=0D=0Aheight: 61px !important;=
+=0D=0A}=0D=0A}.gr-mlimage-wmcoci img {=0D=0Abox-sizing: border-box;=0D=0A}=
+=0D=0A@media (min-width: 480px) {=0D=0A.gr-mlimage-lnyyoc {=0D=0Aheight: 61=
+px !important;=0D=0A}=0D=0A}.gr-mlimage-wmcoci img {=0D=0Abox-sizing: borde=
+r-box;=0D=0A}=0D=0A@media (min-width: 480px) {=0D=0A.gr-mlimage-tlijvo {=0D=
+=0Aheight: 61px !important;=0D=0A}=0D=0A}.gr-mlimage-wmcoci img {=0D=0Abox-=
+sizing: border-box;=0D=0A}=0D=0A@media (min-width: 480px) {=0D=0A.gr-mlimag=
+e-xjftqo {=0D=0Aheight: 61px !important;=0D=0A}=0D=0A}.gr-mlimage-wmcoci im=
+g {=0D=0Abox-sizing: border-box;=0D=0A}=0D=0A@media (min-width: 480px) {=0D=
+=0A.gr-mlimage-bkvdxh {=0D=0Aheight: 61px !important;=0D=0A}=0D=0A}.gr-mlim=
+age-wmcoci img {=0D=0Abox-sizing: border-box;=0D=0A}=0D=0A@media (min-width=
+: 480px) {=0D=0A.gr-mlimage-bporhg {=0D=0Aheight: 100px !important;=0D=0A}=
+=0D=0A}.gr-footer-ujuagm a,=0D=0A.gr-footer-ujuagm a:visited {=0D=0Acolor: =
+#BDBDBD;=0D=0Atext-decoration: underline;=0D=0A}</style></head><body style=
+=3D"word-spacing:normal;background-color:#FFFFFF;"><div style=3D"background=
+-color:#FFFFFF;">  <table align=3D"center" border=3D"0" cellpadding=3D"0" c=
+ellspacing=3D"0" role=3D"presentation" style=3D"background:#FFFFFF;backgrou=
+nd-color:#FFFFFF;width:100%;"><tbody><tr><td><!--[if mso | IE]><table align=
+=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" class=3D"" rol=
+e=3D"presentation" style=3D"width:660px;" width=3D"660" bgcolor=3D"#FFFFFF"=
+ ><tr><td style=3D"line-height:0px;font-size:0px;mso-line-height-rule:exact=
+ly;"><![endif]--><div style=3D"margin:0px auto;max-width:660px;"><table ali=
+gn=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"pres=
+entation" style=3D"width:100%;"><tbody><tr><td style=3D"border-bottom:0 non=
+e #000000;border-left:0 none #000000;border-right:0 none #000000;border-top=
+:0 none #000000;direction:ltr;font-size:0px;padding:5px;text-align:center;"=
+><!--[if mso | IE]><table role=3D"presentation" border=3D"0" cellpadding=3D=
+"0" cellspacing=3D"0"><tr><td class=3D"" style=3D"vertical-align:top;width:=
+650px;" ><![endif]--><div class=3D"mj-column-per-100 mj-outlook-group-fix" =
+style=3D"font-size:0px;text-align:left;direction:ltr;display:inline-block;v=
+ertical-align:top;width:100%;"><table border=3D"0" cellpadding=3D"0" cellsp=
+acing=3D"0" role=3D"presentation" width=3D"100%"><tbody><tr><td style=3D"ba=
+ckground-color:transparent;border-bottom:none;border-left:none;border-right=
+:none;border-top:none;vertical-align:top;padding:0;"><table border=3D"0" ce=
+llpadding=3D"0" cellspacing=3D"0" role=3D"presentation" width=3D"100%"><tbo=
+dy><tr><td align=3D"center" class=3D"gr-headerviewonline-tfookn gr-headervi=
+ewonline-jeeqsg" style=3D"font-size:0px;padding:5px;word-break:break-word;"=
+><div style=3D"font-family:Arial;font-size:8px;font-style:normal;line-heigh=
+t:1;text-align:center;text-decoration:none;color:#000000;"><div><a style=3D=
+"color: #4F4F4F;" href=3D"https://newsletter.vfl-bochum.de/view.html?x=3Da6=
+2e&m=3DzZObcL&mc=3Dn&s=3DzVyFum2&u=3DdFaV9&z=3DNdTrVP4&" target=3D"_blank">=
+Deine E-Mail wird nicht korrekt angezeigt? Im Browser ansehen!</a></div></d=
+iv></td></tr></tbody></table></td></tr></tbody></table></div><!--[if mso | =
+IE]></td></tr></table><![endif]--></td></tr></tbody></table></div><!--[if m=
+so | IE]></td></tr></table><![endif]--></td></tr></tbody></table><table ali=
+gn=3D"center" background=3D"https://multimedia.getresponse360.pl/bochumvfl-=
+yRUMx/photos/82db9f9b-4bd9-4081-86a7-f8b78b13737b.png" border=3D"0" cellpad=
+ding=3D"0" cellspacing=3D"0" role=3D"presentation" style=3D"background:#F2F=
+2F2 url('https://multimedia.getresponse360.pl/bochumvfl-yRUMx/photos/82db9f=
+9b-4bd9-4081-86a7-f8b78b13737b.png') center top / auto repeat;background-po=
+sition:center top;background-repeat:repeat;background-size:auto;width:100%;=
+"><tbody><tr><td><!--[if mso | IE]><v:rect style=3D"mso-width-percent:1000;=
+" xmlns:v=3D"urn:schemas-microsoft-com:vml" fill=3D"true" stroke=3D"false">=
+<v:fill origin=3D"0.5, 0" position=3D"0.5, 0" src=3D"https://multimedia.get=
+response360.pl/bochumvfl-yRUMx/photos/82db9f9b-4bd9-4081-86a7-f8b78b13737b.=
+png" color=3D"#F2F2F2" type=3D"tile" /><v:textbox style=3D"mso-fit-shape-to=
+-text:true" inset=3D"0,0,0,0"><table align=3D"center" border=3D"0" cellpadd=
+ing=3D"0" cellspacing=3D"0" class=3D"" role=3D"presentation" style=3D"width=
+:660px;" width=3D"660" bgcolor=3D"#F2F2F2" ><tr><td style=3D"line-height:0p=
+x;font-size:0px;mso-line-height-rule:exactly;"><![endif]--><div style=3D"ma=
+rgin:0px auto;max-width:660px;"><div style=3D"line-height:0;font-size:0;"><=
+table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" rol=
+e=3D"presentation" style=3D"width:100%;"><tbody><tr><td style=3D"border-bot=
+tom:0 none #000000;border-left:0 none #000000;border-right:0 none #000000;b=
+order-top:0 none #000000;direction:ltr;font-size:0px;padding:0 0 5px 0;text=
+-align:center;"><!--[if mso | IE]><table role=3D"presentation" border=3D"0"=
+ cellpadding=3D"0" cellspacing=3D"0"><tr><td class=3D"" style=3D"vertical-a=
+lign:top;width:660px;" ><![endif]--><div class=3D"mj-column-per-100 mj-outl=
+ook-group-fix" style=3D"font-size:0px;text-align:left;direction:ltr;display=
+:inline-block;vertical-align:top;width:100%;"><table border=3D"0" cellpaddi=
+ng=3D"0" cellspacing=3D"0" role=3D"presentation" width=3D"100%"><tbody><tr>=
+<td style=3D"background-color:transparent;border-bottom:none;border-left:no=
+ne;border-right:none;border-top:none;vertical-align:top;padding:0;"><table =
+border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentation" widt=
+h=3D"100%"><tbody><tr><td align=3D"center" class=3D"gr-mlimage-wmcoci gr-ml=
+image-rkoslu link-id-" style=3D"font-size:0px;padding:0;word-break:break-wo=
+rd;"><table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presen=
+tation" style=3D"border-collapse:collapse;border-spacing:0px;"><tbody><tr><=
+td style=3D"width:660px;"><img alt=3D"VfL Bochum 1848 Newsletter" height=3D=
+"auto" src=3D"https://multimedia.newsletter.vfl-bochum.de/bochumvfl-yRUMx/p=
+hotos/9ab34a04-7178-40c3-b7db-7565ce2ebaff.png" style=3D"border:0;border-le=
+ft:0 none #000000;border-right:0 none #000000;border-top:0 none #000000;bor=
+der-bottom:0 none #000000;border-radius:0;display:block;outline:none;text-d=
+ecoration:none;height:auto;width:100%;font-size:13px;" width=3D"660"></td><=
+/tr></tbody></table></td></tr></tbody></table></td></tr></tbody></table></d=
+iv><!--[if mso | IE]></td></tr></table><![endif]--></td></tr></tbody></tabl=
+e></div></div><!--[if mso | IE]></td></tr></table></v:textbox></v:rect><![e=
+ndif]--></td></tr></tbody></table><table align=3D"center" border=3D"0" cell=
+padding=3D"0" cellspacing=3D"0" role=3D"presentation" style=3D"width:100%;"=
+><tbody><tr><td><!--[if mso | IE]><table align=3D"center" border=3D"0" cell=
+padding=3D"0" cellspacing=3D"0" class=3D"" role=3D"presentation" style=3D"w=
+idth:660px;" width=3D"660" ><tr><td style=3D"line-height:0px;font-size:0px;=
+mso-line-height-rule:exactly;"><![endif]--><div style=3D"margin:0px auto;ma=
+x-width:660px;"><table align=3D"center" border=3D"0" cellpadding=3D"0" cell=
+spacing=3D"0" role=3D"presentation" style=3D"width:100%;"><tbody><tr><td st=
+yle=3D"border-bottom:0 none #000000;border-left:0 none #000000;border-right=
+:0 none #000000;border-top:0 none #000000;direction:ltr;font-size:0px;paddi=
+ng:0 0 10px 0;text-align:center;"><!--[if mso | IE]><table role=3D"presenta=
+tion" border=3D"0" cellpadding=3D"0" cellspacing=3D"0"><tr><td class=3D"" s=
+tyle=3D"vertical-align:top;width:660px;" ><![endif]--><div class=3D"mj-colu=
+mn-per-100 mj-outlook-group-fix" style=3D"font-size:0px;text-align:left;dir=
+ection:ltr;display:inline-block;vertical-align:top;width:100%;"><table bord=
+er=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentation" width=3D=
+"100%"><tbody><tr><td style=3D"background-color:transparent;border-bottom:n=
+one;border-left:none;border-right:none;border-top:none;vertical-align:top;p=
+adding:0;"><table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"=
+presentation" width=3D"100%"><tbody><tr><td style=3D"font-size:0px;word-bre=
+ak:break-word;"><div style=3D"height:10px;line-height:10px;">&#8202;</div><=
+/td></tr><tr><td align=3D"center" class=3D"gr-mlimage-wmcoci gr-mlimage-mde=
+lhc link-id-9197853919b0" style=3D"font-size:0px;padding:0;word-break:break=
+-word;"><table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"pre=
+sentation" style=3D"border-collapse:collapse;border-spacing:0px;"><tbody><t=
+r><td style=3D"width:660px;"><img alt=3D"" height=3D"auto" src=3D"https://m=
+ultimedia.newsletter.vfl-bochum.de/bochumvfl-yRUMx/photos/7f64b4f6-6e40-426=
+2-a53f-aa356abcac59.png" style=3D"border:0;border-left:0 none #000000;borde=
+r-right:0 none #000000;border-top:0 none #000000;border-bottom:0 none #0000=
+00;border-radius:0;display:block;outline:none;text-decoration:none;height:a=
+uto;width:100%;font-size:13px;" width=3D"660"></td></tr></tbody></table></t=
+d></tr><tr><td align=3D"left" class=3D"gr-mltext-ggsohh gr-mltext-mshdhr" s=
+tyle=3D"background:#FFFFFF;font-size:0px;padding:5px;word-break:break-word;=
+"><div style=3D"font-family:Ubuntu, Helvetica, Arial, sans-serif;font-size:=
+13px;line-height:1.4;text-align:left;color:#000000;"><div style=3D"text-ali=
+gn: left;"><p style=3D"font-family:Arial;font-size:14px;margin-top:0px;marg=
+in-bottom:0px;font-weight:normal;color:#000000;"><span style=3D"color: #005=
+AA4"><strong><span style=3D"font-size: 16px"><span style=3D"font-family: Ar=
+ial">Gl=C3=BCck auf </span></span></strong></span><span style=3D"color: #00=
+5AA4"><strong><span style=3D"font-size: 16px"><span style=3D"font-family: A=
+rial"></span></span></strong></span><span style=3D"color: #005AA4"><strong>=
+<span style=3D"font-size: 16px"><span style=3D"font-family: Arial">,</span>=
+</span></strong></span></p></div><div style=3D"text-align: left;"><p style=
+=3D"font-family:Arial;font-size:14px;margin-top:0px;margin-bottom:0px;font-=
+weight:normal;color:#000000;"><br></p></div><div style=3D"text-align: left;=
+"><p style=3D"font-family:Arial;font-size:14px;margin-top:0px;margin-bottom=
+:0px;font-weight:normal;color:#000000;"><span style=3D"color: #000000"><str=
+ong><span style=3D"font-size: 14px"><span style=3D"font-family: Arial">der =
+VfL Bochum 1848 darf einen weiteren Neuzugang begr=C3=BC=C3=9Fen: Pierre Ku=
+nde Malong wechselt bis zum 30.06.2023 auf Leihbasis zu den Blau-Wei=C3=9Fe=
+n. Darauf haben sich der VfL und der abgebende Verein Olympiakos Pir=C3=A4u=
+s geeinigt. Die Leihe des kamerunischen Nationalspielers (35 Eins=C3=A4tze)=
+ beinhaltet zudem eine Kaufoption. F=C3=BCr den 27-j=C3=A4hrigen Mittelfeld=
+spieler ist es eine R=C3=BCckkehr in die Bundesliga, bereits von 2018 bis 2=
+021 spielte Pierre Kunde f=C3=BCr den 1.FSV Mainz 05 im deutschen Oberhaus =
+und konnte in 68 Spielen vier Tore erzielen. Mit Olympiakos Pir=C3=A4us gew=
+ann er 2022 die Griechische Meisterschaft.</span></span></strong></span></p=
+></div><p style=3D"font-family:Arial;font-size:14px;margin-top:0px;margin-b=
+ottom:0px;font-weight:normal;color:#000000;"><span style=3D"color: #000000"=
+><span style=3D"font-size: 14px"><span style=3D"font-family: Arial"><span s=
+tyle=3D"font-weight: 400">=C2=A0</span></span></span></span></p><p style=3D=
+"font-family:Arial;font-size:14px;margin-top:0px;margin-bottom:0px;font-wei=
+ght:normal;color:#000000;"><span style=3D"color: #000000"><span style=3D"fo=
+nt-size: 14px"><span style=3D"font-family: Arial"><span style=3D"font-weigh=
+t: 400">Patrick Fabian, Gesch=C3=A4ftsf=C3=BChrer Sport beim VfL Bochum 184=
+8, zeigt sich hocherfreut, dass =E2=80=9E</span></span></span></span><span =
+style=3D"color: #000000"><em><span style=3D"font-size: 14px"><span style=3D=
+"font-family: Arial"><span style=3D"font-weight: 400">der Wechsel noch vor =
+unserer Abreise ins Trainingslager realisiert werden konnte. Pierre Kunde M=
+along ist aufgrund seiner technischen und taktischen F=C3=A4higkeiten sowie=
+ seiner Dynamik und Robustheit ein Gewinn f=C3=BCr unser Team. Dass er die =
+Bundesliga kennt und mit Mainz auch schon den Kampf um den Klassenerhalt er=
+folgreich bestritten hat, sind neben seiner internationalen Erfahrung weite=
+re Pluspunkte, die f=C3=BCr ihn und seine Leihe sprechen. Wir wollen Pierre=
+ nun schnellstm=C3=B6glich an die Mannschaft heranf=C3=BChren, daf=C3=BCr i=
+st das Trainingslager optimal</span></span></span></em></span><span style=
+=3D"color: #000000"><span style=3D"font-size: 14px"><span style=3D"font-fam=
+ily: Arial"><span style=3D"font-weight: 400">.=E2=80=9C</span></span></span=
+></span></p><p style=3D"font-family:Arial;font-size:14px;margin-top:0px;mar=
+gin-bottom:0px;font-weight:normal;color:#000000;"><span style=3D"color: #00=
+0000"><span style=3D"font-size: 14px"><span style=3D"font-family: Arial"><s=
+pan style=3D"font-weight: 400">=C2=A0</span></span></span></span></p><p sty=
+le=3D"font-family:Arial;font-size:14px;margin-top:0px;margin-bottom:0px;fon=
+t-weight:normal;color:#000000;"><span style=3D"color: #000000"><span style=
+=3D"font-size: 14px"><span style=3D"font-family: Arial"><span style=3D"font=
+-weight: 400">Pierre Kunde Malong wurde in Limb=C3=A9 in Kamerun geboren. B=
+ei den =C3=B6rtlichen Best Stars lernte der das Fu=C3=9Fball-ABC und wechse=
+lte bereits im Alter von 16 Jahren nach Europa. =C3=9Cber die Station Alcob=
+endas CF gelangte er zu Atl=C3=A9tico Madrid. F=C3=BCr die =E2=80=9EColchon=
+eros=E2=80=9C durchlief er die U19 und die Zweite Mannschaft, wurde nach Ex=
+tremadura und Granada verliehen, ehe er sich 2018 dem 1.FSV Mainz 05 anschl=
+oss. F=C3=BCr die Nationalmannschaft Kameruns hat er zweimal am Afrika-Cup =
+(2019 und 2022) teilgenommen und geh=C3=B6rte zum WM-Kader 2022, wo er in d=
+en Gruppenspielen gegen Serbien und Brasilien zum Einsatz kam.</span></span=
+></span></span></p><p style=3D"font-family:Arial;font-size:14px;margin-top:=
+0px;margin-bottom:0px;font-weight:normal;color:#000000;"><span style=3D"col=
+or: #000000"><em><strong><span style=3D"font-size: 14px"><span style=3D"fon=
+t-family: Arial"><span style=3D"font-weight: 400">=C2=A0</span></span></spa=
+n></strong></em></span></p><p style=3D"font-family:Arial;font-size:14px;mar=
+gin-top:0px;margin-bottom:0px;font-weight:normal;color:#000000;"><span styl=
+e=3D"color: #000000"><strong><span style=3D"font-size: 14px"><span style=3D=
+"font-family: Arial"><span style=3D"font-weight: 400"><u>Spielerdaten</u></=
+span></span></span></strong></span><span style=3D"color: #000000"><span sty=
+le=3D"font-size: 14px"><span style=3D"font-family: Arial"><u>&nbsp;PIERRE K=
+UNDE MALONG</u></span></span></span></p><p style=3D"font-family:Arial;font-=
+size:14px;margin-top:0px;margin-bottom:0px;font-weight:normal;color:#000000=
+;"><br></p><p style=3D"font-family:Arial;font-size:14px;margin-top:0px;marg=
+in-bottom:0px;font-weight:normal;color:#000000;"><span style=3D"color: #000=
+000"><span style=3D"font-size: 14px"><span style=3D"font-family: Arial"><sp=
+an style=3D"font-weight: 400">Geburtsdatum und -ort:=C2=A0=C2=A0=C2=A0=C2=
+=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=
+ 26.07.1995 in Limb=C3=A9/Kamerun</span></span></span></span><br><span styl=
+e=3D"color: #000000"><span style=3D"font-size: 14px"><span style=3D"font-fa=
+mily: Arial"><span style=3D"font-weight: 400">Gr=C3=B6=C3=9Fe:=C2=A0=C2=A0=
+=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=
+=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=
+=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=
+=A0=C2=A0=C2=A0=C2=A0=C2=A0 180 cm</span></span></span></span><br><span sty=
+le=3D"color: #000000"><span style=3D"font-size: 14px"><span style=3D"font-f=
+amily: Arial"><span style=3D"font-weight: 400">Gewicht:=C2=A0=C2=A0=C2=A0=
+=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=
+=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=
+=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=
+=A0=C2=A079 kg</span></span></span></span><br><span style=3D"color: #000000=
+"><span style=3D"font-size: 14px"><span style=3D"font-family: Arial"><span =
+style=3D"font-weight: 400">Nationalit=C3=A4t: =C2=A0=C2=A0=C2=A0=C2=A0=C2=
+=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=
+=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=
+=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0 Kamerun</span></span></span></span></p><p=
+ style=3D"font-family:Arial;font-size:14px;margin-top:0px;margin-bottom:0px=
+;font-weight:normal;color:#000000;"><span style=3D"color: #000000"><span st=
+yle=3D"font-size: 14px"><span style=3D"font-family: Arial"><span style=3D"f=
+ont-weight: 400">=C2=A0</span></span></span></span></p><p style=3D"font-fam=
+ily:Arial;font-size:14px;margin-top:0px;margin-bottom:0px;font-weight:norma=
+l;color:#000000;"><span style=3D"color: #000000"><span style=3D"font-size: =
+14px"><span style=3D"font-family: Arial"><span style=3D"font-weight: 400">B=
+undesliga Spiele/Tore:=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=
+=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0 68/4</span></span></span></sp=
+an><br><span style=3D"color: #000000"><span style=3D"font-size: 14px"><span=
+ style=3D"font-family: Arial"><span style=3D"font-weight: 400">Super League=
+ 1/GRE Spiele/Tore: 14/0</span></span></span></span><br><span style=3D"colo=
+r: #000000"><span style=3D"font-size: 14px"><span style=3D"font-family: Ari=
+al"><span style=3D"font-weight: 400">LaLiga 2/ESP Spiele/Tore:=C2=A0=C2=A0=
+=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A037/=
+5</span></span></span></span></p><p style=3D"font-family:Arial;font-size:14=
+px;margin-top:0px;margin-bottom:0px;font-weight:normal;color:#000000;"><br>=
+<span style=3D"color: #000000"><span style=3D"font-size: 14px"><span style=
+=3D"font-family: Arial"><span style=3D"font-weight: 400">Champions League S=
+piele/Tore:=C2=A0 5/0</span></span></span></span><br><span style=3D"color: =
+#000000"><span style=3D"font-size: 14px"><span style=3D"font-family: Arial"=
+><span style=3D"font-weight: 400">Europa League Spiele/Tore: =C2=A0=C2=A0=
+=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0 16/0</span></span></span></span><br><s=
+pan style=3D"color: #000000"><span style=3D"font-size: 14px"><span style=3D=
+"font-family: Arial"><span style=3D"font-weight: 400">L=C3=A4nderspiele/Tor=
+e:=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=
+=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=
+=A035/1</span></span></span></span></p><p style=3D"font-family:Arial;font-s=
+ize:14px;margin-top:0px;margin-bottom:0px;font-weight:normal;color:#000000;=
+"><span style=3D"color: #000000"><span style=3D"font-size: 14px"><span styl=
+e=3D"font-family: Arial"><span style=3D"font-weight: 400">=C2=A0</span></sp=
+an></span></span></p><p style=3D"font-family:Arial;font-size:14px;margin-to=
+p:0px;margin-bottom:0px;font-weight:normal;color:#000000;"><span style=3D"c=
+olor: #000000"><span style=3D"font-size: 14px"><span style=3D"font-family: =
+Arial"><span style=3D"font-weight: 400">Bisherige Vereine: Olympiakos Pir=
+=C3=A4us (GRE, seit 2021), 1.FSV Mainz 05 (2018-21), Atl=C3=A9tico Madrid (=
+ESP, 2013-18), FC Granada (ESP, 2017/18), Extremadura UD (ESP, 2016/17), Al=
+cobendas CF (ESP, 2012/13), Best Stars Limb=C3=A9 (CMR, bis 2012)</span></s=
+pan></span></span></p></div></td></tr></tbody></table></td></tr></tbody></t=
+able></div><!--[if mso | IE]></td></tr></table><![endif]--></td></tr></tbod=
+y></table></div><!--[if mso | IE]></td></tr></table><![endif]--></td></tr><=
+/tbody></table><!--[if mso | IE]><table align=3D"center" border=3D"0" cellp=
+adding=3D"0" cellspacing=3D"0" class=3D"" role=3D"presentation" style=3D"wi=
+dth:660px;" width=3D"660" ><tr><td style=3D"line-height:0px;font-size:0px;m=
+so-line-height-rule:exactly;"><![endif]--><div style=3D"margin:0px auto;max=
+-width:660px;"><table align=3D"center" border=3D"0" cellpadding=3D"0" cells=
+pacing=3D"0" role=3D"presentation" style=3D"width:100%;"><tbody><tr><td sty=
+le=3D"border-bottom:0 none #000000;border-left:0 none #000000;border-right:=
+0 none #000000;border-top:0 none #000000;direction:ltr;font-size:0px;paddin=
+g:5px;text-align:center;"><!--[if mso | IE]><table role=3D"presentation" bo=
+rder=3D"0" cellpadding=3D"0" cellspacing=3D"0"><tr><td class=3D"" style=3D"=
+vertical-align:top;width:650px;" ><![endif]--><div class=3D"mj-column-per-1=
+00 mj-outlook-group-fix" style=3D"font-size:0px;text-align:left;direction:l=
+tr;display:inline-block;vertical-align:top;width:100%;"><table border=3D"0"=
+ cellpadding=3D"0" cellspacing=3D"0" role=3D"presentation" width=3D"100%"><=
+tbody><tr><td style=3D"background-color:transparent;border-bottom:none;bord=
+er-left:none;border-right:none;border-top:none;vertical-align:top;padding:0=
+;"><table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presenta=
+tion" width=3D"100%"><tbody><tr><td align=3D"left" class=3D"gr-mltext-ggsoh=
+h gr-mltext-tyixxi" style=3D"font-size:0px;padding:5px;word-break:break-wor=
+d;"><div style=3D"font-family:Ubuntu, Helvetica, Arial, sans-serif;font-siz=
+e:13px;line-height:1.4;text-align:left;color:#000000;"><div style=3D"text-a=
+lign: center;"><p style=3D"font-family:Arial;font-size:14px;margin-top:0px;=
+margin-bottom:0px;font-weight:normal;color:#000000;"><span style=3D"color: =
+#005AA4"><strong><span style=3D"font-size: 22px">Tickets: zweites Heimspiel=
+ 2023 gegen Hoffenheim</span></strong></span></p></div></div></td></tr><tr>=
+<td align=3D"center" class=3D"gr-mlimage-wmcoci gr-mlimage-mbojfb link-id-3=
+7527a5eb562" style=3D"font-size:0px;padding:0;word-break:break-word;"><tabl=
+e border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentation" st=
+yle=3D"border-collapse:collapse;border-spacing:0px;"><tbody><tr><td style=
+=3D"width:650px;"><a href=3D"https://newsletter.vfl-bochum.de/click.html?x=
+=3Da62e&lc=3DsOsMIy&mc=3Dn&s=3DzVyFum2&u=3DdFaV9&z=3DNnsSZ8n&" target=3D"_b=
+lank"><img alt=3D"" height=3D"auto" src=3D"https://multimedia.newsletter.vf=
+l-bochum.de/bochumvfl-yRUMx/photos/f0028c6f-4f48-4dc8-91fd-c5037133fa52.png=
+" style=3D"border:0;border-left:0 none #000000;border-right:0 none #000000;=
+border-top:0 none #000000;border-bottom:0 none #000000;border-radius:0;disp=
+lay:block;outline:none;text-decoration:none;height:auto;width:100%;font-siz=
+e:13px;" width=3D"650"></a></td></tr></tbody></table></td></tr><tr><td alig=
+n=3D"left" class=3D"gr-mltext-ggsohh gr-mltext-bdrwgo" style=3D"font-size:0=
+px;padding:5px;word-break:break-word;"><div style=3D"font-family:Ubuntu, He=
+lvetica, Arial, sans-serif;font-size:13px;line-height:1.4;text-align:left;c=
+olor:#000000;"><p style=3D"font-family:Arial;font-size:14px;margin-top:0px;=
+margin-bottom:0px;font-weight:normal;color:#000000;">Zum ersten R=C3=BCckru=
+nden-Heimspiel empf=C3=A4ngt der VfL Bochum 1848 die TSG 1899 Hoffenheim. A=
+npfiff der Partie im heimischen Vonovia Ruhrstadion ist am Samstag, den 04.=
+02.2023 um 15:30 Uhr.</p><p style=3D"font-family:Arial;font-size:14px;margi=
+n-top:0px;margin-bottom:0px;font-weight:normal;color:#000000;">Sei dabei un=
+d unterst=C3=BCtze unsere Jungs</p></div></td></tr><tr><td align=3D"center"=
+ vertical-align=3D"middle" class=3D"gr-mlbutton-icqiji gr-mlbutton-jltatm l=
+ink-id-2984206fcbe9" style=3D"font-size:0px;padding:5px;word-break:break-wo=
+rd;"><table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presen=
+tation" style=3D"border-collapse:separate;line-height:100%;"><tbody><tr><td=
+ align=3D"center" bgcolor=3D"#005AA4" role=3D"presentation" style=3D"border=
+:none;border-bottom:1px solid #005AA4;border-left:1px solid #005AA4;border-=
+radius:25px 1px;border-right:1px solid #005AA4;border-top:1px solid #005AA4=
+;cursor:auto;font-style:normal;mso-padding-alt:12px 20px;background:#005AA4=
+;word-break:break-word;" valign=3D"middle"><a href=3D"https://newsletter.vf=
+l-bochum.de/click.html?x=3Da62e&lc=3DsOsMIj&mc=3Dn&s=3DzVyFum2&u=3DdFaV9&z=
+=3DNZGQiio&" style=3D"display:inline-block;background:#005AA4;color:#FFFFFF=
+;font-family:Arial;font-size:18px;font-style:normal;font-weight:bold;line-h=
+eight:100%;margin:0;text-decoration:none;text-transform:none;padding:12px 2=
+0px;mso-padding-alt:0px;border-radius:25px 1px;" target=3D"_blank">Jetzt Ka=
+ufen</a></td></tr></tbody></table></td></tr></tbody></table></td></tr></tbo=
+dy></table></div><!--[if mso | IE]></td></tr></table><![endif]--></td></tr>=
+</tbody></table></div><!--[if mso | IE]></td></tr></table><![endif]--><tabl=
+e align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D=
+"presentation" style=3D"background:#012F51;background-color:#012F51;width:1=
+00%;"><tbody><tr><td><!--[if mso | IE]><table align=3D"center" border=3D"0"=
+ cellpadding=3D"0" cellspacing=3D"0" class=3D"" role=3D"presentation" style=
+=3D"width:660px;" width=3D"660" bgcolor=3D"#012F51" ><tr><td style=3D"line-=
+height:0px;font-size:0px;mso-line-height-rule:exactly;"><![endif]--><div st=
+yle=3D"margin:0px auto;max-width:660px;"><table align=3D"center" border=3D"=
+0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentation" style=3D"width=
+:100%;"><tbody><tr><td style=3D"border-bottom:0 none #000000;border-left:0 =
+none #000000;border-right:0 none #000000;border-top:0 none #000000;directio=
+n:ltr;font-size:0px;padding:5px;text-align:center;"><!--[if mso | IE]><tabl=
+e role=3D"presentation" border=3D"0" cellpadding=3D"0" cellspacing=3D"0"><t=
+r><td class=3D"" style=3D"width:650px;" ><![endif]--><div class=3D"mj-colum=
+n-per-100 mj-outlook-group-fix" style=3D"font-size:0;line-height:0;text-ali=
+gn:left;display:inline-block;width:100%;direction:ltr;"><!--[if mso | IE]><=
+table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentation=
+" ><tr><td style=3D"vertical-align:top;width:108px;" ><![endif]--><div clas=
+s=3D"mj-column-per-16-666666666666764 mj-outlook-group-fix" style=3D"font-s=
+ize:0px;text-align:left;direction:ltr;display:inline-block;vertical-align:t=
+op;width:16.666666666666764%;"><table border=3D"0" cellpadding=3D"0" cellsp=
+acing=3D"0" role=3D"presentation" width=3D"100%"><tbody><tr><td style=3D"ba=
+ckground-color:transparent;border-bottom:none;border-left:none;border-right=
+:none;border-top:none;vertical-align:top;padding:0;"><table border=3D"0" ce=
+llpadding=3D"0" cellspacing=3D"0" role=3D"presentation" width=3D"100%"><tbo=
+dy><tr><td align=3D"center" class=3D"gr-mlimage-wmcoci gr-mlimage-juygmo li=
+nk-id-4e7a38cd69c8" style=3D"font-size:0px;padding:0;word-break:break-word;=
+"><table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentat=
+ion" style=3D"border-collapse:collapse;border-spacing:0px;"><tbody><tr><td =
+style=3D"width:108px;"><a href=3D"https://newsletter.vfl-bochum.de/click.ht=
+ml?x=3Da62e&lc=3DsOsMIf&mc=3Dn&s=3DzVyFum2&u=3DdFaV9&z=3DNzqrdCb&" target=
+=3D"_blank"><img alt=3D"" height=3D"auto" src=3D"https://multimedia.newslet=
+ter.vfl-bochum.de/bochumvfl-yRUMx/photos/a08ab34b-16b2-4f40-846b-995957e912=
+53.png" style=3D"border:0;border-left:0 none #000000;border-right:0 none #0=
+00000;border-top:0 none #000000;border-bottom:0 none #000000;border-radius:=
+0;display:block;outline:none;text-decoration:none;height:auto;width:100%;fo=
+nt-size:13px;" width=3D"108"></a></td></tr></tbody></table></td></tr></tbod=
+y></table></td></tr></tbody></table></div><!--[if mso | IE]></td><td style=
+=3D"vertical-align:top;width:108px;" ><![endif]--><div class=3D"mj-column-p=
+er-16-666666666666764 mj-outlook-group-fix" style=3D"font-size:0px;text-ali=
+gn:left;direction:ltr;display:inline-block;vertical-align:top;width:16.6666=
+66666666764%;"><table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=
+=3D"presentation" width=3D"100%"><tbody><tr><td style=3D"background-color:t=
+ransparent;border-bottom:none;border-left:none;border-right:none;border-top=
+:none;vertical-align:top;padding:0;"><table border=3D"0" cellpadding=3D"0" =
+cellspacing=3D"0" role=3D"presentation" width=3D"100%"><tbody><tr><td align=
+=3D"center" class=3D"gr-mlimage-wmcoci gr-mlimage-gecehl link-id-db604064c9=
+a9" style=3D"font-size:0px;padding:0;word-break:break-word;"><table border=
+=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentation" style=3D"b=
+order-collapse:collapse;border-spacing:0px;"><tbody><tr><td style=3D"width:=
+108px;"><a href=3D"https://newsletter.vfl-bochum.de/click.html?x=3Da62e&lc=
+=3DsOsMIb&mc=3Dn&s=3DzVyFum2&u=3DdFaV9&z=3DNE9EnEV&" target=3D"_blank"><img=
+ alt=3D"" height=3D"auto" src=3D"https://multimedia.newsletter.vfl-bochum.d=
+e/bochumvfl-yRUMx/photos/ed270430-3b83-4d2a-aaa8-96d96881a84a.png" style=3D=
+"border:0;border-left:0 none #000000;border-right:0 none #000000;border-top=
+:0 none #000000;border-bottom:0 none #000000;border-radius:0;display:block;=
+outline:none;text-decoration:none;height:auto;width:100%;font-size:13px;" w=
+idth=3D"108"></a></td></tr></tbody></table></td></tr></tbody></table></td><=
+/tr></tbody></table></div><!--[if mso | IE]></td><td style=3D"vertical-alig=
+n:top;width:108px;" ><![endif]--><div class=3D"mj-column-per-16-66666666666=
+6764 mj-outlook-group-fix" style=3D"font-size:0px;text-align:left;direction=
+:ltr;display:inline-block;vertical-align:top;width:16.666666666666764%;"><t=
+able border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentation"=
+ width=3D"100%"><tbody><tr><td style=3D"background-color:transparent;border=
+-bottom:none;border-left:none;border-right:none;border-top:none;vertical-al=
+ign:top;padding:0;"><table border=3D"0" cellpadding=3D"0" cellspacing=3D"0"=
+ role=3D"presentation" width=3D"100%"><tbody><tr><td align=3D"center" class=
+=3D"gr-mlimage-wmcoci gr-mlimage-lnyyoc link-id-b044f3eaa89a" style=3D"font=
+-size:0px;padding:0;word-break:break-word;"><table border=3D"0" cellpadding=
+=3D"0" cellspacing=3D"0" role=3D"presentation" style=3D"border-collapse:col=
+lapse;border-spacing:0px;"><tbody><tr><td style=3D"width:108px;"><a href=3D=
+"https://newsletter.vfl-bochum.de/click.html?x=3Da62e&lc=3DsOsMIY&mc=3Dn&s=
+=3DzVyFum2&u=3DdFaV9&z=3DNiZEG0&" target=3D"_blank"><img alt=3D"" height=3D=
+"auto" src=3D"https://multimedia.newsletter.vfl-bochum.de/bochumvfl-yRUMx/p=
+hotos/4a754b36-2608-4c66-961a-2a2fa1b930fd.png" style=3D"border:0;border-le=
+ft:0 none #000000;border-right:0 none #000000;border-top:0 none #000000;bor=
+der-bottom:0 none #000000;border-radius:0;display:block;outline:none;text-d=
+ecoration:none;height:auto;width:100%;font-size:13px;" width=3D"108"></a></=
+td></tr></tbody></table></td></tr></tbody></table></td></tr></tbody></table=
+></div><!--[if mso | IE]></td><td style=3D"vertical-align:top;width:108px;"=
+ ><![endif]--><div class=3D"mj-column-per-16-666666666666764 mj-outlook-gro=
+up-fix" style=3D"font-size:0px;text-align:left;direction:ltr;display:inline=
+-block;vertical-align:top;width:16.666666666666764%;"><table border=3D"0" c=
+ellpadding=3D"0" cellspacing=3D"0" role=3D"presentation" width=3D"100%"><tb=
+ody><tr><td style=3D"background-color:transparent;border-bottom:none;border=
+-left:none;border-right:none;border-top:none;vertical-align:top;padding:0;"=
+><table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentati=
+on" width=3D"100%"><tbody><tr><td align=3D"center" class=3D"gr-mlimage-wmco=
+ci gr-mlimage-tlijvo link-id-63980204b89a" style=3D"font-size:0px;padding:0=
+;word-break:break-word;"><table border=3D"0" cellpadding=3D"0" cellspacing=
+=3D"0" role=3D"presentation" style=3D"border-collapse:collapse;border-spaci=
+ng:0px;"><tbody><tr><td style=3D"width:108px;"><a href=3D"https://newslette=
+r.vfl-bochum.de/click.html?x=3Da62e&lc=3DsOsMIm&mc=3Dn&s=3DzVyFum2&u=3DdFaV=
+9&z=3DNkT3EA8&" target=3D"_blank"><img alt=3D"" height=3D"auto" src=3D"http=
+s://multimedia.newsletter.vfl-bochum.de/bochumvfl-yRUMx/photos/cb324391-c6a=
+d-40d4-8b16-ba87b502900e.png" style=3D"border:0;border-left:0 none #000000;=
+border-right:0 none #000000;border-top:0 none #000000;border-bottom:0 none =
+#000000;border-radius:0;display:block;outline:none;text-decoration:none;hei=
+ght:auto;width:100%;font-size:13px;" width=3D"108"></a></td></tr></tbody></=
+table></td></tr></tbody></table></td></tr></tbody></table></div><!--[if mso=
+ | IE]></td><td style=3D"vertical-align:top;width:108px;" ><![endif]--><div=
+ class=3D"mj-column-per-16-666666666666764 mj-outlook-group-fix" style=3D"f=
+ont-size:0px;text-align:left;direction:ltr;display:inline-block;vertical-al=
+ign:top;width:16.666666666666764%;"><table border=3D"0" cellpadding=3D"0" c=
+ellspacing=3D"0" role=3D"presentation" width=3D"100%"><tbody><tr><td style=
+=3D"background-color:transparent;border-bottom:none;border-left:none;border=
+-right:none;border-top:none;vertical-align:top;padding:0;"><table border=3D=
+"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentation" width=3D"100%=
+"><tbody><tr><td align=3D"center" class=3D"gr-mlimage-wmcoci gr-mlimage-xjf=
+tqo link-id-ed69c8dd3b9f" style=3D"font-size:0px;padding:0;word-break:break=
+-word;"><table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"pre=
+sentation" style=3D"border-collapse:collapse;border-spacing:0px;"><tbody><t=
+r><td style=3D"width:108px;"><a href=3D"https://newsletter.vfl-bochum.de/cl=
+ick.html?x=3Da62e&lc=3DsOsMIM&mc=3Dn&s=3DzVyFum2&u=3DdFaV9&z=3DNVLQiCG&" ta=
+rget=3D"_blank"><img alt=3D"" height=3D"auto" src=3D"https://multimedia.new=
+sletter.vfl-bochum.de/bochumvfl-yRUMx/photos/cb8d7363-2357-43fa-b607-e3fa5b=
+489e38.png" style=3D"border:0;border-left:0 none #000000;border-right:0 non=
+e #000000;border-top:0 none #000000;border-bottom:0 none #000000;border-rad=
+ius:0;display:block;outline:none;text-decoration:none;height:auto;width:100=
+%;font-size:13px;" width=3D"108"></a></td></tr></tbody></table></td></tr></=
+tbody></table></td></tr></tbody></table></div><!--[if mso | IE]></td><td st=
+yle=3D"vertical-align:top;width:108px;" ><![endif]--><div class=3D"mj-colum=
+n-per-16-666666666666764 mj-outlook-group-fix" style=3D"font-size:0px;text-=
+align:left;direction:ltr;display:inline-block;vertical-align:top;width:16.6=
+66666666666764%;"><table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" r=
+ole=3D"presentation" width=3D"100%"><tbody><tr><td style=3D"background-colo=
+r:transparent;border-bottom:none;border-left:none;border-right:none;border-=
+top:none;vertical-align:top;padding:0;"><table border=3D"0" cellpadding=3D"=
+0" cellspacing=3D"0" role=3D"presentation" width=3D"100%"><tbody><tr><td al=
+ign=3D"center" class=3D"gr-mlimage-wmcoci gr-mlimage-bkvdxh link-id-6a2ff1a=
+2b1a2" style=3D"font-size:0px;padding:0;word-break:break-word;"><table bord=
+er=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentation" style=3D=
+"border-collapse:collapse;border-spacing:0px;"><tbody><tr><td style=3D"widt=
+h:108px;"><a href=3D"https://newsletter.vfl-bochum.de/click.html?x=3Da62e&l=
+c=3DsOsMIW&mc=3Dn&s=3DzVyFum2&u=3DdFaV9&z=3DNnOfi9C&" target=3D"_blank"><im=
+g alt=3D"" height=3D"auto" src=3D"https://multimedia.newsletter.vfl-bochum.=
+de/bochumvfl-yRUMx/photos/dbed4af0-e289-48fc-9b5a-664bf7fb82e4.png" style=
+=3D"border:0;border-left:0 none #000000;border-right:0 none #000000;border-=
+top:0 none #000000;border-bottom:0 none #000000;border-radius:0;display:blo=
+ck;outline:none;text-decoration:none;height:auto;width:100%;font-size:13px;=
+" width=3D"108"></a></td></tr></tbody></table></td></tr></tbody></table></t=
+d></tr></tbody></table></div><!--[if mso | IE]></td></tr></table><![endif]-=
+-></div><!--[if mso | IE]></td></tr></table><![endif]--></td></tr></tbody><=
+/table></div><!--[if mso | IE]></td></tr></table><![endif]--></td></tr></tb=
+ody></table><table align=3D"center" border=3D"0" cellpadding=3D"0" cellspac=
+ing=3D"0" role=3D"presentation" style=3D"background:#012F51;background-colo=
+r:#012F51;width:100%;"><tbody><tr><td><!--[if mso | IE]><table align=3D"cen=
+ter" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" class=3D"" role=3D"pr=
+esentation" style=3D"width:660px;" width=3D"660" bgcolor=3D"#012F51" ><tr><=
+td style=3D"line-height:0px;font-size:0px;mso-line-height-rule:exactly;"><!=
+[endif]--><div style=3D"margin:0px auto;max-width:660px;"><table align=3D"c=
+enter" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentatio=
+n" style=3D"width:100%;"><tbody><tr><td style=3D"border-bottom:0 none #0000=
+00;border-left:0 none #000000;border-right:0 none #000000;border-top:0 none=
+ #000000;direction:ltr;font-size:0px;padding:5px;text-align:center;"><!--[i=
+f mso | IE]><table role=3D"presentation" border=3D"0" cellpadding=3D"0" cel=
+lspacing=3D"0"><tr><td class=3D"" style=3D"width:650px;" ><![endif]--><div =
+class=3D"mj-column-per-100 mj-outlook-group-fix" style=3D"font-size:0;line-=
+height:0;text-align:left;display:inline-block;width:100%;direction:ltr;"><!=
+--[if mso | IE]><table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" rol=
+e=3D"presentation" ><tr><td style=3D"vertical-align:top;width:650px;" ><![e=
+ndif]--><div class=3D"mj-column-per-100 mj-outlook-group-fix" style=3D"font=
+-size:0px;text-align:left;direction:ltr;display:inline-block;vertical-align=
+:top;width:100%;"><table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" r=
+ole=3D"presentation" width=3D"100%"><tbody><tr><td style=3D"background-colo=
+r:transparent;border-bottom:none;border-left:none;border-right:none;border-=
+top:none;vertical-align:top;padding:0;"><table border=3D"0" cellpadding=3D"=
+0" cellspacing=3D"0" role=3D"presentation" width=3D"100%"><tbody><tr><td al=
+ign=3D"center" class=3D"gr-mlimage-wmcoci gr-mlimage-bporhg link-id-" style=
+=3D"font-size:0px;padding:0;word-break:break-word;"><table border=3D"0" cel=
+lpadding=3D"0" cellspacing=3D"0" role=3D"presentation" style=3D"border-coll=
+apse:collapse;border-spacing:0px;"><tbody><tr><td style=3D"width:650px;"><i=
+mg alt=3D"" height=3D"auto" src=3D"https://multimedia.newsletter.vfl-bochum=
+.de/bochumvfl-yRUMx/photos/860e1595-c615-4d6a-900a-0f1a9ee945ac.png" style=
+=3D"border:0;border-left:0 none #000000;border-right:0 none #000000;border-=
+top:0 none #000000;border-bottom:0 none #000000;border-radius:0;display:blo=
+ck;outline:none;text-decoration:none;height:auto;width:100%;font-size:13px;=
+" width=3D"650"></td></tr></tbody></table></td></tr></tbody></table></td></=
+tr></tbody></table></div><!--[if mso | IE]></td></tr></table><![endif]--></=
+div><!--[if mso | IE]></td></tr></table><![endif]--></td></tr></tbody></tab=
+le></div><!--[if mso | IE]></td></tr></table><![endif]--></td></tr></tbody>=
+</table><table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=
+=3D"0" role=3D"presentation" style=3D"background:#012F51;background-color:#=
+012F51;width:100%;"><tbody><tr><td><!--[if mso | IE]><table align=3D"center=
+" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" class=3D"" role=3D"prese=
+ntation" style=3D"width:660px;" width=3D"660" bgcolor=3D"#012F51" ><tr><td =
+style=3D"line-height:0px;font-size:0px;mso-line-height-rule:exactly;"><![en=
+dif]--><div style=3D"margin:0px auto;max-width:660px;"><table align=3D"cent=
+er" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentation" =
+style=3D"width:100%;"><tbody><tr><td style=3D"border-bottom:0 none #000000;=
+border-left:0 none #000000;border-right:0 none #000000;border-top:0 none #0=
+00000;direction:ltr;font-size:0px;padding:5px;text-align:center;"><!--[if m=
+so | IE]><table role=3D"presentation" border=3D"0" cellpadding=3D"0" cellsp=
+acing=3D"0"><tr><td class=3D"" style=3D"vertical-align:top;width:650px;" ><=
+![endif]--><div class=3D"mj-column-per-100 mj-outlook-group-fix" style=3D"f=
+ont-size:0px;text-align:left;direction:ltr;display:inline-block;vertical-al=
+ign:top;width:100%;"><table border=3D"0" cellpadding=3D"0" cellspacing=3D"0=
+" role=3D"presentation" width=3D"100%"><tbody><tr><td style=3D"background-c=
+olor:transparent;border-bottom:none;border-left:none;border-right:none;bord=
+er-top:none;vertical-align:top;padding:0;"><table border=3D"0" cellpadding=
+=3D"0" cellspacing=3D"0" role=3D"presentation" width=3D"100%"><tbody><tr><t=
+d align=3D"center" class=3D"gr-footer-ovpcbm gr-footer-ujuagm" style=3D"fon=
+t-size:0px;padding:5px;word-break:break-word;"><div style=3D"font-family:Ar=
+ial;font-size:8px;font-style:normal;line-height:1;text-align:center;text-de=
+coration:none;color:#BDBDBD;"><div>VfL Bochum 1848 GmbH & Co. KGaA, Castrop=
+er Stra=C3=9Fe, 145, 44791, Bochum, Germany<br><br>Sie k=C3=B6nnen sich jed=
+erzeit <a href=3D"https://newsletter.vfl-bochum.de/unsubscribe.html?x=3Da62=
+e&m=3DzZObcL&mc=3Dn&s=3DzVyFum2&u=3DdFaV9&z=3DNPIqxHK&pt=3Dunsubscribe" tar=
+get=3D"_blank">abmelden</a> oder <a href=3D"https://newsletter.vfl-bochum.d=
+e/change_details.html?x=3Da62e&m=3DzZObcL&s=3DzVyFum2&u=3DdFaV9&z=3DNV868G3=
+&pt=3Dchange_details" target=3D"_blank">Ihre Kontaktdaten bearbeiten</a>.</=
+div></div></td></tr></tbody></table></td></tr></tbody></table></div><!--[if=
+ mso | IE]></td></tr></table><![endif]--></td></tr></tbody></table></div><!=
+--[if mso | IE]></td></tr></table><![endif]--></td></tr></tbody></table><ta=
+ble align=3D"center" style=3D"font-family: 'Roboto', Helvetica, sans-serif;=
+ font-weight: 400; letter-spacing: .018em; text-align: center; font-size: 1=
+0px;"><tr><td style=3D"padding-bottom: 20px"></td></tr></table></div></body=
+></html><img src=3D"https://newsletter.vfl-bochum.de/open.html?x=3Da62e&m=
+=3DzZObcL&mc=3Dn&s=3DzVyFum2&u=3DdFaV9&z=3DNQBtZRK&" width=3D"0" height=3D"=
+0" border=3D"0" alt=3D"" role=3D"presentation" />=
+
+--cdfde55cac62829ecf33ea8fc6abd4a3--

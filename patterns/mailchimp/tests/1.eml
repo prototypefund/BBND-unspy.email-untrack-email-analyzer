@@ -1,0 +1,881 @@
+Return-Path: <bounce-mc.us3_23225407.1113764-6496a8003f@mail5.suw111.mcdlv.net>
+X-Spam-Checker-Version: SpamAssassin 3.4.4 (2020-01-24) on
+	dd20708.kasserver.com
+X-Original-To: hpot2212u1@untrack.email
+Delivered-To: m0666425@dd20708.kasserver.com
+X-policyd-weight: using cached result; rate: -7
+Authentication-Results: dd20708.kasserver.com;
+	dkim=pass (2048-bit key; unprotected) header.d=schreibsuchti.de header.i=walterepp@schreibsuchti.de header.a=rsa-sha256 header.s=k3 header.b=cOboeFMF;
+	dkim-atps=neutral
+Received: from mail5.suw111.mcdlv.net (mail5.suw111.mcdlv.net [198.2.185.5])
+	by dd20708.kasserver.com (Postfix) with ESMTPS id 96FDB1881401
+	for <hpot2212u1@untrack.email>; Tue, 17 Jan 2023 11:17:32 +0100 (CET)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=schreibsuchti.de;
+	s=k3; t=1673950650; x=1674253050; i=walterepp@schreibsuchti.de;
+	bh=4tVSsIm4XDeyZg3zt5UgI1D3gEQ2Dd8Yc1NHpAWRDCA=;
+	h=Subject:From:Reply-To:To:Date:Message-ID:X-MC-User:Feedback-ID:
+	 List-ID:List-Unsubscribe:List-Unsubscribe-Post:Content-Type:
+	 MIME-Version:CC:Date:Subject:From;
+	b=cOboeFMFg/a/IjhVuquOqpOj4W47PCnnNAHuJLX+Mk6NVXGCmqVAK/98I2ms58Brp
+	 H1zcTnyDY+npbOgCzELkYcakv4i3bIYAUJSPovPY7HlX/j5kWWWd3bIU3DtuziDSMP
+	 4Ie/Q6lHxuA5s8Q+yaF9EjjNlImG52S09YJNgxWPBWJuHrmftzyUvbmzlo6jLi67MB
+	 YI3Lc0KWpWxrjscYVndNakze8+AIiRvEzv3n5jtvjEVryuQvnUPAaut/DBcnmX9Ffv
+	 F9D9U+ovYxkqSFFZ6kjnLMqyde2D7cMix3KmixBPqI3bOWfLO61YVG0S3AIhSf0FwL
+	 uRZqHKKeGyA2g==
+Received: from localhost (localhost [127.0.0.1])
+	by mail5.suw111.mcdlv.net (Mailchimp) with ESMTP id 4Nx4Zf5lkCzG6p2v
+	for <hpot2212u1@untrack.email>; Tue, 17 Jan 2023 10:17:30 +0000 (GMT)
+Subject: =?utf-8?Q?Der=20fiese=20Schl=C3=BCssel=20zum=20Ca$h?=
+From: =?utf-8?Q?Walter=20=28Schreibsuchti=29?= <walterepp@schreibsuchti.de>
+Reply-To: =?utf-8?Q?Walter=20=28Schreibsuchti=29?= <walterepp@schreibsuchti.de>
+To: <hpot2212u1@untrack.email>
+Date: Tue, 17 Jan 2023 10:17:27 +0000
+Message-ID: <5e78d7ef2297cc80842b7591e.6496a8003f.20230117101720.2ed1232679.76ae8c9f@mail5.suw111.mcdlv.net>
+X-Mailer: Mailchimp Mailer - **CID2ed12326796496a8003f**
+X-Campaign: mailchimp5e78d7ef2297cc80842b7591e.2ed1232679
+X-campaignid: mailchimp5e78d7ef2297cc80842b7591e.2ed1232679
+X-Report-Abuse: Please report abuse for this campaign here: https://mailchimp.com/contact/abuse/?u=5e78d7ef2297cc80842b7591e&id=2ed1232679&e=6496a8003f
+X-MC-User: 5e78d7ef2297cc80842b7591e
+Feedback-ID: 23225407:23225407.1113764:us3:mc
+List-ID: 5e78d7ef2297cc80842b7591emc list <5e78d7ef2297cc80842b7591e.227233.list-id.mcsv.net>
+X-Accounttype: pd
+List-Unsubscribe: <https://schreibsuchti.us3.list-manage.com/unsubscribe?u=5e78d7ef2297cc80842b7591e&id=93b720b585&e=6496a8003f&c=2ed1232679>, <mailto:unsubscribe-mc.us3_5e78d7ef2297cc80842b7591e.2ed1232679-6496a8003f@unsubscribe.mailchimpapp.net?subject=unsubscribe>
+List-Unsubscribe-Post: List-Unsubscribe=One-Click
+Content-Type: multipart/alternative; boundary="_----------=_MCPart_616231826"
+MIME-Version: 1.0
+X-Spamd-Bar: ++++
+X-KasLoop: m0666425
+
+This is a multi-part message in MIME format
+
+--_----------=_MCPart_616231826
+Content-Type: text/plain; charset="utf-8"; format="fixed"
+Content-Transfer-Encoding: quoted-printable
+
+
+
+"Gleich ist es zu sp=C3=A4t !"
+
+Meine Tochter musste dringend auf Toilette. Als wir das erl=C3=B6sende H=
+=C3=A4uschen betraten=2C stand dort ein Kassenautomat.
+
+Ich hielt meine NFC-Karte dran.
+
+Ping.
+
+Wir waren drin und die Erleichterung gro=C3=9F.
+
+Was hatte ich in dem Moment nicht getan?
+
+Auf den Preis geschaut.
+
+Warum?
+
+Weil in solchen Momenten der Preis nicht wichtig ist.
+
+Und der Betreiber des Toilettenh=C3=A4uschens k=C3=B6nnte (fast) jeden Pre=
+is abrufen=2C den er wollte.
+
+Denn kurz vor der Notdurft ist die Macht des Toilettent=C3=BCrstehers am g=
+r=C3=B6=C3=9Ften.
+
+Das=2C mein Freund=2C ist der Schl=C3=BCssel zum Geld.
+
+Viele wollen diesen Schl=C3=BCssel nicht anwenden und gehen deshalb leer a=
+us.
+
+Sie haben zwar Leser=2C Abonnenten und sogar Produkte - aber keine Verk=C3=
+=A4ufe.
+
+Weil sie ihre Macht nicht nutzen.
+
+Weitere Beispiele:
+* Der Schl=C3=BCsseldienst kassiert das Geld BEVOR er die T=C3=BCr =C3=B6f=
+fnet
+* Das Kino kassiert das Geld BEVOR du den Film siehst
+* Die Prostituierte kassiert das Geld VOR der Dienstleistung
+
+Jack Nasher nennt dies deshalb auch das Nutten-Prinzip.
+
+Diese nimmt das Geld vom Freier vor dem Akt=2C weil dann ihre Macht am gr=
+=C3=B6=C3=9Ften ist.
+
+Und nach dem Akt am geringsten.
+
+Deshalb:
+
+Verstehe=2C wann deine Macht am gr=C3=B6=C3=9Ften ist und mache zu diesem=
+ Zeitpunkt auch ein Angebot.
+
+Das ist der Schl=C3=BCssel zum Geld.
+
+F=C3=BCr einige wirkt es allerdings "fies"=2C weil sie ihre Macht nicht "a=
+usnutzen" wollen.
+
+Zum Verst=C3=A4ndnis: Nicht ausnutzen=2C sondern nutzen.
+
+Da ist ein gro=C3=9Fer Unterschied.
+
+Frage:
+
+Wann ist deine Macht also Infopreneur am gr=C3=B6=C3=9Ften?
+
+Sagen wir du bist Coach=2C Info-Unternehmer oder Berater ?
+
+Informationen sind also dein Produkt.
+
+Dein goldener Moment ist wie bei der Prostituierten:
+
+VOR dem Zugang.
+
+Denn hier stehen viele psychologische Faktoren auf deiner Seite (welche da=
+s sind=2C zeige ich dir in meinem Kurs).
+
+Worauf will ich hinaus?
+
+Wenn du Geld mit deinen Informationen verdienen willst (Coach=2C Berater=
+=2C Kursanbieter)=2C dann kassiere das Geld bevor du dein Wissen entkleide=
+st.
+
+Und verschenke deinen guten Stoff nicht an jeden Freier - sprich Leser -=
+=2C der um die Ecke kommt.
+
+Gerade diesen Fehler machen 99% der Newsletter da drau=C3=9Fen und verdien=
+en damit praktisch kaum Ca$h.
+
+Wenn du zu den 1% geh=C3=B6ren willst=2C die sich nicht an jeden kostenlos=
+ ranschmei=C3=9Fen=2C sondern ihre wertvollen Informationen auch angemesse=
+n bezahlt bekommen wollen=2C dann folge meinem einfachen System.
+
+Ich zeige es dir hier:
+
+Das E-Mail-Money-System (https://shop.schreibsuchti.de/e-mail-money-system=
+/?mc_cid=3D2ed1232679&mc_eid=3DUNIQID)
+
+Schreib gro=C3=9Fartig=2C sei gro=C3=9Fartig=2C
+
+Dein Walter
+
+PS
+Mir schrieb mal eine emp=C3=B6rte Leserin: "Gibts auch mal echte Tipps und=
+ nicht nur Angebote=2C die einem das Geld aus der Tasche ziehen sollen?"
+
+Ja Madam=2C die echten Tipps gibt es NACH dem Geld. Siehe Prinzip oben.
+
+PPS
+Das Angebot gilt nur bis Freitagabend 24 Uhr.
+
+Hier der Link zum Kurs:
+
+Das E-Mail-Money-System (https://shop.schreibsuchti.de/e-mail-money-system=
+/?mc_cid=3D2ed1232679&mc_eid=3DUNIQID)
+
+=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=
+=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=
+=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D
+-------
+
+Copyright =C2=A9 2023 Schreibsuchti GmbH=2C Alle Rechte vorbehalten.
+ Du erh=C3=A4ltst diese E-Mail=2C weil du Teil der Schreibsuchti-Community=
+ bist. Lass uns gemeinsam besser schreiben.
+
+Wenn du diese E-Mail ohne Erlaubnis kopierst oder klaust=2C dann schicke i=
+ch "meine Leute" bei dir vorbei. Du wei=C3=9Ft ja=2C wie das bei Drogenbar=
+onen so l=C3=A4uft...
+
+Kontakt:
+Schreibsuchti GmbH
+Albert-Hahn-Stra=C3=9Fe 20
+Duisburg 47269
+Germany
+Mein Stoff besorgt dir nicht mehr den n=C3=B6tigen Kick und du m=C3=B6chte=
+st dich abmelden? Kein Problem. Klicke einfach auf
+** abmelden (https://schreibsuchti.us3.list-manage.com/unsubscribe?u=3D5e7=
+8d7ef2297cc80842b7591e&id=3D93b720b585&e=3D6496a8003f&c=3D2ed1232679)
+=2E Aber dann wundere dich nicht=2C wenn du Entzugserscheinungen bekommst.
+--_----------=_MCPart_616231826
+Content-Type: text/html; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+
+<!doctype html>
+<html xmlns=3D"http://www.w3.org/1999/xhtml" xmlns:v=3D"urn:schemas-micros=
+oft-com:vml" xmlns:o=3D"urn:schemas-microsoft-com:office:office">
+    <head>
+        <!-- NAME: SIMPLE TEXT -->
+        <!--[if gte mso 15]>
+        <xml>
+            <o:OfficeDocumentSettings>
+            <o:AllowPNG/>
+            <o:PixelsPerInch>96</o:PixelsPerInch>
+            </o:OfficeDocumentSettings>
+        </xml>
+        <![endif]-->
+        <meta charset=3D"UTF-8">
+        <meta http-equiv=3D"X-UA-Compatible" content=3D"IE=3Dedge">
+        <meta name=3D"viewport" content=3D"width=3Ddevice-width=2C initial=
+-scale=3D1">
+        <title>Der fiese Schl=C3=BCssel zum Ca$h</title>
+
+    <style type=3D"text/css">
+=09=09p{
+=09=09=09margin:10px 0;
+=09=09=09padding:0;
+=09=09}
+=09=09table{
+=09=09=09border-collapse:collapse;
+=09=09}
+=09=09h1=2Ch2=2Ch3=2Ch4=2Ch5=2Ch6{
+=09=09=09display:block;
+=09=09=09margin:0;
+=09=09=09padding:0;
+=09=09}
+=09=09img=2Ca img{
+=09=09=09border:0;
+=09=09=09height:auto;
+=09=09=09outline:none;
+=09=09=09text-decoration:none;
+=09=09}
+=09=09body=2C#bodyTable=2C#bodyCell{
+=09=09=09height:100%;
+=09=09=09margin:0;
+=09=09=09padding:0;
+=09=09=09width:100%;
+=09=09}
+=09=09.mcnPreviewText{
+=09=09=09display:none !important;
+=09=09}
+=09=09#outlook a{
+=09=09=09padding:0;
+=09=09}
+=09=09img{
+=09=09=09-ms-interpolation-mode:bicubic;
+=09=09}
+=09=09table{
+=09=09=09mso-table-lspace:0pt;
+=09=09=09mso-table-rspace:0pt;
+=09=09}
+=09=09.ReadMsgBody{
+=09=09=09width:100%;
+=09=09}
+=09=09.ExternalClass{
+=09=09=09width:100%;
+=09=09}
+=09=09p=2Ca=2Cli=2Ctd=2Cblockquote{
+=09=09=09mso-line-height-rule:exactly;
+=09=09}
+=09=09a[href^=3Dtel]=2Ca[href^=3Dsms]{
+=09=09=09color:inherit;
+=09=09=09cursor:default;
+=09=09=09text-decoration:none;
+=09=09}
+=09=09p=2Ca=2Cli=2Ctd=2Cbody=2Ctable=2Cblockquote{
+=09=09=09-ms-text-size-adjust:100%;
+=09=09=09-webkit-text-size-adjust:100%;
+=09=09}
+=09=09.ExternalClass=2C.ExternalClass p=2C.ExternalClass td=2C.ExternalCla=
+ss div=2C.ExternalClass span=2C.ExternalClass font{
+=09=09=09line-height:100%;
+=09=09}
+=09=09a[x-apple-data-detectors]{
+=09=09=09color:inherit !important;
+=09=09=09text-decoration:none !important;
+=09=09=09font-size:inherit !important;
+=09=09=09font-family:inherit !important;
+=09=09=09font-weight:inherit !important;
+=09=09=09line-height:inherit !important;
+=09=09}
+=09=09#bodyCell{
+=09=09=09padding:10px;
+=09=09}
+=09=09.templateContainer{
+=09=09=09max-width:600px !important;
+=09=09}
+=09=09a.mcnButton{
+=09=09=09display:block;
+=09=09}
+=09=09.mcnImage=2C.mcnRetinaImage{
+=09=09=09vertical-align:bottom;
+=09=09}
+=09=09.mcnTextContent{
+=09=09=09word-break:break-word;
+=09=09}
+=09=09.mcnTextContent img{
+=09=09=09height:auto !important;
+=09=09}
+=09=09.mcnDividerBlock{
+=09=09=09table-layout:fixed !important;
+=09=09}
+=09=09body=2C#bodyTable{
+=09=09=09background-color:#FFFFFF;
+=09=09=09background-image:none;
+=09=09=09background-repeat:no-repeat;
+=09=09=09background-position:center;
+=09=09=09background-size:cover;
+=09=09}
+=09=09#bodyCell{
+=09=09=09border-top:0;
+=09=09}
+=09=09.templateContainer{
+=09=09=09border:0;
+=09=09}
+=09=09h1{
+=09=09=09color:#202020;
+=09=09=09font-family:Helvetica;
+=09=09=09font-size:26px;
+=09=09=09font-style:normal;
+=09=09=09font-weight:bold;
+=09=09=09line-height:125%;
+=09=09=09letter-spacing:normal;
+=09=09=09text-align:left;
+=09=09}
+=09=09h2{
+=09=09=09color:#202020;
+=09=09=09font-family:Helvetica;
+=09=09=09font-size:22px;
+=09=09=09font-style:normal;
+=09=09=09font-weight:bold;
+=09=09=09line-height:125%;
+=09=09=09letter-spacing:normal;
+=09=09=09text-align:left;
+=09=09}
+=09=09h3{
+=09=09=09color:#202020;
+=09=09=09font-family:Helvetica;
+=09=09=09font-size:20px;
+=09=09=09font-style:normal;
+=09=09=09font-weight:bold;
+=09=09=09line-height:125%;
+=09=09=09letter-spacing:normal;
+=09=09=09text-align:left;
+=09=09}
+=09=09h4{
+=09=09=09color:#202020;
+=09=09=09font-family:Helvetica;
+=09=09=09font-size:18px;
+=09=09=09font-style:normal;
+=09=09=09font-weight:bold;
+=09=09=09line-height:125%;
+=09=09=09letter-spacing:normal;
+=09=09=09text-align:left;
+=09=09}
+=09=09#templateHeader{
+=09=09=09border-top:0;
+=09=09=09border-bottom:0;
+=09=09}
+=09=09#templateHeader .mcnTextContent=2C#templateHeader .mcnTextContent p{
+=09=09=09color:#202020;
+=09=09=09font-family:Helvetica;
+=09=09=09font-size:16px;
+=09=09=09line-height:150%;
+=09=09=09text-align:left;
+=09=09}
+=09=09#templateHeader .mcnTextContent a=2C#templateHeader .mcnTextContent=
+ p a{
+=09=09=09color:#007C89;
+=09=09=09font-weight:normal;
+=09=09=09text-decoration:underline;
+=09=09}
+=09=09#templateBody{
+=09=09=09border-top:0;
+=09=09=09border-bottom:0;
+=09=09}
+=09=09#templateBody .mcnTextContent=2C#templateBody .mcnTextContent p{
+=09=09=09color:#202020;
+=09=09=09font-family:Helvetica;
+=09=09=09font-size:16px;
+=09=09=09line-height:150%;
+=09=09=09text-align:left;
+=09=09}
+=09=09#templateBody .mcnTextContent a=2C#templateBody .mcnTextContent p a{
+=09=09=09color:#007C89;
+=09=09=09font-weight:normal;
+=09=09=09text-decoration:underline;
+=09=09}
+=09=09#templateFooter{
+=09=09=09border-top:0;
+=09=09=09border-bottom:0;
+=09=09}
+=09=09#templateFooter .mcnTextContent=2C#templateFooter .mcnTextContent p{
+=09=09=09color:#202020;
+=09=09=09font-family:Helvetica;
+=09=09=09font-size:12px;
+=09=09=09line-height:150%;
+=09=09=09text-align:left;
+=09=09}
+=09=09#templateFooter .mcnTextContent a=2C#templateFooter .mcnTextContent=
+ p a{
+=09=09=09color:#202020;
+=09=09=09font-weight:normal;
+=09=09=09text-decoration:underline;
+=09=09}
+=09@media only screen and (min-width:768px){
+=09=09.templateContainer{
+=09=09=09width:600px !important;
+=09=09}
+
+}=09@media only screen and (max-width: 480px){
+=09=09body=2Ctable=2Ctd=2Cp=2Ca=2Cli=2Cblockquote{
+=09=09=09-webkit-text-size-adjust:none !important;
+=09=09}
+
+}=09@media only screen and (max-width: 480px){
+=09=09body{
+=09=09=09width:100% !important;
+=09=09=09min-width:100% !important;
+=09=09}
+
+}=09@media only screen and (max-width: 480px){
+=09=09.mcnRetinaImage{
+=09=09=09max-width:100% !important;
+=09=09}
+
+}=09@media only screen and (max-width: 480px){
+=09=09.mcnImage{
+=09=09=09width:100% !important;
+=09=09}
+
+}=09@media only screen and (max-width: 480px){
+=09=09.mcnCartContainer=2C.mcnCaptionTopContent=2C.mcnRecContentContainer=
+=2C.mcnCaptionBottomContent=2C.mcnTextContentContainer=2C.mcnBoxedTextCont=
+entContainer=2C.mcnImageGroupContentContainer=2C.mcnCaptionLeftTextContent=
+Container=2C.mcnCaptionRightTextContentContainer=2C.mcnCaptionLeftImageCon=
+tentContainer=2C.mcnCaptionRightImageContentContainer=2C.mcnImageCardLeftT=
+extContentContainer=2C.mcnImageCardRightTextContentContainer=2C.mcnImageCa=
+rdLeftImageContentContainer=2C.mcnImageCardRightImageContentContainer{
+=09=09=09max-width:100% !important;
+=09=09=09width:100% !important;
+=09=09}
+
+}=09@media only screen and (max-width: 480px){
+=09=09.mcnBoxedTextContentContainer{
+=09=09=09min-width:100% !important;
+=09=09}
+
+}=09@media only screen and (max-width: 480px){
+=09=09.mcnImageGroupContent{
+=09=09=09padding:9px !important;
+=09=09}
+
+}=09@media only screen and (max-width: 480px){
+=09=09.mcnCaptionLeftContentOuter .mcnTextContent=2C.mcnCaptionRightConten=
+tOuter .mcnTextContent{
+=09=09=09padding-top:9px !important;
+=09=09}
+
+}=09@media only screen and (max-width: 480px){
+=09=09.mcnImageCardTopImageContent=2C.mcnCaptionBottomContent:last-child .=
+mcnCaptionBottomImageContent=2C.mcnCaptionBlockInner .mcnCaptionTopContent=
+:last-child .mcnTextContent{
+=09=09=09padding-top:18px !important;
+=09=09}
+
+}=09@media only screen and (max-width: 480px){
+=09=09.mcnImageCardBottomImageContent{
+=09=09=09padding-bottom:9px !important;
+=09=09}
+
+}=09@media only screen and (max-width: 480px){
+=09=09.mcnImageGroupBlockInner{
+=09=09=09padding-top:0 !important;
+=09=09=09padding-bottom:0 !important;
+=09=09}
+
+}=09@media only screen and (max-width: 480px){
+=09=09.mcnImageGroupBlockOuter{
+=09=09=09padding-top:9px !important;
+=09=09=09padding-bottom:9px !important;
+=09=09}
+
+}=09@media only screen and (max-width: 480px){
+=09=09.mcnTextContent=2C.mcnBoxedTextContentColumn{
+=09=09=09padding-right:18px !important;
+=09=09=09padding-left:18px !important;
+=09=09}
+
+}=09@media only screen and (max-width: 480px){
+=09=09.mcnImageCardLeftImageContent=2C.mcnImageCardRightImageContent{
+=09=09=09padding-right:18px !important;
+=09=09=09padding-bottom:0 !important;
+=09=09=09padding-left:18px !important;
+=09=09}
+
+}=09@media only screen and (max-width: 480px){
+=09=09.mcpreview-image-uploader{
+=09=09=09display:none !important;
+=09=09=09width:100% !important;
+=09=09}
+
+}=09@media only screen and (max-width: 480px){
+=09=09h1{
+=09=09=09font-size:22px !important;
+=09=09=09line-height:125% !important;
+=09=09}
+
+}=09@media only screen and (max-width: 480px){
+=09=09h2{
+=09=09=09font-size:20px !important;
+=09=09=09line-height:125% !important;
+=09=09}
+
+}=09@media only screen and (max-width: 480px){
+=09=09h3{
+=09=09=09font-size:18px !important;
+=09=09=09line-height:125% !important;
+=09=09}
+
+}=09@media only screen and (max-width: 480px){
+=09=09h4{
+=09=09=09font-size:16px !important;
+=09=09=09line-height:150% !important;
+=09=09}
+
+}=09@media only screen and (max-width: 480px){
+=09=09table.mcnBoxedTextContentContainer td.mcnTextContent=2Ctd.mcnBoxedTe=
+xtContentContainer td.mcnTextContent p{
+=09=09=09font-size:14px !important;
+=09=09=09line-height:150% !important;
+=09=09}
+
+}=09@media only screen and (max-width: 480px){
+=09=09td#templateHeader td.mcnTextContent=2Ctd#templateHeader td.mcnTextCo=
+ntent p{
+=09=09=09font-size:16px !important;
+=09=09=09line-height:150% !important;
+=09=09}
+
+}=09@media only screen and (max-width: 480px){
+=09=09td#templateBody td.mcnTextContent=2Ctd#templateBody td.mcnTextConten=
+t p{
+=09=09=09font-size:16px !important;
+=09=09=09line-height:150% !important;
+=09=09}
+
+}=09@media only screen and (max-width: 480px){
+=09=09td#templateFooter td.mcnTextContent=2Ctd#templateFooter td.mcnTextCo=
+ntent p{
+=09=09=09font-size:14px !important;
+=09=09=09line-height:150% !important;
+=09=09}
+
+}</style></head>
+    <body style=3D"background:#FFFFFF none no-repeat center/cover;height:=
+ 100%;margin: 0;padding: 0;width: 100%;-ms-text-size-adjust: 100%;-webkit-=
+text-size-adjust: 100%;background-color: #FFFFFF;background-image: none;ba=
+ckground-repeat: no-repeat;background-position: center;background-size: co=
+ver;">
+        <!--
+-->
+        <center>
+            <table align=3D"center" border=3D"0" cellpadding=3D"0" cellspa=
+cing=3D"0" height=3D"100%" width=3D"100%" id=3D"bodyTable" style=3D"backgr=
+ound:#FFFFFF none no-repeat center/cover;border-collapse: collapse;mso-tab=
+le-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-te=
+xt-size-adjust: 100%;height: 100%;margin: 0;padding: 0;width: 100%;backgro=
+und-color: #FFFFFF;background-image: none;background-repeat: no-repeat;bac=
+kground-position: center;background-size: cover;">
+                <tr>
+                    <td align=3D"left" valign=3D"top" id=3D"bodyCell" styl=
+e=3D"mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text=
+-size-adjust: 100%;height: 100%;margin: 0;padding: 10px;width: 100%;border=
+-top: 0;">
+                        <!-- BEGIN TEMPLATE // -->
+                        <!--[if (gte mso 9)|(IE)]>
+                        <table align=3D"center" border=3D"0" cellspacing=
+=3D"0" cellpadding=3D"0" width=3D"600" style=3D"width:600px;">
+                        <tr>
+                        <td align=3D"center" valign=3D"top" width=3D"600"=
+ style=3D"width:600px;">
+                        <![endif]-->
+                        <table border=3D"0" cellpadding=3D"0" cellspacing=
+=3D"0" width=3D"100%" class=3D"templateContainer" style=3D"border-collapse=
+: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjus=
+t: 100%;-webkit-text-size-adjust: 100%;border: 0;max-width: 600px !importa=
+nt;">
+                            <tr>
+                                <td valign=3D"top" id=3D"templateHeader" s=
+tyle=3D"mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-t=
+ext-size-adjust: 100%;border-top: 0;border-bottom: 0;"></td>
+                            </tr>
+                            <tr>
+                                <td valign=3D"top" id=3D"templateBody" sty=
+le=3D"mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-tex=
+t-size-adjust: 100%;border-top: 0;border-bottom: 0;"><table border=3D"0" c=
+ellpadding=3D"0" cellspacing=3D"0" width=3D"100%" class=3D"mcnTextBlock" s=
+tyle=3D"min-width: 100%;border-collapse: collapse;mso-table-lspace: 0pt;ms=
+o-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 1=
+00%;">
+    <tbody class=3D"mcnTextBlockOuter">
+        <tr>
+            <td valign=3D"top" class=3D"mcnTextBlockInner" style=3D"paddin=
+g-top: 9px;mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webki=
+t-text-size-adjust: 100%;">
+              =09<!--[if mso]>
+=09=09=09=09<table align=3D"left" border=3D"0" cellspacing=3D"0" cellpaddi=
+ng=3D"0" width=3D"100%" style=3D"width:100%;">
+=09=09=09=09<tr>
+=09=09=09=09<![endif]-->
+=09=09=09
+=09=09=09=09<!--[if mso]>
+=09=09=09=09<td valign=3D"top" width=3D"600" style=3D"width:600px;">
+=09=09=09=09<![endif]-->
+                <table align=3D"left" border=3D"0" cellpadding=3D"0" cells=
+pacing=3D"0" style=3D"max-width: 100%;min-width: 100%;border-collapse: col=
+lapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 10=
+0%;-webkit-text-size-adjust: 100%;" width=3D"100%" class=3D"mcnTextContent=
+Container">
+                    <tbody><tr>
+
+                        <td valign=3D"top" class=3D"mcnTextContent" style=
+=3D"padding-top: 0;padding-right: 18px;padding-bottom: 9px;padding-left: 1=
+8px;mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-=
+size-adjust: 100%;word-break: break-word;color: #202020;font-family: Helve=
+tica;font-size: 16px;line-height: 150%;text-align: left;">
+
+                            <div dir=3D"ltr">"Gleich ist es zu sp=C3=A4t !=
+"<br>
+<br>
+Meine Tochter musste dringend auf Toilette. Als wir das erl=C3=B6sende H=
+=C3=A4uschen betraten=2C stand dort ein Kassenautomat.<br>
+<br>
+Ich hielt meine NFC-Karte dran.<br>
+<br>
+Ping.<br>
+<br>
+Wir waren drin und die Erleichterung gro=C3=9F.<br>
+<br>
+Was hatte ich in dem Moment nicht getan?<br>
+<br>
+Auf den Preis geschaut.<br>
+<br>
+Warum?<br>
+<br>
+Weil in solchen Momenten der Preis nicht wichtig ist.<br>
+<br>
+Und der Betreiber des Toilettenh=C3=A4uschens k=C3=B6nnte (fast) jeden Pre=
+is abrufen=2C den er wollte.<br>
+<br>
+Denn kurz vor der Notdurft ist die Macht des Toilettent=C3=BCrstehers am g=
+r=C3=B6=C3=9Ften.<br>
+<br>
+<strong>Das=2C mein Freund=2C ist der Schl=C3=BCssel zum Geld.</strong><br=
+>
+<br>
+Viele wollen diesen Schl=C3=BCssel&nbsp;nicht anwenden und gehen deshalb l=
+eer aus.<br>
+<br>
+Sie haben zwar Leser=2C Abonnenten und sogar Produkte - aber keine Verk=C3=
+=A4ufe.<br>
+<br>
+Weil sie ihre Macht nicht nutzen.<br>
+<br>
+Weitere Beispiele:</div>
+
+<ul dir=3D"ltr">
+=09<li style=3D"mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-=
+webkit-text-size-adjust: 100%;">Der Schl=C3=BCsseldienst kassiert das Geld=
+ BEVOR er die T=C3=BCr =C3=B6ffnet</li>
+=09<li style=3D"mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-=
+webkit-text-size-adjust: 100%;">Das Kino kassiert das Geld BEVOR du den Fi=
+lm siehst</li>
+=09<li style=3D"mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-=
+webkit-text-size-adjust: 100%;">Die Prostituierte kassiert das Geld VOR de=
+r Dienstleistung</li>
+</ul>
+Jack Nasher nennt dies deshalb auch das Nutten-Prinzip.<br>
+<br>
+Diese nimmt das Geld vom Freier vor dem Akt=2C weil dann ihre Macht am gr=
+=C3=B6=C3=9Ften ist.<br>
+<br>
+Und nach dem Akt am geringsten.<br>
+<br>
+Deshalb:<br>
+<br>
+Verstehe=2C wann deine Macht am gr=C3=B6=C3=9Ften ist und mache zu diesem=
+ Zeitpunkt auch ein Angebot.<br>
+<br>
+Das ist der Schl=C3=BCssel zum Geld.<br>
+<br>
+F=C3=BCr einige wirkt es allerdings "fies"=2C weil sie ihre Macht nicht "a=
+usnutzen" wollen.<br>
+<br>
+Zum Verst=C3=A4ndnis: Nicht ausnutzen=2C sondern nutzen.<br>
+<br>
+Da ist ein gro=C3=9Fer Unterschied.<br>
+<br>
+Frage:<br>
+<br>
+Wann ist deine Macht also Infopreneur am gr=C3=B6=C3=9Ften?<br>
+<br>
+Sagen wir du bist Coach=2C Info-Unternehmer oder Berater ?<br>
+<br>
+Informationen sind also dein Produkt.<br>
+<br>
+Dein goldener Moment ist wie bei der Prostituierten:<br>
+<br>
+VOR dem Zugang.<br>
+<br>
+Denn hier stehen viele psychologische Faktoren auf deiner Seite (welche da=
+s sind=2C zeige ich dir in meinem Kurs).<br>
+<br>
+Worauf will ich hinaus?<br>
+<br>
+Wenn du Geld mit deinen Informationen verdienen willst (Coach=2C Berater=
+=2C Kursanbieter)=2C dann kassiere das Geld bevor du dein Wissen entkleide=
+st.<br>
+<br>
+Und verschenke deinen guten Stoff nicht an jeden Freier - sprich Leser -=
+=2C der um die Ecke kommt.<br>
+<br>
+Gerade diesen Fehler machen 99% der Newsletter da drau=C3=9Fen und verdien=
+en damit praktisch kaum Ca$h.<br>
+<br>
+Wenn du zu den 1% geh=C3=B6ren willst=2C die sich nicht an jeden kostenlos=
+ ranschmei=C3=9Fen=2C sondern ihre wertvollen Informationen auch angemesse=
+n bezahlt bekommen wollen=2C dann folge meinem einfachen System.<br>
+<br>
+Ich zeige es dir hier:<br>
+<br>
+<a href=3D"https://schreibsuchti.us3.list-manage.com/track/click?u=3D5e78d=
+7ef2297cc80842b7591e&id=3Dc3569d2df3&e=3D6496a8003f" target=3D"_blank" st=
+yle=3D"mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-te=
+xt-size-adjust: 100%;color: #007C89;font-weight: normal;text-decoration: u=
+nderline;"><strong>Das E-Mail-Money-System</strong></a><br>
+<br>
+Schreib gro=C3=9Fartig=2C sei gro=C3=9Fartig=2C<br>
+<br>
+Dein Walter<br>
+<br>
+PS<br>
+Mir schrieb mal eine emp=C3=B6rte Leserin: <em>"Gibts auch mal echte Tipps=
+ und nicht nur Angebote=2C die einem das Geld aus der&nbsp;Tasche ziehen s=
+ollen?"</em><br>
+<br>
+Ja Madam=2C die echten Tipps gibt es NACH dem Geld. Siehe Prinzip oben.<br=
+>
+<br>
+PPS<br>
+Das Angebot gilt nur bis Freitagabend 24 Uhr.<br>
+<br>
+Hier der Link zum Kurs:<br>
+<br>
+<a href=3D"https://schreibsuchti.us3.list-manage.com/track/click?u=3D5e78d=
+7ef2297cc80842b7591e&id=3Df74d35f6b6&e=3D6496a8003f" target=3D"_blank" st=
+yle=3D"mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-te=
+xt-size-adjust: 100%;color: #007C89;font-weight: normal;text-decoration: u=
+nderline;"><strong>Das E-Mail-Money-System</strong></a>
+                        </td>
+                    </tr>
+                </tbody></table>
+=09=09=09=09<!--[if mso]>
+=09=09=09=09</td>
+=09=09=09=09<![endif]-->
+
+=09=09=09=09<!--[if mso]>
+=09=09=09=09</tr>
+=09=09=09=09</table>
+=09=09=09=09<![endif]-->
+            </td>
+        </tr>
+    </tbody>
+</table></td>
+                            </tr>
+                            <tr>
+                                <td valign=3D"top" id=3D"templateFooter" s=
+tyle=3D"mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-t=
+ext-size-adjust: 100%;border-top: 0;border-bottom: 0;"><table border=3D"0"=
+ cellpadding=3D"0" cellspacing=3D"0" width=3D"100%" class=3D"mcnTextBlock"=
+ style=3D"min-width: 100%;border-collapse: collapse;mso-table-lspace: 0pt;=
+mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust:=
+ 100%;">
+    <tbody class=3D"mcnTextBlockOuter">
+        <tr>
+            <td valign=3D"top" class=3D"mcnTextBlockInner" style=3D"paddin=
+g-top: 9px;mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webki=
+t-text-size-adjust: 100%;">
+              =09<!--[if mso]>
+=09=09=09=09<table align=3D"left" border=3D"0" cellspacing=3D"0" cellpaddi=
+ng=3D"0" width=3D"100%" style=3D"width:100%;">
+=09=09=09=09<tr>
+=09=09=09=09<![endif]-->
+=09=09=09
+=09=09=09=09<!--[if mso]>
+=09=09=09=09<td valign=3D"top" width=3D"600" style=3D"width:600px;">
+=09=09=09=09<![endif]-->
+                <table align=3D"left" border=3D"0" cellpadding=3D"0" cells=
+pacing=3D"0" style=3D"max-width: 100%;min-width: 100%;border-collapse: col=
+lapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 10=
+0%;-webkit-text-size-adjust: 100%;" width=3D"100%" class=3D"mcnTextContent=
+Container">
+                    <tbody><tr>
+
+                        <td valign=3D"top" class=3D"mcnTextContent" style=
+=3D"padding-top: 0;padding-right: 18px;padding-bottom: 9px;padding-left: 1=
+8px;mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-=
+size-adjust: 100%;word-break: break-word;color: #202020;font-family: Helve=
+tica;font-size: 12px;line-height: 150%;text-align: left;">
+
+                            <br>
+<em>-------<br>
+<br>
+<br>
+<span style=3D"color:#696969">Copyright =C2=A9 2023 Schreibsuchti GmbH=2C=
+ Alle Rechte vorbehalten.</span></em><br>
+<span style=3D"color:#696969">
+ Du erh=C3=A4ltst diese E-Mail=2C weil du Teil der Schreibsuchti-Community=
+ bist. Lass uns gemeinsam besser schreiben.</span><br>
+<br>
+<em><span style=3D"color:#696969">Wenn du diese E-Mail ohne Erlaubnis kopi=
+erst oder klaust=2C dann schicke ich "meine Leute" bei dir vorbei. Du wei=
+=C3=9Ft ja=2C wie das bei Drogenbaronen so l=C3=A4uft...</span></em><br>
+<br>
+<span style=3D"color:#696969"><strong>Kontakt:</strong><br>
+<div class=3D"vcard"><span class=3D"org fn">Schreibsuchti GmbH</span><div=
+ class=3D"adr"><div class=3D"street-address">Albert-Hahn-Stra=C3=9Fe 20</d=
+iv><span class=3D"locality">Duisburg</span> <span class=3D"postal-code">47=
+269</span> <div class=3D"country-name">Germany</div></div><br><a href=3D"h=
+ttps://schreibsuchti.us3.list-manage.com/vcard?u=3D5e78d7ef2297cc80842b759=
+1e&id=3D93b720b585" class=3D"hcard-download">Zu Kontakten hinzuf=C3=BCgen<=
+/a></div>
+<br>
+<br>
+Mein Stoff besorgt dir nicht mehr den n=C3=B6tigen Kick und du m=C3=B6chte=
+st dich abmelden? Kein Problem. Klicke einfach auf </span><a href=3D"https=
+://schreibsuchti.us3.list-manage.com/unsubscribe?u=3D5e78d7ef2297cc80842b7=
+591e&id=3D93b720b585&e=3D6496a8003f&c=3D2ed1232679" target=3D"_blank" style=
+=3D"mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-=
+size-adjust: 100%;color: #202020;font-weight: normal;text-decoration: unde=
+rline;"><span style=3D"color:#696969">abmelden</span></a><span style=3D"co=
+lor:#696969">. Aber dann wundere dich nicht=2C wenn du Entzugserscheinunge=
+n bekommst.</span>
+                        </td>
+                    </tr>
+                </tbody></table>
+=09=09=09=09<!--[if mso]>
+=09=09=09=09</td>
+=09=09=09=09<![endif]-->
+
+=09=09=09=09<!--[if mso]>
+=09=09=09=09</tr>
+=09=09=09=09</table>
+=09=09=09=09<![endif]-->
+            </td>
+        </tr>
+    </tbody>
+</table></td>
+                            </tr>
+                        </table>
+                        <!--[if (gte mso 9)|(IE)]>
+                        </td>
+                        </tr>
+                        </table>
+                        <![endif]-->
+                        <!-- // END TEMPLATE -->
+                    </td>
+                </tr>
+            </table>
+        </center>
+    <img src=3D"https://schreibsuchti.us3.list-manage.com/track/open.php?u=
+=3D5e78d7ef2297cc80842b7591e&id=3D2ed1232679&e=3D6496a8003f" height=3D"1"=
+ width=3D"1" alt=3D""></body>
+</html>
+--_----------=_MCPart_616231826--

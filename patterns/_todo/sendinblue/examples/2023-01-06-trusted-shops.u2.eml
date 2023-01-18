@@ -1,0 +1,1223 @@
+Return-Path: <bounces-96210538-willkommen=email.trustedshops.de@email.trustedshops.de>
+X-Spam-Checker-Version: SpamAssassin 3.4.4 (2020-01-24) on
+	dd20708.kasserver.com
+X-Original-To: hpot2212u2@untrack.email
+Delivered-To: m0666426@dd20708.kasserver.com
+X-policyd-weight: using cached result; rate:hard: -6.1
+Authentication-Results: dd20708.kasserver.com;
+	dkim=pass (1024-bit key; unprotected) header.d=email.trustedshops.de header.i=@email.trustedshops.de header.a=rsa-sha256 header.s=mail header.b=yrDQq1Tv;
+	dkim-atps=neutral
+Received: from email.trustedshops.de (email.trustedshops.de [212.146.242.70])
+	by dd20708.kasserver.com (Postfix) with ESMTPS id F05F71880FEB
+	for <hpot2212u2@untrack.email>; Fri,  6 Jan 2023 22:26:16 +0100 (CET)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=email.trustedshops.de;
+ q=dns/txt; s=mail; bh=PbOQm/PZW6aHEI9viZImac+OBY+9nPfS1mzF1nzJerg=;
+ h=from:reply-to:subject:date:to:mime-version:content-type:list-unsubscribe:x-csa-complaints:list-unsubscribe-post;
+        b=yrDQq1TvPBsd4WKRw6XAFSlZuf55jmIi4/vs0QliqgU+j+gDUwswwn/QpF0rq65D1eCW+FEeWk5G
+        9Wba0t8UKXErmbErycZp97JSasl+O7hhtsQ/59XKefE4zRuYvL44NUe38sidP8TFbOmD4736yrwT
+        q/VOogCK23pTuzpjE7M=
+X-Mailin-EID: OTYyMTA1Mzh%2BaHBvdDIyMTJ1MkB1bnRyYWNrLmVtYWlsfjwyMDIzMDEwNjIxMjYuNDE1NTE2MzUzMzJAc210cC1yZWxheS5tYWlsaW4uZnI%2BfmVtYWlsLnRydXN0ZWRzaG9wcy5kZQ%3D%3D
+To: <hpot2212u2@untrack.email>
+Date: Fri, 06 Jan 2023 21:26:14 +0000
+Subject: Bewertungen: Wertvolle Hilfe beim Online-Shopping
+Message-Id: <4d0bd3fb-7951-42e1-874c-8dd3a81659b7@smtp-relay.sendinblue.com>
+Origin-messageId: <202301062126.41551635332@smtp-relay.mailin.fr>
+Content-Type: multipart/alternative;
+ boundary="--_SiB-8594d7b739a20f5f-Part_1"
+Reply-To: info@trustedshops.com
+MIME-Version: 1.0
+X-sib-id: D1gtbkC2hRrqg22Jj6lFqebniPBobhZDQE3AjKXxiBbwLI3AvTHlfGh3FY_Tn2UYifXazw6VjTkR4-Ru5uOC7aKp-PP52aB3FyUe_AS1Sc_47SdwSF6V-S7pH7okQnMH92F8FNQJXcoHTZkR-gbAY1kos6YaLDqqWnv8SoMQjAPUgYwP9II
+X-CSA-Complaints: whitelist-complaints@eco.de
+List-Unsubscribe-Post: List-Unsubscribe=One-Click
+Feedback-ID: 212.146.242.70:2827948_-1:2827948:Sendinblue
+From: "Trusted Shops" <willkommen@email.trustedshops.de>
+List-Unsubscribe: <mailto:unsubscribe-t@email.trustedshops.de?subject=unsub-OTYyMTA1Mzh-aHBvdDIyMTJ1MkB1bnRyYWNrLmVtYWlsfjwyMDIzMDEwNjIxMjYuNDE1NTE2MzUzMzJAc210cC1yZWxheS5tYWlsaW4uZnI-flRydXN0ZWQgU2hvcHMgPHdpbGxrb21tZW5AZW1haWwudHJ1c3RlZHNob3BzLmRlPn40ZDBiZDNmYi03OTUxLTQyZTEtODc0Yy04ZGQzYTgxNjU5Yjc%3D&body=OTYyMTA1Mzh-aHBvdDIyMTJ1MkB1bnRyYWNrLmVtYWlsfjwyMDIzMDEwNjIxMjYuNDE1NTE2MzUzMzJAc210cC1yZWxheS5tYWlsaW4uZnI-flRydXN0ZWQgU2hvcHMgPHdpbGxrb21tZW5AZW1haWwudHJ1c3RlZHNob3BzLmRlPn40ZDBiZDNmYi03OTUxLTQyZTEtODc0Yy04ZGQzYTgxNjU5Yjc%3D>, <https://r.email.trustedshops.de/tr/un/li/Q755X9puq3DMsGNTwMj7Lw-Ngmow6r81H0QC3F0qO3Nhi1XIhquqvVfRbboyQYNnubEFNrn6c3wVVup6LU2Y1K1qzWoj01ZRlORZpQLCYkPyplTeqYFIoYc1R7QsyPhXlDj9YUBU_Kg1F-eqV37RJwM3yD_EPNFDFK7sucgrXkWBz7dsSzsao0au6vxnQxsKufJg9nLdX6RvWrHfP455gQyWJcXmg00nDVgY_wrUr2tgornh5cvd3A3MFbeU6y2-9CrQXqWitA7b1nBkErny>
+X-Spamd-Bar: --
+X-Dmarc-Test: Allow
+X-KasLoop: m0666426
+
+
+----_SiB-8594d7b739a20f5f-Part_1
+Content-Type: text/plain; charset=utf-8
+Content-Transfer-Encoding: quoted-printable
+
+Klicken Sie [hier](https://r.email.trustedshops.de/tr/mr/uaeqGSRlECIQ3amxsC=
+0e49ffe67-4scXaNlvaLT4XnQ8nEbi9nQiOqLM4jJz=5Fn-blc8kf-qgDBqfgRlDj5dPNZlQzAC=
+=5FsZZAg8mLl-FngQc3867-nDqgkFctGngV7yyNaHtx7G8FQja4w80b1ohuUkwfEDSPsEEXms4j=
+v9rZC=5FHhaWkFvIW6Sg4), wenn Sie diese E-Mail nicht lesen k=C3=B6nnen.
+
+Die wertvolle Hilfe beim Online-Shopping
+=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=
+=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D
+
+Liebe Leserin, lieber Leser,=20
+
+Bewertungen spielen eine zentrale Rolle im modernen Online-Shopping. Doch =
+kann man sich auf alle Bewertungen im Netz wirklich verlassen=3F Wir zeigen=
+ Ihnen, woran Sie vertrauensw=C3=BCrdige und echte Bewertungen von =
+Online-Shops und Produkten erkennen und warum Sie sich auf unser =
+Bewertungssystem verlassen k=C3=B6nnen.
+
+[**Mehr erfahren**](https://www.trustedshops.de/blog/echte-bewertungen-von-=
+online-shops/)
+
+Online-Bewertungen geh=C3=B6ren zum Online-Shopping dazu
+=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=
+=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=
+=3D
+
+Trusted Shops gibt Fake-Bewertungen keine Chance
+=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=
+=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D
+
+Immer mehr Online-Shopper*innen vertrauen auf Bewertungen im Netz. Doch =
+bleiben Sie skeptisch: Sind die Kundenstimmen wirklich echt=3F Oder steckt =
+besonders hinter positivem Feedback nicht am Ende doch nur der Betreiber=3F=
+ Wir von Trusted Shops sagen Fake-Bewertungen den Kampf an! Erfahren Sie =
+jetzt mehr.
+
+[Weiterlesen](https://www.trustedshops.de/blog/fake-bewertungen/)
+
+**Hilfreiche Online-Bewertungen verfassen**
+=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=
+=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D
+
+Ein schnell hingeworfenes =E2=80=9ESuper Produkt!=E2=80=9C oder =
+=E2=80=9ENie wieder=E2=80=9C verr=C3=A4t anderen K=C3=A4ufern nichts =
+=C3=BCber den Grund Ihrer Bewertung und hilft niemandem weiter =E2=80=93 =
+genauso wenig wie die unbegr=C3=BCndeten Lobeshymnen in Fake-Bewertungen. =
+Wie Sie im Handumdrehen seri=C3=B6se und informative Rezensionen schreiben,=
+ die auch noch interessant zu lesen sind, lesen Sie in=C2=A0 unserem =
+Magazin
+
+[**Weiterlesen**](https://www.trustedshops.de/blog/rezensionen-schreiben/)
+
+**Sie m=C3=B6chten gern pers=C3=B6nlich angesprochen werden=3F**
+----------------------------------------------------
+
+[**Jetzt Profil aktualisieren**](https://r.email.trustedshops.=
+de/tr/up/=5FMVGnFZNiWTpGy69jc=5F0D9Yy4KVWx-qsUpUdXnLy8LY8wRZxCYoBWhnoj3SCgz=
+Kuo5P-q3acqZSjLeg4poPf6CYphi1M92aFZ7pafjAdpKcjCj07KxVeWt4Z23T21tKzveBEpnN8w=
+agECmNL1aYJfFqlkaoqXLClON6FRC10nU2OoAWIs5IogSMTd1r2e9VLb=5FK=5FT5VMP3i-FuwZ=
+yAVlCgnWKt8)
+
+
+Vertrauensvolle Gr=C3=BC=C3=9Fe aus K=C3=B6ln
+------------------------------
+
+
+Ihr Trusted Shops Team
+----------------------
+
+**Trusted Shops AG**
+
+Subbelrather Str. 15c, 50823 K=C3=B6ln, Deutschland Amtsgericht K=C3=B6ln, =
+HRB 113040
+Vertretungsberechtigter Vorstand: Jean-Marc No=C3=ABl (Vorsitzender), =
+Alastair Bruce, Michael Burdack
+
+Vorsitzender des Aufsichtsrates: Ulrich Hafenbradl
+USt-IdNr. DE 812 947 877
+
+Inhaltlich verantwortlich: Christin Larisch, c/o Trusted Shops AG, =
+Subbelrather Str. 15c, 50823 K=C3=B6ln
+
+=C2=A9 2023 Trusted Shops AG
+
+Falls Sie unsere E-Mails in Zukunft nicht mehr
+erhalten m=C3=B6chten, klicken [Sie bitte hier.](https://r.email.=
+trustedshops.de/tr/un/AocB-Z7Cs-m3EdCZxK3sATps8ZZDnJgvKN8uei18K-XeAFCRwmM6P=
+OXxbTChxPefo-pHz-LkOrrd4IGtJYQCWPkRnG0wFjnop60KopcxxM45do3UzgIE0ElKBIuChdDd=
+7qG67GOyHGZ9dB-qGRPMJQFeC8PXSp1y9wvdq22NIujZM=5FKme6=5F3-E4PSsXIKMKIKsFznKv=
+iUfhqCbufEhOXVGiu3-FnP5IMuQ38n4YYMdy5HSnU7M4-PqJnwRC9Kw8 =22Abmeldung=22)
+
+[Datenschutz](https://www.trustedshops.de/impressum/#datenschutz =
+=22Datenschutz=22) | [Impressum](https://www.trustedshops.=
+de/impressum/#impressum =22Impressum=22) | [Kontakt](https://help.=
+trustedshops.com/hc/de=3Fbot=5Ffocus=3Dtrue =
+=22Kontakt=22)
+
+
+----_SiB-8594d7b739a20f5f-Part_1
+Content-Type: text/html; charset=utf-8
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE html PUBLIC =22-//W3C//DTD XHTML 1.0 Strict//EN=22 =22http://www.=
+w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd=22>
+<html xmlns=3D=22http://www.w3.org/1999/xhtml=22 xmlns:v=3D=22urn:schemas-m=
+icrosoft-com:vml=22 xmlns:o=3D=22urn:schemas-microsoft-com:office:office=22=
+><head><meta http-equiv=3D=22Content-Type=22 content=3D=22text/html; =
+charset=3Dutf-8=22><meta http-equiv=3D=22X-UA-Compatible=22 =
+content=3D=22IE=3Dedge=22><meta name=3D=22format-detection=22 =
+content=3D=22telephone=3Dno=22><meta name=3D=22viewport=22 =
+content=3D=22width=3Ddevice-width, initial-scale=3D1.=
+0=22><title>Bewertungen: Wertvolle Hilfe beim Online-Shopping</title><style=
+ type=3D=22text/css=22 emogrify=3D=22no=22>#outlook a { padding:0; } .=
+ExternalClass { width:100%; } .ExternalClass, .ExternalClass p, .=
+ExternalClass span, .ExternalClass font, .ExternalClass td, .ExternalClass =
+div { line-height: 100%; } table td { border-collapse: collapse; =
+mso-line-height-rule: exactly; } .editable.image { font-size: 0 !important;=
+ line-height: 0 !important; } .nl2go=5Fpreheader { display: none !=
+important; mso-hide:all !important; mso-line-height-rule: exactly; =
+visibility: hidden !important; line-height: 0px !important; font-size: 0px =
+!important; } body { width:100% !important; -webkit-text-size-adjust:100%; =
+-ms-text-size-adjust:100%; margin:0; padding:0; } img { outline:none; =
+text-decoration:none; -ms-interpolation-mode: bicubic; } a img { =
+border:none; } table { border-collapse:collapse; mso-table-lspace:0pt; =
+mso-table-rspace:0pt; } th { font-weight: normal; text-align: left; } =
+*[class=3D=22gmail-fix=22] { display: none !important; } </style><style =
+type=3D=22text/css=22 emogrify=3D=22no=22> @media (max-width: 600px) { .=
+gmx-killpill { content: ' \03D1';} } </style><style type=3D=22text/css=22 =
+emogrify=3D=22no=22>@media (max-width: 600px) { .gmx-killpill { content: ' =
+\03D1';} .r0-c { box-sizing: border-box !important; width: 100% !important =
+} .r1-o { border-style: solid !important; width: 100% !important } .r2-i { =
+background-color: #ffdc0f !important } .r3-c { box-sizing: border-box !=
+important; text-align: center !important; valign: top !important; width: =
+320px !important } .r4-o { border-style: solid !important; margin: 0 auto 0=
+ auto !important; width: 320px !important } .r5-i { padding-bottom: 10px !=
+important; padding-left: 10px !important; padding-right: 10px !important; =
+padding-top: 10px !important } .r6-c { box-sizing: border-box !important; =
+display: block !important; valign: top !important; width: 100% !important }=
+ .r7-i { padding-left: 0px !important; padding-right: 0px !important } .=
+r8-c { box-sizing: border-box !important; text-align: left !important; =
+valign: top !important; width: 100% !important } .r9-o { border-style: =
+solid !important; margin: 0 auto 0 0 !important; width: 100% !important } .=
+r10-i { text-align: center !important } .r11-o { background-image: =
+url('https://img.mailinblue.com/2670624/images/rnb/original/5f44f4cadaf4037=
+67c4b57a1.png') !important; background-size: 100% 273px !important; =
+border-style: solid !important; width: 100% !important } .r12-i { =
+padding-left: 10px !important; padding-right: 10px !important; padding-top:=
+ 40px !important } .r13-c { box-sizing: border-box !important; text-align: =
+center !important; valign: top !important; width: 120px !important } .r14-o=
+ { border-style: solid !important; margin: 0 auto 0 auto !important; width:=
+ 120px !important } .r15-c { box-sizing: border-box !important; text-align:=
+ center !important; valign: top !important; width: 100% !important } .r16-o=
+ { border-style: solid !important; margin: 0 auto 0 auto !important; width:=
+ 100% !important } .r17-i { padding-top: 40px !important } .r18-i { =
+background-color: #ffffff !important; padding-bottom: 20px !important; =
+padding-left: 10px !important; padding-right: 10px !important; padding-top:=
+ 20px !important } .r19-i { text-align: left !important } .r20-i { =
+padding-top: 12px !important; text-align: left !important } .r21-c { =
+box-sizing: border-box !important; text-align: left !important; valign: top=
+ !important; width: 190px !important } .r22-o { border-style: solid !=
+important; margin: 0 auto 0 0 !important; margin-bottom: 20px !important; =
+margin-top: 20px !important; width: 190px !important } .r23-r { =
+background-color: #005AA0 !important; border-radius: 4px !important; =
+padding-bottom: 10px !important; padding-top: 10px !important; text-align: =
+center !important; width: 190px !important } .r24-i { background-color: =
+#e5e5e5 !important } .r25-c { box-sizing: border-box !important; =
+text-align: center !important; width: 100% !important } .r26-i { =
+background-color: #ffffff !important } .r27-i { padding-bottom: 20px !=
+important; padding-left: 10px !important; padding-right: 10px !important; =
+padding-top: 20px !important } .r28-i { padding-top: 11px !important; =
+text-align: left !important } .r29-c { box-sizing: border-box !important; =
+text-align: left !important; valign: top !important; width: 150px !=
+important } .r30-o { border-style: solid !important; margin: 0 auto 0 0 !=
+important; margin-top: 13px !important; width: 150px !important } .r31-r { =
+background-color: #005AA0 !important; border-radius: 4px !important; =
+padding-bottom: 9px !important; padding-left: 5px !important; =
+padding-right: 5px !important; padding-top: 9px !important; text-align: =
+center !important; width: 140px !important } .r32-i { padding-left: 10px !=
+important; padding-right: 10px !important; padding-top: 6px !important } .=
+r33-i { padding-bottom: 0px !important; padding-left: 0px !important; =
+padding-right: 0px !important; padding-top: 40px !important } .r34-c { =
+box-sizing: border-box !important; text-align: center !important; valign: =
+middle !important; width: 100% !important } .r35-i { color: #222222 !=
+important; padding-left: 10px !important; padding-right: 10px !important; =
+padding-top: 40px !important } .r36-c { box-sizing: border-box !important; =
+display: block !important; valign: middle !important; width: 100% !=
+important } .r37-i { background-color: #ffffff !important; color: #222222 !=
+important; padding-bottom: 37px !important; padding-left: 10px !important; =
+padding-right: 10px !important; padding-top: 20px !important } .r38-i { =
+color: #222222 !important; padding-top: 25px !important } .r39-c { =
+box-sizing: border-box !important; valign: top !important; width: 50% !=
+important } .r40-i { color: #222222 !important; padding-left: 0px !=
+important; padding-right: 8px !important } .r41-i { color: #222222 !=
+important; padding-left: 8px !important; padding-right: 0px !important } .=
+r42-o { border-style: solid !important; margin: 0 auto 0 0 !important; =
+margin-top: 0px !important; width: 100% !important } .r43-i { color: =
+#222222 !important; text-align: center !important } .r44-o { border-style: =
+solid !important; margin: 0 auto 0 auto !important; margin-top: 18px !=
+important; width: 100% !important } .r45-r { background-color: #005AA0 !=
+important; border-radius: 4px !important; box-sizing: border-box; height: =
+initial !important; padding-bottom: 9px !important; padding-left: 5px !=
+important; padding-right: 5px !important; padding-top: 9px !important; =
+text-align: center !important; width: 100% !important } .r46-o { =
+background-image: url('https://img.mailinblue.com/2670624/images/rnb/origin=
+al/5f2a5a3d19b1a7f1fd47d4d0.png') !important; background-size: 100% 98px !=
+important; border-style: solid !important; width: 100% !important } .r47-i =
+{ padding-left: 10px !important; padding-right: 10px !important; =
+padding-top: 150px !important } .r48-o { border-style: solid !important; =
+margin: 0 auto 0 auto !important; width: 0% !important } .r49-i { =
+background-color: #FFDC0F !important } .r50-i { padding-bottom: 14px !=
+important; padding-left: 10px !important; padding-right: 10px !important; =
+padding-top: 50px !important } .r51-i { padding-left: 80px !important; =
+padding-right: 80px !important; padding-top: 20px !important } .r52-c { =
+box-sizing: border-box !important; valign: top !important; width: 33.33% !=
+important } .r53-i { padding-left: 6px !important; padding-right: 6px !=
+important } .r54-c { box-sizing: border-box !important; text-align: center =
+!important; valign: top !important; width: 33px !important } .r55-o { =
+border-style: solid !important; margin: 0 auto 0 auto !important; width: =
+33px !important } .r56-i { color: #222222 !important; padding-bottom: 49px =
+!important; padding-left: 10px !important; padding-right: 10px !important; =
+padding-top: 15px !important } .r57-i { color: #222222 !important; =
+padding-left: 0px !important; padding-right: 0px !important } .r58-c { =
+box-sizing: border-box !important; text-align: center !important; valign: =
+top !important; width: 101px !important } .r59-o { border-style: solid !=
+important; margin: 0 auto 0 auto !important; width: 101px !important } .=
+r60-i { color: #222222 !important } .r61-i { color: #222222 !important; =
+padding-top: 12px !important; text-align: center !important } .r62-i { =
+color: #222222 !important; padding-top: 10px !important; text-align: center=
+ !important } .r63-i { color: #222222 !important; padding-top: 25px !=
+important; text-align: center !important } .r64-c { box-sizing: border-box =
+!important; text-align: center !important; width: 200px !important } .r65-o=
+ { border-style: solid !important; margin: 0 auto 0 auto !important; width:=
+ 200px !important } .r66-i { color: #222222 !important; padding-top: 13px !=
+important } .r67-i { color: #222222 !important; padding-top: 15px !=
+important; text-align: center !important } body { -webkit-text-size-adjust:=
+ none } .nl2go-responsive-hide { display: none } .nl2go-body-table { =
+min-width: unset !important } .mobshow { height: auto !important; overflow:=
+ visible !important; max-height: unset !important; visibility: visible !=
+important; border: none !important } .resp-table { display: inline-table !=
+important } .magic-resp { display: table-cell !important } } </style><!=
+--[if !mso]><!--><style type=3D=22text/css=22 emogrify=3D=22no=22> =
+</style><!--<![endif]--><style type=3D=22text/css=22>p, h1, h2, h3, h4, ol,=
+ ul { margin: 0; } a, a:link { color: #222222; text-decoration: none } .=
+nl2go-default-textstyle { color: #222222; font-family: Arial, Helvetica, =
+sans-serif; font-size: 14px } .default-button { color: #222222; =
+font-family: Arial, Helvetica, sans-serif; font-size: 14px; font-style: =
+normal; font-weight: normal; line-height: 1.15; text-decoration: none; =
+width: 50% } .sib=5Fclass=5F12=5Fblue=5Freg { color: #2277BC; font-family: =
+Arial, Helvetica, sans-serif; font-size: 12px } .sib=5Fclass=5F12=5Fgrey=5F=
+b { color: #666666; font-family: Arial, Helvetica, sans-serif; font-size: =
+12px; font-weight: 700 } .sib=5Fclass=5F12=5Fblack=5Freg { color: #222222; =
+font-family: Arial, Helvetica, sans-serif; font-size: 12px } .=
+sib=5Fclass=5F14=5Fwhite=5Freg { color: #FFFFFF; font-family: Arial, =
+Helvetica, sans-serif; font-size: 14px } .sib=5Fclass=5F14=5Fwhite=5Fb { =
+color: #FFFFFF; font-family: Arial, Helvetica, sans-serif; font-size: 14px;=
+ font-weight: 700 } .sib=5Fclass=5F14=5Fblue=5Freg=5Fu { color: #2277BC; =
+font-family: Arial, Helvetica, sans-serif; font-size: 14px; =
+text-decoration: underline } .sib=5Fclass=5F14=5Fblue=5Fb=5Fi { color: =
+#005AA0; font-family: Arial, Helvetica, sans-serif; font-size: 14px; =
+font-style: italic; font-weight: 700 } .sib=5Fclass=5F14=5Fblack=5Freg { =
+color: #222222; font-family: Arial, Helvetica, sans-serif; font-size: 14px =
+} .sib=5Fclass=5F14=5Fblack=5Fb { color: #222222; font-family: Arial, =
+Helvetica, sans-serif; font-size: 14px; font-weight: 700 } .=
+sib=5Fclass=5F16=5Fblack=5Fb { color: #222222; font-family: Arial, =
+Helvetica, sans-serif; font-size: 16px; font-weight: 700 } .=
+sib=5Fclass=5F18=5Fblack=5Freg { color: #222222; font-family: Arial, =
+Helvetica, sans-serif; font-size: 18px } .sib=5Fclass=5F18=5Fblack=5Fb { =
+color: #222222; font-family: Arial, Helvetica, sans-serif; font-size: 18px;=
+ font-weight: 700 } .sib=5Fclass=5F20=5Fblack=5Fb { color: #222222; =
+font-family: Arial, Helvetica, sans-serif; font-size: 20px; font-weight: =
+700 } .sib=5Fclass=5F22=5Fblack=5Fb { color: #222222; font-family: Arial, =
+Helvetica, sans-serif; font-size: 22px; font-weight: 700 } .=
+sib=5Fclass=5F28=5Fblue=5Fb=5Fi { color: #005AA0; font-family: Arial, =
+Helvetica, sans-serif; font-size: 28px; font-style: italic; font-weight: =
+700 } .sib=5Fclass=5F28=5Fblack=5Fb { color: #222222; font-family: Arial, =
+Helvetica, sans-serif; font-size: 28px; font-weight: 700 } .=
+sib=5Fclass=5F28=5Fblack=5Fb=5Fi { color: #222222; font-family: Arial, =
+Helvetica, sans-serif; font-size: 28px; font-style: italic; font-weight: =
+700 } .sib=5Fclass=5F30=5Fblack=5Fb { color: #222222; font-family: Arial, =
+Helvetica, sans-serif; font-size: 30px; font-weight: 700 } .=
+default-heading1 { color: #1F2D3D; font-family: arial,helvetica,sans-serif;=
+ font-size: 36px } .default-heading2 { color: #1F2D3D; font-family: arial,=
+helvetica,sans-serif; font-size: 32px } .default-heading3 { color: #1F2D3D;=
+ font-family: arial,helvetica,sans-serif; font-size: 24px } .=
+default-heading4 { color: #1F2D3D; font-family: arial,helvetica,sans-serif;=
+ font-size: 18px } a[x-apple-data-detectors] { color: inherit !important; =
+text-decoration: inherit !important; font-size: inherit !important; =
+font-family: inherit !important; font-weight: inherit !important; =
+line-height: inherit !important; } .no-show-for-you { border: none; =
+display: none; float: none; font-size: 0; height: 0; line-height: 0; =
+max-height: 0; mso-hide: all; overflow: hidden; table-layout: fixed; =
+visibility: hidden; width: 0; } </style><!--[if mso]><xml> =
+<o:OfficeDocumentSettings> <o:AllowPNG/> <o:PixelsPerInch>96</o:PixelsPerIn=
+ch> </o:OfficeDocumentSettings> </xml><![endif]--><style =
+type=3D=22text/css=22>a:link{color: #222; text-decoration: =
+none;}</style></head><body bgcolor=3D=22#e5e5e5=22 text=3D=22#222222=22 =
+link=3D=22#222222=22 yahoo=3D=22fix=22 style=3D=22background-color: =
+#e5e5e5;=22><table cellpadding=3D=220=22 border=3D=220=22 =
+cellspacing=3D=220=22 style=3D=22 mso-hide: all; display: =
+none;=22><tr><td>- - -  So helfen Online-Bewertungen Ihnen und anderen =
+wirklich weiter  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - =
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - =
+-</td></tr></table> <table cellspacing=3D=220=22 cellpadding=3D=220=22 =
+border=3D=220=22 role=3D=22presentation=22 class=3D=22nl2go-body-table=22 =
+width=3D=22100%=22 style=3D=22background-color: #e5e5e5; width: =
+100%;=22><tr><td align=3D=22=22 class=3D=22r0-c=22> <table =
+cellspacing=3D=220=22 cellpadding=3D=220=22 border=3D=220=22 =
+role=3D=22presentation=22 width=3D=22100%=22 class=3D=22r1-o=22 =
+style=3D=22table-layout: fixed; width: 100%;=22><!-- --><tr><td =
+valign=3D=22top=22 class=3D=22r2-i=22 style=3D=22background-color: =
+#ffdc0f;=22> <table width=3D=22100%=22 cellspacing=3D=220=22 =
+cellpadding=3D=220=22 border=3D=220=22 role=3D=22presentation=22><tr><td =
+class=3D=22r3-c=22 align=3D=22center=22> <table cellspacing=3D=220=22 =
+cellpadding=3D=220=22 border=3D=220=22 role=3D=22presentation=22 =
+width=3D=22560=22 class=3D=22r4-o=22 style=3D=22table-layout: fixed; width:=
+ 560px;=22><!-- --><tr><td class=3D=22r5-i=22 style=3D=22padding-bottom: =
+10px; padding-top: 10px;=22> <table width=3D=22100%=22 =
+cellspacing=3D=220=22 cellpadding=3D=220=22 border=3D=220=22 =
+role=3D=22presentation=22><tr><th width=3D=22100%=22 valign=3D=22top=22 =
+class=3D=22r6-c=22 style=3D=22font-weight: normal;=22> <table =
+cellspacing=3D=220=22 cellpadding=3D=220=22 border=3D=220=22 =
+role=3D=22presentation=22 width=3D=22100%=22 class=3D=22r1-o=22 =
+style=3D=22table-layout: fixed; width: 100%;=22><!-- --><tr><td =
+valign=3D=22top=22 class=3D=22r7-i=22> <table width=3D=22100%=22 =
+cellspacing=3D=220=22 cellpadding=3D=220=22 border=3D=220=22 =
+role=3D=22presentation=22><tr><td class=3D=22r8-c=22 align=3D=22left=22> =
+<table cellspacing=3D=220=22 cellpadding=3D=220=22 border=3D=220=22 =
+role=3D=22presentation=22 width=3D=22100%=22 class=3D=22r9-o=22 =
+style=3D=22table-layout: fixed; width: 100%;=22><tr><td =
+align=3D=22center=22 valign=3D=22top=22 class=3D=22r10-i =
+nl2go-default-textstyle=22 style=3D=22color: #222; font-family: Arial,=
+Helvetica,sans-serif; font-size: 14px; line-height: 18px; text-align: =
+center;=22> <div><span style=3D=22color: rgb(34, 34, 34); font-size: =
+12px;=22>Klicken Sie <a href=3D=22https://r.email.trustedshops.=
+de/tr/mr/uaeqGSRlECIQ3amxsC0e49ffe67-4scXaNlvaLT4XnQ8nEbi9nQiOqLM4jJz=5Fn-b=
+lc8kf-qgDBqfgRlDj5dPNZlQzAC=5FsZZAg8mLl-FngQc3867-nDqgkFctGngV7yyNaHtx7G8FQ=
+ja4w80b1ohuUkwfEDSPsEEXms4jv9rZC=5FHhaWkFvIW6Sg4=22 style=3D=22color: #222;=
+ text-decoration: none;=22><span class=3D=22sib=5Fclass=5F12=5Fblue=5Freg=
+=22 style=3D=22color: #2277bc; font-family: Arial,Helvetica,sans-serif; =
+font-size: 12px;=22>hier</span></a>, wenn Sie diese E-Mail nicht lesen =
+k=C3=B6nnen.</span></div> </td> </tr></table></td> </tr></table></td> =
+</tr></table></th> </tr></table></td> </tr></table></td> </tr></table></td>=
+ </tr></table></td> </tr><tr><td align=3D=22=22 class=3D=22r0-c=22> <table =
+cellspacing=3D=220=22 cellpadding=3D=220=22 border=3D=220=22 =
+role=3D=22presentation=22 width=3D=22100%=22 class=3D=22r11-o=22 =
+style=3D=22background-image: url('https://img.mailinblue.=
+com/2670624/images/rnb/original/5f44f4cadaf403767c4b57a1.png'); =
+background-repeat: no-repeat; background-size: 100% 273px; font-size: 0; =
+table-layout: fixed; width: 100%;=22><!-- --><tr><td valign=3D=22top=22 =
+class=3D=22=22> <table width=3D=22100%=22 cellspacing=3D=220=22 =
+cellpadding=3D=220=22 border=3D=220=22 role=3D=22presentation=22><tr><td =
+class=3D=22r3-c=22 align=3D=22center=22> <table cellspacing=3D=220=22 =
+cellpadding=3D=220=22 border=3D=220=22 role=3D=22presentation=22 =
+width=3D=22560=22 class=3D=22r4-o=22 style=3D=22table-layout: fixed; width:=
+ 560px;=22><!-- --><tr><td class=3D=22r12-i=22 style=3D=22padding-top: =
+40px;=22> <table width=3D=22100%=22 cellspacing=3D=220=22 =
+cellpadding=3D=220=22 border=3D=220=22 role=3D=22presentation=22><tr><th =
+width=3D=22100%=22 valign=3D=22top=22 class=3D=22r6-c=22 =
+style=3D=22font-weight: normal;=22> <table cellspacing=3D=220=22 =
+cellpadding=3D=220=22 border=3D=220=22 role=3D=22presentation=22 =
+width=3D=22100%=22 class=3D=22r1-o=22 style=3D=22table-layout: fixed; =
+width: 100%;=22><!-- --><tr><td valign=3D=22top=22 class=3D=22r7-i=22> =
+<table width=3D=22100%=22 cellspacing=3D=220=22 cellpadding=3D=220=22 =
+border=3D=220=22 role=3D=22presentation=22><tr><td class=3D=22r13-c=22 =
+align=3D=22center=22> <table cellspacing=3D=220=22 cellpadding=3D=220=22 =
+border=3D=220=22 role=3D=22presentation=22 width=3D=22148=22 =
+class=3D=22r14-o=22 style=3D=22table-layout: fixed; width: =
+148px;=22><tr><td class=3D=22=22 style=3D=22font-size: 0px; line-height: =
+0px;=22> <a href=3D=22https://r.email.trustedshops.de/tr/cl/fszczF6wpdx2-mt=
+htEhThSplPWMHRGW7WSVb9M69cSCps9prSLpi3QyDffy8q2MhpCg4PIP1yaBFNPNqXmy4e2Niqo=
+cp87q26tCe54x4TCLWsSlwY=5Fg=5FcLq8Z-FFbISC7dlSz-vUnlrCbM7K8iKqnHGZ1p48Ho6Na=
+Z8msRZ2VwaZbZ=5FdD7K8t6kO5nQCgvsw5R=5FTWVaH3KGhB58xxNDTLZQXpbLGW9jRqjp844Ck=
+eeaUB3yyPhGN6Z7u2mYwuzg12BNKhMKR2pzRe5syBOtgK0WIvdDjAnq7dBAAQsmdf1nWwDOO-Zr=
+Mk4A-uX17bcFgri2E2Bul=5FjbC3ULFtw=22 target=3D=22=5Fblank=22 =
+style=3D=22color: #222; text-decoration: none;=22> <img =
+src=3D=22https://img.email.trustedshops.de/im/2827948/98153d34c949b456c8017=
+467a00ce94696335d875932fe3783c73c9672fb3542.png=3Fe=3DZ3D=5Fm3SUHChJ=5FDTzF=
+HtnV-Gz04hMv9HiQV0M5T09MsMWZZUcFFzwIawWoQOxAWeNdjV18AEE09Yd4BZ7Si0WAuGZOB0N=
+=5FlW8izCmOAkrVWdqjWBDbN9n0aTapLa5WsTMJq1alhlVwuIQo3NmYi2hcPCMkG0KnFy3BkWJR=
+XvwEC6u6sdywQYVtVLrJgVbLnBV5kxkr0pFO4T5FR7QLYHUhmG58=5FdaxJeqreN2ERD16MVhOD=
+q1IIM1OFKNJ8VD4bDsv5CsS9BEMeM7Sh9qOiqiZXP-M0BUQbBW2r9cyB8yc9DCB=5Fi4HQ=22 =
+width=3D=22148=22 border=3D=220=22 class=3D=22=22 style=3D=22display: =
+block; width: 100%;=22></a> </td> </tr></table></td> </tr><tr><td =
+class=3D=22r15-c=22> <table cellspacing=3D=220=22 cellpadding=3D=220=22 =
+border=3D=220=22 role=3D=22presentation=22 width=3D=22560=22 =
+class=3D=22r16-o=22 style=3D=22table-layout: fixed; width: =
+560px;=22><tr><td class=3D=22r17-i=22 style=3D=22font-size: 0px; =
+line-height: 0px; padding-top: 60px;=22> <a href=3D=22https://r.email.=
+trustedshops.de/tr/cl/HGEE5bWJRreVAQuTra-7TZrzaJ1vce9ehjJOiOguU5KP9xOoQVX4Y=
+y61HfSgyZbpMJourp-bq8K5MJI6PpwNWg9TIkcp97IsIHJfH13IQvIlZLb5zII-i7bi6c2A5SgF=
+3OJ7r=5Fqbp3iGNzY9fUYjRiauoo7j4emb7m4gL2i4f8MhNY6RoX9K8IkDxXUEzJYCm3rGxzcZA=
+IbVVGN1gdj1JUNimlnIXl3ZJkNKWLnDMdkDrStxuPgQYqQXf2b17HZ4LfH9E9HmexX=5FF9e42a=
+INGPso5r8evjBXSEzZRQohE1XJpkiCXbZzGMTLsyESatfU30PzGsl8RlCeMnj-yK7TznBScUJHm=
+T3suI7O=5FARkImG39fDW0njo0rT2CGcgpVn=5Fq8h3yIEt6J2Z=22 =
+target=3D=22=5Fblank=22 style=3D=22color: #222; text-decoration: none;=22> =
+<img src=3D=22https://img.email.trustedshops.de/im/2827948/d3bdcde8e0db6b4a=
+45c6cb048abb22abf505416b16fcf26758f1beb29fa89144.jpg=3Fe=3D2ZfgnAv4trzaFNTl=
+AGnDaE26gkEO0nQf3-JtBcV7uulPJut7Y6LffbrpHxiUYY1U=5FPctfGkbvUb7O3l386f7X82zg=
+n5SgzaV325=5Fc--dMf-8sYeX6meJxt5MTtl2ZZMYwoRnXyhmT2YClra-wPO5SBqq0JHrdYljq3=
+-5WzgxF8oM2v9JXMKcOdH0qUcocFgCZ2FAnhKeP5yz9zSeDtD4NJTIM=5FIyOIS6YwQ1bXviM2w=
+GVfyv0fq=5F6=5Fn4sdbJgU-UWylP11Cp24LrvUYKPvg7zX7bV7lBjX8dYIGZTepHhg7E0enJwg=
+=22 width=3D=22560=22 title=3D=22Echte Bewertungen von Online-Shops=22 =
+border=3D=220=22 class=3D=22=22 style=3D=22display: block; width: =
+100%;=22></a> </td> </tr></table></td> </tr><tr><td class=3D=22r15-c=22 =
+align=3D=22center=22> <table cellspacing=3D=220=22 cellpadding=3D=220=22 =
+border=3D=220=22 role=3D=22presentation=22 width=3D=22100%=22 =
+class=3D=22r16-o=22 style=3D=22table-layout: fixed; width: 100%;=22><!-- =
+--><tr><td class=3D=22r18-i=22 style=3D=22background-color: #ffffff; =
+padding-bottom: 20px; padding-left: 15px; padding-right: 15px; padding-top:=
+ 20px;=22> <table width=3D=22100%=22 cellspacing=3D=220=22 =
+cellpadding=3D=220=22 border=3D=220=22 role=3D=22presentation=22><tr><th =
+width=3D=22100%=22 valign=3D=22top=22 class=3D=22r6-c=22 =
+style=3D=22font-weight: normal;=22> <table cellspacing=3D=220=22 =
+cellpadding=3D=220=22 border=3D=220=22 role=3D=22presentation=22 =
+width=3D=22100%=22 class=3D=22r1-o=22 style=3D=22table-layout: fixed; =
+width: 100%;=22><!-- --><tr><td valign=3D=22top=22 class=3D=22r7-i=22> =
+<table width=3D=22100%=22 cellspacing=3D=220=22 cellpadding=3D=220=22 =
+border=3D=220=22 role=3D=22presentation=22><tr><td class=3D=22r8-c=22 =
+align=3D=22left=22> <table cellspacing=3D=220=22 cellpadding=3D=220=22 =
+border=3D=220=22 role=3D=22presentation=22 width=3D=22100%=22 =
+class=3D=22r9-o=22 style=3D=22table-layout: fixed; width: 100%;=22><tr><td =
+align=3D=22left=22 valign=3D=22top=22 class=3D=22r19-i =
+nl2go-default-textstyle=22 style=3D=22color: #222; font-family: Arial,=
+Helvetica,sans-serif; font-size: 14px; line-height: 34px; text-align: =
+left;=22> <div><span style=3D=22font-size: 24px;=22><span><span =
+style=3D=22font-weight: 700; color: rgb(34, 34, 34);=22>Die wertvolle Hilfe=
+ beim Online-Shopping</span></span></span></div> </td> </tr></table></td> =
+</tr><tr><td class=3D=22r8-c=22 align=3D=22left=22> <table =
+cellspacing=3D=220=22 cellpadding=3D=220=22 border=3D=220=22 =
+role=3D=22presentation=22 width=3D=22100%=22 class=3D=22r9-o=22 =
+style=3D=22table-layout: fixed; width: 100%;=22><tr><td align=3D=22left=22 =
+valign=3D=22top=22 class=3D=22r20-i nl2go-default-textstyle=22 =
+style=3D=22color: #222; font-family: Arial,Helvetica,sans-serif; font-size:=
+ 14px; line-height: 20px; padding-top: 12px; text-align: left;=22> <div><p =
+style=3D=22margin: 0;=22>Liebe Leserin, lieber Leser, <br><br>Bewertungen =
+spielen eine zentrale Rolle im modernen Online-Shopping. Doch kann man sich=
+ auf alle Bewertungen im Netz wirklich verlassen=3F Wir zeigen Ihnen, woran=
+ Sie vertrauensw=C3=BCrdige und echte Bewertungen von Online-Shops und =
+Produkten erkennen und warum Sie sich auf unser Bewertungssystem verlassen =
+k=C3=B6nnen.</p></div> </td> </tr></table></td> </tr><tr><td =
+class=3D=22r21-c=22 align=3D=22left=22> <table cellspacing=3D=220=22 =
+cellpadding=3D=220=22 border=3D=220=22 role=3D=22presentation=22 =
+width=3D=22220=22 class=3D=22r22-o=22 style=3D=22table-layout: fixed; =
+width: 220px;=22><tr class=3D=22nl2go-responsive-hide=22><td =
+height=3D=2220=22 style=3D=22font-size: 20px; line-height: =
+20px;=22>=C2=AD</td> </tr><tr><td height=3D=2216=22 align=3D=22center=22 =
+valign=3D=22top=22 class=3D=22r10-i nl2go-default-textstyle=22 =
+style=3D=22color: #222; font-family: Arial,Helvetica,sans-serif; font-size:=
+ 14px;=22>  <!--[if mso]> <v:roundrect xmlns:v=3D=22urn:schemas-microsoft-c=
+om:vml=22 xmlns:w=3D=22urn:schemas-microsoft-com:office:word=22 =
+href=3D=22https://r.email.trustedshops.de/tr/cl/kOqWP3G-LX=5FpOwk2u9qbNwP-w=
+DOh1s6Grd-uf0FqSSadaS8qt1NNx=5FMtuCQHsoMgFJSkhFkU0qRhWHMxmGJF2zMWm89TayhOH3=
+COgRe0W7abPDDzOzLuBRVumzsuFyo0QSA3LlUydNVblR9MKgCgHONcIrmHBdxOyCgn0yBbk6-Ld=
+TkLTC-2RgcdtvQaUE9g1hceqLprB2VNODGuQfVs4iDRY-wsTLRK5L0rx4o5XQzzXGK5Nia7hl3B=
+f74X04MAzG2QNt-syofmO5c3Gcpdb6zLy2pNQM00=5F7ka8N62HhZlJxyK7o-hooCIvP-9y-TLy=
+QLJgg4U92N1UDUzqwdedfkrhKyvZ8qDj1mhepdNdJRm6Ap4V6nXXIbNx-YTYrohAkInPkDDZ2jh=
+=22 style=3D=22v-text-anchor:middle; height: 35px; width: 219px;=22 =
+arcsize=3D=2212%=22 fillcolor=3D=22#005AA0=22 strokecolor=3D=22#005AA0=22 =
+strokeweight=3D=221px=22 data-btn=3D=221=22> <w:anchorlock/> <div =
+style=3D=22display:none;=22> <center class=3D=22default-button=22><font =
+color=3D=22#ffffff=22><b>Mehr erfahren</b></font></center> </div> =
+</v:roundrect> <![endif]-->  <!--[if !mso]><!-- --> <a href=3D=22https://r.=
+email.trustedshops.de/tr/cl/ZEaSCNg4vyO0HDWJQt7BbonzYlG5yGss1D5niyGXvoC7Ttf=
+yL5R2MvrdE4YckJwD7F9mP7ntCyfwbEDEfIAzo5gP0VzWsL7nphAtBfKl=5FIyxfuYlPRxdKTD1=
+B7udMgGX2rGtNB85ke675G=5Fe=5FHSOYaNPnOjaOVrYpLhuMCEvJuMXtAcfkKt7vYz575=5FYc=
+7qOohmHKflwYAbiNI3q0Xi3iX79-LaM3uCfiUp2Trtv1bBD2Lv3a=5FGMT1ZlD7KEQC5tCHMzlO=
+zvRUb7e7wDDjWBxyuy43vgIAWGelqRqoUvYLFwI7i=5FdmrPKnNvqMSmkVQ6-2CsbHELGyrtLzz=
+R882lAfyYxFrA=5F0QwQWIQ8DEdedvD0X9VxdC4ALF7v0UfuLWmcA1ws-bTi6m3=22 =
+class=3D=22r23-r default-button=22 target=3D=22=5Fblank=22 =
+data-btn=3D=221=22 style=3D=22color: #222; font-family: Arial,Helvetica,=
+sans-serif; font-size: 14px; font-style: normal; font-weight: normal; =
+line-height: 1.15; text-decoration: none; border-style: solid; word-wrap: =
+break-word; display: inline-block; -webkit-text-size-adjust: none; =
+mso-hide: all; background-color: #005AA0; border-bottom-width: 0px; =
+border-color: #005AA0; border-left-width: 0px; border-radius: 4px; =
+border-right-width: 0px; border-top-width: 0px; height: 16px; =
+padding-bottom: 10px; padding-top: 10px; width: 220px;=22><font =
+color=3D=22#ffffff=22><b>Mehr erfahren</b></font></a> <!--<![endif]--> =
+</td> </tr><tr class=3D=22nl2go-responsive-hide=22><td height=3D=2220=22 =
+style=3D=22font-size: 20px; line-height: 20px;=22>=C2=AD</td> =
+</tr></table></td> </tr></table></td> </tr></table></th> </tr></table></td>=
+ </tr></table></td> </tr></table></td> </tr></table></th> =
+</tr></table></td> </tr></table></td> </tr></table></td> </tr></table></td>=
+ </tr><tr><td align=3D=22center=22 class=3D=22r3-c=22> <table =
+cellspacing=3D=220=22 cellpadding=3D=220=22 border=3D=220=22 =
+role=3D=22presentation=22 width=3D=22560=22 class=3D=22r4-o=22 =
+style=3D=22table-layout: fixed; width: 560px;=22><tr><td valign=3D=22top=22=
+ class=3D=22r24-i=22 style=3D=22background-color: #e5e5e5;=22> <table =
+width=3D=22100%=22 cellspacing=3D=220=22 cellpadding=3D=220=22 =
+border=3D=220=22 role=3D=22presentation=22><tr><td class=3D=22r15-c=22 =
+align=3D=22center=22> <table cellspacing=3D=220=22 cellpadding=3D=220=22 =
+border=3D=220=22 role=3D=22presentation=22 width=3D=22100%=22 =
+class=3D=22r16-o=22 style=3D=22table-layout: fixed; width: 100%;=22><!-- =
+--><tr><td class=3D=22r12-i=22 style=3D=22padding-top: 40px;=22> <table =
+width=3D=22100%=22 cellspacing=3D=220=22 cellpadding=3D=220=22 =
+border=3D=220=22 role=3D=22presentation=22><tr><th width=3D=22100%=22 =
+valign=3D=22top=22 class=3D=22r6-c=22 style=3D=22font-weight: normal;=22> =
+<table cellspacing=3D=220=22 cellpadding=3D=220=22 border=3D=220=22 =
+role=3D=22presentation=22 width=3D=22100%=22 class=3D=22r1-o=22 =
+style=3D=22table-layout: fixed; width: 100%;=22><!-- --><tr><td =
+valign=3D=22top=22 class=3D=22r7-i=22> <table width=3D=22100%=22 =
+cellspacing=3D=220=22 cellpadding=3D=220=22 border=3D=220=22 =
+role=3D=22presentation=22><tr><td class=3D=22r8-c=22 align=3D=22left=22> =
+<table cellspacing=3D=220=22 cellpadding=3D=220=22 border=3D=220=22 =
+role=3D=22presentation=22 width=3D=22100%=22 class=3D=22r9-o=22 =
+style=3D=22table-layout: fixed; width: 100%;=22><tr><td align=3D=22left=22 =
+valign=3D=22top=22 class=3D=22r19-i nl2go-default-textstyle=22 =
+style=3D=22color: #222; font-family: Arial,Helvetica,sans-serif; font-size:=
+ 14px; line-height: 34px; text-align: left;=22> <div><span =
+style=3D=22font-size: 24px;=22><span><span style=3D=22font-weight: 700; =
+color: rgb(34, 34, 34);=22>Online-Bewertungen geh=C3=B6ren zum =
+Online-Shopping dazu</span></span></span></div> </td> </tr></table></td> =
+</tr><tr><td class=3D=22r25-c=22 align=3D=22center=22> <table =
+cellspacing=3D=220=22 cellpadding=3D=220=22 border=3D=220=22 =
+role=3D=22presentation=22 width=3D=22560=22 class=3D=22r16-o=22 =
+style=3D=22table-layout: fixed;=22><tr><td class=3D=22=22 =
+style=3D=22height: 1px;=22> <table width=3D=22100%=22 cellspacing=3D=220=22=
+ cellpadding=3D=220=22 border=3D=220=22 role=3D=22presentation=22><tr><td><=
+table width=3D=22100%=22 cellspacing=3D=220=22 cellpadding=3D=220=22 =
+border=3D=220=22 role=3D=22presentation=22 valign=3D=22=22 class=3D=22=22 =
+height=3D=221=22 style=3D=22border-top-style: solid; background-clip: =
+border-box; border-top-color: #222222; border-top-width: 1px; font-size: =
+1px; line-height: 1px;=22><tr><td height=3D=220=22 style=3D=22font-size: =
+0px; line-height: 0px;=22>=C2=AD</td> </tr></table></td> </tr></table></td>=
+ </tr></table></td> </tr></table></td> </tr></table></th> =
+</tr></table></td> </tr></table></td> </tr><tr><td class=3D=22r15-c=22 =
+align=3D=22center=22> <table cellspacing=3D=220=22 cellpadding=3D=220=22 =
+border=3D=220=22 role=3D=22presentation=22 width=3D=22100%=22 =
+class=3D=22r16-o=22 style=3D=22table-layout: fixed; width: 100%;=22><!-- =
+--><tr><td class=3D=22r12-i=22 style=3D=22padding-top: 40px;=22> <table =
+width=3D=22100%=22 cellspacing=3D=220=22 cellpadding=3D=220=22 =
+border=3D=220=22 role=3D=22presentation=22><tr><th width=3D=22100%=22 =
+valign=3D=22top=22 class=3D=22r6-c=22 style=3D=22font-weight: normal;=22> =
+<table cellspacing=3D=220=22 cellpadding=3D=220=22 border=3D=220=22 =
+role=3D=22presentation=22 width=3D=22100%=22 class=3D=22r1-o=22 =
+style=3D=22table-layout: fixed; width: 100%;=22><!-- --><tr><td =
+valign=3D=22top=22 class=3D=22r7-i=22> <table width=3D=22100%=22 =
+cellspacing=3D=220=22 cellpadding=3D=220=22 border=3D=220=22 =
+role=3D=22presentation=22><tr><td class=3D=22r15-c=22 align=3D=22center=22>=
+ <table cellspacing=3D=220=22 cellpadding=3D=220=22 border=3D=220=22 =
+role=3D=22presentation=22 width=3D=22100%=22 class=3D=22r16-o=22 =
+style=3D=22table-layout: fixed; width: 100%;=22><!-- --><tr><td =
+class=3D=22r26-i=22 style=3D=22background-color: #ffffff;=22> <table =
+width=3D=22100%=22 cellspacing=3D=220=22 cellpadding=3D=220=22 =
+border=3D=220=22 role=3D=22presentation=22><tr><th width=3D=2250%=22 =
+valign=3D=22top=22 class=3D=22r6-c=22 style=3D=22font-weight: normal;=22> =
+<table cellspacing=3D=220=22 cellpadding=3D=220=22 border=3D=220=22 =
+role=3D=22presentation=22 width=3D=22100%=22 class=3D=22r1-o=22 =
+style=3D=22table-layout: fixed; width: 100%;=22><!-- --><tr><td =
+valign=3D=22top=22 class=3D=22r7-i=22> <table width=3D=22100%=22 =
+cellspacing=3D=220=22 cellpadding=3D=220=22 border=3D=220=22 =
+role=3D=22presentation=22><tr><td class=3D=22r15-c=22 align=3D=22center=22>=
+ <table cellspacing=3D=220=22 cellpadding=3D=220=22 border=3D=220=22 =
+role=3D=22presentation=22 width=3D=22280=22 class=3D=22r16-o=22 =
+style=3D=22table-layout: fixed; width: 280px;=22><tr><td =
+class=3D=22r17-i=22 style=3D=22padding-top: 40px;=22> <a =
+href=3D=22https://r.email.trustedshops.de/tr/cl/UQVogaVSTNSiHLdGbjyoKkf8IbX=
+6IqUVod7ZZoMB8zn36ldwoXkiCX9rjHT9bHlbNJHS8k=5FPEHZ2WEiD-1hb2hxoqAXSI=5F7BVp=
+WyJ346zbuoNCp38OOtm5d9mayKocor-w4lPR4RuKbWCMdTiyOV2Bv9CovPh4Ugynyueftjj0CJ9=
+TduTVDQTuFY5s-fhdL9svAms6=5FpWmvC7lKOnux1s-tK65f3xHyVMzfwi6q7D7ADiuKI48rh-r=
+1du2jIZ7KlynLbS1NcwEJZr8ODNrG9MBxFK=5FZK-u3sDvcm01RC7=5F-PbMhfNJrS96TOTYjW-=
+slXQbZ73gmkbXq-iNjl8Jvj4drpLGJ0VHRpzwPpFqENkScFCJqcNJ-T=22 =
+target=3D=22=5Fblank=22 style=3D=22color: #222; text-decoration: none;=22> =
+<img src=3D=22https://img.email.trustedshops.de/im/2827948/40cda6c300d14de3=
+65cd3b68b044d902cc4f7a1b1c5bd41229669a93a0392cef.png=3Fe=3DtjTESl9unKkSqfFc=
+C4fsLEt0OVRFRZkTUKyNVIgipERDVpFUYOfOZ=5FAGikwA90VqEAVHLySMAFIrfWgUaTscSoMEj=
+66WBJsX2ElGl61tcQ6URHgc0DmIbIlQ3e8qkxYOhS90252zPOou7KkPvUViS8nvYt0-BpbKq4mB=
+1PXYMHWq84WTBFvtSn4lZIxNgHhUN1c1jFs0nHamVPAp5k=5FpCQiuma-Qi2jbZLu=5FMYxffev=
+=5Fo3liXttCW2a0guRrF33da4=5FfuIA5ZbJLLpjzAlSlaVcBwIwgIXiKdc6=5FGmA--yMWXV55=
+IFdr7Ix=5Fj41lqF86Lw=22 width=3D=22280=22 alt=3D=22Fake-Bewertungen=22 =
+title=3D=22So geht Trusted Shops gegen Fake-Bewertungen vor=22 =
+border=3D=220=22 class=3D=22=22 style=3D=22display: block; width: =
+100%;=22></a> </td> </tr></table></td> </tr></table></td> =
+</tr></table></th> <th width=3D=2250%=22 valign=3D=22top=22 =
+class=3D=22r6-c=22 style=3D=22font-weight: normal;=22> <table =
+cellspacing=3D=220=22 cellpadding=3D=220=22 border=3D=220=22 =
+role=3D=22presentation=22 width=3D=22100%=22 class=3D=22r1-o=22 =
+style=3D=22table-layout: fixed; width: 100%;=22><!-- --><tr><td =
+valign=3D=22top=22 class=3D=22r27-i=22 style=3D=22padding-bottom: 20px; =
+padding-left: 17px; padding-right: 13px; padding-top: 20px;=22> <table =
+width=3D=22100%=22 cellspacing=3D=220=22 cellpadding=3D=220=22 =
+border=3D=220=22 role=3D=22presentation=22><tr><td class=3D=22r8-c=22 =
+align=3D=22left=22> <table cellspacing=3D=220=22 cellpadding=3D=220=22 =
+border=3D=220=22 role=3D=22presentation=22 width=3D=22100%=22 =
+class=3D=22r9-o=22 style=3D=22table-layout: fixed; width: 100%;=22><tr><td =
+align=3D=22left=22 valign=3D=22top=22 class=3D=22r19-i =
+nl2go-default-textstyle=22 style=3D=22color: #222; font-family: Arial,=
+Helvetica,sans-serif; font-size: 14px; line-height: 26px; text-align: =
+left;=22> <div><span style=3D=22font-weight: 700; color: rgb(34, 34, 34); =
+font-size: 22px;=22>Trusted Shops gibt Fake-Bewertungen keine =
+Chance</span></div> </td> </tr></table></td> </tr><tr><td =
+class=3D=22r8-c=22 align=3D=22left=22> <table cellspacing=3D=220=22 =
+cellpadding=3D=220=22 border=3D=220=22 role=3D=22presentation=22 =
+width=3D=22100%=22 class=3D=22r9-o=22 style=3D=22table-layout: fixed; =
+width: 100%;=22><tr><td align=3D=22left=22 valign=3D=22top=22 =
+class=3D=22r28-i nl2go-default-textstyle=22 style=3D=22color: #222; =
+font-family: Arial,Helvetica,sans-serif; font-size: 14px; line-height: =
+20px; padding-top: 11px; text-align: left;=22> <div><span>Immer mehr =
+Online-Shopper*innen vertrauen auf Bewertungen im Netz. Doch bleiben Sie =
+skeptisch: Sind die Kundenstimmen wirklich echt=3F Oder steckt besonders =
+hinter positivem Feedback nicht am Ende doch nur der Betreiber=3F Wir von =
+Trusted Shops sagen Fake-Bewertungen den Kampf an! Erfahren Sie jetzt mehr.=
+</span></div> </td> </tr></table></td> </tr><tr><td class=3D=22r29-c=22 =
+align=3D=22left=22> <table cellspacing=3D=220=22 cellpadding=3D=220=22 =
+border=3D=220=22 role=3D=22presentation=22 width=3D=22150=22 =
+class=3D=22r30-o=22 style=3D=22table-layout: fixed; width: 150px;=22><tr =
+class=3D=22nl2go-responsive-hide=22><td height=3D=2213=22 =
+style=3D=22font-size: 13px; line-height: 13px;=22>=C2=AD</td> </tr><tr><td =
+height=3D=2216=22 align=3D=22center=22 valign=3D=22top=22 class=3D=22r10-i =
+nl2go-default-textstyle=22 style=3D=22color: #222; font-family: Arial,=
+Helvetica,sans-serif; font-size: 14px;=22>  <!--[if mso]> <v:roundrect =
+xmlns:v=3D=22urn:schemas-microsoft-com:vml=22 xmlns:w=3D=22urn:schemas-micr=
+osoft-com:office:word=22 href=3D=22https://r.email.trustedshops.=
+de/tr/cl/Y=5FvBek8axCbNbqVFfU-Sq=5FkEjNrTjpWyj3OYXEbBjjpKsTgLMxdoWhEKWiwQl0=
+Hnofq1TdOBUIVNOk0dzWYRzuqC3uPuCOSprVSQSSQS8QlzzF1ixwS2VVPPEpR60mr2dZAwzkbbL=
+00kMNIWCYekX-zcyYcuPaQ3=5Fb8cv05k77Xcy1r-KMtJSR4=5F7O4dpXJfdwUMr5teKWFylTjD=
+6jeYoF=5FbIP7kXF-cdET1HS9Z9hBiGJo4FrFKvx8yvRctqsWwuRq6zx6z-kp8uzsRCG=5FWmCO=
+YkrzPB989SE9D0O2yi-wL78heFgMpcd3U=5F7gMBNccYHU4b3CTIY7iSSZEHK9cmTxZbsFZOSEC=
+Nwso0ij-luyZ2T7GGlNq=22 style=3D=22v-text-anchor:middle; height: 33px; =
+width: 149px;=22 arcsize=3D=2212%=22 fillcolor=3D=22#005AA0=22 =
+strokecolor=3D=22#005AA0=22 strokeweight=3D=221px=22 data-btn=3D=222=22> =
+<w:anchorlock/> <div style=3D=22display:none;=22> <center =
+class=3D=22default-button=22><span style=3D=22font-weight: 700; color: =
+rgb(255, 255, 255); font-size: 14px;=22>Weiterlesen</span></center> </div> =
+</v:roundrect> <![endif]-->  <!--[if !mso]><!-- --> <a href=3D=22https://r.=
+email.trustedshops.de/tr/cl/L6oYbO4lC1j2pZ8wpbjKXhIMtrcCZkrqYeelqPeKy3HZzSv=
+FtI6Owqn3d1PeJFE9QYtSEeYjnBmnlWhncCDllv52kJ8dgHPFjMKR02=5FcFbvualmyNM8Rt1Tj=
+VUMg8l3mf6=5F4QyTtDPmY9GyC0C4gU5Lt6Jpc=5F6Z-rOq-J3miXdz9bXHDsQzvlGSVAyeHugz=
+lPrtiuMfXuNLTW1WioReAC5C3ak3ul2nNdHSFQvQ6jfDX7fMGUOJ9CBF1HKr-kl9ch3XarBqquo=
+x8VO3C7ncrxrDCpKpK6nAKZim0DT1uZUFUa3yMI5UXTpI-eYJftttP4P9MZP71tbTNuu1COeM5H=
+xwcNiXZMFEqrzB4--NsI6Lbb-yITlyz=22 class=3D=22r31-r default-button=22 =
+target=3D=22=5Fblank=22 data-btn=3D=222=22 style=3D=22color: #222; =
+font-family: Arial,Helvetica,sans-serif; font-size: 14px; font-style: =
+normal; font-weight: normal; line-height: 1.15; text-decoration: none; =
+border-style: solid; word-wrap: break-word; display: inline-block; =
+-webkit-text-size-adjust: none; mso-hide: all; background-color: #005AA0; =
+border-bottom-width: 0px; border-color: #005AA0; border-left-width: 0px; =
+border-radius: 4px; border-right-width: 0px; border-top-width: 0px; height:=
+ 16px; padding-bottom: 9px; padding-left: 5px; padding-right: 5px; =
+padding-top: 9px; width: 140px;=22><span style=3D=22font-weight: 700; =
+color: rgb(255, 255, 255); font-size: 14px;=22>Weiterlesen</span></a> <!--<=
+![endif]--> </td> </tr></table></td> </tr></table></td> </tr></table></th> =
+</tr></table></td> </tr></table></td> </tr></table></td> </tr></table></th>=
+ </tr></table></td> </tr></table></td> </tr><tr><td class=3D=22r15-c=22 =
+align=3D=22center=22> <table cellspacing=3D=220=22 cellpadding=3D=220=22 =
+border=3D=220=22 role=3D=22presentation=22 width=3D=22100%=22 =
+class=3D=22r16-o=22 style=3D=22table-layout: fixed; width: 100%;=22><!-- =
+--><tr><td class=3D=22r32-i=22 style=3D=22padding-top: 6px;=22> <table =
+width=3D=22100%=22 cellspacing=3D=220=22 cellpadding=3D=220=22 =
+border=3D=220=22 role=3D=22presentation=22><tr><th width=3D=22100%=22 =
+valign=3D=22top=22 class=3D=22r6-c=22 style=3D=22font-weight: normal;=22> =
+<table cellspacing=3D=220=22 cellpadding=3D=220=22 border=3D=220=22 =
+role=3D=22presentation=22 width=3D=22100%=22 class=3D=22r1-o=22 =
+style=3D=22table-layout: fixed; width: 100%;=22><!-- --><tr><td =
+valign=3D=22top=22 class=3D=22r7-i=22> <table width=3D=22100%=22 =
+cellspacing=3D=220=22 cellpadding=3D=220=22 border=3D=220=22 =
+role=3D=22presentation=22><tr><td class=3D=22r15-c=22 align=3D=22center=22>=
+ <table cellspacing=3D=220=22 cellpadding=3D=220=22 border=3D=220=22 =
+role=3D=22presentation=22 width=3D=22100%=22 class=3D=22r16-o=22 =
+style=3D=22table-layout: fixed; width: 100%;=22><!-- --><tr><td =
+class=3D=22r26-i=22 style=3D=22background-color: #ffffff;=22> <table =
+width=3D=22100%=22 cellspacing=3D=220=22 cellpadding=3D=220=22 =
+border=3D=220=22 role=3D=22presentation=22><tr><th width=3D=2250%=22 =
+valign=3D=22top=22 class=3D=22r6-c=22 style=3D=22font-weight: normal;=22> =
+<table cellspacing=3D=220=22 cellpadding=3D=220=22 border=3D=220=22 =
+role=3D=22presentation=22 width=3D=22100%=22 class=3D=22r1-o=22 =
+style=3D=22table-layout: fixed; width: 100%;=22><!-- --><tr><td =
+valign=3D=22top=22 class=3D=22r27-i=22 style=3D=22padding-bottom: 20px; =
+padding-left: 14px; padding-right: 16px; padding-top: 20px;=22> <table =
+width=3D=22100%=22 cellspacing=3D=220=22 cellpadding=3D=220=22 =
+border=3D=220=22 role=3D=22presentation=22><tr><td class=3D=22r8-c=22 =
+align=3D=22left=22> <table cellspacing=3D=220=22 cellpadding=3D=220=22 =
+border=3D=220=22 role=3D=22presentation=22 width=3D=22100%=22 =
+class=3D=22r9-o=22 style=3D=22table-layout: fixed; width: 100%;=22><tr><td =
+align=3D=22left=22 valign=3D=22top=22 class=3D=22r19-i =
+nl2go-default-textstyle=22 style=3D=22color: #222; font-family: Arial,=
+Helvetica,sans-serif; font-size: 14px; line-height: 26px; text-align: =
+left;=22> <div><p style=3D=22margin: 0; color: rgb(34, 34, 34); font-size: =
+22px; font-weight: 700;=22><span style=3D=22color: rgb(34,34,34); =
+font-size: 22px;=22><strong>Hilfreiche Online-Bewertungen =
+verfassen</strong></span></p></div> </td> </tr></table></td> </tr><tr><td =
+class=3D=22r8-c=22 align=3D=22left=22> <table cellspacing=3D=220=22 =
+cellpadding=3D=220=22 border=3D=220=22 role=3D=22presentation=22 =
+width=3D=22100%=22 class=3D=22r9-o=22 style=3D=22table-layout: fixed; =
+width: 100%;=22><tr><td align=3D=22left=22 valign=3D=22top=22 =
+class=3D=22r28-i nl2go-default-textstyle=22 style=3D=22color: #222; =
+font-family: Arial,Helvetica,sans-serif; font-size: 14px; line-height: =
+20px; padding-top: 11px; text-align: left;=22> <div><span>Ein schnell =
+hingeworfenes =E2=80=9ESuper Produkt!=E2=80=9C oder =E2=80=9ENie =
+wieder=E2=80=9C verr=C3=A4t anderen K=C3=A4ufern nichts =C3=BCber den Grund=
+ Ihrer Bewertung und hilft niemandem weiter =E2=80=93 genauso wenig wie die=
+ unbegr=C3=BCndeten Lobeshymnen in Fake-Bewertungen. Wie Sie im =
+Handumdrehen seri=C3=B6se und informative Rezensionen schreiben, die auch =
+noch interessant zu lesen sind, lesen Sie in=C2=A0 unserem =
+Magazin</span></div> </td> </tr></table></td> </tr><tr><td =
+class=3D=22r29-c=22 align=3D=22left=22> <table cellspacing=3D=220=22 =
+cellpadding=3D=220=22 border=3D=220=22 role=3D=22presentation=22 =
+width=3D=22150=22 class=3D=22r30-o=22 style=3D=22table-layout: fixed; =
+width: 150px;=22><tr class=3D=22nl2go-responsive-hide=22><td =
+height=3D=2213=22 style=3D=22font-size: 13px; line-height: =
+13px;=22>=C2=AD</td> </tr><tr><td height=3D=2216=22 align=3D=22center=22 =
+valign=3D=22top=22 class=3D=22r10-i nl2go-default-textstyle=22 =
+style=3D=22color: #222; font-family: Arial,Helvetica,sans-serif; font-size:=
+ 14px;=22>  <!--[if mso]> <v:roundrect xmlns:v=3D=22urn:schemas-microsoft-c=
+om:vml=22 xmlns:w=3D=22urn:schemas-microsoft-com:office:word=22 =
+href=3D=22https://r.email.trustedshops.de/tr/cl/ZogJfMsTH198xMFHqAQgJYO-=5F=
+Gf2wDAsURF-5BJSWB1v1=5Fb8tHjPNBvLpw7EosDO95zyO3upPfSJLFx0hYx=5FlFhXCjrUUHXY=
+rd1nMWw0w6qabktoLISu62thLx=5Fs4cRBMan3FxFN2dxp5GUMMXLqTnB7oqoKLnP1jKi=5Fljv=
+Q1CIarS4bYzkxFIO9=5FBGkuMc3BDmvjUCFv53eqHJfDEhBPiKImAOMa-5UntQody1--b2641Z=
+=5FFsA-pg5qk=5FbI2xbSz7WEQHVOXPzvUSh87pvk23OtIJG8QYeLyK66LtZ-cJwaq9UnHsjxvR=
+3YGy8WgB7SNRfFa9-VsSKYI1jMOBDPO4icLUoJAeLMSG4HHjdgShsY0r9womx6yFasbjQ=22 =
+style=3D=22v-text-anchor:middle; height: 33px; width: 149px;=22 =
+arcsize=3D=2212%=22 fillcolor=3D=22#005AA0=22 strokecolor=3D=22#005AA0=22 =
+strokeweight=3D=221px=22 data-btn=3D=223=22> <w:anchorlock/> <div =
+style=3D=22display:none;=22> <center class=3D=22default-button=22><font =
+color=3D=22#ffffff=22><b>Weiterlesen</b></font></center> </div> =
+</v:roundrect> <![endif]-->  <!--[if !mso]><!-- --> <a href=3D=22https://r.=
+email.trustedshops.de/tr/cl/viIrHE0JwnKbFNs8Ct02ZlKOr49lHvpVqHHMXCq2MpgcmQI=
+AerhoYRzd5igMlDc2Tdv-hGpPX13iQAwfzdk2-fXatjYZ8WikqJcZgRxIlPJYi9mv9IJA0QrN3I=
+GpaBqihFNdFqtaHXiBEDI9B9RRgwSivaOQrTn9DykEwm2xH1Qg5U6cHQwt0=5FqPltVtyCzwxiR=
+R88I91iIBsEN8BOvwG7xuD2Jt8yS1X-W5gh=5FO3oXZQinUKFSpygHCzGxYGHcNsp3-HqQ2huft=
+hLWKSWjPte0Z=5FLckx2acZ7jyBVjFXXI0eWxBr9zlpPBbVS32C5zTIB=5FwQKCrY4dw=5FS7z4=
+349I3La1SE5gHCRXPhZsdElEidOWAfk6TL7JkXyUH0=22 class=3D=22r31-r =
+default-button=22 target=3D=22=5Fblank=22 data-btn=3D=223=22 =
+style=3D=22color: #222; font-family: Arial,Helvetica,sans-serif; font-size:=
+ 14px; font-style: normal; font-weight: normal; line-height: 1.15; =
+text-decoration: none; border-style: solid; word-wrap: break-word; display:=
+ inline-block; -webkit-text-size-adjust: none; mso-hide: all; =
+background-color: #005AA0; border-bottom-width: 0px; border-color: #005AA0;=
+ border-left-width: 0px; border-radius: 4px; border-right-width: 0px; =
+border-top-width: 0px; height: 16px; padding-bottom: 9px; padding-left: =
+5px; padding-right: 5px; padding-top: 9px; width: 140px;=22><font =
+color=3D=22#ffffff=22><b>Weiterlesen</b></font></a> <!--<![endif]--> </td> =
+</tr></table></td> </tr></table></td> </tr></table></th> <th =
+width=3D=2250%=22 valign=3D=22top=22 class=3D=22r6-c=22 =
+style=3D=22font-weight: normal;=22> <table cellspacing=3D=220=22 =
+cellpadding=3D=220=22 border=3D=220=22 role=3D=22presentation=22 =
+width=3D=22100%=22 class=3D=22r1-o=22 style=3D=22table-layout: fixed; =
+width: 100%;=22><!-- --><tr><td valign=3D=22top=22 class=3D=22r7-i=22> =
+<table width=3D=22100%=22 cellspacing=3D=220=22 cellpadding=3D=220=22 =
+border=3D=220=22 role=3D=22presentation=22><tr><td class=3D=22r15-c=22> =
+<table cellspacing=3D=220=22 cellpadding=3D=220=22 border=3D=220=22 =
+role=3D=22presentation=22 width=3D=22280=22 class=3D=22r16-o=22 =
+style=3D=22table-layout: fixed; width: 280px;=22><tr><td =
+class=3D=22r33-i=22 style=3D=22font-size: 0px; line-height: 0px; =
+padding-top: 40px;=22> <a href=3D=22https://r.email.trustedshops.=
+de/tr/cl/mtjsfaQ9P0nwPqfK764rGy0gm8lc1mpKy6eqK8QMDD7S927tygHx0zkyu5ssi3wKGI=
+UEhThFMWxpSYOpqmBuOu7=5F9xXZQ8bR7eE=5FocuYQ4VDI-VeciEhO9F1ZiMPwgejnTUvLTEDK=
+kyeMEQiz=5F6fIFDrCfKghjBWNYGe5-qHl10vGcgdHTR0AaYXJzRgatJiUO3PeCVRpb1cue7xFQ=
+1zDgp4VyIIUHHheqeXu5yDRcNSOI4fOEn0br6LIz6yRrJGDvnrK8TWDAouZDPy1fo6e-fovcqTw=
+-nb-xZvWH4JP8wiwzYDP=5F17OEFvoUQBhTDgpcrhitA5wOfhJWPUo7r76PPrWthtCjGVlIvIrC=
+R1NpjzhiAHkPs0ijVdwFc=22 target=3D=22=5Fblank=22 style=3D=22color: #222; =
+text-decoration: none;=22> <img src=3D=22https://img.email.trustedshops.=
+de/im/2827948/771cc5c6306ce0b113e7be30f8f8cce1e8ec431ae2e8fad992590c2ae6940=
+ad7.png=3Fe=3DA5mwdY3aVK8Xjp3KcnA8pqBHwG6ykwBSRKLD0D03ppe68uTbqBprVoFkoyYkr=
+B6Gm577ANk1RyNI3X9TTIJ1loa2ytgPZNEDfg3j=5FuepzekVgT9q1Ase5f9LaleakqqijxVQXB=
+rZNei5ac1EOhNkuoNPkPjg5ymUgyiVxEzijj-yzfzoyp21Apm=5FJtH8NBSc7HDmtyoxendrUv1=
+ba9WMSbSgKSUHJPMrUm2jL5BKOwrEDuk9GLiJ09CnQwhYKurFHMw1XT9-RNwpBnH6N1dRGh=5Fh=
+ETNZWQ34DdB0LaoAGmubLrllKcy2gXoCWvl2muGZaA=22 width=3D=22280=22 =
+title=3D=22Lesen Sie unsere Tipps=22 border=3D=220=22 class=3D=22=22 =
+style=3D=22display: block; width: 100%;=22></a> </td> </tr></table></td> =
+</tr></table></td> </tr></table></th> </tr></table></td> </tr></table></td>=
+ </tr></table></td> </tr></table></th> </tr></table></td> =
+</tr></table></td> </tr><tr><td class=3D=22r34-c=22 align=3D=22center=22> =
+<table cellspacing=3D=220=22 cellpadding=3D=220=22 border=3D=220=22 =
+role=3D=22presentation=22 width=3D=22100%=22 class=3D=22r16-o=22 =
+style=3D=22table-layout: fixed; width: 100%;=22><!-- --><tr><td =
+class=3D=22r35-i=22 style=3D=22color: #222222; font-family: Arial, =
+Helvetica, sans-serif; font-size: 14px; padding-top: 40px;=22> <table =
+width=3D=22100%=22 cellspacing=3D=220=22 cellpadding=3D=220=22 =
+border=3D=220=22 role=3D=22presentation=22><tr><th width=3D=22100%=22 =
+valign=3D=22middle=22 class=3D=22r36-c=22 style=3D=22background-color: =
+#ffffff; font-weight: normal;=22> <table cellspacing=3D=220=22 =
+cellpadding=3D=220=22 border=3D=220=22 role=3D=22presentation=22 =
+width=3D=22100%=22 class=3D=22r1-o=22 style=3D=22table-layout: fixed; =
+width: 100%;=22><!-- --><tr><td valign=3D=22top=22 class=3D=22r37-i=22 =
+style=3D=22background-color: #ffffff; color: #222222; font-family: Arial, =
+Helvetica, sans-serif; font-size: 14px; padding-bottom: 37px; padding-left:=
+ 20px; padding-right: 20px; padding-top: 20px;=22> <table =
+width=3D=22100%=22 cellspacing=3D=220=22 cellpadding=3D=220=22 =
+border=3D=220=22 role=3D=22presentation=22><tr><td class=3D=22r15-c=22 =
+align=3D=22center=22> <table cellspacing=3D=220=22 cellpadding=3D=220=22 =
+border=3D=220=22 role=3D=22presentation=22 width=3D=22100%=22 =
+class=3D=22r16-o=22 style=3D=22table-layout: fixed; width: 100%;=22><!-- =
+--><tr><td class=3D=22r38-i=22 style=3D=22color: #222222; font-family: =
+Arial, Helvetica, sans-serif; font-size: 14px; padding-top: 25px;=22> =
+<table width=3D=22100%=22 cellspacing=3D=220=22 cellpadding=3D=220=22 =
+border=3D=220=22 role=3D=22presentation=22><tr><th width=3D=2250%=22 =
+valign=3D=22top=22 class=3D=22r39-c=22 style=3D=22font-weight: normal;=22> =
+<table cellspacing=3D=220=22 cellpadding=3D=220=22 border=3D=220=22 =
+role=3D=22presentation=22 width=3D=22100%=22 class=3D=22r1-o=22 =
+style=3D=22table-layout: fixed; width: 100%;=22><!-- --><tr><td =
+valign=3D=22top=22 class=3D=22r40-i=22 style=3D=22color: #222222; =
+font-family: Arial, Helvetica, sans-serif; font-size: 14px; padding-right: =
+17px;=22> <table width=3D=22100%=22 cellspacing=3D=220=22 =
+cellpadding=3D=220=22 border=3D=220=22 role=3D=22presentation=22></table></=
+td> </tr></table></th> <th width=3D=2250%=22 valign=3D=22top=22 =
+class=3D=22r39-c=22 style=3D=22font-weight: normal;=22> <table =
+cellspacing=3D=220=22 cellpadding=3D=220=22 border=3D=220=22 =
+role=3D=22presentation=22 width=3D=22100%=22 class=3D=22r1-o=22 =
+style=3D=22table-layout: fixed; width: 100%;=22><!-- --><tr><td =
+valign=3D=22top=22 class=3D=22r41-i=22 style=3D=22color: #222222; =
+font-family: Arial, Helvetica, sans-serif; font-size: 14px; padding-left: =
+17px;=22> <table width=3D=22100%=22 cellspacing=3D=220=22 =
+cellpadding=3D=220=22 border=3D=220=22 role=3D=22presentation=22></table></=
+td> </tr></table></th> </tr></table></td> </tr></table></td> </tr><tr><td =
+class=3D=22r8-c=22 align=3D=22left=22> <table cellspacing=3D=220=22 =
+cellpadding=3D=220=22 border=3D=220=22 role=3D=22presentation=22 =
+width=3D=22100%=22 class=3D=22r42-o=22 style=3D=22table-layout: fixed; =
+width: 100%;=22><tr><td align=3D=22center=22 valign=3D=22top=22 =
+class=3D=22r43-i nl2go-default-textstyle=22 style=3D=22color: #222222; =
+font-family: Arial, Helvetica, sans-serif; font-size: 14px; line-height: =
+28px; text-align: center;=22> <div><p style=3D=22margin: 0; font-size: =
+22px;=22><span style=3D=22font-size: 18px;=22><strong>Sie m=C3=B6chten gern=
+ pers=C3=B6nlich angesprochen werden=3F</strong></span></p></div> </td> =
+</tr></table></td> </tr><tr><td class=3D=22r15-c=22 align=3D=22center=22> =
+<table cellspacing=3D=220=22 cellpadding=3D=220=22 border=3D=220=22 =
+role=3D=22presentation=22 width=3D=22260=22 class=3D=22r44-o=22 =
+style=3D=22table-layout: fixed; width: 260px;=22><tr =
+class=3D=22nl2go-responsive-hide=22><td height=3D=2218=22 =
+style=3D=22font-size: 18px; line-height: 18px;=22>=C2=AD</td> </tr><tr><td =
+height=3D=2216=22 align=3D=22center=22 valign=3D=22top=22 class=3D=22r10-i =
+nl2go-default-textstyle=22 style=3D=22color: #222; font-family: Arial,=
+Helvetica,sans-serif; font-size: 14px;=22>  <!--[if mso]> <v:roundrect =
+xmlns:v=3D=22urn:schemas-microsoft-com:vml=22 xmlns:w=3D=22urn:schemas-micr=
+osoft-com:office:word=22 href=3D=22https://r.email.trustedshops.=
+de/tr/up/juaDVDoy9PHiXHGbckwTxMX8XHv2VSuUBO2r7Iwqo9MuEcW81csuRiYSkZtXPiW4B2=
+TeUPL2VPnoXANzTCJkEUT7QAFdjS6-pgEBo=5FEF7IwdNlmeokocGmw1iFSOu2KM0eEDPHbPZ-U=
+0t9COUIe8Bt2gLs4xkVkWUNc5F5RiqXZ1UuTeF1XtoHv5sZ9nwfcuDJDP30uCNkpVjax93dvPLz=
+cOcig=22 style=3D=22v-text-anchor:middle; height: 33px; width: 259px;=22 =
+arcsize=3D=2212%=22 fillcolor=3D=22#005AA0=22 strokecolor=3D=22#005AA0=22 =
+strokeweight=3D=221px=22 data-btn=3D=224=22> <w:anchorlock/> <div =
+style=3D=22display:none;=22> <center class=3D=22default-button=22><p><span =
+style=3D=22color:#ffffff;=22><strong>Jetzt Profil aktualisieren</strong></s=
+pan></p></center> </div> </v:roundrect> <![endif]-->  <!--[if !mso]><!-- =
+--> <a href=3D=22https://r.email.trustedshops.de/tr/up/juaDVDoy9PHiXHGbckwT=
+xMX8XHv2VSuUBO2r7Iwqo9MuEcW81csuRiYSkZtXPiW4B2TeUPL2VPnoXANzTCJkEUT7QAFdjS6=
+-pgEBo=5FEF7IwdNlmeokocGmw1iFSOu2KM0eEDPHbPZ-U0t9COUIe8Bt2gLs4xkVkWUNc5F5Ri=
+qXZ1UuTeF1XtoHv5sZ9nwfcuDJDP30uCNkpVjax93dvPLzcOcig=22 class=3D=22r45-r =
+default-button=22 target=3D=22=5Fblank=22 data-btn=3D=224=22 =
+style=3D=22font-style: normal; font-weight: normal; line-height: 1.15; =
+text-decoration: none; border-style: solid; word-wrap: break-word; display:=
+ inline-block; -webkit-text-size-adjust: none; mso-hide: all; =
+background-color: #005AA0; border-bottom-width: 0px; border-color: #005AA0;=
+ border-left-width: 0px; border-radius: 4px; border-right-width: 0px; =
+border-top-width: 0px; color: #222222; font-family: Arial, Helvetica, =
+sans-serif; font-size: 14px; height: 16px; padding-bottom: 9px; =
+padding-left: 5px; padding-right: 5px; padding-top: 9px; width: =
+250px;=22><p style=3D=22margin: 0;=22><span style=3D=22color: =
+#ffffff;=22><strong>Jetzt Profil aktualisieren</strong></span></p></a> <!=
+--<![endif]--> </td> </tr></table></td> </tr></table></td> =
+</tr></table></th> </tr></table></td> </tr></table></td> </tr></table></td>=
+ </tr></table></td> </tr><tr><td align=3D=22=22 class=3D=22r0-c=22> <table =
+cellspacing=3D=220=22 cellpadding=3D=220=22 border=3D=220=22 =
+role=3D=22presentation=22 width=3D=22100%=22 class=3D=22r46-o=22 =
+style=3D=22background-image: url('https://img.mailinblue.=
+com/2670624/images/rnb/original/5f2a5a3d19b1a7f1fd47d4d0.png'); =
+background-position: bottom; background-repeat: no-repeat; background-size:=
+ 100% 98px; font-size: 0; table-layout: fixed; width: 100%;=22><!-- =
+--><tr><td valign=3D=22top=22 class=3D=22=22> <table width=3D=22100%=22 =
+cellspacing=3D=220=22 cellpadding=3D=220=22 border=3D=220=22 =
+role=3D=22presentation=22><tr><td class=3D=22r3-c=22 align=3D=22center=22> =
+<table cellspacing=3D=220=22 cellpadding=3D=220=22 border=3D=220=22 =
+role=3D=22presentation=22 width=3D=22560=22 class=3D=22r4-o=22 =
+style=3D=22table-layout: fixed; width: 560px;=22><!-- --><tr><td =
+class=3D=22r47-i=22 style=3D=22padding-top: 110px;=22> <table =
+width=3D=22100%=22 cellspacing=3D=220=22 cellpadding=3D=220=22 =
+border=3D=220=22 role=3D=22presentation=22><tr><th width=3D=22100%=22 =
+valign=3D=22top=22 class=3D=22r6-c=22 style=3D=22font-weight: normal;=22> =
+<table cellspacing=3D=220=22 cellpadding=3D=220=22 border=3D=220=22 =
+role=3D=22presentation=22 width=3D=22100%=22 class=3D=22r1-o=22 =
+style=3D=22table-layout: fixed; width: 100%;=22><!-- --><tr><td =
+valign=3D=22top=22 class=3D=22r7-i=22> <table width=3D=22100%=22 =
+cellspacing=3D=220=22 cellpadding=3D=220=22 border=3D=220=22 =
+role=3D=22presentation=22><tr><td class=3D=22r25-c=22 align=3D=22center=22>=
+ <table cellspacing=3D=220=22 cellpadding=3D=220=22 border=3D=220=22 =
+role=3D=22presentation=22 class=3D=22r48-o=22 style=3D=22table-layout: =
+fixed;=22><tr><td class=3D=22=22 style=3D=22height: 1px;=22> <table =
+width=3D=22100%=22 cellspacing=3D=220=22 cellpadding=3D=220=22 =
+border=3D=220=22 role=3D=22presentation=22><tr><td><table =
+width=3D=22100%=22 cellspacing=3D=220=22 cellpadding=3D=220=22 =
+border=3D=220=22 role=3D=22presentation=22 valign=3D=22=22 class=3D=22=22 =
+height=3D=221=22 style=3D=22border-top-style: solid; background-clip: =
+border-box; border-top-width: 0px; font-size: 0px; line-height: =
+1px;=22><tr><td height=3D=220=22 style=3D=22font-size: 0px; line-height: =
+0px;=22>=C2=AD</td> </tr></table></td> </tr></table></td> =
+</tr></table></td> </tr></table></td> </tr></table></th> </tr></table></td>=
+ </tr></table></td> </tr></table></td> </tr></table></td> </tr><tr><td =
+align=3D=22=22 class=3D=22r0-c=22> <table cellspacing=3D=220=22 =
+cellpadding=3D=220=22 border=3D=220=22 role=3D=22presentation=22 =
+width=3D=22100%=22 class=3D=22r1-o=22 style=3D=22table-layout: fixed; =
+width: 100%;=22><!-- --><tr><td valign=3D=22top=22 class=3D=22r49-i=22 =
+style=3D=22background-color: #FFDC0F;=22> <table width=3D=22100%=22 =
+cellspacing=3D=220=22 cellpadding=3D=220=22 border=3D=220=22 =
+role=3D=22presentation=22><tr><td class=3D=22r3-c=22 align=3D=22center=22> =
+<table cellspacing=3D=220=22 cellpadding=3D=220=22 border=3D=220=22 =
+role=3D=22presentation=22 width=3D=22560=22 class=3D=22r4-o=22 =
+style=3D=22table-layout: fixed; width: 560px;=22><!-- --><tr><td =
+class=3D=22r50-i=22 style=3D=22padding-bottom: 14px; padding-top: 62px;=22>=
+ <table width=3D=22100%=22 cellspacing=3D=220=22 cellpadding=3D=220=22 =
+border=3D=220=22 role=3D=22presentation=22><tr><th width=3D=22100%=22 =
+valign=3D=22top=22 class=3D=22r6-c=22 style=3D=22font-weight: normal;=22> =
+<table cellspacing=3D=220=22 cellpadding=3D=220=22 border=3D=220=22 =
+role=3D=22presentation=22 width=3D=22100%=22 class=3D=22r1-o=22 =
+style=3D=22table-layout: fixed; width: 100%;=22><!-- --><tr><td =
+valign=3D=22top=22 class=3D=22r7-i=22> <table width=3D=22100%=22 =
+cellspacing=3D=220=22 cellpadding=3D=220=22 border=3D=220=22 =
+role=3D=22presentation=22><tr><td class=3D=22r8-c=22 align=3D=22left=22> =
+<table cellspacing=3D=220=22 cellpadding=3D=220=22 border=3D=220=22 =
+role=3D=22presentation=22 width=3D=22100%=22 class=3D=22r9-o=22 =
+style=3D=22table-layout: fixed; width: 100%;=22><tr><td =
+align=3D=22center=22 valign=3D=22top=22 class=3D=22r10-i =
+nl2go-default-textstyle=22 style=3D=22color: #222; font-family: Arial,=
+Helvetica,sans-serif; font-size: 14px; line-height: 26px; text-align: =
+center;=22> <div><span style=3D=22color: rgb(34, 34, 34); font-size: =
+18px;=22>Vertrauensvolle Gr=C3=BC=C3=9Fe aus K=C3=B6ln </span><br><span =
+style=3D=22font-weight: 700; color: rgb(34, 34, 34); font-size: =
+18px;=22>Ihr Trusted Shops Team</span></div> </td> </tr></table></td> =
+</tr><tr><td class=3D=22r15-c=22 align=3D=22center=22> <table =
+cellspacing=3D=220=22 cellpadding=3D=220=22 border=3D=220=22 =
+role=3D=22presentation=22 width=3D=22100%=22 class=3D=22r16-o=22 =
+style=3D=22table-layout: fixed; width: 100%;=22><!-- --><tr><td =
+class=3D=22r51-i=22 style=3D=22padding-left: 212px; padding-right: 212px; =
+padding-top: 20px;=22> <table width=3D=22100%=22 cellspacing=3D=220=22 =
+cellpadding=3D=220=22 border=3D=220=22 role=3D=22presentation=22><tr><th =
+width=3D=2233.33%=22 valign=3D=22top=22 class=3D=22r52-c=22 =
+style=3D=22font-weight: normal;=22> <table cellspacing=3D=220=22 =
+cellpadding=3D=220=22 border=3D=220=22 role=3D=22presentation=22 =
+width=3D=22100%=22 class=3D=22r1-o=22 style=3D=22table-layout: fixed; =
+width: 100%;=22><!-- --><tr><td valign=3D=22top=22 class=3D=22r53-i=22 =
+style=3D=22padding-left: 6px; padding-right: 6px;=22> <table =
+width=3D=22100%=22 cellspacing=3D=220=22 cellpadding=3D=220=22 =
+border=3D=220=22 role=3D=22presentation=22><tr><td class=3D=22r54-c=22 =
+align=3D=22center=22> <table cellspacing=3D=220=22 cellpadding=3D=220=22 =
+border=3D=220=22 role=3D=22presentation=22 width=3D=2233=22 =
+class=3D=22r55-o=22 style=3D=22table-layout: fixed; width: 33px;=22><tr><td=
+ class=3D=22=22 style=3D=22font-size: 0px; line-height: 0px;=22> <a =
+href=3D=22https://r.email.trustedshops.de/tr/cl/JK4AqpdSlUDmhtuAlkVQsZTlAOZ=
+bZlYq7iXCcnWEV-V0E30Tg403ZcdhMjDyOVyS-bqmGePXb2A=5FOqZtK2WhUQL=5F-Us-=5F2Zs=
+vVkDCrqRUbeFvfdyeZzG34bRw183WZVH2d9TPOIVFLGmf6swFcEK1vbXmh0CHF4Pi-kDIqzEgda=
+lgt-=5Fhz7UlhARF=5FCW96y-YB9AFg4xipaH2uxvgzhWzPjNglNyAUm5-PGclkEcaLYj9kt1w-=
+HYvGUPfAzbzuJS=5FDbW9RsdS8FPIPfTGn89A5uzmaQtFLOgpb63Hz6YnVUf9CwSxE2j5eGYRMF=
+IUTnAJO=5FzaKgKYpBv6TZknCv9H9qawDCMUQ=22 target=3D=22=5Fblank=22 =
+style=3D=22color: #222; text-decoration: none;=22> <img =
+src=3D=22https://img.email.trustedshops.de/im/2827948/8d39b0707e9ea72cc986c=
+2d53054159c149b2303da99dcbd242e6dc7ab6e83b4.png=3Fe=3DJ6CSa8En4ddprULWMl9cI=
+sLhbaScYCF3pisITxBqmqQXSW0hiAenGAmgMgd7hje03B5GRyqGA-9CUWRA7JDKUiYTf85KDMkZ=
+-Yr41GJxAsWwIIwlT9D54GLIDkksso3AJWXkXtBjqKdjCtmk2dutsrJ7wjin-YvMv7k0nDEhkS8=
+KlO5Xs32m9k60vr6Wy5pGeKRstacwJewAcp7FtTOyL-hikaUOXz390IvsA1N0vwJNTEaJOMNq7Q=
+vrKs7d6Fr-w8HRh4n69-n87pzGtwC067K=5FbaVJAxqJLq2IRWFrKg6iM-WRNQ=22 =
+width=3D=2233=22 title=3D=22Facebook=22 border=3D=220=22 class=3D=22=22 =
+style=3D=22display: block; width: 100%;=22></a> </td> </tr></table></td> =
+</tr></table></td> </tr></table></th> <th width=3D=2233.33%=22 =
+valign=3D=22top=22 class=3D=22r52-c=22 style=3D=22font-weight: normal;=22> =
+<table cellspacing=3D=220=22 cellpadding=3D=220=22 border=3D=220=22 =
+role=3D=22presentation=22 width=3D=22100%=22 class=3D=22r1-o=22 =
+style=3D=22table-layout: fixed; width: 100%;=22><!-- --><tr><td =
+valign=3D=22top=22 class=3D=22r53-i=22 style=3D=22padding-left: 6px; =
+padding-right: 6px;=22> <table width=3D=22100%=22 cellspacing=3D=220=22 =
+cellpadding=3D=220=22 border=3D=220=22 role=3D=22presentation=22><tr><td =
+class=3D=22r54-c=22 align=3D=22center=22> <table cellspacing=3D=220=22 =
+cellpadding=3D=220=22 border=3D=220=22 role=3D=22presentation=22 =
+width=3D=2233=22 class=3D=22r55-o=22 style=3D=22table-layout: fixed; width:=
+ 33px;=22><tr><td class=3D=22=22 style=3D=22font-size: 0px; line-height: =
+0px;=22> <a href=3D=22https://r.email.trustedshops.de/tr/cl/18IgE1H0jLrx405=
+gXsC1VQUtlQvxoP23eUlaT-qnD9dPPHEE8cjMFfsqOwQc5wpV2DHLJhvsduK3t8r6r7-6u4OTZf=
+7Fn96np0i3siTezk=5F4FJdfx-TscWNi5ggHvOwruvo95E2mIzVBl9OTvLbziGDuMgpIgiLTCLq=
+PakTKUN5JFlYTFjadH2ByjuXXPIl3599hxrvZH=5F9=5FWFr2Nqt2-ZyJi6NJ8ItRNHdDjaG0or=
+cDNR2BJnvGFRKF3x16gFNTZcRfVZYTyPnzOPzVvmXf5ObmSPUD=5FdtVtdZ=5FTwZCIKBKVjGBg=
+Nmd5evX8Ii-bRUWOTKALWaRkw3ayVVmdg7DyKxAvZZ6iRyH1cWZgbo=22 =
+target=3D=22=5Fblank=22 style=3D=22color: #222; text-decoration: none;=22> =
+<img src=3D=22https://img.email.trustedshops.de/im/2827948/0e62765d63c236e5=
+299a819f32728e55638e034ad72a512964a8f45b91c9ecd4.png=3Fe=3DGyzcGKxepVd5lwc6=
+zLeeftLJZpnqWBsicBYmFR5HQFNgrzgUeNbGr02TUkoYq9qH5yXg--29miMRWAoVkilWpi7-nE=
+=5FWGIQCDVBtKP2eF0wIziVpQ59Z2dU=5F8Ca0tz2zdynC7ElClSFsGgV4RIWTBBjqqMO57olMn=
+EUSYayVYHNT-h5ckKn0ke3Ho8AM99wfpwup0fI=5FLiXQp=5FTlPivXebfqmaCQbNjSJ0MlhvKN=
+qIsTOCNsXsW5xJpAWEa64EfiCWNQ0hWEy06hGB5nd13ziQLVRWZ4rkZAmF8hEaABsZQn=5FJrT6=
+w=22 width=3D=2233=22 title=3D=22Instagram=22 border=3D=220=22 =
+class=3D=22=22 style=3D=22display: block; width: 100%;=22></a> </td> =
+</tr></table></td> </tr></table></td> </tr></table></th> <th width=3D=2233.=
+33%=22 valign=3D=22top=22 class=3D=22r52-c=22 style=3D=22font-weight: =
+normal;=22> <table cellspacing=3D=220=22 cellpadding=3D=220=22 =
+border=3D=220=22 role=3D=22presentation=22 width=3D=22100%=22 =
+class=3D=22r1-o=22 style=3D=22table-layout: fixed; width: 100%;=22><!-- =
+--><tr><td valign=3D=22top=22 class=3D=22r53-i=22 style=3D=22padding-left: =
+6px; padding-right: 6px;=22> <table width=3D=22100%=22 =
+cellspacing=3D=220=22 cellpadding=3D=220=22 border=3D=220=22 =
+role=3D=22presentation=22><tr><td class=3D=22r54-c=22 align=3D=22center=22>=
+ <table cellspacing=3D=220=22 cellpadding=3D=220=22 border=3D=220=22 =
+role=3D=22presentation=22 width=3D=2233=22 class=3D=22r55-o=22 =
+style=3D=22table-layout: fixed; width: 33px;=22><tr><td class=3D=22=22 =
+style=3D=22font-size: 0px; line-height: 0px;=22> <a href=3D=22https://r.=
+email.trustedshops.de/tr/cl/nrNrwmb15pvHWzMImAp8fWMoc1Nh36C7smZQQokzdit99mA=
+XXo95CNAZq4XemsRWnza6cBkJtRcTGSUMNaqSn-jWhdAIcWi8l6DjGX=5FXenYbaAonsvpF-0X7=
+uMx6gB8YFIak6BFDQaYaIkGZF-8IUw4PygD8ThhCDE5tnkXApw6-=5FVN9BFfx28PJ4R0NEKN-1=
+=5F=5FD3fn6mFcxerCQSmUdTNNnhMphdZkVgbQJR7J4ERF-2FZTRn59AHjGxKk2RQeuHL8kNFoO=
+qYsRFcXU=5FGIEM2wCWLXwnc3u7QK093NcW770MEtm3zTNIz95mS4NKNd0KNfVzvsNQM8s=5F8B=
+1OEew-bdZKilNDuC0DQ=22 target=3D=22=5Fblank=22 style=3D=22color: #222; =
+text-decoration: none;=22> <img src=3D=22https://img.email.trustedshops.=
+de/im/2827948/1925012d5e70796fedc59575047b7dc35f4ab4519684fb73800dc98046998=
+c5e.png=3Fe=3DoOjOCNdMk-MVh3fJKCEeEMyVw3Rv9kWQYDoJm6K3Tli7FzMnQxFA=5FvZCfsX=
+EmjuUFYTX0Oi=5FPrIzKNdY9Ht8ShheiQdJ=5FuwnfvqAEbk-mLOwt68o6rZYaFBr3oiGjy1NJY=
+P=5Fzfk6lM4INGbpnxGJfhoiSVgd5m4SwImmaOhallSVDGTw4ijL=5F685LTJl6I8EurbH564f1=
+VhQiYHrfaiD1dezq17ryh1tAGghnpq7SkxLtsXP=5FYRt-zaj1UazTvrPDSAzwMz-eIZ3hNsfqk=
+49xkvkF2H8IplclR8hO6te1C2vBaNZ7Q=22 width=3D=2233=22 =
+title=3D=22Pinterest=22 border=3D=220=22 class=3D=22=22 style=3D=22display:=
+ block; width: 100%;=22></a> </td> </tr></table></td> </tr></table></td> =
+</tr></table></th> </tr></table></td> </tr></table></td> </tr><tr><td =
+class=3D=22r25-c=22 align=3D=22center=22> <table cellspacing=3D=220=22 =
+cellpadding=3D=220=22 border=3D=220=22 role=3D=22presentation=22 =
+width=3D=22520=22 class=3D=22r16-o=22 style=3D=22table-layout: =
+fixed;=22><tr><td class=3D=22r17-i=22 style=3D=22padding-top: 30px; height:=
+ 1px;=22> <table width=3D=22100%=22 cellspacing=3D=220=22 =
+cellpadding=3D=220=22 border=3D=220=22 role=3D=22presentation=22><tr><td><t=
+able width=3D=22100%=22 cellspacing=3D=220=22 cellpadding=3D=220=22 =
+border=3D=220=22 role=3D=22presentation=22 valign=3D=22=22 =
+class=3D=22r17-i=22 height=3D=221=22 style=3D=22border-top-style: solid; =
+background-clip: border-box; border-top-color: #000000; border-top-width: =
+1px; font-size: 1px; line-height: 1px;=22><tr><td height=3D=220=22 =
+style=3D=22font-size: 0px; line-height: 0px;=22>=C2=AD</td> =
+</tr></table></td> </tr></table></td> </tr></table></td> </tr></table></td>=
+ </tr></table></th> </tr></table></td> </tr></table></td> =
+</tr></table></td> </tr></table></td> </tr><tr><td align=3D=22=22 =
+class=3D=22r0-c=22> <table cellspacing=3D=220=22 cellpadding=3D=220=22 =
+border=3D=220=22 role=3D=22presentation=22 width=3D=22100%=22 =
+class=3D=22r1-o=22 style=3D=22table-layout: fixed; width: 100%;=22><!-- =
+--><tr><td valign=3D=22top=22 class=3D=22r49-i=22 style=3D=22background-col=
+or: #FFDC0F;=22> <table width=3D=22100%=22 cellspacing=3D=220=22 =
+cellpadding=3D=220=22 border=3D=220=22 role=3D=22presentation=22><tr><td =
+class=3D=22r3-c=22 align=3D=22center=22> <table cellspacing=3D=220=22 =
+cellpadding=3D=220=22 border=3D=220=22 role=3D=22presentation=22 =
+width=3D=22560=22 class=3D=22r4-o=22 style=3D=22table-layout: fixed; width:=
+ 560px;=22><!-- --><tr><td class=3D=22r56-i=22 style=3D=22color: #222222; =
+font-family: Arial, Helvetica, sans-serif; font-size: 14px; padding-bottom:=
+ 49px; padding-top: 15px;=22> <table width=3D=22100%=22 =
+cellspacing=3D=220=22 cellpadding=3D=220=22 border=3D=220=22 =
+role=3D=22presentation=22><tr><th width=3D=22100%=22 valign=3D=22top=22 =
+class=3D=22r6-c=22 style=3D=22font-weight: normal;=22> <table =
+cellspacing=3D=220=22 cellpadding=3D=220=22 border=3D=220=22 =
+role=3D=22presentation=22 width=3D=22100%=22 class=3D=22r1-o=22 =
+style=3D=22table-layout: fixed; width: 100%;=22><!-- --><tr><td =
+valign=3D=22top=22 class=3D=22r57-i=22 style=3D=22color: #222222; =
+font-family: Arial, Helvetica, sans-serif; font-size: 14px;=22> <table =
+width=3D=22100%=22 cellspacing=3D=220=22 cellpadding=3D=220=22 =
+border=3D=220=22 role=3D=22presentation=22><tr><td class=3D=22r58-c=22 =
+align=3D=22center=22> <table cellspacing=3D=220=22 cellpadding=3D=220=22 =
+border=3D=220=22 role=3D=22presentation=22 width=3D=22101=22 =
+class=3D=22r59-o=22 style=3D=22table-layout: fixed; width: =
+101px;=22><tr><td class=3D=22r60-i=22 style=3D=22color: #222222; =
+font-family: Arial, Helvetica, sans-serif; font-size: 14px;=22> <a =
+href=3D=22https://r.email.trustedshops.de/tr/cl/ZZBr8mQNyaBTz0GgZDRBLhSOZSU=
+OuXmIPvjNuh-kXwnXFSTqZnACA1EXOOu9lwu9ToiE5sq-BopxeIxnJ=5FNYH7RFY8hk0-Tqe9ZH=
+8XwsC83Oruii-vNakZ6NrqVHB7-3DhoywUAEgWzRlEZtVRtX8czKBP2sM7rxKJchF76AEnzDIPQ=
+UTpHhdsPa2RsL2gA1IqiY6WY3IBbJi5UTaCOo0f6iwCbz-N6=5Fia17DJgZBvMXFTLwxWzXO2jE=
+SyLtO3yv8tt2l1-zaF8RgMX9-28Oq7T2zBnAfpEFUNvjyvc35LHqWnXarWPUBBKU31CvzLuBgcS=
+eoCvDvApf8WVQhA=22 target=3D=22=5Fblank=22 style=3D=22color: #222; =
+text-decoration: none;=22> <img src=3D=22https://img.email.trustedshops.=
+de/im/2827948/90335a16f97625d75de19a334084107db5be16b8fea6a9f56a1bc3d3d0e8f=
+046.png=3Fe=3DVRHknI04b-GAZF1fGaZUlgK4y338DuMnsQA=5FJC-t8Qf2lSWa03wQKSTiXF4=
+qsaGjVY=5F15PaY9J68zEPzCBtwn2Q2XQn3mU8aDMgXv0RCZ08GJIqZHKG=5FM66Qyj8oQx2TSN=
+1Rv2fVBgiHLyvRv12nOqIbKtG1iCNpJwk50NE2zfCYqleKly1EeDk9UDEwgVaazCfx9araulMI3=
+Rshs6ar9UVquLC6k36T8LYfpQKX9YIjS8qXGUr=5Fc0BH9j9VDkYwjT2xFcliBDTMoH9MUMG6Wl=
+suX998lM58r2aioZapRmzTtbJ5rQ=22 width=3D=22101=22 alt=3D=22Trusted Shops =
+Logo=22 title=3D=22Trusted Shops=22 border=3D=220=22 class=3D=22=22 =
+style=3D=22display: block; width: 100%;=22></a> </td> </tr></table></td> =
+</tr><tr><td class=3D=22r8-c=22 align=3D=22left=22> <table =
+cellspacing=3D=220=22 cellpadding=3D=220=22 border=3D=220=22 =
+role=3D=22presentation=22 width=3D=22100%=22 class=3D=22r9-o=22 =
+style=3D=22table-layout: fixed; width: 100%;=22><tr><td =
+align=3D=22center=22 valign=3D=22top=22 class=3D=22r61-i =
+nl2go-default-textstyle=22 style=3D=22color: #222222; font-family: Arial, =
+Helvetica, sans-serif; font-size: 14px; line-height: 20px; padding-top: =
+12px; text-align: center;=22> <div><p style=3D=22margin: 0; color: rgb(34, =
+34, 34); font-size: 14px; font-weight: 700;=22><span style=3D=22color: =
+rgb(34,34,34); font-size: 14px;=22><strong>Trusted Shops =
+AG</strong></span></p></div> </td> </tr></table></td> </tr><tr><td =
+class=3D=22r8-c=22 align=3D=22left=22> <table cellspacing=3D=220=22 =
+cellpadding=3D=220=22 border=3D=220=22 role=3D=22presentation=22 =
+width=3D=22100%=22 class=3D=22r9-o=22 style=3D=22table-layout: fixed; =
+width: 100%;=22><tr><td align=3D=22center=22 valign=3D=22top=22 =
+class=3D=22r61-i nl2go-default-textstyle=22 style=3D=22color: #222222; =
+font-family: Arial, Helvetica, sans-serif; font-size: 14px; line-height: =
+18px; padding-top: 12px; text-align: center;=22> <div><p style=3D=22margin:=
+ 0; color: rgb(34, 34, 34); font-size: 12px;=22><span style=3D=22color: =
+rgb(34,34,34); font-size: 12px;=22>Subbelrather Str. 15c, 50823 K=C3=B6ln, =
+Deutschland Amtsgericht K=C3=B6ln, HRB 113040</span><br>Vertretungsberechti=
+gter Vorstand: J<span style=3D=22font-size: 12px;=22>ean-Marc No=C3=ABl =
+(Vorsitzender), Alastair Bruce, Michael Burdack</span></p><p =
+style=3D=22margin: 0;=22><span style=3D=22font-size: 12px;=22>Vorsitzender =
+des Aufsichtsrates: Ulrich Hafenbradl</span><br><span style=3D=22color: =
+rgb(34,34,34); font-size: 12px;=22>USt-IdNr. DE 812 947 877</span></p><p =
+style=3D=22margin: 0;=22><span style=3D=22font-size: 12px;=22>Inhaltlich =
+verantwortlich: Christin Larisch, c/o Trusted Shops AG, Subbelrather Str. =
+15c, 50823 K=C3=B6ln</span></p></div> </td> </tr></table></td> </tr><tr><td=
+ class=3D=22r8-c=22 align=3D=22left=22> <table cellspacing=3D=220=22 =
+cellpadding=3D=220=22 border=3D=220=22 role=3D=22presentation=22 =
+width=3D=22100%=22 class=3D=22r9-o=22 style=3D=22table-layout: fixed; =
+width: 100%;=22><tr><td align=3D=22center=22 valign=3D=22top=22 =
+class=3D=22r62-i nl2go-default-textstyle=22 style=3D=22color: #222222; =
+font-family: Arial, Helvetica, sans-serif; font-size: 14px; line-height: =
+18px; padding-top: 10px; text-align: center;=22> <div><p style=3D=22margin:=
+ 0; color: rgb(34, 34, 34); font-size: 12px;=22><span style=3D=22color: =
+rgb(34,34,34); font-size: 12px;=22>=C2=A9 2023 Trusted Shops =
+AG</span></p></div> </td> </tr></table></td> </tr><tr><td =
+class=3D=22r8-c=22 align=3D=22left=22> <table cellspacing=3D=220=22 =
+cellpadding=3D=220=22 border=3D=220=22 role=3D=22presentation=22 =
+width=3D=22100%=22 class=3D=22r9-o=22 style=3D=22table-layout: fixed; =
+width: 100%;=22><tr><td align=3D=22center=22 valign=3D=22top=22 =
+class=3D=22r63-i nl2go-default-textstyle=22 style=3D=22color: #222222; =
+font-family: Arial, Helvetica, sans-serif; font-size: 14px; line-height: =
+18px; padding-top: 25px; text-align: center;=22> <div><p style=3D=22margin:=
+ 0;=22><span style=3D=22color: rgb(34, 34, 34); font-size: 12px;=22>Falls =
+Sie unsere E-Mails in Zukunft nicht mehr<br>erhalten m=C3=B6chten, klicken =
+</span><span style=3D=22font-size: 12px;=22><a title=3D=22Abmeldung=22 =
+href=3D=22https://r.email.trustedshops.de/tr/un/AocB-Z7Cs-m3EdCZxK3sATps8ZZ=
+DnJgvKN8uei18K-XeAFCRwmM6POXxbTChxPefo-pHz-LkOrrd4IGtJYQCWPkRnG0wFjnop60Kop=
+cxxM45do3UzgIE0ElKBIuChdDd7qG67GOyHGZ9dB-qGRPMJQFeC8PXSp1y9wvdq22NIujZM=5FK=
+me6=5F3-E4PSsXIKMKIKsFznKviUfhqCbufEhOXVGiu3-FnP5IMuQ38n4YYMdy5HSnU7M4-PqJn=
+wRC9Kw8=22 style=3D=22color: #222; text-decoration: none;=22><span =
+style=3D=22color: #005aa0;=22><span style=3D=22color: #2277BC; font-size: =
+12px;=22>Sie bitte hier.</span></span></a></span></p></div> </td> =
+</tr></table></td> </tr><tr><td class=3D=22r64-c=22 align=3D=22center=22> =
+<table cellspacing=3D=220=22 cellpadding=3D=220=22 border=3D=220=22 =
+role=3D=22presentation=22 width=3D=22200=22 class=3D=22r65-o=22 =
+style=3D=22table-layout: fixed;=22><tr><td class=3D=22r66-i=22 =
+style=3D=22color: #222222; font-family: Arial, Helvetica, sans-serif; =
+font-size: 14px; padding-top: 13px; height: 1px;=22> <table =
+width=3D=22100%=22 cellspacing=3D=220=22 cellpadding=3D=220=22 =
+border=3D=220=22 role=3D=22presentation=22><tr><td><table =
+width=3D=22100%=22 cellspacing=3D=220=22 cellpadding=3D=220=22 =
+border=3D=220=22 role=3D=22presentation=22 valign=3D=22=22 =
+class=3D=22r66-i=22 height=3D=221=22 style=3D=22border-top-style: solid; =
+background-clip: border-box; border-top-color: #000000; border-top-width: =
+1px; font-size: 1px; line-height: 1px;=22><tr><td height=3D=220=22 =
+style=3D=22font-size: 0px; line-height: 0px;=22>=C2=AD</td> =
+</tr></table></td> </tr></table></td> </tr></table></td> </tr><tr><td =
+class=3D=22r8-c=22 align=3D=22left=22> <table cellspacing=3D=220=22 =
+cellpadding=3D=220=22 border=3D=220=22 role=3D=22presentation=22 =
+width=3D=22100%=22 class=3D=22r9-o=22 style=3D=22table-layout: fixed; =
+width: 100%;=22><tr><td align=3D=22center=22 valign=3D=22top=22 =
+class=3D=22r67-i nl2go-default-textstyle=22 style=3D=22color: #222222; =
+font-family: Arial, Helvetica, sans-serif; font-size: 14px; line-height: =
+18px; padding-top: 15px; text-align: center;=22> <div><p style=3D=22margin:=
+ 0;=22><a href=3D=22https://r.email.trustedshops.de/tr/cl/ybJeX70f0PgehJbdj=
+4GPrdzYOntfJ=5FnBgA1Qy57OUKWVjAhzWVGsrCK=5FPvM-9O2KF2kxpodcD8l=5FfEp9OaB5QI=
+9T0fpNUKKpubvThrEZJAoZUacq=5FXHgvQcZDmKriDRPGM0iS6UzQWlHdN-qzpv1j1i2AiSn7aj=
+n5PFE8gyAh7hM5JIE5WM6xQ1c2sE-QO2vFwZD2RpKWcZexEoM9anHoiLlERphLyGPSpJ2y3Ftt1=
+hKvHU12LiQ-UkI9-VkEJcWaaJyEUZVRoWP1GSTM5K4Xldiw-RT6q7sT0p=5FEOv5AtanC8VOFqY=
+fePE8fJFDU9F9Es2wZ9X3pB5fvC8RTE=5FlD-GUJg8G4KNFUZrRUXSFKZ-ayu3M6P8g=22 =
+title=3D=22Datenschutz=22 style=3D=22color: #222; text-decoration: =
+none;=22><span style=3D=22color: #000000; font-size: =
+12px;=22>Datenschutz</span></a><span style=3D=22color: #000000; font-size: =
+12px;=22> | </span><a href=3D=22https://r.email.trustedshops.=
+de/tr/cl/IVzkwx5GeEq1dOzMgOBK-z9SBG9GKb0ZsXAkSRse6LMkFWiUfyOMManjMlLvqWtjTO=
+-cX2P=5FTOCRYjCrmU=5FUnDUFC=5FFTktpIK7EuPhPerox2fRqz6B2eQzHY7bs3b6hmCaYIYYK=
+swgpPc2mDKHbUKV5bXEYS48Ee5biKkA6rIXiuTwunHsRB7e3AtxcmTBTq78b3NAoVHPfO-XjSfd=
+t29=5FgrbnQe0j3tJ6B1zZ3o6IjsLrQGcgmqymV42xdf=5FLY0zLQM4A8OGf8Tt=5FGkEmjkbjx=
+d2pc7TK8jpAzuBxhZn3qYHQcSCvGdyjJSHfuOCQTLn4c2EPl7h62=5FEgXbGNLam=5FK2gdCerR=
+JzwgIWT-KPGmy6-mgI=5FA=22 title=3D=22Impressum=22 style=3D=22color: #222; =
+text-decoration: none;=22><span style=3D=22color: #000000; font-size: =
+12px;=22>Impressum</span></a><span style=3D=22color: #000000; font-size: =
+12px;=22> | </span><a href=3D=22https://r.email.trustedshops.=
+de/tr/cl/srA7j6=5F0lQogdCFWoodfcESRA1Ax0D3j8JvWCpAlBF7OQWN7OsRw2Pr5aYbDvHCC=
+cGsXdoE9BQ5ikH0PvYkivvxmpp04qA1ZM1tzF5Y2yBJY7a6rRi9UGbq-03VG=5FVwCs8U7IsRz=
+=5FVwcvTAS92n0bN431slRbi0HEcUPuKhhZXuGkLLphftDNSqcujux6sgHLW74e3jNriv5ST058=
+62RJGK7ao9cEUt1kQVi55I5pfQ-pUHTTQXmvcCQSg4ozriiWJGDQzxl1XFCMvi6YWnBSrW75eGp=
+MmE6kExArnY4pF9=5FNz78mkyk8LnPrKlOxN48Otrzs6z9sRcYpLU1wAK7nkF0LUkfJkkhvc-cd=
+rnO0MMv-lMKtKLGAKE=22 title=3D=22Kontakt=22 style=3D=22color: #222; =
+text-decoration: none;=22><span style=3D=22color: #000000; font-size: =
+12px;=22>Kontakt</span></a></p></div> </td> </tr></table></td> =
+</tr></table></td> </tr></table></th> </tr></table></td> </tr></table></td>=
+ </tr></table></td> </tr></table></td> </tr></table><img width=3D=221=22 =
+height=3D=221=22 src=3D=22https://r.email.trustedshops.=
+de/tr/op/wZVfmWe3LsEUSSl3hrULpDGo68-abwf8baZpwyFKW3ssDJ6Hk8EQySOJ9Zg0OdNuGO=
+f3B=5F97kGG=5FiSWIygrt6Mg94Jk8=5FB0a=5Fl1M3830mOIGiqMEevTxfOZih6AZlpZPrRdTn=
+JDvgfGoXR1uwzzb5Rg=5Fm-FLgHKyTouKa0Y=22 alt=3D=22=22 =
+/></body></html>
+
+
+----_SiB-8594d7b739a20f5f-Part_1--
+

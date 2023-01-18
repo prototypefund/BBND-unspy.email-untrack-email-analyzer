@@ -1,0 +1,580 @@
+Return-Path: <bounces+10972555-1c8b-hpot2212u2=untrack.email@ckespa.zeitzuleben.de>
+X-Spam-Checker-Version: SpamAssassin 3.4.4 (2020-01-24) on
+	dd20708.kasserver.com
+X-Original-To: hpot2212u2@untrack.email
+Delivered-To: m0666426@dd20708.kasserver.com
+X-policyd-weight: using cached result; rate:hard: -4
+Authentication-Results: dd20708.kasserver.com;
+	dkim=pass (1024-bit key; unprotected) header.d=zeitzuleben.de header.i=@zeitzuleben.de header.a=rsa-sha256 header.s=cka header.b=cZosMIme;
+	dkim-atps=neutral
+Received: from o1.ck.h.convertkit.com (o1.ck.h.convertkit.com [167.89.80.227])
+	by dd20708.kasserver.com (Postfix) with ESMTPS id EAC0718815C1
+	for <hpot2212u2@untrack.email>; Mon, 16 Jan 2023 18:12:33 +0100 (CET)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=zeitzuleben.de;
+	h=content-type:from:mime-version:subject:list-unsubscribe:to:cc:
+	content-type:from:subject:to;
+	s=cka; bh=I9alMzki5WgENUYoStZJ1TPiJ/HlYIp7R8mGRrTZaT8=;
+	b=cZosMImep6DNNNdUNEJRolFSlsTpBUNA/q68y+jWzXcEBx+ImNIi0gtFz4nRUGllcALF
+	sRipTdic0+ccJ5NuHRX///EIZ58rgPD4zPPFEiE7XaSRnE8ZniDZ9eil1LNu5PMMuyPmCm
+	+HQmgLFvdKQideHrSG1N1htFrEx1q9rP4=
+Received: by filterdrecv-695747775f-4jl87 with SMTP id filterdrecv-695747775f-4jl87-1-63C5857F-3B
+        2023-01-16 17:12:31.634260144 +0000 UTC m=+5162812.757263624
+Received: from MTA5NzI1NTU (unknown)
+	by geopod-ismtpd-4-5 (SG) with HTTP
+	id B1DxSjHkQ5W3NlmScnGurA
+	Mon, 16 Jan 2023 17:12:31.557 +0000 (UTC)
+Content-Type: multipart/alternative; boundary=34717cc751166c7dfeb8102f01af5671cc4bfc809026d85d8e6600e1af6c
+Date: Mon, 16 Jan 2023 17:12:31 +0000 (UTC)
+From: Ralf Senftleben <ralf.senftleben@zeitzuleben.de>
+Mime-Version: 1.0
+Message-ID: <75u9wl9oo0u2uq5qvpuz@convertkit-mail4.com>
+Subject: Herausfinden, was du willst (in nur 3 Minuten)
+Precedence: bulk
+Feedback-ID: 4874116:156821:emailtemplate:CK
+List-Unsubscribe: 
+ <https://unsubscribe.convertkit-mail4.com/75u9wl9oo0u2uq5qvpuz>
+X-Report-Spam: <abuse@convertkit.com>
+X-Report-Abuse: <abuse@convertkit.com>
+X-SG-EID: 
+ =?us-ascii?Q?yJhHf9PUSG+Y7wYIm5ZPoh6TENvP2fM1rzIQv8cFhJP0tgXZrxD9efBeG1sozT?=
+ =?us-ascii?Q?1Ut6sgFBiwL8Tnl2EaTyBgYr9SVVEwdIBAsIuLP?=
+ =?us-ascii?Q?v36tA+hM+sF2sIQNlnx5gyPcRd4TZmJ5kN3mz9s?=
+ =?us-ascii?Q?s8yYwVlezG42B87uLLsM9tq9n1cWhm9JXLVjdsV?=
+ =?us-ascii?Q?qC4AkG3huP7fYu4VdDRzAYbSr9ONQwCZyEZA5bk?=
+ =?us-ascii?Q?PFG7NNE5veGczQgdR51vwge283tEk5vCsub9WEX?=
+ =?us-ascii?Q?SVuUWE+05Nd+iqIi2Dvsg=3D=3D?=
+X-SG-ID: 
+ =?us-ascii?Q?N2C25iY2uzGMFz6rgvQsb8raWjw0ZPf1VmjsCkspi=2FJHjDFAea1uZocvZojyqe?=
+ =?us-ascii?Q?AD9TaiawRUILhgcfl=2FCjuNQ4PAuzaniJ5oWrp0R?=
+ =?us-ascii?Q?5GBQFQYJU461B79LMSQfDVzX39JAu6iuhuMsg+l?=
+ =?us-ascii?Q?proEZp8m2k3qZmOxHBznevIdg=2FpbPC9Um=2F0Eu6l?=
+ =?us-ascii?Q?spcCEfQb0rPkOk7=2FGP0yimoh0mMvJEwttIon9J5?=
+ =?us-ascii?Q?QyaVrSg9tWi7xHKXnb0hJ7oF0VRHLBNlrelj1D3?=
+ =?us-ascii?Q?=2Fk0q24QVKhd3FtJ6TcYF6oYSiW+CdT1dATSK0N8?=
+ =?us-ascii?Q?wks=2FefhgUrWNcZNNxrwPNYpCz4XOFvt5+GL3FHa?=
+ =?us-ascii?Q?WdS3E502ococIH7pjJjleIVg63AxozCDpUFh6hP?=
+ =?us-ascii?Q?OzDHt2sELIbMz772Hwwcl+Ik6hbi3X8Q=3D=3D?=
+To: hpot2212u2@untrack.email
+X-Entity-ID: zUEl6Ag91TRtSXkBssA5NQ==
+X-Spamd-Bar: +
+X-KasLoop: m0666426
+
+--34717cc751166c7dfeb8102f01af5671cc4bfc809026d85d8e6600e1af6c
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/plain; charset=utf-8
+Mime-Version: 1.0
+
+=E2=80=8B
+=E2=80=8B
+
+Eigentlich wei=C3=9Ft du schon, was dich gl=C3=BCcklich macht.
+
+Wahrscheinlich siehst du es nur oft nicht, weil wir alle st=C3=A4ndig
+von au=C3=9Fen verwirrt und beeinflusst werden.
+
+Alle sagen uns st=C3=A4ndig, was wir brauchen, was gut f=C3=BCr uns ist und
+was uns ganz sicher gl=C3=BCcklich machen wird.
+
+Das Fernsehen, die ganzen Experten und Influencer, ich, die
+Werbung, die Regierung. Aber auch unsere Eltern, unsere Kollegen,
+unsere Nachbarn.
+
+Alle erz=C3=A4hlen uns, was gut f=C3=BCr uns ist.
+
+Und wir sind mittendrin.
+
+Du brauchst ein neues Auto, du brauchst einen sicheren Job, du
+brauchst endlich einen Mann, du musst reisen, du musst dir eine
+Solaranlage installieren, du brauchst dieses neue Fitnessger=C3=A4t.
+
+Und es ist echt schwierig, in diesem Gewitter an Botschaften zu
+deinem inneren Kern durchzukommen.
+
+Deswegen hier ein einfacher Trick.
+
+Also =E2=80=A6
+
+Um herauszufinden, was dich wirklich gl=C3=BCcklich macht, gibt es im
+Grunde nur 2 M=C3=B6glichkeiten.
+
+* Probiere so lange Dinge aus, bis du gefunden hast, was dich
+gl=C3=BCcklich macht (der lange Weg).
+* Oder schaue zur=C3=BCck und =C3=BCberlege, was dich in der Vergangenheit
+gl=C3=BCcklich gemacht hat.
+
+Und die 3-Minuten-Methode aus dieser E-Mail, die arbeitet damit,
+dass du in deine Vergangenheit schaust.
+
+Nimm dir also 3 Minuten und beantworte die folgenden Fragen f=C3=BCr
+dich:
+
+* =E2=80=9EWann und wo war ich in der Vergangenheit gl=C3=BCcklich? Was sin=
+d
+meine sch=C3=B6nsten Erinnerungen?=E2=80=9C
+* =E2=80=9EUnd was genau habe ich in dieser vergangenen Situation gemacht
+oder erlebt?=E2=80=9C
+* =E2=80=9EWas w=C3=BCrde in dieser Situation eingel=C3=B6st oder erf=C3=BC=
+llt, was mir
+wirklich wichtig war?=E2=80=9C
+* =E2=80=9EWelches meiner h=C3=A4ufig vorkommenden Bed=C3=BCrfnisse wurde i=
+n dieser
+Situation erf=C3=BCllt und befriedigt?=E2=80=9C
+
+Stell dir einen Timer auf 3 Minuten und schreibe so schnell wie
+m=C3=B6glich und in Stichpunkten die Antworten auf die Fragen auf.
+
+Wenn du 4 oder 5 Minuten brauchst, ist das nat=C3=BCrlich auch gut.
+Aber in 3 Minuten findest du meistens schon viele Punkte.
+
+Der n=C3=A4chste Schritt w=C3=A4re dann, noch 2 weitere Fragen zu stellen:
+
+* =E2=80=9EWas kann ich tun, um diese Erfahrungen zu wiederholen und
+=C3=B6fter zu erleben?=E2=80=9C
+* =E2=80=9EWas kann ich tun, um die Bed=C3=BCrfnisse hinter meinen sch=C3=
+=B6nsten
+Erfahrungen heute =C3=B6fter zu befriedigen?=E2=80=9C
+
+Du hast fr=C3=BCher auf deinen Bergtouren tiefe Erf=C3=BCllung erlebt. Dein
+Ziel k=C3=B6nnte also sein, =C3=B6fter raus in die Natur zu gehen.
+
+Du hast es als Jugendlicher geliebt zu malen und zu zeichnen.
+Also k=C3=B6nntest du dir vornehmen, deine Kunst wieder aufleben zu
+lassen.
+
+Du bist als 20-J=C3=A4hriger auf einem Schiff mitgesegelt und hast das
+Meer so geliebt. Also w=C3=A4hlst du als Ziel, eine Segelt=C3=B6rn zu
+buchen und vielleicht selbst einen Segelschein zu machen.
+
+Du transportierst also deine Gl=C3=BCckserfahrungen aus der
+Vergangenheit in die Gegenwart. Denn da ist die
+Wahrscheinlichkeit, dass dich etwas gl=C3=BCcklich macht, viel h=C3=B6her.
+H=C3=B6her, als wenn du wild herumexperimentierst, wie das ja so viele
+machen.
+
+Dieses =C3=9Cbertragen klappt nat=C3=BCrlich nicht immer. Weil du dich ja
+auch ver=C3=A4ndert hast. Weil nicht jedes vergangene Gl=C3=BCck in die
+Zukunft transportierbar ist.
+
+Aber es klappt erstaunlich oft, weil wir uns in vielen Bereichen
+=C3=BCber die Jahre eben nicht =C3=A4ndern.
+
+Also =E2=80=A6
+
+Probiere es ruhig einmal aus.
+
+Ich w=C3=BCnsche dir alles Gute.
+
+Und m=C3=B6gest du immer wissen, was gut f=C3=BCr dich ist und was du
+brauchst, um gl=C3=BCcklich zu sein.
+
+Ralf
+
+=E2=80=8B
+
+PS: In der n=C3=A4chsten E-Mail geht es dann um die 7 Dinge, die uns
+Menschen grunds=C3=A4tzlich gl=C3=BCcklich machen. Denn wir sind ja nicht
+so verschieden.
+
+Diese 7 Dinge sind die direkte Abk=C3=BCrzung.
+
+Die Abk=C3=BCrzung, um die Frage noch weiter zu beantworten, was du
+wirklich willst.
+
+=E2=80=8B
+
+Du hast diese E-Mail weitergeleitet bekommen? =E2=9C=89=EF=B8=8F
+
+Da hat dich jemand sehr lieb =E2=9D=A4=EF=B8=8F
+
+Wenn du diese E-Mails auch bekommen m=C3=B6chtest, kannst du dich hier
+kostenlos anmelden:
+
+=E2=80=8B
+
+-->=E2=86=92 Kostenlos anmelden (
+https://click.convertkit-mail4.com/75u9wl9oo0u2uq5qvpuz/6qheh8hprod6d4so/aH=
+R0cHM6Ly96ZWl0enVsZWJlbi5kZS9uZXdzbGV0dGVyLw=3D=3D
+)
+=E2=86=92 Kostenlos anmelden ( https://zeitzuleben.de/newsletter/ )=E2=80=
+=8B
+
+=E2=80=8B
+
+Nicht vergessen: Am Ende wird alles gut. Und wenn es noch nicht
+gut ist, ist es noch nicht zu Ende.
+
+=E2=80=8BAlle Downloads, Formulare, Arbeitsbl=C3=A4tter an einem Ort (
+https://click.convertkit-mail4.com/75u9wl9oo0u2uq5qvpuz/kkhmh6h8wm3237hl/aH=
+R0cHM6Ly96ZWl0enVsZWJlbi5kZS91bnNlcmUtZG93bmxvYWRzLw=3D=3D
+).
+
+Warum bekommst du diese E-Mail? Na weil du dich mit deiner
+Adresse hpot2212u2@untrack.email f=C3=BCr meinen Newsletter angemeldet
+hast. Oder weil du einen Kurs bei mir gekauft hast. Oder weil du
+eine unserer kostenlosen Email-Kurse bestellt hast.
+
+Meine Firma: Zeit zu leben Verlags- und Trainings GmbH.
+Katharinenring 30. 21409 Embsen. Gesch=C3=A4ftsf=C3=BChrer: Ralf
+Senftleben. Steuernummer: DE194928602.
+
+Von allem abmelden: Abmelden (
+https://unsubscribe.convertkit-mail4.com/75u9wl9oo0u2uq5qvpuz )
+(Tsch=C3=BC=C3=9F und alles Gute f=C3=BCr dich).
+
+=E2=80=8B
+--34717cc751166c7dfeb8102f01af5671cc4bfc809026d85d8e6600e1af6c
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/html; charset=utf-8
+Mime-Version: 1.0
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3DUTF-8">
+<style>email-button:hover{background-color:#4d6e82}</style>
+</head>
+<body style=3D"margin:0;padding:0;-webkit-font-smoothing:antialiased;-ms-te=
+xt-size-adjust:100%;-webkit-text-size-adjust:100%">
+<div style=3D"background-color:#ffffff"><table role=3D"presentation" cellpa=
+dding=3D"0" cellspacing=3D"0" class=3D"email" style=3D"border-collapse:sepa=
+rate;mso-table-lspace:0pt;mso-table-rspace:0pt;background-color:#ffffff;wid=
+th:100%" bgcolor=3D"#ffffff"><tbody><tr>
+<td style=3D"vertical-align:top"><div class=3D"email-container [object Obje=
+ct]" style=3D"margin:0 auto;padding:30px 0;padding-left:20px;padding-right:=
+20px;max-width:600px;padding-top:30px;padding-left:20px;padding-bottom:30px=
+;padding-right:20px;margin:0 auto;max-width:600px">
+<!--[if mso]><center><table cellpadding=3D"0" cellspacing=3D"0" align=3D"ce=
+nter" style=3D"" width=3D"600" bgcolor=3D"#ffffff"><tr><td><![endif]--><div=
+ style=3D"background-color:#ffffff;border-radius:0;overflow:hidden;max-widt=
+h:600;margin:0px auto"><table bgcolor=3D"#ffffff" cellpadding=3D"0" cellspa=
+cing=3D"0" width=3D"100%" style=3D"border-collapse:separate;mso-table-lspac=
+e:0pt;mso-table-rspace:0pt"><tbody><tr><td style=3D"vertical-align:top;padd=
+ing:20px"><div class=3D"email-body" style=3D"background-color:#ffffff">
+<div class=3D"email-body-header" style=3D"padding:20px 20px 0 20px">
+<table width=3D"100%" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" styl=
+e=3D"border-collapse:separate;mso-table-lspace:0pt;mso-table-rspace:0pt;tab=
+le-layout:fixed"><tbody><tr><td align=3D"center" style=3D"vertical-align:to=
+p"><figure style=3D"margin:1em 0;display:block;margin:12px 0;max-width:100%=
+;width:150px"><div style=3D"display:block;max-width:150px"><img src=3D"http=
+s://embed.filekitcdn.com/e/eL5LWq71Y2wMt3kNZCG5Ex/wRFssBaJq8ojJgJ4C5KzH1/em=
+ail" alt=3D"Ralf Senftleben" width=3D"150" style=3D"border:0 none;display:b=
+lock;height:auto;line-height:100%;outline:none;-webkit-text-decoration:none=
+;text-decoration:none;max-width:100%;width:150px;max-width:100%;border-radi=
+us:100px"></div>
+<figcaption style=3D"margin-top:0.4em;font-size:0.8em;text-align:center;dis=
+play:none">=E2=80=8B</figcaption></figure></td></tr></tbody></table>
+<p style=3D"margin:1em 0;line-height:1.5em;font-family:Geneva,Calibri,-appl=
+e-system,BlinkMacSystemFont,'Segoe UI',Roboto,Oxygen-Sans,Ubuntu,Cantarell,=
+'Helvetica Neue',sans-serif;color:#3d3d3d;font-size:18px;line-height:1.5">=
+=E2=80=8B</p>
+</div>
+<div class=3D"email-content"><div class=3D"spaced-contents">
+<p style=3D"margin:1em 0;line-height:1.5em;font-family:Geneva,Calibri,-appl=
+e-system,BlinkMacSystemFont,'Segoe UI',Roboto,Oxygen-Sans,Ubuntu,Cantarell,=
+'Helvetica Neue',sans-serif;color:#3d3d3d;font-size:18px;line-height:1.5">E=
+igentlich wei=C3=9Ft du schon, was dich gl=C3=BCcklich macht.</p>
+<p style=3D"margin:1em 0;line-height:1.5em;font-family:Geneva,Calibri,-appl=
+e-system,BlinkMacSystemFont,'Segoe UI',Roboto,Oxygen-Sans,Ubuntu,Cantarell,=
+'Helvetica Neue',sans-serif;color:#3d3d3d;font-size:18px;line-height:1.5">W=
+ahrscheinlich siehst du es nur oft nicht, weil wir alle st=C3=A4ndig von au=
+=C3=9Fen verwirrt und beeinflusst werden. </p>
+<p style=3D"margin:1em 0;line-height:1.5em;font-family:Geneva,Calibri,-appl=
+e-system,BlinkMacSystemFont,'Segoe UI',Roboto,Oxygen-Sans,Ubuntu,Cantarell,=
+'Helvetica Neue',sans-serif;color:#3d3d3d;font-size:18px;line-height:1.5">A=
+lle sagen uns st=C3=A4ndig, was wir brauchen, was gut f=C3=BCr uns ist und =
+was uns ganz sicher gl=C3=BCcklich<s> </s>machen wird.</p>
+<p style=3D"margin:1em 0;line-height:1.5em;font-family:Geneva,Calibri,-appl=
+e-system,BlinkMacSystemFont,'Segoe UI',Roboto,Oxygen-Sans,Ubuntu,Cantarell,=
+'Helvetica Neue',sans-serif;color:#3d3d3d;font-size:18px;line-height:1.5">D=
+as Fernsehen, die ganzen Experten und Influencer, ich, die Werbung, die Reg=
+ierung. Aber auch unsere Eltern, unsere Kollegen, unsere Nachbarn. </p>
+<p style=3D"margin:1em 0;line-height:1.5em;font-family:Geneva,Calibri,-appl=
+e-system,BlinkMacSystemFont,'Segoe UI',Roboto,Oxygen-Sans,Ubuntu,Cantarell,=
+'Helvetica Neue',sans-serif;color:#3d3d3d;font-size:18px;line-height:1.5">A=
+lle erz=C3=A4hlen uns, was gut f=C3=BCr uns ist.</p>
+<p style=3D"margin:1em 0;line-height:1.5em;font-family:Geneva,Calibri,-appl=
+e-system,BlinkMacSystemFont,'Segoe UI',Roboto,Oxygen-Sans,Ubuntu,Cantarell,=
+'Helvetica Neue',sans-serif;color:#3d3d3d;font-size:18px;line-height:1.5">U=
+nd wir sind mittendrin.</p>
+<p style=3D"margin:1em 0;line-height:1.5em;font-family:Geneva,Calibri,-appl=
+e-system,BlinkMacSystemFont,'Segoe UI',Roboto,Oxygen-Sans,Ubuntu,Cantarell,=
+'Helvetica Neue',sans-serif;color:#3d3d3d;font-size:18px;line-height:1.5">D=
+u brauchst ein neues Auto, du brauchst einen sicheren Job, du brauchst endl=
+ich einen Mann, du musst reisen, du musst dir eine Solaranlage installieren=
+, du brauchst dieses neue Fitnessger=C3=A4t.</p>
+<p style=3D"margin:1em 0;line-height:1.5em;font-family:Geneva,Calibri,-appl=
+e-system,BlinkMacSystemFont,'Segoe UI',Roboto,Oxygen-Sans,Ubuntu,Cantarell,=
+'Helvetica Neue',sans-serif;color:#3d3d3d;font-size:18px;line-height:1.5"><=
+strong>Und es ist echt schwierig, in diesem Gewitter an Botschaften zu dein=
+em inneren Kern durchzukommen</strong>.</p>
+<p style=3D"margin:1em 0;line-height:1.5em;font-family:Geneva,Calibri,-appl=
+e-system,BlinkMacSystemFont,'Segoe UI',Roboto,Oxygen-Sans,Ubuntu,Cantarell,=
+'Helvetica Neue',sans-serif;color:#3d3d3d;font-size:18px;line-height:1.5">D=
+eswegen hier ein einfacher Trick.</p>
+<p style=3D"margin:1em 0;line-height:1.5em;font-family:Geneva,Calibri,-appl=
+e-system,BlinkMacSystemFont,'Segoe UI',Roboto,Oxygen-Sans,Ubuntu,Cantarell,=
+'Helvetica Neue',sans-serif;color:#3d3d3d;font-size:18px;line-height:1.5">A=
+lso =E2=80=A6</p>
+<p style=3D"margin:1em 0;line-height:1.5em;font-family:Geneva,Calibri,-appl=
+e-system,BlinkMacSystemFont,'Segoe UI',Roboto,Oxygen-Sans,Ubuntu,Cantarell,=
+'Helvetica Neue',sans-serif;color:#3d3d3d;font-size:18px;line-height:1.5">U=
+m herauszufinden, was dich wirklich gl=C3=BCcklich macht, gibt es im <stron=
+g>Grunde nur 2 M=C3=B6glichkeiten</strong>.</p>
+<ol class=3D"unordered_list" style=3D"margin:1em 0;margin-left:1em;padding:=
+0;line-height:1.5em;font-family:Geneva,Calibri,-apple-system,BlinkMacSystem=
+Font,'Segoe UI',Roboto,Oxygen-Sans,Ubuntu,Cantarell,'Helvetica Neue',sans-s=
+erif;color:#3d3d3d;font-size:18px;line-height:1.5;list-style-position:outsi=
+de !important;list-style-position:inside">
+<li class=3D"list_item" style=3D"padding:0 0 0 1em;margin:0;margin-left:1em=
+"><span>Probiere so lange Dinge aus, bis du gefunden hast, was dich gl=C3=
+=BCcklich macht (der lange Weg).</span></li>
+<li class=3D"list_item" style=3D"padding:0 0 0 1em;margin:0;margin-left:1em=
+"><span>Oder schaue zur=C3=BCck und =C3=BCberlege, was dich in der Vergange=
+nheit gl=C3=BCcklich gemacht hat.</span></li>
+</ol>
+<p style=3D"margin:1em 0;line-height:1.5em;font-family:Geneva,Calibri,-appl=
+e-system,BlinkMacSystemFont,'Segoe UI',Roboto,Oxygen-Sans,Ubuntu,Cantarell,=
+'Helvetica Neue',sans-serif;color:#3d3d3d;font-size:18px;line-height:1.5">U=
+nd die <strong>3-Minuten-Methode</strong> aus dieser E-Mail, die arbeitet d=
+amit, dass du in deine Vergangenheit schaust.</p>
+<p style=3D"margin:1em 0;line-height:1.5em;font-family:Geneva,Calibri,-appl=
+e-system,BlinkMacSystemFont,'Segoe UI',Roboto,Oxygen-Sans,Ubuntu,Cantarell,=
+'Helvetica Neue',sans-serif;color:#3d3d3d;font-size:18px;line-height:1.5">N=
+imm dir also 3 Minuten und <strong>beantworte die folgenden Fragen</strong>=
+ f=C3=BCr dich:</p>
+<ul class=3D"unordered_list" style=3D"margin:1em 0;margin-left:1em;padding:=
+0;line-height:1.5em;font-family:Geneva,Calibri,-apple-system,BlinkMacSystem=
+Font,'Segoe UI',Roboto,Oxygen-Sans,Ubuntu,Cantarell,'Helvetica Neue',sans-s=
+erif;color:#3d3d3d;font-size:18px;line-height:1.5;list-style-position:outsi=
+de !important;list-style-position:inside">
+<li class=3D"list_item" style=3D"padding:0 0 0 1em;margin:0;margin-left:1em=
+"><span>=E2=80=9EWann und wo war ich in der Vergangenheit gl=C3=BCcklich? W=
+as sind meine sch=C3=B6nsten Erinnerungen?=E2=80=9C</span></li>
+<li class=3D"list_item" style=3D"padding:0 0 0 1em;margin:0;margin-left:1em=
+"><span>=E2=80=9EUnd was genau habe ich in dieser vergangenen Situation gem=
+acht oder erlebt?=E2=80=9C</span></li>
+<li class=3D"list_item" style=3D"padding:0 0 0 1em;margin:0;margin-left:1em=
+"><span>=E2=80=9EWas w=C3=BCrde in dieser Situation eingel=C3=B6st oder erf=
+=C3=BCllt, was mir wirklich wichtig war?=E2=80=9C</span></li>
+<li class=3D"list_item" style=3D"padding:0 0 0 1em;margin:0;margin-left:1em=
+"><span>=E2=80=9EWelches meiner h=C3=A4ufig vorkommenden Bed=C3=BCrfnisse w=
+urde in dieser Situation erf=C3=BCllt und befriedigt?=E2=80=9C</span></li>
+</ul>
+<p style=3D"margin:1em 0;line-height:1.5em;font-family:Geneva,Calibri,-appl=
+e-system,BlinkMacSystemFont,'Segoe UI',Roboto,Oxygen-Sans,Ubuntu,Cantarell,=
+'Helvetica Neue',sans-serif;color:#3d3d3d;font-size:18px;line-height:1.5">S=
+tell dir einen Timer auf 3 Minuten und schreibe so schnell wie m=C3=B6glich=
+ und in Stichpunkten die Antworten auf die Fragen auf.</p>
+<p style=3D"margin:1em 0;line-height:1.5em;font-family:Geneva,Calibri,-appl=
+e-system,BlinkMacSystemFont,'Segoe UI',Roboto,Oxygen-Sans,Ubuntu,Cantarell,=
+'Helvetica Neue',sans-serif;color:#3d3d3d;font-size:18px;line-height:1.5">W=
+enn du 4 oder 5 Minuten brauchst, ist das nat=C3=BCrlich auch gut. Aber in =
+3 Minuten findest du meistens schon viele Punkte.</p>
+<p style=3D"margin:1em 0;line-height:1.5em;font-family:Geneva,Calibri,-appl=
+e-system,BlinkMacSystemFont,'Segoe UI',Roboto,Oxygen-Sans,Ubuntu,Cantarell,=
+'Helvetica Neue',sans-serif;color:#3d3d3d;font-size:18px;line-height:1.5">D=
+er n=C3=A4chste Schritt w=C3=A4re dann, noch 2 weitere Fragen zu stellen:</=
+p>
+<ul class=3D"unordered_list" style=3D"margin:1em 0;margin-left:1em;padding:=
+0;line-height:1.5em;font-family:Geneva,Calibri,-apple-system,BlinkMacSystem=
+Font,'Segoe UI',Roboto,Oxygen-Sans,Ubuntu,Cantarell,'Helvetica Neue',sans-s=
+erif;color:#3d3d3d;font-size:18px;line-height:1.5;list-style-position:outsi=
+de !important;list-style-position:inside">
+<li class=3D"list_item" style=3D"padding:0 0 0 1em;margin:0;margin-left:1em=
+"><span>=E2=80=9EWas kann ich tun, um diese Erfahrungen zu wiederholen und =
+=C3=B6fter zu erleben?=E2=80=9C</span></li>
+<li class=3D"list_item" style=3D"padding:0 0 0 1em;margin:0;margin-left:1em=
+"><span>=E2=80=9EWas kann ich tun, um die Bed=C3=BCrfnisse hinter meinen sc=
+h=C3=B6nsten Erfahrungen heute =C3=B6fter zu befriedigen?=E2=80=9C</span></=
+li>
+</ul>
+<p style=3D"margin:1em 0;line-height:1.5em;font-family:Geneva,Calibri,-appl=
+e-system,BlinkMacSystemFont,'Segoe UI',Roboto,Oxygen-Sans,Ubuntu,Cantarell,=
+'Helvetica Neue',sans-serif;color:#3d3d3d;font-size:18px;line-height:1.5">D=
+u hast fr=C3=BCher auf deinen Bergtouren tiefe Erf=C3=BCllung erlebt. Dein =
+Ziel k=C3=B6nnte also sein, =C3=B6fter raus in die Natur zu gehen.</p>
+<p style=3D"margin:1em 0;line-height:1.5em;font-family:Geneva,Calibri,-appl=
+e-system,BlinkMacSystemFont,'Segoe UI',Roboto,Oxygen-Sans,Ubuntu,Cantarell,=
+'Helvetica Neue',sans-serif;color:#3d3d3d;font-size:18px;line-height:1.5">D=
+u hast es als Jugendlicher geliebt zu malen und zu zeichnen. Also k=C3=B6nn=
+test du dir vornehmen, deine Kunst wieder aufleben zu lassen.</p>
+<p style=3D"margin:1em 0;line-height:1.5em;font-family:Geneva,Calibri,-appl=
+e-system,BlinkMacSystemFont,'Segoe UI',Roboto,Oxygen-Sans,Ubuntu,Cantarell,=
+'Helvetica Neue',sans-serif;color:#3d3d3d;font-size:18px;line-height:1.5">D=
+u bist als 20-J=C3=A4hriger auf einem Schiff mitgesegelt und hast das Meer =
+so geliebt. Also w=C3=A4hlst du als Ziel, eine Segelt=C3=B6rn zu buchen und=
+ vielleicht selbst einen Segelschein zu machen. </p>
+<p style=3D"margin:1em 0;line-height:1.5em;font-family:Geneva,Calibri,-appl=
+e-system,BlinkMacSystemFont,'Segoe UI',Roboto,Oxygen-Sans,Ubuntu,Cantarell,=
+'Helvetica Neue',sans-serif;color:#3d3d3d;font-size:18px;line-height:1.5"><=
+strong>Du transportierst also deine Gl=C3=BCckserfahrungen aus der Vergange=
+nheit in die Gegenwart.</strong> Denn da ist die Wahrscheinlichkeit, dass d=
+ich etwas gl=C3=BCcklich macht, viel h=C3=B6her. H=C3=B6her, als wenn du wi=
+ld herumexperimentierst, wie das ja so viele machen.</p>
+<p style=3D"margin:1em 0;line-height:1.5em;font-family:Geneva,Calibri,-appl=
+e-system,BlinkMacSystemFont,'Segoe UI',Roboto,Oxygen-Sans,Ubuntu,Cantarell,=
+'Helvetica Neue',sans-serif;color:#3d3d3d;font-size:18px;line-height:1.5">D=
+ieses =C3=9Cbertragen klappt nat=C3=BCrlich nicht immer. Weil du dich ja au=
+ch ver=C3=A4ndert hast. Weil nicht jedes vergangene Gl=C3=BCck in die Zukun=
+ft transportierbar ist.</p>
+<p style=3D"margin:1em 0;line-height:1.5em;font-family:Geneva,Calibri,-appl=
+e-system,BlinkMacSystemFont,'Segoe UI',Roboto,Oxygen-Sans,Ubuntu,Cantarell,=
+'Helvetica Neue',sans-serif;color:#3d3d3d;font-size:18px;line-height:1.5">A=
+ber es klappt erstaunlich oft, weil wir uns in vielen Bereichen =C3=BCber d=
+ie Jahre eben nicht =C3=A4ndern.</p>
+<p style=3D"margin:1em 0;line-height:1.5em;font-family:Geneva,Calibri,-appl=
+e-system,BlinkMacSystemFont,'Segoe UI',Roboto,Oxygen-Sans,Ubuntu,Cantarell,=
+'Helvetica Neue',sans-serif;color:#3d3d3d;font-size:18px;line-height:1.5">A=
+lso =E2=80=A6</p>
+<p style=3D"margin:1em 0;line-height:1.5em;font-family:Geneva,Calibri,-appl=
+e-system,BlinkMacSystemFont,'Segoe UI',Roboto,Oxygen-Sans,Ubuntu,Cantarell,=
+'Helvetica Neue',sans-serif;color:#3d3d3d;font-size:18px;line-height:1.5">P=
+robiere es ruhig einmal aus.</p>
+<p style=3D"margin:1em 0;line-height:1.5em;font-family:Geneva,Calibri,-appl=
+e-system,BlinkMacSystemFont,'Segoe UI',Roboto,Oxygen-Sans,Ubuntu,Cantarell,=
+'Helvetica Neue',sans-serif;color:#3d3d3d;font-size:18px;line-height:1.5">I=
+ch w=C3=BCnsche dir alles Gute.</p>
+<p style=3D"margin:1em 0;line-height:1.5em;font-family:Geneva,Calibri,-appl=
+e-system,BlinkMacSystemFont,'Segoe UI',Roboto,Oxygen-Sans,Ubuntu,Cantarell,=
+'Helvetica Neue',sans-serif;color:#3d3d3d;font-size:18px;line-height:1.5"><=
+strong>Und m=C3=B6gest du immer wissen, was gut f=C3=BCr dich ist und was d=
+u brauchst, um gl=C3=BCcklich zu sein.</strong></p>
+<p style=3D"margin:1em 0;line-height:1.5em;font-family:Geneva,Calibri,-appl=
+e-system,BlinkMacSystemFont,'Segoe UI',Roboto,Oxygen-Sans,Ubuntu,Cantarell,=
+'Helvetica Neue',sans-serif;color:#3d3d3d;font-size:18px;line-height:1.5">R=
+alf</p>
+<p style=3D"margin:1em 0;line-height:1.5em;font-family:Geneva,Calibri,-appl=
+e-system,BlinkMacSystemFont,'Segoe UI',Roboto,Oxygen-Sans,Ubuntu,Cantarell,=
+'Helvetica Neue',sans-serif;color:#3d3d3d;font-size:18px;line-height:1.5">=
+=E2=80=8B</p>
+<p style=3D"margin:1em 0;line-height:1.5em;font-family:Geneva,Calibri,-appl=
+e-system,BlinkMacSystemFont,'Segoe UI',Roboto,Oxygen-Sans,Ubuntu,Cantarell,=
+'Helvetica Neue',sans-serif;color:#3d3d3d;font-size:18px;line-height:1.5"><=
+strong>PS:</strong> In der n=C3=A4chsten E-Mail geht es dann um die 7 Dinge=
+, die uns Menschen grunds=C3=A4tzlich gl=C3=BCcklich machen. Denn wir sind =
+ja nicht so verschieden. </p>
+<p style=3D"margin:1em 0;line-height:1.5em;font-family:Geneva,Calibri,-appl=
+e-system,BlinkMacSystemFont,'Segoe UI',Roboto,Oxygen-Sans,Ubuntu,Cantarell,=
+'Helvetica Neue',sans-serif;color:#3d3d3d;font-size:18px;line-height:1.5">D=
+iese 7 Dinge sind die direkte Abk=C3=BCrzung.</p>
+<p style=3D"margin:1em 0;line-height:1.5em;font-family:Geneva,Calibri,-appl=
+e-system,BlinkMacSystemFont,'Segoe UI',Roboto,Oxygen-Sans,Ubuntu,Cantarell,=
+'Helvetica Neue',sans-serif;color:#3d3d3d;font-size:18px;line-height:1.5">D=
+ie Abk=C3=BCrzung, um die Frage noch weiter zu beantworten, was du wirklich=
+ willst.</p>
+<p style=3D"margin:1em 0;line-height:1.5em;font-family:Geneva,Calibri,-appl=
+e-system,BlinkMacSystemFont,'Segoe UI',Roboto,Oxygen-Sans,Ubuntu,Cantarell,=
+'Helvetica Neue',sans-serif;color:#3d3d3d;font-size:18px;line-height:1.5">=
+=E2=80=8B</p>
+</div></div>
+<div class=3D"email-body-footer" style=3D"border-top:1px dotted #888;paddin=
+g:20px;font-family:Helvetica,Arial,sans-serif;color:#aaa;font-size:12px">
+<!--[if mso]><style>.button-table { padding: 12px 0 }</style><![endif]-->
+<p style=3D"margin:1em 0;line-height:1.5em;font-family:Geneva,Calibri,-appl=
+e-system,BlinkMacSystemFont,'Segoe UI',Roboto,Oxygen-Sans,Ubuntu,Cantarell,=
+'Helvetica Neue',sans-serif;color:#3d3d3d;font-size:18px;line-height:1.5">D=
+u hast diese E-Mail weitergeleitet bekommen? =E2=9C=89=EF=B8=8F</p>
+<p style=3D"margin:1em 0;line-height:1.5em;font-family:Geneva,Calibri,-appl=
+e-system,BlinkMacSystemFont,'Segoe UI',Roboto,Oxygen-Sans,Ubuntu,Cantarell,=
+'Helvetica Neue',sans-serif;color:#3d3d3d;font-size:18px;line-height:1.5">D=
+a hat dich jemand sehr lieb =E2=9D=A4=EF=B8=8F</p>
+<p style=3D"margin:1em 0;line-height:1.5em;font-family:Geneva,Calibri,-appl=
+e-system,BlinkMacSystemFont,'Segoe UI',Roboto,Oxygen-Sans,Ubuntu,Cantarell,=
+'Helvetica Neue',sans-serif;color:#3d3d3d;font-size:18px;line-height:1.5">W=
+enn du diese E-Mails auch bekommen m=C3=B6chtest, kannst du dich hier koste=
+nlos anmelden:</p>
+<p style=3D"margin:1em 0;line-height:1.5em;font-family:Geneva,Calibri,-appl=
+e-system,BlinkMacSystemFont,'Segoe UI',Roboto,Oxygen-Sans,Ubuntu,Cantarell,=
+'Helvetica Neue',sans-serif;color:#3d3d3d;font-size:18px;line-height:1.5">=
+=E2=80=8B</p>
+<!--[if !mso]>--><table width=3D"100%" style=3D"border-collapse:separate;ms=
+o-table-lspace:0pt;mso-table-rspace:0pt"><tbody><tr><td align=3D"center" st=
+yle=3D"vertical-align:top"><a class=3D"email-button" href=3D"https://click.=
+convertkit-mail4.com/75u9wl9oo0u2uq5qvpuz/6qheh8hprod6d4so/aHR0cHM6Ly96ZWl0=
+enVsZWJlbi5kZS9uZXdzbGV0dGVyLw=3D=3D" target=3D"_blank" rel=3D"noopener nor=
+eferrer" style=3D"color:#4d6e82;margin-bottom:0.5em;border:0 none;font-size=
+:18px;line-height:1.5;background-color:#4d6e82;color:#ffffff;border-radius:=
+4px;border-width:1px;border-color:#4d6e82;background-color:#4d6e82;box-sizi=
+ng:border-box;border-radius:10px;border-style:solid;color:#ffffff;display:i=
+nline-block;width:auto;text-align:center;text-decoration:none;padding:18px =
+32px;margin:6px 0;font-size:24px" url-id=3D"1460881294"><strong>=E2=86=92 K=
+ostenlos anmelden</strong></a></td></tr></tbody></table>
+<!--<![endif]--><!--[if mso]><table class=3D"button-table" width=3D"100%" b=
+order=3D"0" cellSpacing=3D"0" cellPadding=3D"0" style=3D"margin:6px 0"><tr>=
+<td align=3D"center"><table border=3D"0" cellSpacing=3D"0" cellPadding=3D"0=
+" width=3D"auto"><tr><td align=3D"center" bgcolor=3D"#4d6e82" style=3D"back=
+ground-color:#4d6e82;border-radius:10px;overflow:hidden"><a class=3D"email-=
+button" href=3D"https://zeitzuleben.de/newsletter/" target=3D"_blank" rel=
+=3D"noopener noreferrer" style=3D"background-color:inherit;display:inline-b=
+lock;text-decoration:none;border-width:1px;border-style:solid;margin:0;colo=
+r:#ffffff;border-color:#4d6e82;padding:18px 32px;font-size:24px"><strong>=
+=E2=86=92 Kostenlos anmelden</strong></a></td></tr></table></td></tr></tabl=
+e><![endif]--><p style=3D"margin:1em 0;line-height:1.5em;font-family:Geneva=
+,Calibri,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Oxygen-Sans,Ubu=
+ntu,Cantarell,'Helvetica Neue',sans-serif;color:#3d3d3d;font-size:18px;line=
+-height:1.5"><strong>=E2=80=8B</strong></p>
+<hr>
+<p style=3D"margin:1em 0;line-height:1.5em;font-family:Geneva,Calibri,-appl=
+e-system,BlinkMacSystemFont,'Segoe UI',Roboto,Oxygen-Sans,Ubuntu,Cantarell,=
+'Helvetica Neue',sans-serif;color:#3d3d3d;font-size:18px;line-height:1.5"><=
+strong>=E2=80=8B</strong></p>
+<p style=3D"margin:1em 0;line-height:1.5em;font-family:Geneva,Calibri,-appl=
+e-system,BlinkMacSystemFont,'Segoe UI',Roboto,Oxygen-Sans,Ubuntu,Cantarell,=
+'Helvetica Neue',sans-serif;color:#3d3d3d;font-size:18px;line-height:1.5"><=
+span style=3D"color:#666666"><span style=3D"font-size:16px"><strong>Nicht v=
+ergessen:</strong></span></span><span style=3D"color:#666666"><span style=
+=3D"font-size:16px"> Am Ende wird alles gut. Und wenn es noch nicht gut ist=
+, ist es noch nicht zu Ende.</span></span></p>
+<p style=3D"margin:1em 0;line-height:1.5em;font-family:Geneva,Calibri,-appl=
+e-system,BlinkMacSystemFont,'Segoe UI',Roboto,Oxygen-Sans,Ubuntu,Cantarell,=
+'Helvetica Neue',sans-serif;color:#3d3d3d;font-size:18px;line-height:1.5"><=
+span style=3D"font-size:16px">=E2=80=8B</span><a href=3D"https://click.conv=
+ertkit-mail4.com/75u9wl9oo0u2uq5qvpuz/kkhmh6h8wm3237hl/aHR0cHM6Ly96ZWl0enVs=
+ZWJlbi5kZS91bnNlcmUtZG93bmxvYWRzLw=3D=3D" target=3D"_blank" rel=3D"noopener=
+ noreferrer" style=3D"color:#4d6e82" url-id=3D"1460881295"><span style=3D"f=
+ont-size:16px">Alle Downloads, Formulare, Arbeitsbl=C3=A4tter an einem Ort<=
+/span></a><span style=3D"font-size:16px">.</span></p>
+<p style=3D"margin:1em 0;line-height:1.5em;font-family:Geneva,Calibri,-appl=
+e-system,BlinkMacSystemFont,'Segoe UI',Roboto,Oxygen-Sans,Ubuntu,Cantarell,=
+'Helvetica Neue',sans-serif;color:#3d3d3d;font-size:18px;line-height:1.5"><=
+span style=3D"color:#666666"><span style=3D"font-size:16px">Warum bekommst =
+du diese E-Mail? Na weil du dich mit deiner Adresse hpot2212u2@untrack.emai=
+l f=C3=BCr meinen Newsletter angemeldet hast. Oder weil du einen Kurs bei m=
+ir gekauft hast. Oder weil du eine unserer kostenlosen Email-Kurse bestellt=
+ hast.</span></span></p>
+<p style=3D"margin:1em 0;line-height:1.5em;font-family:Geneva,Calibri,-appl=
+e-system,BlinkMacSystemFont,'Segoe UI',Roboto,Oxygen-Sans,Ubuntu,Cantarell,=
+'Helvetica Neue',sans-serif;color:#3d3d3d;font-size:18px;line-height:1.5"><=
+span style=3D"color:#666666"><span style=3D"font-size:16px">Meine Firma: Ze=
+it zu leben Verlags- und Trainings GmbH. Katharinenring 30. 21409 Embsen. G=
+esch=C3=A4ftsf=C3=BChrer: Ralf Senftleben. Steuernummer: DE194928602.</span=
+></span></p>
+<p style=3D"margin:1em 0;line-height:1.5em;font-family:Geneva,Calibri,-appl=
+e-system,BlinkMacSystemFont,'Segoe UI',Roboto,Oxygen-Sans,Ubuntu,Cantarell,=
+'Helvetica Neue',sans-serif;color:#3d3d3d;font-size:18px;line-height:1.5"><=
+span style=3D"color:#666666"><span style=3D"font-size:16px">Von allem abmel=
+den: </span></span><a href=3D"https://unsubscribe.convertkit-mail4.com/75u9=
+wl9oo0u2uq5qvpuz" target=3D"_blank" rel=3D"noopener noreferrer" style=3D"co=
+lor:#4d6e82"><span style=3D"font-size:16px">Abmelden</span></a><span style=
+=3D"font-size:16px"> </span><span style=3D"color:#666666"><span style=3D"fo=
+nt-size:16px">(Tsch=C3=BC=C3=9F und alles Gute f=C3=BCr dich).</span></span=
+></p>
+<p style=3D"margin:1em 0;line-height:1.5em;font-family:Geneva,Calibri,-appl=
+e-system,BlinkMacSystemFont,'Segoe UI',Roboto,Oxygen-Sans,Ubuntu,Cantarell,=
+'Helvetica Neue',sans-serif;color:#3d3d3d;font-size:18px;line-height:1.5">=
+=E2=80=8B</p>
+</div>
+</div></td></tr></tbody></table></div>
+<!--[if mso]></td></tr></table></center><![endif]-->
+</div></td>
+<td style=3D"vertical-align:top"></td>
+</tr></tbody></table></div>
+<!-- -->
+<img src=3D"https://open.convertkit-mail4.com/75u9wl9oo0u2uq5qvpuz" alt=3D"=
+" style=3D"border:0 none;display:block;height:auto;line-height:100%;outline=
+:none;-webkit-text-decoration:none;text-decoration:none;max-width:100%">
+</body>
+</html>
+
+--34717cc751166c7dfeb8102f01af5671cc4bfc809026d85d8e6600e1af6c--
+

@@ -18,10 +18,7 @@ final class ServiceMatcherProviderRepository {
     if (!isset($this->serviceMatcherProviderCollection)) {
       $serviceMatcherProviderCollectionBuilder = ServiceMatcherProviderCollection::builder();
       foreach (DirInfo::getPatternFilePaths() as $id => $filePath) {
-        $array = FileYaml::get($filePath);
-        if (!is_array($array)) {
-          throw new \LogicException("Not an array: $filePath");
-        }
+        $array = FileYaml::getArray($filePath);
         $serviceMatcherProvider = ServiceMatcherProvider::fromArray($id, $array);
         $serviceMatcherProviderCollectionBuilder->add($serviceMatcherProvider);
       }

@@ -23,4 +23,12 @@ final class FileYaml {
     return $array;
   }
 
+  public static function getArray(string $filePath): array {
+    $array = self::get($filePath);
+    if (!is_array($array)) {
+      throw new \LogicException("Not an array: $filePath");
+    }
+    return $array;
+  }
+
 }

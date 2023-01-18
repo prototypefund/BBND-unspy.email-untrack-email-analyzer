@@ -51,7 +51,7 @@ final class DirInfo {
 
   public static function provideEmailTestCases(): \Iterator {
     $examplesDir = self::getTestEmailsDir();
-    foreach (glob($examplesDir . '/*.eml') as $id => [$emailFile, $expectedFile]) {
+    foreach (self::getTestEmailFileNames() as $id => [$emailFile, $expectedFile]) {
       $email = file_get_contents($emailFile);
       $expected = FileYaml::get($expectedFile);
       yield $id => [$id, $email, $expected];

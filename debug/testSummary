@@ -3,27 +3,35 @@
 
 use Geeks4change\UntrackEmailAnalyzer\Analyzer\Analyzer;
 use Geeks4change\UntrackEmailAnalyzer\Api;
+use Geeks4change\UntrackEmailAnalyzer\DirInfo;
 use Symfony\Component\Yaml\Yaml;
 
 include 'vendor/autoload.php';
 
+$fileNamePairs = iterator_to_array(DirInfo::getTestEmailFileNames());
 $fileId = $argv[1] ?? '';
-$dir = dirname(__DIR__) . "/tests/examples";
-$fileName = "$dir/$fileId.eml";
-if (!file_exists($fileName)) {
+$update = str_ends_with($fileId, '!');
+if ($update) {
+  $fileId = substr($fileId, 0, -1);
+}
+
+if (!isset($fileNamePairs[$fileId])) {
   print("Print test summary of on one of the packaged examples.\n");
-  print("To refresh:\n");
-  $patternsDir = 'tests/examples/foo.expected.yml';
-  print("{$argv[0]} foo >$patternsDir\n");
-  print("Possible examples:\n");
-  foreach (glob("$dir/*.eml") as $fileName) {
-    print basename($fileName, ".eml") . "\n";
-  }
+  print("Usage: $0 PROVIDER:TEST\n");
+  print("Example: $0 mailchimp:1\n");
+  print("To update expected result: $0 PROVIDER:TEST!\n");
+  $values = implode(' ', array_keys($fileNamePairs));
+  print("Possible values: $values\n");
   die(1);
 }
-$fileContent = file_get_contents($fileName);
-
+[$emailFile, $resultFile] = $fileNamePairs[$fileId];
+$fileContent = file_get_contents($emailFile);
 $analyzer = Api::getDebugAnalyzer();
 $result = $analyzer->analyze($fileContent);
 $testSummary = $result->getResultDetails()->getTestSummary();
-print Yaml::dump($testSummary, 99);
+$expectedResult = Yaml::dump($testSummary, 99, 2);
+print $expectedResult;
+if ($update) {
+  file_put_contents($resultFile, $expectedResult);
+  print("\nUpdated $resultFile\n");
+}

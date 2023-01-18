@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace Geeks4change\UntrackEmailAnalyzer;
 
-use Geeks4change\UntrackEmailAnalyzer\Utility\FileYaml;
+use Geeks4change\UntrackEmailAnalyzer\Utility\FileTool;
 use loophp\collection\Collection;
 
 /**
@@ -36,24 +36,21 @@ final class DirInfo {
     return $indexedFilteredFilePaths;
   }
 
-  public static function getTestEmailsDir(): string {
-    return self::getProjectRoot() . '/tests/examples';
-  }
-
   public static function getTestEmailFileNames(): \Iterator {
-    $examplesDir = self::getTestEmailsDir();
-    foreach (glob($examplesDir . '/*.eml') as $emailFile) {
-      $id = basename($emailFile, '.eml');
-      $expectedFile = "$examplesDir/$id.expected.txt";
-      yield $id => [$emailFile, $expectedFile];
+    foreach (self::getPatternFilePaths() as $patternId => $patternFile) {
+      $patternDir = dirname($patternFile);
+      foreach (glob("$patternDir/tests/*.eml") as $emailFile) {
+        $testName = basename($emailFile, '.eml');
+        $expectedFile = dirname($emailFile) . "/$testName.expected.yml";
+        yield "$patternId:$testName" => [$emailFile, $expectedFile];
+      }
     }
   }
 
   public static function provideEmailTestCases(): \Iterator {
-    $examplesDir = self::getTestEmailsDir();
     foreach (self::getTestEmailFileNames() as $id => [$emailFile, $expectedFile]) {
-      $email = file_get_contents($emailFile);
-      $expected = FileYaml::get($expectedFile);
+      $email = FileTool::getFileContents($emailFile);
+      $expected = FileTool::getYamlArray($expectedFile);
       yield $id => [$id, $email, $expected];
     }
   }

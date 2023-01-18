@@ -7,6 +7,7 @@ namespace Geeks4change\UntrackEmailAnalyzer;
 use Geeks4change\UntrackEmailAnalyzer\Analyzer\Analyzer;
 use Geeks4change\UntrackEmailAnalyzer\Analyzer\RedirectDetector;
 use Geeks4change\UntrackEmailAnalyzer\RedirectResolver\NullRedirectResolver;
+use loophp\collection\Collection;
 
 final class Api {
 
@@ -19,10 +20,9 @@ final class Api {
   }
 
   public static function getTestEmailFileNames(): array {
-    $dir = DirInfo::getTestEmailsDir();
-    $fileNames = glob("$dir/*.eml");
-    $names = array_map(fn(string $fileName) => basename($fileName, '.eml'), $fileNames);
-    return array_combine($names, $fileNames);
+    return Collection::fromIterable(DirInfo::provideEmailTestCases())
+      ->map(fn($filePaths) => $filePaths[0])
+      ->all(FALSE);
   }
 
 }

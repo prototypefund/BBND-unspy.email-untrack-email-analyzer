@@ -7,13 +7,10 @@ namespace Geeks4change\UntrackEmailAnalyzer\Utility;
 use Symfony\Component\Yaml\Exception\ParseException;
 use Symfony\Component\Yaml\Yaml;
 
-final class FileYaml {
+final class FileTool {
 
-  public static function get(string $filePath): mixed {
-    $yaml = file_get_contents($filePath);
-    if ($yaml === FALSE) {
-      throw new \LogicException("Can not read $filePath");
-    }
+  public static function getYamlData(string $filePath): mixed {
+    $yaml = self::getFileContents($filePath);
     try {
       $array = Yaml::parse($yaml);
 
@@ -23,12 +20,20 @@ final class FileYaml {
     return $array;
   }
 
-  public static function getArray(string $filePath): array {
-    $array = self::get($filePath);
+  public static function getYamlArray(string $filePath): array {
+    $array = self::getYamlData($filePath);
     if (!is_array($array)) {
       throw new \LogicException("Not an array: $filePath");
     }
     return $array;
+  }
+
+  public static function getFileContents(string $filePath): string {
+    $contents = file_get_contents($filePath);
+    if ($contents === FALSE) {
+      throw new \LogicException("Can not read $filePath");
+    }
+    return $contents;
   }
 
 }

@@ -5,7 +5,7 @@ declare(strict_types=1);
 namespace Geeks4change\UntrackEmailAnalyzer\Analyzer\NewsletterServicesMatcher;
 
 use Geeks4change\UntrackEmailAnalyzer\DirInfo;
-use Geeks4change\UntrackEmailAnalyzer\Utility\FileYaml;
+use Geeks4change\UntrackEmailAnalyzer\Utility\FileTool;
 use loophp\collection\Collection;
 use Symfony\Component\Yaml\Exception\ParseException;
 use Symfony\Component\Yaml\Yaml;
@@ -18,7 +18,7 @@ final class ServiceMatcherProviderRepository {
     if (!isset($this->serviceMatcherProviderCollection)) {
       $serviceMatcherProviderCollectionBuilder = ServiceMatcherProviderCollection::builder();
       foreach (DirInfo::getPatternFilePaths() as $id => $filePath) {
-        $array = FileYaml::getArray($filePath);
+        $array = FileTool::getYamlArray($filePath);
         $serviceMatcherProvider = ServiceMatcherProvider::fromArray($id, $array);
         $serviceMatcherProviderCollectionBuilder->add($serviceMatcherProvider);
       }

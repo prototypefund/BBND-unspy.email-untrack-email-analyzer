@@ -32,12 +32,14 @@ final class ServiceMatcherProviderRepository {
   public function getPatternFilePaths(): array {
     $directory = DirInfo::getNewsletterServiceInfoDir();
     // Re-key, filter, validate.
-    $indexedFilteredFilePaths = Collection::fromIterable(glob("$directory/*.yml"))
-      ->associate(static fn($id, $filePath) => basename($filePath, '.yml'))
+    /** @noinspection PhpUnnecessaryLocalVariableInspection */
+    $indexedFilteredFilePaths = Collection::fromIterable(glob("$directory/*/pattern.yml"))
+      ->associate(static fn($id, $filePath) => basename(dirname($filePath)))
       ->filter(static fn($filePath, $id) => !str_starts_with($id, '_'))
       ->filter(static fn($filePath, $id) => preg_match('/[a-z0-9_]+/u', $id) || throw new \LogicException("Invalid pattern ID: $id"))
+      ->all(FALSE)
       ;
-    return $indexedFilteredFilePaths->all(FALSE);
+    return $indexedFilteredFilePaths;
   }
 
   public function parseYaml(string $filePath): array {

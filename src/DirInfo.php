@@ -4,8 +4,8 @@ declare(strict_types=1);
 
 namespace Geeks4change\UntrackEmailAnalyzer;
 
+use Geeks4change\UntrackEmailAnalyzer\Utility\FileYaml;
 use loophp\collection\Collection;
-use Symfony\Component\Yaml\Yaml;
 
 /**
  * @internal
@@ -40,15 +40,21 @@ final class DirInfo {
     return self::getProjectRoot() . '/tests/examples';
   }
 
-  public static function provideEmailTestCases(): \Iterator {
+  public static function getTestEmailFileNames(): \Iterator {
     $examplesDir = self::getTestEmailsDir();
     foreach (glob($examplesDir . '/*.eml') as $emailFile) {
       $id = basename($emailFile, '.eml');
-      $email = file_get_contents($emailFile);
       $expectedFile = "$examplesDir/$id.expected.txt";
-      $expectedAsYaml = file_get_contents($expectedFile);
-      $expected = Yaml::parse($expectedAsYaml);
-      yield [$id, $email, $expected];
+      yield $id => [$emailFile, $expectedFile];
+    }
+  }
+
+  public static function provideEmailTestCases(): \Iterator {
+    $examplesDir = self::getTestEmailsDir();
+    foreach (glob($examplesDir . '/*.eml') as $id => [$emailFile, $expectedFile]) {
+      $email = file_get_contents($emailFile);
+      $expected = FileYaml::get($expectedFile);
+      yield $id => [$id, $email, $expected];
     }
   }
 

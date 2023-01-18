@@ -17,13 +17,7 @@ final class ServiceMatcherProviderRepository {
     if (!isset($this->serviceMatcherProviderCollection)) {
       $serviceMatcherProviderCollectionBuilder = ServiceMatcherProviderCollection::builder();
       foreach ($this->getPatternFilePaths() as $id => $filePath) {
-        $yaml = file_get_contents($filePath);
-        try {
-          $array = Yaml::parse($yaml);
-
-        } catch (ParseException $exception) {
-          throw new \LogicException("Oops in $id.yml", 0, $exception);
-        }
+        $array = $this->parseYaml($filePath);
         $serviceMatcherProvider = ServiceMatcherProvider::fromArray($id, $array);
         $serviceMatcherProviderCollectionBuilder->add($serviceMatcherProvider);
       }
@@ -44,6 +38,20 @@ final class ServiceMatcherProviderRepository {
       ->filter(static fn($filePath, $id) => preg_match('/[a-z0-9_]+/u', $id) || throw new \LogicException("Invalid pattern ID: $id"))
       ;
     return $indexedFilteredFilePaths->all(FALSE);
+  }
+
+  public function parseYaml(string $filePath): array {
+    $yaml = file_get_contents($filePath);
+    try {
+      $array = Yaml::parse($yaml);
+
+    } catch (ParseException $exception) {
+      throw new \LogicException("Oops in $filePath", 0, $exception);
+    }
+    if (!is_array($array)) {
+      throw new \LogicException("Not an array: $filePath");
+    }
+    return $array;
   }
 
 }

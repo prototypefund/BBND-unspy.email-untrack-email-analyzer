@@ -21,6 +21,10 @@ trait ToArrayTrait {
         ->map($this->valuesToArray(...))
         ->all(FALSE);
     }
+    elseif (method_exists($value, 'value') && is_string($result = $value->value)) {
+      // Backed enum.
+      return $result;
+    }
     elseif ($value instanceof \Stringable) {
       return (string)$value;
     }

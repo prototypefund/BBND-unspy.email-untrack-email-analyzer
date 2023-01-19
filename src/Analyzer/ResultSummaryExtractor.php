@@ -7,6 +7,7 @@ namespace Geeks4change\UntrackEmailAnalyzer\Analyzer;
 use Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\ListInfo;
 use Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\ResultDetails;
 use Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\ResultSummary;
+use Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\ResultSummaryMatchLevel;
 use ZBateson\MailMimeParser\Header\AddressHeader;
 use ZBateson\MailMimeParser\IMessage;
 
@@ -37,7 +38,7 @@ final class ResultSummaryExtractor {
 
     // @todo Extract service and match level.
     $serviceName = NULL;
-    $matchLevel = '';
+    $matchLevel = ResultSummaryMatchLevel::Unknown;
 
     // We do NOT parse tld here as that needs a caching service.
     // See untrack_email_storage.
@@ -58,7 +59,6 @@ final class ResultSummaryExtractor {
       $listIdLabel = NULL;
       return NULL;
     }
-
   }
 
 }

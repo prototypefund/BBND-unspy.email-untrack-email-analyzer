@@ -20,26 +20,16 @@ final class ResultSummary implements ToArrayInterface {
 
   protected ?string $serviceName;
 
-  /**
-   * Match level
-   *
-   * - sure
-   * - quire-sure
-   * - unsure
-   * - no-match
-   *
-   * @var string
-   */
-  protected string $matchLevel;
+  protected ResultSummaryMatchLevel $matchLevel;
 
   protected ListInfo $listInfo;
 
   /**
    * @param string|null $serviceName
-   * @param string $matchLevel
+   * @param \Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\ResultSummaryMatchLevel $matchLevel
    * @param \Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\ListInfo $listInfo
    */
-  public function __construct(?string $serviceName, string $matchLevel, ListInfo $listInfo) {
+  public function __construct(?string $serviceName, ResultSummaryMatchLevel $matchLevel, ListInfo $listInfo) {
     $this->serviceName = $serviceName;
     $this->matchLevel = $matchLevel;
     $this->listInfo = $listInfo;
@@ -54,11 +44,12 @@ final class ResultSummary implements ToArrayInterface {
   }
 
   /**
-   * @return string
+   * @return \Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\ResultSummaryMatchLevel
    */
-  public function getMatchLevel(): string {
+  public function getMatchLevel(): ResultSummaryMatchLevel {
     return $this->matchLevel;
   }
+
 
   /**
    * @return \Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\ListInfo

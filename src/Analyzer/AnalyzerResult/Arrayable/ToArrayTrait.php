@@ -21,7 +21,7 @@ trait ToArrayTrait {
         ->map($this->valuesToArray(...))
         ->all(FALSE);
     }
-    elseif (method_exists($value, 'value') && is_string($result = $value->value)) {
+    elseif (is_object($value) && method_exists($value, 'value') && is_string($result = $value->value)) {
       // Backed enum.
       return $result;
     }

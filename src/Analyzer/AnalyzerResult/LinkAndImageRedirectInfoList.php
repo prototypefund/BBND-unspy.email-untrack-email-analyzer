@@ -12,17 +12,10 @@ final class LinkAndImageRedirectInfoList  implements TestSummaryInterface, ToArr
 
   use ToArrayTrait;
 
-  protected UrlRedirectInfoList $linkRedirectInfoList;
-
-  protected UrlRedirectInfoList $imageRedirectInfoList;
-
-  /**
-   * @param \Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\UrlRedirectInfoList $linkRedirectInfoList
-   * @param \Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\UrlRedirectInfoList $imageRedirectInfoList
-   */
-  public function __construct(UrlRedirectInfoList $linkRedirectInfoList, UrlRedirectInfoList $imageRedirectInfoList) {
-    $this->linkRedirectInfoList = $linkRedirectInfoList;
-    $this->imageRedirectInfoList = $imageRedirectInfoList;
+  public function __construct(
+    public readonly UrlRedirectInfoList $linkRedirectInfoList,
+    public readonly UrlRedirectInfoList $imageRedirectInfoList
+  ) {
   }
 
   /**

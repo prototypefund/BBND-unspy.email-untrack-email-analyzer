@@ -39,7 +39,7 @@ final class RedirectDetector implements RedirectDetectorInterface {
    * @return \Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\UrlList
    */
   protected function combineUrls(LinkAndImageUrlList $linkAndImageUrlList, UrlList $urlsToExclude): UrlList {
-    $combinedUrlList = new UrlList();
+    $combinedUrlList = UrlList::builder();
     /** @var UrlList $urlList */
     foreach ([
                $linkAndImageUrlList->getLinkUrlList(),
@@ -53,7 +53,7 @@ final class RedirectDetector implements RedirectDetectorInterface {
         }
       }
     }
-    return $combinedUrlList;
+    return $combinedUrlList->freeze();
   }
 
   protected function assignRedirects(UrlList $urlList, UrlRedirectInfoList $allUrlRedirectInfoList): UrlRedirectInfoList {

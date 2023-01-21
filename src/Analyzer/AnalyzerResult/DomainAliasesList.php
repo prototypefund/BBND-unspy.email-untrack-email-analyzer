@@ -12,16 +12,18 @@ namespace Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult;
 final class DomainAliasesList implements \IteratorAggregate {
 
   /**
-   * @var array<\Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\DomainAliases>
+   * @param \Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\DomainAliases[] $domainAliasesList
    */
-  protected array $domainAliasesList = [];
+  public function __construct(
+    public readonly array $domainAliasesList = []
+  ) {}
+
+  public static function builder() {
+    return new DomainAliasesListBuilder();
+  }
 
   public function getIterator(): \ArrayIterator {
     return new \ArrayIterator($this->domainAliasesList);
-  }
-
-  public function add(string $domain, string ...$aliases) {
-    $this->domainAliasesList[$domain] = new DomainAliases($domain, ...$aliases);
   }
 
 }

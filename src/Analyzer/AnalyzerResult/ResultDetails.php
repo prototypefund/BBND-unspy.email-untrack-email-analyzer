@@ -17,46 +17,17 @@ final class ResultDetails implements TestSummaryInterface, ToArrayInterface {
 
   use ToArrayTrait;
 
-  protected DKIMResult $dkimResult;
-
-  protected HeadersResult $headersResult;
-
-  protected LinkAndImageUrlList $allLinkAndImageUrlsList;
-
-  protected LinkAndImageUrlListMatcherResult $linkAndImageUrlsMatcherResult;
-
-  protected UrlList $pixelsList;
-
-  protected UrlList $unsubscribeUrlList;
-
-  protected LinkAndImageRedirectInfoList $urlsRedirectInfoList;
-
-  protected LinkAndImageUrlList $urlsWithAnalyticsList;
-
-  protected DomainAliasesList $domainAliasesList;
-
-  /**
-   * @param \Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\DKIMResult $dkimResult
-   * @param \Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\HeadersResult $headersResult
-   * @param \Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\LinkAndImageUrlList $allLinkAndImageUrlsList
-   * @param \Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\LinkAndImageUrlListMatcherResult $linkAndImageUrlsMatcherResult
-   * @param \Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\UrlList $pixelsList
-   * @param \Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\UrlList $unsubscribeUrlList
-   * @param \Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\LinkAndImageRedirectInfoList $urlsRedirectInfoList
-   * @param \Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\LinkAndImageUrlList $urlsWithAnalyticsList
-   * @param \Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\DomainAliasesList $domainAliasesList
-   */
-  public function __construct(DKIMResult $dkimResult, HeadersResult $headersResult, LinkAndImageUrlList $allLinkAndImageUrlsList, LinkAndImageUrlListMatcherResult $linkAndImageUrlsMatcherResult, UrlList $pixelsList, UrlList $unsubscribeUrlList, LinkAndImageRedirectInfoList $urlsRedirectInfoList, LinkAndImageUrlList $urlsWithAnalyticsList, DomainAliasesList $domainAliasesList) {
-    $this->dkimResult = $dkimResult;
-    $this->headersResult = $headersResult;
-    $this->allLinkAndImageUrlsList = $allLinkAndImageUrlsList;
-    $this->linkAndImageUrlsMatcherResult = $linkAndImageUrlsMatcherResult;
-    $this->pixelsList = $pixelsList;
-    $this->unsubscribeUrlList = $unsubscribeUrlList;
-    $this->urlsRedirectInfoList = $urlsRedirectInfoList;
-    $this->urlsWithAnalyticsList = $urlsWithAnalyticsList;
-    $this->domainAliasesList = $domainAliasesList;
-  }
+  public function __construct(
+    public readonly DKIMResult                       $dkimResult,
+    public readonly HeadersResult                    $headersResult,
+    public readonly LinkAndImageUrlList              $allLinkAndImageUrlsList,
+    public readonly LinkAndImageUrlListMatcherResult $linkAndImageUrlsMatcherResult,
+    public readonly UrlList                          $pixelsList,
+    public readonly UrlList                          $unsubscribeUrlList,
+    public readonly LinkAndImageRedirectInfoList     $urlsRedirectInfoList,
+    public readonly LinkAndImageUrlList              $urlsWithAnalyticsList,
+    public readonly DomainAliasesList                $domainAliasesList,
+  ) {}
 
   /**
    * @return \Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\DKIMResult

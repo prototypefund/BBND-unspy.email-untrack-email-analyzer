@@ -22,13 +22,11 @@ final class HeadersResult implements \IteratorAggregate, TestSummaryInterface, T
   use ToArrayTrait;
 
   /**
-   * @var array<\Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\HeadersResultPerService>
+   * @param \Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\HeadersResultPerService[] $headersMatchResultPerServiceList
    */
-  protected array $headersMatchResultPerServiceList = [];
-
-  public function add(HeadersResultPerService $headersResultPerService) {
-    $this->headersMatchResultPerServiceList[$headersResultPerService->getServiceName()] = $headersResultPerService;
-  }
+  public function __construct(
+    public readonly array $headersMatchResultPerServiceList = []
+  ) {}
 
   public function getIterator(): \ArrayIterator {
     return new \ArrayIterator($this->headersMatchResultPerServiceList);

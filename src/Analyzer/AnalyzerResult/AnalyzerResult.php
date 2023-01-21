@@ -15,25 +15,18 @@ namespace Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult;
  */
 final class AnalyzerResult {
 
-  protected ResultDetails $resultDetails;
-
-  protected AnalyzerLog $fullLog;
-
-  protected ResultSummary $resultSummary;
-
-  protected AnalyzerLog $sanitizedLog;
-
   /**
    * @param \Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\ResultDetails $resultDetails
    * @param \Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\AnalyzerLog $fullLog
    * @param \Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\ResultSummary $resultSummary
    * @param \Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\AnalyzerLog $sanitizedLog
    */
-  public function __construct(ResultDetails $resultDetails, AnalyzerLog $fullLog, ResultSummary $resultSummary, AnalyzerLog $sanitizedLog) {
-    $this->resultDetails = $resultDetails;
-    $this->fullLog = $fullLog;
-    $this->resultSummary = $resultSummary;
-    $this->sanitizedLog = $sanitizedLog;
+  public function __construct(
+    public readonly ResultDetails $resultDetails,
+    public readonly AnalyzerLog   $fullLog,
+    public readonly ResultSummary $resultSummary,
+    public readonly AnalyzerLog   $sanitizedLog
+  ) {
   }
 
   /**

@@ -18,9 +18,9 @@ abstract class AllServicesUrlsMatcherBase {
     $perServiceResultList = new UrlListPerServiceMatchesList();
     /** @var \Geeks4change\UntrackEmailAnalyzer\Analyzer\NewsletterServicesMatcher\ServiceMatcherProvider $toolPattern */
     foreach (Globals::get()->getServiceMatcherProviderRepository()->getServiceMatcherProviderCollection() as $toolPattern) {
-      $matchedExactly = new UrlList();
-      $matchedByDomain = new UrlList();
-      $notMatched = new UrlList();
+      $matchedExactly = UrlList::builder();
+      $matchedByDomain = UrlList::builder();
+      $notMatched = UrlList::builder();
       foreach ($urlList as $url) {
         if ($this->isUrlPatternMatch($toolPattern, $url->getUrlObject())) {
           $matchedExactly->add(strval($url));
@@ -34,9 +34,9 @@ abstract class AllServicesUrlsMatcherBase {
       }
       $perServiceMatches = new UrlListPerServiceMatches(
         $toolPattern->getName(),
-        $matchedExactly,
-        $matchedByDomain,
-        $notMatched,
+        $matchedExactly->freeze(),
+        $matchedByDomain->freeze(),
+        $notMatched->freeze(),
       );
       if ($perServiceMatches->isNonEmpty()) {
         $perServiceResultList->add($perServiceMatches);

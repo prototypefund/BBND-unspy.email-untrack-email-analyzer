@@ -17,17 +17,10 @@ final class LinkAndImageUrlListMatcherResult implements TestSummaryInterface, To
 
   use ToArrayTrait;
 
-  protected UrlListMatchersResult $linkUrlsResult;
-
-  protected UrlListMatchersResult $imageUrlsResult;
-
-  /**
-   * @param \Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\UrlListMatchersResult $linkUrlsResult
-   * @param \Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\UrlListMatchersResult $imageUrlsResult
-   */
-  public function __construct(UrlListMatchersResult $linkUrlsResult, UrlListMatchersResult $imageUrlsResult) {
-    $this->linkUrlsResult = $linkUrlsResult;
-    $this->imageUrlsResult = $imageUrlsResult;
+  public function __construct(
+    public readonly UrlListMatchersResult $linkUrlsResult,
+    public readonly UrlListMatchersResult $imageUrlsResult
+  ) {
   }
 
   /**

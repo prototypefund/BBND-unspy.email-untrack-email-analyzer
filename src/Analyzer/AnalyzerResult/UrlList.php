@@ -25,15 +25,12 @@ final class UrlList implements \IteratorAggregate, TestSummaryInterface, ToArray
   use ToArrayTrait;
 
   /**
-   * @var array<\Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\UrlItem>
+   * @param \Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\UrlItem[] $urls
    */
-  protected array $urls = [];
+  public function __construct(public readonly array $urls) {}
 
-  /**
-   * @param string $url
-   */
-  public function add(string $url) {
-    $this->urls[$url] = new UrlItem($url);
+  public static function builder() {
+    return new UrlListBuilder();
   }
 
   public function count(): int {

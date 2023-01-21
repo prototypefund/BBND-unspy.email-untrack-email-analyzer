@@ -6,6 +6,7 @@ namespace Geeks4change\UntrackEmailAnalyzer\Analyzer;
 
 use Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\LinkAndImageUrlList;
 use Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\UrlList;
+use Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\UrlListBuilder;
 use GuzzleHttp\Psr7\Query;
 
 /**
@@ -21,7 +22,7 @@ final class AnalyticsDetector {
   }
 
   protected function doDetectAnalytics(UrlList $urlList): UrlList {
-    $analyticsUrlList = new UrlList();
+    $analyticsUrlList = UrlList::builder();
     foreach ($urlList as $urlWrapper) {
       $url = $urlWrapper->getUrlObject();
       $rawQuery = $url->getQuery();
@@ -32,7 +33,7 @@ final class AnalyticsDetector {
         $analyticsUrlList->add(strval($urlWrapper));
       }
     }
-    return $analyticsUrlList;
+    return $analyticsUrlList->freeze();
   }
 
   protected function getPattern(): string {

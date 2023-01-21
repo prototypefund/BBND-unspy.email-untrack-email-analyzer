@@ -10,11 +10,11 @@ use Geeks4change\UntrackEmailAnalyzer\Globals;
 final class DomainAliasesResultFetcher {
 
   public function fetch(): DomainAliasesList {
-    $result = new DomainAliasesList();
+    $result = DomainAliasesList::builder();
     foreach (Globals::get()->getDomainAliasesResolver()->getAllAliases() as $aliases) {
       $result->add(...$aliases);
     }
-    return $result;
+    return $result->freeze();
   }
 
 }

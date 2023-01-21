@@ -12,7 +12,7 @@ use ZBateson\MailMimeParser\Message;
 
 final class AllServicesHeadersMatcher {
   public function matchHeaders(Message $message): HeadersResult {
-    $headerResult = new HeadersResult();
+    $headerResultItems = [];
     /** @var \Geeks4change\UntrackEmailAnalyzer\Analyzer\NewsletterServicesMatcher\ServiceMatcherProvider $serviceMatcher */
     foreach (Globals::get()->getServiceMatcherProviderRepository()->getServiceMatcherProviderCollection() as $serviceMatcher) {
       $headerMatchSummaryList = [];
@@ -22,10 +22,10 @@ final class AllServicesHeadersMatcher {
       }
       $headersResultPerService = new HeadersResultPerService($serviceMatcher->getName(), $headerMatchSummaryList);
       if ($headersResultPerService->isNonEmpty()) {
-        $headerResult->add($headersResultPerService);
+        $headerResultItems[$headersResultPerService->getServiceName()] = $headersResultPerService;
       }
     }
-    return $headerResult;
+    return new HeadersResult($headerResultItems);
   }
 
 }

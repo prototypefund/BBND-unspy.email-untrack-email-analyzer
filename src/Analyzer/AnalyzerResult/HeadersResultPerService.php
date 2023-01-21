@@ -19,21 +19,14 @@ final class HeadersResultPerService implements TestSummaryInterface, ToArrayInte
 
   use ToArrayTrait;
 
-  protected string $serviceName;
-
-  /**
-   * @var array<\Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\HeaderSingleResult>
-   */
-  protected array $headerSingleResultList;
-
   /**
    * @param string $serviceName
-   * @param \Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\HeaderSingleResult[] $headerSingleResults
+   * @param \Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\HeaderSingleResult[] $headerSingleResultList
    */
-  public function __construct(string $serviceName, array $headerSingleResults) {
-    $this->serviceName = $serviceName;
-    $this->headerSingleResultList = $headerSingleResults;
-  }
+  public function __construct(
+    public readonly string $serviceName,
+    public readonly array  $headerSingleResultList
+  ) {}
 
   public function isNonEmpty(): bool {
     return boolval(array_filter($this->headerSingleResultList, fn(HeaderSingleResult $hsm) => $hsm->isMatch()));

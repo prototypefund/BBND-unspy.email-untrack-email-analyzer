@@ -17,15 +17,9 @@ use loophp\collection\Collection;
 final class AnalyzerLog {
 
   /**
-   * @var array<string>
-   */
-  protected array $messages;
-
-  /**
    * @param string[] $messages
    */
-  public function __construct(array $messages) {
-    $this->messages = $messages;
+  public function __construct(public readonly array $messages) {
   }
 
   /**

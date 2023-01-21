@@ -18,25 +18,13 @@ final class DKIMResult implements ToArrayInterface {
   use ToArrayTrait;
 
   /**
-   * Status: green / yellow / red.
-   *
-   * @var string
-   */
-  protected string $status;
-
-  /**
-   * @var array<string>
-   */
-  protected array $summaryLines;
-
-  /**
    * @param string $status
    * @param string[] $summaryLines
    */
-  public function __construct(string $status, array $summaryLines) {
-    $this->status = $status;
-    $this->summaryLines = $summaryLines;
-  }
+  public function __construct(
+    public readonly string $status,
+    public readonly array  $summaryLines
+  ) {}
 
   /**
    * @return string

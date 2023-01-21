@@ -18,21 +18,16 @@ final class ResultSummary implements ToArrayInterface {
 
   use ToArrayTrait;
 
-  protected ?string $serviceName;
-
-  protected ResultSummaryMatchLevel $matchLevel;
-
-  protected ListInfo $listInfo;
-
   /**
    * @param string|null $serviceName
    * @param \Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\ResultSummaryMatchLevel $matchLevel
    * @param \Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\ListInfo $listInfo
    */
-  public function __construct(?string $serviceName, ResultSummaryMatchLevel $matchLevel, ListInfo $listInfo) {
-    $this->serviceName = $serviceName;
-    $this->matchLevel = $matchLevel;
-    $this->listInfo = $listInfo;
+  public function __construct(
+    public readonly ?string                 $serviceName,
+    public readonly ResultSummaryMatchLevel $matchLevel,
+    public readonly ListInfo                $listInfo
+  ) {
   }
 
 

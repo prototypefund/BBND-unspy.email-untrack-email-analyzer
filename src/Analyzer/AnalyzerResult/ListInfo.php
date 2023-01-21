@@ -11,19 +11,14 @@ final class ListInfo implements ToArrayInterface {
 
   use ToArrayTrait;
 
-  protected string $emailLabel;
-  protected string $emailAddress;
-  protected ?string $listId;
-
   /**
    * @param string $emailLabel
    * @param string $emailAddress
    * @param string|null $listId
    */
-  public function __construct(string $emailLabel, string $emailAddress, ?string $listId) {
-    $this->emailLabel = $emailLabel;
-    $this->emailAddress = $emailAddress;
-    $this->listId = $listId;
+  public function __construct(protected string  $emailLabel,
+                              protected string  $emailAddress,
+                              protected ?string $listId) {
   }
 
   /**

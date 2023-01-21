@@ -19,15 +19,12 @@ final class UrlListMatchersResult implements TestSummaryInterface, ToArrayInterf
 
   use ToArrayTrait;
 
-  protected UrlListPerServiceMatchesList $perServiceResultList;
-
   /**
    * @param \Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\UrlListPerServiceMatchesList $perServiceResultList
    */
-  public function __construct(UrlListPerServiceMatchesList $perServiceResultList) {
-    // This is a trivial container on purpose, for future flexibility.
-    $this->perServiceResultList = $perServiceResultList;
-  }
+  public function __construct(
+    public readonly UrlListPerServiceMatchesList $perServiceResultList
+  ) {}
 
   /**
    * @return \Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\UrlListPerServiceMatchesList

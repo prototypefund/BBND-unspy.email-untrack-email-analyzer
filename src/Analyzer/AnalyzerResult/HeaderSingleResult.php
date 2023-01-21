@@ -19,17 +19,14 @@ final class HeaderSingleResult implements TestSummaryInterface, ToArrayInterface
 
   use ToArrayTrait;
 
-  protected string $headerName;
-
-  protected bool $isMatch;
-
   /**
    * @param string $headerName
    * @param bool $isMatch
    */
-  public function __construct(string $headerName, bool $isMatch) {
-    $this->headerName = $headerName;
-    $this->isMatch = $isMatch;
+  public function __construct(
+    public readonly string $headerName,
+    public readonly bool   $isMatch
+  ) {
   }
 
   /**

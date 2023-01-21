@@ -19,26 +19,18 @@ final class UrlListPerServiceMatches implements TestSummaryInterface, ToArrayInt
 
   use ToArrayTrait;
 
-  protected string $serviceName;
-
-  protected UrlList $urlsMatchedExactly;
-
-  protected UrlList $urlsMatchedByDomain;
-
-  protected UrlList $urlsNotMatchedList;
-
   /**
    * @param string $serviceName
    * @param \Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\UrlList $urlsMatchedExactly
    * @param \Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\UrlList $urlsMatchedByDomain
    * @param \Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\UrlList $urlsNotMatchedList
    */
-  public function __construct(string $serviceName, UrlList $urlsMatchedExactly, UrlList $urlsMatchedByDomain, UrlList $urlsNotMatchedList) {
-    $this->serviceName = $serviceName;
-    $this->urlsMatchedExactly = $urlsMatchedExactly;
-    $this->urlsMatchedByDomain = $urlsMatchedByDomain;
-    $this->urlsNotMatchedList = $urlsNotMatchedList;
-  }
+  public function __construct(
+    public readonly string  $serviceName,
+    public readonly UrlList $urlsMatchedExactly,
+    public readonly UrlList $urlsMatchedByDomain,
+    public readonly UrlList $urlsNotMatchedList
+  ) {}
 
   /**
    * @return string

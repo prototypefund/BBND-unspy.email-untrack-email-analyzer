@@ -10,7 +10,7 @@ use ZBateson\MailMimeParser\Message;
 final class UnsubscribeLinkExtractor {
 
   public function extractUnsubscribeLink(Message $message): UrlList {
-    $urlList = new UrlList();
+    $urlList = UrlList::builder();
     $unsubscribeHeader = $message->getHeader('List-Unsubscribe');
     if ($unsubscribeHeader) {
       $headerText = $unsubscribeHeader->getValue();
@@ -20,7 +20,7 @@ final class UnsubscribeLinkExtractor {
         $urlList->add($url);
       }
     }
-    return $urlList;
+    return $urlList->freeze();
   }
 
 }

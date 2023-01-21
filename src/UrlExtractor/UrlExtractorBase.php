@@ -23,14 +23,14 @@ abstract class UrlExtractorBase {
 
   public function extract(): UrlList {
     $rawUrls = $this->extractUrls();
-    $result = new UrlList();
+    $result = UrlList::builder();
     foreach ($rawUrls as $urlNode) {
       $url = $urlNode->value;
       if (UrlTool::isWebUrl(new Uri($url))) {
         $result->add($url);
       }
     }
-    return $result;
+    return $result->freeze();
   }
 
   abstract protected function extractUrls(): \Traversable;

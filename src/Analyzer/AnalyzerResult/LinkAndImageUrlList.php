@@ -15,18 +15,14 @@ final class LinkAndImageUrlList implements TestSummaryInterface, ToArrayInterfac
 
   use ToArrayTrait;
 
-  protected UrlList $linkUrlList;
-
-  protected UrlList $imageUrlList;
-
   /**
    * @param \Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\UrlList $linkUrlList
    * @param \Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\UrlList $imageUrlList
    */
-  public function __construct(UrlList $linkUrlList, UrlList $imageUrlList) {
-    $this->linkUrlList = $linkUrlList;
-    $this->imageUrlList = $imageUrlList;
-  }
+  public function __construct(
+    public readonly UrlList $linkUrlList,
+    public readonly UrlList $imageUrlList
+  ) {}
 
   /**
    * @return \Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\UrlList

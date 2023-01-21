@@ -24,15 +24,15 @@ final class AnalyzerResult {
   protected AnalyzerLog $sanitizedLog;
 
   /**
-   * @param \Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\ResultDetails $resultSummary
+   * @param \Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\ResultDetails $resultDetails
    * @param \Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\AnalyzerLog $fullLog
-   * @param \Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\ResultSummary $resultDetails
+   * @param \Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\ResultSummary $resultSummary
    * @param \Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\AnalyzerLog $sanitizedLog
    */
-  public function __construct(ResultDetails $resultSummary, AnalyzerLog $fullLog, ResultSummary $resultDetails, AnalyzerLog $sanitizedLog) {
-    $this->resultDetails = $resultSummary;
+  public function __construct(ResultDetails $resultDetails, AnalyzerLog $fullLog, ResultSummary $resultSummary, AnalyzerLog $sanitizedLog) {
+    $this->resultDetails = $resultDetails;
     $this->fullLog = $fullLog;
-    $this->resultSummary = $resultDetails;
+    $this->resultSummary = $resultSummary;
     $this->sanitizedLog = $sanitizedLog;
   }
 

@@ -8,11 +8,6 @@ use loophp\collection\Collection;
 
 /**
  * The analyzer log.
- *
- * ::getMessages(): All messages, for an administrator.
- * ::getRelevantTitles(): All message titles, for a searchable index.
- *
- * @api Will be serialized in persistent storage, any change needs a migration.
  */
 final class AnalyzerLog {
 

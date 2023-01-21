@@ -18,21 +18,6 @@ final class LinkAndImageRedirectInfoList  implements TestSummaryInterface, ToArr
   ) {
   }
 
-  /**
-   * @return \Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\UrlRedirectInfoList
-   */
-  public function getLinkRedirectInfoList(): UrlRedirectInfoList {
-    return $this->linkRedirectInfoList;
-  }
-
-  /**
-   * @return \Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\UrlRedirectInfoList
-   */
-  public function getImageRedirectInfoList(): UrlRedirectInfoList {
-    return $this->imageRedirectInfoList;
-  }
-
-
   public function getTestSummary(): array {
     return [
       'linkUrlList' => $this->linkRedirectInfoList->getTestSummary(),

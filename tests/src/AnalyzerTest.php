@@ -19,7 +19,7 @@ class AnalyzerTest extends TestCase {
   public function testAnalyzer(string $id, string $email, array $expected): void {
     $analyzer = Api::getDebugAnalyzer();
     $result = $analyzer->analyze($email);
-    $testSummary = $result->getResultDetails()->getTestSummary();
+    $testSummary = $result->resultDetails->getTestSummary();
     $this->assertTestSummaryContains($expected, $testSummary);
   }
 

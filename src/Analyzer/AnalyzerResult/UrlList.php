@@ -27,7 +27,9 @@ final class UrlList implements \IteratorAggregate, TestSummaryInterface, ToArray
   /**
    * @param \Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\UrlItem[] $urls
    */
-  public function __construct(public readonly array $urls) {}
+  public function __construct(
+    public readonly array $urls
+  ) {}
 
   public static function builder() {
     return new UrlListBuilder();

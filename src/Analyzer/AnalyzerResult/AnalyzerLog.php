@@ -23,13 +23,6 @@ final class AnalyzerLog {
   }
 
   /**
-   * @return array
-   */
-  public function getMessages(): array {
-    return $this->messages;
-  }
-
-  /**
    * Get the title (up to \n) of all non-info entries.
    */
   public function getRelevantTitles(): array {

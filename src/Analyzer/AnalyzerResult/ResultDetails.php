@@ -29,70 +29,6 @@ final class ResultDetails implements TestSummaryInterface, ToArrayInterface {
     public readonly DomainAliasesList                $domainAliasesList,
   ) {}
 
-  /**
-   * @return \Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\DKIMResult
-   */
-  public function getDkimResult(): DKIMResult {
-    return $this->dkimResult;
-  }
-
-  /**
-   * @return \Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\HeadersResult
-   */
-  public function getHeadersResult(): HeadersResult {
-    return $this->headersResult;
-  }
-
-  /**
-   * @return \Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\LinkAndImageUrlList
-   */
-  public function getAllLinkAndImageUrlsList(): LinkAndImageUrlList {
-    return $this->allLinkAndImageUrlsList;
-  }
-
-  /**
-   * @return \Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\LinkAndImageUrlListMatcherResult
-   */
-  public function getLinkAndImageUrlsMatcherResult(): LinkAndImageUrlListMatcherResult {
-    return $this->linkAndImageUrlsMatcherResult;
-  }
-
-  /**
-   * @return \Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\UrlList
-   */
-  public function getPixelsList(): UrlList {
-    return $this->pixelsList;
-  }
-
-  /**
-   * @return \Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\UrlList
-   */
-  public function getUnsubscribeUrlList(): UrlList {
-    return $this->unsubscribeUrlList;
-  }
-
-  /**
-   * @return \Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\LinkAndImageRedirectInfoList
-   */
-  public function getUrlsRedirectInfoList(): LinkAndImageRedirectInfoList {
-    return $this->urlsRedirectInfoList;
-  }
-
-  /**
-   * @return \Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\LinkAndImageUrlList
-   */
-  public function getUrlsWithAnalyticsList(): LinkAndImageUrlList {
-    return $this->urlsWithAnalyticsList;
-  }
-
-  /**
-   * @return \Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\DomainAliasesList
-   */
-  public function getDomainAliasesList(): DomainAliasesList {
-    return $this->domainAliasesList;
-  }
-
-
   public function getTestSummary(): array {
     return [
       'headersResult' => $this->headersResult->getTestSummary(),
@@ -111,31 +47,31 @@ final class ResultDetails implements TestSummaryInterface, ToArrayInterface {
     $p->add("");
 
     $p->add('# Analyzer result');
-    if ($this->getAggregated()->getServiceName()) {
-      $p->add("Recognized servide: {$this->getAggregated()->getServiceName()}");
+    if ($this->aggregated->serviceName) {
+      $p->add("Recognized servide: {$this->aggregated->serviceName}");
     }
-    if ($this->getAggregated()->getMatchLevel()) {
-      $p->add("Confidence level: {$this->getAggregated()->getMatchLevel()}");
+    if ($this->aggregated->matchLevel) {
+      $p->add("Confidence level: {$this->aggregated->matchLevel}");
     }
     $p->add("");
 
 
     $p->add("# DKIM Result");
-    $p->add("Signature verification confidence (red / yellow / green): " . $this->dkimResult->getStatus());
+    $p->add("Signature verification confidence (red / yellow / green): " . $this->dkimResult->status);
     $p->add("Details:");
-    foreach ($this->dkimResult->getSummaryLines() as $dkimSummaryLine) {
+    foreach ($this->dkimResult->summaryLines as $dkimSummaryLine) {
       $p->add($dkimSummaryLine);
     }
     $p->add("");
 
 
     $p->add("# Headers result");
-    foreach ($this->getHeadersResult() as $headersResult) {
-      $p->add("## Match for service: {$headersResult->getServiceName()}");
+    foreach ($this->headersResult as $headersResult) {
+      $p->add("## Match for service: {$headersResult->serviceName}");
       $p->add("Details:");
-      foreach ($headersResult->getHeaderSingleResultList() as $headerSingleResultList) {
+      foreach ($headersResult->headerSingleResultList as $headerSingleResultList) {
         $headerIsMatch = $headerSingleResultList->isMatch() ? 'MATCH' : 'nomatch';
-        $p->add("- $headerIsMatch: {$headerSingleResultList->getHeaderName()}");
+        $p->add("- $headerIsMatch: {$headerSingleResultList->headerName}");
         // @todo Add match pattern.
         $p->add("  - Match pattern: xxx");
       }
@@ -145,8 +81,8 @@ final class ResultDetails implements TestSummaryInterface, ToArrayInterface {
 
     $p->add("# All extracted links and images");
     foreach ([
-               'Links' => $this->getAllLinkAndImageUrlsList()->getLinkUrlList(),
-               'Images' => $this->getAllLinkAndImageUrlsList()->getImageUrlList(),
+               'Links' => $this->allLinkAndImageUrlsList->linkUrlList,
+               'Images' => $this->allLinkAndImageUrlsList->imageUrlList,
              ] as $urlListType => $urlList) {
       assert($urlList instanceof UrlList);
       $p->add("## {$urlList->count()} $urlListType URLs");
@@ -160,17 +96,17 @@ final class ResultDetails implements TestSummaryInterface, ToArrayInterface {
 
     $p->add("# Service matcher result");
     foreach ([
-               'Links' => $this->getLinkAndImageUrlsMatcherResult()
-                 ->getLinkUrlsResult(),
-               'Images' => $this->getLinkAndImageUrlsMatcherResult()
-                 ->getImageUrlsResult(),
+               'Links' => $this->linkAndImageUrlsMatcherResult
+                 ->linkUrlsResult,
+               'Images' => $this->linkAndImageUrlsMatcherResult
+                 ->imageUrlsResult,
              ] as $urlsResultType => $urlsResult) {
       assert($urlsResult instanceof UrlListMatchersResult);
-      foreach ($urlsResult->getPerServiceResultList() as $perServiceResultList) {
+      foreach ($urlsResult->perServiceResultList as $perServiceResultList) {
         foreach ([
-                   'exactly' => $perServiceResultList->getUrlsMatchedExactly(),
-                   'by domain' => $perServiceResultList->getUrlsMatchedByDomain(),
-                   'not at all' => $perServiceResultList->getUrlsNotMatchedList(),
+                   'exactly' => $perServiceResultList->urlsMatchedExactly,
+                   'by domain' => $perServiceResultList->urlsMatchedByDomain,
+                   'not at all' => $perServiceResultList->urlsNotMatchedList,
                  ] as $serviceMatchType => $servicePerTypeMatchUrlList) {
           assert($servicePerTypeMatchUrlList instanceof UrlList);
           // "## 42 links matched by domain for mailchimp"
@@ -191,14 +127,14 @@ final class ResultDetails implements TestSummaryInterface, ToArrayInterface {
 
 
     $p->add("# Recognized 1x1 pixels");
-    foreach ($this->getPixelsList() as $pixelUrl) {
+    foreach ($this->pixelsList as $pixelUrl) {
       $p->add("- {$pixelUrl->toString()}");
     }
     $p->add("");
 
 
     $p->add("# Recognized unsubscribe urls");
-    foreach ($this->getUnsubscribeUrlList() as $unsubscribeUrl) {
+    foreach ($this->unsubscribeUrlList as $unsubscribeUrl) {
       $p->add("- {$unsubscribeUrl->toString()}");
     }
     $p->add("");
@@ -207,15 +143,15 @@ final class ResultDetails implements TestSummaryInterface, ToArrayInterface {
     $p->add("# Recognized redirection urls");
     $p->add("(Without unsubscribe link)");
     foreach ([
-               'Links' => $this->getUrlsRedirectInfoList()
-                 ->getLinkRedirectInfoList(),
-               'Images' => $this->getUrlsRedirectInfoList()
-                 ->getImageRedirectInfoList(),
+               'Links' => $this->urlsRedirectInfoList
+                 ->linkRedirectInfoList,
+               'Images' => $this->urlsRedirectInfoList
+                 ->imageRedirectInfoList,
              ] as $urlRedirectionInfoType => $urlRedirectionInfoList) {
       assert($urlRedirectionInfoList instanceof UrlRedirectInfoList);
       $p->add("## $urlRedirectionInfoType with redirection");
       foreach ($urlRedirectionInfoList as $urlRedirectionInfo) {
-        $p->add("- " . implode(' => ', $urlRedirectionInfo->getOriginalUrlAndRedirectUrls()));
+        $p->add("- " . implode(' => ', $urlRedirectionInfo->originalUrlAndRedirectUrls));
       }
     }
     $p->add("");
@@ -223,10 +159,10 @@ final class ResultDetails implements TestSummaryInterface, ToArrayInterface {
 
     $p->add("# Recognized URLs with analytics");
     foreach ([
-               'Links' => $this->getUrlsWithAnalyticsList()
-                 ->getLinkUrlList(),
-               'Images' => $this->getUrlsWithAnalyticsList()
-                 ->getImageUrlList(),
+               'Links' => $this->urlsWithAnalyticsList
+                 ->linkUrlList,
+               'Images' => $this->urlsWithAnalyticsList
+                 ->imageUrlList,
              ] as $analyticsType => $analyticsUrlList) {
       assert($analyticsUrlList instanceof UrlList);
       $p->add("## $analyticsType with analytics");
@@ -239,7 +175,7 @@ final class ResultDetails implements TestSummaryInterface, ToArrayInterface {
 
     $p->add("# Domains and aliases");
     foreach ($this->domainAliasesList as $domainAliases) {
-      $p->add("- " . implode(' => ', $domainAliases->getDomainAndAliases()));
+      $p->add("- " . implode(' => ', $domainAliases->domainAndAliases));
     }
     $p->add("");
 

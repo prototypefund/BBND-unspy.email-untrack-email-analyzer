@@ -23,20 +23,6 @@ final class LinkAndImageUrlListMatcherResult implements TestSummaryInterface, To
   ) {
   }
 
-  /**
-   * @return \Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\UrlListMatchersResult
-   */
-  public function getLinkUrlsResult(): UrlListMatchersResult {
-    return $this->linkUrlsResult;
-  }
-
-  /**
-   * @return \Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\UrlListMatchersResult
-   */
-  public function getImageUrlsResult(): UrlListMatchersResult {
-    return $this->imageUrlsResult;
-  }
-
   public function getTestSummary(): array {
     return [
       'linkUrlsResult' => $this->linkUrlsResult->getTestSummary(),

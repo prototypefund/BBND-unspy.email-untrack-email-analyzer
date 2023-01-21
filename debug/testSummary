@@ -28,7 +28,7 @@ if (!isset($fileNamePairs[$fileId])) {
 $fileContent = file_get_contents($emailFile);
 $analyzer = Api::getDebugAnalyzer();
 $result = $analyzer->analyze($fileContent);
-$testSummary = $result->getResultDetails()->getTestSummary();
+$testSummary = $result->resultDetails->getTestSummary();
 $expectedResult = Yaml::dump($testSummary, 99, 2);
 print $expectedResult;
 if ($update) {

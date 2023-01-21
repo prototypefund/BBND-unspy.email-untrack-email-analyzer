@@ -26,19 +26,4 @@ final class DKIMResult implements ToArrayInterface {
     public readonly array  $summaryLines
   ) {}
 
-  /**
-   * @return string
-   */
-  public function getStatus(): string {
-    return $this->status;
-  }
-
-  /**
-   * @return array
-   */
-  public function getSummaryLines(): array {
-    return $this->summaryLines;
-  }
-
-
 }

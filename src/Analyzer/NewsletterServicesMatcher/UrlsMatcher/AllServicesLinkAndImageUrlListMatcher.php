@@ -10,8 +10,8 @@ use Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\LinkAndImageUrlLis
 final class AllServicesLinkAndImageUrlListMatcher {
 
   public function generateLinkAndImageUrlListResults(LinkAndImageUrlList $linkAndImageUrlList): LinkAndImageUrlListMatcherResult {
-    $linkUrlListResult = (new AllServicesLinkUrlsMatcher())->generateUrlListResult($linkAndImageUrlList->getLinkUrlList());
-    $imageUrlListResult = (new AllServicesImageUrlsMatcher())->generateUrlListResult($linkAndImageUrlList->getImageUrlList());
+    $linkUrlListResult = (new AllServicesLinkUrlsMatcher())->generateUrlListResult($linkAndImageUrlList->linkUrlList);
+    $imageUrlListResult = (new AllServicesImageUrlsMatcher())->generateUrlListResult($linkAndImageUrlList->imageUrlList);
     return new LinkAndImageUrlListMatcherResult($linkUrlListResult, $imageUrlListResult);
   }
 

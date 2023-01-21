@@ -24,20 +24,6 @@ final class LinkAndImageUrlList implements TestSummaryInterface, ToArrayInterfac
     public readonly UrlList $imageUrlList
   ) {}
 
-  /**
-   * @return \Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\UrlList
-   */
-  public function getLinkUrlList(): UrlList {
-    return $this->linkUrlList;
-  }
-
-  /**
-   * @return \Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\UrlList
-   */
-  public function getImageUrlList(): UrlList {
-    return $this->imageUrlList;
-  }
-
   public function getTestSummary(): array {
     return [
       'linkUrlList' => $this->linkUrlList->getTestSummary(),

@@ -28,8 +28,8 @@ final class RedirectDetector implements RedirectDetectorInterface {
     $urlRedirectInfoList = $this->redirectResolver->resolveRedirects($urlList);
 
     return new LinkAndImageRedirectInfoList(
-      $this->assignRedirects($linkAndImageUrlList->getLinkUrlList(), $urlRedirectInfoList),
-      $this->assignRedirects($linkAndImageUrlList->getImageUrlList(), $urlRedirectInfoList),
+      $this->assignRedirects($linkAndImageUrlList->linkUrlList, $urlRedirectInfoList),
+      $this->assignRedirects($linkAndImageUrlList->imageUrlList, $urlRedirectInfoList),
     );
   }
 
@@ -42,8 +42,8 @@ final class RedirectDetector implements RedirectDetectorInterface {
     $combinedUrlList = UrlList::builder();
     /** @var UrlList $urlList */
     foreach ([
-               $linkAndImageUrlList->getLinkUrlList(),
-               $linkAndImageUrlList->getImageUrlList(),
+               $linkAndImageUrlList->linkUrlList,
+               $linkAndImageUrlList->imageUrlList,
              ] as $urlList) {
       /** @var \Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\UrlItem $urlItem */
       foreach ($urlList as $urlItem) {

@@ -16,8 +16,8 @@ final class AnalyticsDetector {
 
   public function detectAnalytics(LinkAndImageUrlList $linkAndImageUrlList): LinkAndImageUrlList {
     return new LinkAndImageUrlList(
-      $this->doDetectAnalytics($linkAndImageUrlList->getLinkUrlList()),
-      $this->doDetectAnalytics($linkAndImageUrlList->getImageUrlList()),
+      $this->doDetectAnalytics($linkAndImageUrlList->linkUrlList),
+      $this->doDetectAnalytics($linkAndImageUrlList->linkUrlList),
     );
   }
 

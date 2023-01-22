@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\ResultSummary;
+namespace Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\ResultVerdict;
 
-enum ResultSummaryMatchLevel: string {
+enum ResultVerdictMatchLevel: string {
 
   case Sure = 'sure';
   case Likely = 'likely';

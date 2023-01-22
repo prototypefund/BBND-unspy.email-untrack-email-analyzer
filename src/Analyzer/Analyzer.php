@@ -5,7 +5,7 @@ declare(strict_types=1);
 namespace Geeks4change\UntrackEmailAnalyzer\Analyzer;
 
 use Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\AnalyzerLog\AnalyzerLogger;
-use Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\AnalyzerResult;
+use Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\FullResult;
 use Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\ResultDetails\DKIMResult;
 use Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\ResultDetails\DomainAliases;
 use Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\ResultDetails\DomainAliasesList;
@@ -84,7 +84,7 @@ class Analyzer {
     $this->redirectDetector = $redirectDetector;
   }
 
-  public function analyze(string $rawMessage): AnalyzerResult {
+  public function analyze(string $rawMessage): FullResult {
     $logger = new AnalyzerLogger();
 
     // Check DKIM.
@@ -136,12 +136,14 @@ class Analyzer {
     );
 
     $resultSummary = (new ResultSummaryExtractor)
-      ->createResultSummary($message, $resultDetails);
+      ->extractResultSummary($resultDetails);
+    $resultVerdict = (new ResultVerdictExtractor)
+      ->extractResultVerdict($resultSummary);
 
     $fullLog = $logger->freeze();
-    // @fixme Add LogSanitizer.
-    $sanitizedLog = $fullLog;
-    $analyzerResult = new AnalyzerResult($resultDetails, $fullLog, $resultSummary, $sanitizedLog);
+
+    $listInfo = (new ListInfoExtractor())->extract($message);
+    $analyzerResult = new FullResult($listInfo, $resultDetails, $resultSummary, $resultVerdict, $fullLog);
 
     Globals::deleteAll();
     return $analyzerResult;

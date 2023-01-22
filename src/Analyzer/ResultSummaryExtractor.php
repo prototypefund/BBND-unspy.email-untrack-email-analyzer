@@ -4,10 +4,10 @@ declare(strict_types=1);
 
 namespace Geeks4change\UntrackEmailAnalyzer\Analyzer;
 
-use Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\ListInfo;
-use Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\ResultDetails;
-use Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\ResultSummary;
-use Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\ResultSummaryMatchLevel;
+use Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\ListInfo\ListInfo;
+use Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\ResultDetails\ResultDetails;
+use Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\ResultSummary\ResultSummary;
+use Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\ResultSummary\ResultSummaryMatchLevel;
 use ZBateson\MailMimeParser\Header\AddressHeader;
 use ZBateson\MailMimeParser\IMessage;
 

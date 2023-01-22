@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult;
+namespace Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\ResultDetails;
 
 /**
  * @api Will be serialized in persistent storage, any change needs a migration.

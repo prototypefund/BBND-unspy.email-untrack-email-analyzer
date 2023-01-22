@@ -4,12 +4,11 @@ declare(strict_types=1);
 
 namespace Geeks4change\UntrackEmailAnalyzer\Analyzer;
 
-use Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\LinkAndImageRedirectInfoList;
-use Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\LinkAndImageUrlList;
-use Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\UrlList;
-use Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\UrlRedirectInfoList;
+use Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\ResultDetails\LinkAndImageRedirectInfoList;
+use Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\ResultDetails\LinkAndImageUrlList;
+use Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\ResultDetails\UrlList;
+use Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\ResultDetails\UrlRedirectInfoList;
 use Geeks4change\UntrackEmailAnalyzer\RedirectResolver\AsyncGuzzleRedirectResolver;
-use Geeks4change\UntrackEmailAnalyzer\RedirectResolver\AsyncPhpClientRedirectResolver;
 use Geeks4change\UntrackEmailAnalyzer\RedirectResolver\RedirectResolverInterface;
 
 final class RedirectDetector implements RedirectDetectorInterface {
@@ -34,9 +33,9 @@ final class RedirectDetector implements RedirectDetectorInterface {
   }
 
   /**
-   * @param \Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\LinkAndImageUrlList $linkAndImageUrlList
+   * @param \Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\ResultDetails\LinkAndImageUrlList $linkAndImageUrlList
    *
-   * @return \Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\UrlList
+   * @return \Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\ResultDetails\UrlList
    */
   protected function combineUrls(LinkAndImageUrlList $linkAndImageUrlList, UrlList $urlsToExclude): UrlList {
     $combinedUrlList = UrlList::builder();
@@ -45,7 +44,7 @@ final class RedirectDetector implements RedirectDetectorInterface {
                $linkAndImageUrlList->linkUrlList,
                $linkAndImageUrlList->imageUrlList,
              ] as $urlList) {
-      /** @var \Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\UrlItem $urlItem */
+      /** @var \Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\ResultDetails\UrlItem $urlItem */
       foreach ($urlList as $urlItem) {
         $url = $urlItem->toString();
         if (!$urlsToExclude->contains($url)) {

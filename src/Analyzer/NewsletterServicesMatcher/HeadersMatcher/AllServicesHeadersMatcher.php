@@ -4,9 +4,9 @@ declare(strict_types=1);
 
 namespace Geeks4change\UntrackEmailAnalyzer\Analyzer\NewsletterServicesMatcher\HeadersMatcher;
 
-use Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\HeaderSingleResult;
-use Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\HeadersResult;
-use Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\HeadersResultPerService;
+use Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\ResultDetails\HeaderSingleResult;
+use Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\ResultDetails\HeadersResult;
+use Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\ResultDetails\HeadersResultPerService;
 use Geeks4change\UntrackEmailAnalyzer\Globals;
 use ZBateson\MailMimeParser\Message;
 

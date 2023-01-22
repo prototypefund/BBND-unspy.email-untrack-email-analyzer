@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult;
+namespace Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\AnalyzerLog;
 
 use loophp\collection\Collection;
 use Symfony\Component\Yaml\Yaml;

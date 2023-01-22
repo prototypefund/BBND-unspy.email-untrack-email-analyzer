@@ -1,7 +1,7 @@
 <?php
 namespace Logger\Loggers;
 
-namespace Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult;
+namespace Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\AnalyzerLog;
 
 use Psr\Log\AbstractLogger;
 

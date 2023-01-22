@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult;
+namespace Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\ResultDetails;
 
 use Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\Arrayable\ToArrayInterface;
 use Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\Arrayable\ToArrayTrait;
@@ -11,7 +11,7 @@ use Geeks4change\UntrackEmailAnalyzer\Analyzer\TestSummary\TestSummaryInterface;
 /**
  * HeaderSummaryPerService, child of
  *
- * @see \Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\HeadersResult
+ * @see \Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\ResultDetails\HeadersResult
  *
  * @api Will be serialized in persistent storage, any change needs a migration.
  */
@@ -21,7 +21,7 @@ final class HeadersResultPerService implements TestSummaryInterface, ToArrayInte
 
   /**
    * @param string $serviceName
-   * @param \Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\HeaderSingleResult[] $headerSingleResultList
+   * @param \Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\ResultDetails\HeaderSingleResult[] $headerSingleResultList
    */
   public function __construct(
     public readonly string $serviceName,

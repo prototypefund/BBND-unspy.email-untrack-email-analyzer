@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult;
+namespace Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\ResultDetails;
 
 use Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\Arrayable\ToArrayInterface;
 use Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\Arrayable\ToArrayTrait;
@@ -11,7 +11,7 @@ use Geeks4change\UntrackEmailAnalyzer\Analyzer\TestSummary\TestSummaryInterface;
 /**
  * Url list matching summary (links, images); child of
  *
- * @see \Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\LinkAndImageUrlListMatcherResult
+ * @see \Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\ResultDetails\LinkAndImageUrlListMatcherResult
  *
  * @api Will be serialized in persistent storage, any change needs a migration.
  */
@@ -20,14 +20,14 @@ final class UrlListMatchersResult implements TestSummaryInterface, ToArrayInterf
   use ToArrayTrait;
 
   /**
-   * @param \Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\UrlListPerServiceMatchesList $perServiceResultList
+   * @param \Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\ResultDetails\UrlListPerServiceMatchesList $perServiceResultList
    */
   public function __construct(
     public readonly UrlListPerServiceMatchesList $perServiceResultList
   ) {}
 
   /**
-   * @return \Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\UrlListPerServiceMatchesList
+   * @return \Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\ResultDetails\UrlListPerServiceMatchesList
    */
   public function getPerServiceResultList(): UrlListPerServiceMatchesList {
     return $this->perServiceResultList;

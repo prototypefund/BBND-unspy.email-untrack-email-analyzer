@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace Geeks4change\UntrackEmailAnalyzer\UrlExtractor;
 
-use Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\UrlList;
+use Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\ResultDetails\UrlList;
 use Geeks4change\UntrackEmailAnalyzer\Utility\UrlTool;
 use GuzzleHttp\Psr7\Uri;
 use Symfony\Component\DomCrawler\Crawler;

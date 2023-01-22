@@ -12,9 +12,9 @@ final class ListInfo implements ToArrayInterface {
   use ToArrayTrait;
 
   public function __construct(
-    protected string  $emailLabel,
-    protected string  $emailAddress,
-    protected ?string $listId
+    public readonly string  $emailLabel,
+    public readonly string  $emailAddress,
+    public readonly ?string $listId
   ) {}
 
 }

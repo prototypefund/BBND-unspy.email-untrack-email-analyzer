@@ -26,14 +26,6 @@ final class UrlListMatchersResult implements TestSummaryInterface, ToArrayInterf
     public readonly UrlListPerServiceMatchesList $perServiceResultList
   ) {}
 
-  /**
-   * @return \Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\ResultDetails\UrlListPerServiceMatchesList
-   */
-  public function getPerServiceResultList(): UrlListPerServiceMatchesList {
-    return $this->perServiceResultList;
-  }
-
-
   public function getTestSummary(): array {
     return [
       'perServiceResultList' => $this->perServiceResultList->getTestSummary(),

@@ -15,7 +15,7 @@ use Psr\Http\Message\UriInterface;
 abstract class AllServicesUrlsMatcherBase {
 
   public function generateUrlListResult(UrlList $urlList): UrlListMatchersResult {
-    $perServiceResultList = new UrlListPerServiceMatchesList();
+    $perServiceResultList = [];
     /** @var \Geeks4change\UntrackEmailAnalyzer\Analyzer\NewsletterServicesMatcher\ServiceMatcherProvider $toolPattern */
     foreach (Globals::get()->getServiceMatcherProviderRepository()->getServiceMatcherProviderCollection() as $toolPattern) {
       $matchedExactly = UrlList::builder();
@@ -39,10 +39,10 @@ abstract class AllServicesUrlsMatcherBase {
         $notMatched->freeze(),
       );
       if ($perServiceMatches->isNonEmpty()) {
-        $perServiceResultList->add($perServiceMatches);
+        $perServiceResultList[$toolPattern->getName()] = $perServiceMatches;
       }
     }
-    return new UrlListMatchersResult($perServiceResultList);
+    return new UrlListMatchersResult(new UrlListPerServiceMatchesList($perServiceResultList));
 }
 
   protected function isUrlPatternMatch(ServiceMatcherProvider $toolPattern, UriInterface $url): bool {

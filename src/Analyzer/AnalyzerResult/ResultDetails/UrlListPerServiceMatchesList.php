@@ -20,13 +20,11 @@ final class UrlListPerServiceMatchesList implements \IteratorAggregate, TestSumm
   use ToArrayTrait;
 
   /**
-   * @var array<\Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\ResultDetails\UrlListPerServiceMatches>
+   * @param array<\Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\ResultDetails\UrlListPerServiceMatches> $perService
    */
-  protected array $perService = [];
-
-  public function add(UrlListPerServiceMatches $perServiceMatches) {
-    $this->perService[$perServiceMatches->getServiceName()] = $perServiceMatches;
-  }
+  public function __construct(
+    public readonly array $perService,
+  ) {}
 
   public function getIterator(): \Traversable {
     return new \ArrayIterator($this->perService);

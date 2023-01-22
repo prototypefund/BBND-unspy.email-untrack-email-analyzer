@@ -11,14 +11,15 @@ use ZBateson\MailMimeParser\IMessage;
 final class ListInfoExtractor {
 
   public function extract(IMessage $message): ListInfo {
-    $fromHeader = $message->getHeader('From');
-    if ($fromHeader instanceof AddressHeader) {
-      $emailAddress = $fromHeader->getEmail();
-      $emailLabel = $fromHeader->getPersonName();
+    $emailAddressHeader = $message->getHeader('Reply-to') ??
+      $message->getHeader('From');
+    if ($emailAddressHeader instanceof AddressHeader) {
+      $emailAddress = $emailAddressHeader->getEmail();
+      $emailLabel = $emailAddressHeader->getPersonName();
     }
-    elseif($fromHeader) {
+    elseif($emailAddressHeader) {
       // @todo Log as error.
-      $emailAddress = $fromHeader->getValue();
+      $emailAddress = $emailAddressHeader->getValue();
       $emailLabel = '';
     }
     else {

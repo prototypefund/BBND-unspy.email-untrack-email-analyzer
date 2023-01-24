@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace Geeks4change\UntrackEmailAnalyzer\Analyzer;
 
 use Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\ResultDetails\DKIMResult;
+use Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\ResultDetails\DKIMStatusEnum;
 use Geeks4change\UntrackEmailAnalyzer\Utility\Max;
 use PHPMailer\DKIMValidator\DKIMException;
 use PHPMailer\DKIMValidator\Validator;
@@ -45,7 +46,7 @@ final class DKIMSignatureValidator {
    * - yellow: Any header succeeds validation, but has problems.
    * - red: No validation success.
    */
-  protected function extractStatus(array $result): string {
+  protected function extractStatus(array $result): DKIMStatusEnum {
     $headerStatusList = [];
     foreach ($result as $headerIndex => $messages) {
       $headerHasSuccessMessage = $headerHasProblemMessage = FALSE;
@@ -63,7 +64,11 @@ final class DKIMSignatureValidator {
         0;
     }
     $messageStatus = Max::max(0, ...$headerStatusList);
-    return ['red', 'yellow', 'green'][$messageStatus];
+    return [
+      DKIMStatusEnum::Red,
+      DKIMStatusEnum::Yellow,
+      DKIMStatusEnum::Green
+    ][$messageStatus];
   }
 
 }

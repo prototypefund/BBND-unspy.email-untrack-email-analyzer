@@ -18,12 +18,11 @@ final class DKIMResult implements ToArrayInterface {
   use ToArrayTrait;
 
   /**
-   * @param string $status
    * @param string[] $summaryLines
    */
   public function __construct(
-    public readonly string $status,
-    public readonly array  $summaryLines
+    public readonly DKIMStatusEnum $status,
+    public readonly array $summaryLines
   ) {}
 
 }

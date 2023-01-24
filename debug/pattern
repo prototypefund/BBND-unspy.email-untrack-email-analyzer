@@ -12,7 +12,7 @@ $usage = "Usage: $argv[0] [service] [image|link] [pattern] [?string-to-match]\n"
 $repo = new ServiceMatcherProviderRepository();
 
 /** @var \Geeks4change\UntrackEmailAnalyzer\Analyzer\NewsletterServicesMatcher\ServiceMatcherProvider $toolPattern */
-$toolPatternCollection = $repo->getServiceMatcherProviderCollection();
+$toolPatternCollection = $repo->getProviderMatchers();
 $toolPattern = $toolPatternCollection[$service] ?? NULL;
 if (!$toolPattern) {
   print $usage;

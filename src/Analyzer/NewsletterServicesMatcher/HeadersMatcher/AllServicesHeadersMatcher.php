@@ -4,28 +4,28 @@ declare(strict_types=1);
 
 namespace Geeks4change\UntrackEmailAnalyzer\Analyzer\NewsletterServicesMatcher\HeadersMatcher;
 
-use Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\ResultDetails\HeaderSingleResult;
-use Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\ResultDetails\HeadersResult;
-use Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\ResultDetails\HeadersResultPerService;
+use Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\ResultDetails\HeaderMatch;
+use Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\ResultDetails\HeaderMatchList;
+use Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\ResultDetails\HeaderMatchListPerProvider;
 use Geeks4change\UntrackEmailAnalyzer\Globals;
 use ZBateson\MailMimeParser\Message;
 
 final class AllServicesHeadersMatcher {
-  public function matchHeaders(Message $message): HeadersResult {
-    $headerResultItems = [];
-    /** @var \Geeks4change\UntrackEmailAnalyzer\Analyzer\NewsletterServicesMatcher\ServiceMatcherProvider $serviceMatcher */
-    foreach (Globals::get()->getServiceMatcherProviderRepository()->getServiceMatcherProviderCollection() as $serviceMatcher) {
-      $headerMatchSummaryList = [];
-      foreach ($serviceMatcher->getHeadersMatchers() as $headersMatcher) {
+  public function matchHeaders(Message $message): HeaderMatchListPerProvider {
+    $headerMatchLists = [];
+    /** @var \Geeks4change\UntrackEmailAnalyzer\Analyzer\NewsletterServicesMatcher\ServiceMatcherProvider $providerInfo */
+    foreach (Globals::get()->getProviderRepository()->getProviderMatchers() as $providerInfo) {
+      $matches = [];
+      foreach ($providerInfo->getHeadersMatchers() as $headersMatcher) {
         $isMatch = $headersMatcher->matchHeaders($message);
-        $headerMatchSummaryList[] = new HeaderSingleResult($headersMatcher->getName(), $isMatch);
+        $matches[] = new HeaderMatch($headersMatcher->getName(), $isMatch);
       }
-      $headersResultPerService = new HeadersResultPerService($serviceMatcher->getName(), $headerMatchSummaryList);
-      if ($headersResultPerService->isNonEmpty()) {
-        $headerResultItems[$headersResultPerService->getServiceName()] = $headersResultPerService;
+      $headerMatchList = new HeaderMatchList($matches);
+      if ($headerMatchList->any()) {
+        $headerMatchLists[$providerInfo->getName()] = $headerMatchList;
       }
     }
-    return new HeadersResult($headerResultItems);
+    return new HeaderMatchListPerProvider($headerMatchLists);
   }
 
 }

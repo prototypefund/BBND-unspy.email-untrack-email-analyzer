@@ -14,7 +14,7 @@ final class ServiceMatcherProviderRepository {
 
   protected ServiceMatcherProviderCollection $serviceMatcherProviderCollection;
 
-  public function getServiceMatcherProviderCollection(): ServiceMatcherProviderCollection {
+  public function getProviderMatchers(): ServiceMatcherProviderCollection {
     if (!isset($this->serviceMatcherProviderCollection)) {
       $serviceMatcherProviderCollectionBuilder = ServiceMatcherProviderCollection::builder();
       foreach (DirInfo::getPatternFilePaths() as $id => $filePath) {

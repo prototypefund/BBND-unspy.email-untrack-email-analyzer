@@ -10,19 +10,19 @@ use loophp\collection\Collection;
 /**
  * LinkAndImageUrlListPerProvider
  *
- * @implements \IteratorAggregate< string, \Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\ResultDetails\LinkAndImageUrlList >
+ * @implements \IteratorAggregate< string, \Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\ResultDetails\TypedUrlList >
  */
-final class LinkAndImageUrlListPerProvider implements TestSummaryInterface, \IteratorAggregate {
+final class TypedUrlListPerProvider implements TestSummaryInterface, \IteratorAggregate {
 
   /**
-   * @param array<\Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\ResultDetails\LinkAndImageUrlList> $perProvider
+   * @param array<\Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\ResultDetails\TypedUrlList> $perProvider
    */
   public function __construct(
     protected readonly array $perProvider,
   ) {}
 
-  public static function builder(): LinkAndImageUrlListPerProviderBuilder {
-    return new LinkAndImageUrlListPerProviderBuilder();
+  public static function builder(): TypedUrlListPerProviderBuilder {
+    return new TypedUrlListPerProviderBuilder();
   }
 
   public function getIterator(): \Traversable {
@@ -31,7 +31,7 @@ final class LinkAndImageUrlListPerProvider implements TestSummaryInterface, \Ite
 
   public function getTestSummary(): array {
     return Collection::fromIterable($this->perProvider)
-      ->map(fn(LinkAndImageUrlList $typedUrlList) => $typedUrlList->getTestSummary())
+      ->map(fn(TypedUrlList $typedUrlList) => $typedUrlList->getTestSummary())
       ->all(FALSE);
   }
 

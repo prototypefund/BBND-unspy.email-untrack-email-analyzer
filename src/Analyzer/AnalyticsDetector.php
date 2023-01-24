@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace Geeks4change\UntrackEmailAnalyzer\Analyzer;
 
-use Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\ResultDetails\LinkAndImageUrlList;
+use Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\ResultDetails\TypedUrlList;
 use Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\ResultDetails\UrlList;
 use GuzzleHttp\Psr7\Query;
 
@@ -13,10 +13,10 @@ use GuzzleHttp\Psr7\Query;
  */
 final class AnalyticsDetector {
 
-  public function detectAnalytics(LinkAndImageUrlList $linkAndImageUrlList): LinkAndImageUrlList {
-    return new LinkAndImageUrlList(
-      $this->doDetectAnalytics($linkAndImageUrlList->linkUrlList),
-      $this->doDetectAnalytics($linkAndImageUrlList->linkUrlList),
+  public function detectAnalytics(TypedUrlList $linkAndImageUrlList): TypedUrlList {
+    return new TypedUrlList(
+      $this->doDetectAnalytics($linkAndImageUrlList->typeLink),
+      $this->doDetectAnalytics($linkAndImageUrlList->typeLink),
     );
   }
 

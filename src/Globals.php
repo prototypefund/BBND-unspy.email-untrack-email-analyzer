@@ -23,7 +23,7 @@ final class Globals {
 
   protected ServiceMatcherProviderRepository $serviceInfoRepository;
 
-  public function getServiceMatcherProviderRepository(): ServiceMatcherProviderRepository {
+  public function getProviderRepository(): ServiceMatcherProviderRepository {
     if (!isset($this->serviceInfoRepository)) {
       $this->serviceInfoRepository = new ServiceMatcherProviderRepository();
     }

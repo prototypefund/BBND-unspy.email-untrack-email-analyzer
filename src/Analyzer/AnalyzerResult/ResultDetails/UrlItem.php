@@ -8,10 +8,9 @@ use GuzzleHttp\Psr7\Uri;
 use Psr\Http\Message\UriInterface;
 
 /**
- * Url summary; child of
+ * Url item; child of
  *
  * @see \Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\ResultDetails\UrlList
- * @see \Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\ResultDetails\UrlListMatchersResult
  *
  * Effectively a string, but convenience methods may be added.
  *
@@ -21,18 +20,9 @@ use Psr\Http\Message\UriInterface;
  */
 final class UrlItem implements \Stringable {
 
-  /**
-   * Store a string, nothing more.
-   * @var string
-   */
-  protected string $url;
-
-  /**
-   * @param string|\Stringable $url
-   */
-  public function __construct($url) {
-    $this->url = strval($url);
-  }
+  public function __construct(
+    public readonly string $url
+  ) {}
 
   public function getUrlObject(): UriInterface {
     return new Uri($this->url);

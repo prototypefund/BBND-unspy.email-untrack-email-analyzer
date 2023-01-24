@@ -8,25 +8,20 @@ use Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\Arrayable\ToArrayI
 use Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\Arrayable\ToArrayTrait;
 use Geeks4change\UntrackEmailAnalyzer\Analyzer\TestSummary\TestSummaryInterface;
 
-/**
- * LinkAndImageUrlsMatcherResult, child of
- *
- * @see \Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\ResultDetails\ResultDetails
- */
-final class LinkAndImageUrlListMatcherResult implements TestSummaryInterface, ToArrayInterface {
+final class TypedUrlRedirectInfoList  implements TestSummaryInterface, ToArrayInterface {
 
   use ToArrayTrait;
 
   public function __construct(
-    public readonly UrlListMatchersResult $linkUrlsResult,
-    public readonly UrlListMatchersResult $imageUrlsResult
+    public readonly UrlRedirectInfoList $typeLink,
+    public readonly UrlRedirectInfoList $typeImage
   ) {
   }
 
   public function getTestSummary(): array {
     return [
-      'linkUrlsResult' => $this->linkUrlsResult->getTestSummary(),
-      'imageUrlsResult' => $this->imageUrlsResult->getTestSummary(),
+      'typeLink' => $this->typeLink->getTestSummary(),
+      'typeImage' => $this->typeImage->getTestSummary(),
     ];
   }
 

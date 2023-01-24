@@ -4,8 +4,8 @@ declare(strict_types=1);
 
 namespace Geeks4change\UntrackEmailAnalyzer\Analyzer;
 
-use Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\ResultDetails\LinkAndImageRedirectInfoList;
-use Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\ResultDetails\LinkAndImageUrlList;
+use Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\ResultDetails\TypedUrlRedirectInfoList;
+use Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\ResultDetails\TypedUrlList;
 use Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\ResultDetails\UrlList;
 use Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\ResultDetails\UrlRedirectInfoList;
 use Geeks4change\UntrackEmailAnalyzer\RedirectResolver\AsyncGuzzleRedirectResolver;
@@ -21,28 +21,28 @@ final class RedirectDetector implements RedirectDetectorInterface {
     $this->redirectResolver = $redirectResolver ?? new AsyncGuzzleRedirectResolver();
   }
 
-  public function detectRedirect(LinkAndImageUrlList $linkAndImageUrlList, UrlList $urlsToExclude): LinkAndImageRedirectInfoList {
+  public function detectRedirect(TypedUrlList $linkAndImageUrlList, UrlList $urlsToExclude): TypedUrlRedirectInfoList {
     $urlList = $this->combineUrls($linkAndImageUrlList, $urlsToExclude);
 
     $urlRedirectInfoList = $this->redirectResolver->resolveRedirects($urlList);
 
-    return new LinkAndImageRedirectInfoList(
-      $this->assignRedirects($linkAndImageUrlList->linkUrlList, $urlRedirectInfoList),
-      $this->assignRedirects($linkAndImageUrlList->imageUrlList, $urlRedirectInfoList),
+    return new TypedUrlRedirectInfoList(
+      $this->assignRedirects($linkAndImageUrlList->typeLink, $urlRedirectInfoList),
+      $this->assignRedirects($linkAndImageUrlList->typeImage, $urlRedirectInfoList),
     );
   }
 
   /**
-   * @param \Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\ResultDetails\LinkAndImageUrlList $linkAndImageUrlList
+   * @param \Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\ResultDetails\TypedUrlList $linkAndImageUrlList
    *
    * @return \Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\ResultDetails\UrlList
    */
-  protected function combineUrls(LinkAndImageUrlList $linkAndImageUrlList, UrlList $urlsToExclude): UrlList {
+  protected function combineUrls(TypedUrlList $linkAndImageUrlList, UrlList $urlsToExclude): UrlList {
     $combinedUrlList = UrlList::builder();
     /** @var UrlList $urlList */
     foreach ([
-               $linkAndImageUrlList->linkUrlList,
-               $linkAndImageUrlList->imageUrlList,
+               $linkAndImageUrlList->typeLink,
+               $linkAndImageUrlList->typeImage,
              ] as $urlList) {
       /** @var \Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\ResultDetails\UrlItem $urlItem */
       foreach ($urlList as $urlItem) {

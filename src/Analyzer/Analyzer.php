@@ -7,20 +7,15 @@ namespace Geeks4change\UntrackEmailAnalyzer\Analyzer;
 use Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\AnalyzerLog\AnalyzerLogger;
 use Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\FullResult;
 use Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\ResultDetails\DKIMResult;
-use Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\ResultDetails\DomainAliases;
-use Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\ResultDetails\DomainAliasesList;
-use Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\ResultDetails\HeaderSingleResult;
-use Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\ResultDetails\HeadersResult;
-use Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\ResultDetails\HeadersResultPerService;
-use Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\ResultDetails\LinkAndImageRedirectInfoList;
-use Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\ResultDetails\LinkAndImageUrlList;
-use Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\ResultDetails\LinkAndImageUrlListMatcherResult;
+use Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\ResultDetails\CnameInfo;
+use Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\ResultDetails\CnameInfoList;
+use Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\ResultDetails\HeaderMatch;
+use Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\ResultDetails\HeaderMatchListPerProvider;
+use Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\ResultDetails\TypedUrlRedirectInfoList;
+use Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\ResultDetails\TypedUrlList;
 use Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\ResultDetails\ResultDetails;
 use Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\ResultDetails\UrlItem;
 use Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\ResultDetails\UrlList;
-use Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\ResultDetails\UrlListMatchersResult;
-use Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\ResultDetails\UrlListPerServiceMatches;
-use Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\ResultDetails\UrlListPerServiceMatchesList;
 use Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\ResultDetails\UrlRedirectInfo;
 use Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\ResultDetails\UrlRedirectInfoList;
 use Geeks4change\UntrackEmailAnalyzer\Analyzer\NewsletterServicesMatcher\HeadersMatcher\AllServicesHeadersMatcher;
@@ -39,35 +34,28 @@ use ZBateson\MailMimeParser\MailMimeParser;
  * - $dkimResult @see DKIMResult
  *   - string $status
  *   - array<string> $summaryLines
- * - $headersResult @see HeadersResult
- *   - (iterable) @see HeadersResultPerService
+ * - $headersResult @see HeaderMatchListPerProvider
+ *   - (iterable) @see HeaderMatchListPerProvider
  *     - string $serviceName
- *     - array $headerSingleResultList @see HeaderSingleResult
+ *     - array $headerSingleResultList @see HeaderMatch
  *       - string $headerName
  *       - bool $isMatch
- * - $allLinkAndImageUrlsList @see LinkAndImageUrlList
+ * - $allLinkAndImageUrlsList @see TypedUrlList
  *   - $linkUrlList @see UrlList
  *   - $imageUrlList @see UrlList
- * - $linkAndImageUrlsMatcherResult @see LinkAndImageUrlListMatcherResult
- *   - $linkUrlsResult @see UrlListMatchersResult
- *   - $imageUrlsResult @see UrlListMatchersResult
- *     - $perServiceResultList @see UrlListPerServiceMatchesList
- *       - (iterable) @see UrlListPerServiceMatches
- *         - $urlsMatchedExactly @see UrlList
- *         - $urlsMatchedByDomain @see UrlList
- *         - $urlsNotMatchedList @see UrlList
+ * - @todo
  * - $pixelsList @see UrlList
  *   - array $urls @see UrlItem (stringable)
  *     - getUrlObject()
- * - $urlsRedirectInfoList @see LinkAndImageRedirectInfoList
+ * - $urlsRedirectInfoList @see TypedUrlRedirectInfoList
  *   - $linkRedirectInfoList @see UrlRedirectInfoList
  *   - $imageRedirectInfoList @see UrlRedirectInfoList
  *     - (iterable) @see UrlRedirectInfo
  *       - string $originalUrl
  *       - array<string> $redirectUrls
- * - $urlsWithAnalyticsList @see LinkAndImageUrlList
- * - $domainAliasesList @see DomainAliasesList
- *   - (iterable) @see DomainAliases
+ * - $urlsWithAnalyticsList @see TypedUrlList
+ * - $domainAliasesList @see CnameInfoList
+ *   - (iterable) @see CnameInfo
  *     - string $domain
  *     - array<string> $aliases
  *
@@ -110,7 +98,7 @@ class Analyzer {
     // Extract links, images, pixels.
     $linkUrls = (new LinksUrlExtractor($crawler))->extract();
     $imageUrls = (new ImagesUrlExtractor($crawler))->extract();
-    $allLinkAndImageUrlsList = new LinkAndImageUrlList($linkUrls, $imageUrls);
+    $allLinkAndImageUrlsList = new TypedUrlList($linkUrls, $imageUrls);
     $pixelsResult = (new PixelsUrlExtractor($crawler))->extract();
 
     // Match link and image urls.

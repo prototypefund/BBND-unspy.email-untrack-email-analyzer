@@ -18,16 +18,16 @@ final class ResultDetails implements TestSummaryInterface, ToArrayInterface {
   use ToArrayTrait;
 
   public function __construct(
-    public readonly DKIMResult                       $dkimResult,
-    public readonly HeadersResult                    $headersResult,
-    public readonly LinkAndImageUrlList              $allLinkAndImageUrlsList,
-    public readonly LinkAndImageUrlListPerProvider   $exactMatches,
-    public readonly LinkAndImageUrlListPerProvider   $domainMatches,
-    public readonly UrlList                          $pixelsList,
-    public readonly UrlList                          $unsubscribeUrlList,
-    public readonly LinkAndImageRedirectInfoList     $urlsRedirectInfoList,
-    public readonly LinkAndImageUrlList              $urlsWithAnalyticsList,
-    public readonly DomainAliasesList                $domainAliasesList,
+    public readonly DKIMResult                 $dkimResult,
+    public readonly HeaderMatchListPerProvider $headersResult,
+    public readonly TypedUrlList               $allLinkAndImageUrlsList,
+    public readonly TypedUrlListPerProvider    $exactMatches,
+    public readonly TypedUrlListPerProvider    $domainMatches,
+    public readonly UrlList                    $pixelsList,
+    public readonly UrlList                    $unsubscribeUrlList,
+    public readonly TypedUrlRedirectInfoList   $urlsRedirectInfoList,
+    public readonly TypedUrlList               $urlsWithAnalyticsList,
+    public readonly CnameInfoList              $domainAliasesList,
   ) {}
 
   public function getTestSummary(): array {
@@ -83,8 +83,8 @@ final class ResultDetails implements TestSummaryInterface, ToArrayInterface {
 
     $p->add("# All extracted links and images");
     foreach ([
-               'Links' => $this->allLinkAndImageUrlsList->linkUrlList,
-               'Images' => $this->allLinkAndImageUrlsList->imageUrlList,
+               'Links' => $this->allLinkAndImageUrlsList->typeLink,
+               'Images' => $this->allLinkAndImageUrlsList->typeImage,
              ] as $urlListType => $urlList) {
       assert($urlList instanceof UrlList);
       $p->add("## {$urlList->count()} $urlListType URLs");
@@ -96,6 +96,7 @@ final class ResultDetails implements TestSummaryInterface, ToArrayInterface {
     $p->add("");
 
 
+    // @todo...
     $p->add("# Service matcher result");
     foreach ([
                'Links' => $this->linkAndImageUrlsMatcherResult
@@ -103,7 +104,7 @@ final class ResultDetails implements TestSummaryInterface, ToArrayInterface {
                'Images' => $this->linkAndImageUrlsMatcherResult
                  ->imageUrlsResult,
              ] as $urlsResultType => $urlsResult) {
-      assert($urlsResult instanceof UrlListMatchersResult);
+      assert($urlsResult instanceof \stdClass);
       foreach ($urlsResult->perServiceResultList as $perServiceResultList) {
         foreach ([
                    'exactly' => $perServiceResultList->urlsMatchedExactly,
@@ -146,9 +147,9 @@ final class ResultDetails implements TestSummaryInterface, ToArrayInterface {
     $p->add("(Without unsubscribe link)");
     foreach ([
                'Links' => $this->urlsRedirectInfoList
-                 ->linkRedirectInfoList,
+                 ->typeLink,
                'Images' => $this->urlsRedirectInfoList
-                 ->imageRedirectInfoList,
+                 ->typeImage,
              ] as $urlRedirectionInfoType => $urlRedirectionInfoList) {
       assert($urlRedirectionInfoList instanceof UrlRedirectInfoList);
       $p->add("## $urlRedirectionInfoType with redirection");
@@ -162,9 +163,9 @@ final class ResultDetails implements TestSummaryInterface, ToArrayInterface {
     $p->add("# Recognized URLs with analytics");
     foreach ([
                'Links' => $this->urlsWithAnalyticsList
-                 ->linkUrlList,
+                 ->typeLink,
                'Images' => $this->urlsWithAnalyticsList
-                 ->imageUrlList,
+                 ->typeImage,
              ] as $analyticsType => $analyticsUrlList) {
       assert($analyticsUrlList instanceof UrlList);
       $p->add("## $analyticsType with analytics");

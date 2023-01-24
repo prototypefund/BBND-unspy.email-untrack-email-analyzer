@@ -11,6 +11,7 @@ use Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\ResultDetails\Cnam
 use Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\ResultDetails\CnameInfoList;
 use Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\ResultDetails\HeaderMatch;
 use Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\ResultDetails\HeaderMatchListPerProvider;
+use Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\ResultDetails\TypedUrlListPerProvider;
 use Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\ResultDetails\TypedUrlRedirectInfoList;
 use Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\ResultDetails\TypedUrlList;
 use Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\ResultDetails\ResultDetails;
@@ -41,9 +42,12 @@ use ZBateson\MailMimeParser\MailMimeParser;
  *       - string $headerName
  *       - bool $isMatch
  * - $allLinkAndImageUrlsList @see TypedUrlList
- *   - $linkUrlList @see UrlList
- *   - $imageUrlList @see UrlList
- * - @todo
+ *   - $typeLink @see UrlList
+ *   - $typeImage @see UrlList
+ * - $exactMatches / $domainMatches @see TypedUrlListPerProvider
+ *   - array $perProvider @see TypedUrlList
+ *     - $typeLink @see UrlList
+ *     - $typeImage @see UrlList
  * - $pixelsList @see UrlList
  *   - array $urls @see UrlItem (stringable)
  *     - getUrlObject()

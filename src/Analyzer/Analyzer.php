@@ -115,7 +115,8 @@ class Analyzer {
 
     // Match link and image urls.
     $matcher = new AllServicesLinkAndImageUrlListMatcher();
-    $linkAndImageUrlListResult = $matcher->generateLinkAndImageUrlListResults($allLinkAndImageUrlsList);
+    ['exact' => $exactMatches, 'domain' => $domainMatches]
+      = $matcher->generateMatches($allLinkAndImageUrlsList);
 
     // Fetch all resolved aliases.
     $domainAliasList = (new DomainAliasesResultFetcher())->fetch();
@@ -127,7 +128,8 @@ class Analyzer {
       $dkimResult,
       $headersResult,
       $allLinkAndImageUrlsList,
-      $linkAndImageUrlListResult,
+      $exactMatches,
+      $domainMatches,
       $pixelsResult,
       $unsubscribeUrlList,
       $urlsWithRedirectList,

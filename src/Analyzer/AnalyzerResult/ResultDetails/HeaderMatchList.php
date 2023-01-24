@@ -28,13 +28,14 @@ final class HeaderMatchList implements TestSummaryInterface, ToArrayInterface {
   ) {}
 
   public function any(): bool {
-    return Collection::fromIterable($this->matches)
-      ->has(fn(HeaderMatch $hsm) => $hsm->isMatch);
+    return !Collection::fromIterable($this->matches)
+      ->filter(fn(HeaderMatch $match) => $match->isMatch)
+      ->isEmpty();
   }
 
   public function all(): bool {
     return Collection::fromIterable($this->matches)
-      ->every(fn(HeaderMatch $hsm) => $hsm->isMatch);
+      ->every(fn(HeaderMatch $match) => $match->isMatch);
   }
 
   public function getTestSummary(): array {

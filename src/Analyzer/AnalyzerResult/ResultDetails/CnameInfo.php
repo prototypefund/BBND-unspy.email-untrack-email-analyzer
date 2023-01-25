@@ -18,4 +18,8 @@ final class CnameInfo {
     $this->aliases = $aliases;
   }
 
+  public function __toString(): string {
+    return implode(' => ', [$this->domain, ...$this->aliases]);
+  }
+
 }

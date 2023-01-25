@@ -6,43 +6,14 @@ namespace Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\ResultDetail
 
 final class UrlRedirectInfo implements \Stringable {
 
-  protected string $originalUrl;
+  public readonly array $redirectUrls;
 
-  /**
-   * The resolution list.
-   * @var array<string>
-   */
-  protected array $redirectUrls;
-
-  /**
-   * @param string $originalUrl
-   * @param string ...$redirectUrls
-   */
-  public function __construct(string $originalUrl, string ...$redirectUrls) {
-    $this->originalUrl = $originalUrl;
+  public function __construct(public readonly string $url, string ...$redirectUrls) {
     $this->redirectUrls = $redirectUrls;
   }
 
-  /**
-   * @return string
-   */
-  public function getOriginalUrl(): string {
-    return $this->originalUrl;
-  }
-
-  public function hasRedirect(): bool {
-    return boolval($this->redirectUrls);
-  }
-
-  /**
-   * @return array
-   */
-  public function getOriginalUrlAndRedirectUrls(): array {
-    return array_merge([$this->originalUrl], $this->redirectUrls);
-  }
-
   public function __toString(): string {
-    return implode(' => ', $this->getOriginalUrlAndRedirectUrls());
+    return implode(' => ', [$this->url, ...$this->redirectUrls]);
   }
 
 }

@@ -99,7 +99,7 @@ final class AsyncGuzzleRedirectResolver implements RedirectResolverInterface {
         $urlChain[] = $currentUrl;
       }
       $urlRedirectInfo = new UrlRedirectInfo(...$urlChain);
-      if ($urlRedirectInfo->hasRedirect()) {
+      if ($urlRedirectInfo->redirectUrls) {
         $urlRedirectInfoList->add($urlRedirectInfo);
       }
     }

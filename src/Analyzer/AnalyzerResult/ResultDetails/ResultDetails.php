@@ -106,13 +106,10 @@ final class ResultDetails implements TestSummaryInterface, ToArrayInterface {
             $p->add("- {$urlItem->toString()}");
             // @todo Add matching pattern.
             // $p->add("  - Internal pattern: xxx");
-
-            $p->add("");
           }
         }
         $p->add("");
       }
-      $p->add("");
     }
     $p->add("");
 
@@ -142,7 +139,8 @@ final class ResultDetails implements TestSummaryInterface, ToArrayInterface {
       assert($urlRedirectionInfoList instanceof UrlRedirectInfoList);
       $p->add("## $urlRedirectionInfoType with redirection");
       foreach ($urlRedirectionInfoList as $urlRedirectionInfo) {
-        $p->add("- " . implode(' => ', $urlRedirectionInfo->getOriginalUrlAndRedirectUrls()));
+        $urls = [$urlRedirectionInfo->url, ...$urlRedirectionInfo->redirectUrls];
+        $p->add("- " . implode(' => ', $urls));
       }
     }
     $p->add("");

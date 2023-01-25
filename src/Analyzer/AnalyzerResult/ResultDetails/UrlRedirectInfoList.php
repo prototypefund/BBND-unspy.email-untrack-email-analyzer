@@ -27,10 +27,10 @@ final class UrlRedirectInfoList implements \IteratorAggregate, TestSummaryInterf
   }
 
   public function add(UrlRedirectInfo $urlRedirectInfo) {
-    if (!$urlRedirectInfo->hasRedirect()) {
+    if (!$urlRedirectInfo->redirectUrls) {
       throw new \UnexpectedValueException();
     }
-    $this->urlRedirectInfoList[$urlRedirectInfo->getOriginalUrl()] = $urlRedirectInfo;
+    $this->urlRedirectInfoList[$urlRedirectInfo->url] = $urlRedirectInfo;
   }
 
   public function getTestSummary(): array {

@@ -15,7 +15,7 @@ final class PlainPhpRedirectResolver {
     foreach ($urlList as $urlWrapper) {
       $url = $urlWrapper->toString();
       $redirectInfo = $this->resolveRedirect($url);
-      if ($redirectInfo->hasRedirect()) {
+      if ($redirectInfo->redirectUrls) {
         $urlRedirectInfoList->add($redirectInfo);
       }
     }

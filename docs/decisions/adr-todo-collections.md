@@ -42,3 +42,11 @@ No help.
     - Nice, but too heavy loaded with events, behaviors, etc.
 - https://packagist.org/packages/danielgsims/php-collections
     - Not much usage and docs.
+
+## Another round, 3
+- https://packagist.org/packages/brezgalov/php-typed-collection
+  - Simple, no array access
+- https://github.com/nXu/typed-collection
+  - For laravel. nice.
+- https://github.com/danielgsims/php-collections
+  - Nice.

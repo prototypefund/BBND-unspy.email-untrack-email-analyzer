@@ -9,10 +9,11 @@ use Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\AnalyzerLog\Analyz
 /**
  * @internal
  */
-abstract class PersistentResultBase {
+final class PersistentResultWrapper {
 
   public function __construct(
-    public readonly AnalyzerLog   $log,
+    public readonly AnalyzerLog        $log,
+    public readonly ?PersistentResult  $persistentResult,
   ) {}
 
 }

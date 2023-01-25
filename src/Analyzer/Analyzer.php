@@ -7,7 +7,7 @@ namespace Geeks4change\UntrackEmailAnalyzer\Analyzer;
 use Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\AnalyzerLog\AnalyzerLogger;
 use Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\FullErrorResult;
 use Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\FullResult;
-use Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\FullResultBase;
+use Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\FullResultWrapper;
 use Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\ResultDetails\DKIMResult;
 use Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\ResultDetails\CnameInfo;
 use Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\ResultDetails\CnameInfoList;
@@ -78,7 +78,7 @@ class Analyzer {
     $this->redirectDetector = $redirectDetector;
   }
 
-  public function analyze(string $rawMessage): FullResultBase {
+  public function analyze(string $rawMessage): FullResultWrapper {
     $logger = new AnalyzerLogger();
 
     try {
@@ -137,13 +137,11 @@ class Analyzer {
       $resultVerdict = (new ResultVerdictExtractor)
         ->extractResultVerdict($resultSummary);
 
-      $fullLog = $logger->freeze();
-
       $listInfo = (new ListInfoExtractor())->extract($message);
-      $analyzerResult = new FullResult($listInfo, $resultDetails, $resultSummary, $resultVerdict, $fullLog);
+      $analyzerResult = new FullResultWrapper($logger->freeze(), new FullResult($listInfo, $resultVerdict, $resultSummary, $resultDetails));
     } catch (\Throwable $e) {
       $logger->emergency("Exception: {$e->getMessage()}", ['trace' => $e->getTraceAsString()]);
-      return new FullErrorResult($logger->freeze());
+      return new FullResultWrapper($logger->freeze(), NULL);
     }
 
     Globals::deleteAll();

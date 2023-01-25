@@ -13,8 +13,8 @@ final class PersistentResult {
 
   public function __construct(
     public readonly ListInfo      $listInfo,
-    public readonly ResultVerdict $resultVerdict,
-    public readonly ResultSummary $resultSummary,
+    public readonly ResultVerdict $verdict,
+    public readonly ResultSummary $summary,
   ) {}
 
 }

@@ -27,7 +27,7 @@ final class ResultDetails implements TestSummaryInterface, ToArrayInterface {
     public readonly UrlList                    $unsubscribeUrlList,
     public readonly TypedUrlRedirectInfoList   $urlsRedirectInfoList,
     public readonly TypedUrlList               $urlsWithAnalyticsList,
-    public readonly CnameInfoList              $domainAliasesList,
+    public readonly CnameInfoList              $cnameInfoList,
   ) {}
 
   public function getTestSummary(): array {
@@ -167,7 +167,7 @@ final class ResultDetails implements TestSummaryInterface, ToArrayInterface {
 
 
     $p->add("# Domains and aliases");
-    foreach ($this->domainAliasesList as $domainAliases) {
+    foreach ($this->cnameInfoList as $domainAliases) {
       $domainList = [$domainAliases->domain, ...$domainAliases->aliases];
       $p->add("- " . implode(' => ', $domainList));
     }

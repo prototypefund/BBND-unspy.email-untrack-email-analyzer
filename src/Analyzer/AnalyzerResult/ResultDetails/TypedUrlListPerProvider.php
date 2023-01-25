@@ -15,10 +15,10 @@ use loophp\collection\Collection;
 final class TypedUrlListPerProvider implements TestSummaryInterface, \IteratorAggregate {
 
   /**
-   * @param array<\Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\ResultDetails\TypedUrlList> $perProvider
+   * @param array<string, \Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\ResultDetails\TypedUrlList> $perProvider
    */
   public function __construct(
-    protected readonly array $perProvider,
+    public readonly array $perProvider,
   ) {}
 
   public static function builder(): TypedUrlListPerProviderBuilder {

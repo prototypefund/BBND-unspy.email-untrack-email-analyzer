@@ -27,6 +27,7 @@ final class UrlRedirectInfoList implements \IteratorAggregate, TestSummaryInterf
   }
 
   public function add(UrlRedirectInfo $urlRedirectInfo) {
+    // @todo Add builder.
     if (!$urlRedirectInfo->redirectUrls) {
       throw new \UnexpectedValueException();
     }

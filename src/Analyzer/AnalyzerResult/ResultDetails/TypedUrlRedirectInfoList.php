@@ -8,7 +8,10 @@ use Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\Arrayable\ToArrayI
 use Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\Arrayable\ToArrayTrait;
 use Geeks4change\UntrackEmailAnalyzer\Analyzer\TestSummary\TestSummaryInterface;
 
-final class TypedUrlRedirectInfoList  implements TestSummaryInterface, ToArrayInterface {
+/**
+ * @implements \IteratorAggregate<UrlTypeEnum, \Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\ResultDetails\UrlRedirectInfoList>
+ */
+final class TypedUrlRedirectInfoList  implements TestSummaryInterface, ToArrayInterface, \IteratorAggregate {
 
   use ToArrayTrait;
 
@@ -23,6 +26,13 @@ final class TypedUrlRedirectInfoList  implements TestSummaryInterface, ToArrayIn
       'typeLink' => $this->typeLink->getTestSummary(),
       'typeImage' => $this->typeImage->getTestSummary(),
     ];
+  }
+
+  public function getIterator(): \Traversable {
+    return (function () {
+      yield UrlTypeEnum::Link => $this->typeLink;
+      yield UrlTypeEnum::Image => $this->typeImage;
+    })();
   }
 
 }

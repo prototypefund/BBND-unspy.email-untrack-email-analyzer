@@ -7,7 +7,6 @@ namespace Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\ResultDetail
 use Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\Arrayable\ToArrayInterface;
 use Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\Arrayable\ToArrayTrait;
 use Geeks4change\UntrackEmailAnalyzer\Analyzer\TestSummary\TestSummaryInterface;
-use Traversable;
 
 /**
  * Intermediary result.
@@ -31,7 +30,7 @@ final class TypedUrlList implements TestSummaryInterface, ToArrayInterface, \Ite
     return new TypedUrlListBuilder();
   }
 
-  public function getIterator(): Traversable {
+  public function getIterator(): \Traversable {
     return (function () {
       yield UrlTypeEnum::Link => $this->typeLink;
       yield UrlTypeEnum::Image => $this->typeImage;

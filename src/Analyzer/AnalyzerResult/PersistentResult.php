@@ -9,13 +9,15 @@ use Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\ListInfo\ListInfo;
 use Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\ResultSummary\ResultSummary;
 use Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\ResultVerdict\ResultVerdict;
 
-final class PersistentResult {
+final class PersistentResult extends PersistentResultBase {
 
   public function __construct(
     public readonly ListInfo      $listInfo,
     public readonly ResultSummary $resultSummary,
     public readonly ResultVerdict $resultVerdict,
-    public readonly AnalyzerLog   $log,
-  ) {}
+    AnalyzerLog   $log,
+  ) {
+    parent::__construct($log);
+  }
 
 }

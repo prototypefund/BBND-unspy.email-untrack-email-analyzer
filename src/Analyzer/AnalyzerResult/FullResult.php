@@ -15,22 +15,24 @@ use Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\ResultVerdict\Resu
  *
  * @api Will be serialized in persistent storage, any change needs a migration.
  */
-final class FullResult {
+final class FullResult extends FullResultBase {
 
   public function __construct(
     public readonly ListInfo      $listInfo,
     public readonly ResultDetails $resultDetails,
     public readonly ResultSummary $resultSummary,
     public readonly ResultVerdict $resultVerdict,
-    public readonly AnalyzerLog   $log,
-  ) {}
+    AnalyzerLog   $log,
+  ) {
+    parent::__construct($log);
+  }
 
   /**
    * Create persistent result from full result.
    *
    * - Leaves away ResultDetails, as they contain recipient specific links.
    */
-  public function getPersistentResult(): PersistentResult {
+  public function getPersistentResult(): PersistentResultBase {
     return new PersistentResult(
       $this->listInfo,
       $this->resultSummary,

@@ -5,7 +5,9 @@ declare(strict_types=1);
 namespace Geeks4change\UntrackEmailAnalyzer\Analyzer;
 
 use Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\AnalyzerLog\AnalyzerLogger;
+use Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\FullErrorResult;
 use Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\FullResult;
+use Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\FullResultBase;
 use Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\ResultDetails\DKIMResult;
 use Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\ResultDetails\CnameInfo;
 use Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\ResultDetails\CnameInfoList;
@@ -76,68 +78,73 @@ class Analyzer {
     $this->redirectDetector = $redirectDetector;
   }
 
-  public function analyze(string $rawMessage): FullResult {
+  public function analyze(string $rawMessage): FullResultBase {
     $logger = new AnalyzerLogger();
 
-    // Check DKIM.
-    $dkimResult = (new DKIMSignatureValidator())->validateDKIMSignature($rawMessage);
+    try {
+      // Check DKIM.
+      $dkimResult = (new DKIMSignatureValidator())->validateDKIMSignature($rawMessage);
 
-    // Parse and find patterns.
-    $mailParser = new MailMimeParser();
-    $message = $mailParser->parse($rawMessage, FALSE);
-    // @todo Consider reporting unusual Mime parts, like more than one text/html part.
+      // Parse and find patterns.
+      $mailParser = new MailMimeParser();
+      $message = $mailParser->parse($rawMessage, FALSE);
+      // @todo Consider reporting unusual Mime parts, like more than one text/html part.
 
-    // Analyze headers.
-    $headersResult = (new AllServicesHeadersMatcher())->matchHeaders($message);
+      // Analyze headers.
+      $headersResult = (new AllServicesHeadersMatcher())->matchHeaders($message);
 
-    $unsubscribeUrlList = (new UnsubscribeLinkExtractor())->extractUnsubscribeLink($message);
+      $unsubscribeUrlList = (new UnsubscribeLinkExtractor())->extractUnsubscribeLink($message);
 
-    // Analyze body html.
-    $html = $message->getHtmlContent();
-    // Do we need all the bells and whistles of HtmlPageCrawler and underlying
-    // DomCrawler? Not really, but seems to add some namespace and encoding
-    // safeguards that can not be wrong.
-    $crawler = new Crawler($html);
+      // Analyze body html.
+      $html = $message->getHtmlContent();
+      // Do we need all the bells and whistles of HtmlPageCrawler and underlying
+      // DomCrawler? Not really, but seems to add some namespace and encoding
+      // safeguards that can not be wrong.
+      $crawler = new Crawler($html);
 
-    // Extract links, images, pixels.
-    $linkUrls = (new LinksUrlExtractor($crawler))->extract();
-    $imageUrls = (new ImagesUrlExtractor($crawler))->extract();
-    $allLinkAndImageUrlsList = new TypedUrlList($linkUrls, $imageUrls);
-    $pixelsResult = (new PixelsUrlExtractor($crawler))->extract();
+      // Extract links, images, pixels.
+      $linkUrls = (new LinksUrlExtractor($crawler))->extract();
+      $imageUrls = (new ImagesUrlExtractor($crawler))->extract();
+      $allLinkAndImageUrlsList = new TypedUrlList($linkUrls, $imageUrls);
+      $pixelsResult = (new PixelsUrlExtractor($crawler))->extract();
 
-    // Match link and image urls.
-    $matcher = new AllServicesLinkAndImageUrlListMatcher();
-    ['exact' => $exactMatches, 'domain' => $domainMatches]
-      = $matcher->generateMatches($allLinkAndImageUrlsList);
+      // Match link and image urls.
+      $matcher = new AllServicesLinkAndImageUrlListMatcher();
+      ['exact' => $exactMatches, 'domain' => $domainMatches]
+        = $matcher->generateMatches($allLinkAndImageUrlsList);
 
-    // Fetch all resolved aliases.
-    $domainAliasList = (new DomainAliasesResultFetcher())->fetch();
+      // Fetch all resolved aliases.
+      $domainAliasList = (new DomainAliasesResultFetcher())->fetch();
 
-    $urlsWithRedirectList = ($this->redirectDetector)->detectRedirect($allLinkAndImageUrlsList, $unsubscribeUrlList);
-    $urlWithAnalyticsList = (new AnalyticsDetector())->detectAnalytics($allLinkAndImageUrlsList);
+      $urlsWithRedirectList = ($this->redirectDetector)->detectRedirect($allLinkAndImageUrlsList, $unsubscribeUrlList);
+      $urlWithAnalyticsList = (new AnalyticsDetector())->detectAnalytics($allLinkAndImageUrlsList);
 
-    $resultDetails = new ResultDetails(
-      $dkimResult,
-      $headersResult,
-      $allLinkAndImageUrlsList,
-      $exactMatches,
-      $domainMatches,
-      $pixelsResult,
-      $unsubscribeUrlList,
-      $urlsWithRedirectList,
-      $urlWithAnalyticsList,
-      $domainAliasList
-    );
+      $resultDetails = new ResultDetails(
+        $dkimResult,
+        $headersResult,
+        $allLinkAndImageUrlsList,
+        $exactMatches,
+        $domainMatches,
+        $pixelsResult,
+        $unsubscribeUrlList,
+        $urlsWithRedirectList,
+        $urlWithAnalyticsList,
+        $domainAliasList
+      );
 
-    $resultSummary = (new ResultSummaryExtractor)
-      ->extractResultSummary($resultDetails);
-    $resultVerdict = (new ResultVerdictExtractor)
-      ->extractResultVerdict($resultSummary);
+      $resultSummary = (new ResultSummaryExtractor)
+        ->extractResultSummary($resultDetails);
+      $resultVerdict = (new ResultVerdictExtractor)
+        ->extractResultVerdict($resultSummary);
 
-    $fullLog = $logger->freeze();
+      $fullLog = $logger->freeze();
 
-    $listInfo = (new ListInfoExtractor())->extract($message);
-    $analyzerResult = new FullResult($listInfo, $resultDetails, $resultSummary, $resultVerdict, $fullLog);
+      $listInfo = (new ListInfoExtractor())->extract($message);
+      $analyzerResult = new FullResult($listInfo, $resultDetails, $resultSummary, $resultVerdict, $fullLog);
+    } catch (\Throwable $e) {
+      $logger->emergency("Exception: {$e->getMessage()}", ['trace' => $e->getTraceAsString()]);
+      return new FullErrorResult($logger->freeze());
+    }
 
     Globals::deleteAll();
     return $analyzerResult;

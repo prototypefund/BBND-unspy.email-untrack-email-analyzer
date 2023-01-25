@@ -17,4 +17,11 @@ final class TypedUrlCountPerProvider {
     return new TypedUrlCountPerProviderBuilder();
   }
 
+  /**
+   * @return list<string>
+   */
+  public function keys(): array {
+    return array_keys($this->perProvider);
+  }
+
 }

@@ -12,8 +12,8 @@ final class ResultVerdict implements ToArrayInterface {
   use ToArrayTrait;
 
   public function __construct(
-    public readonly ?string                 $serviceName,
     public readonly ResultVerdictMatchLevel $matchLevel,
+    public readonly ?string                 $serviceName = NULL,
   ) {}
 
 }

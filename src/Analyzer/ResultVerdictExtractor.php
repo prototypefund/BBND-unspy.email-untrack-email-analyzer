@@ -13,13 +13,30 @@ final class ResultVerdictExtractor {
   public function __construct() {
   }
 
-  public function extractResultVerdict(ResultSummary $resultSummary) {
-    // @fixme
-    $serviceName = NULL;
-    $matchLevel = ResultVerdictMatchLevel::Unknown;
-    /** @noinspection PhpUnnecessaryLocalVariableInspection */
-    $resultSummary = new ResultVerdict($serviceName, $matchLevel);
-    return $resultSummary;
+  public function extractResultVerdict(ResultSummary $summary): ResultVerdict {
+    $providersHeader = $summary->headerMatches->keys();
+    $providersExact = $summary->exactMatches->keys();
+    $providersDomain = $summary->domainMatches->keys();
+
+    // Header and exact matches point to one provider.
+    if ($providersHeader === $providersExact && count($providersHeader) === 1) {
+      return new ResultVerdict(ResultVerdictMatchLevel::Sure, reset($providersHeader));
+    }
+
+    // There is one provider that has header and link matches.
+    $providersExactOrDomain = array_merge($providersExact, $providersDomain);
+    $providersHeadersAndExactOrDomain = array_intersect($providersHeader, $providersExactOrDomain);
+    if (count($providersHeadersAndExactOrDomain) === 1) {
+      return new ResultVerdict(ResultVerdictMatchLevel::Likely, reset($providersHeadersAndExactOrDomain));
+    }
+
+    // Redirects indicate user tracking.
+    if ($summary->redirects->typeLink) {
+      return new ResultVerdict(ResultVerdictMatchLevel::Likely);
+    }
+
+    // No redirects, so user tracking is unlikely.
+    return new ResultVerdict(ResultVerdictMatchLevel::Unlikely);
   }
 
 

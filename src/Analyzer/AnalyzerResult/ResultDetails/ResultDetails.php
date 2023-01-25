@@ -61,13 +61,17 @@ final class ResultDetails implements TestSummaryInterface, ToArrayInterface {
 
     $p->add("# Headers result");
     foreach ($this->headersResult as $providerId => $headersMatchList) {
-      $p->add("## Match for service: {$providerId}");
+      $p->add("## For service: {$providerId}");
       $p->add("Details:");
-      foreach ($headersMatchList as $headerMatch) {
-        $headerIsMatch = $headerMatch->isMatch ? 'MATCH' : 'nomatch';
-        $p->add("- $headerIsMatch: {$headerMatch->headerName}");
-        // @todo Add match pattern.
-        // $p->add("  - Match pattern: xxx");
+      foreach (['MATCH' => TRUE, 'No-Match' => FALSE] as $heading => $isMatchValue) {
+        $p->add($heading);
+        foreach ($headersMatchList as $headerMatch) {
+          if ($headerMatch->isMatch === $isMatchValue) {
+            $p->add("- {$headerMatch->headerName}: {$headerMatch->headerValue}");
+          }
+          // @todo Add match pattern.
+          // $p->add("  - Match pattern: xxx");
+        }
       }
     }
     $p->add("");

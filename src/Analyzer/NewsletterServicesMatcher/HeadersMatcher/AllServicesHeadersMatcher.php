@@ -18,7 +18,8 @@ final class AllServicesHeadersMatcher {
       $matches = [];
       foreach ($providerInfo->getHeadersMatchers() as $headersMatcher) {
         $isMatch = $headersMatcher->matchHeaders($message);
-        $matches[] = new HeaderMatch($headersMatcher->getName(), $isMatch);
+        $headerValue = $message->getHeaderValue($headersMatcher->getName()) ?? '';
+        $matches[] = new HeaderMatch($headersMatcher->getName(), $headerValue, $isMatch);
       }
       $headerMatchList = new HeaderMatchList($matches);
       if ($headerMatchList->any()) {

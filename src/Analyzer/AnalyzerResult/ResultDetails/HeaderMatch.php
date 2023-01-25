@@ -20,6 +20,7 @@ final class HeaderMatch implements TestSummaryInterface, ToArrayInterface {
 
   public function __construct(
     public readonly string $headerName,
+    public readonly string $headerValue,
     public readonly bool   $isMatch
   ) {
   }

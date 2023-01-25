@@ -4,38 +4,26 @@ headersResult:
     _countTotal: 9
     _countMatch: 6
 allLinkAndImageUrlsList:
-  linkUrlList:
+  typeLink:
     _count: 4
-  imageUrlList:
+  typerImage:
     _count: 1
-linkAndImageUrlsResult:
-  linkUrlsResult:
-    perServiceResultList:
-      mailchimp:
-        urlsMatchedExactly:
-          _count: 4
-        urlsMatchedByDomain:
-          _count: 0
-        urlsNotMatchedList:
-          _count: 0
-  imageUrlsResult:
-    perServiceResultList:
-      mailchimp:
-        urlsMatchedExactly:
-          _count: 1
-        urlsMatchedByDomain:
-          _count: 0
-        urlsNotMatchedList:
-          _count: 0
+exactMatches:
+  mailchimp:
+    typeLink:
+      _count: 4
+    typerImage:
+      _count: 1
+domainMatches: {  }
 pixelsList:
   _count: 1
 urlsWithRedirectList:
-  linkUrlList:
+  typeLink:
     _count: 0
-  imageUrlList:
+  typeImage:
     _count: 0
 urlsWithAnalyticsList:
-  linkUrlList:
+  typeLink:
     _count: 0
-  imageUrlList:
+  typerImage:
     _count: 0

@@ -50,7 +50,7 @@ final class AsyncPhpClientRedirectResolver implements RedirectResolverInterface 
   }
 
   public function resolveRedirects(UrlList $urlList): UrlRedirectInfoList {
-    $urlRedirectInfoList = new UrlRedirectInfoList();
+    $urlRedirectInfoList = UrlRedirectInfoList::builder();
     $responses = [];
     foreach ($urlList as $urlItem) {
       $url = $urlItem->toString();
@@ -86,7 +86,7 @@ final class AsyncPhpClientRedirectResolver implements RedirectResolverInterface 
         // @todo Log.
       }
     }
-    return $urlRedirectInfoList;
+    return $urlRedirectInfoList->freeze();
   }
 
 }

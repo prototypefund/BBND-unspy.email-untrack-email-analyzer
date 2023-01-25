@@ -90,7 +90,7 @@ final class AsyncGuzzleRedirectResolver implements RedirectResolverInterface {
     //dump('RESOLVED');
     //dump($redirectMap);
 
-    $urlRedirectInfoList = new UrlRedirectInfoList();
+    $urlRedirectInfoList = UrlRedirectInfoList::builder();
     foreach ($urlList as $urlItem) {
       $currentUrl = $urlItem->toString();
       $urlChain = [$currentUrl];
@@ -104,7 +104,7 @@ final class AsyncGuzzleRedirectResolver implements RedirectResolverInterface {
       }
     }
     //dump($urlRedirectInfoList);
-    return $urlRedirectInfoList;
+    return $urlRedirectInfoList->freeze();
   }
 
 }

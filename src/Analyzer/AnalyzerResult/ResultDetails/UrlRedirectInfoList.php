@@ -18,20 +18,18 @@ final class UrlRedirectInfoList implements \IteratorAggregate, TestSummaryInterf
   use ToArrayTrait;
 
   /**
-   * @var array<\Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\ResultDetails\UrlRedirectInfo>
+   * @param \Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\ResultDetails\UrlRedirectInfo[] $urlRedirectInfoList
    */
-  protected array $urlRedirectInfoList = [];
+  public function __construct(
+    protected readonly array $urlRedirectInfoList
+  ) {}
+
+  public static function builder() {
+    return new UrlRedirectInfoListBuilder();
+  }
 
   public function getIterator(): \ArrayIterator {
     return new \ArrayIterator($this->urlRedirectInfoList);
-  }
-
-  public function add(UrlRedirectInfo $urlRedirectInfo) {
-    // @todo Add builder.
-    if (!$urlRedirectInfo->redirectUrls) {
-      throw new \UnexpectedValueException();
-    }
-    $this->urlRedirectInfoList[$urlRedirectInfo->url] = $urlRedirectInfo;
   }
 
   public function getTestSummary(): array {

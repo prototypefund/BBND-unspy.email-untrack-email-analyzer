@@ -11,7 +11,7 @@ use Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\ResultDetails\UrlR
 final class PlainPhpRedirectResolver {
 
   public function resolveRedirects(UrlList $urlList): UrlRedirectInfoList {
-    $urlRedirectInfoList = new UrlRedirectInfoList();
+    $urlRedirectInfoList = UrlRedirectInfoList::builder();
     foreach ($urlList as $urlWrapper) {
       $url = $urlWrapper->toString();
       $redirectInfo = $this->resolveRedirect($url);
@@ -19,7 +19,7 @@ final class PlainPhpRedirectResolver {
         $urlRedirectInfoList->add($redirectInfo);
       }
     }
-    return $urlRedirectInfoList;
+    return $urlRedirectInfoList->freeze();
   }
 
   /**

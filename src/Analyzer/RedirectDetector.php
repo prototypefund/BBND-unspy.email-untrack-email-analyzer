@@ -22,10 +22,9 @@ final class RedirectDetector implements RedirectDetectorInterface {
   }
 
   public function detectRedirect(TypedUrlList $linkAndImageUrlList, UrlList $urlsToExclude): TypedUrlRedirectInfoList {
+    // Combine urls to resolve redirects async.
     $urlList = $this->combineUrls($linkAndImageUrlList, $urlsToExclude);
-
     $urlRedirectInfoList = $this->redirectResolver->resolveRedirects($urlList);
-
     return new TypedUrlRedirectInfoList(
       $this->assignRedirects($linkAndImageUrlList->typeLink, $urlRedirectInfoList),
       $this->assignRedirects($linkAndImageUrlList->typeImage, $urlRedirectInfoList),
@@ -56,13 +55,13 @@ final class RedirectDetector implements RedirectDetectorInterface {
   }
 
   protected function assignRedirects(UrlList $urlList, UrlRedirectInfoList $allUrlRedirectInfoList): UrlRedirectInfoList {
-    $urlRedirectInfoList = new UrlRedirectInfoList();
+    $urlRedirectInfoList = UrlRedirectInfoList::builder();
     foreach ($urlList as $urlItem) {
       if ($redirectInfo = $allUrlRedirectInfoList->get($urlItem->toString())) {
         $urlRedirectInfoList->add($redirectInfo);
       }
     }
-    return $urlRedirectInfoList;
+    return $urlRedirectInfoList->freeze();
   }
 
 }

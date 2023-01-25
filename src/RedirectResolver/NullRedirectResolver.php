@@ -10,7 +10,7 @@ use Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\ResultDetails\UrlR
 final class NullRedirectResolver implements RedirectResolverInterface {
 
   public function resolveRedirects(UrlList $urlList): UrlRedirectInfoList {
-    return new UrlRedirectInfoList();
+    return new UrlRedirectInfoList([]);
   }
 
 }

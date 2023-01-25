@@ -12,11 +12,9 @@ use loophp\collection\Collection;
 /**
  * HeaderSummaryPerService, child of
  *
- * @see \Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\ResultDetails\HeaderMatchListPerProvider
- *
- * @api Will be serialized in persistent storage, any change needs a migration.
+ * @implements \IteratorAggregate<int, \Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\ResultDetails\HeaderMatch>
  */
-final class HeaderMatchList implements TestSummaryInterface, ToArrayInterface {
+final class HeaderMatchList implements TestSummaryInterface, ToArrayInterface, \IteratorAggregate {
 
   use ToArrayTrait;
 
@@ -26,6 +24,10 @@ final class HeaderMatchList implements TestSummaryInterface, ToArrayInterface {
   public function __construct(
     public readonly array $matches
   ) {}
+
+  public function getIterator(): \ArrayIterator {
+    return new \ArrayIterator($this->matches);
+  }
 
   public function any(): bool {
     return !Collection::fromIterable($this->matches)

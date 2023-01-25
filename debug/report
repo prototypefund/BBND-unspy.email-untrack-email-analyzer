@@ -3,21 +3,21 @@
 
 use Geeks4change\UntrackEmailAnalyzer\Analyzer\Analyzer;
 use Geeks4change\UntrackEmailAnalyzer\Api;
+use Geeks4change\UntrackEmailAnalyzer\DirInfo;
 
 include 'vendor/autoload.php';
 
+$fileNamePairs = iterator_to_array(DirInfo::getTestEmailFileNames());
 $fileId = $argv[1] ?? '';
-$dir = dirname(__DIR__) . "/tests/examples";
-$fileName = "$dir/$fileId.eml";
-if (!file_exists($fileName)) {
+if (!isset($fileNamePairs[$fileId])) {
   print("Print analysis report of on one of the packaged examples.\n");
   print("Possible examples:\n");
-  foreach (glob("$dir/*.eml") as $fileName) {
-    print basename($fileName, ".eml") . "\n";
-  }
+  $values = implode(' ', array_keys($fileNamePairs));
+  print("Possible values: $values\n");
   die(1);
 }
-$fileContent = file_get_contents($fileName);
+[$emailFile, $resultFile] = $fileNamePairs[$fileId];
+$fileContent = file_get_contents($emailFile);
 
 $analyzer = Api::getAnalyzer();
 $result = $analyzer->analyze($fileContent);

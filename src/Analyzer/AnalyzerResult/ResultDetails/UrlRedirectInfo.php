@@ -35,17 +35,6 @@ final class UrlRedirectInfo implements \Stringable {
   }
 
   /**
-   * @return array<string>
-   */
-  public function getRedirectUrls(): array {
-    return $this->redirectUrls;
-  }
-
-  public function getFinalUrl(): string {
-    return end($this->redirectUrls);
-  }
-
-  /**
    * @return array
    */
   public function getOriginalUrlAndRedirectUrls(): array {

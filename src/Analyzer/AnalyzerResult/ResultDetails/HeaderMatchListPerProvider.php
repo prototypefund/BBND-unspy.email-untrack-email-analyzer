@@ -13,7 +13,7 @@ use Geeks4change\UntrackEmailAnalyzer\Analyzer\TestSummary\TestSummaryInterface;
  *
  * @see \Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\ResultDetails\ResultDetails
  *
- * @implements \IteratorAggregate<int, \Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\ResultDetails\HeaderMatchListPerProvider>
+ * @implements \IteratorAggregate<int, \Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\ResultDetails\HeaderMatchList>
  *
  * @api Will be serialized in persistent storage, any change needs a migration.
  */
@@ -22,19 +22,19 @@ final class HeaderMatchListPerProvider implements \IteratorAggregate, TestSummar
   use ToArrayTrait;
 
   public function __construct(
-    public readonly array $headersMatchResultPerServiceList = []
+    public readonly array $headersMatchList = []
   ) {}
 
   public function getIterator(): \ArrayIterator {
-    return new \ArrayIterator($this->headersMatchResultPerServiceList);
+    return new \ArrayIterator($this->headersMatchList);
   }
 
   public function getTestSummary(): array {
     return [
-      '_keys' => implode('*', array_keys($this->headersMatchResultPerServiceList)),
+      '_keys' => implode('*', array_keys($this->headersMatchList)),
     ] + array_map(
       fn(HeaderMatchList $matchList) => $matchList->getTestSummary(),
-      $this->headersMatchResultPerServiceList
+      $this->headersMatchList
     );
   }
 

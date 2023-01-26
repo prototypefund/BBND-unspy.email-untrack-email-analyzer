@@ -7,7 +7,7 @@ namespace Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult;
 final class MessageInfo {
 
   public function __construct(
-    public readonly int $timestamp,
+    public readonly int $timeStamp,
   ) {}
 
 

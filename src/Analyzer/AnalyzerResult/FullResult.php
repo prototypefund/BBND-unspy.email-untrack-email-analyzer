@@ -18,6 +18,7 @@ final class FullResult {
 
   public function __construct(
     public readonly ListInfo      $listInfo,
+    public readonly MessageInfo   $messageInfo,
     public readonly ResultVerdict $verdict,
     public readonly ResultSummary $summary,
     public readonly ResultDetails $details,
@@ -31,6 +32,7 @@ final class FullResult {
   public function getPersistentResult(): PersistentResult {
     return new PersistentResult(
       $this->listInfo,
+      $this->messageInfo,
       $this->verdict,
       $this->summary,
     );

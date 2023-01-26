@@ -138,7 +138,8 @@ class Analyzer {
         ->extractResultVerdict($resultSummary);
 
       $listInfo = (new ListInfoExtractor())->extract($message);
-      $analyzerResult = new FullResultWrapper($logger->freeze(), new FullResult($listInfo, $resultVerdict, $resultSummary, $resultDetails));
+      $messageInfo = (new MessageInfoExtractor())->extract($message);
+      $analyzerResult = new FullResultWrapper($logger->freeze(), new FullResult($listInfo, $messageInfo, $resultVerdict, $resultSummary, $resultDetails));
     } catch (\Throwable $e) {
       $logger->emergency("Exception: {$e->getMessage()}", ['trace' => $e->getTraceAsString()]);
       return new FullResultWrapper($logger->freeze(), NULL);

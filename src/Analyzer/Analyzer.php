@@ -78,7 +78,7 @@ class Analyzer {
     $this->redirectDetector = $redirectDetector;
   }
 
-  public function analyze(string $rawMessage): FullResultWrapper {
+  public function analyze(string $rawMessage, bool $catchAndLogExceptions = TRUE): FullResultWrapper {
     $logger = new AnalyzerLogger();
 
     try {
@@ -141,6 +141,9 @@ class Analyzer {
       $messageInfo = (new MessageInfoExtractor())->extract($message);
       $analyzerResult = new FullResultWrapper($logger->freeze(), new FullResult($listInfo, $messageInfo, $resultVerdict, $resultSummary, $resultDetails));
     } catch (\Throwable $e) {
+      if (!$catchAndLogExceptions) {
+        throw new \RuntimeException('Rethrow', 0, $e);
+      }
       $logger->emergency("Exception: {$e->getMessage()}", ['trace' => $e->getTraceAsString()]);
       return new FullResultWrapper($logger->freeze(), NULL);
     }

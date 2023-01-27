@@ -19,7 +19,7 @@ final class ResultDetails implements TestSummaryInterface, ToArrayInterface {
 
   public function __construct(
     public readonly DKIMResult                 $dkimResult,
-    public readonly HeaderMatchListPerProvider $headersResult,
+    public readonly HeaderMatchListPerProvider $headerMatches,
     public readonly TypedUrlList               $typedUrlList,
     public readonly TypedUrlListPerProvider    $exactMatches,
     public readonly TypedUrlListPerProvider    $domainMatches,
@@ -32,7 +32,7 @@ final class ResultDetails implements TestSummaryInterface, ToArrayInterface {
 
   public function getTestSummary(): array {
     return [
-      'headersResult' => $this->headersResult->getTestSummary(),
+      'headersResult' => $this->headerMatches->getTestSummary(),
       'allLinkAndImageUrlsList' => $this->typedUrlList->getTestSummary(),
       'exactMatches' => $this->exactMatches->getTestSummary(),
       'domainMatches' => $this->domainMatches->getTestSummary(),

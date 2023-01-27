@@ -32,6 +32,10 @@ final class HeaderMatchListPerProvider implements \IteratorAggregate, TestSummar
     return new \ArrayIterator($this->headersMatchList);
   }
 
+  public function get(string $providerId): ?HeaderMatchList {
+    return $this->headersMatchList[$providerId] ?? NULL;
+  }
+
   public function getTestSummary(): array {
     return [
       '_keys' => implode('*', array_keys($this->headersMatchList)),

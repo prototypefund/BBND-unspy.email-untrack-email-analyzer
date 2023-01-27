@@ -6,6 +6,9 @@ namespace Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\ResultSummar
 
 use Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\ResultDetails\UrlTypeEnum;
 
+/**
+ * @implements \IteratorAggregate<UrlTypeEnum, list<\Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\ResultSummary\UrlQueryInfo>>
+ */
 final class TypedUrlQueryInfo {
 
   /**

@@ -25,7 +25,7 @@ final class ResultSummaryExtractor {
 
     return new ResultSummary(
       $details->dkimResult,
-      $this->summarizeHeader($details->headersResult),
+      $this->summarizeHeader($details->headerMatches),
       $this->summarizeUrls($details->typedUrlList),
       $this->summarizeMatches($details->exactMatches),
       $this->summarizeMatches($details->domainMatches),

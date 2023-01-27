@@ -4,7 +4,10 @@ declare(strict_types=1);
 
 namespace Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\ResultSummary;
 
-final class TypedUrlCountPerProvider {
+/**
+ * @implements \IteratorAggregate< string, \Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\ResultSummary\TypedUrlCount >
+ */
+final class TypedUrlCountPerProvider implements \IteratorAggregate {
 
   /**
    * @param array<string, \Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\ResultSummary\TypedUrlCount> $perProvider
@@ -22,6 +25,10 @@ final class TypedUrlCountPerProvider {
    */
   public function keys(): array {
     return array_keys($this->perProvider);
+  }
+
+  public function getIterator(): \Traversable {
+    return new \ArrayIterator($this->perProvider);
   }
 
 }

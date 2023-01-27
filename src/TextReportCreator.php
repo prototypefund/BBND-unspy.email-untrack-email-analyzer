@@ -116,8 +116,6 @@ final class TextReportCreator {
             $p->add("Details:");
             foreach ($urlList as $urlItem) {
               $p->add("- {$urlItem->toString()}");
-              // @todo Add matching pattern.
-              // $p->add("  - Internal pattern: xxx");
             }
           }
           $p->add("");

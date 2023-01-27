@@ -5,13 +5,13 @@ declare(strict_types=1);
 namespace Geeks4change\UntrackEmailAnalyzer\RedirectResolver;
 
 use Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\ResultDetails\UrlList;
-use Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\ResultDetails\UrlRedirectInfo;
-use Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\ResultDetails\UrlRedirectInfoList;
+use Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\ResultDetails\UrlRedirectChain;
+use Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\ResultDetails\UrlRedirectChainList;
 
 final class PlainPhpRedirectResolver {
 
-  public function resolveRedirects(UrlList $urlList): UrlRedirectInfoList {
-    $urlRedirectInfoList = UrlRedirectInfoList::builder();
+  public function resolveRedirects(UrlList $urlList): UrlRedirectChainList {
+    $urlRedirectInfoList = UrlRedirectChainList::builder();
     foreach ($urlList as $urlWrapper) {
       $url = $urlWrapper->toString();
       $redirectInfo = $this->resolveRedirect($url);
@@ -36,7 +36,7 @@ final class PlainPhpRedirectResolver {
    * - Performing a full GET on an unsubscribe url often actually performs an
    *   unsubscribe. While against the spec, this is what we got in the wild.
    */
-  public function resolveRedirect(string $url, $hops = 5): ?UrlRedirectInfo {
+  public function resolveRedirect(string $url, $hops = 5): ?UrlRedirectChain {
     // Note that stream_context_create and passing the context has different
     // result, as it breaks default crypto context.
     stream_context_set_default(
@@ -63,7 +63,7 @@ final class PlainPhpRedirectResolver {
       }
     } while ($isValidRedirect);
 
-    return new UrlRedirectInfo($url, ...$redirectUrls);
+    return new UrlRedirectChain($url, ...$redirectUrls);
   }
 
   protected static function normalizeHeaders(array $headers): array {

@@ -27,7 +27,7 @@ final class TypedUrlQueryInfoBuilder {
     $subBuilder->add();
   }
 
-  public function freeze(): TypedUrlQueryInfo {
+  public function freeze(): TypedAnalyticsKeyList {
     $typeLink = Collection::fromIterable($this->typeLink)
       ->map(fn(UrlQueryInfoBuilder $builder) => $builder->freeze())
       // Throw away keys.
@@ -36,7 +36,7 @@ final class TypedUrlQueryInfoBuilder {
       ->map(fn(UrlQueryInfoBuilder $builder) => $builder->freeze())
       // Throw away keys.
       ->all(TRUE);
-    return new TypedUrlQueryInfo($typeLink, $typeImage);
+    return new TypedAnalyticsKeyList($typeLink, $typeImage);
   }
 
 }

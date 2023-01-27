@@ -9,15 +9,15 @@ use Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\Arrayable\ToArrayT
 use Geeks4change\UntrackEmailAnalyzer\Analyzer\TestSummary\TestSummaryInterface;
 
 /**
- * @implements \IteratorAggregate<UrlTypeEnum, \Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\ResultDetails\UrlRedirectInfoList>
+ * @implements \IteratorAggregate<UrlTypeEnum, \Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\ResultDetails\UrlRedirectChainList>
  */
-final class TypedUrlRedirectInfoList  implements TestSummaryInterface, ToArrayInterface, \IteratorAggregate {
+final class TypedUrlRedirectChainList  implements TestSummaryInterface, ToArrayInterface, \IteratorAggregate {
 
   use ToArrayTrait;
 
   public function __construct(
-    public readonly UrlRedirectInfoList $typeLink,
-    public readonly UrlRedirectInfoList $typeImage
+    public readonly UrlRedirectChainList $typeLink,
+    public readonly UrlRedirectChainList $typeImage
   ) {
   }
 

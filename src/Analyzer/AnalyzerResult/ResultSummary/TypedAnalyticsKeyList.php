@@ -9,7 +9,7 @@ use Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\ResultDetails\UrlT
 /**
  * @implements \IteratorAggregate<UrlTypeEnum, list<\Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\ResultSummary\UrlQueryInfo>>
  */
-final class TypedUrlQueryInfo {
+final class TypedAnalyticsKeyList {
 
   /**
    * @param list<\Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\ResultSummary\UrlQueryInfo> $typeLink

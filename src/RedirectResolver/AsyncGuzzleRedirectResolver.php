@@ -5,8 +5,8 @@ declare(strict_types=1);
 namespace Geeks4change\UntrackEmailAnalyzer\RedirectResolver;
 
 use Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\ResultDetails\UrlList;
-use Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\ResultDetails\UrlRedirectInfo;
-use Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\ResultDetails\UrlRedirectInfoList;
+use Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\ResultDetails\UrlRedirectChain;
+use Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\ResultDetails\UrlRedirectChainList;
 use Geeks4change\UntrackEmailAnalyzer\RedirectResolver\ClientDecorator\HttpClientDefaultHeaders;
 use Geeks4change\UntrackEmailAnalyzer\RedirectResolver\ClientDecorator\SimpleThrottlingGuzzleClientDecorator;
 use GuzzleHttp\Client;
@@ -36,7 +36,7 @@ final class AsyncGuzzleRedirectResolver implements RedirectResolverInterface {
     $this->client = new SimpleThrottlingGuzzleClientDecorator($this->client, $this->throttleInMilliseconds);
   }
 
-  public function resolveRedirects(UrlList $urlList): UrlRedirectInfoList {
+  public function resolveRedirects(UrlList $urlList): UrlRedirectChainList {
     $promises = new \ArrayIterator();
     $redirectMap = [];
     $addToPool = function (string $url) use (&$redirectMap, $promises, &$addToPool) {
@@ -90,7 +90,7 @@ final class AsyncGuzzleRedirectResolver implements RedirectResolverInterface {
     //dump('RESOLVED');
     //dump($redirectMap);
 
-    $urlRedirectInfoList = UrlRedirectInfoList::builder();
+    $urlRedirectInfoList = UrlRedirectChainList::builder();
     foreach ($urlList as $urlItem) {
       $currentUrl = $urlItem->toString();
       $urlChain = [$currentUrl];
@@ -98,7 +98,7 @@ final class AsyncGuzzleRedirectResolver implements RedirectResolverInterface {
         $currentUrl = $redirectMap[$currentUrl];
         $urlChain[] = $currentUrl;
       }
-      $urlRedirectInfo = new UrlRedirectInfo(...$urlChain);
+      $urlRedirectInfo = new UrlRedirectChain(...$urlChain);
       if ($urlRedirectInfo->redirectUrls) {
         $urlRedirectInfoList->add($urlRedirectInfo);
       }

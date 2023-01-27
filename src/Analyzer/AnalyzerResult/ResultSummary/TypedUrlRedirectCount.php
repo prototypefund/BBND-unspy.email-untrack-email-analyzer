@@ -6,7 +6,7 @@ namespace Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\ResultSummar
 
 use Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\ResultDetails\UrlTypeEnum;
 
-final class TypedRedirectCount {
+final class TypedUrlRedirectCount {
 
   public function __construct(
     public readonly int $typeLink,

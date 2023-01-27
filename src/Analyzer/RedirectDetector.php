@@ -4,10 +4,10 @@ declare(strict_types=1);
 
 namespace Geeks4change\UntrackEmailAnalyzer\Analyzer;
 
-use Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\ResultDetails\TypedUrlRedirectInfoList;
+use Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\ResultDetails\TypedUrlRedirectChainList;
 use Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\ResultDetails\TypedUrlList;
 use Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\ResultDetails\UrlList;
-use Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\ResultDetails\UrlRedirectInfoList;
+use Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\ResultDetails\UrlRedirectChainList;
 use Geeks4change\UntrackEmailAnalyzer\RedirectResolver\AsyncGuzzleRedirectResolver;
 use Geeks4change\UntrackEmailAnalyzer\RedirectResolver\RedirectResolverInterface;
 
@@ -21,11 +21,11 @@ final class RedirectDetector implements RedirectDetectorInterface {
     $this->redirectResolver = $redirectResolver ?? new AsyncGuzzleRedirectResolver();
   }
 
-  public function detectRedirect(TypedUrlList $linkAndImageUrlList, UrlList $urlsToExclude): TypedUrlRedirectInfoList {
+  public function detectRedirect(TypedUrlList $linkAndImageUrlList, UrlList $urlsToExclude): TypedUrlRedirectChainList {
     // Combine urls to resolve redirects async.
     $urlList = $this->combineUrls($linkAndImageUrlList, $urlsToExclude);
     $urlRedirectInfoList = $this->redirectResolver->resolveRedirects($urlList);
-    return new TypedUrlRedirectInfoList(
+    return new TypedUrlRedirectChainList(
       $this->assignRedirects($linkAndImageUrlList->typeLink, $urlRedirectInfoList),
       $this->assignRedirects($linkAndImageUrlList->typeImage, $urlRedirectInfoList),
     );
@@ -54,8 +54,8 @@ final class RedirectDetector implements RedirectDetectorInterface {
     return $combinedUrlList->freeze();
   }
 
-  protected function assignRedirects(UrlList $urlList, UrlRedirectInfoList $allUrlRedirectInfoList): UrlRedirectInfoList {
-    $urlRedirectInfoList = UrlRedirectInfoList::builder();
+  protected function assignRedirects(UrlList $urlList, UrlRedirectChainList $allUrlRedirectInfoList): UrlRedirectChainList {
+    $urlRedirectInfoList = UrlRedirectChainList::builder();
     foreach ($urlList as $urlItem) {
       if ($redirectInfo = $allUrlRedirectInfoList->get($urlItem->toString())) {
         $urlRedirectInfoList->add($redirectInfo);

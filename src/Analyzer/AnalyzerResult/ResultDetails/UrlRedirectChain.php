@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\ResultDetails;
 
-final class UrlRedirectInfo implements \Stringable {
+final class UrlRedirectChain implements \Stringable {
 
   public readonly array $redirectUrls;
 

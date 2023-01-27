@@ -8,7 +8,7 @@ use Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\FullResult;
 use Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\PersistentResult;
 use Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\ResultDetails\TypedUrlListPerProvider;
 use Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\ResultDetails\UrlList;
-use Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\ResultDetails\UrlRedirectInfoList;
+use Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\ResultDetails\UrlRedirectChainList;
 use Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\ResultDetails\UrlTypeEnum;
 use Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\ResultSummary\TypedUrlCountPerProvider;
 use Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\ResultSummary\UrlQueryInfo;
@@ -66,8 +66,8 @@ final class TextReportCreator {
 
 
     $p->add("# All extracted links and images");
-    $p->add("- {$result->summary->urls->typeLink} Links");
-    $p->add("- {$result->summary->urls->typeImage} Images");
+    $p->add("- {$result->summary->typedUrlCount->typeLink} Links");
+    $p->add("- {$result->summary->typedUrlCount->typeImage} Images");
     if ($result->details) {
       $p->add("## Details...");
       foreach ([
@@ -128,7 +128,7 @@ final class TextReportCreator {
 
 
     $p->add("# Recognized 1x1 pixels");
-    $p->add("- Found {$result->summary->pixels} pixels");
+    $p->add("- Found {$result->summary->pixelsCount} pixels");
     if ($result->details) {
       $p->add("## Details...");
       foreach ($result->details->pixelsList as $pixelUrl) {
@@ -151,9 +151,9 @@ final class TextReportCreator {
     $p->add("# Recognized redirection urls");
     $p->add("(Without unsubscribe link)");
     foreach ([
-               'Links' => $result->summary->redirects
+               'Links' => $result->summary->typedUrlRedirectCount
                  ->typeLink,
-               'Images' => $result->summary->redirects
+               'Images' => $result->summary->typedUrlRedirectCount
                  ->typeImage,
              ] as $urlRedirectionInfoType => $redirectCount) {
       $p->add("Found {$redirectCount} {$urlRedirectionInfoType} with redirect");
@@ -166,7 +166,7 @@ final class TextReportCreator {
                  'Images' => $result->details->urlsRedirectInfoList
                    ->typeImage,
                ] as $urlRedirectionInfoType => $urlRedirectionInfoList) {
-        assert($urlRedirectionInfoList instanceof UrlRedirectInfoList);
+        assert($urlRedirectionInfoList instanceof UrlRedirectChainList);
         $p->add("## $urlRedirectionInfoType with redirection");
         foreach ($urlRedirectionInfoList as $urlRedirectionInfo) {
           $urls = [$urlRedirectionInfo->url, ...$urlRedirectionInfo->redirectUrls];
@@ -179,9 +179,9 @@ final class TextReportCreator {
 
     $p->add("# Recognized URLs with analytics");
     foreach ([
-               'Links' => $result->summary->analytics
+               'Links' => $result->summary->typedAnalyticsKeyList
                  ->typeLink,
-               'Images' => $result->summary->analytics
+               'Images' => $result->summary->typedAnalyticsKeyList
                  ->typeImage,
              ] as $analyticsType => $urlQueryInfoList) {
       foreach ($urlQueryInfoList as $urlQueryInfo) {
@@ -194,9 +194,9 @@ final class TextReportCreator {
     if ($result->details) {
       $p->add("## Details...");
       foreach ([
-                 'Links' => $result->details->urlsWithAnalyticsList
+                 'Links' => $result->details->typedAnalyticsUrlList
                    ->typeLink,
-                 'Images' => $result->details->urlsWithAnalyticsList
+                 'Images' => $result->details->typedAnalyticsUrlList
                    ->typeImage,
                ] as $analyticsType => $analyticsUrlList) {
         assert($analyticsUrlList instanceof UrlList);
@@ -211,7 +211,7 @@ final class TextReportCreator {
 
     // Nothing more in details than in summary.
     $p->add("# Domains and aliases");
-    foreach ($result->summary->cnames as $cnameInfo) {
+    foreach ($result->summary->cnameChainList as $cnameInfo) {
       $domainList = [$cnameInfo->domain, ...$cnameInfo->aliases];
       $p->add("- " . implode(' => ', $domainList));
     }

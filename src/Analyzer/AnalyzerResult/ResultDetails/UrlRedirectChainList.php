@@ -9,37 +9,37 @@ use Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\Arrayable\ToArrayT
 use Geeks4change\UntrackEmailAnalyzer\Analyzer\TestSummary\TestSummaryInterface;
 
 /**
- * @implements \IteratorAggregate<int, \Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\ResultDetails\UrlRedirectInfo>
+ * @implements \IteratorAggregate<int, \Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\ResultDetails\UrlRedirectChain>
  *
  * @api Will be serialized in persistent storage, any change needs a migration.
  */
-final class UrlRedirectInfoList implements \IteratorAggregate, TestSummaryInterface, ToArrayInterface {
+final class UrlRedirectChainList implements \IteratorAggregate, TestSummaryInterface, ToArrayInterface {
 
   use ToArrayTrait;
 
   /**
-   * @param \Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\ResultDetails\UrlRedirectInfo[] $urlRedirectInfoList
+   * @param \Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\ResultDetails\UrlRedirectChain[] $urlRedirectChainList
    */
   public function __construct(
-    protected readonly array $urlRedirectInfoList
+    protected readonly array $urlRedirectChainList
   ) {}
 
   public static function builder() {
-    return new UrlRedirectInfoListBuilder();
+    return new UrlRedirectChainListBuilder();
   }
 
   public function getIterator(): \ArrayIterator {
-    return new \ArrayIterator($this->urlRedirectInfoList);
+    return new \ArrayIterator($this->urlRedirectChainList);
   }
 
   public function getTestSummary(): array {
     return [
-      '_count' => count($this->urlRedirectInfoList),
+      '_count' => count($this->urlRedirectChainList),
     ];
   }
 
-  public function get(string $url): ?UrlRedirectInfo {
-    return $this->urlRedirectInfoList[$url] ?? NULL;
+  public function get(string $url): ?UrlRedirectChain {
+    return $this->urlRedirectChainList[$url] ?? NULL;
   }
 
 }

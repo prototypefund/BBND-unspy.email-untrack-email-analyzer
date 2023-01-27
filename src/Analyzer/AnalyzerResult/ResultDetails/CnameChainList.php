@@ -9,7 +9,7 @@ namespace Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\ResultDetail
  *
  * @api Will be serialized in persistent storage, any change needs a migration.
  */
-final class CnameInfoList implements \IteratorAggregate {
+final class CnameChainList implements \IteratorAggregate {
 
   public function __construct(
     public readonly array $cnameInfos = []

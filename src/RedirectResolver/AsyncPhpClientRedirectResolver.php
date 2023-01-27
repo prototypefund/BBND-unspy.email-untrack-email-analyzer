@@ -5,8 +5,8 @@ declare(strict_types=1);
 namespace Geeks4change\UntrackEmailAnalyzer\RedirectResolver;
 
 use Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\ResultDetails\UrlList;
-use Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\ResultDetails\UrlRedirectInfo;
-use Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\ResultDetails\UrlRedirectInfoList;
+use Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\ResultDetails\UrlRedirectChain;
+use Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\ResultDetails\UrlRedirectChainList;
 use Geeks4change\UntrackEmailAnalyzer\RedirectResolver\ClientDecorator\HttpClientDefaultHeaders;
 use Geeks4change\UntrackEmailAnalyzer\RedirectResolver\ClientDecorator\SimpleThrottlingHttpClient;
 use Symfony\Component\HttpClient\HttpClient;
@@ -49,8 +49,8 @@ final class AsyncPhpClientRedirectResolver implements RedirectResolverInterface 
     $this->client = new SimpleThrottlingHttpClient($this->client, $this->throttleMilliSeconds);
   }
 
-  public function resolveRedirects(UrlList $urlList): UrlRedirectInfoList {
-    $urlRedirectInfoList = UrlRedirectInfoList::builder();
+  public function resolveRedirects(UrlList $urlList): UrlRedirectChainList {
+    $urlRedirectInfoList = UrlRedirectChainList::builder();
     $responses = [];
     foreach ($urlList as $urlItem) {
       $url = $urlItem->toString();
@@ -72,7 +72,7 @@ final class AsyncPhpClientRedirectResolver implements RedirectResolverInterface 
           $redirectUrl = $isRedirectResponse ? $response->getHeaders(throw: FALSE)['location'][0] ?? NULL : NULL;;
           if (!empty($redirectUrl)) {
             $redirectUrls[] = $redirectUrl;
-            $urlRedirectInfo = new UrlRedirectInfo($url, ...$redirectUrls);
+            $urlRedirectInfo = new UrlRedirectChain($url, ...$redirectUrls);
             $urlRedirectInfoList->add($urlRedirectInfo);
             // In this version, intentionally do NOT follow redirections further than
             // one level.

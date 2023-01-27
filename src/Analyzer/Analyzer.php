@@ -10,17 +10,17 @@ use Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\FullResult;
 use Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\FullResultWrapper;
 use Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\ResultDetails\DKIMResult;
 use Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\ResultDetails\CnameInfo;
-use Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\ResultDetails\CnameInfoList;
+use Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\ResultDetails\CnameChainList;
 use Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\ResultDetails\HeaderMatch;
 use Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\ResultDetails\HeaderMatchListPerProvider;
 use Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\ResultDetails\TypedUrlListPerProvider;
-use Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\ResultDetails\TypedUrlRedirectInfoList;
+use Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\ResultDetails\TypedUrlRedirectChainList;
 use Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\ResultDetails\TypedUrlList;
 use Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\ResultDetails\ResultDetails;
 use Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\ResultDetails\UrlItem;
 use Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\ResultDetails\UrlList;
-use Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\ResultDetails\UrlRedirectInfo;
-use Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\ResultDetails\UrlRedirectInfoList;
+use Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\ResultDetails\UrlRedirectChain;
+use Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\ResultDetails\UrlRedirectChainList;
 use Geeks4change\UntrackEmailAnalyzer\Analyzer\NewsletterServicesMatcher\HeadersMatcher\AllServicesHeadersMatcher;
 use Geeks4change\UntrackEmailAnalyzer\Analyzer\NewsletterServicesMatcher\UrlsMatcher\AllServicesLinkAndImageUrlListMatcher;
 use Geeks4change\UntrackEmailAnalyzer\Globals;
@@ -53,14 +53,14 @@ use ZBateson\MailMimeParser\MailMimeParser;
  * - $pixelsList @see UrlList
  *   - array $urls @see UrlItem (stringable)
  *     - getUrlObject()
- * - $urlsRedirectInfoList @see TypedUrlRedirectInfoList
- *   - $linkRedirectInfoList @see UrlRedirectInfoList
- *   - $imageRedirectInfoList @see UrlRedirectInfoList
- *     - (iterable) @see UrlRedirectInfo
+ * - $urlsRedirectInfoList @see TypedUrlRedirectChainList
+ *   - $linkRedirectInfoList @see UrlRedirectChainList
+ *   - $imageRedirectInfoList @see UrlRedirectChainList
+ *     - (iterable) @see UrlRedirectChain
  *       - string $originalUrl
  *       - array<string> $redirectUrls
  * - $urlsWithAnalyticsList @see TypedUrlList
- * - $domainAliasesList @see CnameInfoList
+ * - $domainAliasesList @see CnameChainList
  *   - (iterable) @see CnameInfo
  *     - string $domain
  *     - array<string> $aliases

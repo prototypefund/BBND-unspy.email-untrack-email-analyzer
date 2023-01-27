@@ -31,7 +31,7 @@ final class ResultVerdictExtractor {
     }
 
     // Redirects indicate user tracking.
-    if ($summary->redirects->typeLink) {
+    if ($summary->typedUrlRedirectCount->typeLink) {
       return new ResultVerdict(ResultVerdictMatchLevel::Likely);
     }
 

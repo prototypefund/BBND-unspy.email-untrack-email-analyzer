@@ -25,9 +25,9 @@ final class ResultDetails implements TestSummaryInterface, ToArrayInterface {
     public readonly TypedUrlListPerProvider    $domainMatches,
     public readonly UrlList                    $pixelsList,
     public readonly UrlList                    $unsubscribeUrlList,
-    public readonly TypedUrlRedirectInfoList   $urlsRedirectInfoList,
-    public readonly TypedUrlList               $urlsWithAnalyticsList,
-    public readonly CnameInfoList              $cnameInfoList,
+    public readonly TypedUrlRedirectChainList  $urlsRedirectInfoList,
+    public readonly TypedUrlList               $typedAnalyticsUrlList,
+    public readonly CnameChainList             $cnameInfoList,
   ) {}
 
   public function getTestSummary(): array {
@@ -38,7 +38,7 @@ final class ResultDetails implements TestSummaryInterface, ToArrayInterface {
       'domainMatches' => $this->domainMatches->getTestSummary(),
       'pixelsList' => $this->pixelsList->getTestSummary(),
       'urlsWithRedirectList' => $this->urlsRedirectInfoList->getTestSummary(),
-      'urlsWithAnalyticsList' => $this->urlsWithAnalyticsList->getTestSummary(),
+      'urlsWithAnalyticsList' => $this->typedAnalyticsUrlList->getTestSummary(),
     ];
   }
 

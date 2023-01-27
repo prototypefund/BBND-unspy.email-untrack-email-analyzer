@@ -13,7 +13,7 @@ final class CnameInfoListBuilder {
   }
 
   public function freeze() {
-    return new CnameInfoList($this->domainAliasesList);
+    return new CnameChainList($this->domainAliasesList);
   }
 
 }

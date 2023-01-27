@@ -8,14 +8,14 @@ use Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\ResultDetails\Head
 use Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\ResultDetails\ResultDetails;
 use Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\ResultDetails\TypedUrlList;
 use Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\ResultDetails\TypedUrlListPerProvider;
-use Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\ResultDetails\TypedUrlRedirectInfoList;
+use Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\ResultDetails\TypedUrlRedirectChainList;
 use Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\ResultDetails\UrlList;
 use Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\ResultSummary\HeaderMatchSummaryPerProvider;
 use Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\ResultSummary\ResultSummary;
-use Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\ResultSummary\TypedRedirectCount;
+use Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\ResultSummary\TypedUrlRedirectCount;
 use Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\ResultSummary\TypedUrlCount;
 use Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\ResultSummary\TypedUrlCountPerProvider;
-use Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\ResultSummary\TypedUrlQueryInfo;
+use Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\ResultSummary\TypedAnalyticsKeyList;
 use GuzzleHttp\Psr7\Query;
 
 final class ResultSummaryExtractor {
@@ -31,7 +31,7 @@ final class ResultSummaryExtractor {
       $this->summarizeMatches($details->domainMatches),
       $this->summarizePixels($details->pixelsList),
       $this->summarizeRedirects($details->urlsRedirectInfoList),
-      $this->summarizeAnalytics($details->urlsWithAnalyticsList),
+      $this->summarizeAnalytics($details->typedAnalyticsUrlList),
       $details->cnameInfoList,
     );
   }
@@ -70,8 +70,8 @@ final class ResultSummaryExtractor {
     return $pixelsList->count();
   }
 
-  protected function summarizeRedirects(TypedUrlRedirectInfoList $urlsRedirectDetailsList): TypedRedirectCount {
-    $builder = TypedRedirectCount::builder();
+  protected function summarizeRedirects(TypedUrlRedirectChainList $urlsRedirectDetailsList): TypedUrlRedirectCount {
+    $builder = TypedUrlRedirectCount::builder();
     /** @var \Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\ResultDetails\UrlTypeEnum $urlType */
     foreach ($urlsRedirectDetailsList as $urlType => $urlRedirectDetailsList) {
       foreach ($urlRedirectDetailsList as $urlRedirectDetails) {
@@ -83,9 +83,9 @@ final class ResultSummaryExtractor {
     return $builder->freeze();
   }
 
-  protected function summarizeAnalytics(TypedUrlList $typedUrlList): TypedUrlQueryInfo {
+  protected function summarizeAnalytics(TypedUrlList $typedUrlList): TypedAnalyticsKeyList {
     $allAnalyticsKeys = (new AnalyticsKeyInfo)->getKeys();
-    $builder = TypedUrlQueryInfo::builder();
+    $builder = TypedAnalyticsKeyList::builder();
     /** @var \Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\ResultDetails\UrlTypeEnum $urlType */
     foreach ($typedUrlList as $urlType => $urlList) {
       foreach ($urlList as $urlItem) {

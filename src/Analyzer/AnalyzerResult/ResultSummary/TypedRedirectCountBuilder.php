@@ -20,8 +20,8 @@ final class TypedRedirectCountBuilder {
     }
   }
 
-  public function freeze(): TypedRedirectCount {
-    return new TypedRedirectCount($this->typeLink, $this->typeImage);
+  public function freeze(): TypedUrlRedirectCount {
+    return new TypedUrlRedirectCount($this->typeLink, $this->typeImage);
   }
 
 

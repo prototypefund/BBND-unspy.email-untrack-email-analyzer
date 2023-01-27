@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\ResultSummary;
 
-use Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\ResultDetails\CnameInfoList;
+use Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\ResultDetails\CnameChainList;
 use Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\ResultDetails\DKIMResult;
 
 /**
@@ -21,15 +21,15 @@ use Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\ResultDetails\DKIM
 final class ResultSummary {
 
   public function __construct(
-    public readonly DKIMResult $dkimResult,
+    public readonly DKIMResult                    $dkimResult,
     public readonly HeaderMatchSummaryPerProvider $headerMatches,
-    public readonly TypedUrlCount $urls,
-    public readonly TypedUrlCountPerProvider $exactMatches,
-    public readonly TypedUrlCountPerProvider $domainMatches,
-    public readonly int $pixels,
-    public readonly TypedRedirectCount $redirects,
-    public readonly TypedUrlQueryInfo $analytics,
-    public readonly CnameInfoList $cnames,
+    public readonly TypedUrlCount                 $typedUrlCount,
+    public readonly TypedUrlCountPerProvider      $exactMatches,
+    public readonly TypedUrlCountPerProvider      $domainMatches,
+    public readonly int                           $pixelsCount,
+    public readonly TypedUrlRedirectCount         $typedUrlRedirectCount,
+    public readonly TypedAnalyticsKeyList         $typedAnalyticsKeyList,
+    public readonly CnameChainList                $cnameChainList,
   ) {}
 
 }

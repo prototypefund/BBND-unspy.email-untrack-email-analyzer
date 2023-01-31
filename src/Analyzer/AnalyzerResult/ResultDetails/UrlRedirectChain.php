@@ -8,7 +8,10 @@ final class UrlRedirectChain implements \Stringable {
 
   public readonly array $redirectUrls;
 
-  public function __construct(public readonly string $url, string ...$redirectUrls) {
+  public function __construct(
+    public readonly string $url,
+    string ...$redirectUrls
+  ) {
     $this->redirectUrls = $redirectUrls;
   }
 

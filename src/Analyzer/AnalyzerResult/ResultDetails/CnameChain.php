@@ -7,19 +7,22 @@ namespace Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\ResultDetail
 /**
  * @api Will be serialized in persistent storage, any change needs a migration.
  */
-final class CnameInfo {
+final class CnameChain {
 
   /**
    * @var array<string>
    */
-  public readonly array $aliases;
+  public readonly array $aliasDomains;
 
-  public function __construct(public readonly string $domain, string ...$aliases) {
-    $this->aliases = $aliases;
+  public function __construct(
+    public readonly string $domain,
+    string ...$aliasDomains
+  ) {
+    $this->aliasDomains = $aliasDomains;
   }
 
   public function __toString(): string {
-    return implode(' => ', [$this->domain, ...$this->aliases]);
+    return implode(' => ', [$this->domain, ...$this->aliasDomains]);
   }
 
 }

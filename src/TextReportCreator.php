@@ -97,7 +97,6 @@ final class TextReportCreator {
         foreach ($typedUrCount as $urlType => $urlCount) {
           assert($urlType instanceof UrlTypeEnum);
           $p->add("- Found {$urlCount} {$urlType->value} matching {$matchType}");
-          $p->add("- Found {$urlCount} {$urlType->value} matching {$matchType}");
         }
       }
     }
@@ -209,8 +208,8 @@ final class TextReportCreator {
 
     // Nothing more in details than in summary.
     $p->add("# Domains and aliases");
-    foreach ($result->summary->cnameChainList as $cnameInfo) {
-      $domainList = [$cnameInfo->domain, ...$cnameInfo->aliases];
+    foreach ($result->summary->cnameChainList as $cnameChain) {
+      $domainList = [$cnameChain->domain, ...$cnameChain->aliasDomains];
       $p->add("- " . implode(' => ', $domainList));
     }
     $p->add("");

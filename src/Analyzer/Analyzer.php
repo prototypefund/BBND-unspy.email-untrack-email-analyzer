@@ -9,7 +9,7 @@ use Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\FullErrorResult;
 use Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\FullResult;
 use Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\FullResultWrapper;
 use Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\ResultDetails\DKIMResult;
-use Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\ResultDetails\CnameInfo;
+use Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\ResultDetails\CnameChain;
 use Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\ResultDetails\CnameChainList;
 use Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\ResultDetails\HeaderMatch;
 use Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\ResultDetails\HeaderMatchListPerProvider;
@@ -61,7 +61,7 @@ use ZBateson\MailMimeParser\MailMimeParser;
  *       - array<string> $redirectUrls
  * - $urlsWithAnalyticsList @see TypedUrlList
  * - $domainAliasesList @see CnameChainList
- *   - (iterable) @see CnameInfo
+ *   - (iterable) @see CnameChain
  *     - string $domain
  *     - array<string> $aliases
  *

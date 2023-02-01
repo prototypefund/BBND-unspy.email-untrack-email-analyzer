@@ -21,7 +21,7 @@ final class UrlRedirectChainList implements \IteratorAggregate, TestSummaryInter
    * @param \Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\ResultDetails\UrlRedirectChain[] $urlRedirectChainList
    */
   public function __construct(
-    protected readonly array $urlRedirectChainList
+    public readonly array $urlRedirectChainList
   ) {}
 
   public static function builder() {

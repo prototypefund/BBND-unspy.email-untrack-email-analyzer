@@ -1,6 +1,6 @@
 # Untrack.Email: Analyzer
 
-Analyzes emails for user tracking links.
+Part of the untrack.email suite: Analyzes emails for user tracking links.
 
 This package is meant to be used as anylyzer engine in untrack_email_storage.
 For installation and usage see that one:

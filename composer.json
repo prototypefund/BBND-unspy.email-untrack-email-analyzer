@@ -1,5 +1,7 @@
 {
     "name": "geeks4change/untrack-email-analyzer",
+    "type": "package",
+    "license": "AGPL-3.0-or-later",
     "autoload": {
         "psr-4": {
             "Geeks4change\\UntrackEmailAnalyzer\\": "src/"

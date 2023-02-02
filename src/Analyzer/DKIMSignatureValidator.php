@@ -7,6 +7,7 @@ namespace Geeks4change\UntrackEmailAnalyzer\Analyzer;
 use Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\ResultDetails\DKIMResult;
 use Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\ResultDetails\DKIMStatusEnum;
 use Geeks4change\UntrackEmailAnalyzer\Utility\Max;
+use PHPMailer\DKIMValidator\DKIM;
 use PHPMailer\DKIMValidator\DKIMException;
 use PHPMailer\DKIMValidator\Validator;
 
@@ -14,12 +15,21 @@ final class DKIMSignatureValidator {
 
   public function validateDKIMSignature(string $emailWithHeaders): DKIMResult {
     try {
-      $dkimValidator = new Validator($emailWithHeaders);
+      $dkimValidator = $this->createValidator($emailWithHeaders);
       $dkimResults = $dkimValidator->validate();
     } catch (DKIMException $e) {
       $dkimResults = [];
     }
     return ($this->extractSummary($dkimResults));
+  }
+
+  public function createValidator(string $emailWithHeaders): Validator {
+    // Work around php warning of validator.
+    $headersAndBody = explode(DKIM::CRLF . DKIM::CRLF, $emailWithHeaders, 2);
+    if (count($headersAndBody) < 2) {
+      throw new DKIMException('Can not find header body separator.');
+    }
+    return new Validator($emailWithHeaders);
   }
 
   protected function extractSummary(array $result) {
@@ -28,6 +38,7 @@ final class DKIMSignatureValidator {
       $this->extractSummaryLines($result),
     );
   }
+
   protected function extractSummaryLines(array $result): array {
     $summaryLines = [];
     foreach ($result as $headerIndex => $messages) {

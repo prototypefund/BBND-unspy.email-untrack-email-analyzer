@@ -7,4 +7,12 @@ enum DKIMStatusEnum: string {
   case Green = 'green';
   case Yellow = 'yellow';
   case Red = 'red';
+
+  public function isValid(): bool {
+    return match ($this) {
+      self::Green, self::Yellow => TRUE,
+      self::Red => FALSE,
+    };
+  }
+
 }

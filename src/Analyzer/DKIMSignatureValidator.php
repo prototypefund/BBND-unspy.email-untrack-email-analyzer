@@ -15,21 +15,12 @@ final class DKIMSignatureValidator {
 
   public function validateDKIMSignature(string $emailWithHeaders): DKIMResult {
     try {
-      $dkimValidator = $this->createValidator($emailWithHeaders);
+      $dkimValidator = new Validator($emailWithHeaders);
       $dkimResults = $dkimValidator->validate();
     } catch (DKIMException $e) {
       $dkimResults = [];
     }
     return ($this->extractSummary($dkimResults));
-  }
-
-  public function createValidator(string $emailWithHeaders): Validator {
-    // Work around php warning of validator.
-    $headersAndBody = explode(DKIM::CRLF . DKIM::CRLF, $emailWithHeaders, 2);
-    if (count($headersAndBody) < 2) {
-      throw new DKIMException('Can not find header body separator.');
-    }
-    return new Validator($emailWithHeaders);
   }
 
   protected function extractSummary(array $result) {

@@ -81,6 +81,9 @@ class Analyzer {
   public function analyze(string $rawMessage, bool $catchAndLogExceptions = TRUE): FullResultWrapper {
     $logger = new AnalyzerLogger();
 
+    $timestamp = (new \DateTime())->format('c'); // ISO8601
+    $logger->info("[$timestamp] Start");
+
     try {
       // Check DKIM.
       $dkimResult = (new DKIMSignatureValidator())->validateDKIMSignature($rawMessage);
@@ -147,6 +150,9 @@ class Analyzer {
       $logger->emergency("Exception: {$e->getMessage()}", ['trace' => $e->getTraceAsString()]);
       return new FullResultWrapper($logger->freeze(), NULL);
     }
+
+    $timestamp = (new \DateTime())->format('c'); // ISO8601
+    $logger->info("[$timestamp] Finished");
 
     Globals::deleteAll();
     return $analyzerResult;

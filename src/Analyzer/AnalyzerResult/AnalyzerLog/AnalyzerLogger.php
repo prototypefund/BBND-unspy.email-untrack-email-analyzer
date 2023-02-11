@@ -4,10 +4,11 @@ declare(strict_types=1);
 
 namespace Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\AnalyzerLog;
 
+use Geeks4change\UntrackEmailAnalyzer\Analyzer2\AnalyzerLogBuilderInterface;
 use loophp\collection\Collection;
 use Symfony\Component\Yaml\Yaml;
 
-final class AnalyzerLogger extends ArrayLogger {
+final class AnalyzerLogger extends ArrayLogger implements AnalyzerLogBuilderInterface {
 
   public function freeze(): AnalyzerLog {
     $messages = Collection::fromIterable($this->getMessages())

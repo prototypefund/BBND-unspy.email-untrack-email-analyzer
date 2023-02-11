@@ -8,10 +8,10 @@ use Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\ResultDetails\Head
 use Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\ResultDetails\HeaderMatchList;
 use Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\ResultDetails\HeaderMatchListPerProvider;
 use Geeks4change\UntrackEmailAnalyzer\Globals;
-use ZBateson\MailMimeParser\Message;
+use ZBateson\MailMimeParser\IMessage;
 
 final class AllServicesHeadersMatcher {
-  public function matchHeaders(Message $message): HeaderMatchListPerProvider {
+  public function matchHeaders(IMessage $message): HeaderMatchListPerProvider {
     $headerMatchLists = [];
     /** @var \Geeks4change\UntrackEmailAnalyzer\Analyzer\NewsletterServicesMatcher\ServiceMatcherProvider $providerInfo */
     foreach (Globals::get()->getProviderRepository()->getProviderMatchers() as $providerInfo) {

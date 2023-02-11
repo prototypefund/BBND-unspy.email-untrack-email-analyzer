@@ -3,9 +3,10 @@
 declare(strict_types=1);
 
 namespace Geeks4change\UntrackEmailAnalyzer\Analyzer\NewsletterServicesMatcher\HeadersMatcher;
+
 use Geeks4change\UntrackEmailAnalyzer\Analyzer\NewsletterServicesMatcher\UrlsMatcher\PerServiceUrlsMatcher\RegexTrait;
 use Geeks4change\UntrackEmailAnalyzer\Globals;
-use ZBateson\MailMimeParser\Message;
+use ZBateson\MailMimeParser\IMessage;
 
 class SingleHeaderMatcher {
 
@@ -20,7 +21,7 @@ class SingleHeaderMatcher {
     $this->pattern = $pattern;
   }
 
-  public function matchHeaders(Message $message): bool {
+  public function matchHeaders(IMessage $message): bool {
     $header = $message->getHeader($this->name);
     if ($header) {
       foreach ($header->getParts() as $part) {

@@ -21,7 +21,6 @@ use Geeks4change\UntrackEmailAnalyzer\Analyzer2\Data\Url\UrlItemInfo;
 use Geeks4change\UntrackEmailAnalyzer\Analyzer2\Data\Url\UrlItemInfoBagBuilder;
 use Geeks4change\UntrackEmailAnalyzer\Analyzer2\Data\Url\UrlItemMatchType\UnsubscribeMatch;
 use Geeks4change\UntrackEmailAnalyzer\Analyzer2\Data\Url\UrlItemMatchType\UrlItemMatchBase;
-use Geeks4change\UntrackEmailAnalyzer\Analyzer2\Data\Url\UrlItemMatchType\UrlItemMatchType;
 use Geeks4change\UntrackEmailAnalyzer\Globals;
 use Geeks4change\UntrackEmailAnalyzer\Matcher2\MatcherManager;
 use Geeks4change\UntrackEmailAnalyzer\UrlExtractor\ImagesUrlExtractor;
@@ -40,6 +39,7 @@ final class Analyzer2 {
     protected UrlRedirectCrawler          $redirectCrawler = new UrlRedirectCrawler(),
     protected MatcherManager              $matcherManager = new MatcherManager(),
     protected AnalyticsMatcher            $analyticsMatcher = new AnalyticsMatcher(),
+    protected CnameDumper                 $cnameDumper = new CnameDumper(),
   ) {}
 
   public function analyze(string $rawMessage, bool $catchAndLogExceptions = TRUE): FullResultWrapper {
@@ -66,8 +66,8 @@ final class Analyzer2 {
       $crawler = new Crawler($html);
       $urlItemBag = $this->urlExtractor->extract($crawler);
 
-      // @todo Crawl CNames.
-
+      // Crawl CNames.
+      $cnameChainList = $this->cnameDumper->dumpCnames();
 
       // Now...
       // - match urls for Unsubscribe

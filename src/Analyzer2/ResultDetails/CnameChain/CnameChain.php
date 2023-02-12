@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\ResultDetails;
+namespace Geeks4change\UntrackEmailAnalyzer\Analyzer2\ResultDetails\CnameChain;
 
 /**
  * @api Will be serialized in persistent storage, any change needs a migration.
@@ -19,18 +19,6 @@ final class CnameChain {
     string ...$aliasDomains
   ) {
     $this->aliasDomains = $aliasDomains;
-  }
-
-
-  /**
-   * @return string[]
-   */
-  public function allDomains(): array {
-    return [$this->domain, ...$this->aliasDomains];
-  }
-
-  public function __toString(): string {
-    return implode(' => ', $this->allDomains());
   }
 
 }

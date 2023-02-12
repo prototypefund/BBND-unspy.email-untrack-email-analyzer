@@ -36,7 +36,7 @@ final class MailchimpMatcher extends MatcherBase implements MatcherInterface {
 
   public function matchHeader(HeaderItem $item): bool {
     if ($item->name === 'message-id') {
-      return $this->matchesAnyDomain($item->value);
+      return $this->hostOrCnameMatchesAnyDomain($item->value);
     }
     elseif ($item->name === 'list-unsubscribe') {
       return $this->anyHostInAngleBracketsMatchesAnyDomain($item->value);
@@ -72,7 +72,7 @@ final class MailchimpMatcher extends MatcherBase implements MatcherInterface {
   }
 
   public function matchDomainUrl(UrlItem $urlItem): bool {
-    return $this->matchesAnyDomain($this->extractHost($urlItem->url));
+    return $this->hostOrCnameMatchesAnyDomain($this->extractHost($urlItem->url));
   }
 
 }

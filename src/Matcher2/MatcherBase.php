@@ -19,14 +19,14 @@ abstract class MatcherBase {
   public function anyHostInAngleBracketsMatchesAnyDomain(string $value): bool {
     return !Collection::fromIterable($this->extractAngleBrackets($value))
       ->map($this->extractHost(...))
-      ->map($this->matchesAnyDomain(...),)
+      ->map($this->hostOrCnameMatchesAnyDomain(...),)
       ->filter()
       ->isEmpty();
   }
 
   public function anyValueInAngleBracketsMatchesAnyDomain(string $value): bool {
     return !Collection::fromIterable($this->extractAngleBrackets($value))
-      ->map($this->matchesAnyDomain(...),)
+      ->map($this->hostOrCnameMatchesAnyDomain(...),)
       ->filter()
       ->isEmpty();
   }
@@ -40,7 +40,15 @@ abstract class MatcherBase {
     return $extracted;
   }
 
-  protected function matchesAnyDomain(string $host): bool {
+  protected function hostOrCnameMatchesAnyDomain(string $host): bool {
+    $hostAndAllCnames = $this->domainAliasesResolver->getAliases($host);
+    $isNotEmpty = !Collection::fromIterable($hostAndAllCnames)
+      ->filter($this->hostMatchesAnyDomain(...))
+      ->isEmpty();
+    return $isNotEmpty;
+  }
+
+  protected function hostMatchesAnyDomain(string $host): bool {
     $isNotEmpty = !Collection::fromIterable($this->getDomains())
       ->filter(fn(string $domain) => $this->isSubdomainOf($host, $domain))
       ->isEmpty();
@@ -72,7 +80,7 @@ abstract class MatcherBase {
 
   protected function matchUrl(UrlItem $urlItem, string $path): bool {
     $urlDomain = $this->extractHost($urlItem->url);
-    $matchesAnyDomain = $this->matchesAnyDomain($urlDomain);
+    $matchesAnyDomain = $this->hostOrCnameMatchesAnyDomain($urlDomain);
     $urlPath = $this->extractPath($urlItem->url);
     $matchesPath = $urlPath === $path;
     return $matchesAnyDomain && $matchesPath;

@@ -17,7 +17,13 @@ use Geeks4change\UntrackEmailAnalyzer\Analyzer\MessageInfoExtractor;
 use Geeks4change\UntrackEmailAnalyzer\Analyzer\NewsletterServicesMatcher\UrlsMatcher\AllServicesLinkAndImageUrlListMatcher;
 use Geeks4change\UntrackEmailAnalyzer\Analyzer\ResultSummaryExtractor;
 use Geeks4change\UntrackEmailAnalyzer\Analyzer\ResultVerdictExtractor;
+use Geeks4change\UntrackEmailAnalyzer\Analyzer2\Data\Url\UrlItemBag;
+use Geeks4change\UntrackEmailAnalyzer\Analyzer2\Data\Url\UrlItemInfo;
+use Geeks4change\UntrackEmailAnalyzer\Analyzer2\Data\Url\UrlItemInfoBag;
+use Geeks4change\UntrackEmailAnalyzer\Analyzer2\Data\Url\UrlItemInfoBagBuilder;
+use Geeks4change\UntrackEmailAnalyzer\Analyzer2\Data\Url\UrlItemMatchType;
 use Geeks4change\UntrackEmailAnalyzer\Globals;
+use Geeks4change\UntrackEmailAnalyzer\Matcher2\MatcherManager;
 use Geeks4change\UntrackEmailAnalyzer\UrlExtractor\ImagesUrlExtractor;
 use Geeks4change\UntrackEmailAnalyzer\UrlExtractor\LinksUrlExtractor;
 use Geeks4change\UntrackEmailAnalyzer\UrlExtractor\PixelsUrlExtractor;
@@ -26,13 +32,14 @@ use ZBateson\MailMimeParser\MailMimeParser;
 
 final class Analyzer2 {
 
+
   public function __construct(
     protected AnalyzerLogBuilderInterface $logger = new AnalyzerLogger(),
     protected HeaderItemExtractor         $headerItemExtractor = new HeaderItemExtractor(),
-    protected HeaderItemMatcher           $headerItemMatcher = new HeaderItemMatcher(),
-    protected UrlExtractor $urlExtractor = new UrlExtractor(),
-    protected $crawlRedirectUrlFilter = new CrawlRedirectUrlFilter(),
-    protected UrlRedirectCrawler $redirectCrawler = new UrlRedirectCrawler(),
+    protected UrlExtractor                $urlExtractor = new UrlExtractor(),
+    protected UrlRedirectCrawler          $redirectCrawler = new UrlRedirectCrawler(),
+    protected MatcherManager              $matcherManager = new MatcherManager(),
+    protected AnalyticsMatcher            $analyticsMatcher = new AnalyticsMatcher(),
   ) {}
 
   public function analyze(string $rawMessage, bool $catchAndLogExceptions = TRUE): FullResultWrapper {
@@ -49,7 +56,7 @@ final class Analyzer2 {
       // @todo Consider reporting unusual Mime parts, like more than one text/html part.
 
       $headerItemBag = $this->headerItemExtractor->extract($message);
-      $headerItemInfoBag = $this->headerItemMatcher->matchHeaders($headerItemBag);
+      $headerItemInfoBag = $this->matcherManager->matchHeaders($headerItemBag);
 
       // Analyze body html.
       $html = $message->getHtmlContent();
@@ -57,14 +64,30 @@ final class Analyzer2 {
       // DomCrawler? Not really, but seems to add some namespace and encoding
       // safeguards that can not be wrong.
       $crawler = new Crawler($html);
-      $urls = $this->urlExtractor->extract($crawler);
-      $urlItemInfoBagBuilder = new UrlItemInfoBagBuilder();
+      $urlItemBag = $this->urlExtractor->extract($crawler);
+      // Now...
+      // - match urls for Unsubscribe
+      // - match urls for UserTracking
+      // - match urls for Analytics
+      $urlItemInfoBag0 = UrlItemInfoBagBuilder::fromUrlItemBag($urlItemBag)->freeze();
+      $urlItemInfoBag1 = $this->matcherManager->matchUnsubscribeUrls($urlItemInfoBag0);
+      $urlItemInfoBag2 = $this->matcherManager->matchUserTrackingUrls($urlItemInfoBag1);
 
-      $urlsToCrawlRedirect = $this->crawlRedirectUrlFilter->filterUrls($urls);
+      $urlsToCrawlRedirect = $urlItemInfoBag2
+        ->filter(fn(UrlItemInfo $info) => !$info->hasMatchOfType(UrlItemMatchType::Unsubscribe))
+        ->urlItems();
+
       $redirects = $this->redirectCrawler->crawlRedirects($urlsToCrawlRedirect);
 
+      // @fixme Add redirects to UrlItemInfoBag.
+
       dump($redirects);
+      $urlItemInfoBag3 = $this->analyticsMatcher->matchAnalyticsUrls($urlItemInfoBag2);
       exit();
+
+      // Crawl analytics for urls and their redirects.
+
+
 
 
 

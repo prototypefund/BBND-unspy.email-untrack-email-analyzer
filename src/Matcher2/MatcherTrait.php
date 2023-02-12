@@ -56,20 +56,18 @@ trait MatcherTrait {
     return $host;
   }
 
-  /**
-   * @param string $value
-   *
-   * @return string
-   */
   public function extractPath(string $value): string {
     $uri = new Uri($value);
     $path = $uri->getPath();
-    return $path;
+    return ltrim($path, '/');
   }
 
   protected function matchUrl(UrlItem $urlItem, string $path): bool {
-    return $this->matchesAnyDomain($this->extractHost($urlItem->url))
-      && $this->extractPath($urlItem->url) === $path;
+    $urlDomain = $this->extractHost($urlItem->url);
+    $matchesAnyDomain = $this->matchesAnyDomain($urlDomain);
+    $urlPath = $this->extractPath($urlItem->url);
+    $matchesPath = $urlPath === $path;
+    return $matchesAnyDomain && $matchesPath;
   }
 
 }

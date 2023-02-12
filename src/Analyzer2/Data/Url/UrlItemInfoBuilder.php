@@ -12,15 +12,19 @@ final class UrlItemInfoBuilder {
   protected array $matches = [];
 
   public function __construct(
-    public readonly UrlRedirect $urlRedirect,
+    protected UrlItem $urlItem,
   ) {}
 
-  public function addMatch(string $matcherId, UrlItemMatchType $type): void {
+  public function addMatch(UrlItemMatch $match): void {
+    $this->matches[] = $match;
+  }
+
+  public function addCreateMatch(string $matcherId, UrlItemMatchType $type): void {
     $this->matches[] = new UrlItemMatch($matcherId, $type);
   }
 
   public function freeze(): UrlItemInfo {
-    return new UrlItemInfo($this->urlRedirect, $this->matches);
+    return new UrlItemInfo($this->urlItem, $this->matches);
   }
 
 }

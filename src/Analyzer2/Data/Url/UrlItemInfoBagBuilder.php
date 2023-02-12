@@ -4,32 +4,60 @@ declare(strict_types=1);
 
 namespace Geeks4change\UntrackEmailAnalyzer\Analyzer2\Data\Url;
 
+/**
+ * Build UrlItemInfoBag.
+ *
+ * All UrlItems are known in advance.
+ * Does not allow to add them afterwards.
+ * Intentionally may contain UrlItems without a match.
+ * We reasonably assume that no link and image share the same url.
+ */
 final class UrlItemInfoBagBuilder {
 
   /**
-   * @param array<string, \Geeks4change\UntrackEmailAnalyzer\Analyzer2\Data\Url\UrlItemInfoBuilder> $urlItemInfoBuilders
+   * @param array<string, \Geeks4change\UntrackEmailAnalyzer\Analyzer2\Data\Url\UrlItemInfoBuilder> $urlItemInfoBuildersByUrl
    */
   protected function __construct(
-    public readonly array $urlItemInfoBuilders,
+    protected readonly array $urlItemInfoBuildersByUrl,
   ) {}
 
-  public function fromUrlRedirectBag(UrlRedirectBag $urlRedirectBag) {
+  public static function fromUrlItemBag(UrlItemBag $urlItemBag): self {
     $urlItemInfoBuilders = [];
-    foreach ($urlRedirectBag->urlRedirects as $urlRedirect) {
+    foreach ($urlItemBag->urlItems as $urlItem) {
       // We reasonably assume that no link and image share the same url.
-      $urlItemInfoBuilders[$urlRedirect->url] = new UrlItemInfoBuilder($urlRedirect);
+      $urlItemInfoBuilders[$urlItem->url] = new UrlItemInfoBuilder($urlItem);
     }
     return new self($urlItemInfoBuilders);
   }
 
-  public function addMatch(UrlRedirect $urlRedirect, string $matcherId, UrlItemMatchType $type) {
-    $urlItemInfoBuilder = $this->urlItemInfoBuilders[$urlRedirect->url]
-      ?? throw new \UnexpectedValueException("Unexpected: {$urlRedirect->url}");
-    $urlItemInfoBuilder->addMatch($matcherId, $type);
+  public static function fromUrlItemInfoBag(UrlItemInfoBag $urlItemInfoBag): self {
+    return (new self([]))->withUrlItemInfoBag($urlItemInfoBag);
+  }
+
+  public function withUrlItemInfoBag(UrlItemInfoBag $urlItemInfoBag): self {
+    $urlItemInfoBuildersByUrl = $this->urlItemInfoBuildersByUrl;
+    foreach ($urlItemInfoBag->urlItemInfos as $urlItemInfo) {
+      $url = $urlItemInfo->urlItem->url;
+      // Extend urls if needed in wither.
+      $urlItemInfoBuilder = $urlItemInfoBuildersByUrl[$url]
+        ?? ($urlItemInfoBuildersByUrl[$url] = new UrlItemInfoBuilder($urlItemInfo->urlItem));
+      foreach ($urlItemInfo->matches as $match) {
+        $urlItemInfoBuilder->addMatch($match);
+      }
+    }
+    return new self($urlItemInfoBuildersByUrl);
+  }
+
+  public function addCreateMatch(UrlItem $urlItem, string $matcherId, UrlItemMatchType $type): void {
+    // Do not allow to create new urls.
+    $urlItemInfoBuilder = $this->urlItemInfoBuildersByUrl[$urlItem->url]
+      ?? throw new \UnexpectedValueException("Unexpected: {$urlItem->url}");
+    $urlItemInfoBuilder->addCreateMatch($matcherId, $type);
   }
 
   public function freeze(): UrlItemInfoBag {
-    $urlItemInfos = array_map(fn(UrlItemInfoBuilder $builder) => $builder->freeze(), $this->urlItemInfoBuilders);
+    // Do not filter for matches.
+    $urlItemInfos = array_map(fn(UrlItemInfoBuilder $builder) => $builder->freeze(), $this->urlItemInfoBuildersByUrl);
     return new UrlItemInfoBag($urlItemInfos);
   }
 

@@ -11,7 +11,7 @@ final class UrlRedirectBagBuilder {
    *
    * @var array<string, \Geeks4change\UntrackEmailAnalyzer\Analyzer2\Data\Url\UrlRedirect> $urlRedirects
    */
-  protected array $urlRedirects;
+  protected array $urlRedirects = [];
 
   public function __construct() {}
 

@@ -12,4 +12,10 @@ final class UrlRedirect {
     public readonly ?string     $redirect,
   ) {}
 
+  public function getEffectiveUrlItem(): UrlItem {
+    return $this->redirect ?
+      new UrlItem($this->type, $this->redirect) :
+      new UrlItem($this->type, $this->url);
+  }
+
 }

@@ -24,12 +24,18 @@ final class UrlItemInfoBagBuilder {
   ) {}
 
   public static function fromUrlItemBag(UrlItemBag $urlItemBag): self {
-    $urlItemInfoBuilders = [];
+    return (new self([]))->withUrlItemBag($urlItemBag);
+  }
+
+  public function withUrlItemBag(UrlItemBag $urlItemBag): self {
+    $urlItemInfoBuildersByUrl = $this->urlItemInfoBuildersByUrl;
     foreach ($urlItemBag->urlItems as $urlItem) {
-      // We reasonably assume that no link and image share the same url.
-      $urlItemInfoBuilders[$urlItem->url] = new UrlItemInfoBuilder($urlItem);
+      $url = $urlItem->url;
+      // Extend urls if needed in wither.
+      $urlItemInfoBuilder = $urlItemInfoBuildersByUrl[$url]
+        ?? ($urlItemInfoBuildersByUrl[$url] = new UrlItemInfoBuilder($urlItem));
     }
-    return new self($urlItemInfoBuilders);
+    return new self($urlItemInfoBuildersByUrl);
   }
 
   public static function fromUrlItemInfoBag(UrlItemInfoBag $urlItemInfoBag): self {

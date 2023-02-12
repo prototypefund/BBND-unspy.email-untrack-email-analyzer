@@ -63,25 +63,30 @@ final class Analyzer2 {
       // safeguards that can not be wrong.
       $crawler = new Crawler($html);
       $urlItemBag = $this->urlExtractor->extract($crawler);
+
+      // @todo Crawl CNames.
+
+
       // Now...
       // - match urls for Unsubscribe
       // - match urls for UserTracking
       // - match urls for Analytics
       $urlItemInfoBag0 = UrlItemInfoBagBuilder::fromUrlItemBag($urlItemBag)->freeze();
       $urlItemInfoBag1 = $this->matcherManager->matchUnsubscribeUrls($urlItemInfoBag0);
-      $urlItemInfoBag2 = $this->matcherManager->matchUserTrackingUrls($urlItemInfoBag1);
-      $urlItemInfoBag3 = $this->analyticsMatcher->matchAnalyticsUrls($urlItemInfoBag2);
+      $urlItemInfoBag2 = $this->matcherManager->matchUrls($urlItemInfoBag1);
+      // @fixme Match by domain.
 
-      $urlsToCrawlRedirect = $urlItemInfoBag3
+      $urlsToCrawlRedirect = $urlItemInfoBag2
         ->filter(fn(UrlItemInfo $info) => !$info->hasMatchOfType(UrlItemMatchType::Unsubscribe()))
         ->urlItems();
 
       $redirects = $this->redirectCrawler->crawlRedirects($urlsToCrawlRedirect);
+      $urlItemInfoBag3 = $this->analyticsMatcher->matchAnalyticsUrls($urlItemInfoBag2, $redirects);
 
-      // @fixme Add redirects to UrlItemInfoBag.
 
-      dump($redirects);
+      dump($urlItemInfoBag3);
       exit();
+
 
       // Crawl analytics for urls and their redirects.
 

@@ -10,18 +10,29 @@ use Geeks4change\UntrackEmailAnalyzer\Analyzer2\Data\Url\UrlItemInfoBagBuilder;
 use Geeks4change\UntrackEmailAnalyzer\Analyzer2\Data\Url\UrlItemMatchType\Analytics;
 use Geeks4change\UntrackEmailAnalyzer\Analyzer2\Data\Url\UrlItemMatchType\AnalyticsMatchType;
 use Geeks4change\UntrackEmailAnalyzer\Analyzer2\Data\Url\UrlItemMatchType\UrlItemMatchType;
+use Geeks4change\UntrackEmailAnalyzer\Analyzer2\Data\Url\UrlItemType;
+use Geeks4change\UntrackEmailAnalyzer\Analyzer2\Data\Url\UrlRedirectBag;
 use GuzzleHttp\Psr7\Uri;
 
 final class AnalyticsMatcher {
 
   protected array $pseudonymousKeys;
 
-  public function matchAnalyticsUrls(UrlItemInfoBag $urlItemInfoBag): UrlItemInfoBag {
+  public function matchAnalyticsUrls(UrlItemInfoBag $urlItemInfoBag, UrlRedirectBag $urlRedirectBag): UrlItemInfoBag {
     $builder = UrlItemInfoBagBuilder::fromUrlItemInfoBag($urlItemInfoBag);
     foreach ($urlItemInfoBag->urlItemInfos as $urlItemInfo) {
+      // Only look on links for now.
+      if ($urlItemInfo->urlItem->type !== UrlItemType::Link) {
+        continue;
+      }
       $urlItem = $urlItemInfo->urlItem;
-      if ($analyticsMatchType = $this->matchAnalyticsUrl($urlItem)) {
-        $builder->addCreateMatch($urlItem, '_analytics', $analyticsMatchType);
+      $redirect = $urlRedirectBag->getRedirect($urlItem);
+      if ($redirect) {
+        // Only look in the effective url.
+        $effectiveUrlItem = $redirect->getEffectiveUrlItem();
+        if ($analyticsMatchType = $this->matchAnalyticsUrl($effectiveUrlItem)) {
+          $builder->addCreateMatch($urlItem, '_analytics', $analyticsMatchType);
+        }
       }
     }
     return $builder->freeze();
@@ -31,6 +42,9 @@ final class AnalyticsMatcher {
     $queryKeys = array_keys($this->getQuery($urlItem));
     if (!$queryKeys) {
       return NULL;
+    }
+    elseif (array_intersect($queryKeys, $this->getUserTrackingKeys())) {
+      return UrlItemMatchType::Analytics(AnalyticsMatchType::LooksLikeUserTracking, $queryKeys);
     }
     elseif (array_diff($queryKeys, $this->getPseudonymousKeys())) {
       return UrlItemMatchType::Analytics(AnalyticsMatchType::NeedsResearch, $queryKeys);
@@ -45,6 +59,13 @@ final class AnalyticsMatcher {
       ->getQuery();
     parse_str($queryAsString, $queryAsArray);
     return $queryAsArray;
+  }
+
+  protected function getUserTrackingKeys(): array {
+    return [
+      // Mailchimp.
+      'mc_eid',
+    ];
   }
 
   protected function getPseudonymousKeys(): array {
@@ -62,6 +83,8 @@ final class AnalyticsMatcher {
         $keys[] = $key;
       }
     }
+    // Mailchimp.
+    $keys[] = 'mc_cid';
     return $keys;
   }
 

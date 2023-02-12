@@ -43,12 +43,15 @@ final class MatcherManager {
     return $builder->freeze();
   }
 
-  public function matchUserTrackingUrls(UrlItemInfoBag $urlItemInfoBag): UrlItemInfoBag {
+  public function matchUrls(UrlItemInfoBag $urlItemInfoBag): UrlItemInfoBag {
     $builder = UrlItemInfoBagBuilder::fromUrlItemInfoBag($urlItemInfoBag);
     foreach ($urlItemInfoBag->urlItemInfos as $urlItemInfo) {
       $urlItem = $urlItemInfo->urlItem;
       foreach ($this->getMatchers() as $id => $matcher) {
         if ($matcher->matchUserTrackingUrl($urlItem)) {
+          $builder->addCreateMatch($urlItem, $id, UrlItemMatchType::UserTracking());
+        }
+        elseif ($matcher->matchDomainUrl($urlItem)) {
           $builder->addCreateMatch($urlItem, $id, UrlItemMatchType::UserTracking());
         }
       }

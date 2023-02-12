@@ -7,9 +7,9 @@ namespace Geeks4change\UntrackEmailAnalyzer\Analyzer2\Data\Url;
 final class UrlRedirectBag {
 
   /**
-   * @var list<\Geeks4change\UntrackEmailAnalyzer\Analyzer2\Data\Url\UrlRedirect> $urlRedirects
+   * @var array<string, \Geeks4change\UntrackEmailAnalyzer\Analyzer2\Data\Url\UrlRedirect> $urlRedirectsByUrl
    */
-  public readonly array $urlRedirects;
+  public readonly array $urlRedirectsByUrl;
 
   /**
    * Redirects by URL.
@@ -19,9 +19,37 @@ final class UrlRedirectBag {
   public function __construct(array $urlRedirects) {
     $urlRedirectsByUrl = [];
     foreach ($urlRedirects as $urlRedirect) {
-      $urlRedirectsByUrl[$urlRedirect->url] = $urlRedirectsByUrl;
+      $urlRedirectsByUrl[$urlRedirect->url] = $urlRedirect;
     }
-    $this->urlRedirects = $urlRedirectsByUrl;
+    $this->urlRedirectsByUrl = $urlRedirectsByUrl;
+  }
+
+  public function getRedirect(UrlItem $urlItem): ?UrlRedirect {
+    // Not all urls have been crawled for redirects.
+    return $this->urlRedirectsByUrl[$urlItem->url] ?? NULL;
+  }
+
+  public function getRedirectUrlItems(): UrlItemBag {
+    $builder = new UrlItemBagBuilder();
+    foreach ($this->urlRedirectsByUrl as $urlRedirect) {
+      if ($urlRedirect->redirect) {
+        $builder->addUrl($urlRedirect->type, $urlRedirect->redirect);
+      }
+    }
+    return $builder->freeze();
+  }
+
+  public function getEffectiveUrlItems(): UrlItemBag {
+    $builder = new UrlItemBagBuilder();
+    foreach ($this->urlRedirectsByUrl as $urlRedirect) {
+      if ($urlRedirect->redirect) {
+        $builder->addUrl($urlRedirect->type, $urlRedirect->redirect);
+      }
+      else {
+        $builder->addUrl($urlRedirect->type, $urlRedirect->url);
+      }
+    }
+    return $builder->freeze();
   }
 
 }

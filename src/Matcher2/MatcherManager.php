@@ -10,7 +10,7 @@ use Geeks4change\UntrackEmailAnalyzer\Analyzer2\Data\Header\HeaderItemInfoBagBui
 use Geeks4change\UntrackEmailAnalyzer\Analyzer2\Data\Header\HeaderItemMatch;
 use Geeks4change\UntrackEmailAnalyzer\Analyzer2\Data\Url\UrlItemInfoBag;
 use Geeks4change\UntrackEmailAnalyzer\Analyzer2\Data\Url\UrlItemInfoBagBuilder;
-use Geeks4change\UntrackEmailAnalyzer\Analyzer2\Data\Url\UrlItemMatchType;
+use Geeks4change\UntrackEmailAnalyzer\Analyzer2\Data\Url\UrlItemMatchType\UrlItemMatchType;
 
 final class MatcherManager {
 
@@ -36,7 +36,7 @@ final class MatcherManager {
       $urlItem = $urlItemInfo->urlItem;
       foreach ($this->getMatchers() as $id => $matcher) {
         if ($matcher->matchUnsubscribeUrl($urlItem)) {
-          $builder->addCreateMatch($urlItem, $id, UrlItemMatchType::Unsubscribe);
+          $builder->addCreateMatch($urlItem, $id, UrlItemMatchType::Unsubscribe());
         }
       }
     }
@@ -49,7 +49,7 @@ final class MatcherManager {
       $urlItem = $urlItemInfo->urlItem;
       foreach ($this->getMatchers() as $id => $matcher) {
         if ($matcher->matchUserTrackingUrl($urlItem)) {
-          $builder->addCreateMatch($urlItem, $id, UrlItemMatchType::UserTracking);
+          $builder->addCreateMatch($urlItem, $id, UrlItemMatchType::UserTracking());
         }
       }
     }

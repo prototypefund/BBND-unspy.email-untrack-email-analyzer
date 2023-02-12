@@ -17,11 +17,9 @@ use Geeks4change\UntrackEmailAnalyzer\Analyzer\MessageInfoExtractor;
 use Geeks4change\UntrackEmailAnalyzer\Analyzer\NewsletterServicesMatcher\UrlsMatcher\AllServicesLinkAndImageUrlListMatcher;
 use Geeks4change\UntrackEmailAnalyzer\Analyzer\ResultSummaryExtractor;
 use Geeks4change\UntrackEmailAnalyzer\Analyzer\ResultVerdictExtractor;
-use Geeks4change\UntrackEmailAnalyzer\Analyzer2\Data\Url\UrlItemBag;
 use Geeks4change\UntrackEmailAnalyzer\Analyzer2\Data\Url\UrlItemInfo;
-use Geeks4change\UntrackEmailAnalyzer\Analyzer2\Data\Url\UrlItemInfoBag;
 use Geeks4change\UntrackEmailAnalyzer\Analyzer2\Data\Url\UrlItemInfoBagBuilder;
-use Geeks4change\UntrackEmailAnalyzer\Analyzer2\Data\Url\UrlItemMatchType;
+use Geeks4change\UntrackEmailAnalyzer\Analyzer2\Data\Url\UrlItemMatchType\UrlItemMatchType;
 use Geeks4change\UntrackEmailAnalyzer\Globals;
 use Geeks4change\UntrackEmailAnalyzer\Matcher2\MatcherManager;
 use Geeks4change\UntrackEmailAnalyzer\UrlExtractor\ImagesUrlExtractor;
@@ -72,9 +70,10 @@ final class Analyzer2 {
       $urlItemInfoBag0 = UrlItemInfoBagBuilder::fromUrlItemBag($urlItemBag)->freeze();
       $urlItemInfoBag1 = $this->matcherManager->matchUnsubscribeUrls($urlItemInfoBag0);
       $urlItemInfoBag2 = $this->matcherManager->matchUserTrackingUrls($urlItemInfoBag1);
+      $urlItemInfoBag3 = $this->analyticsMatcher->matchAnalyticsUrls($urlItemInfoBag2);
 
-      $urlsToCrawlRedirect = $urlItemInfoBag2
-        ->filter(fn(UrlItemInfo $info) => !$info->hasMatchOfType(UrlItemMatchType::Unsubscribe))
+      $urlsToCrawlRedirect = $urlItemInfoBag3
+        ->filter(fn(UrlItemInfo $info) => !$info->hasMatchOfType(UrlItemMatchType::Unsubscribe()))
         ->urlItems();
 
       $redirects = $this->redirectCrawler->crawlRedirects($urlsToCrawlRedirect);
@@ -82,7 +81,6 @@ final class Analyzer2 {
       // @fixme Add redirects to UrlItemInfoBag.
 
       dump($redirects);
-      $urlItemInfoBag3 = $this->analyticsMatcher->matchAnalyticsUrls($urlItemInfoBag2);
       exit();
 
       // Crawl analytics for urls and their redirects.

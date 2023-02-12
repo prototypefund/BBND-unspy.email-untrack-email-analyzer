@@ -73,4 +73,8 @@ final class MailchimpMatcher implements MatcherInterface {
     return FALSE;
   }
 
+  public function matchDomainUrl(UrlItem $urlItem): bool {
+    return $this->matchesAnyDomain($this->extractHost($urlItem->url));
+  }
+
 }

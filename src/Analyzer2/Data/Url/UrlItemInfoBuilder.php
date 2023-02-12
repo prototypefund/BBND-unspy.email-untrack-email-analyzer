@@ -4,12 +4,12 @@ declare(strict_types=1);
 
 namespace Geeks4change\UntrackEmailAnalyzer\Analyzer2\Data\Url;
 
-use Geeks4change\UntrackEmailAnalyzer\Analyzer2\Data\Url\UrlItemMatchType\UrlItemMatchType;
+use Geeks4change\UntrackEmailAnalyzer\Analyzer2\Data\Url\UrlItemMatchType\UrlItemMatchBase;
 
 final class UrlItemInfoBuilder {
 
   /**
-   * @var list<\Geeks4change\UntrackEmailAnalyzer\Analyzer2\Data\Url\UrlItemMatch> $matches
+   * @var list<\Geeks4change\UntrackEmailAnalyzer\Analyzer2\Data\Url\UrlItemMatchType\UrlItemMatchBase> $matches
    */
   protected array $matches = [];
 
@@ -17,12 +17,8 @@ final class UrlItemInfoBuilder {
     protected UrlItem $urlItem,
   ) {}
 
-  public function addMatch(UrlItemMatch $match): void {
+  public function addMatch(UrlItemMatchBase $match): void {
     $this->matches[] = $match;
-  }
-
-  public function addCreateMatch(string $matcherId, UrlItemMatchType $type): void {
-    $this->matches[] = new UrlItemMatch($matcherId, $type);
   }
 
   public function freeze(): UrlItemInfo {

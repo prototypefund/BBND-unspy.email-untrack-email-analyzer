@@ -15,4 +15,6 @@ interface MatcherInterface {
 
   public function matchUserTrackingUrl(UrlItem $urlItem): bool;
 
+  public function matchDomainUrl(UrlItem $urlItem): bool;
+
 }

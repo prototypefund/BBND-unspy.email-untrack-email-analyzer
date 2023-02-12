@@ -19,6 +19,8 @@ use Geeks4change\UntrackEmailAnalyzer\Analyzer\ResultSummaryExtractor;
 use Geeks4change\UntrackEmailAnalyzer\Analyzer\ResultVerdictExtractor;
 use Geeks4change\UntrackEmailAnalyzer\Analyzer2\Data\Url\UrlItemInfo;
 use Geeks4change\UntrackEmailAnalyzer\Analyzer2\Data\Url\UrlItemInfoBagBuilder;
+use Geeks4change\UntrackEmailAnalyzer\Analyzer2\Data\Url\UrlItemMatchType\UnsubscribeMatch;
+use Geeks4change\UntrackEmailAnalyzer\Analyzer2\Data\Url\UrlItemMatchType\UrlItemMatchBase;
 use Geeks4change\UntrackEmailAnalyzer\Analyzer2\Data\Url\UrlItemMatchType\UrlItemMatchType;
 use Geeks4change\UntrackEmailAnalyzer\Globals;
 use Geeks4change\UntrackEmailAnalyzer\Matcher2\MatcherManager;
@@ -74,10 +76,10 @@ final class Analyzer2 {
       $urlItemInfoBag0 = UrlItemInfoBagBuilder::fromUrlItemBag($urlItemBag)->freeze();
       $urlItemInfoBag1 = $this->matcherManager->matchUnsubscribeUrls($urlItemInfoBag0);
       $urlItemInfoBag2 = $this->matcherManager->matchUrls($urlItemInfoBag1);
-      // @fixme Match by domain.
 
+      // Remove known unsubscribe urls from redirect checking.
       $urlsToCrawlRedirect = $urlItemInfoBag2
-        ->filter(fn(UrlItemInfo $info) => !$info->hasMatchOfType(UrlItemMatchType::Unsubscribe()))
+        ->filter(fn(UrlItemInfo $info) => !$info->filterMatches(fn(UrlItemMatchBase $match) => $match instanceof UnsubscribeMatch))
         ->urlItems();
 
       $redirects = $this->redirectCrawler->crawlRedirects($urlsToCrawlRedirect);

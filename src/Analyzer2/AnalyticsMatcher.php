@@ -9,7 +9,6 @@ use Geeks4change\UntrackEmailAnalyzer\Analyzer2\Data\Url\UrlItemInfoBag;
 use Geeks4change\UntrackEmailAnalyzer\Analyzer2\Data\Url\UrlItemInfoBagBuilder;
 use Geeks4change\UntrackEmailAnalyzer\Analyzer2\Data\Url\UrlItemMatchType\Analytics;
 use Geeks4change\UntrackEmailAnalyzer\Analyzer2\Data\Url\UrlItemMatchType\AnalyticsMatchType;
-use Geeks4change\UntrackEmailAnalyzer\Analyzer2\Data\Url\UrlItemMatchType\UrlItemMatchType;
 use Geeks4change\UntrackEmailAnalyzer\Analyzer2\Data\Url\UrlItemType;
 use Geeks4change\UntrackEmailAnalyzer\Analyzer2\Data\Url\UrlRedirectBag;
 use GuzzleHttp\Psr7\Uri;
@@ -30,8 +29,8 @@ final class AnalyticsMatcher {
       if ($redirect) {
         // Only look in the effective url.
         $effectiveUrlItem = $redirect->getEffectiveUrlItem();
-        if ($analyticsMatchType = $this->matchAnalyticsUrl($effectiveUrlItem)) {
-          $builder->addCreateMatch($urlItem, '_analytics', $analyticsMatchType);
+        if ($match = $this->matchAnalyticsUrl($effectiveUrlItem)) {
+          $builder->addMatch($urlItem, $match);
         }
       }
     }
@@ -44,13 +43,13 @@ final class AnalyticsMatcher {
       return NULL;
     }
     elseif (array_intersect($queryKeys, $this->getUserTrackingKeys())) {
-      return UrlItemMatchType::Analytics(AnalyticsMatchType::LooksLikeUserTracking, $queryKeys);
+      return new Analytics(AnalyticsMatchType::LooksLikeUserTracking, $queryKeys);
     }
     elseif (array_diff($queryKeys, $this->getPseudonymousKeys())) {
-      return UrlItemMatchType::Analytics(AnalyticsMatchType::NeedsResearch, $queryKeys);
+      return new Analytics(AnalyticsMatchType::NeedsResearch, $queryKeys);
     }
     else {
-      return UrlItemMatchType::Analytics(AnalyticsMatchType::LooksHarmless, $queryKeys);
+      return new Analytics(AnalyticsMatchType::LooksHarmless, $queryKeys);
     }
   }
 

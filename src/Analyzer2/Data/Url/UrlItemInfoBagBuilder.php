@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace Geeks4change\UntrackEmailAnalyzer\Analyzer2\Data\Url;
 
-use Geeks4change\UntrackEmailAnalyzer\Analyzer2\Data\Url\UrlItemMatchType\UrlItemMatchType;
+use Geeks4change\UntrackEmailAnalyzer\Analyzer2\Data\Url\UrlItemMatchType\UrlItemMatchBase;
 
 /**
  * Build UrlItemInfoBag.
@@ -56,11 +56,11 @@ final class UrlItemInfoBagBuilder {
     return new self($urlItemInfoBuildersByUrl);
   }
 
-  public function addCreateMatch(UrlItem $urlItem, string $matcherId, UrlItemMatchType $type): void {
+  public function addMatch(UrlItem $urlItem, UrlItemMatchBase $match): void {
     // Do not allow to create new urls.
     $urlItemInfoBuilder = $this->urlItemInfoBuildersByUrl[$urlItem->url]
       ?? throw new \UnexpectedValueException("Unexpected: {$urlItem->url}");
-    $urlItemInfoBuilder->addCreateMatch($matcherId, $type);
+    $urlItemInfoBuilder->addMatch($match);
   }
 
   public function freeze(): UrlItemInfoBag {

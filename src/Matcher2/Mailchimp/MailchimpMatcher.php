@@ -6,12 +6,10 @@ namespace Geeks4change\UntrackEmailAnalyzer\Matcher2\Mailchimp;
 
 use Geeks4change\UntrackEmailAnalyzer\Analyzer2\Data\Header\HeaderItem;
 use Geeks4change\UntrackEmailAnalyzer\Analyzer2\Data\Url\UrlItem;
-use Geeks4change\UntrackEmailAnalyzer\Matcher2\MatcherTrait;
+use Geeks4change\UntrackEmailAnalyzer\Matcher2\MatcherBase;
 use Geeks4change\UntrackEmailAnalyzer\Matcher2\MatcherInterface;
 
-final class MailchimpMatcher implements MatcherInterface {
-
-  use MatcherTrait;
+final class MailchimpMatcher extends MatcherBase implements MatcherInterface {
 
   public function getDomains(): array {
     return [

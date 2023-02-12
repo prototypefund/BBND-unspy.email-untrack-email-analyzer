@@ -3,10 +3,18 @@
 namespace Geeks4change\UntrackEmailAnalyzer\Matcher2;
 
 use Geeks4change\UntrackEmailAnalyzer\Analyzer2\Data\Url\UrlItem;
+use Geeks4change\UntrackEmailAnalyzer\DomainAliasesResolver;
+use Geeks4change\UntrackEmailAnalyzer\Globals;
 use GuzzleHttp\Psr7\Uri;
 use loophp\collection\Collection;
 
-trait MatcherTrait {
+abstract class MatcherBase {
+
+  protected DomainAliasesResolver $domainAliasesResolver;
+
+  public function __construct() {
+    $this->domainAliasesResolver = Globals::get()->getDomainAliasesResolver();
+  }
 
   public function anyHostInAngleBracketsMatchesAnyDomain(string $value): bool {
     return !Collection::fromIterable($this->extractAngleBrackets($value))

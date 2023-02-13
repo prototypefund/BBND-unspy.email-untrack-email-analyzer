@@ -71,19 +71,17 @@ final class Analyzer2 {
       $urlItemInfoBag2 = $this->matcherManager->matchUserTrackingUrls($urlItemInfoBag1);
 
       // Remove known technical urls from redirect checking.
-      $isTechnicalUrl = fn(UrlItemMatchBase $match) => $match instanceof TechnicalUrlMatch;
-      $allowCrawling = fn(UrlItemInfo $urlItemInfo) => !$urlItemInfo->filterMatches($isTechnicalUrl);
+      $allowCrawling = fn(UrlItemInfo $urlItemInfo) => !$urlItemInfo->technicalUrlMatchesById;
       $urlItemInfoBag3 = $this->redirectCrawler->crawlRedirects($urlItemInfoBag2, $allowCrawling);
       $urlItemInfoBag4 = $this->analyticsMatcher->matchAnalyticsUrls($urlItemInfoBag3);
 
       $resultDetails = new ResultDetails(
         $dkimResult,
         $headerItemInfoBag,
-        $urlItemBag,
         $urlItemInfoBag4,
         $cnameChainList,
       );
-      //dump($urlItemInfoBag4);
+      dump($urlItemInfoBag4);
       exit;
 
       $resultSummary = (new ResultSummaryExtractor)

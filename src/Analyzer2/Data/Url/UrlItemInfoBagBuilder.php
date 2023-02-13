@@ -4,9 +4,6 @@ declare(strict_types=1);
 
 namespace Geeks4change\UntrackEmailAnalyzer\Analyzer2\Data\Url;
 
-use Geeks4change\UntrackEmailAnalyzer\Analyzer2\Data\Url\UrlItemMatchType\RedirectInfo;
-use Geeks4change\UntrackEmailAnalyzer\Analyzer2\Data\Url\UrlItemMatchType\UrlItemMatchBase;
-
 /**
  * Build UrlItemInfoBag.
  *
@@ -52,13 +49,6 @@ final class UrlItemInfoBagBuilder {
         ?? ($urlItemInfoBuildersByUrl[$url] = UrlItemInfoBuilder::fromUrlItemInfo($urlItemInfo));
     }
     return new self($urlItemInfoBuildersByUrl);
-  }
-
-  public function addMatch(UrlItem $urlItem, UrlItemMatchBase $match): void {
-    // Do not allow to create new urls.
-    $urlItemInfoBuilder = $this->urlItemInfoBuildersByUrl[$urlItem->url]
-      ?? throw new \UnexpectedValueException("Unexpected: {$urlItem->url}");
-    $urlItemInfoBuilder->addMatch($match);
   }
 
   public function forUrlItem(UrlItem $urlItem): UrlItemInfoBuilder {

@@ -10,9 +10,9 @@ use Geeks4change\UntrackEmailAnalyzer\Analyzer2\Data\Header\HeaderItemInfoBagBui
 use Geeks4change\UntrackEmailAnalyzer\Analyzer2\Data\Header\HeaderItemMatch;
 use Geeks4change\UntrackEmailAnalyzer\Analyzer2\Data\Url\UrlItemInfoBag;
 use Geeks4change\UntrackEmailAnalyzer\Analyzer2\Data\Url\UrlItemInfoBagBuilder;
-use Geeks4change\UntrackEmailAnalyzer\Analyzer2\Data\Url\UrlItemMatchType\DomainMatch;
+use Geeks4change\UntrackEmailAnalyzer\Analyzer2\Data\Url\UrlItemMatchType\ByDomainUrlMatch;
 use Geeks4change\UntrackEmailAnalyzer\Analyzer2\Data\Url\UrlItemMatchType\TechnicalUrlMatch;
-use Geeks4change\UntrackEmailAnalyzer\Analyzer2\Data\Url\UrlItemMatchType\UserTrackingMatch;
+use Geeks4change\UntrackEmailAnalyzer\Analyzer2\Data\Url\UrlItemMatchType\UserTrackingUrlMatch;
 
 final class MatcherManager {
 
@@ -39,7 +39,7 @@ final class MatcherManager {
       $urlItem = $urlItemInfo->urlItem;
       foreach ($this->getMatchers() as $id => $matcher) {
         if ($matcher->matchTechnicalUrl($urlItem)) {
-          $builder->addMatch($urlItem, new TechnicalUrlMatch($id));
+          $builder->forUrlItem($urlItem)->addTechnicalUrlMatch(new TechnicalUrlMatch($id));
         }
       }
     }
@@ -52,10 +52,10 @@ final class MatcherManager {
       $urlItem = $urlItemInfo->urlItem;
       foreach ($this->getMatchers() as $id => $matcher) {
         if ($matcher->matchUserTrackingUrl($urlItem)) {
-          $builder->addMatch($urlItem, new UserTrackingMatch($id));
+          $builder->forUrlItem($urlItem)->addUserTrackingUrlMatch(new UserTrackingUrlMatch($id));
         }
         elseif ($matcher->matchDomainUrl($urlItem)) {
-          $builder->addMatch($urlItem, new DomainMatch($id));
+          $builder->forUrlItem($urlItem)->addByDomainUrlMatch(new ByDomainUrlMatch($id));
         }
       }
     }

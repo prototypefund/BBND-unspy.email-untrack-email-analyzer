@@ -49,10 +49,7 @@ final class UrlItemInfoBagBuilder {
       $url = $urlItemInfo->urlItem->url;
       // Extend urls if needed in wither.
       $urlItemInfoBuilder = $urlItemInfoBuildersByUrl[$url]
-        ?? ($urlItemInfoBuildersByUrl[$url] = UrlItemInfoBuilder::create($urlItemInfo->urlItem));
-      foreach ($urlItemInfo->matches as $match) {
-        $urlItemInfoBuilder->addMatch($match);
-      }
+        ?? ($urlItemInfoBuildersByUrl[$url] = UrlItemInfoBuilder::fromUrlItemInfo($urlItemInfo));
     }
     return new self($urlItemInfoBuildersByUrl);
   }

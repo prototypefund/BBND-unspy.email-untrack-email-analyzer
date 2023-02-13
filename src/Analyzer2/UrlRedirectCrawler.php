@@ -35,8 +35,7 @@ final class UrlRedirectCrawler {
       $wasCrawled = in_array($url, $urlsTOCrawl);
       $redirectUrl = $redirectMap[$url] ?? NULL;
       $redirectInfo = new RedirectInfo($redirectUrl, $wasCrawled);
-      $builder->setRedirectInfo($urlItemInfoBag->forUrl($url)->urlItem, $redirectInfo);
-      $builder->addMatch($urlItemInfoBag->forUrl($url)->urlItem, $redirectInfo);
+      $builder->forUrlItem($urlItemInfoBag->forUrl($url)->urlItem)->setRedirectInfo($redirectInfo);
     }
     return $builder->freeze();
   }

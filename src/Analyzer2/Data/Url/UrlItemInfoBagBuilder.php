@@ -64,8 +64,8 @@ final class UrlItemInfoBagBuilder {
     $urlItemInfoBuilder->addMatch($match);
   }
 
-  public function setRedirectInfo(UrlItem $urlItem, RedirectInfo $redirectInfo) {
-    $this->forUrl($urlItem->url)->setRedirectInfo($redirectInfo);
+  public function forUrlItem(UrlItem $urlItem): UrlItemInfoBuilder {
+    return $this->forUrl($urlItem->url);
   }
 
   protected function forUrl(mixed $url): UrlItemInfoBuilder {

@@ -30,7 +30,7 @@ final class UrlItemInfoBuilder {
     $this->matches[] = $match;
   }
 
-  public function setRedirectInfo(RedirectInfo $redirectInfo) {
+  public function setRedirectInfo(RedirectInfo $redirectInfo): void {
     if ($this->redirectInfo) {
       throw new \UnexpectedValueException('Can only set once.');
     }

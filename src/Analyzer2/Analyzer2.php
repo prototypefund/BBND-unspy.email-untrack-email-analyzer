@@ -12,8 +12,6 @@ use Geeks4change\UntrackEmailAnalyzer\Analyzer\ResultSummaryExtractor;
 use Geeks4change\UntrackEmailAnalyzer\Analyzer\ResultVerdictExtractor;
 use Geeks4change\UntrackEmailAnalyzer\Analyzer2\Data\Url\UrlItemInfo;
 use Geeks4change\UntrackEmailAnalyzer\Analyzer2\Data\Url\UrlItemInfoBagBuilder;
-use Geeks4change\UntrackEmailAnalyzer\Analyzer2\Data\Url\UrlItemMatchType\TechnicalUrlMatch;
-use Geeks4change\UntrackEmailAnalyzer\Analyzer2\Data\Url\UrlItemMatchType\UrlItemMatchBase;
 use Geeks4change\UntrackEmailAnalyzer\Analyzer2\ResultDetails\FullResult;
 use Geeks4change\UntrackEmailAnalyzer\Analyzer2\ResultDetails\FullResultWrapper;
 use Geeks4change\UntrackEmailAnalyzer\Analyzer2\ResultDetails\ResultDetails;
@@ -81,7 +79,7 @@ final class Analyzer2 {
         $urlItemInfoBag4,
         $cnameChainList,
       );
-      dump($urlItemInfoBag4);
+      dump($urlItemInfoBag4->anonymize());
       exit;
 
       $resultSummary = (new ResultSummaryExtractor)

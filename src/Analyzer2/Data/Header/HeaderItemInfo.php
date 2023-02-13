@@ -14,4 +14,8 @@ final class HeaderItemInfo {
     public readonly array $matches,
   ) {}
 
+  public function anonymize(): self {
+    return new self($this->headerItem->anonymize(), $this->matches);
+  }
+
 }

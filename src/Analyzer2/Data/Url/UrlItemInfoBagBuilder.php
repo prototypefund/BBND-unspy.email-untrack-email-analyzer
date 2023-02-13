@@ -42,7 +42,7 @@ final class UrlItemInfoBagBuilder {
 
   public function withUrlItemInfoBag(UrlItemInfoBag $urlItemInfoBag): self {
     $urlItemInfoBuildersByUrl = $this->urlItemInfoBuildersByUrl;
-    foreach ($urlItemInfoBag->urlItemInfosByUrl as $urlItemInfo) {
+    foreach ($urlItemInfoBag->urlItemInfos as $urlItemInfo) {
       $url = $urlItemInfo->urlItem->url;
       // Extend urls if needed in wither.
       $urlItemInfoBuilder = $urlItemInfoBuildersByUrl[$url]

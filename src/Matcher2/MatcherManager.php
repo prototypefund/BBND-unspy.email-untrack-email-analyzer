@@ -35,7 +35,7 @@ final class MatcherManager {
 
   public function matchTechnicalUrls(UrlItemInfoBag $urlItemInfoBag): UrlItemInfoBag {
     $builder = UrlItemInfoBagBuilder::fromUrlItemInfoBag($urlItemInfoBag);
-    foreach ($urlItemInfoBag->urlItemInfosByUrl as $urlItemInfo) {
+    foreach ($urlItemInfoBag->urlItemInfos as $urlItemInfo) {
       $urlItem = $urlItemInfo->urlItem;
       foreach ($this->getMatchers() as $id => $matcher) {
         if ($matcher->matchTechnicalUrl($urlItem)) {
@@ -48,7 +48,7 @@ final class MatcherManager {
 
   public function matchUserTrackingUrls(UrlItemInfoBag $urlItemInfoBag): UrlItemInfoBag {
     $builder = UrlItemInfoBagBuilder::fromUrlItemInfoBag($urlItemInfoBag);
-    foreach ($urlItemInfoBag->urlItemInfosByUrl as $urlItemInfo) {
+    foreach ($urlItemInfoBag->urlItemInfos as $urlItemInfo) {
       $urlItem = $urlItemInfo->urlItem;
       foreach ($this->getMatchers() as $id => $matcher) {
         if ($matcher->matchUserTrackingUrl($urlItem)) {

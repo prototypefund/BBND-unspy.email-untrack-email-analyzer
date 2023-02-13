@@ -4,6 +4,8 @@ declare(strict_types=1);
 
 namespace Geeks4change\UntrackEmailAnalyzer\Analyzer2\Data\Header;
 
+use Geeks4change\UntrackEmailAnalyzer\Anon;
+
 final class HeaderItem {
 
   protected function __construct(
@@ -13,6 +15,11 @@ final class HeaderItem {
 
   public static function create(string $name, string $value) {
     return new self(strtolower($name), $value);
+  }
+
+  public function anonymize(): self {
+    return new self($this->name, Anon::header($this->value));
+
   }
 
 }

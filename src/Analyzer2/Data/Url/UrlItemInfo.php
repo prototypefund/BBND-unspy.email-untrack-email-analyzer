@@ -23,4 +23,15 @@ final class UrlItemInfo {
     public readonly ?array         $byDomainUrlMatchesById,
   ) {}
 
+  public function anonymize(): self {
+    return new self(
+      $this->urlItem->anonymize(),
+      $this->redirectInfo?->anonymize(),
+      $this->analyticsInfo,
+      $this->technicalUrlMatchesById,
+      $this->userTrackingUrlMatchesById,
+      $this->byDomainUrlMatchesById,
+    );
+  }
+
 }

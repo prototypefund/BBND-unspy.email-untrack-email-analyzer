@@ -13,4 +13,11 @@ final class HeaderItemInfoBag {
     public readonly array $infos,
   ) {}
 
+  public function anonymize(): self {
+    return new self(array_map(
+      fn(HeaderItemInfo $info) => $info->anonymize(),
+      $this->infos
+    ));
+  }
+
 }

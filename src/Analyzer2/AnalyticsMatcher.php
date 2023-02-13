@@ -17,13 +17,13 @@ final class AnalyticsMatcher {
 
   public function matchAnalyticsUrls(UrlItemInfoBag $urlItemInfoBag): UrlItemInfoBag {
     $builder = UrlItemInfoBagBuilder::fromUrlItemInfoBag($urlItemInfoBag);
-    foreach ($urlItemInfoBag->urlItemInfosByUrl as $urlItemInfo) {
+    foreach ($urlItemInfoBag->urlItemInfos as $urlItemInfo) {
       // Only look on links for now.
       if ($urlItemInfo->urlItem->type !== UrlItemType::Link) {
         continue;
       }
       $urlItem = $urlItemInfo->urlItem;
-      $redirect = $urlItemInfo->redirectInfo->redirect;
+      $redirect = $urlItemInfo->redirectInfo?->redirect;
       $effectiveUrl = $redirect ?: $urlItem->url;
       if ($match = $this->matchAnalyticsUrl($effectiveUrl)) {
         $builder->forUrlItem($urlItem)->setAnalyticsInfo($match);

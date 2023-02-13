@@ -22,4 +22,13 @@ final class ResultDetails {
     public readonly CnameChainList             $cnameChainList,
   ) {}
 
+  public function anonymize(): self {
+    return new self(
+      $this->dkimResult,
+      $this->headerItemInfoBag->anonymize(),
+      $this->urlItemInfoBag->anonymize(),
+      $this->cnameChainList,
+    );
+  }
+
 }

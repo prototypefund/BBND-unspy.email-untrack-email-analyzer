@@ -21,7 +21,6 @@ final class FullResult {
     public readonly ListInfo      $listInfo,
     public readonly MessageInfo   $messageInfo,
     public readonly ResultVerdict $verdict,
-    public readonly ResultSummary $summary,
     public readonly ResultDetails $details,
   ) {}
 
@@ -35,7 +34,7 @@ final class FullResult {
       $this->listInfo,
       $this->messageInfo,
       $this->verdict,
-      $this->summary,
+      $this->details->an
     );
   }
 

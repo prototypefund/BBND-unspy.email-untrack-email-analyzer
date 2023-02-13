@@ -9,7 +9,6 @@ use Geeks4change\UntrackEmailAnalyzer\Analyzer\DKIMSignatureValidator;
 use Geeks4change\UntrackEmailAnalyzer\Analyzer\ListInfoExtractor;
 use Geeks4change\UntrackEmailAnalyzer\Analyzer\MessageInfoExtractor;
 use Geeks4change\UntrackEmailAnalyzer\Analyzer\ResultSummaryExtractor;
-use Geeks4change\UntrackEmailAnalyzer\Analyzer\ResultVerdictExtractor;
 use Geeks4change\UntrackEmailAnalyzer\Analyzer2\Data\Url\UrlItemInfo;
 use Geeks4change\UntrackEmailAnalyzer\Analyzer2\Data\Url\UrlItemInfoBagBuilder;
 use Geeks4change\UntrackEmailAnalyzer\Analyzer2\ResultDetails\FullResult;
@@ -80,21 +79,22 @@ final class Analyzer2 {
         $cnameChainList,
       );
       dump($urlItemInfoBag4->anonymize());
-      exit;
 
-      $resultSummary = (new ResultSummaryExtractor)
-        ->extractResultSummary($resultDetails);
       $resultVerdict = (new ResultVerdictExtractor)
-        ->extractResultVerdict($resultSummary);
+        ->extractResultVerdict($resultDetails);
 
       $listInfo = (new ListInfoExtractor())->extract($message);
       $messageInfo = (new MessageInfoExtractor())->extract($message);
-      $analyzerResult = new FullResultWrapper($this->logger->freeze(), new FullResult($listInfo, $messageInfo, $resultVerdict, $resultSummary, $resultDetails));
+      $analyzerResult = new FullResultWrapper($this->logger->freeze(),
+        new FullResult($listInfo,
+          $messageInfo,
+          $resultVerdict,
+          $resultDetails));
     } catch (\Throwable $e) {
       if (!$catchAndLogExceptions) {
         throw new \RuntimeException('Rethrow', 0, $e);
       }
-      $this->logger->emergency("Exception: {$e->getMessage()}", ['trace' => $e->getTraceAsString()]);
+      $this->logger->critical("Exception: {$e->getMessage()}", ['trace' => $e->getTraceAsString()]);
       return new FullResultWrapper($this->logger->freeze(), NULL);
     }
 

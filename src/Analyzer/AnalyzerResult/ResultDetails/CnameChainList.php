@@ -12,7 +12,7 @@ namespace Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\ResultDetail
 final class CnameChainList implements \IteratorAggregate {
 
   /**
-   * @param list< \Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\ResultDetails\CnameChain > $chaneChainsByDomain
+   * @param array<string, \Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\ResultDetails\CnameChain> $chaneChainsByDomain
    */
   public function __construct(
     public readonly array $chaneChainsByDomain = []

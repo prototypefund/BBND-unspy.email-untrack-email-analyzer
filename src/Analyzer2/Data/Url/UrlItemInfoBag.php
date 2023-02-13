@@ -1,0 +1,42 @@
+<?php
+
+declare(strict_types=1);
+
+namespace Geeks4change\UntrackEmailAnalyzer\Analyzer2\Data\Url;
+
+final class UrlItemInfoBag {
+
+  /**
+   * @var array<string, \Geeks4change\UntrackEmailAnalyzer\Analyzer2\Data\Url\UrlItemInfo> $urlItemInfos
+   */
+  public readonly array $urlItemInfos;
+
+  /**
+   * @param array<string, \Geeks4change\UntrackEmailAnalyzer\Analyzer2\Data\Url\UrlItemInfo> $urlItemInfos
+   */
+  public function __construct(array $urlItemInfos) {
+    $urlItemInfosByUrl = [];
+    foreach ($urlItemInfos as $urlItemInfo) {
+      $urlItemInfosByUrl[$urlItemInfo->urlItem->url] = $urlItemInfo;
+    }
+    $this->urlItemInfos = $urlItemInfosByUrl;
+  }
+
+  public function filter(Callable $callable): self {
+    $urlItemInfos = array_filter($this->urlItemInfos, $callable);
+    return new self($urlItemInfos);
+  }
+
+  public function urlItems(): UrlItemBag {
+    $urlItems = array_map(fn(UrlItemInfo $info) => $info->urlItem, $this->urlItemInfos);
+    return new UrlItemBag($urlItems);
+  }
+
+  public function anonymize(): self {
+    return new self(array_map(
+      fn(UrlItemInfo $info) => $info->anonymize(),
+      $this->urlItemInfos
+    ));
+  }
+
+}

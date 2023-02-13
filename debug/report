@@ -19,6 +19,6 @@ if (!isset($fileNamePairs[$fileId])) {
 [$emailFile, $resultFile] = $fileNamePairs[$fileId];
 $fileContent = file_get_contents($emailFile);
 
-$analyzer = Api::getAnalyzer();
-$result = $analyzer->analyze($fileContent);
+$analyzer = Api::getAnalyzer2();
+$result = $analyzer->analyze($fileContent, FALSE);
 print (new TextReportCreator())->createTextReport($result->fullResult);

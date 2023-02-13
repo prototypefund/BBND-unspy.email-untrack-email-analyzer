@@ -6,10 +6,15 @@ namespace Geeks4change\UntrackEmailAnalyzer;
 
 use Geeks4change\UntrackEmailAnalyzer\Analyzer\Analyzer;
 use Geeks4change\UntrackEmailAnalyzer\Analyzer\RedirectDetector;
+use Geeks4change\UntrackEmailAnalyzer\Analyzer2\Analyzer2;
 use Geeks4change\UntrackEmailAnalyzer\RedirectResolver\NullRedirectResolver;
 use loophp\collection\Collection;
 
 final class Api {
+
+  public static function getAnalyzer2(): Analyzer2 {
+    return new Analyzer2();
+  }
 
   public static function getAnalyzer(): Analyzer {
     return new Analyzer(new RedirectDetector());

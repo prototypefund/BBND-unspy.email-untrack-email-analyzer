@@ -9,7 +9,9 @@ use Geeks4change\UntrackEmailAnalyzer\Matcher2\Matcher;
 final class HeaderItemMatch {
 
   public function __construct(
-    public readonly string $matcher,
+    public readonly string $matcherId,
+    // @fixme Add HeaderItemMatch::isMatch
+    public bool $isMatch,
   ) {}
 
 }

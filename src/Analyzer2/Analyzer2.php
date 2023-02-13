@@ -4,28 +4,21 @@ declare(strict_types=1);
 
 namespace Geeks4change\UntrackEmailAnalyzer\Analyzer2;
 
-use Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyticsDetector;
 use Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\AnalyzerLog\AnalyzerLogger;
-use Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\FullResult;
-use Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\FullResultWrapper;
-use Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\ResultDetails\ResultDetails;
-use Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\ResultDetails\TypedUrlList;
 use Geeks4change\UntrackEmailAnalyzer\Analyzer\DKIMSignatureValidator;
-use Geeks4change\UntrackEmailAnalyzer\Analyzer\DomainAliasesResultFetcher;
 use Geeks4change\UntrackEmailAnalyzer\Analyzer\ListInfoExtractor;
 use Geeks4change\UntrackEmailAnalyzer\Analyzer\MessageInfoExtractor;
-use Geeks4change\UntrackEmailAnalyzer\Analyzer\NewsletterServicesMatcher\UrlsMatcher\AllServicesLinkAndImageUrlListMatcher;
 use Geeks4change\UntrackEmailAnalyzer\Analyzer\ResultSummaryExtractor;
 use Geeks4change\UntrackEmailAnalyzer\Analyzer\ResultVerdictExtractor;
 use Geeks4change\UntrackEmailAnalyzer\Analyzer2\Data\Url\UrlItemInfo;
 use Geeks4change\UntrackEmailAnalyzer\Analyzer2\Data\Url\UrlItemInfoBagBuilder;
-use Geeks4change\UntrackEmailAnalyzer\Analyzer2\Data\Url\UrlItemMatchType\UnsubscribeMatch;
+use Geeks4change\UntrackEmailAnalyzer\Analyzer2\Data\Url\UrlItemMatchType\TechnicalUrlMatch;
 use Geeks4change\UntrackEmailAnalyzer\Analyzer2\Data\Url\UrlItemMatchType\UrlItemMatchBase;
+use Geeks4change\UntrackEmailAnalyzer\Analyzer2\ResultDetails\FullResult;
+use Geeks4change\UntrackEmailAnalyzer\Analyzer2\ResultDetails\FullResultWrapper;
+use Geeks4change\UntrackEmailAnalyzer\Analyzer2\ResultDetails\ResultDetails;
 use Geeks4change\UntrackEmailAnalyzer\Globals;
 use Geeks4change\UntrackEmailAnalyzer\Matcher2\MatcherManager;
-use Geeks4change\UntrackEmailAnalyzer\UrlExtractor\ImagesUrlExtractor;
-use Geeks4change\UntrackEmailAnalyzer\UrlExtractor\LinksUrlExtractor;
-use Geeks4change\UntrackEmailAnalyzer\UrlExtractor\PixelsUrlExtractor;
 use Symfony\Component\DomCrawler\Crawler;
 use ZBateson\MailMimeParser\MailMimeParser;
 
@@ -74,57 +67,24 @@ final class Analyzer2 {
       // - match urls for UserTracking
       // - match urls for Analytics
       $urlItemInfoBag0 = UrlItemInfoBagBuilder::fromUrlItemBag($urlItemBag)->freeze();
-      $urlItemInfoBag1 = $this->matcherManager->matchUnsubscribeUrls($urlItemInfoBag0);
-      $urlItemInfoBag2 = $this->matcherManager->matchUrls($urlItemInfoBag1);
+      $urlItemInfoBag1 = $this->matcherManager->matchTechnicalUrls($urlItemInfoBag0);
+      $urlItemInfoBag2 = $this->matcherManager->matchUserTrackingUrls($urlItemInfoBag1);
 
-      // Remove known unsubscribe urls from redirect checking.
-      $urlsToCrawlRedirect = $urlItemInfoBag2
-        ->filter(fn(UrlItemInfo $info) => !$info->filterMatches(fn(UrlItemMatchBase $match) => $match instanceof UnsubscribeMatch))
-        ->urlItems();
-
-      $redirects = $this->redirectCrawler->crawlRedirects($urlsToCrawlRedirect);
-      $urlItemInfoBag3 = $this->analyticsMatcher->matchAnalyticsUrls($urlItemInfoBag2, $redirects);
-
-
-      dump($urlItemInfoBag3);
-      exit();
-
-
-      // Crawl analytics for urls and their redirects.
-
-
-
-
-
-      // Extract links, images, pixels.
-      $linkUrls = (new LinksUrlExtractor($crawler))->extract();
-      $imageUrls = (new ImagesUrlExtractor($crawler))->extract();
-      $allLinkAndImageUrlsList = new TypedUrlList($linkUrls, $imageUrls);
-      $pixelsResult = (new PixelsUrlExtractor($crawler))->extract();
-
-      // Match link and image urls.
-      $matcher = new AllServicesLinkAndImageUrlListMatcher();
-      ['exact' => $exactMatches, 'domain' => $domainMatches]
-        = $matcher->generateMatches($allLinkAndImageUrlsList);
-
-      // Fetch all resolved aliases.
-      $domainAliasList = (new DomainAliasesResultFetcher())->fetch();
-
-      $urlsWithRedirectList = ($this->redirectDetector)->detectRedirect($allLinkAndImageUrlsList, $unsubscribeUrlList);
-      $urlWithAnalyticsList = (new AnalyticsDetector())->detectAnalytics($allLinkAndImageUrlsList);
+      // Remove known technical urls from redirect checking.
+      $isTechnicalUrl = fn(UrlItemMatchBase $match) => $match instanceof TechnicalUrlMatch;
+      $allowCrawling = fn(UrlItemInfo $urlItemInfo) => !$urlItemInfo->filterMatches($isTechnicalUrl);
+      $urlItemInfoBag3 = $this->redirectCrawler->crawlRedirects($urlItemInfoBag2, $allowCrawling);
+      $urlItemInfoBag4 = $this->analyticsMatcher->matchAnalyticsUrls($urlItemInfoBag3);
 
       $resultDetails = new ResultDetails(
         $dkimResult,
-        $headersResult,
-        $allLinkAndImageUrlsList,
-        $exactMatches,
-        $domainMatches,
-        $pixelsResult,
-        $unsubscribeUrlList,
-        $urlsWithRedirectList,
-        $urlWithAnalyticsList,
-        $domainAliasList
+        $headerItemInfoBag,
+        $urlItemBag,
+        $urlItemInfoBag4,
+        $cnameChainList,
       );
+      //dump($urlItemInfoBag4);
+      exit;
 
       $resultSummary = (new ResultSummaryExtractor)
         ->extractResultSummary($resultDetails);
@@ -134,7 +94,7 @@ final class Analyzer2 {
       $listInfo = (new ListInfoExtractor())->extract($message);
       $messageInfo = (new MessageInfoExtractor())->extract($message);
       $analyzerResult = new FullResultWrapper($this->logger->freeze(), new FullResult($listInfo, $messageInfo, $resultVerdict, $resultSummary, $resultDetails));
-    } catch (\xThrowable $e) {
+    } catch (\Throwable $e) {
       if (!$catchAndLogExceptions) {
         throw new \RuntimeException('Rethrow', 0, $e);
       }

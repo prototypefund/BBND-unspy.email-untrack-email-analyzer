@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace Geeks4change\UntrackEmailAnalyzer\Analyzer2\Data\Url;
 
-use Geeks4change\UntrackEmailAnalyzer\Analyzer2\Data\Url\UrlItemMatchType\UrlItemMatchBase;
+use Geeks4change\UntrackEmailAnalyzer\Analyzer2\Data\Url\UrlItemMatchType\RedirectInfo;
 use loophp\collection\Collection;
 
 final class UrlItemInfo {
@@ -14,6 +14,7 @@ final class UrlItemInfo {
    */
   public function __construct(
     public readonly UrlItem $urlItem,
+    public readonly ?RedirectInfo $redirectInfo,
     public readonly array   $matches,
   ) {}
 

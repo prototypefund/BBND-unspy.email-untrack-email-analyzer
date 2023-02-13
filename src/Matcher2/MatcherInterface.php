@@ -9,9 +9,9 @@ interface MatcherInterface {
 
   public function getId(): string;
 
-  public function matchHeader(HeaderItem $item): bool;
+  public function matchHeader(HeaderItem $item): ?bool;
 
-  public function matchUnsubscribeUrl(UrlItem $urlItem): bool;
+  public function matchTechnicalUrl(UrlItem $urlItem): bool;
 
   public function matchUserTrackingUrl(UrlItem $urlItem): bool;
 

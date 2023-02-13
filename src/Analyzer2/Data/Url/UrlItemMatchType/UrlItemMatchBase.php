@@ -11,7 +11,7 @@ abstract class UrlItemMatchBase {
   }
 
   public function isUnsubscribe(): bool {
-    return $this instanceof UnsubscribeMatch;
+    return $this instanceof TechnicalUrlMatch;
   }
 
   public function isAnalytics(): bool {

@@ -11,7 +11,7 @@ use Geeks4change\UntrackEmailAnalyzer\Analyzer2\Data\Header\HeaderItemMatch;
 use Geeks4change\UntrackEmailAnalyzer\Analyzer2\Data\Url\UrlItemInfoBag;
 use Geeks4change\UntrackEmailAnalyzer\Analyzer2\Data\Url\UrlItemInfoBagBuilder;
 use Geeks4change\UntrackEmailAnalyzer\Analyzer2\Data\Url\UrlItemMatchType\DomainMatch;
-use Geeks4change\UntrackEmailAnalyzer\Analyzer2\Data\Url\UrlItemMatchType\UnsubscribeMatch;
+use Geeks4change\UntrackEmailAnalyzer\Analyzer2\Data\Url\UrlItemMatchType\TechnicalUrlMatch;
 use Geeks4change\UntrackEmailAnalyzer\Analyzer2\Data\Url\UrlItemMatchType\UserTrackingMatch;
 
 final class MatcherManager {
@@ -22,32 +22,33 @@ final class MatcherManager {
 
   public function matchHeaders(HeaderItemBag $headerItemBag): HeaderItemInfoBag {
     $builder = HeaderItemInfoBagBuilder::fromHeaderItemBag($headerItemBag);
-    foreach ($this->getMatchers() as $id => $matcher) {
+    foreach ($this->getMatchers() as $matcherId => $matcher) {
       foreach ($headerItemBag->items as $item) {
-        if ($matcher->matchHeader($item)) {
-          $builder->addMatch($item, new HeaderItemMatch($id));
+        $match = $matcher->matchHeader($item);
+        if (isset($match)) {
+          $builder->addMatch($item, new HeaderItemMatch($matcherId, $match));
         }
       }
     }
     return $builder->freeze();
   }
 
-  public function matchUnsubscribeUrls(UrlItemInfoBag $urlItemInfoBag): UrlItemInfoBag {
+  public function matchTechnicalUrls(UrlItemInfoBag $urlItemInfoBag): UrlItemInfoBag {
     $builder = UrlItemInfoBagBuilder::fromUrlItemInfoBag($urlItemInfoBag);
-    foreach ($urlItemInfoBag->urlItemInfos as $urlItemInfo) {
+    foreach ($urlItemInfoBag->urlItemInfosByUrl as $urlItemInfo) {
       $urlItem = $urlItemInfo->urlItem;
       foreach ($this->getMatchers() as $id => $matcher) {
-        if ($matcher->matchUnsubscribeUrl($urlItem)) {
-          $builder->addMatch($urlItem, new UnsubscribeMatch($id));
+        if ($matcher->matchTechnicalUrl($urlItem)) {
+          $builder->addMatch($urlItem, new TechnicalUrlMatch($id));
         }
       }
     }
     return $builder->freeze();
   }
 
-  public function matchUrls(UrlItemInfoBag $urlItemInfoBag): UrlItemInfoBag {
+  public function matchUserTrackingUrls(UrlItemInfoBag $urlItemInfoBag): UrlItemInfoBag {
     $builder = UrlItemInfoBagBuilder::fromUrlItemInfoBag($urlItemInfoBag);
-    foreach ($urlItemInfoBag->urlItemInfos as $urlItemInfo) {
+    foreach ($urlItemInfoBag->urlItemInfosByUrl as $urlItemInfo) {
       $urlItem = $urlItemInfo->urlItem;
       foreach ($this->getMatchers() as $id => $matcher) {
         if ($matcher->matchUserTrackingUrl($urlItem)) {

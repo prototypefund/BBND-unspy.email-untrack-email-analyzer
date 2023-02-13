@@ -4,10 +4,10 @@ declare(strict_types=1);
 
 namespace Geeks4change\UntrackEmailAnalyzer\Analyzer2;
 
-use Geeks4change\UntrackEmailAnalyzer\Analyzer2\Data\Url\UrlItem;
-use Geeks4change\UntrackEmailAnalyzer\Analyzer2\Data\Url\UrlItemBag;
-use Geeks4change\UntrackEmailAnalyzer\Analyzer2\Data\Url\UrlRedirectBag;
-use Geeks4change\UntrackEmailAnalyzer\Analyzer2\Data\Url\UrlRedirectBagBuilder;
+use Geeks4change\UntrackEmailAnalyzer\Analyzer2\Data\Url\UrlItemInfo;
+use Geeks4change\UntrackEmailAnalyzer\Analyzer2\Data\Url\UrlItemInfoBag;
+use Geeks4change\UntrackEmailAnalyzer\Analyzer2\Data\Url\UrlItemInfoBagBuilder;
+use Geeks4change\UntrackEmailAnalyzer\Analyzer2\Data\Url\UrlItemMatchType\RedirectInfo;
 use Geeks4change\UntrackEmailAnalyzer\RedirectResolver\AgnosticRedirectResolverInterface;
 use Geeks4change\UntrackEmailAnalyzer\RedirectResolver\AsyncGuzzleAgnosticRedirectResolver;
 use loophp\collection\Collection;
@@ -22,17 +22,23 @@ final class UrlRedirectCrawler {
     $this->redirectResolver = $redirectResolver;
   }
 
-  public function crawlRedirects(UrlItemBag $urlItemBag): UrlRedirectBag {
-    $urls = Collection::fromIterable($urlItemBag->urlItems)
-      ->map(fn(UrlItem $urlItem) => $urlItem->url)
+  public function crawlRedirects(UrlItemInfoBag $urlItemInfoBag, Callable $allowCrawling): UrlItemInfoBag {
+    $urlsTOCrawl = Collection::fromIterable($urlItemInfoBag->urlItemInfosByUrl)
+      ->filter($allowCrawling)
+      ->map(fn(UrlItemInfo $urlItemInfo) => $urlItemInfo->urlItem->url)
       ->all();
-    $redirectMap = $this->redirectResolver?->resolveRedirects($urls) ?? [];
-    $urlRedirectBagBuilder = new UrlRedirectBagBuilder();
-    foreach ($urlItemBag->urlItems as $urlItem) {
-      $redirectUrl = $redirectMap[$urlItem->url] ?? NULL;
-      $urlRedirectBagBuilder->addUrlRedirect($urlItem->type, $urlItem->url, $redirectUrl);
+
+    $redirectMap = $this->redirectResolver?->resolveRedirects($urlsTOCrawl) ?? [];
+    $builder = UrlItemInfoBagBuilder::fromUrlItemInfoBag($urlItemInfoBag);
+
+    foreach ($urlItemInfoBag->urlItemInfosByUrl as $url => $info) {
+      $wasCrawled = in_array($url, $urlsTOCrawl);
+      $redirectUrl = $redirectMap[$url] ?? NULL;
+      $redirectInfo = new RedirectInfo($redirectUrl, $wasCrawled);
+      $builder->setRedirectInfo($urlItemInfoBag->forUrl($url)->urlItem, $redirectInfo);
+      $builder->addMatch($urlItemInfoBag->forUrl($url)->urlItem, $redirectInfo);
     }
-    return $urlRedirectBagBuilder->freeze();
+    return $builder->freeze();
   }
 
 }

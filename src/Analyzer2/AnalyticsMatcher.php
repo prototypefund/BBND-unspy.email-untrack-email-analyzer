@@ -4,41 +4,36 @@ declare(strict_types=1);
 
 namespace Geeks4change\UntrackEmailAnalyzer\Analyzer2;
 
-use Geeks4change\UntrackEmailAnalyzer\Analyzer2\Data\Url\UrlItem;
 use Geeks4change\UntrackEmailAnalyzer\Analyzer2\Data\Url\UrlItemInfoBag;
 use Geeks4change\UntrackEmailAnalyzer\Analyzer2\Data\Url\UrlItemInfoBagBuilder;
 use Geeks4change\UntrackEmailAnalyzer\Analyzer2\Data\Url\UrlItemMatchType\Analytics;
 use Geeks4change\UntrackEmailAnalyzer\Analyzer2\Data\Url\UrlItemMatchType\AnalyticsMatchType;
 use Geeks4change\UntrackEmailAnalyzer\Analyzer2\Data\Url\UrlItemType;
-use Geeks4change\UntrackEmailAnalyzer\Analyzer2\Data\Url\UrlRedirectBag;
 use GuzzleHttp\Psr7\Uri;
 
 final class AnalyticsMatcher {
 
   protected array $pseudonymousKeys;
 
-  public function matchAnalyticsUrls(UrlItemInfoBag $urlItemInfoBag, UrlRedirectBag $urlRedirectBag): UrlItemInfoBag {
+  public function matchAnalyticsUrls(UrlItemInfoBag $urlItemInfoBag): UrlItemInfoBag {
     $builder = UrlItemInfoBagBuilder::fromUrlItemInfoBag($urlItemInfoBag);
-    foreach ($urlItemInfoBag->urlItemInfos as $urlItemInfo) {
+    foreach ($urlItemInfoBag->urlItemInfosByUrl as $urlItemInfo) {
       // Only look on links for now.
       if ($urlItemInfo->urlItem->type !== UrlItemType::Link) {
         continue;
       }
       $urlItem = $urlItemInfo->urlItem;
-      $redirect = $urlRedirectBag->getRedirect($urlItem);
-      if ($redirect) {
-        // Only look in the effective url.
-        $effectiveUrlItem = $redirect->getEffectiveUrlItem();
-        if ($match = $this->matchAnalyticsUrl($effectiveUrlItem)) {
-          $builder->addMatch($urlItem, $match);
-        }
+      $redirect = $urlItemInfo->redirectInfo->redirect;
+      $effectiveUrl = $redirect ?: $urlItem->url;
+      if ($match = $this->matchAnalyticsUrl($effectiveUrl)) {
+        $builder->addMatch($urlItem, $match);
       }
     }
     return $builder->freeze();
   }
 
-  protected function matchAnalyticsUrl(UrlItem $urlItem): ?Analytics {
-    $queryKeys = array_keys($this->getQuery($urlItem));
+  protected function matchAnalyticsUrl(string $url): ?Analytics {
+    $queryKeys = array_keys($this->getQuery($url));
     if (!$queryKeys) {
       return NULL;
     }
@@ -53,8 +48,8 @@ final class AnalyticsMatcher {
     }
   }
 
-  protected function getQuery(UrlItem $urlItem): array {
-    $queryAsString = (new Uri($urlItem->url))
+  protected function getQuery(string $url): array {
+    $queryAsString = (new Uri($url))
       ->getQuery();
     parse_str($queryAsString, $queryAsArray);
     return $queryAsArray;

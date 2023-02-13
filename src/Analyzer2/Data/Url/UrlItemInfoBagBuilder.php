@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Geeks4change\UntrackEmailAnalyzer\Analyzer2\Data\Url;
 
+use Geeks4change\UntrackEmailAnalyzer\Analyzer2\Data\Url\UrlItemMatchType\RedirectInfo;
 use Geeks4change\UntrackEmailAnalyzer\Analyzer2\Data\Url\UrlItemMatchType\UrlItemMatchBase;
 
 /**
@@ -29,11 +30,11 @@ final class UrlItemInfoBagBuilder {
 
   public function withUrlItemBag(UrlItemBag $urlItemBag): self {
     $urlItemInfoBuildersByUrl = $this->urlItemInfoBuildersByUrl;
-    foreach ($urlItemBag->urlItems as $urlItem) {
+    foreach ($urlItemBag->urlItemsByUrl as $urlItem) {
       $url = $urlItem->url;
       // Extend urls if needed in wither.
       $urlItemInfoBuilder = $urlItemInfoBuildersByUrl[$url]
-        ?? ($urlItemInfoBuildersByUrl[$url] = new UrlItemInfoBuilder($urlItem));
+        ?? ($urlItemInfoBuildersByUrl[$url] = UrlItemInfoBuilder::create($urlItem));
     }
     return new self($urlItemInfoBuildersByUrl);
   }
@@ -44,11 +45,11 @@ final class UrlItemInfoBagBuilder {
 
   public function withUrlItemInfoBag(UrlItemInfoBag $urlItemInfoBag): self {
     $urlItemInfoBuildersByUrl = $this->urlItemInfoBuildersByUrl;
-    foreach ($urlItemInfoBag->urlItemInfos as $urlItemInfo) {
+    foreach ($urlItemInfoBag->urlItemInfosByUrl as $urlItemInfo) {
       $url = $urlItemInfo->urlItem->url;
       // Extend urls if needed in wither.
       $urlItemInfoBuilder = $urlItemInfoBuildersByUrl[$url]
-        ?? ($urlItemInfoBuildersByUrl[$url] = new UrlItemInfoBuilder($urlItemInfo->urlItem));
+        ?? ($urlItemInfoBuildersByUrl[$url] = UrlItemInfoBuilder::create($urlItemInfo->urlItem));
       foreach ($urlItemInfo->matches as $match) {
         $urlItemInfoBuilder->addMatch($match);
       }
@@ -61,6 +62,15 @@ final class UrlItemInfoBagBuilder {
     $urlItemInfoBuilder = $this->urlItemInfoBuildersByUrl[$urlItem->url]
       ?? throw new \UnexpectedValueException("Unexpected: {$urlItem->url}");
     $urlItemInfoBuilder->addMatch($match);
+  }
+
+  public function setRedirectInfo(UrlItem $urlItem, RedirectInfo $redirectInfo) {
+    $this->forUrl($urlItem->url)->setRedirectInfo($redirectInfo);
+  }
+
+  protected function forUrl(mixed $url): UrlItemInfoBuilder {
+    return $this->urlItemInfoBuildersByUrl[$url]
+      ?? throw new \UnexpectedValueException("No such key: $url");
   }
 
   public function freeze(): UrlItemInfoBag {

@@ -7,10 +7,11 @@ namespace Geeks4change\UntrackEmailAnalyzer\Analyzer2\Data\Url;
 final class UrlItemBag {
 
   /**
-   * @param list<\Geeks4change\UntrackEmailAnalyzer\Analyzer2\Data\Url\UrlItem> $urlItems
+   * @param list<\Geeks4change\UntrackEmailAnalyzer\Analyzer2\Data\Url\UrlItem> $urlItemsByUrl
    */
   public function __construct(
-    public readonly array $urlItems,
+    // @todo Ensure 'by url'.
+    public readonly array $urlItemsByUrl,
   ) {}
 
 }

@@ -57,7 +57,7 @@ final class ResultVerdictExtractor {
   private function extractUserTrackingProviders(UrlItemInfoBag $urlItemInfoBag): array {
     $providers = [];
     foreach ($urlItemInfoBag->urlItemInfos as $urlItemInfo) {
-      $providers = array_merge($providers, array_keys($urlItemInfo->userTrackingUrlMatchesById));
+      $providers = array_merge($providers, array_keys($urlItemInfo->userTrackingUrlMatchesById ?? []));
     }
     return array_unique($providers);
   }
@@ -65,7 +65,7 @@ final class ResultVerdictExtractor {
   private function extractByDomainProviders(UrlItemInfoBag $urlItemInfoBag): array {
     $providers = [];
     foreach ($urlItemInfoBag->urlItemInfos as $urlItemInfo) {
-      $providers = array_merge($providers, array_keys($urlItemInfo->userTrackingUrlMatchesById));
+      $providers = array_merge($providers, array_keys($urlItemInfo->userTrackingUrlMatchesById ?? []));
     }
     return array_unique($providers);
   }

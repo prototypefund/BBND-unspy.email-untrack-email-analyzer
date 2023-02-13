@@ -8,7 +8,6 @@ use Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\AnalyzerLog\Analyz
 use Geeks4change\UntrackEmailAnalyzer\Analyzer\DKIMSignatureValidator;
 use Geeks4change\UntrackEmailAnalyzer\Analyzer\ListInfoExtractor;
 use Geeks4change\UntrackEmailAnalyzer\Analyzer\MessageInfoExtractor;
-use Geeks4change\UntrackEmailAnalyzer\Analyzer\ResultSummaryExtractor;
 use Geeks4change\UntrackEmailAnalyzer\Analyzer2\Data\Url\UrlItemInfo;
 use Geeks4change\UntrackEmailAnalyzer\Analyzer2\Data\Url\UrlItemInfoBagBuilder;
 use Geeks4change\UntrackEmailAnalyzer\Analyzer2\ResultDetails\FullResult;
@@ -78,13 +77,16 @@ final class Analyzer2 {
         $urlItemInfoBag4,
         $cnameChainList,
       );
-      dump($urlItemInfoBag4->anonymize());
 
       $resultVerdict = (new ResultVerdictExtractor)
         ->extractResultVerdict($resultDetails);
 
       $listInfo = (new ListInfoExtractor())->extract($message);
       $messageInfo = (new MessageInfoExtractor())->extract($message);
+
+      $timestamp = (new \DateTime())->format('c'); // ISO8601
+      $this->logger->info("[$timestamp] Finished");
+
       $analyzerResult = new FullResultWrapper($this->logger->freeze(),
         new FullResult($listInfo,
           $messageInfo,
@@ -97,9 +99,6 @@ final class Analyzer2 {
       $this->logger->critical("Exception: {$e->getMessage()}", ['trace' => $e->getTraceAsString()]);
       return new FullResultWrapper($this->logger->freeze(), NULL);
     }
-
-    $timestamp = (new \DateTime())->format('c'); // ISO8601
-    $this->logger->info("[$timestamp] Finished");
 
     Globals::deleteAll();
     return $analyzerResult;

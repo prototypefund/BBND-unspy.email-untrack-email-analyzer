@@ -20,4 +20,28 @@ final class HeaderItemInfoBag {
     ));
   }
 
+  public function getProviderIds(): array {
+    return array_keys($this->getSummary());
+  }
+
+  public function getMatchingHeaderNames(string $providerId): array {
+    return $this->getSummary()[$providerId]['match'] ?? [];
+  }
+
+  public function getNonMatchingHeaderNames(string $providerId): array {
+    return $this->getSummary()[$providerId]['nomatch'] ?? [];
+  }
+
+  protected function getSummary(): array {
+    $summary = [];
+    foreach ($this->infos as $info) {
+      foreach ($info->matches as $matcherId => $match) {
+        $summary += [$matcherId => [[], []]];
+        $index = $match->isMatch ? 'match' : 'nomatch';
+        $summary[$matcherId][$index][] = $info->headerItem->name;
+      }
+    }
+    return $summary;
+  }
+
 }

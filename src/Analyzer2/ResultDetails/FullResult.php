@@ -34,7 +34,7 @@ final class FullResult {
       $this->listInfo,
       $this->messageInfo,
       $this->verdict,
-      $this->details->an
+      $this->details->anonymize(),
     );
   }
 

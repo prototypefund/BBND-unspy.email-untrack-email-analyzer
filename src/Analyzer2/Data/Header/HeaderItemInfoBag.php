@@ -21,7 +21,8 @@ final class HeaderItemInfoBag {
   }
 
   public function getProviderIds(): array {
-    return array_keys($this->getSummary());
+    $keys = array_keys($this->getSummary());
+    return $keys;
   }
 
   public function getMatchingHeaderNames(string $providerId): array {
@@ -35,10 +36,10 @@ final class HeaderItemInfoBag {
   protected function getSummary(): array {
     $summary = [];
     foreach ($this->infos as $info) {
-      foreach ($info->matches as $matcherId => $match) {
-        $summary += [$matcherId => [[], []]];
+      foreach ($info->matches as $match) {
+        $summary += [$match->matcherId => [[], []]];
         $index = $match->isMatch ? 'match' : 'nomatch';
-        $summary[$matcherId][$index][] = $info->headerItem->name;
+        $summary[$match->matcherId][$index][] = $info->headerItem->name;
       }
     }
     return $summary;

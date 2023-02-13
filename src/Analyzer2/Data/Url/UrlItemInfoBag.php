@@ -27,6 +27,14 @@ final class UrlItemInfoBag {
     return new self($urlItemInfos);
   }
 
+  public function getLinks(): self {
+    return $this->filter(fn(UrlItemInfo $info) => $info->urlItem->type === UrlItemType::Link);
+  }
+
+  public function getImages(): self {
+    return $this->filter(fn(UrlItemInfo $info) => $info->urlItem->type === UrlItemType::Image);
+  }
+
   public function urlItems(): UrlItemBag {
     $urlItems = array_map(fn(UrlItemInfo $info) => $info->urlItem, $this->urlItemInfos);
     return new UrlItemBag($urlItems);

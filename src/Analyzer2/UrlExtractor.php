@@ -13,13 +13,12 @@ final class UrlExtractor {
 
   public function extract(Crawler $crawler): UrlItemBag {
     $builder = new UrlItemBagBuilder();
-    foreach (UrlItemType::cases() as $urlType) {
-      $urlNodes = $crawler->filterXPath($urlType->getXpath());
-      foreach ($urlNodes as $urlNode) {
-        /** @noinspection PhpPossiblePolymorphicInvocationInspection */
-        $url = $urlNode->value;
-        $builder->addUrl($urlType, $url);
-      }
+    foreach ($crawler->filterXPath('//a[href]')->links() as $link) {
+      // @todo Add link text.
+      $builder->addUrl(UrlItemType::Link, $link->getUri(), $link->getNode()->textContent);
+    }
+    foreach ($crawler->filterXPath('//img[src]')->images() as $image) {
+      $builder->addUrl(UrlItemType::Image, $image->getUri());
     }
     return $builder->freeze();
   }

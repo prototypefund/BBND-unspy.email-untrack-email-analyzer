@@ -11,9 +11,9 @@ fullResult:
     timeStamp: 1673950647
   verdict:
     matchLevel:
-      name: Unlikely
-      value: unlikely
-    serviceName: null
+      name: Sure
+      value: sure
+    serviceName: mailchimp
   details:
     dkimResult:
       status:
@@ -96,7 +96,68 @@ fullResult:
               matcherId: mailchimp
               isMatch: true
     urlItemInfoBag:
-      urlItemInfos: {  }
+      urlItemInfos:
+        -
+          urlItem:
+            url: 'https://schreibsuchti.us3.list-manage.com/track/click?u=5e78d7ef2297cc80842b7591e&id=c3569d2df3&e=6496a8003f'
+            text: 'Das E-Mail-Money-System'
+          redirectInfo:
+            redirect: null
+          analyticsInfo: null
+          technicalUrlMatchesById: null
+          userTrackingUrlMatchesById:
+            mailchimp:
+              matcherId: mailchimp
+          byDomainUrlMatchesById: null
+        -
+          urlItem:
+            url: 'https://schreibsuchti.us3.list-manage.com/track/click?u=5e78d7ef2297cc80842b7591e&id=f74d35f6b6&e=6496a8003f'
+            text: 'Das E-Mail-Money-System'
+          redirectInfo:
+            redirect: null
+          analyticsInfo: null
+          technicalUrlMatchesById: null
+          userTrackingUrlMatchesById:
+            mailchimp:
+              matcherId: mailchimp
+          byDomainUrlMatchesById: null
+        -
+          urlItem:
+            url: 'https://schreibsuchti.us3.list-manage.com/vcard?u=5e78d7ef2297cc80842b7591e&id=93b720b585'
+            text: 'Zu Kontakten hinzufügen'
+          redirectInfo: null
+          analyticsInfo: null
+          technicalUrlMatchesById:
+            mailchimp:
+              matcherId: mailchimp
+          userTrackingUrlMatchesById: null
+          byDomainUrlMatchesById:
+            mailchimp:
+              matcherId: mailchimp
+        -
+          urlItem:
+            url: 'https://schreibsuchti.us3.list-manage.com/unsubscribe?u=5e78d7ef2297cc80842b7591e&id=93b720b585&e=6496a8003f&c=2ed1232679'
+            text: abmelden
+          redirectInfo: null
+          analyticsInfo: null
+          technicalUrlMatchesById:
+            mailchimp:
+              matcherId: mailchimp
+          userTrackingUrlMatchesById: null
+          byDomainUrlMatchesById:
+            mailchimp:
+              matcherId: mailchimp
+        -
+          urlItem:
+            url: 'https://schreibsuchti.us3.list-manage.com/track/open.php?u=5e78d7ef2297cc80842b7591e&id=2ed1232679&e=6496a8003f'
+          redirectInfo:
+            redirect: null
+          analyticsInfo: null
+          technicalUrlMatchesById: null
+          userTrackingUrlMatchesById: null
+          byDomainUrlMatchesById:
+            mailchimp:
+              matcherId: mailchimp
     cnameChainList:
       chaneChainsByDomain:
         5e78d7ef2297cc80842b7591e.6496a8003f.20230117101720.2ed1232679.76ae8c9f@mail5.suw111.mcdlv.net:

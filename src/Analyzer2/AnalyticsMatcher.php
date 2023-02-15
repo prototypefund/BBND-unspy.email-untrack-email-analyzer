@@ -19,7 +19,7 @@ final class AnalyticsMatcher {
     $builder = UrlItemInfoBagBuilder::fromUrlItemInfoBag($urlItemInfoBag);
     foreach ($urlItemInfoBag->urlItemInfos as $urlItemInfo) {
       // Only look on links for now.
-      if ($urlItemInfo->urlItem->type !== UrlItemType::Link) {
+      if (!$urlItemInfo->urlItem instanceof LinkUrl) {
         continue;
       }
       $urlItem = $urlItemInfo->urlItem;

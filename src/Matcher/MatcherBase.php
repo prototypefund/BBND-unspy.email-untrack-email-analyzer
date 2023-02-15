@@ -7,7 +7,6 @@ use Geeks4change\UntrackEmailAnalyzer\CnameResolver;
 use Geeks4change\UntrackEmailAnalyzer\Globals;
 use GuzzleHttp\Psr7\Uri;
 use loophp\collection\Collection;
-use function Geeks4change\UntrackEmailAnalyzer\Matcher2\str_ends_with;
 
 abstract class MatcherBase {
 

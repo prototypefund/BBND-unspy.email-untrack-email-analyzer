@@ -10,9 +10,6 @@ use Geeks4change\UntrackEmailAnalyzer\Analyzer\Result\Url\UrlItem;
 use Geeks4change\UntrackEmailAnalyzer\Matcher\MatcherBase;
 use Geeks4change\UntrackEmailAnalyzer\Matcher\MatcherInterface;
 use Geeks4change\UntrackEmailAnalyzer\Utility\UrlMatcher;
-use function Geeks4change\UntrackEmailAnalyzer\Matcher2\Mailchimp\str_contains;
-use function Geeks4change\UntrackEmailAnalyzer\Matcher2\Mailchimp\str_ends_with;
-use function Geeks4change\UntrackEmailAnalyzer\Matcher2\Mailchimp\str_starts_with;
 
 final class MailchimpMatcher extends MatcherBase implements MatcherInterface {
 

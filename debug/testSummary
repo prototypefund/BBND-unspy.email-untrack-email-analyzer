@@ -4,6 +4,7 @@
 use Geeks4change\UntrackEmailAnalyzer\Analyzer\Analyzer;
 use Geeks4change\UntrackEmailAnalyzer\Api;
 use Geeks4change\UntrackEmailAnalyzer\DirInfo;
+use Geeks4change\UntrackEmailAnalyzer\Utility\ObjectToArray;
 use Symfony\Component\Yaml\Yaml;
 
 include 'vendor/autoload.php';
@@ -28,7 +29,7 @@ if (!isset($fileNamePairs[$fileId])) {
 $fileContent = file_get_contents($emailFile);
 $analyzer = Api::getDebugAnalyzer();
 $result = $analyzer->analyze($fileContent);
-$testSummary = $result->resultDetails->getTestSummary();
+$testSummary = ObjectToArray::convert($result);
 $expectedResult = Yaml::dump($testSummary, 99, 2);
 print $expectedResult;
 if ($update) {

@@ -20,6 +20,7 @@ use ZBateson\MailMimeParser\MailMimeParser;
 
 final class Analyzer2 {
 
+  protected \DateTime $dateTime;
 
   public function __construct(
     protected AnalyzerLogBuilderInterface $logger = new AnalyzerLogger(),
@@ -29,10 +30,22 @@ final class Analyzer2 {
     protected MatcherManager              $matcherManager = new MatcherManager(),
     protected AnalyticsMatcher            $analyticsMatcher = new AnalyticsMatcher(),
     protected CnameDumper                 $cnameDumper = new CnameDumper(),
-  ) {}
+  ) {
+    $this->dateTime = (new \DateTime())
+      // Use zulu time to not get test issues.
+      ->setTimezone(new \DateTimeZone('utc'));
+  }
+
+  public function setUnitTestMode(): self {
+    $this->redirectCrawler->setRedirectResolver(NULL);
+    $this->dateTime = (new \DateTime())->setTimestamp(0)
+      // Use zulu time to not get test issues.
+      ->setTimezone(new \DateTimeZone('utc'));
+    return $this;
+  }
 
   public function analyze(string $rawMessage, bool $catchAndLogExceptions = TRUE): FullResultWrapper {
-    $timestamp = (new \DateTime())->format('c'); // ISO8601
+    $timestamp = $this->dateTime->format('c'); // ISO8601
     $this->logger->info("[$timestamp] Start");
 
     try {
@@ -84,7 +97,7 @@ final class Analyzer2 {
       $listInfo = (new ListInfoExtractor())->extract($message);
       $messageInfo = (new MessageInfoExtractor())->extract($message);
 
-      $timestamp = (new \DateTime())->format('c'); // ISO8601
+      $timestamp = $this->dateTime->format('c'); // ISO8601
       $this->logger->info("[$timestamp] Finished");
 
       $analyzerResult = new FullResultWrapper($this->logger->freeze(),

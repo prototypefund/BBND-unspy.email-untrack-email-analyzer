@@ -20,8 +20,8 @@ final class Api {
     return new Analyzer(new RedirectDetector());
   }
 
-  public static function getDebugAnalyzer(): Analyzer {
-    return new Analyzer(new RedirectDetector(new NullRedirectResolver()));
+  public static function getDebugAnalyzer(): Analyzer2 {
+    return (new Analyzer2())->setUnitTestMode();
   }
 
   public static function getTestEmailFileNames(): array {

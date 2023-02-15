@@ -1,29 +1,112 @@
-headersResult:
-  _keys: mailchimp
-  mailchimp:
-    _countTotal: 9
-    _countMatch: 6
-allLinkAndImageUrlsList:
-  typeLink:
-    _count: 4
-  typerImage:
-    _count: 1
-exactMatches:
-  mailchimp:
-    typeLink:
-      _count: 4
-    typerImage:
-      _count: 1
-domainMatches: {  }
-pixelsList:
-  _count: 1
-urlsWithRedirectList:
-  typeLink:
-    _count: 0
-  typeImage:
-    _count: 0
-urlsWithAnalyticsList:
-  typeLink:
-    _count: 0
-  typerImage:
-    _count: 0
+log:
+  messages:
+    - '[1970-01-01T00:00:00+00:00] Start'
+    - '[1970-01-01T00:00:00+00:00] Finished'
+fullResult:
+  listInfo:
+    emailLabel: 'Walter (Schreibsuchti)'
+    emailAddress: walterepp@schreibsuchti.de
+    listId: 5e78d7ef2297cc80842b7591e.227233.list-id.mcsv.net
+  messageInfo:
+    timeStamp: 1673950647
+  verdict:
+    matchLevel:
+      name: Unlikely
+      value: unlikely
+    serviceName: null
+  details:
+    dkimResult:
+      status:
+        name: ValidWithWarnings
+        value: valid_with_warnings
+      summaryLines:
+        - 'Signature 1: Signature has expired. DKIM signature verified successfully!'
+    headerItemInfoBag:
+      infos:
+        -
+          headerItem:
+            name: message-id
+            value: 5e78d7ef2297cc80842b7591e.6496a8003f.20230117101720.2ed1232679.76ae8c9f@mail5.suw111.mcdlv.net
+          matches:
+            -
+              matcherId: mailchimp
+              isMatch: true
+        -
+          headerItem:
+            name: x-mailer
+            value: 'Mailchimp Mailer - **CID2ed12326796496a8003f**'
+          matches:
+            -
+              matcherId: mailchimp
+              isMatch: true
+        -
+          headerItem:
+            name: x-campaign
+            value: mailchimp5e78d7ef2297cc80842b7591e.2ed1232679
+          matches:
+            -
+              matcherId: mailchimp
+              isMatch: true
+        -
+          headerItem:
+            name: x-campaignid
+            value: mailchimp5e78d7ef2297cc80842b7591e.2ed1232679
+          matches:
+            -
+              matcherId: mailchimp
+              isMatch: true
+        -
+          headerItem:
+            name: x-report-abuse
+            value: 'Please report abuse for this campaign here: https://mailchimp.com/contact/abuse/?u=5e78d7ef2297cc80842b7591e&id=2ed1232679&e=6496a8003f'
+          matches:
+            -
+              matcherId: mailchimp
+              isMatch: true
+        -
+          headerItem:
+            name: x-mc-user
+            value: 5e78d7ef2297cc80842b7591e
+          matches:
+            -
+              matcherId: mailchimp
+              isMatch: true
+        -
+          headerItem:
+            name: feedback-id
+            value: '23225407:23225407.1113764:us3:mc'
+          matches:
+            -
+              matcherId: mailchimp
+              isMatch: true
+        -
+          headerItem:
+            name: list-id
+            value: '5e78d7ef2297cc80842b7591emc list <5e78d7ef2297cc80842b7591e.227233.list-id.mcsv.net>'
+          matches:
+            -
+              matcherId: mailchimp
+              isMatch: true
+        -
+          headerItem:
+            name: list-unsubscribe
+            value: '<https://schreibsuchti.us3.list-manage.com/unsubscribe?u=5e78d7ef2297cc80842b7591e&id=93b720b585&e=6496a8003f&c=2ed1232679>, <mailto:unsubscribe-mc.us3_5e78d7ef2297cc80842b7591e.2ed1232679-6496a8003f@unsubscribe.mailchimpapp.net?subject=unsubscribe>'
+          matches:
+            -
+              matcherId: mailchimp
+              isMatch: true
+    urlItemInfoBag:
+      urlItemInfos: {  }
+    cnameChainList:
+      chaneChainsByDomain:
+        5e78d7ef2297cc80842b7591e.6496a8003f.20230117101720.2ed1232679.76ae8c9f@mail5.suw111.mcdlv.net:
+          aliasDomains: {  }
+          domain: 5e78d7ef2297cc80842b7591e.6496a8003f.20230117101720.2ed1232679.76ae8c9f@mail5.suw111.mcdlv.net
+        5e78d7ef2297cc80842b7591e.227233.list-id.mcsv.net:
+          aliasDomains: {  }
+          domain: 5e78d7ef2297cc80842b7591e.227233.list-id.mcsv.net
+        schreibsuchti.us3.list-manage.com:
+          aliasDomains:
+            - swc.list-manage.com.edgekey.net
+            - e13829.x.akamaiedge.net
+          domain: schreibsuchti.us3.list-manage.com

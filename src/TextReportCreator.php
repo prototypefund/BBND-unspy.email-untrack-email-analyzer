@@ -5,7 +5,7 @@ declare(strict_types=1);
 namespace Geeks4change\UntrackEmailAnalyzer;
 
 use Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\FullResult;
-use Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\PersistentResult;
+use Geeks4change\UntrackEmailAnalyzer\Analyzer2\Result\PersistentResult;
 use Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\ResultDetails\TypedUrlListPerProvider;
 use Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\ResultDetails\UrlList;
 use Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\ResultDetails\UrlRedirectChainList;

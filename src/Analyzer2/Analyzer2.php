@@ -4,10 +4,10 @@ declare(strict_types=1);
 
 namespace Geeks4change\UntrackEmailAnalyzer\Analyzer2;
 
-use Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\AnalyzerLog\AnalyzerLogger;
-use Geeks4change\UntrackEmailAnalyzer\Analyzer\DKIMSignatureValidator;
-use Geeks4change\UntrackEmailAnalyzer\Analyzer\ListInfoExtractor;
-use Geeks4change\UntrackEmailAnalyzer\Analyzer\MessageInfoExtractor;
+use Geeks4change\UntrackEmailAnalyzer\Analyzer2\Log\AnalyzerLogger;
+use Geeks4change\UntrackEmailAnalyzer\Analyzer2\DKIMSignatureValidator;
+use Geeks4change\UntrackEmailAnalyzer\Analyzer2\ListInfoExtractor;
+use Geeks4change\UntrackEmailAnalyzer\Analyzer2\MessageInfoExtractor;
 use Geeks4change\UntrackEmailAnalyzer\Analyzer2\Data\Url\UrlItemInfo;
 use Geeks4change\UntrackEmailAnalyzer\Analyzer2\Data\Url\UrlItemInfoBagBuilder;
 use Geeks4change\UntrackEmailAnalyzer\Analyzer2\ResultDetails\FullResult;

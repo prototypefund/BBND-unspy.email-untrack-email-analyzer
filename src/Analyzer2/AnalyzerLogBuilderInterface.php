@@ -2,7 +2,7 @@
 
 namespace Geeks4change\UntrackEmailAnalyzer\Analyzer2;
 
-use Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\AnalyzerLog\AnalyzerLog;
+use Geeks4change\UntrackEmailAnalyzer\Analyzer2\Log\AnalyzerLog;
 use Psr\Log\LoggerInterface;
 
 interface AnalyzerLogBuilderInterface extends LoggerInterface {

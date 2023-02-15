@@ -4,11 +4,9 @@ declare(strict_types=1);
 
 namespace Geeks4change\UntrackEmailAnalyzer\Analyzer2\ResultDetails;
 
-use Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\ListInfo\ListInfo;
-use Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\MessageInfo;
-use Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\PersistentResult;
-use Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\ResultSummary\ResultSummary;
-use Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\ResultVerdict\ResultVerdict;
+use Geeks4change\UntrackEmailAnalyzer\Analyzer2\Result\MessageInfo;
+use Geeks4change\UntrackEmailAnalyzer\Analyzer2\Result\PersistentResult;
+use Geeks4change\UntrackEmailAnalyzer\Analyzer2\Verdict\ResultVerdict;
 
 /**
  * Analyzer result.

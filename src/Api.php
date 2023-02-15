@@ -4,17 +4,17 @@ declare(strict_types=1);
 
 namespace Geeks4change\UntrackEmailAnalyzer;
 
-use Geeks4change\UntrackEmailAnalyzer\Analyzer2\Analyzer2;
+use Geeks4change\UntrackEmailAnalyzer\Analyzer\Analyzer;
 use loophp\collection\Collection;
 
 final class Api {
 
-  public static function getAnalyzer2(): Analyzer2 {
-    return new Analyzer2();
+  public static function getAnalyzer2(): Analyzer {
+    return new Analyzer();
   }
 
-  public static function getDebugAnalyzer(): Analyzer2 {
-    return (new Analyzer2())->setUnitTestMode();
+  public static function getDebugAnalyzer(): Analyzer {
+    return (new Analyzer())->setUnitTestMode();
   }
 
   public static function getTestEmailFileNames(): array {

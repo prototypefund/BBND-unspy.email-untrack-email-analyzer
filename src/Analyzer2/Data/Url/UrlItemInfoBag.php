@@ -7,19 +7,15 @@ namespace Geeks4change\UntrackEmailAnalyzer\Analyzer2\Data\Url;
 final class UrlItemInfoBag {
 
   /**
-   * @var array<string, \Geeks4change\UntrackEmailAnalyzer\Analyzer2\Data\Url\UrlItemInfo> $urlItemInfos
+   * @var list<\Geeks4change\UntrackEmailAnalyzer\Analyzer2\Data\Url\UrlItemInfo> $urlItemInfos
    */
   public readonly array $urlItemInfos;
 
   /**
-   * @param array<string, \Geeks4change\UntrackEmailAnalyzer\Analyzer2\Data\Url\UrlItemInfo> $urlItemInfos
+   * @param list<\Geeks4change\UntrackEmailAnalyzer\Analyzer2\Data\Url\UrlItemInfo> $urlItemInfos
    */
   public function __construct(array $urlItemInfos) {
-    $urlItemInfosByUrl = [];
-    foreach ($urlItemInfos as $urlItemInfo) {
-      $urlItemInfosByUrl[$urlItemInfo->urlItem->url] = $urlItemInfo;
-    }
-    $this->urlItemInfos = $urlItemInfosByUrl;
+    $this->urlItemInfos = array_values($urlItemInfos);
   }
 
   public function filter(Callable $callable): self {

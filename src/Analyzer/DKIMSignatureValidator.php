@@ -67,9 +67,9 @@ final class DKIMSignatureValidator {
     }
     $messageStatus = Max::max(0, ...$headerStatusList);
     return [
-      DKIMStatusEnum::Red,
-      DKIMStatusEnum::Yellow,
-      DKIMStatusEnum::Green
+      DKIMStatusEnum::Invalid,
+      DKIMStatusEnum::ValidWithWarnings,
+      DKIMStatusEnum::Valid
     ][$messageStatus];
   }
 

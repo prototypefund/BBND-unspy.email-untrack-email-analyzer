@@ -4,14 +4,14 @@ declare(strict_types=1);
 namespace Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\ResultDetails;
 
 enum DKIMStatusEnum: string {
-  case Green = 'green';
-  case Yellow = 'yellow';
-  case Red = 'red';
+  case Valid = 'valid';
+  case ValidWithWarnings = 'valid_with_warnings';
+  case Invalid = 'red';
 
   public function isValid(): bool {
     return match ($this) {
-      self::Green, self::Yellow => TRUE,
-      self::Red => FALSE,
+      self::Valid, self::ValidWithWarnings => TRUE,
+      self::Invalid => FALSE,
     };
   }
 

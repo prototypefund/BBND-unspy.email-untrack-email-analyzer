@@ -14,11 +14,11 @@ final class UrlExtractor {
 
   public function extract(Crawler $crawler): UrlItemBag {
     $builder = new UrlItemBagBuilder();
-    foreach ($crawler->filterXPath('//a[href]')->links() as $link) {
+    foreach ($crawler->filterXPath('//a[@href]')->links() as $link) {
       // @todo Add link text.
       $builder->addUrlItem(new LinkUrl($link->getUri(), $link->getNode()->textContent));
     }
-    foreach ($crawler->filterXPath('//img[src]')->images() as $image) {
+    foreach ($crawler->filterXPath('//img[@src]')->images() as $image) {
       $builder->addUrlItem(new ImageUrl($image->getUri()));
     }
     return $builder->freeze();

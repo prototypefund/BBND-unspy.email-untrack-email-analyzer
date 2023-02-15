@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace Geeks4change\UntrackEmailAnalyzer\Analyzer\Result;
 
-use Geeks4change\UntrackEmailAnalyzer\Analyzer\AnalyzerResult\PersistentResultWrapper;
+use Geeks4change\UntrackEmailAnalyzer\Analyzer\Result\PersistentResultWrapper;
 use Geeks4change\UntrackEmailAnalyzer\Analyzer\Log\AnalyzerLog;
 
 /**

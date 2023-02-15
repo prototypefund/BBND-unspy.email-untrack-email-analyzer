@@ -6,16 +6,14 @@ namespace Geeks4change\UntrackEmailAnalyzer\Analyzer2\Data\Url;
 
 use Geeks4change\UntrackEmailAnalyzer\Anon;
 
-final class UrlItem {
+abstract class UrlItem {
 
   public function __construct(
-    public readonly UrlItemType $type,
     public readonly string      $url,
   ) {}
 
   public function anonymize(): self {
-    return new self(
-      $this->type,
+    return new static(
       Anon::url($this->url),
     );
   }

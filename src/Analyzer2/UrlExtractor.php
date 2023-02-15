@@ -4,6 +4,8 @@ declare(strict_types=1);
 
 namespace Geeks4change\UntrackEmailAnalyzer\Analyzer2;
 
+use Geeks4change\UntrackEmailAnalyzer\Analyzer2\Data\ImageUrl;
+use Geeks4change\UntrackEmailAnalyzer\Analyzer2\Data\LinkUrl;
 use Geeks4change\UntrackEmailAnalyzer\Analyzer2\Data\Url\UrlItemBag;
 use Geeks4change\UntrackEmailAnalyzer\Analyzer2\Data\Url\UrlItemBagBuilder;
 use Geeks4change\UntrackEmailAnalyzer\Analyzer2\Data\Url\UrlItemType;
@@ -15,10 +17,10 @@ final class UrlExtractor {
     $builder = new UrlItemBagBuilder();
     foreach ($crawler->filterXPath('//a[href]')->links() as $link) {
       // @todo Add link text.
-      $builder->addUrl(UrlItemType::Link, $link->getUri(), $link->getNode()->textContent);
+      $builder->addUrlItem(new LinkUrl(UrlItemType::Link, $link->getUri(), $link->getNode()->textContent));
     }
     foreach ($crawler->filterXPath('//img[src]')->images() as $image) {
-      $builder->addUrl(UrlItemType::Image, $image->getUri());
+      $builder->addUrlItem(new ImageUrl(UrlItemType::Image, $image->getUri()));
     }
     return $builder->freeze();
   }

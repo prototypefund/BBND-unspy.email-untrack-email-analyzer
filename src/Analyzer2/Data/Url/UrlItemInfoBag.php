@@ -4,6 +4,9 @@ declare(strict_types=1);
 
 namespace Geeks4change\UntrackEmailAnalyzer\Analyzer2\Data\Url;
 
+use Geeks4change\UntrackEmailAnalyzer\Analyzer2\Data\ImageUrl;
+use Geeks4change\UntrackEmailAnalyzer\Analyzer2\Data\LinkUrl;
+
 final class UrlItemInfoBag {
 
   /**
@@ -24,11 +27,11 @@ final class UrlItemInfoBag {
   }
 
   public function getLinks(): self {
-    return $this->filter(fn(UrlItemInfo $info) => $info->urlItem->type === UrlItemType::Link);
+    return $this->filter(fn(UrlItemInfo $info) => $info->urlItem instanceof LinkUrl);
   }
 
   public function getImages(): self {
-    return $this->filter(fn(UrlItemInfo $info) => $info->urlItem->type === UrlItemType::Image);
+    return $this->filter(fn(UrlItemInfo $info) => $info->urlItem instanceof ImageUrl);
   }
 
   public function urlItems(): UrlItemBag {

@@ -10,8 +10,8 @@ final class UrlItemBagBuilder {
 
   public function __construct() {}
 
-  public function addUrl(UrlItemType $urlType, string $url) {
-    $this->urls[$url] = new UrlItem($urlType, $url);
+  public function addUrlItem(UrlItem $urlItem) {
+    $this->urls[$urlItem->url] = $urlItem;
   }
 
   public function freeze(): UrlItemBag {

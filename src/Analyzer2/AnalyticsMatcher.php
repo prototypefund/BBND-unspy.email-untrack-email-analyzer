@@ -4,11 +4,11 @@ declare(strict_types=1);
 
 namespace Geeks4change\UntrackEmailAnalyzer\Analyzer2;
 
+use Geeks4change\UntrackEmailAnalyzer\Analyzer2\Data\LinkUrl;
 use Geeks4change\UntrackEmailAnalyzer\Analyzer2\Data\Url\UrlItemInfoBag;
 use Geeks4change\UntrackEmailAnalyzer\Analyzer2\Data\Url\UrlItemInfoBagBuilder;
-use Geeks4change\UntrackEmailAnalyzer\Analyzer2\Data\Url\UrlItemMatchType\AnalyticsInfo;
-use Geeks4change\UntrackEmailAnalyzer\Analyzer2\Data\Url\UrlItemMatchType\AnalyticsMatchType;
-use Geeks4change\UntrackEmailAnalyzer\Analyzer2\Data\Url\UrlItemType;
+use Geeks4change\UntrackEmailAnalyzer\Analyzer2\Data\Url\Analytics\AnalyticsMatch;
+use Geeks4change\UntrackEmailAnalyzer\Analyzer2\Data\Url\Analytics\AnalyticsMatchType;
 use GuzzleHttp\Psr7\Uri;
 
 final class AnalyticsMatcher {
@@ -32,19 +32,19 @@ final class AnalyticsMatcher {
     return $builder->freeze();
   }
 
-  protected function matchAnalyticsUrl(string $url): ?AnalyticsInfo {
+  protected function matchAnalyticsUrl(string $url): ?AnalyticsMatch {
     $queryKeys = array_keys($this->getQuery($url));
     if (!$queryKeys) {
       return NULL;
     }
     elseif (array_intersect($queryKeys, $this->getUserTrackingKeys())) {
-      return new AnalyticsInfo(AnalyticsMatchType::LooksLikeUserTracking, $queryKeys);
+      return new AnalyticsMatch(AnalyticsMatchType::LooksLikeUserTracking, $queryKeys);
     }
     elseif (array_diff($queryKeys, $this->getPseudonymousKeys())) {
-      return new AnalyticsInfo(AnalyticsMatchType::NeedsResearch, $queryKeys);
+      return new AnalyticsMatch(AnalyticsMatchType::NeedsResearch, $queryKeys);
     }
     else {
-      return new AnalyticsInfo(AnalyticsMatchType::LooksHarmless, $queryKeys);
+      return new AnalyticsMatch(AnalyticsMatchType::LooksHarmless, $queryKeys);
     }
   }
 

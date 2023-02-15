@@ -76,18 +76,17 @@ final class Analyzer2 {
       // - match urls for UserTracking
       // - match urls for Analytics
       $urlItemInfoBag0 = UrlItemInfoBagBuilder::fromUrlItemBag($urlItemBag)->freeze();
-      $urlItemInfoBag1 = $this->matcherManager->matchTechnicalUrls($urlItemInfoBag0);
-      $urlItemInfoBag2 = $this->matcherManager->matchUserTrackingUrls($urlItemInfoBag1);
+      $urlItemInfoBag1 = $this->matcherManager->matchUrls($urlItemInfoBag0);
 
       // Remove known technical urls from redirect checking.
-      $allowCrawling = fn(UrlItemInfo $urlItemInfo) => !$urlItemInfo->technicalUrlMatchesById;
-      $urlItemInfoBag3 = $this->redirectCrawler->crawlRedirects($urlItemInfoBag2, $allowCrawling);
-      $urlItemInfoBag4 = $this->analyticsMatcher->matchAnalyticsUrls($urlItemInfoBag3);
+      $allowCrawling = fn(UrlItemInfo $urlItemInfo) => $urlItemInfo->getNoRedirectCheckProviderIds();
+      $urlItemInfoBag2 = $this->redirectCrawler->crawlRedirects($urlItemInfoBag1, $allowCrawling);
+      $urlItemInfoBag3 = $this->analyticsMatcher->matchAnalyticsUrls($urlItemInfoBag2);
 
       $resultDetails = new ResultDetails(
         $dkimResult,
         $headerItemInfoBag,
-        $urlItemInfoBag4,
+        $urlItemInfoBag3,
         $cnameChainList,
       );
 

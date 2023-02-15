@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Geeks4change\UntrackEmailAnalyzer\Analyzer2\Data\Url\UrlItemMatchType;
+namespace Geeks4change\UntrackEmailAnalyzer\Analyzer2\Data\Url\Analytics;
 
 enum AnalyticsMatchType: string {
   // Contains only well-known utm_[something_pseudonymous].

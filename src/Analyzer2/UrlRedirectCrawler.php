@@ -8,7 +8,7 @@ use Geeks4change\UntrackEmailAnalyzer\Analyzer2\Data\Url\UrlItem;
 use Geeks4change\UntrackEmailAnalyzer\Analyzer2\Data\Url\UrlItemInfo;
 use Geeks4change\UntrackEmailAnalyzer\Analyzer2\Data\Url\UrlItemInfoBag;
 use Geeks4change\UntrackEmailAnalyzer\Analyzer2\Data\Url\UrlItemInfoBagBuilder;
-use Geeks4change\UntrackEmailAnalyzer\Analyzer2\Data\Url\UrlItemMatchType\RedirectInfo;
+use Geeks4change\UntrackEmailAnalyzer\Analyzer2\Data\Url\Redirect\RedirectInfo;
 use Geeks4change\UntrackEmailAnalyzer\RedirectResolver\AgnosticRedirectResolverInterface;
 use Geeks4change\UntrackEmailAnalyzer\RedirectResolver\AsyncGuzzleAgnosticRedirectResolver;
 use loophp\collection\Collection;

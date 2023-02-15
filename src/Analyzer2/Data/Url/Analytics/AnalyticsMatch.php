@@ -2,9 +2,11 @@
 
 declare(strict_types=1);
 
-namespace Geeks4change\UntrackEmailAnalyzer\Analyzer2\Data\Url\UrlItemMatchType;
+namespace Geeks4change\UntrackEmailAnalyzer\Analyzer2\Data\Url\Analytics;
 
-final class AnalyticsInfo {
+use Geeks4change\UntrackEmailAnalyzer\Analyzer2\Data\Url\Analytics\AnalyticsMatchType;
+
+final class AnalyticsMatch {
 
   /**
    * @param list<string> $keys

@@ -4,28 +4,25 @@ declare(strict_types=1);
 
 namespace Geeks4change\UntrackEmailAnalyzer\Analyzer2\Data\Url;
 
-use Geeks4change\UntrackEmailAnalyzer\Analyzer2\Data\Url\UrlItemMatchType\AnalyticsInfo;
-use Geeks4change\UntrackEmailAnalyzer\Analyzer2\Data\Url\UrlItemMatchType\RedirectInfo;
-use Geeks4change\UntrackEmailAnalyzer\Analyzer2\Data\Url\UrlItemMatchType\TechnicalUrlMatch;
+use Geeks4change\UntrackEmailAnalyzer\Analyzer2\Data\Url\Analytics\AnalyticsMatch;
+use Geeks4change\UntrackEmailAnalyzer\Analyzer2\Data\Url\Match\ProviderMatch;
+use Geeks4change\UntrackEmailAnalyzer\Analyzer2\Data\Url\Redirect\RedirectInfo;
+use Geeks4change\UntrackEmailAnalyzer\Analyzer2\Data\Url\UrlItemMatch\TechnicalUrlMatch;
 
 final class UrlItemInfoBuilder {
 
   /**
-   * @param array<string, \Geeks4change\UntrackEmailAnalyzer\Analyzer2\Data\Url\UrlItemMatchType\TechnicalUrlMatch> $technicalUrlMatchesById
-   * @param array<string, \Geeks4change\UntrackEmailAnalyzer\Analyzer2\Data\Url\UrlItemMatchType\UserTrackingUrlMatch> $userTrackingUrlMatchesById
-   * @param array<string, \Geeks4change\UntrackEmailAnalyzer\Analyzer2\Data\Url\UrlItemMatchType\ByDomainUrlMatch> $byDomainUrlMatchesById
+   * @param array<string, \Geeks4change\UntrackEmailAnalyzer\Analyzer2\Data\Url\Match\ProviderMatch> $matchesById
    */
   protected function __construct(
-    public readonly UrlItem  $urlItem,
-    protected ?RedirectInfo  $redirectInfo,
-    protected ?AnalyticsInfo $analyticsInfo,
-    protected ?array         $technicalUrlMatchesById,
-    protected ?array         $userTrackingUrlMatchesById,
-    protected ?array         $byDomainUrlMatchesById,
+    public readonly UrlItem   $urlItem,
+    protected ?RedirectInfo   $redirectInfo,
+    protected ?AnalyticsMatch $analyticsInfo,
+    protected ?array          $matchesById,
   ) {}
 
   public static function create(UrlItem $urlItem): self {
-    return new self($urlItem, NULL, NULL, NULL, NULL, NULL, []);
+    return new self($urlItem, NULL, NULL, []);
   }
 
   public static function fromUrlItemInfo(UrlItemInfo $urlItemInfo): self {
@@ -33,31 +30,16 @@ final class UrlItemInfoBuilder {
       $urlItemInfo->urlItem,
       $urlItemInfo->redirectInfo,
       $urlItemInfo->analyticsInfo,
-      $urlItemInfo->technicalUrlMatchesById,
-      $urlItemInfo->userTrackingUrlMatchesById,
-      $urlItemInfo->byDomainUrlMatchesById,
+      $urlItemInfo->matchesById,
     );
   }
 
-  public function addTechnicalUrlMatch(TechnicalUrlMatch $match): void {
-    if (isset($this->technicalUrlMatchesById[$match->matcherId])) {
+  public function addMatch(ProviderMatch $match) {
+    // @fixme Replaces techUrlMatch, useTrackingUrlMatch, byDomainMatch.
+    if (isset($this->matchesById[$match->providerId])) {
       throw new \UnexpectedValueException('Can only set once.');
     }
-    $this->technicalUrlMatchesById[$match->matcherId] = $match;
-  }
-
-  public function addUserTrackingUrlMatch(UrlItemMatchType\UserTrackingUrlMatch $match) {
-    if (isset($this->userTrackingUrlMatchesById[$match->matcherId])) {
-      throw new \UnexpectedValueException('Can only set once.');
-    }
-    $this->userTrackingUrlMatchesById[$match->matcherId] = $match;
-  }
-
-  public function addByDomainUrlMatch(UrlItemMatchType\ByDomainUrlMatch $match) {
-    if (isset($this->byDomainUrlMatchesById[$match->matcherId])) {
-      throw new \UnexpectedValueException('Can only set once.');
-    }
-    $this->byDomainUrlMatchesById[$match->matcherId] = $match;
+    $this->matchesById[$match->providerId] = $match;
   }
 
   public function setRedirectInfo(RedirectInfo $redirectInfo): void {
@@ -67,7 +49,7 @@ final class UrlItemInfoBuilder {
     $this->redirectInfo = $redirectInfo;
   }
 
-  public function setAnalyticsInfo(AnalyticsInfo $analyticsInfo): void {
+  public function setAnalyticsInfo(AnalyticsMatch $analyticsInfo): void {
     if ($this->analyticsInfo) {
       throw new \UnexpectedValueException('Can only set once.');
     }
@@ -79,9 +61,7 @@ final class UrlItemInfoBuilder {
       $this->urlItem,
       $this->redirectInfo,
       $this->analyticsInfo,
-      $this->technicalUrlMatchesById,
-      $this->userTrackingUrlMatchesById,
-      $this->byDomainUrlMatchesById,
+      $this->matchesById,
     );
   }
 

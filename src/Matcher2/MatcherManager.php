@@ -10,9 +10,9 @@ use Geeks4change\UntrackEmailAnalyzer\Analyzer2\Data\Header\HeaderItemInfoBagBui
 use Geeks4change\UntrackEmailAnalyzer\Analyzer2\Data\Header\HeaderItemMatch;
 use Geeks4change\UntrackEmailAnalyzer\Analyzer2\Data\Url\UrlItemInfoBag;
 use Geeks4change\UntrackEmailAnalyzer\Analyzer2\Data\Url\UrlItemInfoBagBuilder;
-use Geeks4change\UntrackEmailAnalyzer\Analyzer2\Data\Url\UrlItemMatchType\ByDomainUrlMatch;
-use Geeks4change\UntrackEmailAnalyzer\Analyzer2\Data\Url\UrlItemMatchType\TechnicalUrlMatch;
-use Geeks4change\UntrackEmailAnalyzer\Analyzer2\Data\Url\UrlItemMatchType\UserTrackingUrlMatch;
+use Geeks4change\UntrackEmailAnalyzer\Analyzer2\Data\Url\UrlItemMatch\ByDomainMatch;
+use Geeks4change\UntrackEmailAnalyzer\Analyzer2\Data\Url\UrlItemMatch\TechnicalUrlMatch;
+use Geeks4change\UntrackEmailAnalyzer\Analyzer2\Data\Url\UrlItemMatch\UserTrackingUrlMatch;
 
 final class MatcherManager {
 
@@ -33,29 +33,13 @@ final class MatcherManager {
     return $builder->freeze();
   }
 
-  public function matchTechnicalUrls(UrlItemInfoBag $urlItemInfoBag): UrlItemInfoBag {
+  public function matchUrls(UrlItemInfoBag $urlItemInfoBag): UrlItemInfoBag {
     $builder = UrlItemInfoBagBuilder::fromUrlItemInfoBag($urlItemInfoBag);
     foreach ($urlItemInfoBag->urlItemInfos as $urlItemInfo) {
       $urlItem = $urlItemInfo->urlItem;
       foreach ($this->getMatchers() as $id => $matcher) {
-        if ($matcher->matchTechnicalUrl($urlItem)) {
-          $builder->forUrlItem($urlItem)->addTechnicalUrlMatch(new TechnicalUrlMatch($id));
-        }
-      }
-    }
-    return $builder->freeze();
-  }
-
-  public function matchUserTrackingUrls(UrlItemInfoBag $urlItemInfoBag): UrlItemInfoBag {
-    $builder = UrlItemInfoBagBuilder::fromUrlItemInfoBag($urlItemInfoBag);
-    foreach ($urlItemInfoBag->urlItemInfos as $urlItemInfo) {
-      $urlItem = $urlItemInfo->urlItem;
-      foreach ($this->getMatchers() as $id => $matcher) {
-        if ($matcher->matchUserTrackingUrl($urlItem)) {
-          $builder->forUrlItem($urlItem)->addUserTrackingUrlMatch(new UserTrackingUrlMatch($id));
-        }
-        elseif ($matcher->matchDomainUrl($urlItem)) {
-          $builder->forUrlItem($urlItem)->addByDomainUrlMatch(new ByDomainUrlMatch($id));
+        if ($match = $matcher->matchUrl($urlItem)) {
+          $builder->forUrlItem($urlItem)->addMatch($match);
         }
       }
     }

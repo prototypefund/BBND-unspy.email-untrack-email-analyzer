@@ -4,23 +4,21 @@ declare(strict_types=1);
 
 namespace Geeks4change\UntrackEmailAnalyzer\Analyzer2\Data\Url;
 
-use Geeks4change\UntrackEmailAnalyzer\Analyzer2\Data\Url\UrlItemMatchType\AnalyticsInfo;
-use Geeks4change\UntrackEmailAnalyzer\Analyzer2\Data\Url\UrlItemMatchType\RedirectInfo;
+use Geeks4change\UntrackEmailAnalyzer\Analyzer2\Data\Url\Analytics\AnalyticsMatch;
+use Geeks4change\UntrackEmailAnalyzer\Analyzer2\Data\Url\Match\ProviderMatch;
+use Geeks4change\UntrackEmailAnalyzer\Analyzer2\Data\Url\Redirect\RedirectInfo;
+use loophp\collection\Collection;
 
 final class UrlItemInfo {
 
   /**
-   * @param array<string, \Geeks4change\UntrackEmailAnalyzer\Analyzer2\Data\Url\UrlItemMatchType\TechnicalUrlMatch> $technicalUrlMatchesById
-   * @param array<string, \Geeks4change\UntrackEmailAnalyzer\Analyzer2\Data\Url\UrlItemMatchType\UserTrackingUrlMatch> $userTrackingUrlMatchesById
-   * @param array<string, \Geeks4change\UntrackEmailAnalyzer\Analyzer2\Data\Url\UrlItemMatchType\ByDomainUrlMatch> $byDomainUrlMatchesById
+   * @param array<string, \Geeks4change\UntrackEmailAnalyzer\Analyzer2\Data\Url\Match\ProviderMatch> $matchesById
    */
   public function __construct(
-    public readonly UrlItem        $urlItem,
-    public readonly ?RedirectInfo  $redirectInfo,
-    public readonly ?AnalyticsInfo $analyticsInfo,
-    public readonly ?array         $technicalUrlMatchesById,
-    public readonly ?array         $userTrackingUrlMatchesById,
-    public readonly ?array         $byDomainUrlMatchesById,
+    public readonly UrlItem         $urlItem,
+    public readonly ?RedirectInfo   $redirectInfo,
+    public readonly ?AnalyticsMatch $analyticsInfo,
+    public readonly ?array          $matchesById,
   ) {}
 
   public function anonymize(): self {
@@ -28,10 +26,22 @@ final class UrlItemInfo {
       $this->urlItem->anonymize(),
       $this->redirectInfo?->anonymize(),
       $this->analyticsInfo,
-      $this->technicalUrlMatchesById,
-      $this->userTrackingUrlMatchesById,
-      $this->byDomainUrlMatchesById,
+      $this->matchesById,
     );
+  }
+
+  public function getNoRedirectCheckProviderIds(): array {
+    return Collection::fromIterable($this->matchesById)
+      ->filter(fn(ProviderMatch $match) => $match->noRedirectCheck)
+      ->keys()
+      ->all();
+  }
+
+  public function getUserTrackingProviderIds(): array {
+    return Collection::fromIterable($this->matchesById)
+      ->filter(fn(ProviderMatch $match) => $match->isUserTracking)
+      ->keys()
+      ->all();
   }
 
 }

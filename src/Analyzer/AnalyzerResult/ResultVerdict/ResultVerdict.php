@@ -13,7 +13,8 @@ final class ResultVerdict implements ToArrayInterface {
 
   public function __construct(
     public readonly ResultVerdictMatchLevel $matchLevel,
-    public readonly ?string                 $serviceName = NULL,
+    public readonly ?string                 $serviceName,
+    public readonly string                  $explanation,
   ) {}
 
 }

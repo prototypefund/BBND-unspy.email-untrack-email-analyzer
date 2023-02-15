@@ -11,9 +11,10 @@ fullResult:
     timeStamp: 1673950647
   verdict:
     matchLevel:
-      name: Sure
-      value: sure
+      name: Likely
+      value: likely
     serviceName: mailchimp
+    explanation: 'There are matches for well-known tracking patterns, but no provider matches header and body.'
   details:
     dkimResult:
       status:
@@ -101,8 +102,7 @@ fullResult:
           urlItem:
             url: 'https://schreibsuchti.us3.list-manage.com/track/click?u=5e78d7ef2297cc80842b7591e&id=c3569d2df3&e=6496a8003f'
             text: 'Das E-Mail-Money-System'
-          redirectInfo:
-            redirect: null
+          redirectInfo: null
           analyticsInfo:
             type:
               name: NeedsResearch
@@ -111,15 +111,35 @@ fullResult:
               - u
               - id
               - e
-          technicalUrlMatchesById: null
-          userTrackingUrlMatchesById:
+          matchesById:
             mailchimp:
-              matcherId: mailchimp
-          byDomainUrlMatchesById: null
+              providerId: mailchimp
+              name: spy-link
+              isUserTracking: true
+              noRedirectCheck: false
         -
           urlItem:
             url: 'https://schreibsuchti.us3.list-manage.com/track/click?u=5e78d7ef2297cc80842b7591e&id=f74d35f6b6&e=6496a8003f'
             text: 'Das E-Mail-Money-System'
+          redirectInfo: null
+          analyticsInfo:
+            type:
+              name: NeedsResearch
+              value: needs_research
+            keys:
+              - u
+              - id
+              - e
+          matchesById:
+            mailchimp:
+              providerId: mailchimp
+              name: spy-link
+              isUserTracking: true
+              noRedirectCheck: false
+        -
+          urlItem:
+            url: 'https://schreibsuchti.us3.list-manage.com/vcard?u=5e78d7ef2297cc80842b7591e&id=93b720b585'
+            text: 'Zu Kontakten hinzufügen'
           redirectInfo:
             redirect: null
           analyticsInfo:
@@ -129,36 +149,18 @@ fullResult:
             keys:
               - u
               - id
-              - e
-          technicalUrlMatchesById: null
-          userTrackingUrlMatchesById:
+          matchesById:
             mailchimp:
-              matcherId: mailchimp
-          byDomainUrlMatchesById: null
-        -
-          urlItem:
-            url: 'https://schreibsuchti.us3.list-manage.com/vcard?u=5e78d7ef2297cc80842b7591e&id=93b720b585'
-            text: 'Zu Kontakten hinzufügen'
-          redirectInfo: null
-          analyticsInfo:
-            type:
-              name: NeedsResearch
-              value: needs_research
-            keys:
-              - u
-              - id
-          technicalUrlMatchesById:
-            mailchimp:
-              matcherId: mailchimp
-          userTrackingUrlMatchesById: null
-          byDomainUrlMatchesById:
-            mailchimp:
-              matcherId: mailchimp
+              providerId: mailchimp
+              name: vcard
+              isUserTracking: false
+              noRedirectCheck: true
         -
           urlItem:
             url: 'https://schreibsuchti.us3.list-manage.com/unsubscribe?u=5e78d7ef2297cc80842b7591e&id=93b720b585&e=6496a8003f&c=2ed1232679'
             text: abmelden
-          redirectInfo: null
+          redirectInfo:
+            redirect: null
           analyticsInfo:
             type:
               name: NeedsResearch
@@ -168,24 +170,23 @@ fullResult:
               - id
               - e
               - c
-          technicalUrlMatchesById:
+          matchesById:
             mailchimp:
-              matcherId: mailchimp
-          userTrackingUrlMatchesById: null
-          byDomainUrlMatchesById:
-            mailchimp:
-              matcherId: mailchimp
+              providerId: mailchimp
+              name: unsubscribe
+              isUserTracking: false
+              noRedirectCheck: true
         -
           urlItem:
             url: 'https://schreibsuchti.us3.list-manage.com/track/open.php?u=5e78d7ef2297cc80842b7591e&id=2ed1232679&e=6496a8003f'
-          redirectInfo:
-            redirect: null
+          redirectInfo: null
           analyticsInfo: null
-          technicalUrlMatchesById: null
-          userTrackingUrlMatchesById: null
-          byDomainUrlMatchesById:
+          matchesById:
             mailchimp:
-              matcherId: mailchimp
+              providerId: mailchimp
+              name: referral
+              isUserTracking: false
+              noRedirectCheck: false
     cnameChainList:
       chaneChainsByDomain:
         5e78d7ef2297cc80842b7591e.6496a8003f.20230117101720.2ed1232679.76ae8c9f@mail5.suw111.mcdlv.net:

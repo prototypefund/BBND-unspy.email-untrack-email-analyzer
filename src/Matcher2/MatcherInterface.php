@@ -2,9 +2,9 @@
 
 namespace Geeks4change\UntrackEmailAnalyzer\Matcher2;
 
-use Geeks4change\UntrackEmailAnalyzer\Analyzer2\Data\Header\HeaderItem;
-use Geeks4change\UntrackEmailAnalyzer\Analyzer2\Data\Url\Match\ProviderMatch;
-use Geeks4change\UntrackEmailAnalyzer\Analyzer2\Data\Url\UrlItem;
+use Geeks4change\UntrackEmailAnalyzer\Analyzer2\Result\Header\HeaderItem;
+use Geeks4change\UntrackEmailAnalyzer\Analyzer2\Result\Url\Match\ProviderMatch;
+use Geeks4change\UntrackEmailAnalyzer\Analyzer2\Result\Url\UrlItem;
 
 interface MatcherInterface {
 

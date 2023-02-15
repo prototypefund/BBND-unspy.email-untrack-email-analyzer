@@ -4,15 +4,15 @@ declare(strict_types=1);
 
 namespace Geeks4change\UntrackEmailAnalyzer\Matcher2;
 
-use Geeks4change\UntrackEmailAnalyzer\Analyzer2\Data\Header\HeaderItemBag;
-use Geeks4change\UntrackEmailAnalyzer\Analyzer2\Data\Header\HeaderItemInfoBag;
-use Geeks4change\UntrackEmailAnalyzer\Analyzer2\Data\Header\HeaderItemInfoBagBuilder;
-use Geeks4change\UntrackEmailAnalyzer\Analyzer2\Data\Header\HeaderItemMatch;
-use Geeks4change\UntrackEmailAnalyzer\Analyzer2\Data\Url\UrlItemInfoBag;
-use Geeks4change\UntrackEmailAnalyzer\Analyzer2\Data\Url\UrlItemInfoBagBuilder;
 use Geeks4change\UntrackEmailAnalyzer\Analyzer2\Data\Url\UrlItemMatch\ByDomainMatch;
 use Geeks4change\UntrackEmailAnalyzer\Analyzer2\Data\Url\UrlItemMatch\TechnicalUrlMatch;
 use Geeks4change\UntrackEmailAnalyzer\Analyzer2\Data\Url\UrlItemMatch\UserTrackingUrlMatch;
+use Geeks4change\UntrackEmailAnalyzer\Analyzer2\Result\Header\HeaderItemBag;
+use Geeks4change\UntrackEmailAnalyzer\Analyzer2\Result\Header\HeaderItemInfoBag;
+use Geeks4change\UntrackEmailAnalyzer\Analyzer2\Result\Header\HeaderItemInfoBagBuilder;
+use Geeks4change\UntrackEmailAnalyzer\Analyzer2\Result\Header\HeaderItemMatch;
+use Geeks4change\UntrackEmailAnalyzer\Analyzer2\Result\Url\UrlItemInfoBag;
+use Geeks4change\UntrackEmailAnalyzer\Analyzer2\Result\Url\UrlItemInfoBagBuilder;
 
 final class MatcherManager {
 

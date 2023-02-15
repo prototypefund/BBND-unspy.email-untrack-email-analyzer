@@ -2,15 +2,15 @@
 
 namespace Geeks4change\UntrackEmailAnalyzer\Matcher2;
 
-use Geeks4change\UntrackEmailAnalyzer\Analyzer2\Data\Url\UrlItem;
-use Geeks4change\UntrackEmailAnalyzer\DomainAliasesResolver;
+use Geeks4change\UntrackEmailAnalyzer\Analyzer2\Result\Url\UrlItem;
+use Geeks4change\UntrackEmailAnalyzer\CnameResolver;
 use Geeks4change\UntrackEmailAnalyzer\Globals;
 use GuzzleHttp\Psr7\Uri;
 use loophp\collection\Collection;
 
 abstract class MatcherBase {
 
-  protected DomainAliasesResolver $domainAliasesResolver;
+  protected CnameResolver $domainAliasesResolver;
 
   public function __construct() {
     $this->domainAliasesResolver = Globals::get()->getDomainAliasesResolver();
@@ -48,7 +48,7 @@ abstract class MatcherBase {
   }
 
   protected function stringMatchesDomain(string $host, array $domains = NULL): bool {
-    $hostAndAllCnames = $this->domainAliasesResolver->getAliases($host);
+    $hostAndAllCnames = $this->domainAliasesResolver->getCnames($host);
     $isNotEmpty = !Collection::fromIterable($hostAndAllCnames)
       ->filter(fn(string $host) => $this->hosDomainWithoutCnames($host, $domains ?? $this->getDomains()))
       ->isEmpty();

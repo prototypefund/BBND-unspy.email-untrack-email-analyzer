@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace Geeks4change\UntrackEmailAnalyzer\Analyzer2;
 
-use Geeks4change\UntrackEmailAnalyzer\Analyzer2\ResultDetails\ListInfo;
+use Geeks4change\UntrackEmailAnalyzer\Analyzer2\Result\ListInfo;
 use ZBateson\MailMimeParser\Header\AddressHeader;
 use ZBateson\MailMimeParser\IMessage;
 

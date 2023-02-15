@@ -4,8 +4,8 @@ declare(strict_types=1);
 
 namespace Geeks4change\UntrackEmailAnalyzer\Analyzer2;
 
-use Geeks4change\UntrackEmailAnalyzer\Analyzer2\DKIM\DKIMResult;
-use Geeks4change\UntrackEmailAnalyzer\Analyzer2\DKIM\DKIMStatusEnum;
+use Geeks4change\UntrackEmailAnalyzer\Analyzer2\Result\DKIM\DKIMResult;
+use Geeks4change\UntrackEmailAnalyzer\Analyzer2\Result\DKIM\DKIMStatusEnum;
 use Geeks4change\UntrackEmailAnalyzer\Utility\Max;
 use PHPMailer\DKIMValidator\DKIMException;
 use PHPMailer\DKIMValidator\Validator;

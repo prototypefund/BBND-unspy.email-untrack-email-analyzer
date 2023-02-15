@@ -4,12 +4,12 @@ declare(strict_types=1);
 
 namespace Geeks4change\UntrackEmailAnalyzer\Analyzer2;
 
+use Geeks4change\UntrackEmailAnalyzer\Analyzer2\Result\Header\HeaderItemInfoBag;
+use Geeks4change\UntrackEmailAnalyzer\Analyzer2\Result\ResultDetails;
+use Geeks4change\UntrackEmailAnalyzer\Analyzer2\Result\Url\Analytics\AnalyticsMatchType;
+use Geeks4change\UntrackEmailAnalyzer\Analyzer2\Result\Url\UrlItemInfoBag;
 use Geeks4change\UntrackEmailAnalyzer\Analyzer2\Verdict\ResultVerdict;
 use Geeks4change\UntrackEmailAnalyzer\Analyzer2\Verdict\ResultVerdictMatchLevel;
-use Geeks4change\UntrackEmailAnalyzer\Analyzer2\Data\Header\HeaderItemInfoBag;
-use Geeks4change\UntrackEmailAnalyzer\Analyzer2\Data\Url\Analytics\AnalyticsMatchType;
-use Geeks4change\UntrackEmailAnalyzer\Analyzer2\Data\Url\UrlItemInfoBag;
-use Geeks4change\UntrackEmailAnalyzer\Analyzer2\ResultDetails\ResultDetails;
 
 final class ResultVerdictExtractor {
 

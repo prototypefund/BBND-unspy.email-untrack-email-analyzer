@@ -4,9 +4,9 @@ declare(strict_types=1);
 
 namespace Geeks4change\UntrackEmailAnalyzer\Matcher2\Mailchimp;
 
-use Geeks4change\UntrackEmailAnalyzer\Analyzer2\Data\Header\HeaderItem;
-use Geeks4change\UntrackEmailAnalyzer\Analyzer2\Data\Url\Match\ProviderMatch;
-use Geeks4change\UntrackEmailAnalyzer\Analyzer2\Data\Url\UrlItem;
+use Geeks4change\UntrackEmailAnalyzer\Analyzer2\Result\Header\HeaderItem;
+use Geeks4change\UntrackEmailAnalyzer\Analyzer2\Result\Url\Match\ProviderMatch;
+use Geeks4change\UntrackEmailAnalyzer\Analyzer2\Result\Url\UrlItem;
 use Geeks4change\UntrackEmailAnalyzer\Matcher2\MatcherBase;
 use Geeks4change\UntrackEmailAnalyzer\Matcher2\MatcherInterface;
 use Geeks4change\UntrackEmailAnalyzer\Utility\UrlMatcher;

@@ -4,8 +4,8 @@ declare(strict_types=1);
 
 namespace Geeks4change\UntrackEmailAnalyzer\Analyzer2;
 
-use Geeks4change\UntrackEmailAnalyzer\Analyzer2\ResultDetails\CnameChain\CnameChainList;
-use Geeks4change\UntrackEmailAnalyzer\Analyzer2\ResultDetails\CnameChain\CnameChainListBuilder;
+use Geeks4change\UntrackEmailAnalyzer\Analyzer2\Result\CnameChain\CnameChainList;
+use Geeks4change\UntrackEmailAnalyzer\Analyzer2\Result\CnameChain\CnameChainListBuilder;
 use Geeks4change\UntrackEmailAnalyzer\Globals;
 
 final class CnameDumper {

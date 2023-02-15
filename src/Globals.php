@@ -30,11 +30,11 @@ final class Globals {
     return $this->serviceInfoRepository;
   }
 
-  protected DomainAliasesResolver $domainAliasesResolver;
+  protected CnameResolver $domainAliasesResolver;
 
   public function getDomainAliasesResolver() {
     if (!isset($this->domainAliasesResolver)) {
-      $this->domainAliasesResolver = new DomainAliasesResolver();
+      $this->domainAliasesResolver = new CnameResolver();
     }
     return $this->domainAliasesResolver;
   }

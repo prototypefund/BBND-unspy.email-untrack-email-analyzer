@@ -4,11 +4,11 @@ declare(strict_types=1);
 
 namespace Geeks4change\UntrackEmailAnalyzer\Analyzer2;
 
-use Geeks4change\UntrackEmailAnalyzer\Analyzer2\Data\LinkUrl;
-use Geeks4change\UntrackEmailAnalyzer\Analyzer2\Data\Url\UrlItemInfoBag;
-use Geeks4change\UntrackEmailAnalyzer\Analyzer2\Data\Url\UrlItemInfoBagBuilder;
-use Geeks4change\UntrackEmailAnalyzer\Analyzer2\Data\Url\Analytics\AnalyticsMatch;
-use Geeks4change\UntrackEmailAnalyzer\Analyzer2\Data\Url\Analytics\AnalyticsMatchType;
+use Geeks4change\UntrackEmailAnalyzer\Analyzer2\Result\Url\Analytics\AnalyticsMatch;
+use Geeks4change\UntrackEmailAnalyzer\Analyzer2\Result\Url\Analytics\AnalyticsMatchType;
+use Geeks4change\UntrackEmailAnalyzer\Analyzer2\Result\Url\LinkUrl;
+use Geeks4change\UntrackEmailAnalyzer\Analyzer2\Result\Url\UrlItemInfoBag;
+use Geeks4change\UntrackEmailAnalyzer\Analyzer2\Result\Url\UrlItemInfoBagBuilder;
 use GuzzleHttp\Psr7\Uri;
 
 final class AnalyticsMatcher {

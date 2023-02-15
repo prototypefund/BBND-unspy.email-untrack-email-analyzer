@@ -4,10 +4,10 @@ declare(strict_types=1);
 
 namespace Geeks4change\UntrackEmailAnalyzer\Analyzer2;
 
-use Geeks4change\UntrackEmailAnalyzer\Analyzer2\Data\ImageUrl;
-use Geeks4change\UntrackEmailAnalyzer\Analyzer2\Data\LinkUrl;
-use Geeks4change\UntrackEmailAnalyzer\Analyzer2\Data\Url\UrlItemBag;
-use Geeks4change\UntrackEmailAnalyzer\Analyzer2\Data\Url\UrlItemBagBuilder;
+use Geeks4change\UntrackEmailAnalyzer\Analyzer2\Result\Url\ImageUrl;
+use Geeks4change\UntrackEmailAnalyzer\Analyzer2\Result\Url\LinkUrl;
+use Geeks4change\UntrackEmailAnalyzer\Analyzer2\Result\Url\UrlItemBag;
+use Geeks4change\UntrackEmailAnalyzer\Analyzer2\Result\Url\UrlItemBagBuilder;
 use Symfony\Component\DomCrawler\Crawler;
 
 final class UrlExtractor {

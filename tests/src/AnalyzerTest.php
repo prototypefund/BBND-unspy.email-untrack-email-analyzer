@@ -16,7 +16,7 @@ class AnalyzerTest extends TestCase {
   public function testAnalyzer(string $testId, string $email, array $expected): void {
     [$providerId, $testSubId] = explode(':', $testId);
     $analyzer = Api::getDebugAnalyzer();
-    $result = $analyzer->analyze($email, catchAndLogExceptions: FALSE);
+    $result = $analyzer->analyze($email, throwExceptions: true);
     $result = MatcherRestrictor::restrictToMatcher($providerId, $result);
     $testSummary = ObjectToArray::convert($result);
     $this->assertSame($expected, $testSummary);

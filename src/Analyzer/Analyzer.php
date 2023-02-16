@@ -41,7 +41,7 @@ final class Analyzer {
     return $this;
   }
 
-  public function analyze(string $rawMessage, bool $catchAndLogExceptions = TRUE): FullResultWrapper {
+  public function analyze(string $rawMessage, bool $throwExceptions = false): FullResultWrapper {
     $timestamp = $this->dateTime->format('c'); // ISO8601
     $this->logger->info("[$timestamp] Start");
 
@@ -102,7 +102,7 @@ final class Analyzer {
           $resultVerdict,
           $resultDetails));
     } catch (\Throwable $e) {
-      if (!$catchAndLogExceptions) {
+      if ($throwExceptions) {
         throw new \RuntimeException('Rethrow', 0, $e);
       }
       $this->logger->critical("Exception: {$e->getMessage()}", ['trace' => $e->getTraceAsString()]);

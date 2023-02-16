@@ -37,9 +37,9 @@ final class HeaderItemInfoBag {
     $summary = [];
     foreach ($this->infos as $info) {
       foreach ($info->matches as $match) {
-        $summary += [$match->matcherId => [[], []]];
+        $summary += [$match->providerId => [[], []]];
         $index = $match->isMatch ? 'match' : 'nomatch';
-        $summary[$match->matcherId][$index][] = $info->headerItem->name;
+        $summary[$match->providerId][$index][] = $info->headerItem->name;
       }
     }
     return $summary;

@@ -73,7 +73,7 @@ final class ResultVerdictExtractor {
     $providers = [];
     foreach ($headerItemInfoBag->infos as $info) {
       foreach ($info->matches as $match) {
-        $providers[] = $match->matcherId;
+        $providers[] = $match->providerId;
       }
     }
     return array_unique($providers);

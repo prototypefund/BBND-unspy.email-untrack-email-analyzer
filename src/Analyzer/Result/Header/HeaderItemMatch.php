@@ -7,8 +7,8 @@ namespace Geeks4change\UntrackEmailAnalyzer\Analyzer\Result\Header;
 final class HeaderItemMatch {
 
   public function __construct(
-    public readonly string $matcherId,
-    public bool $isMatch,
+    public readonly string $providerId,
+    public bool            $isMatch,
   ) {}
 
 }

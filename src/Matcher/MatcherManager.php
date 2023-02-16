@@ -59,13 +59,16 @@ final class MatcherManager {
     $matchers = [];
     foreach (glob("$matcherContainerDir/*", GLOB_ONLYDIR) as $matcherDir) {
       $name = basename($matcherDir);
-      $matcher = new ("$matcherContainerNamespace\\{$name}\\{$name}Matcher")();
-      if ($matcher instanceof MatcherInterface) {
-        $id = $matcher->getId();
-        $matchers[$id] = $matcher;
-      }
-      else {
-        throw new \LogicException("Invalid matcher dir: $matcherDir");
+      $class = "$matcherContainerNamespace\\{$name}\\{$name}Matcher";
+      if (class_exists($class)) {
+        $matcher = new ($class)();
+        if ($matcher instanceof MatcherInterface) {
+          $id = $matcher->getId();
+          $matchers[$id] = $matcher;
+        }
+        else {
+          throw new \LogicException("Invalid matcher dir: $matcherDir");
+        }
       }
     }
     return $matchers;

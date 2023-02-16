@@ -18,6 +18,10 @@ final class Anon {
     return self::string;
   }
 
+  public static function text(string $value): string {
+    return self::string;
+  }
+
   public static function url(?string $urlString): ?string {
     if (!isset($urlString)) {
       return NULL;

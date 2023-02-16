@@ -7,7 +7,6 @@ namespace Geeks4change\UntrackEmailAnalyzer\Matcher;
 use Geeks4change\UntrackEmailAnalyzer\Analyzer\Result\Header\HeaderItemBag;
 use Geeks4change\UntrackEmailAnalyzer\Analyzer\Result\Header\HeaderItemInfoBag;
 use Geeks4change\UntrackEmailAnalyzer\Analyzer\Result\Header\HeaderItemInfoBagBuilder;
-use Geeks4change\UntrackEmailAnalyzer\Analyzer\Result\Header\HeaderItemMatch;
 use Geeks4change\UntrackEmailAnalyzer\Analyzer\Result\Url\UrlItemInfoBag;
 use Geeks4change\UntrackEmailAnalyzer\Analyzer\Result\Url\UrlItemInfoBagBuilder;
 use Geeks4change\UntrackEmailAnalyzer\Utility\FileTool;
@@ -18,11 +17,11 @@ final class MatcherManager {
 
   public function matchHeaders(HeaderItemBag $headerItemBag): HeaderItemInfoBag {
     $builder = HeaderItemInfoBagBuilder::fromHeaderItemBag($headerItemBag);
-    foreach ($this->getMatchers() as $matcherId => $matcher) {
+    foreach ($this->getMatchers() as $matcher) {
       foreach ($headerItemBag->items as $item) {
         $match = $matcher->matchHeader($item);
         if (isset($match)) {
-          $builder->addMatch($item, new HeaderItemMatch($matcherId, $match));
+          $builder->addMatch($item, $match);
         }
       }
     }

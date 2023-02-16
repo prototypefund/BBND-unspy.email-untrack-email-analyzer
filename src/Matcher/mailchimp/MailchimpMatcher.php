@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace Geeks4change\UntrackEmailAnalyzer\Matcher\mailchimp;
 
 use Geeks4change\UntrackEmailAnalyzer\Analyzer\Result\Header\HeaderItem;
+use Geeks4change\UntrackEmailAnalyzer\Analyzer\Result\Header\HeaderItemMatch;
 use Geeks4change\UntrackEmailAnalyzer\Analyzer\Result\Url\Match\ProviderMatch;
 use Geeks4change\UntrackEmailAnalyzer\Analyzer\Result\Url\UrlItem;
 use Geeks4change\UntrackEmailAnalyzer\Matcher\MatcherBase;
@@ -39,32 +40,32 @@ final class MailchimpMatcher extends MatcherBase implements MatcherInterface {
     return $reverseParts[1];
   }
 
-  public function matchHeader(HeaderItem $item): ?bool {
+  public function matchHeader(HeaderItem $item): ?HeaderItemMatch {
     if ($item->name === 'message-id') {
-      return $this->stringMatchesDomain($item->value);
+      $isMatch = $this->stringMatchesDomain($item->value);
     }
     elseif ($item->name === 'list-unsubscribe') {
-      return $this->anyHostInAngleBracketsMatchesAnyDomain($item->value);
+      $isMatch = $this->anyHostInAngleBracketsMatchesAnyDomain($item->value);
     }
     elseif ($item->name === 'list-id') {
-      return $this->anyValueInAngleBracketsMatchesAnyDomain($item->value);
+      $isMatch = $this->anyValueInAngleBracketsMatchesAnyDomain($item->value);
     }
     elseif ($item->name === 'x-mailer') {
-      return str_starts_with($item->value, 'Mailchimp Mailer ');
+      $isMatch = str_starts_with($item->value, 'Mailchimp Mailer ');
     }
     elseif ($item->name === 'x-campaign' || $item->name === 'x-campaignid') {
-      return str_starts_with($item->value, 'mailchimp');
+      $isMatch = str_starts_with($item->value, 'mailchimp');
     }
     elseif ($item->name === 'x-report-abuse') {
-      return str_contains($item->value, 'https://mailchimp.com/contact/abuse');
+      $isMatch = str_contains($item->value, 'https://mailchimp.com/contact/abuse');
     }
     elseif ($item->name === 'x-mc-user') {
-      return TRUE;
+      $isMatch = TRUE;
     }
     elseif ($item->name === 'feedback-id') {
-      return str_ends_with($item->value, ':mc');
+      $isMatch = str_ends_with($item->value, ':mc');
     }
-    return NULL;
+    return isset($isMatch) ? new HeaderItemMatch($this->getId(), $isMatch) : NULL;
   }
 
   public function matchUrl(UrlItem $urlItem): ?ProviderMatch {

@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace Geeks4change\UntrackEmailAnalyzer;
 
-use Geeks4change\UntrackEmailAnalyzer\Utility\FileTool;
+use Geeks4change\UntrackEmailAnalyzer\Matcher\MatcherManager;
 use loophp\collection\Collection;
 
 /**
@@ -37,22 +37,11 @@ final class DirInfo {
   }
 
   public static function getTestEmailFileNames(): \Iterator {
-    foreach (self::getPatternFilePaths() as $patternId => $patternFile) {
-      $patternDir = dirname($patternFile);
-      foreach (glob("$patternDir/tests/*.eml") as $emailFile) {
-        $testName = basename($emailFile, '.eml');
-        $expectedFile = dirname($emailFile) . "/$testName.expected.yml";
-        yield "$patternId:$testName" => [$emailFile, $expectedFile];
-      }
-    }
+    return (new MatcherManager())->getTestEmailFileNames();
   }
 
   public static function provideEmailTestCases(): \Iterator {
-    foreach (self::getTestEmailFileNames() as $id => [$emailFile, $expectedFile]) {
-      $email = FileTool::getFileContents($emailFile);
-      $expected = FileTool::getYamlArray($expectedFile);
-      yield $id => [$id, $email, $expected];
-    }
+    return (new MatcherManager())->provideEmailTestCases();
   }
 
 }

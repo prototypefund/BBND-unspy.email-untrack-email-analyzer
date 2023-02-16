@@ -10,10 +10,9 @@ use Geeks4change\UntrackEmailAnalyzer\Analyzer\Result\Header\HeaderItemInfoBagBu
 use Geeks4change\UntrackEmailAnalyzer\Analyzer\Result\Header\HeaderItemMatch;
 use Geeks4change\UntrackEmailAnalyzer\Analyzer\Result\Url\UrlItemInfoBag;
 use Geeks4change\UntrackEmailAnalyzer\Analyzer\Result\Url\UrlItemInfoBagBuilder;
+use Geeks4change\UntrackEmailAnalyzer\Utility\FileTool;
 
 final class MatcherManager {
-
-  protected array $matcherNames;
 
   protected array $matchers;
 
@@ -54,12 +53,11 @@ final class MatcherManager {
    * @return array<string, \Geeks4change\UntrackEmailAnalyzer\Matcher\MatcherInterface>
    */
   protected function discoverMatchers(): array {
-    $matcherContainerDir = __DIR__;
-    $matcherContainerNamespace = __NAMESPACE__;
     $matchers = [];
-    foreach (glob("$matcherContainerDir/*", GLOB_ONLYDIR) as $matcherDir) {
-      $name = basename($matcherDir);
-      $class = "$matcherContainerNamespace\\{$name}\\{$name}Matcher";
+    foreach ($this->getDirectoriesById() as $id => $directory) {
+      $name = ucfirst($id);
+      $namespace = $this->getNamespace($id);
+      $class = "{$namespace}\\{$name}Matcher";
       if (class_exists($class)) {
         $matcher = new ($class)();
         if ($matcher instanceof MatcherInterface) {
@@ -67,11 +65,42 @@ final class MatcherManager {
           $matchers[$id] = $matcher;
         }
         else {
-          throw new \LogicException("Invalid matcher dir: $matcherDir");
+          throw new \LogicException("Invalid matcher dir: $directory");
         }
       }
     }
     return $matchers;
+  }
+
+  public function getTestEmailFileNames(): \Iterator {
+    foreach ($this->getDirectoriesById() as $id => $directory) {
+      foreach (glob("$directory/tests/*.eml") as $emailFile) {
+        $testName = basename($emailFile, '.eml');
+        $expectedFile = dirname($emailFile) . "/$testName.expected.yml";
+        yield "$id:$testName" => [$emailFile, $expectedFile];
+      }
+    }
+  }
+
+  public function provideEmailTestCases(): \Iterator {
+    foreach ($this->getTestEmailFileNames() as $id => [$emailFile, $expectedFile]) {
+      $email = FileTool::getFileContents($emailFile);
+      $expected = file_exists($expectedFile) ?
+        FileTool::getYamlArray($expectedFile) : [];
+      yield $id => [$id, $email, $expected];
+    }
+  }
+
+  protected function getDirectoriesById(): array {
+    $containerDir = __DIR__;
+    $directories = glob("$containerDir/*", GLOB_ONLYDIR);
+    $ids = array_map(fn($dir) => basename($dir), $directories);
+    return array_combine($ids, $directories);
+  }
+
+  protected function getNamespace(string $id): string {
+    $containerNamespace = __NAMESPACE__;
+    return "{$containerNamespace}\\{$id}";
   }
 
 }

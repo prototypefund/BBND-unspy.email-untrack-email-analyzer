@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Geeks4change\UntrackEmailAnalyzer\Matcher\Mailchimp;
+namespace Geeks4change\UntrackEmailAnalyzer\Matcher\mailchimp;
 
 use Geeks4change\UntrackEmailAnalyzer\Analyzer\Result\Header\HeaderItem;
 use Geeks4change\UntrackEmailAnalyzer\Analyzer\Result\Url\Match\ProviderMatch;

@@ -4,19 +4,20 @@
 use Geeks4change\UntrackEmailAnalyzer\Analyzer\Analyzer;
 use Geeks4change\UntrackEmailAnalyzer\Api;
 use Geeks4change\UntrackEmailAnalyzer\DirInfo;
+use Geeks4change\UntrackEmailAnalyzer\Matcher\MatcherRestrictor;
 use Geeks4change\UntrackEmailAnalyzer\Utility\ObjectToArray;
 use Symfony\Component\Yaml\Yaml;
 
 include 'vendor/autoload.php';
 
 $fileNamePairs = iterator_to_array(DirInfo::getTestEmailFileNames());
-$fileId = $argv[1] ?? '';
-$update = str_ends_with($fileId, '!');
+$testId = $argv[1] ?? '';
+$update = str_ends_with($testId, '!');
 if ($update) {
-  $fileId = substr($fileId, 0, -1);
+  $testId = substr($testId, 0, -1);
 }
 
-if (!isset($fileNamePairs[$fileId])) {
+if (!isset($fileNamePairs[$testId])) {
   print("Print test summary of on one of the packaged examples.\n");
   print("Usage: $0 PROVIDER:TEST\n");
   print("Example: $0 mailchimp:1\n");
@@ -25,10 +26,14 @@ if (!isset($fileNamePairs[$fileId])) {
   print("Possible values: $values\n");
   die(1);
 }
-[$emailFile, $resultFile] = $fileNamePairs[$fileId];
+[$emailFile, $resultFile] = $fileNamePairs[$testId];
 $fileContent = file_get_contents($emailFile);
 $analyzer = Api::getDebugAnalyzer();
 $result = $analyzer->analyze($fileContent);
+if ($update) {
+  [$providerId, $testSubId] = explode(':', $testId);
+  $result = MatcherRestrictor::restrictToMatcher($providerId, $result);
+}
 $testSummary = ObjectToArray::convert($result);
 $expectedResult = Yaml::dump($testSummary, 99, 2);
 print $expectedResult;

@@ -8,7 +8,6 @@ final class HeaderItemMatch {
 
   public function __construct(
     public readonly string $matcherId,
-    // @fixme Add HeaderItemMatch::isMatch
     public bool $isMatch,
   ) {}
 

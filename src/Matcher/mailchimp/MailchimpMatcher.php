@@ -33,7 +33,10 @@ final class MailchimpMatcher extends MatcherBase implements MatcherInterface {
   }
 
   public function getId(): string {
-    return 'mailchimp';
+    $class = get_class($this);
+    $parts = explode('\\', $class);
+    $reverseParts = array_reverse($parts);
+    return $reverseParts[1];
   }
 
   public function matchHeader(HeaderItem $item): ?bool {
@@ -64,31 +67,6 @@ final class MailchimpMatcher extends MatcherBase implements MatcherInterface {
     return NULL;
   }
 
-  public function matchTechnicalUrl(UrlItem $urlItem): bool {
-    // Guessing parameters:
-    // u: sender
-    // id: list
-    // e: recipient
-    // c: campaign
-    # https://voeoe.us1.list-manage.com/unsubscribe?u=b00ccdbb39a8456492b99ae9e&id=ede4b53575&e=be24ad69fc&c=a8d0ad03b7
-    $isUnsubscribe = UrlMatcher::create('//{}.list-manage.com/unsubscribe')->match($urlItem->url, );
-    # https://voeoe.us1.list-manage.com/vcard?u=b00ccdbb39a8456492b99ae9e&id=ede4b53575
-    $isVcard = UrlMatcher::create('//{}.list-manage.com/vcard')->match($urlItem->url, );
-    # https://voeoe.us1.list-manage.com/profile?u=b00ccdbb39a8456492b99ae9e&id=ede4b53575&e=be24ad69fc&c=a8d0ad03b7
-    $isProfile = UrlMatcher::create('//{}.list-manage.com/vcard')->match($urlItem->url, );
-    # http://www.mailchimp.com/email-referral/?utm_source=freemium_newsletter&utm_medium=email&utm_campaign=referral_marketing&aid=b00ccdbb39a8456492b99ae9e&afl=1
-    $isReferral = UrlMatcher::create('//{}.mailchimp.com/email-referral')->match($urlItem->url, );
-    return $isUnsubscribe || $isVcard || $isProfile || $isReferral;
-  }
-
-  public function matchUserTrackingUrl(UrlItem $urlItem): bool {
-    # https://mailchi.mp/f84d35f613cc/voeoe-03-8987958?e=be24ad69fc
-    $isWebview = UrlMatcher::create('//mailchi.mp/{}/{}?e={}')->match($urlItem->url);
-    # https://voeoe.us1.list-manage.com/track/click?u=b00ccdbb39a8456492b99ae9e&id=e269fce298&e=be24ad69fc
-    $isUserTracking = UrlMatcher::create('//list-manage.com/track/click?e=')->match($urlItem->url);
-    return $isWebview || $isUserTracking;
-  }
-
   public function matchUrl(UrlItem $urlItem): ?ProviderMatch {
     // Guessing parameters:
     // u: sender
@@ -108,25 +86,40 @@ final class MailchimpMatcher extends MatcherBase implements MatcherInterface {
 
     // Technical.
     # https://voeoe.us1.list-manage.com/unsubscribe?u=b00ccdbb39a8456492b99ae9e&id=ede4b53575&e=be24ad69fc&c=a8d0ad03b7
-    if (UrlMatcher::create('//{}.list-manage.com/unsubscribe')->match($urlItem->url, )) {
+    if (UrlMatcher::create('//{}.list-manage.com/unsubscribe')->match($urlItem->url)) {
       return new ProviderMatch($this->getId(), 'unsubscribe', false, true);
     }
     # https://voeoe.us1.list-manage.com/vcard?u=b00ccdbb39a8456492b99ae9e&id=ede4b53575
-    if (UrlMatcher::create('//{}.list-manage.com/vcard')->match($urlItem->url, )) {
+    if (UrlMatcher::create('//{}.list-manage.com/vcard')->match($urlItem->url)) {
       return new ProviderMatch($this->getId(), 'vcard', false, true);
     }
     # https://voeoe.us1.list-manage.com/profile?u=b00ccdbb39a8456492b99ae9e&id=ede4b53575&e=be24ad69fc&c=a8d0ad03b7
-    if (UrlMatcher::create('//{}.list-manage.com/profile')->match($urlItem->url, )) {
+    if (UrlMatcher::create('//{}.list-manage.com/profile')->match($urlItem->url)) {
       return new ProviderMatch($this->getId(), 'profile', false, true);
     }
     # http://www.mailchimp.com/email-referral/?utm_source=freemium_newsletter&utm_medium=email&utm_campaign=referral_marketing&aid=b00ccdbb39a8456492b99ae9e&afl=1
-    if (UrlMatcher::create('//{}.mailchimp.com/email-referral')->match($urlItem->url, )) {
+    if (UrlMatcher::create('//{}.mailchimp.com/email-referral')->match($urlItem->url)) {
       return new ProviderMatch($this->getId(), 'referral', false, true);
+    }
+
+    // Images.
+    # Verified that different recipients get the same URL, so no user tracking.
+    # https://mcusercontent.com/b00ccdbb39a8456492b99ae9e/images/e855e0cb-25e8-47a9-8f3f-eb89de3776b6.png
+    if (UrlMatcher::create('//mcusercontent.com/{sender}/images/{}.{image_extension}')->match($urlItem->url)) {
+      return new ProviderMatch($this->getId(), 'referral', false, false);
+    }
+    # https://cdn-images.mailchimp.com/icons/social-block-v2/color-twitter-48.png
+    if (UrlMatcher::create('//cdn-images.mailchimp.com')->match($urlItem->url)) {
+      return new ProviderMatch($this->getId(), 'technical image', false, false);
+    }
+    # https://voeoe.us1.list-manage.com/track/open.php?u=b00ccdbb39a8456492b99ae9e&id=a8d0ad03b7&e=be24ad69fc
+    if (UrlMatcher::create('//{customer}.{region}.list-manage.com/track/open.php?u={sender}&id={}&e={}')->match($urlItem->url)) {
+      return new ProviderMatch($this->getId(), 'tracking pixel', true, false);
     }
 
     // Domain.
     if ($this->urlMatchesDomain($urlItem)) {
-      return new ProviderMatch($this->getId(), 'referral', false, false);
+      return new ProviderMatch($this->getId(), 'by domain', false, false);
     }
 
     return NULL;

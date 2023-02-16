@@ -184,8 +184,8 @@ fullResult:
           matches:
             mailchimp:
               providerId: mailchimp
-              name: referral
-              isUserTracking: false
+              name: 'tracking pixel'
+              isUserTracking: true
               noRedirectCheck: false
     cnameChainList:
       chaneChainsByDomain:

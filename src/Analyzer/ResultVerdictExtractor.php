@@ -90,7 +90,7 @@ final class ResultVerdictExtractor {
   private function getAllMatchingProviderIds(UrlItemInfoBag $urlItemInfoBag): array {
     $providers = [];
     foreach ($urlItemInfoBag->urlItemInfos as $urlItemInfo) {
-      $providers = array_merge($providers, array_keys($urlItemInfo->matchesById ?? []));
+      $providers = array_merge($providers, array_keys($urlItemInfo->matches ?? []));
     }
     return array_unique($providers);
   }

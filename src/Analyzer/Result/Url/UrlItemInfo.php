@@ -12,13 +12,13 @@ use loophp\collection\Collection;
 final class UrlItemInfo {
 
   /**
-   * @param array<string, \Geeks4change\UntrackEmailAnalyzer\Analyzer\Result\Url\Match\ProviderMatch> $matchesById
+   * @param array<string, \Geeks4change\UntrackEmailAnalyzer\Analyzer\Result\Url\Match\ProviderMatch> $matches
    */
   public function __construct(
     public readonly UrlItem         $urlItem,
     public readonly ?RedirectInfo   $redirectInfo,
     public readonly ?AnalyticsMatch $analyticsInfo,
-    public readonly ?array          $matchesById,
+    public readonly ?array          $matches,
   ) {}
 
   public function anonymize(): self {
@@ -26,19 +26,19 @@ final class UrlItemInfo {
       $this->urlItem->anonymize(),
       $this->redirectInfo?->anonymize(),
       $this->analyticsInfo,
-      $this->matchesById,
+      $this->matches,
     );
   }
 
   public function getNoRedirectCheckProviderIds(): array {
-    return Collection::fromIterable($this->matchesById)
+    return Collection::fromIterable($this->matches)
       ->filter(fn(ProviderMatch $match) => $match->noRedirectCheck)
       ->keys()
       ->all();
   }
 
   public function getUserTrackingProviderIds(): array {
-    return Collection::fromIterable($this->matchesById)
+    return Collection::fromIterable($this->matches)
       ->filter(fn(ProviderMatch $match) => $match->isUserTracking)
       ->keys()
       ->all();

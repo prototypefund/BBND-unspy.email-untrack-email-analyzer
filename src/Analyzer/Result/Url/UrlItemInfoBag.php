@@ -7,12 +7,12 @@ namespace Geeks4change\UntrackEmailAnalyzer\Analyzer\Result\Url;
 final class UrlItemInfoBag {
 
   /**
-   * @var UrlItemInfo $urlItemInfos
+   * @var UrlItemInfo[] $urlItemInfos
    */
   public readonly array $urlItemInfos;
 
   /**
-   * @param UrlItemInfo $urlItemInfos
+   * @param UrlItemInfo[] $urlItemInfos
    */
   public function __construct(array $urlItemInfos) {
     $this->urlItemInfos = array_values($urlItemInfos);

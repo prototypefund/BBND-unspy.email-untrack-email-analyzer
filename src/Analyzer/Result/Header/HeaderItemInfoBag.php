@@ -7,7 +7,7 @@ namespace Geeks4change\UntrackEmailAnalyzer\Analyzer\Result\Header;
 final class HeaderItemInfoBag {
 
   /**
-   * @param HeaderItemInfo $infos
+   * @param HeaderItemInfo[] $infos
    */
   public function __construct(
     public readonly array $infos,

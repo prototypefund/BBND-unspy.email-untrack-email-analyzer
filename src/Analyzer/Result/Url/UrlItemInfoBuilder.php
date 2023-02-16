@@ -30,7 +30,7 @@ final class UrlItemInfoBuilder {
       $urlItemInfo->urlItem,
       $urlItemInfo->redirectInfo,
       $urlItemInfo->analyticsInfo,
-      $urlItemInfo->matchesById,
+      $urlItemInfo->matches,
     );
   }
 

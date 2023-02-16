@@ -4,6 +4,7 @@ declare(strict_types=1);
 namespace Geeks4change\UntrackEmailAnalyzer\Analyzer\Result;
 
 use Geeks4change\UntrackEmailAnalyzer\Analyzer\Result\CnameChain\CnameChainList;
+use Geeks4change\UntrackEmailAnalyzer\Analyzer\Result\DKIM\DKIMResult;
 use Geeks4change\UntrackEmailAnalyzer\Analyzer\Result\Header\HeaderItemInfoBag;
 use Geeks4change\UntrackEmailAnalyzer\Analyzer\Result\Url\UrlItemInfoBag;
 
@@ -15,10 +16,10 @@ use Geeks4change\UntrackEmailAnalyzer\Analyzer\Result\Url\UrlItemInfoBag;
 final class ResultDetails {
 
   public function __construct(
-    public readonly \Geeks4change\UntrackEmailAnalyzer\Analyzer\Result\DKIM\DKIMResult $dkimResult,
-    public readonly HeaderItemInfoBag                                                  $headerItemInfoBag,
-    public readonly UrlItemInfoBag                                                     $urlItemInfoBag,
-    public readonly CnameChainList                                                     $cnameChainList,
+    public readonly DKIMResult        $dkimResult,
+    public readonly HeaderItemInfoBag $headerItemInfoBag,
+    public readonly UrlItemInfoBag    $urlItemInfoBag,
+    public readonly CnameChainList    $cnameChainList,
   ) {}
 
   public function anonymize(): self {

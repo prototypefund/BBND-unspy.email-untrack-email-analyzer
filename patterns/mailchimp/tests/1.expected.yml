@@ -111,7 +111,7 @@ fullResult:
               - u
               - id
               - e
-          matchesById:
+          matches:
             mailchimp:
               providerId: mailchimp
               name: spy-link
@@ -130,7 +130,7 @@ fullResult:
               - u
               - id
               - e
-          matchesById:
+          matches:
             mailchimp:
               providerId: mailchimp
               name: spy-link
@@ -149,7 +149,7 @@ fullResult:
             keys:
               - u
               - id
-          matchesById:
+          matches:
             mailchimp:
               providerId: mailchimp
               name: vcard
@@ -170,10 +170,15 @@ fullResult:
               - id
               - e
               - c
-          matchesById:
+          matches:
             mailchimp:
               providerId: mailchimp
               name: unsubscribe
+              isUserTracking: false
+              noRedirectCheck: true
+            generic:
+              providerId: generic
+              name: 'looks like unsubscribe'
               isUserTracking: false
               noRedirectCheck: true
         -
@@ -181,7 +186,7 @@ fullResult:
             url: 'https://schreibsuchti.us3.list-manage.com/track/open.php?u=5e78d7ef2297cc80842b7591e&id=2ed1232679&e=6496a8003f'
           redirectInfo: null
           analyticsInfo: null
-          matchesById:
+          matches:
             mailchimp:
               providerId: mailchimp
               name: referral

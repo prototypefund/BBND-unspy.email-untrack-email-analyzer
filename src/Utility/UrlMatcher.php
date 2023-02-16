@@ -15,8 +15,8 @@ final class UrlMatcher {
     public readonly array  $queryPatterns,
   ) {}
 
-  public function match(string $uriPattern): bool {
-    $uri = new Uri($uriPattern);
+  public function match(string $uriString): bool {
+    $uri = new Uri($uriString);
 
     $host = $uri->getHost();
     $domainMatchesHost = fn(string $domain) => $host === $domain || str_ends_with($host, ".$domain");

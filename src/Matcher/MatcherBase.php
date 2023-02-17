@@ -13,7 +13,7 @@ abstract class MatcherBase {
   protected CnameResolver $domainAliasesResolver;
 
   public function __construct() {
-    $this->domainAliasesResolver = Globals::get()->getDomainAliasesResolver();
+    $this->domainAliasesResolver = Globals::get()->getCnameResolver();
   }
 
   abstract protected function getDomains(): array;
@@ -48,7 +48,7 @@ abstract class MatcherBase {
   }
 
   protected function stringMatchesDomain(string $host, array $domains = NULL): bool {
-    $hostAndAllCnames = $this->domainAliasesResolver->getCnames($host);
+    $hostAndAllCnames = $this->domainAliasesResolver->getCnameChain($host);
     $isNotEmpty = !Collection::fromIterable($hostAndAllCnames)
       ->filter(fn(string $host) => $this->hosDomainWithoutCnames($host, $domains ?? $this->getDomains()))
       ->isEmpty();

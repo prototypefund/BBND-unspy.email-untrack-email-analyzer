@@ -65,9 +65,6 @@ final class Analyzer {
       $crawler = new Crawler($html);
       $urlItemBag = $this->urlExtractor->extract($crawler);
 
-      // Crawl CNames.
-      $cnameChainList = $this->cnameDumper->dumpCnames();
-
       // Now...
       // - match urls for Unsubscribe
       // - match urls for UserTracking
@@ -79,6 +76,9 @@ final class Analyzer {
       $allowCrawling = fn(UrlItemInfo $urlItemInfo) => $urlItemInfo->getNoRedirectCheckProviderIds();
       $urlItemInfoBag2 = $this->redirectCrawler->crawlRedirects($urlItemInfoBag1, $allowCrawling);
       $urlItemInfoBag3 = $this->analyticsMatcher->matchAnalyticsUrls($urlItemInfoBag2);
+
+      // Dump crawled CNames.
+      $cnameChainList = $this->cnameDumper->dumpCnames();
 
       $resultDetails = new ResultDetails(
         $dkimResult,

@@ -188,15 +188,15 @@ fullResult:
               isUserTracking: true
               noRedirectCheck: false
     cnameChainList:
-      chaneChainsByDomain:
-        5e78d7ef2297cc80842b7591e.6496a8003f.20230117101720.2ed1232679.76ae8c9f@mail5.suw111.mcdlv.net:
-          aliasDomains: {  }
-          domain: 5e78d7ef2297cc80842b7591e.6496a8003f.20230117101720.2ed1232679.76ae8c9f@mail5.suw111.mcdlv.net
+      cnaneChainsByDomain:
         5e78d7ef2297cc80842b7591e.227233.list-id.mcsv.net:
-          aliasDomains: {  }
           domain: 5e78d7ef2297cc80842b7591e.227233.list-id.mcsv.net
+          aliasDomains: {  }
+        mail5.suw111.mcdlv.net:
+          domain: mail5.suw111.mcdlv.net
+          aliasDomains: {  }
         schreibsuchti.us3.list-manage.com:
+          domain: schreibsuchti.us3.list-manage.com
           aliasDomains:
             - swc.list-manage.com.edgekey.net
             - e13829.x.akamaiedge.net
-          domain: schreibsuchti.us3.list-manage.com

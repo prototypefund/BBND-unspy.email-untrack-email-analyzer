@@ -21,7 +21,7 @@ class UrlTool {
   public static function getAllDomainAliases(UriInterface $uri): array {
     return array_map(
       fn(string $host) => $uri->withHost($host),
-      Globals::get()->getDomainAliasesResolver()->getCnames($uri->getHost())
+      Globals::get()->getCnameResolver()->getCnameChain($uri->getHost())
     );
   }
 

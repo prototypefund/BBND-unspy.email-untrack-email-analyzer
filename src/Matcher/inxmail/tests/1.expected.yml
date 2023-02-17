@@ -570,17 +570,22 @@ fullResult:
           analyticsInfo: null
           matches: {  }
     cnameChainList:
-      chaneChainsByDomain:
-        INX.14ee2f8a2c994de468fb21dea4f.3e8bb.18100.1.1865b71f297274@newsletter.inxmail.de:
+      cnaneChainsByDomain:
+        '':
+          domain: ''
           aliasDomains: {  }
-          domain: INX.14ee2f8a2c994de468fb21dea4f.3e8bb.18100.1.1865b71f297274@newsletter.inxmail.de
         15.14ee2f8a2c994de468fb21dea4f.localhost:
-          aliasDomains: {  }
           domain: 15.14ee2f8a2c994de468fb21dea4f.localhost
+          aliasDomains: {  }
+        download.inxshare.com:
+          domain: download.inxshare.com
+          aliasDomains:
+            - sws-vip.inxshare.com
+            - sws-vip-2.inxshare.com
+        inxmail.de:
+          domain: inxmail.de
+          aliasDomains: {  }
         newsletter.inxmail.de:
+          domain: newsletter.inxmail.de
           aliasDomains:
             - rdir.inxmail.com
-          domain: newsletter.inxmail.de
-        '':
-          aliasDomains: {  }
-          domain: ''

@@ -29,13 +29,13 @@ final class CnameResolver {
    * @return array<string>
    *   All CName aliases, with $domain always as first item.
    */
-  public function getCnames(string $domain, $aliases = []): array {
+  public function getCnameChain(string $domain, $cnames = []): array {
     if (!isset($this->aliasesMap[$domain])) {
-      $aliases[] = $domain;
+      $cnames[] = $domain;
       $hop = $this->getCname($domain);
 
-      $aliases = $hop ? $this->getCnames($hop, $aliases) : $aliases;
-      $this->aliasesMap[$domain] = $aliases;
+      $cnames = $hop ? $this->getCnameChain($hop, $cnames) : $cnames;
+      $this->aliasesMap[$domain] = $cnames;
     }
     return $this->aliasesMap[$domain];
   }
@@ -46,7 +46,7 @@ final class CnameResolver {
         $this->aliasMap[$domain] = NULL;
       }
       else {
-        // @todo COnsider adding retry on error.
+        // @todo Consider adding retry on error.
         // Add a trailing dot to prevent local resolving.
         $records = dns_get_record("{$domain}.", DNS_CNAME);
         $maybeCName = $records[0]['target'] ?? NULL;
@@ -56,7 +56,7 @@ final class CnameResolver {
     return $this->aliasMap[$domain];
   }
 
-  public function getAllAliases() {
+  public function getAllCnameChains() {
     return $this->aliasesMap;
   }
 

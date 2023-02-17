@@ -4,9 +4,9 @@ declare(strict_types=1);
 
 namespace Geeks4change\UntrackEmailAnalyzer;
 
-use Geeks4change\UntrackEmailAnalyzer\Analyzer\NewsletterServicesMatcher\ServiceMatcherProviderRepository;
-
 final class Globals {
+
+  public static bool $isDebug = FALSE;
 
   protected static ?self $singleton;
 
@@ -21,22 +21,12 @@ final class Globals {
     self::$singleton = NULL;
   }
 
-  protected ServiceMatcherProviderRepository $serviceInfoRepository;
-
-  public function getProviderRepository(): ServiceMatcherProviderRepository {
-    if (!isset($this->serviceInfoRepository)) {
-      $this->serviceInfoRepository = new ServiceMatcherProviderRepository();
-    }
-    return $this->serviceInfoRepository;
-  }
-
   protected CnameResolver $domainAliasesResolver;
 
-  public function getDomainAliasesResolver() {
+  public function getCnameResolver() {
     if (!isset($this->domainAliasesResolver)) {
       $this->domainAliasesResolver = new CnameResolver();
     }
     return $this->domainAliasesResolver;
   }
-
 }

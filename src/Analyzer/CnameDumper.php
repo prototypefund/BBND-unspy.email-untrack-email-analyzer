@@ -12,8 +12,8 @@ final class CnameDumper {
 
   public function dumpCnames(): CnameChainList {
     $result = new CnameChainListBuilder();
-    foreach (Globals::get()->getDomainAliasesResolver()->getAllAliases() as $aliases) {
-      $result->add(...$aliases);
+    foreach (Globals::get()->getCnameResolver()->getAllCnameChains() as $cnames) {
+      $result->add(...$cnames);
     }
     return $result->freeze();
   }

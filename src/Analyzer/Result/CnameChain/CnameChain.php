@@ -9,15 +9,18 @@ namespace Geeks4change\UntrackEmailAnalyzer\Analyzer\Result\CnameChain;
  */
 final class CnameChain {
 
+  public readonly string $domain;
+
   /**
    * @var array<string>
    */
   public readonly array $aliasDomains;
 
   public function __construct(
-    public readonly string $domain,
+    string $domain,
     string ...$aliasDomains
   ) {
+    $this->domain = $domain;
     $this->aliasDomains = $aliasDomains;
   }
 

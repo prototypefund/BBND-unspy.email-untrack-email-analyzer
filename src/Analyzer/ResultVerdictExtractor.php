@@ -82,7 +82,8 @@ final class ResultVerdictExtractor {
   private function getUserTrackingProviderIds(UrlItemInfoBag $urlItemInfoBag): array {
     $providers = [];
     foreach ($urlItemInfoBag->urlItemInfos as $urlItemInfo) {
-      $providers = array_merge($providers, array_keys($urlItemInfo->getUserTrackingProviderIds() ?? []));
+      $trackingProviderIds = $urlItemInfo->getUserTrackingProviderIds() ?? [];
+      $providers = array_merge($providers, $trackingProviderIds);
     }
     return array_unique($providers);
   }

@@ -20,7 +20,7 @@ final class MatcherRestrictor {
     // We need this for tests.
     return new FullResultWrapper(
       $wrapper->log,
-      new FullResult(
+      !$wrapper->fullResult ? NULL : new FullResult(
         $wrapper->fullResult->listInfo,
         $wrapper->fullResult->messageInfo,
         $wrapper->fullResult->verdict,

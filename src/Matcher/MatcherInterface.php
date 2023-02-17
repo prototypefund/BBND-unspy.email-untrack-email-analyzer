@@ -9,8 +9,6 @@ use Geeks4change\UntrackEmailAnalyzer\Analyzer\Result\Url\UrlItem;
 
 interface MatcherInterface {
 
-  public function getId(): string;
-
   public function matchHeader(HeaderItem $item): ?HeaderItemMatch;
 
   public function matchUrl(UrlItem $urlItem): ?ProviderMatch;

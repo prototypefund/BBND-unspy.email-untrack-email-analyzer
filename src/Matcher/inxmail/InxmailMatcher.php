@@ -8,18 +8,14 @@ use Geeks4change\UntrackEmailAnalyzer\Analyzer\Result\Header\HeaderItem;
 use Geeks4change\UntrackEmailAnalyzer\Analyzer\Result\Header\HeaderItemMatch;
 use Geeks4change\UntrackEmailAnalyzer\Analyzer\Result\Url\Match\ProviderMatch;
 use Geeks4change\UntrackEmailAnalyzer\Analyzer\Result\Url\UrlItem;
+use Geeks4change\UntrackEmailAnalyzer\Matcher\MatcherIdTrait;
 use Geeks4change\UntrackEmailAnalyzer\Matcher\MatcherInterface;
 use Geeks4change\UntrackEmailAnalyzer\Utility\Extract;
 use Geeks4change\UntrackEmailAnalyzer\Utility\UrlMatcher;
 
 final class InxmailMatcher implements MatcherInterface {
 
-  public function getId(): string {
-    $class = get_class($this);
-    $parts = explode('\\', $class);
-    $reverseParts = array_reverse($parts);
-    return $reverseParts[1];
-  }
+  use MatcherIdTrait;
 
   public function matchHeader(HeaderItem $item): ?HeaderItemMatch {
     // X-Mailer: Inxmail EE 4.8.45.741

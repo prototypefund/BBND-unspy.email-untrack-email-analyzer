@@ -60,7 +60,6 @@ final class MatcherManager {
       if (class_exists($class)) {
         $matcher = new ($class)();
         if ($matcher instanceof MatcherInterface) {
-          $id = $matcher->getId();
           $matchers[$id] = $matcher;
         }
         else {

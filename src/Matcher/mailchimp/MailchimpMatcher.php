@@ -8,37 +8,14 @@ use Geeks4change\UntrackEmailAnalyzer\Analyzer\Result\Header\HeaderItem;
 use Geeks4change\UntrackEmailAnalyzer\Analyzer\Result\Header\HeaderItemMatch;
 use Geeks4change\UntrackEmailAnalyzer\Analyzer\Result\Url\Match\ProviderMatch;
 use Geeks4change\UntrackEmailAnalyzer\Analyzer\Result\Url\UrlItem;
+use Geeks4change\UntrackEmailAnalyzer\Matcher\MatcherIdTrait;
 use Geeks4change\UntrackEmailAnalyzer\Matcher\MatcherInterface;
 use Geeks4change\UntrackEmailAnalyzer\Utility\Extract;
 use Geeks4change\UntrackEmailAnalyzer\Utility\UrlMatcher;
 
 final class MailchimpMatcher implements MatcherInterface {
 
-  protected function getDomains(): array {
-    return [
-      'mailchimp.com',
-      'mailchimpapp.net',
-      'mailchi.mp',
-      '.list-manage.com',
-      '.list-manage.com.edgekey.net',
-      'mcusercontent.com',
-      'agentofficemail.com',
-      'answerbook.com',
-      'campaign-archive1.com',
-      'list-manage1.com',
-      'mandrillapp.com',
-      'tinyletter.com',
-      '.mcsv.net',
-      '.mcdlv.net',
-    ];
-  }
-
-  public function getId(): string {
-    $class = get_class($this);
-    $parts = explode('\\', $class);
-    $reverseParts = array_reverse($parts);
-    return $reverseParts[1];
-  }
+  use MatcherIdTrait;
 
   public function matchHeader(HeaderItem $item): ?HeaderItemMatch {
     // Message-ID: <b00ccdbb39a8456492b99ae9e.be24ad69fc.20220626160230.a8d0ad03b7.fd6563fe@mail16.sea31.mcsv.net>
@@ -137,6 +114,25 @@ final class MailchimpMatcher implements MatcherInterface {
     }
 
     return NULL;
+  }
+
+  protected function getDomains(): array {
+    return [
+      'mailchimp.com',
+      'mailchimpapp.net',
+      'mailchi.mp',
+      '.list-manage.com',
+      '.list-manage.com.edgekey.net',
+      'mcusercontent.com',
+      'agentofficemail.com',
+      'answerbook.com',
+      'campaign-archive1.com',
+      'list-manage1.com',
+      'mandrillapp.com',
+      'tinyletter.com',
+      '.mcsv.net',
+      '.mcdlv.net',
+    ];
   }
 
 }

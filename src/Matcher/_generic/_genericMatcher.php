@@ -13,10 +13,6 @@ use Geeks4change\UntrackEmailAnalyzer\Matcher\MatcherInterface;
 
 final class _genericMatcher implements MatcherInterface {
 
-  public function getId(): string {
-    return '_generic';
-  }
-
   public function matchHeader(HeaderItem $item): ?HeaderItemMatch {
     return NULL;
   }

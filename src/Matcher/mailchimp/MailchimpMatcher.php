@@ -81,25 +81,25 @@ final class MailchimpMatcher extends MatcherBase implements MatcherInterface {
       return new ProviderMatch($this->getId(), 'webview', true, false);
     }
     # https://voeoe.us1.list-manage.com/track/click?u=b00ccdbb39a8456492b99ae9e&id=e269fce298&e=be24ad69fc
-    if (UrlMatcher::create('//list-manage.com/track/click?e=')->match($urlItem->url)) {
+    if (UrlMatcher::create('//.list-manage.com/track/click?e=')->match($urlItem->url)) {
       return new ProviderMatch($this->getId(), 'spy-link', true, false);
     }
 
     // Technical.
     # https://voeoe.us1.list-manage.com/unsubscribe?u=b00ccdbb39a8456492b99ae9e&id=ede4b53575&e=be24ad69fc&c=a8d0ad03b7
-    if (UrlMatcher::create('//{}.list-manage.com/unsubscribe')->match($urlItem->url)) {
+    if (UrlMatcher::create('//.list-manage.com/unsubscribe')->match($urlItem->url)) {
       return new ProviderMatch($this->getId(), 'unsubscribe', false, true);
     }
     # https://voeoe.us1.list-manage.com/vcard?u=b00ccdbb39a8456492b99ae9e&id=ede4b53575
-    if (UrlMatcher::create('//{}.list-manage.com/vcard')->match($urlItem->url)) {
+    if (UrlMatcher::create('//.list-manage.com/vcard')->match($urlItem->url)) {
       return new ProviderMatch($this->getId(), 'vcard', false, true);
     }
     # https://voeoe.us1.list-manage.com/profile?u=b00ccdbb39a8456492b99ae9e&id=ede4b53575&e=be24ad69fc&c=a8d0ad03b7
-    if (UrlMatcher::create('//{}.list-manage.com/profile')->match($urlItem->url)) {
+    if (UrlMatcher::create('//.list-manage.com/profile')->match($urlItem->url)) {
       return new ProviderMatch($this->getId(), 'profile', false, true);
     }
     # http://www.mailchimp.com/email-referral/?utm_source=freemium_newsletter&utm_medium=email&utm_campaign=referral_marketing&aid=b00ccdbb39a8456492b99ae9e&afl=1
-    if (UrlMatcher::create('//{}.mailchimp.com/email-referral')->match($urlItem->url)) {
+    if (UrlMatcher::create('//.mailchimp.com/email-referral')->match($urlItem->url)) {
       return new ProviderMatch($this->getId(), 'referral', false, true);
     }
 
@@ -114,7 +114,7 @@ final class MailchimpMatcher extends MatcherBase implements MatcherInterface {
       return new ProviderMatch($this->getId(), 'technical image', false, false);
     }
     # https://voeoe.us1.list-manage.com/track/open.php?u=b00ccdbb39a8456492b99ae9e&id=a8d0ad03b7&e=be24ad69fc
-    if (UrlMatcher::create('//{customer}.{region}.list-manage.com/track/open.php?u={sender}&id={}&e={}')->match($urlItem->url)) {
+    if (UrlMatcher::create('//.list-manage.com/track/open.php?u={sender}&id={}&e={}')->match($urlItem->url)) {
       return new ProviderMatch($this->getId(), 'tracking pixel', true, false);
     }
 

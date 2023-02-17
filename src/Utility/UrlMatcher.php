@@ -4,24 +4,31 @@ declare(strict_types=1);
 
 namespace Geeks4change\UntrackEmailAnalyzer\Utility;
 
+use Geeks4change\UntrackEmailAnalyzer\CnameResolver;
 use GuzzleHttp\Psr7\Uri;
 use loophp\collection\Collection;
 
 final class UrlMatcher {
 
+  protected CnameResolver $cnameResolver;
+
+  /**
+   * @param string[] $domains
+   * @param string $pathRegexes
+   * @param string[] $queryPatterns
+   */
   protected function __construct(
     public readonly array  $domains,
     public readonly string $pathRegexes,
     public readonly array  $queryPatterns,
-  ) {}
+  ) {
+    $this->cnameResolver = new CnameResolver();
+  }
 
   public function match(string $uriString): bool {
     $uri = new Uri($uriString);
 
-    $host = $uri->getHost();
-    $domainMatchesHost = fn(string $domain) => $host === $domain || str_ends_with($host, ".$domain");
-    $domainMatch = ($this->domains && $host) ??
-      boolval(array_filter($this->domains, $domainMatchesHost)) ?? NULL;
+    $domainMatch = $this->hostOrCnameMatchesAnyDomain($uri->getHost());
 
     $pathMatch = preg_match($this->pathRegexes, $uri->getPath());
 
@@ -36,6 +43,25 @@ final class UrlMatcher {
       Collection::fromIterable($this->queryPatterns)
         ->every($matchesQueryKey);
     return $domainMatch && $pathMatch && $queryMatch;
+  }
+
+  protected function hostOrCnameMatchesAnyDomain(string $host): bool {
+    return boolval(array_filter($this->domains, fn(string $domain) => $this->hostOrCnameMatchesSomeDomain($host, $domain)));
+  }
+
+  protected function hostOrCnameMatchesSomeDomain(string $host, string $domain): bool {
+    $hostCnames = $this->cnameResolver->getCnames($host);
+    return boolval(array_filter($hostCnames, fn(string $hostCname) => $this->hostMatchesSomeDomain($hostCname, $domain)));
+  }
+
+  protected function hostMatchesSomeDomain(string $host, string $domain): bool {
+    if (str_starts_with($domain, '.')) {
+      $isMatch = str_ends_with($host, $domain);
+    }
+    else {
+      $isMatch = $host === $domain;
+    }
+    return $isMatch;
   }
 
   /**

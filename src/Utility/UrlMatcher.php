@@ -31,10 +31,11 @@ final class UrlMatcher {
     if (!str_contains($uriString, '//')) {
       $uriString = "//$uriString";
     }
-    $uri = new Uri($uriString);
-    $domainMatch = $this->hostOrCnameMatchesAnyDomain($uri->getHost());
-    $pathMatch = $this->pathMatchesPattern($uri->getPath());
-    $queryMatch = $this->queryMatchesPattern($uri->getQuery());
+    [$host, $path, $query] = self::parseUrl($uriString);
+
+    $domainMatch = $this->hostOrCnameMatchesAnyDomain($host);
+    $pathMatch = $this->pathMatchesPattern($path);
+    $queryMatch = $this->queryMatchesPattern($query);
     if (Globals::$isDebug) {
       dump(get_defined_vars() + [$this]);
     }
@@ -99,11 +100,7 @@ final class UrlMatcher {
     if (!str_starts_with($uriPattern, '/') && !str_contains($uriPattern, '//')) {
       $uriPattern = "//$uriPattern";
     }
-    // Contrary to psr parsers, parse_url does not cough on e.g. '//.foo.bar'.
-    $uriParts = parse_url($uriPattern);
-    $host = $uriParts['host'] ?? '';
-    $path = $uriParts['path'] ?? '';
-    $query = $uriParts['query'] ?? '';
+    [$host, $path, $query] = self::parseUrl($uriPattern);
 
     $domains = $host ? [$host] : $domains;
     $pathPattern = self::createPathRegex($path);
@@ -140,6 +137,15 @@ final class UrlMatcher {
     /** @noinspection PhpUnnecessaryLocalVariableInspection */
     $regexPart = preg_replace('#[{].*?[}]#u', $wildcard, $quotedPattern);
     return $regexPart;
+  }
+
+  public static function parseUrl(string $uriPattern): array {
+    // Contrary to psr parsers, parse_url does not cough on e.g. '//.foo.bar'.
+    $uriParts = parse_url($uriPattern);
+    $host = $uriParts['host'] ?? '';
+    $path = $uriParts['path'] ?? '';
+    $query = $uriParts['query'] ?? '';
+    return [$host, $path, $query];
   }
 
 }

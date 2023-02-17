@@ -28,7 +28,7 @@ final class MailchimpMatcher implements MatcherInterface {
     // List-Unsubscribe: '<https://{sender-slug}.{region}.list-manage.com/unsubscribe?u={sender}&id={subscription}&e={recipient}&c={campaign}>, <mailto:unsubscribe-mc.{region}_{sender}.{campaign}-{recipient}@unsubscribe.mailchimpapp.net?subject=unsubscribe>'
     elseif ($item->name === 'list-unsubscribe') {
       $inAngleBrackets = Extract::angleBrackets($item->value);
-      $isMatch = $inAngleBrackets && UrlMatcher::create('.list-manage.com/unsubscribe', $this->getDomains())
+      $isMatch = $inAngleBrackets && UrlMatcher::create('.list-manage.com/unsubscribe')
         ->match($inAngleBrackets[0]);
     }
     // List-ID: b00ccdbb39a8456492b99ae9emc list <b00ccdbb39a8456492b99ae9e.1621274.list-id.mcsv.net>

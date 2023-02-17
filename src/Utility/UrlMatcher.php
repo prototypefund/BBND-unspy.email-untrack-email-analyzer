@@ -154,7 +154,7 @@ final class UrlMatcher {
     $wildcard = $separator ? "[^{$separator}]+" : '.+';
     /** @noinspection PhpUnnecessaryLocalVariableInspection */
     // The curly braces are quoted now.
-    $regexPart = preg_replace('#[\\\\][{].*?[\\\\][}]#u', $wildcard, $quotedPattern);
+    $regexPart = preg_replace('#[\\\\][{][\\\\][}]#u', $wildcard, $quotedPattern);
     return $regexPart;
   }
 

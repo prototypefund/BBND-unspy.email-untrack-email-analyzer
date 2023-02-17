@@ -8,13 +8,11 @@ use Geeks4change\UntrackEmailAnalyzer\Analyzer\Result\Header\HeaderItem;
 use Geeks4change\UntrackEmailAnalyzer\Analyzer\Result\Header\HeaderItemMatch;
 use Geeks4change\UntrackEmailAnalyzer\Analyzer\Result\Url\Match\ProviderMatch;
 use Geeks4change\UntrackEmailAnalyzer\Analyzer\Result\Url\UrlItem;
-use Geeks4change\UntrackEmailAnalyzer\Globals;
-use Geeks4change\UntrackEmailAnalyzer\Matcher\MatcherBase;
 use Geeks4change\UntrackEmailAnalyzer\Matcher\MatcherInterface;
 use Geeks4change\UntrackEmailAnalyzer\Utility\Extract;
 use Geeks4change\UntrackEmailAnalyzer\Utility\UrlMatcher;
 
-final class MailchimpMatcher extends MatcherBase implements MatcherInterface {
+final class MailchimpMatcher implements MatcherInterface {
 
   protected function getDomains(): array {
     return [
@@ -134,7 +132,7 @@ final class MailchimpMatcher extends MatcherBase implements MatcherInterface {
     }
 
     // Domain.
-    if ($this->urlMatchesDomain($urlItem)) {
+    if (UrlMatcher::create('', $this->getDomains())->match($urlItem->url)) {
       return new ProviderMatch($this->getId(), 'by domain', false, false);
     }
 

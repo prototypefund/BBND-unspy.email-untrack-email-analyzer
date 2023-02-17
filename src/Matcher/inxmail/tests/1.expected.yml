@@ -438,7 +438,12 @@ fullResult:
               - utm_source
               - utm_campaign
               - user_type
-          matches: {  }
+          matches:
+            inxmail:
+              providerId: inxmail
+              name: 'by domain'
+              isUserTracking: false
+              noRedirectCheck: false
         -
           urlItem:
             type: link
@@ -649,14 +654,24 @@ fullResult:
             url: 'https://newsletter.inxmail.de/resc/1/182c5e4510f/0/gmail_fix.gif'
           redirectInfo: null
           analyticsInfo: null
-          matches: {  }
+          matches:
+            inxmail:
+              providerId: inxmail
+              name: 'by domain'
+              isUserTracking: false
+              noRedirectCheck: false
         -
           urlItem:
             type: image
             url: 'https://newsletter.inxmail.de/resc/1/182c5e4510f/0/transparent.gif'
           redirectInfo: null
           analyticsInfo: null
-          matches: {  }
+          matches:
+            inxmail:
+              providerId: inxmail
+              name: 'by domain'
+              isUserTracking: false
+              noRedirectCheck: false
         -
           urlItem:
             type: image

@@ -12,15 +12,21 @@ include 'vendor/autoload.php';
 
 $fileNamePairs = iterator_to_array(DirInfo::getTestEmailFileNames());
 $testId = $argv[1] ?? '';
-$update = str_ends_with($testId, '!');
-if ($update) {
+
+$doUpdate = str_ends_with($testId, '!');
+if ($doUpdate) {
+  $testId = substr($testId, 0, -1);
+}
+$doPrint = str_ends_with($testId, '?');
+if ($doPrint) {
   $testId = substr($testId, 0, -1);
 }
 
 if (!isset($fileNamePairs[$testId])) {
-  print("Print test summary of on one of the packaged examples.\n");
+  print("Run test of on one of the packaged examples.\n");
   print("Usage: $0 PROVIDER:TEST\n");
   print("Example: $0 mailchimp:1\n");
+  print("To print result: $0 PROVIDER:TEST?\n");
   print("To update expected result: $0 PROVIDER:TEST!\n");
   $values = implode(' ', array_keys($fileNamePairs));
   print("Possible values: $values\n");
@@ -30,14 +36,16 @@ if (!isset($fileNamePairs[$testId])) {
 $fileContent = file_get_contents($emailFile);
 $analyzer = Api::getDebugAnalyzer();
 $result = $analyzer->analyze($fileContent);
-if ($update) {
+if ($doUpdate) {
   [$providerId, $testSubId] = explode(':', $testId);
   $result = MatcherRestrictor::restrictToMatcher($providerId, $result);
 }
 $testSummary = ObjectToArray::convert($result);
-$expectedResult = Yaml::dump($testSummary, 99, 2);
-print $expectedResult;
-if ($update) {
-  file_put_contents($resultFile, $expectedResult);
+$yaml = Yaml::dump($testSummary, 99, 2);
+if ($doPrint) {
+  print $yaml;
+}
+if ($doUpdate) {
+  file_put_contents($resultFile, $yaml);
   print("\nUpdated $resultFile\n");
 }

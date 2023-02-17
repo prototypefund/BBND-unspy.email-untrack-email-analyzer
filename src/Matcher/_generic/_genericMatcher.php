@@ -23,10 +23,9 @@ final class _genericMatcher implements MatcherInterface {
 
   public function matchUrl(UrlItem $urlItem): ?ProviderMatch {
     if ($urlItem instanceof LinkUrl) {
-      $match = preg_match('~unsubscribe|abmelden|austragen~ui', $urlItem->text);
-      dump(get_defined_vars());
+      $match = preg_match('~unsubscribe|abmelden|austragen|abbestellen~ui', $urlItem->text);
       if ($match) {
-        return new ProviderMatch('generic', 'looks like unsubscribe', false, true);
+        return new ProviderMatch('_generic', 'looks like unsubscribe', false, true);
       }
     }
     return NULL;

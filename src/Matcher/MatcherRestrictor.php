@@ -16,8 +16,17 @@ use Geeks4change\UntrackEmailAnalyzer\Analyzer\Result\Url\UrlItemInfoBag;
 
 final class MatcherRestrictor {
 
+
   public static function restrictToMatcher(string $providerId, FullResultWrapper $wrapper): FullResultWrapper {
-    // We need this for tests.
+
+    // When testing a matcher, remove noise from other matchers.
+    // But not generic matcher, it must be tested too.
+    $uriMatchFromProviderOrGeneric = fn(ProviderMatch $match) => $match->providerId === $providerId
+      || str_starts_with($match->providerId, '_');
+
+    // There is no generic header match, so that's enough.
+    $uriMatchFromProvider = fn(HeaderItemMatch $match) => $match->providerId === $providerId;
+
     return new FullResultWrapper(
       $wrapper->log,
       !$wrapper->fullResult ? NULL : new FullResult(
@@ -32,7 +41,7 @@ final class MatcherRestrictor {
                 $info->headerItem,
                 array_values(array_filter(
                   $info->matches,
-                  fn(HeaderItemMatch $match) => $match->providerId === $providerId,
+                  $uriMatchFromProvider,
                 )),
               ),
               $wrapper->fullResult->details->headerItemInfoBag->infos,
@@ -46,7 +55,7 @@ final class MatcherRestrictor {
                 $info->analyticsInfo,
                 array_filter(
                   $info->matches,
-                  fn(ProviderMatch $match) => $match->providerId === $providerId,
+                  $uriMatchFromProviderOrGeneric,
                 ),
               ),
               $wrapper->fullResult->details->urlItemInfoBag->urlItemInfos,
@@ -57,4 +66,5 @@ final class MatcherRestrictor {
       ),
     );
   }
+
 }

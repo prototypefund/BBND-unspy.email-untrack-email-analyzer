@@ -175,6 +175,11 @@ fullResult:
               - e
               - c
           matches:
+            _generic:
+              providerId: _generic
+              name: 'looks like unsubscribe'
+              isUserTracking: false
+              noRedirectCheck: true
             mailchimp:
               providerId: mailchimp
               name: unsubscribe

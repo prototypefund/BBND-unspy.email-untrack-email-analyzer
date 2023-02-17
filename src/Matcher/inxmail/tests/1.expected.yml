@@ -64,7 +64,12 @@ fullResult:
             keys:
               - o00y05ei00f7bu0id0000l6y00000000bf7tneluuzkjkiunkxes0quqnue15
               - params
-          matches: {  }
+          matches:
+            inxmail:
+              providerId: inxmail
+              name: webview
+              isUserTracking: true
+              noRedirectCheck: false
         -
           urlItem:
             type: link
@@ -81,7 +86,12 @@ fullResult:
               - utm_source
               - utm_campaign
               - user_type
-          matches: {  }
+          matches:
+            inxmail:
+              providerId: inxmail
+              name: webview
+              isUserTracking: true
+              noRedirectCheck: false
         -
           urlItem:
             type: link
@@ -98,7 +108,12 @@ fullResult:
               - utm_source
               - utm_campaign
               - user_type
-          matches: {  }
+          matches:
+            inxmail:
+              providerId: inxmail
+              name: webview
+              isUserTracking: true
+              noRedirectCheck: false
         -
           urlItem:
             type: link
@@ -115,7 +130,12 @@ fullResult:
               - utm_source
               - utm_campaign
               - user_type
-          matches: {  }
+          matches:
+            inxmail:
+              providerId: inxmail
+              name: webview
+              isUserTracking: true
+              noRedirectCheck: false
         -
           urlItem:
             type: link
@@ -132,7 +152,12 @@ fullResult:
               - utm_source
               - utm_campaign
               - user_type
-          matches: {  }
+          matches:
+            inxmail:
+              providerId: inxmail
+              name: webview
+              isUserTracking: true
+              noRedirectCheck: false
         -
           urlItem:
             type: link
@@ -149,7 +174,12 @@ fullResult:
               - utm_source
               - utm_campaign
               - user_type
-          matches: {  }
+          matches:
+            inxmail:
+              providerId: inxmail
+              name: webview
+              isUserTracking: true
+              noRedirectCheck: false
         -
           urlItem:
             type: link
@@ -166,7 +196,12 @@ fullResult:
               - utm_source
               - utm_campaign
               - user_type
-          matches: {  }
+          matches:
+            inxmail:
+              providerId: inxmail
+              name: webview
+              isUserTracking: true
+              noRedirectCheck: false
         -
           urlItem:
             type: link
@@ -183,7 +218,12 @@ fullResult:
               - utm_source
               - utm_campaign
               - user_type
-          matches: {  }
+          matches:
+            inxmail:
+              providerId: inxmail
+              name: webview
+              isUserTracking: true
+              noRedirectCheck: false
         -
           urlItem:
             type: link
@@ -200,7 +240,12 @@ fullResult:
               - utm_source
               - utm_campaign
               - user_type
-          matches: {  }
+          matches:
+            inxmail:
+              providerId: inxmail
+              name: webview
+              isUserTracking: true
+              noRedirectCheck: false
         -
           urlItem:
             type: link
@@ -217,7 +262,12 @@ fullResult:
               - utm_source
               - utm_campaign
               - user_type
-          matches: {  }
+          matches:
+            inxmail:
+              providerId: inxmail
+              name: webview
+              isUserTracking: true
+              noRedirectCheck: false
         -
           urlItem:
             type: link
@@ -234,7 +284,12 @@ fullResult:
               - utm_source
               - utm_campaign
               - user_type
-          matches: {  }
+          matches:
+            inxmail:
+              providerId: inxmail
+              name: webview
+              isUserTracking: true
+              noRedirectCheck: false
         -
           urlItem:
             type: link
@@ -251,7 +306,12 @@ fullResult:
               - utm_source
               - utm_campaign
               - user_type
-          matches: {  }
+          matches:
+            inxmail:
+              providerId: inxmail
+              name: webview
+              isUserTracking: true
+              noRedirectCheck: false
         -
           urlItem:
             type: link
@@ -268,7 +328,12 @@ fullResult:
               - utm_source
               - utm_campaign
               - user_type
-          matches: {  }
+          matches:
+            inxmail:
+              providerId: inxmail
+              name: webview
+              isUserTracking: true
+              noRedirectCheck: false
         -
           urlItem:
             type: link
@@ -285,7 +350,12 @@ fullResult:
               - utm_source
               - utm_campaign
               - user_type
-          matches: {  }
+          matches:
+            inxmail:
+              providerId: inxmail
+              name: webview
+              isUserTracking: true
+              noRedirectCheck: false
         -
           urlItem:
             type: link
@@ -302,7 +372,12 @@ fullResult:
               - utm_source
               - utm_campaign
               - user_type
-          matches: {  }
+          matches:
+            inxmail:
+              providerId: inxmail
+              name: webview
+              isUserTracking: true
+              noRedirectCheck: false
         -
           urlItem:
             type: link
@@ -319,7 +394,12 @@ fullResult:
               - utm_source
               - utm_campaign
               - user_type
-          matches: {  }
+          matches:
+            inxmail:
+              providerId: inxmail
+              name: webview
+              isUserTracking: true
+              noRedirectCheck: false
         -
           urlItem:
             type: link
@@ -336,7 +416,12 @@ fullResult:
               - utm_source
               - utm_campaign
               - user_type
-          matches: {  }
+          matches:
+            inxmail:
+              providerId: inxmail
+              name: webview
+              isUserTracking: true
+              noRedirectCheck: false
         -
           urlItem:
             type: link
@@ -370,7 +455,12 @@ fullResult:
               - utm_source
               - utm_campaign
               - user_type
-          matches: {  }
+          matches:
+            inxmail:
+              providerId: inxmail
+              name: webview
+              isUserTracking: true
+              noRedirectCheck: false
         -
           urlItem:
             type: link
@@ -387,7 +477,12 @@ fullResult:
               - utm_source
               - utm_campaign
               - user_type
-          matches: {  }
+          matches:
+            inxmail:
+              providerId: inxmail
+              name: webview
+              isUserTracking: true
+              noRedirectCheck: false
         -
           urlItem:
             type: link
@@ -404,7 +499,12 @@ fullResult:
               - utm_source
               - utm_campaign
               - user_type
-          matches: {  }
+          matches:
+            inxmail:
+              providerId: inxmail
+              name: webview
+              isUserTracking: true
+              noRedirectCheck: false
         -
           urlItem:
             type: link
@@ -429,13 +529,19 @@ fullResult:
               - utm_source
               - utm_campaign
               - user_type
-          matches: {  }
+          matches:
+            inxmail:
+              providerId: inxmail
+              name: webview
+              isUserTracking: true
+              noRedirectCheck: false
         -
           urlItem:
             type: link
             url: 'https://newsletter.inxmail.de/d?o00y05d000f7bu0ik0000l6y00000000bf7tneluuzkjkiunkxes0quqzcm15&utm_medium=email&utm_source=newsletter-welcome-01&utm_campaign=newsletter&user_type=[CAS_Vertrag_Typ]'
             text: 'Newsletter abbestellen'
-          redirectInfo: null
+          redirectInfo:
+            redirect: null
           analyticsInfo:
             type:
               name: NeedsResearch
@@ -446,7 +552,17 @@ fullResult:
               - utm_source
               - utm_campaign
               - user_type
-          matches: {  }
+          matches:
+            _generic:
+              providerId: _generic
+              name: 'looks like unsubscribe'
+              isUserTracking: false
+              noRedirectCheck: true
+            inxmail:
+              providerId: inxmail
+              name: webview
+              isUserTracking: true
+              noRedirectCheck: false
         -
           urlItem:
             type: link
@@ -464,7 +580,12 @@ fullResult:
               - utm_source
               - utm_campaign
               - user_type
-          matches: {  }
+          matches:
+            inxmail:
+              providerId: inxmail
+              name: webview
+              isUserTracking: true
+              noRedirectCheck: false
         -
           urlItem:
             type: link
@@ -482,7 +603,12 @@ fullResult:
               - utm_source
               - utm_campaign
               - user_type
-          matches: {  }
+          matches:
+            inxmail:
+              providerId: inxmail
+              name: webview
+              isUserTracking: true
+              noRedirectCheck: false
         -
           urlItem:
             type: link
@@ -499,7 +625,12 @@ fullResult:
               - utm_source
               - utm_campaign
               - user_type
-          matches: {  }
+          matches:
+            inxmail:
+              providerId: inxmail
+              name: webview
+              isUserTracking: true
+              noRedirectCheck: false
         -
           urlItem:
             type: image

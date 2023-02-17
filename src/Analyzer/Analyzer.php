@@ -100,7 +100,9 @@ final class Analyzer {
         new FullResult($listInfo,
           $messageInfo,
           $resultVerdict,
-          $resultDetails));
+          $resultDetails)
+      );
+
     } catch (\Throwable $e) {
       if ($throwExceptions) {
         throw new \RuntimeException('Rethrow', 0, $e);

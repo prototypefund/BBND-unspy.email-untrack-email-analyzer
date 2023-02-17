@@ -1,0 +1,910 @@
+Return-Path: <bounce_7512+cdAAAX4GQAAAAA6AAD5C5QAAAAAAAACL7GDBVQ@newsletter.inxmail.de>
+X-Spam-Checker-Version: SpamAssassin 3.4.4 (2020-01-24) on
+	dd20708.kasserver.com
+X-Original-To: hpot2212u1@untrack.email
+Delivered-To: m0666425@dd20708.kasserver.com
+X-policyd-weight:  NOT_IN_SPAMCOP=-1.5 NOT_IN_IX_MANITU=-1.5 CL_IP_EQ_HELO_IP=-2 (check from: .inxmail. - helo: .inxmx111.inxserver. - helo-domain: .inxserver.)  FROM/MX_MATCHES_HELO(DOMAIN)=-2; rate: -7
+Authentication-Results: dd20708.kasserver.com;
+	dkim=pass (2048-bit key; unprotected) header.d=inxserver.com header.i=@inxserver.com header.a=rsa-sha256 header.s=202007 header.b=gQz8brg2;
+	dkim=pass (2048-bit key; unprotected) header.d=newsletter.inxmail.de header.i=news@newsletter.inxmail.de header.a=rsa-sha256 header.s=inx48948378 header.b=UGSjvWMg;
+	dkim-atps=neutral
+Received: from inxmx111.inxserver.de (inxmx111.inxserver.de [93.191.162.90])
+	by dd20708.kasserver.com (Postfix) with ESMTPS id A420E1880602
+	for <hpot2212u1@untrack.email>; Thu, 16 Feb 2023 19:17:20 +0100 (CET)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=inxserver.com;
+	s=202007; t=1676571439; r=y;
+	bh=2UWGn8rdB/hxPfwdSHxw4ZDUIj3CPt2sy9MrdrzvtFU=;
+	h=DKIM-Signature:Date:From:To:Message-ID:Subject:MIME-Version:
+	 Content-Type:List-Id:List-Unsubscribe:List-Unsubscribe-Post:
+	 Feedback-ID:X-CSA-Complaints:X-Mailer;
+	b=gQz8brg2x65fnVLhKDV0zyeO3pprD+0aNBPnGBL3wFxZWCI5FDYZwt9t1X6aCOv21
+	 S8KVqQuLQhi5tQsMk2n1JFCc/Wu8cC+7Jej/oe91pWnR0Rk6XJAoosN42+Q8UofrzD
+	 D1bU86j79R/t4kbg87LD0pdtXMoxk7Hbf0p02RB+myB1tF83VsVuMPcKMRY4atIyG+
+	 utwhkdsRrQeLnzBfZ4Jf3WtwSQEViyGArg5zywHPitHXMLo5LaaLJM6vqJtWLA5u7t
+	 Qcr1lCQhiMub8p9Ooja53o4cCttU26S4BRuPX0ySAHZr1ctYsf+bLLlE503qqCH0KX
+	 vw4ygIf+suEjg==
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/simple; t=1676571439;
+	s=inx48948378; d=newsletter.inxmail.de;
+	i=news@newsletter.inxmail.de;
+	h=Date:From:To:Message-ID:Subject:MIME-Version:Content-Type:List-Id:List-Unsubscribe:List-Unsubscribe-Post:Feedback-ID;
+	bh=2UWGn8rdB/hxPfwdSHxw4ZDUIj3CPt2sy9MrdrzvtFU=;
+	b=UGSjvWMgtx78dxQVK/hZrIY+GVfwQTy3Ms5c6NIITYsQYwCd6tC886UUa4VRmz9p
+	yl9HG+7c4jo4EqcK933WdRftdsCvkfkiqt2PKyzrsGHitUE6T6OFZ1u1KIpKvKKOkic
+	tAg8brW2GUUVtISCJxpq6C7TWRovzivmAhtI4LXG7Nu737D+f7CBaslAnntHz/TZLrB
+	HpP6xRbeFsLE2J2a06JGO7ZTCZpbxY/lr2xUWTUYfB1R2WvWitdf5u06ppviGBvS2z9
+	Ekw6mn0iLFEPey/R/hYURzlrUpbpjAqocCva3L1iu9sQTkeONU7B+b/DnKyJGMstdY1
+	YeXQ3y5iCw==
+Date: Thu, 16 Feb 2023 19:17:19 +0100 (CET)
+From: Inxmail Newsletter <news@newsletter.inxmail.de>
+To: hpot2212u1@untrack.email
+Message-ID: <INX.14ee2f8a2c994de468fb21dea4f.3e8bb.18100.1.1865b71f297274@newsletter.inxmail.de>
+Subject: =?UTF-8?Q?Herzlich_Willkommen_bei_Inxmail!_?=
+ =?UTF-8?Q?Sch=C3=B6n,_dass_Sie_mit_an_Bord_sind.?=
+MIME-Version: 1.0
+Content-Type: multipart/alternative; 
+	boundary="----=_Part_20526_976752123.1676571439780"
+List-Id: "0" <15.14ee2f8a2c994de468fb21dea4f.localhost>
+List-Unsubscribe: <https://newsletter.inxmail.de/d?o00y05gi00f7bu0il0000l6y00000000bf7tneluuzkjkiunkxes0qurpdy15>, <mailto:news_7512@inxserver.com?subject=unsubscribe%20params%3Db00000dy00f7bu00d5c5qc000000000jp43sjnlso>
+List-Unsubscribe-Post: List-Unsubscribe=One-Click
+Feedback-ID: xpro-7512-256187:xpro-7512:TRIGGER_MAILING:inxmailde
+X-CSA-Complaints: csa-complaints@eco.de
+X-Mailer: Inxmail EE 4.8.47.804
+X-Spamd-Bar: --
+X-Dmarc-Test: Allow
+X-KasLoop: m0666425
+
+------=_Part_20526_976752123.1676571439780
+Content-Type: text/plain; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+Zur Webseitenansicht
+=C2=BB=C2=A0https://newsletter.inxmail.de/d?o00y047i00f7bu0id0000l6y0000000=
+0bf7tneluuzkjkiunkxes0qux5l415&params=3DxvmeIgQOsQy9WRMui480fHBaQ7htFgRpu1Y=
+uqp4RvefAsNS%2BYPDaYy1v2jrZV0wcWOu47P727Ts3F75Gb4RGtdrQSMqgZp70R3Vt%2Bz%2Bm=
+veQ%3D
+
+=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=
+=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=
+=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D
+
+  Hallo Rudy Rucker,
+ =20
+  vielen Dank, dass Sie unseren Newsletter abonniert haben! Ab sofort
+  erhalten Sie im zweiw=C3=B6chigen Rhythmus spannende Insights und wertvol=
+le
+  Tipps rund um das Thema E-Mail-Marketing. Alle Partner erhalten
+  zus=C3=A4tzlich einmal pro Monat unseren exklusiven Partner-Newsletter.
+ =20
+  Wir freuen uns, dass Sie mit an Bord sind!
+ =20
+  Ihr Inxmail Team
+ =20
+___________________________________________________________________________
+
+ =20
+  Knowledge Base: Geb=C3=BCndeltes Know-how im E-Mail-Marketing
+___________________________________________________________________________
+
+  Unsere Knowledge Base
+  https://newsletter.inxmail.de/d?o00y047q00f7bu0id0000l6y00000000bf7tneluu=
+zkjkiunkxes0quwyi415
+   ist eine Wissensplattform, die Ihnen einen =C3=9Cberblick =C3=BCber alle
+  wichtigen Themen rund um den Marketingkanal =E2=80=9EE-Mail=E2=80=9C lief=
+ert. Sie
+  erleichtert den Einstieg ins E-Mail-Marketing und bietet umfassendes
+  Material =E2=80=93 von der Strategie, =C3=BCber rechtliche Rahmenbedingun=
+gen und die
+  Zustellbarkeit von Mailings bis hin zu Verteileraufbau und -pflege
+  sowie Tracking und Reporting.
+ =20
+  Zur Knowledge
+  Base:
+  =C2=BB=C2=A0https://newsletter.inxmail.de/d?o00y047y00f7bu0id0000l6y00000=
+000bf7tneluuzkjkiunkxes0qur3j415
+___________________________________________________________________________
+
+___________________________________________________________________________
+
+___________________________________________________________________________
+
+ =20
+ =20
+  Wir sind Inxmail
+ =20
+  Es ist die N=C3=A4he zum Kunden, die unser Handeln bestimmt. Als E-Mail-
+  Marketing-Spezialist sind wir bekannt f=C3=BCr leistungsstarke Software-
+  L=C3=B6sungen
+  https://newsletter.inxmail.de/d?o00y050000f7bu0id0000l6y00000000bf7tneluu=
+zkjkiunkxes0quwsvm15
+   und ausgezeichnete Services
+  https://newsletter.inxmail.de/d?o00y050i00f7bu0id0000l6y00000000bf7tneluu=
+zkjkiunkxes0qurrum15.
+   Weltweit realisieren damit =C3=BCber 2.000 Kunden
+  https://newsletter.inxmail.de/d?o00y050q00f7bu0id0000l6y00000000bf7tneluu=
+zkjkiunkxes0ququxm15
+   personalisierte Newsletter, automatisierte Kampagnen und
+  Transaktionsmails. =C3=9Cber Schnittstellen
+  https://newsletter.inxmail.de/d?o00y050y00f7bu0id0000l6y00000000bf7tneluu=
+zkjkiunkxes0quxxwm15
+   l=C3=A4sst sich unsere Software mit vielen spezialisierten Systemen wie =
+CRM-
+  , Online-Shop- und Kampagnenmanagement-Tools vernetzen.
+ =20
+  Mehr zu
+  Inxmail:
+  =C2=BB=C2=A0https://newsletter.inxmail.de/d?o00y05b000f7bu0id0000l6y00000=
+000bf7tneluuzkjkiunkxes0qus6rm15
+ =20
+=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=
+=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=
+=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D
+
+  =C2=BB=C2=A0https://newsletter.inxmail.de/d?o00y05bi00f7bu0id0000l6y00000=
+000bf7tneluuzkjkiunkxes0quv5qm15
+ =20
+  =C2=BB=C2=A0https://newsletter.inxmail.de/d?o00y05bq00f7bu0id0000l6y00000=
+000bf7tneluuzkjkiunkxes0quuytm15
+ =20
+  =C2=BB=C2=A0https://newsletter.inxmail.de/d/d.gmbh?o00y05by00f7bu0id0000l=
+6y00000000bf7tneluuzkjkiunkxes0qut3sm15
+ =20
+  =C2=BB=C2=A0https://newsletter.inxmail.de/d?o00y05c000f7bu0id0000l6y00000=
+000bf7tneluuzkjkiunkxes0quwmvi15
+ =20
+  =C2=BB=C2=A0https://newsletter.inxmail.de/d?o00y05ci00f7bu0id0000l6y00000=
+000bf7tneluuzkjkiunkxes0qurpui15
+ =20
+  =C2=BB=C2=A0https://newsletter.inxmail.de/d?o00y05cq00f7bu0id0000l6y00000=
+000bf7tneluuzkjkiunkxes0quqkxi15
+___________________________________________________________________________
+
+ =20
+  Impressum
+  Inxmail GmbH =C2=B7 Wentzingerstr. 17 =C2=B7 79106 Freiburg
+  kontakt@inxmail.de =C2=B7 www.inxmail.de
+  https://newsletter.inxmail.de/d?o00y05cy00f7bu0id0000l6y00000000bf7tneluu=
+zkjkiunkxes0quxjwi15
+  T +49 761 296979-0 =C2=B7 F +49 761 296979-9
+ =20
+  Gesch=C3=A4ftsf=C3=BChrer: Peter Ziras
+  Amtsgericht Freiburg, HRB 5870 =C2=B7 USt-IdNr.: DE 198 371 679
+ =20
+  Newsletter abbestellen
+  https://newsletter.inxmail.de/d?o00y05d000f7bu0ik0000l6y00000000bf7tneluu=
+zkjkiunkxes0quqzcm15
+   =C2=B7 Benutzerprofil =C3=A4ndern
+  https://newsletter.inxmail.de/d?o00y05di00f7bu0id0000l6y00000000bf7tneluu=
+zkjkiunkxes0quvdqi15
+   =C2=B7 Mailarchiv aufrufen
+  https://newsletter.inxmail.de/d?o00y05dq00f7bu0id0000l6y00000000bf7tneluu=
+zkjkiunkxes0quugti15
+  Erfassung personenbezogenes Nutzungsverhalten ausschalten
+  https://newsletter.inxmail.de/d?o00y05dy00f7bu0ip0000l6y00000000bf7tneluu=
+zkjkiunkxes0quwhom15
+------=_Part_20526_976752123.1676571439780
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.=
+w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns=3D"http://www.w3.=
+org/1999/xhtml" xmlns:o=3D"urn:schemas-microsoft-com:office:office" xmlns:v=
+=3D"urn:schemas-microsoft-com:vml"><head> <meta http-equiv=3D"Content-Type"=
+ content=3D"text/html;charset=3DUTF-8"/><meta http-equiv=3D"Content-Style-T=
+ype" content=3D"text/css;charset=3DUTF-8"/><title></title><!--[if gte mso 9=
+]><xml><o:OfficeDocumentSettings><o:AllowPNG/><o:PixelsPerInch>96</o:Pixels=
+PerInch></o:OfficeDocumentSettings></xml><![endif]--><style type=3D"text/cs=
+s">span{font-family:Arial,Helvetica,sans-serif;font-style:normal;font-size:=
+15px;font-weight:normal;color:#372E2C;}a{font-family:Arial,Helvetica,sans-s=
+erif;font-style:normal;font-size:15px;font-weight:bold;text-decoration:unde=
+rline;color:#372E2C;}ul{margin-top:0;margin-bottom:0;}ol{margin-top:0;margi=
+n-bottom:0;}li{margin:0;}</style><style type=3D"text/css">.d_img{display:no=
+ne;}</style><style type=3D"text/css"> table {border-collapse:separate;}
+=09=09=09=09=09table td {border-collapse:collapse;}   =20
+=09=09=09=09=09a, a:link, a:visited {text-decoration: none;}=20
+=09=09=09=09=09h2,h2 a,h2 a:visited,h3,h3 a,h3 a:visited,h4,h5,h6,.t_cht {c=
+olor:#000 !important; color: black; line-height: 100%; }
+=09=09=09=09=09 p {margin:0; padding:0; margin-bottom:0;}
+=09=09=09=09=09.ExternalClass p, .ExternalClass span, .ExternalClass font, =
+.ExternalClass td {line-height: 100%}
+=09=09=09=09=09.ExternalClass {width: 100%;}=09
+=09=09=09=09      body {margin: 0; padding: 0; min-width: 100%!important;}
+       =09=09=09=09 .content {width: 100%; max-width: 600px;}  =09=09=09
+=09=09=09=09a[x-apple-data-detectors] {
+=09=09=09color: inherit !important;
+=09=09=09text-decoration: none !important;
+=09=09=09font-family: inherit !important;
+=09=09=09font-weight: inherit !important;
+=09=09=09line-height: inherit !important;
+=09=09}[office365] div,button { margin:0 !important; padding:0 !important; =
+display:block !important;}[office365] img{display:block!important;}.aol_lin=
+ks a{color:#372E2C!important;font-size:12px!important;font-weight:normal!im=
+portant; text-decoration:underline!important;}</style><!--[if gt mso 15]><s=
+tyle type=3D"text/css" media=3D"all">
+        /* Outlook 2016 Height Fix */
+        table, tr, td {border-collapse: collapse;}
+        tr { font-size:0px; line-height:0px; border-collapse: collapse; }</=
+style><![endif]--><style type=3D"text/css">@media only screen and (max-devi=
+ce-width: 500px), screen and (max-width: 500px){.d{display:none!important;}=
+*.m2{display:table!important; width:100%!important; max-height:inherit!impo=
+rtant; overflow:visible!important; float:none!important;}*.m{display:block!=
+important; width:100%!important; max-height:inherit!important; overflow:vis=
+ible!important; float:none!important;}.m table{width:100%!important;}.m img=
+, .m2 img{width:100%; height:auto;}table {width:100%!important; max-width:6=
+00px!important;}.button img {width:100%; height:auto;}.fwi{width:100%!impor=
+tant;width:100%; height:auto;}.fwi img{width:100%; height:auto; margin-bott=
+om:10px;}.sal_content {height:auto;}.sal_img {min-width:80px; max-width:130=
+px; height:auto;}.sal_img img{min-width:80px; max-width:130px; height:auto;=
+}.t_pix{width:1px!important;height:1px!important}body{-webkit-text-size-adj=
+ust:none;  -ms-text-size-adjust:none;}.gmail img{width: 240px!important;tex=
+t-align:center!important; min-width:0 !important; display:none!important;}.=
+gmail{width: 240px!important;text-align:center!important; min-width:0 !impo=
+rtant; display:none!important;}html, body, p, div, h1, h2, h3, h4, h5, h6{-=
+webkit-text-size-adjust:120%;}.wauto{width:auto!important;}.wh5px{width:5px=
+!important;height:5px!important;}.wh10px{width:10px!important;height:10px!i=
+mportant;}.m0 img{margin:0!important;}.ptb10{padding-top:10px; padding-bott=
+om:10px;}.pt10{padding-top:10px;}.glob_pad{padding-left:30px;padding-right:=
+30px}.applefix span a{color:#372E2C!important;font-size:12px!important;font=
+-weight:normal!important;}.sp_h{height:30px!important;width:2%!important;fl=
+oat:left;}.sp4_h{height:30px!important;width:4%!important;float:left;}.pt_t=
+oc{padding-top:30px!important;}.pb_toc{padding-bottom:30px!important}.nc_im=
+g img{width:100%;height:auto; margin-bottom:10px;}.unset_pad{padding:0!impo=
+rtant;}.padding{padding-left:5px!important; padding-right:5px!important;pad=
+ding-bottom:10px!important}.ncs{width:100%;height:auto;}.ncs2{width:48%!imp=
+ortant;height:auto;}.ncs3{width:68%!important;height:auto;}.ncs1{width:29%!=
+important;height:auto; -webkit-hyphens:auto; hyphens:auto;-moz-hyphens: aut=
+o;-ms-hyphens: auto; word-break:break-all; word-break:break-word; word-wrap=
+:break-word;}.ncs_img1{width:68%;height:auto;}.ncs_img1 img{width:100%;heig=
+ht:auto;}.ncs_img2{width:48%!important;height:auto;}.ncs_img2 img{width:100=
+%;height:auto;}.img_margin img{margin-bottom:10px}.ncs_img3{width:29%!impor=
+tant;height:auto;}.ncs_img3 img{width:100%;height:auto;}.ncs_button img{wid=
+th:100%;height:auto;}.btn img{width:100%;height:auto;}.btn_ns{max-width:100=
+%;height:auto;}.word_break{word-break:break-word; -ms-word-break:break-all;=
+  word-break:break-all; word-wrap:break-word;}*.dns {width:48%!important; h=
+eight:auto;-webkit-hyphens:auto; hyphens:auto;-moz-hyphens: auto;-ms-hyphen=
+s: auto; word-break:break-all; word-break:break-word; word-wrap:break-word;=
+}.dns_content{width:auto;}.dns .btn img{width:100%!important; height:auto}*=
+.triple_news_scaled{width:32%!important; height:auto;-webkit-hyphens:auto; =
+hyphens:auto;-moz-hyphens: auto;-ms-hyphens: auto; word-break:break-word; -=
+ms-word-break:break-all;  word-break:break-all; word-wrap:break-word;float:=
+left;}.space{width:2%!important;}.imp{width:48%!important; height:auto; }.i=
+mp img{max-width:100%; width:auto;}.imp_scaled img{max-width:100%; width:au=
+to;height:auto;}.sp_h_fw{height:30px!important;width:100%!important}.map_1 =
+.img_210{width:35%;height:auto}.map_2 .img_600{width:100%;height:auto}.map_=
+1 .img_600{width:100%;height:auto}}</style></head><body bgcolor=3D"#F4F4F4"=
+ text=3D"#372E2C" link=3D"#372E2C" alink=3D"#372E2C" vlink=3D"#372E2C" styl=
+e=3D"background-color:#F4F4F4;color:#372E2C;font-family:Arial,Helvetica,san=
+s-serif;font-style:normal;font-size:15px;font-weight:normal;"><a name=3D"to=
+p" id=3D"top"></a><div style=3D"font-size:0;display:none;color:#F4F4F4;">Wi=
+ssenswertes rund ums E-Mail-Marketing</div><div style=3D"display: none; max=
+-height: 0px; overflow: hidden;">&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;=
+&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zw=
+nj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;=
+&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nb=
+sp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;=
+&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zw=
+nj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;=
+&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nb=
+sp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;=
+&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zw=
+nj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;=
+&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nb=
+sp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;=
+&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zw=
+nj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;=
+&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nb=
+sp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;=
+&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zw=
+nj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;=
+&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nb=
+sp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;=
+&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zw=
+nj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;=
+&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nb=
+sp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;=
+&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zw=
+nj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;=
+&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nb=
+sp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;=
+&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zw=
+nj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;=
+&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nb=
+sp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;=
+&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zw=
+nj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;=
+&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nb=
+sp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;=
+&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zw=
+nj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;=
+&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nb=
+sp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;=
+&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zw=
+nj;&nbsp;&zwnj;</div><table align=3D"center" cellspacing=3D"0" cellpadding=
+=3D"0" border=3D"0" width=3D"100%" bgcolor=3D"#F4F4F4" style=3D"text-align:=
+center;width:100%;"><tr><td style=3D"vertical-align:top;" valign=3D"top" al=
+ign=3D"left"><div align=3D"center"><table align=3D"center" cellspacing=3D"0=
+" cellpadding=3D"0" border=3D"0" width=3D"780" bgcolor=3D"#F4F4F4" style=3D=
+"text-align:center;width:780px;"><tr><td valign=3D"top" align=3D"left" widt=
+h=3D"780" style=3D"vertical-align:top;"><img src=3D"https://newsletter.inxm=
+ail.de/d/d.gif?o00y05e000f7bu0ih0000l6y00000000bf7tneluuzkjkiunkxes0qutq6y1=
+5" alt=3D"" width=3D"1" height=3D"1" class=3D"d" border=3D"0" hspace=3D"0" =
+vspace=3D"0" /><img src=3D"https://newsletter.inxmail.de/resc/1/182c5e4510f=
+/0/gmail_fix.gif" alt=3D"" width=3D"780" height=3D"1" class=3D"d" border=3D=
+"0" hspace=3D"0" vspace=3D"0" align=3D"top" style=3D"min-width:780px;" /><t=
+able cellspacing=3D"0" cellpadding=3D"0" border=3D"0" width=3D"780" bgcolor=
+=3D"#F4F4F4" style=3D"width:780px;"><tr><td style=3D"vertical-align:top;" v=
+align=3D"top" align=3D"left" width=3D"600"><table style=3D"width:600px;" ce=
+llspacing=3D"0" cellpadding=3D"0" border=3D"0" width=3D"600"><tr><td valign=
+=3D"top" width=3D"600" align=3D"center" class=3D"pt10" style=3D"vertical-al=
+ign:top;"><a href=3D"https://newsletter.inxmail.de/d?o00y05ei00f7bu0id0000l=
+6y00000000bf7tneluuzkjkiunkxes0quqnue15&amp;params=3DxvmeIgQOsQy9WRMui480fH=
+BaQ7htFgRpu1Yuqp4RvefAsNS%2BYPDaYy1v2jrZV0wcWOu47P727Ts3F75Gb4RGtdrQSMqgZp7=
+0R3Vt%2Bz%2BmveQ%3D" style=3D"font-size:12px;font-weight:normal;text-decora=
+tion:underline;color:#372E2C;" target=3D"_blank" title=3D"">Zur Webseitenan=
+sicht</a></td></tr><tr><td width=3D"600" height=3D"15" style=3D"vertical-al=
+ign:top;"/></tr><tr><td valign=3D"top" align=3D"left" width=3D"600" style=
+=3D"vertical-align:top;line-height:0px;"><img src=3D"https://newsletter.inx=
+mail.de/resc/1/182c5e4510f/0/transparent.gif" alt=3D"" width=3D"1" height=
+=3D"1" class=3D"d" border=3D"0" hspace=3D"0" vspace=3D"0" align=3D"top" /><=
+![if !mso]><div class=3D"m" style=3D"display:none;width:0;max-height:0;over=
+flow:hidden;"><table style=3D"display:none;width:600px;" class=3D"m" cellsp=
+acing=3D"0" cellpadding=3D"0" border=3D"0" width=3D"600"><tr><td valign=3D"=
+top" align=3D"left" width=3D"600" bgcolor=3D"#FFFFFF" style=3D"vertical-ali=
+gn:top;line-height:0px;"><a href=3D"https://newsletter.inxmail.de/d?o00y05e=
+q00f7bu0id0000l6y00000000bf7tneluuzkjkiunkxes0qurixe15&amp;utm_medium=3Dema=
+il&amp;utm_source=3Dnewsletter-welcome-01&amp;utm_campaign=3Dnewsletter&amp=
+;user_type=3D[CAS_Vertrag_Typ]" style=3D"line-height:0px;font-family:Arial,=
+Helvetica,sans-serif;font-style:normal;font-size:15px;font-weight:bold;text=
+-decoration:underline;color:#372E2C;" target=3D"_blank"><img src=3D"https:/=
+/download.inxshare.com/Inxmail_Kommunikation/TEMPLATE/2020/Header-Logo-Mobi=
+l.gif" alt=3D"Inxmail Logo" width=3D"600" height=3D"165" border=3D"0" /></a=
+></td></tr></table></div><![endif]></td></tr><tr><td valign=3D"top" align=
+=3D"left" width=3D"600" style=3D"vertical-align:top;line-height:0px;"><img =
+src=3D"https://newsletter.inxmail.de/resc/1/182c5e4510f/0/transparent.gif" =
+alt=3D"" width=3D"1" height=3D"1" class=3D"d" border=3D"0" hspace=3D"0" vsp=
+ace=3D"0" align=3D"top" /><![if !mso]><div class=3D"m" style=3D"display:non=
+e;width:0;max-height:0;overflow:hidden;"><table style=3D"display:none;width=
+:600px;" class=3D"m" cellspacing=3D"0" cellpadding=3D"0" border=3D"0" width=
+=3D"600"><tr><td valign=3D"top" align=3D"left" width=3D"600" bgcolor=3D"#FF=
+FFFF" style=3D"vertical-align:top;line-height:0px;"><a href=3D"https://news=
+letter.inxmail.de/d?o00y05ey00f7bu0id0000l6y00000000bf7tneluuzkjkiunkxes0qu=
+wlwe15&amp;utm_medium=3Demail&amp;utm_source=3Dnewsletter-welcome-01&amp;ut=
+m_campaign=3Dnewsletter&amp;user_type=3D[CAS_Vertrag_Typ]" style=3D"line-he=
+ight:0px;font-family:Arial,Helvetica,sans-serif;font-style:normal;font-size=
+:15px;font-weight:bold;text-decoration:underline;color:#372E2C;" target=3D"=
+_blank"><img src=3D"https://download.inxshare.com/Inxmail_Kommunikation/WEL=
+COME_NEU/TAG0/HEADER-MOBILE600x600px-WELCOME-TAG0.jpg" alt=3D"Herzlich Will=
+kommen! Sch&ouml;n, dass Sie mit an Bord sind." width=3D"600" height=3D"600=
+" border=3D"0" /></a></td></tr></table></div><![endif]></td></tr><tr><td st=
+yle=3D"font-size:0;vertical-align:top;line-height:0px;" valign=3D"top" alig=
+n=3D"left" width=3D"600"><img src=3D"https://newsletter.inxmail.de/resc/1/1=
+82c5e4510f/0/transparent.gif" alt=3D"" width=3D"1" height=3D"1" class=3D"d"=
+ border=3D"0" hspace=3D"0" vspace=3D"0" align=3D"top" /><![if !mso]><div cl=
+ass=3D"m" style=3D"display:none;width:0;max-height:0;overflow:hidden;"><tab=
+le style=3D"display:none;width:600px;" class=3D"m" cellspacing=3D"0" cellpa=
+dding=3D"0" border=3D"0" width=3D"600"><tr><td height=3D"10" width=3D"600" =
+bgcolor=3D"#FFFFFF" style=3D"vertical-align:top;"/></tr></table></div><![en=
+dif]></td></tr></table></td><td style=3D"vertical-align:top;" class=3D"d" w=
+idth=3D"180"/></tr></table><table cellspacing=3D"0" cellpadding=3D"0" borde=
+r=3D"0" width=3D"780" style=3D"width:780px;"><tr><td class=3D"content" vali=
+gn=3D"top" align=3D"left" width=3D"600" bgcolor=3D"#FFFFFF" style=3D"vertic=
+al-align:top;"><table style=3D"width:600px;" width=3D"600" cellspacing=3D"0=
+" cellpadding=3D"0" border=3D"0"><tr><td width=3D"600" valign=3D"top" align=
+=3D"left" bgcolor=3D"#FFFFFF" style=3D"vertical-align:top;"><table width=3D=
+"600" cellspacing=3D"0" cellpadding=3D"0" border=3D"0" class=3D"d" style=3D=
+"width:600px;"><tr><td width=3D"600" valign=3D"top" align=3D"left" style=3D=
+"vertical-align:top;line-height:0px;"><table cellspacing=3D"0" cellpadding=
+=3D"0" border=3D"0"><tr><td style=3D"vertical-align:top;line-height:0px;" v=
+align=3D"top" align=3D"left"><table cellspacing=3D"0" cellpadding=3D"0" bor=
+der=3D"0"><tr><td valign=3D"top" align=3D"left" class=3D"img_210" style=3D"=
+vertical-align:top;line-height:0px;"><a href=3D"https://newsletter.inxmail.=
+de/d?o00y05f000f7bu0id0000l6y00000000bf7tneluuzkjkiunkxes0qutcre15&amp;utm_=
+medium=3Demail&amp;utm_source=3Dnewsletter-welcome-01&amp;utm_campaign=3Dne=
+wsletter&amp;user_type=3D[CAS_Vertrag_Typ]" style=3D"line-height:0px;font-f=
+amily:Arial,Helvetica,sans-serif;font-style:normal;font-size:15px;font-weig=
+ht:bold;text-decoration:underline;color:#372E2C;" target=3D"_blank"><img sr=
+c=3D"https://cs.inxshare.com/Creative-Service/Inx_Newsletter2019/hdr_02_01_=
+01-2.gif" alt=3D"Inxmail Logo" width=3D"210" height=3D"64" border=3D"0" cla=
+ss=3D"img_210"/></a></td></tr></table></td></tr></table></td></tr></table><=
+table width=3D"600" cellspacing=3D"0" cellpadding=3D"0" border=3D"0" class=
+=3D"d" style=3D"width:600px;"><tr><td width=3D"600" valign=3D"top" align=3D=
+"center" style=3D"vertical-align:top;line-height:0px;"><table cellspacing=
+=3D"0" cellpadding=3D"0" border=3D"0"><tr><td style=3D"vertical-align:top;l=
+ine-height:0px;" valign=3D"top" align=3D"left"><table cellspacing=3D"0" cel=
+lpadding=3D"0" border=3D"0"><tr><td valign=3D"top" align=3D"center" class=
+=3D"img_600" style=3D"vertical-align:top;line-height:0px;"><a href=3D"https=
+://newsletter.inxmail.de/d?o00y05fi00f7bu0id0000l6y00000000bf7tneluuzkjkiun=
+kxes0quubqe15&amp;utm_medium=3Demail&amp;utm_source=3Dnewsletter-welcome-01=
+&amp;utm_campaign=3Dnewsletter&amp;user_type=3D[CAS_Vertrag_Typ]" style=3D"=
+line-height:0px;font-family:Arial,Helvetica,sans-serif;font-style:normal;fo=
+nt-size:15px;font-weight:bold;text-decoration:underline;color:#372E2C;" tar=
+get=3D"_blank"><img src=3D"https://download.inxshare.com/Inxmail_Kommunikat=
+ion/WELCOME_NEU/TAG0/HEADER-DESKTOP-600x320-WELCOME-TAG0.jpg" alt=3D"Herzli=
+ch Willkommen! Sch&ouml;n, dass Sie mit an Bord sind!" width=3D"600" height=
+=3D"320" border=3D"0" class=3D"img_600"/></a></td></tr></table></td></tr></=
+table></td></tr></table><table width=3D"600" cellspacing=3D"0" cellpadding=
+=3D"0" border=3D"0" class=3D"d" style=3D"width:600px;"><tr><td width=3D"600=
+" valign=3D"top" align=3D"left" height=3D"10" style=3D"vertical-align:top;l=
+ine-height:0px;"><img src=3D"https://newsletter.inxmail.de/resc/1/182c5e451=
+0f/0/transparent.gif" alt=3D"" width=3D"1" height=3D"1" class=3D"d" border=
+=3D"0" hspace=3D"0" vspace=3D"0" align=3D"top" /></td></tr></table></td></t=
+r></table><table style=3D"width:600px;" cellspacing=3D"0" cellpadding=3D"0"=
+ border=3D"0" width=3D"600"><tr><td width=3D"600" height=3D"30" style=3D"ve=
+rtical-align:top;"/></tr></table><table cellspacing=3D"0" cellpadding=3D"0"=
+ border=3D"0" width=3D"600" style=3D"width:600px;"><tr><td width=3D"30" sty=
+le=3D"vertical-align:top;"/><td class=3D"wauto" valign=3D"top" align=3D"lef=
+t" width=3D"540" style=3D"vertical-align:top;"><table cellspacing=3D"0" cel=
+lpadding=3D"0" border=3D"0" width=3D"540" bgcolor=3D"#FFFFFF" style=3D"widt=
+h:540px;"><tr><td valign=3D"top" align=3D"left" width=3D"540" style=3D"vert=
+ical-align:top;"><table cellspacing=3D"0" cellpadding=3D"0" border=3D"0" wi=
+dth=3D"540" style=3D"width:540px;"><tr><td style=3D"vertical-align:top;" cl=
+ass=3D"sal_content" valign=3D"top" align=3D"left"><table style=3D"width:100=
+%;" cellspacing=3D"0" cellpadding=3D"0" border=3D"0" width=3D"100%"><tr><td=
+ valign=3D"top" width=3D"100%" align=3D"left" style=3D"vertical-align:top;"=
+><span style=3D"font-size:15px;font-weight:bold;color:#372E2C;">Hallo Rudy =
+Rucker,</span><br style=3D"font-size:15px;"/></td></tr><tr><td style=3D"ver=
+tical-align:top;" valign=3D"top" align=3D"left" width=3D"100%"><span style=
+=3D"font-size:15px;">=C2=A0</span><br style=3D"font-size:15px;"/></td></tr>=
+<tr><td valign=3D"top" width=3D"100%" align=3D"left" style=3D"vertical-alig=
+n:top;"><span style=3D"font-family:Arial,Helvetica,sans-serif;font-style:no=
+rmal;font-size:15px;font-weight:normal;color:#372E2C;">vielen Dank, dass Si=
+e unseren Newsletter abonniert haben! Ab sofort erhalten Sie im <b>zweiw=C3=
+=B6chigen</b> Rhythmus<b> spannende Insights</b> und <b>wertvolle Tipps </b=
+>rund um das Thema E-Mail-Marketing. Alle Partner erhalten zus=C3=A4tzlich =
+einmal pro Monat unseren exklusiven Partner-Newsletter.</span><br style=3D"=
+font-size:15px;"/><span style=3D"font-size:15px;">=C2=A0</span><br style=3D=
+"font-size:15px;"/><span style=3D"font-family:Arial,Helvetica,sans-serif;fo=
+nt-style:normal;font-size:15px;font-weight:normal;color:#372E2C;">Wir freue=
+n uns, dass Sie mit an Bord sind!</span><br style=3D"font-size:15px;"/></td=
+></tr><tr><td style=3D"vertical-align:top;" valign=3D"top" align=3D"left" w=
+idth=3D"100%"><span style=3D"font-size:15px;">=C2=A0</span><br style=3D"fon=
+t-size:15px;"/></td></tr><tr><td valign=3D"top" width=3D"100%" align=3D"lef=
+t" style=3D"vertical-align:top;"><span style=3D"font-family:Arial,Helvetica=
+,sans-serif;font-style:normal;font-size:15px;font-weight:normal;color:#372E=
+2C;"><b>Ihr Inxmail Team</b></span><br style=3D"font-size:15px;"/></td></tr=
+><tr><td style=3D"vertical-align:top;line-height:0px;" valign=3D"top" align=
+=3D"left" height=3D"5" width=3D"100%"><img src=3D"https://newsletter.inxmai=
+l.de/resc/1/182c5e4510f/0/transparent.gif" alt=3D"" width=3D"1" height=3D"1=
+" class=3D"d" border=3D"0" hspace=3D"0" vspace=3D"0" align=3D"top" /></td><=
+/tr></table></td></tr></table></td></tr></table></td><td width=3D"30" style=
+=3D"vertical-align:top;"/></tr></table><table cellspacing=3D"0" cellpadding=
+=3D"0" border=3D"0" width=3D"600" bgcolor=3D"#FFFFFF" style=3D"width:600px;=
+background-color:#FFFFFF;"><tr><td width=3D"30" style=3D"vertical-align:top=
+;"/><td valign=3D"top" align=3D"left" width=3D"540" class=3D"dns_content" s=
+tyle=3D"vertical-align:top;"><a name=3D"anchor164" id=3D"anchor164"></a><ta=
+ble cellspacing=3D"0" cellpadding=3D"0" border=3D"0" width=3D"540" style=3D=
+"width:540px;"><tr><td valign=3D"top" align=3D"left" width=3D"540" style=3D=
+"vertical-align:top;"><table cellspacing=3D"0" cellpadding=3D"0" border=3D"=
+0" width=3D"540" bgcolor=3D"#FFFFFF" style=3D"width:540px;"><tr><td class=
+=3D"d" width=3D"5" style=3D"vertical-align:top;"/><td style=3D"vertical-ali=
+gn:top;" valign=3D"top" align=3D"left"><table style=3D"width:100%;" cellspa=
+cing=3D"0" cellpadding=3D"0" border=3D"0" width=3D"100%"><tr><td style=3D"v=
+ertical-align:top;line-height:0px;" valign=3D"top" align=3D"left" height=3D=
+"5" width=3D"100%"><img src=3D"https://newsletter.inxmail.de/resc/1/182c5e4=
+510f/0/transparent.gif" alt=3D"" width=3D"1" height=3D"1" class=3D"d" borde=
+r=3D"0" hspace=3D"0" vspace=3D"0" align=3D"top" /></td></tr><tr><td valign=
+=3D"top" width=3D"100%" align=3D"left" style=3D"vertical-align:top;"><span =
+style=3D"font-size:28px;">=C2=A0</span><br style=3D"font-size:28px;"/><span=
+ style=3D"font-family:Arial,Helvetica,sans-serif;font-style:normal;font-siz=
+e:28px;font-weight:bold;text-decoration:none;color:#372E2C;">Knowledge Base=
+: Geb=C3=BCndeltes Know-how im E-Mail-Marketing</span><br style=3D"font-siz=
+e:28px;"/><span style=3D"font-size:28px;">=C2=A0</span></td></tr><tr><td st=
+yle=3D"vertical-align:top;line-height:0px;" valign=3D"top" align=3D"left" h=
+eight=3D"5" width=3D"100%"><img src=3D"https://newsletter.inxmail.de/resc/1=
+/182c5e4510f/0/transparent.gif" alt=3D"" width=3D"1" height=3D"1" class=3D"=
+d" border=3D"0" hspace=3D"0" vspace=3D"0" align=3D"top" /></td></tr></table=
+></td><td class=3D"d" width=3D"5" style=3D"vertical-align:top;"/></tr></tab=
+le></td></tr><tr><td valign=3D"top" align=3D"left" width=3D"540" bgcolor=3D=
+"#FFFFFF" style=3D"vertical-align:top;"><table cellspacing=3D"0" cellpaddin=
+g=3D"0" border=3D"0" width=3D"540" style=3D"width:540px;"><tr><td class=3D"=
+d" width=3D"5" style=3D"vertical-align:top;"/><td style=3D"vertical-align:t=
+op;" valign=3D"top" align=3D"left"><table cellspacing=3D"0" cellpadding=3D"=
+0" border=3D"0"><tr><td style=3D"vertical-align:top;" valign=3D"top" align=
+=3D"left"><!--[if mso | ie]><table cellpadding=3D"0" cellspacing=3D"0" bord=
+er=3D"0"><tr><td valign=3D"top"><![endif]--><table align=3D"left" cellspaci=
+ng=3D"0" cellpadding=3D"0" border=3D"0" width=3D"168" class=3D"nc_img" styl=
+e=3D"text-align:left;width:168px;"><tr><td valign=3D"top" align=3D"left" wi=
+dth=3D"168" style=3D"vertical-align:top;line-height:0px;"><a href=3D"https:=
+//newsletter.inxmail.de/d?o00y05fq00f7bu0id0000l6y00000000bf7tneluuzkjkiunk=
+xes0quvete15&amp;utm_medium=3Demail&amp;utm_source=3Dnewsletter-welcome-01&=
+amp;utm_campaign=3Dnewsletter&amp;user_type=3D[CAS_Vertrag_Typ]" style=3D"l=
+ine-height:0px;font-family:Arial,Helvetica,sans-serif;font-style:normal;fon=
+t-size:15px;font-weight:bold;text-decoration:underline;color:#372E2C;" targ=
+et=3D"_blank"><img src=3D"https://download.inxshare.com/Inxmail_Kommunikati=
+on/WELCOME_NEU/TAG0/Knowledge-Base.png" alt=3D"Knowledge Base: Geb&uuml;nde=
+ltes Know-how im E-Mail-Marketing" title=3D""  width=3D"168" height=3D"168"=
+ class=3D"" border=3D"0" style=3D"" /></a></td></tr></table><!--[if mso | i=
+e]></td><td valign=3D"top"><![endif]--><table class=3D"d" align=3D"left" ce=
+llspacing=3D"0" cellpadding=3D"0" border=3D"0" width=3D"20" style=3D"text-a=
+lign:left;width:20px;"><tr><td valign=3D"top" align=3D"left" width=3D"20" s=
+tyle=3D"vertical-align:top;line-height:0px;"><img src=3D"https://newsletter=
+.inxmail.de/resc/1/182c5e4510f/0/transparent.gif" alt=3D"" width=3D"1" heig=
+ht=3D"1" class=3D"d" border=3D"0" hspace=3D"0" vspace=3D"0" align=3D"top" /=
+></td></tr></table><!--[if mso | ie]></td><td valign=3D"top"><![endif]--><t=
+able align=3D"right" cellspacing=3D"0" cellpadding=3D"0" border=3D"0" width=
+=3D"342" style=3D"text-align:right;width:342px;"><tr><td valign=3D"top" ali=
+gn=3D"left" style=3D"vertical-align:top;"><table cellspacing=3D"0" cellpadd=
+ing=3D"0" border=3D"0" width=3D"342" style=3D"width:342px;"><tr><td valign=
+=3D"top" width=3D"342" align=3D"left" style=3D"vertical-align:top;"><span s=
+tyle=3D"font-family:Arial,Helvetica,sans-serif;font-style:normal;font-size:=
+15px;font-weight:normal;color:#372E2C;">Unsere <a href=3D"https://newslette=
+r.inxmail.de/d?o00y047q00f7bu0id0000l6y00000000bf7tneluuzkjkiunkxes0quwyi41=
+5&amp;utm_medium=3Demail&amp;utm_source=3Dnewsletter-welcome-01&amp;utm_cam=
+paign=3Dnewsletter&amp;user_type=3D[CAS_Vertrag_Typ]" style=3D"font-family:=
+Arial,Helvetica,sans-serif;font-style:normal;font-size:15px;font-weight:bol=
+d;text-decoration:underline;color:#372E2C;" target=3D"_blank"><span style=
+=3D"font-family:Arial,Helvetica,sans-serif;font-style:normal;font-size:15px=
+;font-weight:bold;text-decoration:underline;color:#372E2C;">Knowledge Base<=
+/span></a> ist eine Wissensplattform, die Ihnen einen =C3=9Cberblick =C3=BC=
+ber alle wichtigen Themen rund um den Marketingkanal =E2=80=9EE-Mail=E2=80=
+=9C liefert. Sie erleichtert den Einstieg ins E-Mail-Marketing und bietet u=
+mfassendes Material =E2=80=93 von der Strategie, =C3=BCber rechtliche Rahme=
+nbedingungen und die Zustellbarkeit von Mailings bis hin zu Verteileraufbau=
+ und -pflege sowie Tracking und Reporting.</span><br style=3D"font-size:15p=
+x;"/></td></tr><tr><td valign=3D"top" align=3D"left" width=3D"342" style=3D=
+"vertical-align:top;"><span style=3D"font-size:15px;">=C2=A0</span><br styl=
+e=3D"font-size:15px;"/></td></tr><tr><td valign=3D"top" width=3D"342" align=
+=3D"left" style=3D"vertical-align:top;"><!--[if !mso]><div style=3D"max-hei=
+ght:0; overflow:hidden;"><![endif]--><!--[if mso]><v:roundrect xmlns:v=3D"u=
+rn:schemas-microsoft-com:vml" xmlns:w=3D"urn:schemas-microsoft-com:office:w=
+ord" href=3D"https://newsletter.inxmail.de/d?o00y047y00f7bu0id0000l6y000000=
+00bf7tneluuzkjkiunkxes0qur3j415&utm_medium=3Demail&utm_source=3Dnewsletter-=
+welcome-01&utm_campaign=3Dnewsletter&user_type=3D[CAS_Vertrag_Typ]" style=
+=3D"height:40px;v-text-anchor:middle;width:180px;" arcsize=3D"0%" strokecol=
+or=3D"#00A19C"><w:anchorlock/><v:fill color=3D"#00A19C" opacity=3D"1.0"/><c=
+enter style=3D"color:#FFFFFF;font-family:Arial,Helvetica,sans-serif;font-si=
+ze:15px;font-weight:bold;font-style:normal;text-decoration:none;">Zur Knowl=
+edge Base</center></v:roundrect><![endif]--><!--[if !mso]></div><![endif]--=
+><a target=3D"_blank" class=3D"fwi" href=3D"https://newsletter.inxmail.de/d=
+?o00y047y00f7bu0id0000l6y00000000bf7tneluuzkjkiunkxes0qur3j415&utm_medium=
+=3Demail&utm_source=3Dnewsletter-welcome-01&utm_campaign=3Dnewsletter&user_=
+type=3D[CAS_Vertrag_Typ]" style=3D"background-color:#00A19C;border:1px soli=
+d #00A19C;border-radius:0px;display:inline-block;color:#FFFFFF;font-family:=
+Arial,Helvetica,sans-serif;font-size:15px;font-weight:bold;font-style:norma=
+l;text-decoration:none;line-height:40px;text-align:center;width:180px;-webk=
+it-text-size-adjust:none;mso-hide:all;">Zur Knowledge Base</a></td></tr></t=
+able></td></tr></table><!--[if mso | ie]></td></tr></table><![endif]--></td=
+></tr></table><table cellspacing=3D"0" cellpadding=3D"0" border=3D"0"><tr><=
+td valign=3D"top" align=3D"left" height=3D"5" bgcolor=3D"#FFFFFF" class=3D"=
+d" style=3D"vertical-align:top;line-height:0px;"><img src=3D"https://newsle=
+tter.inxmail.de/resc/1/182c5e4510f/0/transparent.gif" alt=3D"" width=3D"1" =
+height=3D"1" class=3D"d" border=3D"0" hspace=3D"0" vspace=3D"0" align=3D"to=
+p" /></td></tr></table></td><td class=3D"d" width=3D"5" style=3D"vertical-a=
+lign:top;"/></tr></table></td></tr></table></td><td width=3D"30" style=3D"v=
+ertical-align:top;"/></tr></table><table cellspacing=3D"0" cellpadding=3D"0=
+" border=3D"0" width=3D"600" style=3D"width:600px;"><tr><td valign=3D"top" =
+align=3D"left" width=3D"600" height=3D"30" bgcolor=3D"#FFFFFF" style=3D"ver=
+tical-align:top;line-height:0px;"><img src=3D"https://newsletter.inxmail.de=
+/resc/1/182c5e4510f/0/transparent.gif" alt=3D"" width=3D"1" height=3D"1" cl=
+ass=3D"d" border=3D"0" hspace=3D"0" vspace=3D"0" align=3D"top" /></td></tr>=
+</table><table cellspacing=3D"0" cellpadding=3D"0" border=3D"0" width=3D"60=
+0" bgcolor=3D"#FBE446" style=3D"width:600px;background-color:#FBE446;"><tr>=
+<td width=3D"30" style=3D"vertical-align:top;"/><td valign=3D"top" align=3D=
+"left" width=3D"540" class=3D"dns_content" style=3D"vertical-align:top;"><a=
+ name=3D"anchor201" id=3D"anchor201"></a><table cellspacing=3D"0" cellpaddi=
+ng=3D"0" border=3D"0" width=3D"540" style=3D"width:540px;"><tr><td valign=
+=3D"top" align=3D"left" width=3D"540" bgcolor=3D"#FBE446" style=3D"vertical=
+-align:top;"><table cellspacing=3D"0" cellpadding=3D"0" border=3D"0" width=
+=3D"540" style=3D"width:540px;"><tr><td class=3D"d" width=3D"5" style=3D"ve=
+rtical-align:top;"/><td style=3D"vertical-align:top;" valign=3D"top" align=
+=3D"left"><table cellspacing=3D"0" cellpadding=3D"0" border=3D"0" width=3D"=
+530" style=3D"width:530px;"><tr><td valign=3D"top" align=3D"left" style=3D"=
+vertical-align:top;"><table cellspacing=3D"0" cellpadding=3D"0" border=3D"0=
+" width=3D"530" style=3D"width:530px;"><tr><td valign=3D"top" width=3D"530"=
+ align=3D"left" style=3D"vertical-align:top;"><span style=3D"font-size:24px=
+;">=C2=A0</span><br style=3D"font-size:24px;"/><span style=3D"font-family:A=
+rial,Helvetica,sans-serif;font-style:normal;font-size:24px;font-weight:bold=
+;text-decoration:none;color:#372E2C;">Wir sind Inxmail</span><span style=3D=
+"font-size:24px;">=C2=A0</span><br style=3D"font-size:24px;"/></td></tr><tr=
+><td valign=3D"top" align=3D"left" width=3D"530" style=3D"vertical-align:to=
+p;"><span style=3D"font-size:15px;">=C2=A0</span><br style=3D"font-size:15p=
+x;"/></td></tr><tr><td valign=3D"top" width=3D"530" align=3D"left" style=3D=
+"vertical-align:top;"><span style=3D"font-family:Arial,Helvetica,sans-serif=
+;font-style:normal;font-size:15px;font-weight:normal;color:#372E2C;">Es ist=
+ die N=C3=A4he zum Kunden, die unser Handeln bestimmt. Als E-Mail-Marketing=
+-Spezialist sind wir bekannt f=C3=BCr <a href=3D"https://newsletter.inxmail=
+.de/d?o00y050000f7bu0id0000l6y00000000bf7tneluuzkjkiunkxes0quwsvm15&amp;utm=
+_medium=3Demail&amp;utm_source=3Dnewsletter-welcome-01&amp;utm_campaign=3Dn=
+ewsletter&amp;user_type=3D[CAS_Vertrag_Typ]" style=3D"font-family:Arial,Hel=
+vetica,sans-serif;font-style:normal;font-size:15px;font-weight:bold;text-de=
+coration:underline;color:#372E2C;" target=3D"_blank"><span style=3D"font-fa=
+mily:Arial,Helvetica,sans-serif;font-style:normal;font-size:15px;font-weigh=
+t:bold;text-decoration:underline;color:#372E2C;">leistungsstarke Software-L=
+=C3=B6sungen</span></a> und <a href=3D"https://newsletter.inxmail.de/d?o00y=
+050i00f7bu0id0000l6y00000000bf7tneluuzkjkiunkxes0qurrum15&amp;utm_medium=3D=
+email&amp;utm_source=3Dnewsletter-welcome-01&amp;utm_campaign=3Dnewsletter&=
+amp;user_type=3D[CAS_Vertrag_Typ]" style=3D"font-family:Arial,Helvetica,san=
+s-serif;font-style:normal;font-size:15px;font-weight:bold;text-decoration:u=
+nderline;color:#372E2C;" target=3D"_blank"><span style=3D"font-family:Arial=
+,Helvetica,sans-serif;font-style:normal;font-size:15px;font-weight:bold;tex=
+t-decoration:underline;color:#372E2C;">ausgezeichnete Services</span></a>. =
+Weltweit realisieren damit =C3=BCber <a href=3D"https://newsletter.inxmail.=
+de/d?o00y050q00f7bu0id0000l6y00000000bf7tneluuzkjkiunkxes0ququxm15&amp;utm_=
+medium=3Demail&amp;utm_source=3Dnewsletter-welcome-01&amp;utm_campaign=3Dne=
+wsletter&amp;user_type=3D[CAS_Vertrag_Typ]" style=3D"font-family:Arial,Helv=
+etica,sans-serif;font-style:normal;font-size:15px;font-weight:bold;text-dec=
+oration:underline;color:#372E2C;" target=3D"_blank"><span style=3D"font-fam=
+ily:Arial,Helvetica,sans-serif;font-style:normal;font-size:15px;font-weight=
+:bold;text-decoration:underline;color:#372E2C;">2.000 Kunden</span></a> per=
+sonalisierte Newsletter, automatisierte Kampagnen und Transaktionsmails. =
+=C3=9Cber <a href=3D"https://newsletter.inxmail.de/d?o00y050y00f7bu0id0000l=
+6y00000000bf7tneluuzkjkiunkxes0quxxwm15&amp;utm_medium=3Demail&amp;utm_sour=
+ce=3Dnewsletter-welcome-01&amp;utm_campaign=3Dnewsletter&amp;user_type=3D[C=
+AS_Vertrag_Typ]" style=3D"font-family:Arial,Helvetica,sans-serif;font-style=
+:normal;font-size:15px;font-weight:bold;text-decoration:underline;color:#37=
+2E2C;" target=3D"_blank"><span style=3D"font-family:Arial,Helvetica,sans-se=
+rif;font-style:normal;font-size:15px;font-weight:bold;text-decoration:under=
+line;color:#372E2C;">Schnittstellen</span></a> l=C3=A4sst sich unsere Softw=
+are mit vielen spezialisierten Systemen wie CRM-, Online-Shop- und Kampagne=
+nmanagement-Tools vernetzen.</span><br style=3D"font-size:15px;"/></td></tr=
+><tr><td valign=3D"top" align=3D"left" width=3D"530" style=3D"vertical-alig=
+n:top;"><span style=3D"font-size:15px;">=C2=A0</span><br style=3D"font-size=
+:15px;"/></td></tr><tr><td valign=3D"top" width=3D"530" align=3D"left" styl=
+e=3D"vertical-align:top;"><!--[if !mso]><div style=3D"max-height:0; overflo=
+w:hidden;"><![endif]--><!--[if mso]><v:roundrect xmlns:v=3D"urn:schemas-mic=
+rosoft-com:vml" xmlns:w=3D"urn:schemas-microsoft-com:office:word" href=3D"h=
+ttps://newsletter.inxmail.de/d?o00y05b000f7bu0id0000l6y00000000bf7tneluuzkj=
+kiunkxes0qus6rm15&utm_medium=3Demail&utm_source=3Dnewsletter-welcome-01&utm=
+_campaign=3Dnewsletter&user_type=3D[CAS_Vertrag_Typ]" style=3D"height:40px;=
+v-text-anchor:middle;width:190px;" arcsize=3D"0%" strokecolor=3D"#00A19C"><=
+w:anchorlock/><v:fill color=3D"#00A19C" opacity=3D"1.0"/><center style=3D"c=
+olor:#FFFFFF;font-family:Arial,Helvetica,sans-serif;font-size:15px;font-wei=
+ght:bold;font-style:normal;text-decoration:none;">Mehr zu Inxmail</center><=
+/v:roundrect><![endif]--><!--[if !mso]></div><![endif]--><a target=3D"_blan=
+k" class=3D"fwi" href=3D"https://newsletter.inxmail.de/d?o00y05b000f7bu0id0=
+000l6y00000000bf7tneluuzkjkiunkxes0qus6rm15&utm_medium=3Demail&utm_source=
+=3Dnewsletter-welcome-01&utm_campaign=3Dnewsletter&user_type=3D[CAS_Vertrag=
+_Typ]" style=3D"background-color:#00A19C;border:1px solid #00A19C;border-ra=
+dius:0px;display:inline-block;color:#FFFFFF;font-family:Arial,Helvetica,san=
+s-serif;font-size:15px;font-weight:bold;font-style:normal;text-decoration:n=
+one;line-height:40px;text-align:center;width:190px;-webkit-text-size-adjust=
+:none;mso-hide:all;">Mehr zu Inxmail</a></td></tr><tr><td valign=3D"top" al=
+ign=3D"left" width=3D"530" style=3D"vertical-align:top;"><span style=3D"fon=
+t-size:15px;">=C2=A0</span><br style=3D"font-size:15px;"/></td></tr></table=
+></td></tr></table><table cellspacing=3D"0" cellpadding=3D"0" border=3D"0">=
+<tr><td valign=3D"top" align=3D"left" height=3D"5" bgcolor=3D"#FBE446" clas=
+s=3D"d" style=3D"vertical-align:top;line-height:0px;"><img src=3D"https://n=
+ewsletter.inxmail.de/resc/1/182c5e4510f/0/transparent.gif" alt=3D"" width=
+=3D"1" height=3D"1" class=3D"d" border=3D"0" hspace=3D"0" vspace=3D"0" alig=
+n=3D"top" /></td></tr></table></td><td class=3D"d" width=3D"5" style=3D"ver=
+tical-align:top;"/></tr></table></td></tr></table></td><td width=3D"30" sty=
+le=3D"vertical-align:top;"/></tr></table><table cellspacing=3D"0" cellpaddi=
+ng=3D"0" border=3D"0" width=3D"600" style=3D"width:600px;"><tr><td valign=
+=3D"top" align=3D"left" width=3D"600" height=3D"10" bgcolor=3D"#FBE446" sty=
+le=3D"vertical-align:top;line-height:0px;"><img src=3D"https://newsletter.i=
+nxmail.de/resc/1/182c5e4510f/0/transparent.gif" alt=3D"" width=3D"1" height=
+=3D"1" class=3D"d" border=3D"0" hspace=3D"0" vspace=3D"0" align=3D"top" /><=
+/td></tr></table><table cellspacing=3D"0" cellpadding=3D"0" border=3D"0" wi=
+dth=3D"600" class=3D"map_1" style=3D"width:600px;"><tr><td valign=3D"top" w=
+idth=3D"600" align=3D"left" style=3D"vertical-align:top;line-height:0px;"><=
+table cellspacing=3D"0" cellpadding=3D"0" border=3D"0"><tr><td style=3D"ver=
+tical-align:top;line-height:0px;" valign=3D"top" align=3D"left"><table cell=
+spacing=3D"0" cellpadding=3D"0" border=3D"0"><tr><td valign=3D"top" align=
+=3D"left" class=3D"img_600" style=3D"vertical-align:top;line-height:0px;"><=
+a href=3D"https://newsletter.inxmail.de/d?o00y05fy00f7bu0id0000l6y00000000b=
+f7tneluuzkjkiunkxes0qushse15&amp;utm_medium=3Demail&amp;utm_source=3Dnewsle=
+tter-welcome-01&amp;utm_campaign=3Dnewsletter&amp;user_type=3D[CAS_Vertrag_=
+Typ]" style=3D"line-height:0px;font-family:Arial,Helvetica,sans-serif;font-=
+style:normal;font-size:15px;font-weight:bold;text-decoration:underline;colo=
+r:#372E2C;" target=3D"_blank"><img src=3D"https://download.inxshare.com/Inx=
+mail_Kommunikation/TEMPLATE/2020/Inxmail-Professional-Testen.png" alt=3D"Je=
+tzt Inxmail Professional testen." width=3D"600" height=3D"80" border=3D"0" =
+class=3D"img_600"/></a></td></tr></table></td></tr></table></td></tr></tabl=
+e></td><td style=3D"vertical-align:top;" class=3D"d" valign=3D"top" align=
+=3D"left" width=3D"180"><table style=3D"width:180px;" class=3D"d" cellspaci=
+ng=3D"0" cellpadding=3D"0" border=3D"0" width=3D"180"><tr><td style=3D"vert=
+ical-align:top;line-height:0px;" valign=3D"top" align=3D"left" width=3D"180=
+"><a href=3D"https://newsletter.inxmail.de/d?o00y05g000f7bu0id0000l6y000000=
+00bf7tneluuzkjkiunkxes0quxqv015&amp;utm_medium=3Demail&amp;utm_source=3Dnew=
+sletter-welcome-01&amp;utm_campaign=3Dnewsletter&amp;user_type=3D[CAS_Vertr=
+ag_Typ]" style=3D"line-height:0px;font-family:Arial,Helvetica,sans-serif;fo=
+nt-style:normal;font-size:15px;font-weight:bold;text-decoration:underline;c=
+olor:#372E2C;" target=3D"_blank"><img src=3D"https://download.inxshare.com/=
+Inxmail_Kommunikation/WELCOME_NEU/TAG0/STOERER-RECHTS-DESKTOP-WELCOME-TAG0.=
+jpg" alt=3D"Knowledge Base: Geb&uuml;ndeltes Know-how im E-Mail-Marketing" =
+width=3D"180" height=3D"384" border=3D"0" style=3D"display:block;"/></a></t=
+d></tr><tr><td style=3D"vertical-align:top;" height=3D"15" width=3D"180"/><=
+/tr></table><img src=3D"https://newsletter.inxmail.de/resc/1/182c5e4510f/0/=
+gmail_fix.gif" alt=3D"" width=3D"180" height=3D"1" border=3D"0" hspace=3D"0=
+" vspace=3D"0" align=3D"top" style=3D"min-width:180px;width:180px;" /></td>=
+</tr></table><table cellspacing=3D"0" cellpadding=3D"0" border=3D"0" width=
+=3D"780" style=3D"width:780px;"><tr><td valign=3D"bottom" align=3D"left" wi=
+dth=3D"600" bgcolor=3D"#F4F4F4" style=3D"vertical-align:bottom;"><table cel=
+lspacing=3D"0" cellpadding=3D"0" border=3D"0" width=3D"600" class=3D"map_1"=
+ style=3D"width:600px;"><tr><td valign=3D"top" width=3D"600" align=3D"cente=
+r" style=3D"vertical-align:top;line-height:0px;"><table cellspacing=3D"0" c=
+ellpadding=3D"0" border=3D"0"><tr><td style=3D"vertical-align:top;line-heig=
+ht:0px;" valign=3D"top" align=3D"left"><table cellspacing=3D"0" cellpadding=
+=3D"0" border=3D"0"><tr/></table></td></tr></table></td></tr></table><table=
+ cellspacing=3D"0" cellpadding=3D"0" border=3D"0" width=3D"600" class=3D"ma=
+p_1" style=3D"width:600px;"><tr><td valign=3D"top" align=3D"left" width=3D"=
+600" height=3D"30" style=3D"vertical-align:top;line-height:0px;"><img src=
+=3D"https://newsletter.inxmail.de/resc/1/182c5e4510f/0/transparent.gif" alt=
+=3D"" width=3D"1" height=3D"1" class=3D"d" border=3D"0" hspace=3D"0" vspace=
+=3D"0" align=3D"top" /></td></tr></table><table cellspacing=3D"0" cellpaddi=
+ng=3D"0" border=3D"0" width=3D"600" class=3D"map_2" style=3D"width:600px;">=
+<tr><td valign=3D"top" width=3D"600" align=3D"center" style=3D"vertical-ali=
+gn:top;line-height:0px;"><table cellspacing=3D"0" cellpadding=3D"0" border=
+=3D"0"><tr><td style=3D"vertical-align:top;line-height:0px;" valign=3D"top"=
+ align=3D"left"><table cellspacing=3D"0" cellpadding=3D"0" border=3D"0"><tr=
+/></table></td></tr></table></td></tr></table><table cellspacing=3D"0" cell=
+padding=3D"0" border=3D"0" width=3D"600" class=3D"map_2" style=3D"width:600=
+px;"><tr><td valign=3D"top" align=3D"left" width=3D"600" height=3D"30" styl=
+e=3D"vertical-align:top;line-height:0px;"><img src=3D"https://newsletter.in=
+xmail.de/resc/1/182c5e4510f/0/transparent.gif" alt=3D"" width=3D"1" height=
+=3D"1" class=3D"d" border=3D"0" hspace=3D"0" vspace=3D"0" align=3D"top" /><=
+/td></tr></table><table style=3D"width:600px;" cellspacing=3D"0" cellpaddin=
+g=3D"0" border=3D"0" width=3D"600"><tr><td style=3D"vertical-align:top;" va=
+lign=3D"top" align=3D"left" width=3D"600"><table cellspacing=3D"0" cellpadd=
+ing=3D"0" border=3D"0" width=3D"600" align=3D"center" style=3D"width:600px;=
+text-align:center;"><tr><td width=3D"30" style=3D"vertical-align:top;"/><td=
+ style=3D"vertical-align:top;"/><td style=3D"vertical-align:top;" valign=3D=
+"top" align=3D"left"><table cellspacing=3D"0" cellpadding=3D"0" border=3D"0=
+" align=3D"center" class=3D"wauto" style=3D"text-align:center;"><tr><td val=
+ign=3D"middle" align=3D"left" width=3D"32" style=3D"vertical-align:middle;"=
+><table cellspacing=3D"0" cellpadding=3D"0" border=3D"0" width=3D"32" style=
+=3D"width:32px;"><tr><td valign=3D"middle" align=3D"left" width=3D"32" styl=
+e=3D"vertical-align:middle;line-height:0px;"><a href=3D"https://newsletter.=
+inxmail.de/d?o00y05bi00f7bu0id0000l6y00000000bf7tneluuzkjkiunkxes0quv5qm15&=
+amp;utm_medium=3Demail&amp;utm_source=3Dnewsletter-welcome-01&amp;utm_campa=
+ign=3Dnewsletter&amp;user_type=3D[CAS_Vertrag_Typ]" style=3D"line-height:0p=
+x;font-family:Arial,Helvetica,sans-serif;font-style:normal;font-size:12px;f=
+ont-weight:normal;text-decoration:underline;color:#372E2C;" target=3D"_blan=
+k"><img src=3D"https://download.inxshare.com/Inxmail_Kommunikation/TEMPLATE=
+/2020/Channel-Facebook-32px.gif" alt=3D"Facebook" width=3D"32" height=3D"32=
+" border=3D"0" class=3D"wauto"/></a></td></tr></table></td><td width=3D"10"=
+ style=3D"vertical-align:top;"/><td valign=3D"middle" align=3D"left" width=
+=3D"32" style=3D"vertical-align:middle;"><table cellspacing=3D"0" cellpaddi=
+ng=3D"0" border=3D"0" width=3D"32" style=3D"width:32px;"><tr><td valign=3D"=
+middle" align=3D"left" width=3D"32" style=3D"vertical-align:middle;line-hei=
+ght:0px;"><a href=3D"https://newsletter.inxmail.de/d?o00y05bq00f7bu0id0000l=
+6y00000000bf7tneluuzkjkiunkxes0quuytm15&amp;utm_medium=3Demail&amp;utm_sour=
+ce=3Dnewsletter-welcome-01&amp;utm_campaign=3Dnewsletter&amp;user_type=3D[C=
+AS_Vertrag_Typ]" style=3D"line-height:0px;font-family:Arial,Helvetica,sans-=
+serif;font-style:normal;font-size:12px;font-weight:normal;text-decoration:u=
+nderline;color:#372E2C;" target=3D"_blank"><img src=3D"https://download.inx=
+share.com/Inxmail_Kommunikation/TEMPLATE/2020/Channel-Twitter-32px.gif" alt=
+=3D"Twitter" width=3D"32" height=3D"32" border=3D"0" class=3D"wauto"/></a><=
+/td></tr></table></td><td width=3D"10" style=3D"vertical-align:top;"/><td v=
+align=3D"middle" align=3D"left" width=3D"32" style=3D"vertical-align:middle=
+;"><table cellspacing=3D"0" cellpadding=3D"0" border=3D"0" width=3D"32" sty=
+le=3D"width:32px;"><tr><td valign=3D"middle" align=3D"left" width=3D"32" st=
+yle=3D"vertical-align:middle;line-height:0px;"><a href=3D"https://newslette=
+r.inxmail.de/d/d.gmbh?o00y05by00f7bu0id0000l6y00000000bf7tneluuzkjkiunkxes0=
+qut3sm15&amp;utm_medium=3Demail&amp;utm_source=3Dnewsletter-welcome-01&amp;=
+utm_campaign=3Dnewsletter&amp;user_type=3D[CAS_Vertrag_Typ]" style=3D"line-=
+height:0px;font-family:Arial,Helvetica,sans-serif;font-style:normal;font-si=
+ze:12px;font-weight:normal;text-decoration:underline;color:#372E2C;" target=
+=3D"_blank"><img src=3D"https://download.inxshare.com/Inxmail_Kommunikation=
+/TEMPLATE/2020/Channel-Instagram-32px.gif" alt=3D"Instagram" width=3D"32" h=
+eight=3D"32" border=3D"0" class=3D"wauto"/></a></td></tr></table></td><td w=
+idth=3D"10" style=3D"vertical-align:top;"/><td valign=3D"middle" align=3D"l=
+eft" width=3D"32" style=3D"vertical-align:middle;"><table cellspacing=3D"0"=
+ cellpadding=3D"0" border=3D"0" width=3D"32" style=3D"width:32px;"><tr><td =
+valign=3D"middle" align=3D"left" width=3D"32" style=3D"vertical-align:middl=
+e;line-height:0px;"><a href=3D"https://newsletter.inxmail.de/d?o00y05c000f7=
+bu0id0000l6y00000000bf7tneluuzkjkiunkxes0quwmvi15&amp;utm_medium=3Demail&am=
+p;utm_source=3Dnewsletter-welcome-01&amp;utm_campaign=3Dnewsletter&amp;user=
+_type=3D[CAS_Vertrag_Typ]" style=3D"line-height:0px;font-family:Arial,Helve=
+tica,sans-serif;font-style:normal;font-size:12px;font-weight:normal;text-de=
+coration:underline;color:#372E2C;" target=3D"_blank"><img src=3D"https://do=
+wnload.inxshare.com/Inxmail_Kommunikation/TEMPLATE/2020/Channel-Linkedin-32=
+px.gif" alt=3D"LinkedIn" width=3D"32" height=3D"32" border=3D"0" class=3D"w=
+auto"/></a></td></tr></table></td><td width=3D"10" style=3D"vertical-align:=
+top;"/><td valign=3D"middle" align=3D"left" width=3D"32" style=3D"vertical-=
+align:middle;"><table cellspacing=3D"0" cellpadding=3D"0" border=3D"0" widt=
+h=3D"32" style=3D"width:32px;"><tr><td valign=3D"middle" align=3D"left" wid=
+th=3D"32" style=3D"vertical-align:middle;line-height:0px;"><a href=3D"https=
+://newsletter.inxmail.de/d?o00y05ci00f7bu0id0000l6y00000000bf7tneluuzkjkiun=
+kxes0qurpui15&amp;utm_medium=3Demail&amp;utm_source=3Dnewsletter-welcome-01=
+&amp;utm_campaign=3Dnewsletter&amp;user_type=3D[CAS_Vertrag_Typ]" style=3D"=
+line-height:0px;font-family:Arial,Helvetica,sans-serif;font-style:normal;fo=
+nt-size:12px;font-weight:normal;text-decoration:underline;color:#372E2C;" t=
+arget=3D"_blank"><img src=3D"https://download.inxshare.com/Inxmail_Kommunik=
+ation/TEMPLATE/2020/Channel-Xing-32px.gif" alt=3D"XING" width=3D"32" height=
+=3D"32" border=3D"0" class=3D"wauto"/></a></td></tr></table></td><td width=
+=3D"10" style=3D"vertical-align:top;"/><td valign=3D"middle" align=3D"left"=
+ width=3D"32" style=3D"vertical-align:middle;"><table cellspacing=3D"0" cel=
+lpadding=3D"0" border=3D"0" width=3D"32" style=3D"width:32px;"><tr><td vali=
+gn=3D"middle" align=3D"left" width=3D"32" style=3D"vertical-align:middle;li=
+ne-height:0px;"><a href=3D"https://newsletter.inxmail.de/d?o00y05cq00f7bu0i=
+d0000l6y00000000bf7tneluuzkjkiunkxes0quqkxi15&amp;utm_medium=3Demail&amp;ut=
+m_source=3Dnewsletter-welcome-01&amp;utm_campaign=3Dnewsletter&amp;user_typ=
+e=3D[CAS_Vertrag_Typ]" style=3D"line-height:0px;font-family:Arial,Helvetica=
+,sans-serif;font-style:normal;font-size:12px;font-weight:normal;text-decora=
+tion:underline;color:#372E2C;" target=3D"_blank"><img src=3D"https://downlo=
+ad.inxshare.com/Inxmail_Kommunikation/TEMPLATE/2020/Channel-Youtube-32px.gi=
+f" alt=3D"YouTube" width=3D"32" height=3D"32" border=3D"0" class=3D"wauto"/=
+></a></td></tr></table></td></tr></table></td><td style=3D"vertical-align:t=
+op;"/><td width=3D"30" style=3D"vertical-align:top;"/></tr></table></td></t=
+r></table><table style=3D"width:600px;" cellspacing=3D"0" cellpadding=3D"0"=
+ border=3D"0" width=3D"600"><tr><td valign=3D"top" align=3D"left" width=3D"=
+600" height=3D"30" style=3D"vertical-align:top;line-height:0px;"><img src=
+=3D"https://newsletter.inxmail.de/resc/1/182c5e4510f/0/transparent.gif" alt=
+=3D"" width=3D"1" height=3D"1" class=3D"d" border=3D"0" hspace=3D"0" vspace=
+=3D"0" align=3D"top" /></td></tr></table><table cellspacing=3D"0" cellpaddi=
+ng=3D"0" border=3D"0" width=3D"600" class=3D"applefix aol_links" style=3D"w=
+idth:600px;"><tr><td width=3D"30" style=3D"vertical-align:top;"/><td valign=
+=3D"top" align=3D"left" style=3D"vertical-align:top;"><center><span style=
+=3D"font-family:Arial,Helvetica,sans-serif;font-style:normal;font-size:12px=
+;font-weight:normal;text-decoration:none;color:#372E2C;"><b>Impressum</b></=
+span><br style=3D"font-size:12px;"/><span style=3D"font-family:Arial,Helvet=
+ica,sans-serif;font-style:normal;font-size:12px;font-weight:normal;text-dec=
+oration:none;color:#372E2C;">Inxmail GmbH =C2=B7 Wentzingerstr. 17 =C2=B7 7=
+9106 Freiburg</span><br style=3D"font-size:12px;"/><span style=3D"font-fami=
+ly:Arial,Helvetica,sans-serif;font-style:normal;font-size:12px;font-weight:=
+normal;text-decoration:none;color:#372E2C;"><a href=3D"mailto:kontakt@inxma=
+il.de" style=3D"font-family:Arial,Helvetica,sans-serif;font-style:normal;fo=
+nt-size:12px;font-weight:normal;text-decoration:underline;color:#372E2C;"><=
+span style=3D"font-family:Arial,Helvetica,sans-serif;font-style:normal;font=
+-size:12px;font-weight:normal;text-decoration:underline;color:#372E2C;">kon=
+takt@inxmail.de</span></a> =C2=B7 <a href=3D"https://newsletter.inxmail.de/=
+d?o00y05cy00f7bu0id0000l6y00000000bf7tneluuzkjkiunkxes0quxjwi15&amp;utm_med=
+ium=3Demail&amp;utm_source=3Dnewsletter-welcome-01&amp;utm_campaign=3Dnewsl=
+etter&amp;user_type=3D[CAS_Vertrag_Typ]" style=3D"font-family:Arial,Helveti=
+ca,sans-serif;font-style:normal;font-size:12px;font-weight:normal;text-deco=
+ration:underline;color:#372E2C;" target=3D"_blank"><span style=3D"font-fami=
+ly:Arial,Helvetica,sans-serif;font-style:normal;font-size:12px;font-weight:=
+normal;text-decoration:underline;color:#372E2C;">www.inxmail.de</span></a><=
+/span><br style=3D"font-size:12px;"/><span style=3D"font-family:Arial,Helve=
+tica,sans-serif;font-style:normal;font-size:12px;font-weight:normal;text-de=
+coration:none;color:#372E2C;">T +49 761 296979-0 =C2=B7 F +49 761 296979-9<=
+/span><br style=3D"font-size:12px;"/><span style=3D"font-size:12px;">=C2=A0=
+</span><br style=3D"font-size:12px;"/><span style=3D"font-family:Arial,Helv=
+etica,sans-serif;font-style:normal;font-size:12px;font-weight:normal;text-d=
+ecoration:none;color:#372E2C;">Gesch=C3=A4ftsf=C3=BChrer: Peter Ziras</span=
+><br style=3D"font-size:12px;"/><span style=3D"font-family:Arial,Helvetica,=
+sans-serif;font-style:normal;font-size:12px;font-weight:normal;text-decorat=
+ion:none;color:#372E2C;">Amtsgericht Freiburg, HRB 5870 =C2=B7 USt-IdNr.: D=
+E 198 371 679</span><br style=3D"font-size:12px;"/><span style=3D"font-size=
+:12px;">=C2=A0</span><br style=3D"font-size:12px;"/><span style=3D"font-fam=
+ily:Arial,Helvetica,sans-serif;font-style:normal;font-size:12px;font-weight=
+:normal;text-decoration:none;color:#372E2C;"><a href=3D"https://newsletter.=
+inxmail.de/d?o00y05d000f7bu0ik0000l6y00000000bf7tneluuzkjkiunkxes0quqzcm15&=
+amp;utm_medium=3Demail&amp;utm_source=3Dnewsletter-welcome-01&amp;utm_campa=
+ign=3Dnewsletter&amp;user_type=3D[CAS_Vertrag_Typ]" style=3D"font-family:Ar=
+ial,Helvetica,sans-serif;font-style:normal;font-size:12px;font-weight:norma=
+l;text-decoration:underline;color:#372E2C;" target=3D"_blank"><span style=
+=3D"font-family:Arial,Helvetica,sans-serif;font-style:normal;font-size:12px=
+;font-weight:normal;text-decoration:underline;color:#372E2C;">Newsletter ab=
+bestellen</span></a> =C2=B7 <a href=3D"https://newsletter.inxmail.de/d?o00y=
+05di00f7bu0id0000l6y00000000bf7tneluuzkjkiunkxes0quvdqi15&amp;params=3Dxvme=
+IgQOsQy9WRMui480fHBaQ7htFgRpu1Yuqp4RvefAsNS%2BYPDaYy1v2jrZV0wcWOu47P727Ts3F=
+75Gb4RGtdrQSMqgZp70R3Vt%2Bz%2BmveQ%3D&amp;utm_medium=3Demail&amp;utm_source=
+=3Dnewsletter-welcome-01&amp;utm_campaign=3Dnewsletter&amp;user_type=3D[CAS=
+_Vertrag_Typ]" style=3D"font-family:Arial,Helvetica,sans-serif;font-style:n=
+ormal;font-size:12px;font-weight:normal;text-decoration:underline;color:#37=
+2E2C;" target=3D"_blank"><span style=3D"font-family:Arial,Helvetica,sans-se=
+rif;font-style:normal;font-size:12px;font-weight:normal;text-decoration:und=
+erline;color:#372E2C;">Benutzerprofil =C3=A4ndern</span></a> =C2=B7 <a href=
+=3D"https://newsletter.inxmail.de/d?o00y05dq00f7bu0id0000l6y00000000bf7tnel=
+uuzkjkiunkxes0quugti15&amp;params=3DxvmeIgQOsQy9WRMui480fHBaQ7htFgRpu1Yuqp4=
+RvefAsNS%2BYPDaYy1v2jrZV0wcWOu47P727Ts3F75Gb4RGtdrQSMqgZp70R3Vt%2Bz%2BmveQ%=
+3D&amp;utm_medium=3Demail&amp;utm_source=3Dnewsletter-welcome-01&amp;utm_ca=
+mpaign=3Dnewsletter&amp;user_type=3D[CAS_Vertrag_Typ]" style=3D"font-family=
+:Arial,Helvetica,sans-serif;font-style:normal;font-size:12px;font-weight:no=
+rmal;text-decoration:underline;color:#372E2C;" target=3D"_blank"><span styl=
+e=3D"font-family:Arial,Helvetica,sans-serif;font-style:normal;font-size:12p=
+x;font-weight:normal;text-decoration:underline;color:#372E2C;">Mailarchiv a=
+ufrufen</span></a></span><br style=3D"font-size:12px;"/><span style=3D"font=
+-family:Arial,Helvetica,sans-serif;font-style:normal;font-size:12px;font-we=
+ight:normal;text-decoration:none;color:#372E2C;"><a href=3D"https://newslet=
+ter.inxmail.de/d?o00y05dy00f7bu0ip0000l6y00000000bf7tneluuzkjkiunkxes0quwho=
+m15&amp;utm_medium=3Demail&amp;utm_source=3Dnewsletter-welcome-01&amp;utm_c=
+ampaign=3Dnewsletter&amp;user_type=3D[CAS_Vertrag_Typ]" style=3D"font-famil=
+y:Arial,Helvetica,sans-serif;font-style:normal;font-size:12px;font-weight:n=
+ormal;text-decoration:underline;color:#372E2C;" target=3D"_blank"><span sty=
+le=3D"font-family:Arial,Helvetica,sans-serif;font-style:normal;font-size:12=
+px;font-weight:normal;text-decoration:underline;color:#372E2C;">Erfassung p=
+ersonenbezogenes Nutzungsverhalten ausschalten</span></a></span><br style=
+=3D"font-size:12px;"/><span style=3D"font-size:12px;">=C2=A0</span></center=
+><br style=3D"font-size:12px;"/><span style=3D"font-size:12px;">=C2=A0</spa=
+n><br style=3D"font-size:12px;"/></td><td width=3D"30" style=3D"vertical-al=
+ign:top;"/></tr></table></td><td style=3D"vertical-align:bottom;line-height=
+:0px;" class=3D"d" valign=3D"bottom" align=3D"left" width=3D"180"><img src=
+=3D"https://newsletter.inxmail.de/resc/1/182c5e4510f/0/gmail_fix.gif" alt=
+=3D"" width=3D"180" height=3D"1" border=3D"0" hspace=3D"0" vspace=3D"0" ali=
+gn=3D"bottom" style=3D"min-width:180px;width:180px;vertical-align:bottom;" =
+/></td></tr></table></td></tr></table></div></td></tr></table></body></html=
+><!--20220628-->
+------=_Part_20526_976752123.1676571439780--
+

@@ -30,7 +30,7 @@ fullResult:
             value: 5e78d7ef2297cc80842b7591e.6496a8003f.20230117101720.2ed1232679.76ae8c9f@mail5.suw111.mcdlv.net
           matches:
             -
-              matcherId: mailchimp
+              providerId: mailchimp
               isMatch: true
         -
           headerItem:
@@ -38,7 +38,7 @@ fullResult:
             value: 'Mailchimp Mailer - **CID2ed12326796496a8003f**'
           matches:
             -
-              matcherId: mailchimp
+              providerId: mailchimp
               isMatch: true
         -
           headerItem:
@@ -46,7 +46,7 @@ fullResult:
             value: mailchimp5e78d7ef2297cc80842b7591e.2ed1232679
           matches:
             -
-              matcherId: mailchimp
+              providerId: mailchimp
               isMatch: true
         -
           headerItem:
@@ -54,7 +54,7 @@ fullResult:
             value: mailchimp5e78d7ef2297cc80842b7591e.2ed1232679
           matches:
             -
-              matcherId: mailchimp
+              providerId: mailchimp
               isMatch: true
         -
           headerItem:
@@ -62,7 +62,7 @@ fullResult:
             value: 'Please report abuse for this campaign here: https://mailchimp.com/contact/abuse/?u=5e78d7ef2297cc80842b7591e&id=2ed1232679&e=6496a8003f'
           matches:
             -
-              matcherId: mailchimp
+              providerId: mailchimp
               isMatch: true
         -
           headerItem:
@@ -70,7 +70,7 @@ fullResult:
             value: 5e78d7ef2297cc80842b7591e
           matches:
             -
-              matcherId: mailchimp
+              providerId: mailchimp
               isMatch: true
         -
           headerItem:
@@ -78,7 +78,7 @@ fullResult:
             value: '23225407:23225407.1113764:us3:mc'
           matches:
             -
-              matcherId: mailchimp
+              providerId: mailchimp
               isMatch: true
         -
           headerItem:
@@ -86,7 +86,7 @@ fullResult:
             value: '5e78d7ef2297cc80842b7591emc list <5e78d7ef2297cc80842b7591e.227233.list-id.mcsv.net>'
           matches:
             -
-              matcherId: mailchimp
+              providerId: mailchimp
               isMatch: true
         -
           headerItem:
@@ -94,7 +94,7 @@ fullResult:
             value: '<https://schreibsuchti.us3.list-manage.com/unsubscribe?u=5e78d7ef2297cc80842b7591e&id=93b720b585&e=6496a8003f&c=2ed1232679>, <mailto:unsubscribe-mc.us3_5e78d7ef2297cc80842b7591e.2ed1232679-6496a8003f@unsubscribe.mailchimpapp.net?subject=unsubscribe>'
           matches:
             -
-              matcherId: mailchimp
+              providerId: mailchimp
               isMatch: true
     urlItemInfoBag:
       urlItemInfos:

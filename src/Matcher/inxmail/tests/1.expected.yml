@@ -1,0 +1,586 @@
+log:
+  messages:
+    - '[1970-01-01T00:00:00+00:00] Start'
+    - '[1970-01-01T00:00:00+00:00] Finished'
+fullResult:
+  listInfo:
+    emailLabel: 'Inxmail Newsletter'
+    emailAddress: news@newsletter.inxmail.de
+    listId: 15.14ee2f8a2c994de468fb21dea4f.localhost
+  messageInfo:
+    timeStamp: 1676571439
+  verdict:
+    matchLevel:
+      name: Unlikely
+      value: unlikely
+    serviceName: null
+    explanation: 'No tracking pattern and no redirect link found.'
+  details:
+    dkimResult:
+      status:
+        name: Valid
+        value: valid
+      summaryLines:
+        - 'Signature 1: DKIM signature did not verify (inxserver.com/202007 key #0)'
+        - 'Signature 2: DKIM signature verified successfully!'
+    headerItemInfoBag:
+      infos:
+        -
+          headerItem:
+            name: list-unsubscribe
+            value: '<https://newsletter.inxmail.de/d?o00y05gi00f7bu0il0000l6y00000000bf7tneluuzkjkiunkxes0qurpdy15>, <mailto:news_7512@inxserver.com?subject=unsubscribe%20params%3Db00000dy00f7bu00d5c5qc000000000jp43sjnlso>'
+          matches:
+            -
+              providerId: inxmail
+              isMatch: true
+        -
+          headerItem:
+            name: feedback-id
+            value: 'xpro-7512-256187:xpro-7512:TRIGGER_MAILING:inxmailde'
+          matches:
+            -
+              providerId: inxmail
+              isMatch: true
+        -
+          headerItem:
+            name: x-mailer
+            value: 'Inxmail EE 4.8.47.804'
+          matches:
+            -
+              providerId: inxmail
+              isMatch: true
+    urlItemInfoBag:
+      urlItemInfos:
+        -
+          urlItem:
+            url: 'https://newsletter.inxmail.de/d?o00y05ei00f7bu0id0000l6y00000000bf7tneluuzkjkiunkxes0quqnue15&params=xvmeIgQOsQy9WRMui480fHBaQ7htFgRpu1Yuqp4RvefAsNS%2BYPDaYy1v2jrZV0wcWOu47P727Ts3F75Gb4RGtdrQSMqgZp70R3Vt%2Bz%2BmveQ%3D'
+            text: 'Zur Webseitenansicht'
+          redirectInfo: null
+          analyticsInfo:
+            type:
+              name: NeedsResearch
+              value: needs_research
+            keys:
+              - o00y05ei00f7bu0id0000l6y00000000bf7tneluuzkjkiunkxes0quqnue15
+              - params
+          matches: {  }
+        -
+          urlItem:
+            url: 'https://newsletter.inxmail.de/d?o00y05eq00f7bu0id0000l6y00000000bf7tneluuzkjkiunkxes0qurixe15&utm_medium=email&utm_source=newsletter-welcome-01&utm_campaign=newsletter&user_type=[CAS_Vertrag_Typ]'
+            text: ''
+          redirectInfo: null
+          analyticsInfo:
+            type:
+              name: NeedsResearch
+              value: needs_research
+            keys:
+              - o00y05eq00f7bu0id0000l6y00000000bf7tneluuzkjkiunkxes0qurixe15
+              - utm_medium
+              - utm_source
+              - utm_campaign
+              - user_type
+          matches: {  }
+        -
+          urlItem:
+            url: 'https://newsletter.inxmail.de/d?o00y05ey00f7bu0id0000l6y00000000bf7tneluuzkjkiunkxes0quwlwe15&utm_medium=email&utm_source=newsletter-welcome-01&utm_campaign=newsletter&user_type=[CAS_Vertrag_Typ]'
+            text: ''
+          redirectInfo: null
+          analyticsInfo:
+            type:
+              name: NeedsResearch
+              value: needs_research
+            keys:
+              - o00y05ey00f7bu0id0000l6y00000000bf7tneluuzkjkiunkxes0quwlwe15
+              - utm_medium
+              - utm_source
+              - utm_campaign
+              - user_type
+          matches: {  }
+        -
+          urlItem:
+            url: 'https://newsletter.inxmail.de/d?o00y05f000f7bu0id0000l6y00000000bf7tneluuzkjkiunkxes0qutcre15&utm_medium=email&utm_source=newsletter-welcome-01&utm_campaign=newsletter&user_type=[CAS_Vertrag_Typ]'
+            text: ''
+          redirectInfo: null
+          analyticsInfo:
+            type:
+              name: NeedsResearch
+              value: needs_research
+            keys:
+              - o00y05f000f7bu0id0000l6y00000000bf7tneluuzkjkiunkxes0qutcre15
+              - utm_medium
+              - utm_source
+              - utm_campaign
+              - user_type
+          matches: {  }
+        -
+          urlItem:
+            url: 'https://newsletter.inxmail.de/d?o00y05fi00f7bu0id0000l6y00000000bf7tneluuzkjkiunkxes0quubqe15&utm_medium=email&utm_source=newsletter-welcome-01&utm_campaign=newsletter&user_type=[CAS_Vertrag_Typ]'
+            text: ''
+          redirectInfo: null
+          analyticsInfo:
+            type:
+              name: NeedsResearch
+              value: needs_research
+            keys:
+              - o00y05fi00f7bu0id0000l6y00000000bf7tneluuzkjkiunkxes0quubqe15
+              - utm_medium
+              - utm_source
+              - utm_campaign
+              - user_type
+          matches: {  }
+        -
+          urlItem:
+            url: 'https://newsletter.inxmail.de/d?o00y05fq00f7bu0id0000l6y00000000bf7tneluuzkjkiunkxes0quvete15&utm_medium=email&utm_source=newsletter-welcome-01&utm_campaign=newsletter&user_type=[CAS_Vertrag_Typ]'
+            text: ''
+          redirectInfo: null
+          analyticsInfo:
+            type:
+              name: NeedsResearch
+              value: needs_research
+            keys:
+              - o00y05fq00f7bu0id0000l6y00000000bf7tneluuzkjkiunkxes0quvete15
+              - utm_medium
+              - utm_source
+              - utm_campaign
+              - user_type
+          matches: {  }
+        -
+          urlItem:
+            url: 'https://newsletter.inxmail.de/d?o00y047q00f7bu0id0000l6y00000000bf7tneluuzkjkiunkxes0quwyi415&utm_medium=email&utm_source=newsletter-welcome-01&utm_campaign=newsletter&user_type=[CAS_Vertrag_Typ]'
+            text: 'Knowledge Base'
+          redirectInfo: null
+          analyticsInfo:
+            type:
+              name: NeedsResearch
+              value: needs_research
+            keys:
+              - o00y047q00f7bu0id0000l6y00000000bf7tneluuzkjkiunkxes0quwyi415
+              - utm_medium
+              - utm_source
+              - utm_campaign
+              - user_type
+          matches: {  }
+        -
+          urlItem:
+            url: 'https://newsletter.inxmail.de/d?o00y047y00f7bu0id0000l6y00000000bf7tneluuzkjkiunkxes0qur3j415&utm_medium=email&utm_source=newsletter-welcome-01&utm_campaign=newsletter&user_type=[CAS_Vertrag_Typ]'
+            text: 'Zur Knowledge Base'
+          redirectInfo: null
+          analyticsInfo:
+            type:
+              name: NeedsResearch
+              value: needs_research
+            keys:
+              - o00y047y00f7bu0id0000l6y00000000bf7tneluuzkjkiunkxes0qur3j415
+              - utm_medium
+              - utm_source
+              - utm_campaign
+              - user_type
+          matches: {  }
+        -
+          urlItem:
+            url: 'https://newsletter.inxmail.de/d?o00y050000f7bu0id0000l6y00000000bf7tneluuzkjkiunkxes0quwsvm15&utm_medium=email&utm_source=newsletter-welcome-01&utm_campaign=newsletter&user_type=[CAS_Vertrag_Typ]'
+            text: 'leistungsstarke Software-Lösungen'
+          redirectInfo: null
+          analyticsInfo:
+            type:
+              name: NeedsResearch
+              value: needs_research
+            keys:
+              - o00y050000f7bu0id0000l6y00000000bf7tneluuzkjkiunkxes0quwsvm15
+              - utm_medium
+              - utm_source
+              - utm_campaign
+              - user_type
+          matches: {  }
+        -
+          urlItem:
+            url: 'https://newsletter.inxmail.de/d?o00y050i00f7bu0id0000l6y00000000bf7tneluuzkjkiunkxes0qurrum15&utm_medium=email&utm_source=newsletter-welcome-01&utm_campaign=newsletter&user_type=[CAS_Vertrag_Typ]'
+            text: 'ausgezeichnete Services'
+          redirectInfo: null
+          analyticsInfo:
+            type:
+              name: NeedsResearch
+              value: needs_research
+            keys:
+              - o00y050i00f7bu0id0000l6y00000000bf7tneluuzkjkiunkxes0qurrum15
+              - utm_medium
+              - utm_source
+              - utm_campaign
+              - user_type
+          matches: {  }
+        -
+          urlItem:
+            url: 'https://newsletter.inxmail.de/d?o00y050q00f7bu0id0000l6y00000000bf7tneluuzkjkiunkxes0ququxm15&utm_medium=email&utm_source=newsletter-welcome-01&utm_campaign=newsletter&user_type=[CAS_Vertrag_Typ]'
+            text: '2.000 Kunden'
+          redirectInfo: null
+          analyticsInfo:
+            type:
+              name: NeedsResearch
+              value: needs_research
+            keys:
+              - o00y050q00f7bu0id0000l6y00000000bf7tneluuzkjkiunkxes0ququxm15
+              - utm_medium
+              - utm_source
+              - utm_campaign
+              - user_type
+          matches: {  }
+        -
+          urlItem:
+            url: 'https://newsletter.inxmail.de/d?o00y050y00f7bu0id0000l6y00000000bf7tneluuzkjkiunkxes0quxxwm15&utm_medium=email&utm_source=newsletter-welcome-01&utm_campaign=newsletter&user_type=[CAS_Vertrag_Typ]'
+            text: Schnittstellen
+          redirectInfo: null
+          analyticsInfo:
+            type:
+              name: NeedsResearch
+              value: needs_research
+            keys:
+              - o00y050y00f7bu0id0000l6y00000000bf7tneluuzkjkiunkxes0quxxwm15
+              - utm_medium
+              - utm_source
+              - utm_campaign
+              - user_type
+          matches: {  }
+        -
+          urlItem:
+            url: 'https://newsletter.inxmail.de/d?o00y05b000f7bu0id0000l6y00000000bf7tneluuzkjkiunkxes0qus6rm15&utm_medium=email&utm_source=newsletter-welcome-01&utm_campaign=newsletter&user_type=[CAS_Vertrag_Typ]'
+            text: 'Mehr zu Inxmail'
+          redirectInfo: null
+          analyticsInfo:
+            type:
+              name: NeedsResearch
+              value: needs_research
+            keys:
+              - o00y05b000f7bu0id0000l6y00000000bf7tneluuzkjkiunkxes0qus6rm15
+              - utm_medium
+              - utm_source
+              - utm_campaign
+              - user_type
+          matches: {  }
+        -
+          urlItem:
+            url: 'https://newsletter.inxmail.de/d?o00y05fy00f7bu0id0000l6y00000000bf7tneluuzkjkiunkxes0qushse15&utm_medium=email&utm_source=newsletter-welcome-01&utm_campaign=newsletter&user_type=[CAS_Vertrag_Typ]'
+            text: ''
+          redirectInfo: null
+          analyticsInfo:
+            type:
+              name: NeedsResearch
+              value: needs_research
+            keys:
+              - o00y05fy00f7bu0id0000l6y00000000bf7tneluuzkjkiunkxes0qushse15
+              - utm_medium
+              - utm_source
+              - utm_campaign
+              - user_type
+          matches: {  }
+        -
+          urlItem:
+            url: 'https://newsletter.inxmail.de/d?o00y05g000f7bu0id0000l6y00000000bf7tneluuzkjkiunkxes0quxqv015&utm_medium=email&utm_source=newsletter-welcome-01&utm_campaign=newsletter&user_type=[CAS_Vertrag_Typ]'
+            text: ''
+          redirectInfo: null
+          analyticsInfo:
+            type:
+              name: NeedsResearch
+              value: needs_research
+            keys:
+              - o00y05g000f7bu0id0000l6y00000000bf7tneluuzkjkiunkxes0quxqv015
+              - utm_medium
+              - utm_source
+              - utm_campaign
+              - user_type
+          matches: {  }
+        -
+          urlItem:
+            url: 'https://newsletter.inxmail.de/d?o00y05bi00f7bu0id0000l6y00000000bf7tneluuzkjkiunkxes0quv5qm15&utm_medium=email&utm_source=newsletter-welcome-01&utm_campaign=newsletter&user_type=[CAS_Vertrag_Typ]'
+            text: ''
+          redirectInfo: null
+          analyticsInfo:
+            type:
+              name: NeedsResearch
+              value: needs_research
+            keys:
+              - o00y05bi00f7bu0id0000l6y00000000bf7tneluuzkjkiunkxes0quv5qm15
+              - utm_medium
+              - utm_source
+              - utm_campaign
+              - user_type
+          matches: {  }
+        -
+          urlItem:
+            url: 'https://newsletter.inxmail.de/d?o00y05bq00f7bu0id0000l6y00000000bf7tneluuzkjkiunkxes0quuytm15&utm_medium=email&utm_source=newsletter-welcome-01&utm_campaign=newsletter&user_type=[CAS_Vertrag_Typ]'
+            text: ''
+          redirectInfo: null
+          analyticsInfo:
+            type:
+              name: NeedsResearch
+              value: needs_research
+            keys:
+              - o00y05bq00f7bu0id0000l6y00000000bf7tneluuzkjkiunkxes0quuytm15
+              - utm_medium
+              - utm_source
+              - utm_campaign
+              - user_type
+          matches: {  }
+        -
+          urlItem:
+            url: 'https://newsletter.inxmail.de/d/d.gmbh?o00y05by00f7bu0id0000l6y00000000bf7tneluuzkjkiunkxes0qut3sm15&utm_medium=email&utm_source=newsletter-welcome-01&utm_campaign=newsletter&user_type=[CAS_Vertrag_Typ]'
+            text: ''
+          redirectInfo: null
+          analyticsInfo:
+            type:
+              name: NeedsResearch
+              value: needs_research
+            keys:
+              - o00y05by00f7bu0id0000l6y00000000bf7tneluuzkjkiunkxes0qut3sm15
+              - utm_medium
+              - utm_source
+              - utm_campaign
+              - user_type
+          matches: {  }
+        -
+          urlItem:
+            url: 'https://newsletter.inxmail.de/d?o00y05c000f7bu0id0000l6y00000000bf7tneluuzkjkiunkxes0quwmvi15&utm_medium=email&utm_source=newsletter-welcome-01&utm_campaign=newsletter&user_type=[CAS_Vertrag_Typ]'
+            text: ''
+          redirectInfo: null
+          analyticsInfo:
+            type:
+              name: NeedsResearch
+              value: needs_research
+            keys:
+              - o00y05c000f7bu0id0000l6y00000000bf7tneluuzkjkiunkxes0quwmvi15
+              - utm_medium
+              - utm_source
+              - utm_campaign
+              - user_type
+          matches: {  }
+        -
+          urlItem:
+            url: 'https://newsletter.inxmail.de/d?o00y05ci00f7bu0id0000l6y00000000bf7tneluuzkjkiunkxes0qurpui15&utm_medium=email&utm_source=newsletter-welcome-01&utm_campaign=newsletter&user_type=[CAS_Vertrag_Typ]'
+            text: ''
+          redirectInfo: null
+          analyticsInfo:
+            type:
+              name: NeedsResearch
+              value: needs_research
+            keys:
+              - o00y05ci00f7bu0id0000l6y00000000bf7tneluuzkjkiunkxes0qurpui15
+              - utm_medium
+              - utm_source
+              - utm_campaign
+              - user_type
+          matches: {  }
+        -
+          urlItem:
+            url: 'https://newsletter.inxmail.de/d?o00y05cq00f7bu0id0000l6y00000000bf7tneluuzkjkiunkxes0quqkxi15&utm_medium=email&utm_source=newsletter-welcome-01&utm_campaign=newsletter&user_type=[CAS_Vertrag_Typ]'
+            text: ''
+          redirectInfo: null
+          analyticsInfo:
+            type:
+              name: NeedsResearch
+              value: needs_research
+            keys:
+              - o00y05cq00f7bu0id0000l6y00000000bf7tneluuzkjkiunkxes0quqkxi15
+              - utm_medium
+              - utm_source
+              - utm_campaign
+              - user_type
+          matches: {  }
+        -
+          urlItem:
+            url: 'mailto:kontakt@inxmail.de'
+            text: kontakt@inxmail.de
+          redirectInfo: null
+          analyticsInfo: null
+          matches: {  }
+        -
+          urlItem:
+            url: 'https://newsletter.inxmail.de/d?o00y05cy00f7bu0id0000l6y00000000bf7tneluuzkjkiunkxes0quxjwi15&utm_medium=email&utm_source=newsletter-welcome-01&utm_campaign=newsletter&user_type=[CAS_Vertrag_Typ]'
+            text: www.inxmail.de
+          redirectInfo: null
+          analyticsInfo:
+            type:
+              name: NeedsResearch
+              value: needs_research
+            keys:
+              - o00y05cy00f7bu0id0000l6y00000000bf7tneluuzkjkiunkxes0quxjwi15
+              - utm_medium
+              - utm_source
+              - utm_campaign
+              - user_type
+          matches: {  }
+        -
+          urlItem:
+            url: 'https://newsletter.inxmail.de/d?o00y05d000f7bu0ik0000l6y00000000bf7tneluuzkjkiunkxes0quqzcm15&utm_medium=email&utm_source=newsletter-welcome-01&utm_campaign=newsletter&user_type=[CAS_Vertrag_Typ]'
+            text: 'Newsletter abbestellen'
+          redirectInfo: null
+          analyticsInfo:
+            type:
+              name: NeedsResearch
+              value: needs_research
+            keys:
+              - o00y05d000f7bu0ik0000l6y00000000bf7tneluuzkjkiunkxes0quqzcm15
+              - utm_medium
+              - utm_source
+              - utm_campaign
+              - user_type
+          matches: {  }
+        -
+          urlItem:
+            url: 'https://newsletter.inxmail.de/d?o00y05di00f7bu0id0000l6y00000000bf7tneluuzkjkiunkxes0quvdqi15&params=xvmeIgQOsQy9WRMui480fHBaQ7htFgRpu1Yuqp4RvefAsNS%2BYPDaYy1v2jrZV0wcWOu47P727Ts3F75Gb4RGtdrQSMqgZp70R3Vt%2Bz%2BmveQ%3D&utm_medium=email&utm_source=newsletter-welcome-01&utm_campaign=newsletter&user_type=[CAS_Vertrag_Typ]'
+            text: 'Benutzerprofil ändern'
+          redirectInfo: null
+          analyticsInfo:
+            type:
+              name: NeedsResearch
+              value: needs_research
+            keys:
+              - o00y05di00f7bu0id0000l6y00000000bf7tneluuzkjkiunkxes0quvdqi15
+              - params
+              - utm_medium
+              - utm_source
+              - utm_campaign
+              - user_type
+          matches: {  }
+        -
+          urlItem:
+            url: 'https://newsletter.inxmail.de/d?o00y05dq00f7bu0id0000l6y00000000bf7tneluuzkjkiunkxes0quugti15&params=xvmeIgQOsQy9WRMui480fHBaQ7htFgRpu1Yuqp4RvefAsNS%2BYPDaYy1v2jrZV0wcWOu47P727Ts3F75Gb4RGtdrQSMqgZp70R3Vt%2Bz%2BmveQ%3D&utm_medium=email&utm_source=newsletter-welcome-01&utm_campaign=newsletter&user_type=[CAS_Vertrag_Typ]'
+            text: 'Mailarchiv aufrufen'
+          redirectInfo: null
+          analyticsInfo:
+            type:
+              name: NeedsResearch
+              value: needs_research
+            keys:
+              - o00y05dq00f7bu0id0000l6y00000000bf7tneluuzkjkiunkxes0quugti15
+              - params
+              - utm_medium
+              - utm_source
+              - utm_campaign
+              - user_type
+          matches: {  }
+        -
+          urlItem:
+            url: 'https://newsletter.inxmail.de/d?o00y05dy00f7bu0ip0000l6y00000000bf7tneluuzkjkiunkxes0quwhom15&utm_medium=email&utm_source=newsletter-welcome-01&utm_campaign=newsletter&user_type=[CAS_Vertrag_Typ]'
+            text: 'Erfassung personenbezogenes Nutzungsverhalten ausschalten'
+          redirectInfo: null
+          analyticsInfo:
+            type:
+              name: NeedsResearch
+              value: needs_research
+            keys:
+              - o00y05dy00f7bu0ip0000l6y00000000bf7tneluuzkjkiunkxes0quwhom15
+              - utm_medium
+              - utm_source
+              - utm_campaign
+              - user_type
+          matches: {  }
+        -
+          urlItem:
+            url: 'https://newsletter.inxmail.de/d/d.gif?o00y05e000f7bu0ih0000l6y00000000bf7tneluuzkjkiunkxes0qutq6y15'
+          redirectInfo: null
+          analyticsInfo: null
+          matches: {  }
+        -
+          urlItem:
+            url: 'https://newsletter.inxmail.de/resc/1/182c5e4510f/0/gmail_fix.gif'
+          redirectInfo: null
+          analyticsInfo: null
+          matches: {  }
+        -
+          urlItem:
+            url: 'https://newsletter.inxmail.de/resc/1/182c5e4510f/0/transparent.gif'
+          redirectInfo: null
+          analyticsInfo: null
+          matches: {  }
+        -
+          urlItem:
+            url: 'https://download.inxshare.com/Inxmail_Kommunikation/TEMPLATE/2020/Header-Logo-Mobil.gif'
+          redirectInfo: null
+          analyticsInfo: null
+          matches: {  }
+        -
+          urlItem:
+            url: 'https://download.inxshare.com/Inxmail_Kommunikation/WELCOME_NEU/TAG0/HEADER-MOBILE600x600px-WELCOME-TAG0.jpg'
+          redirectInfo: null
+          analyticsInfo: null
+          matches: {  }
+        -
+          urlItem:
+            url: 'https://cs.inxshare.com/Creative-Service/Inx_Newsletter2019/hdr_02_01_01-2.gif'
+          redirectInfo: null
+          analyticsInfo: null
+          matches: {  }
+        -
+          urlItem:
+            url: 'https://download.inxshare.com/Inxmail_Kommunikation/WELCOME_NEU/TAG0/HEADER-DESKTOP-600x320-WELCOME-TAG0.jpg'
+          redirectInfo: null
+          analyticsInfo: null
+          matches: {  }
+        -
+          urlItem:
+            url: 'https://download.inxshare.com/Inxmail_Kommunikation/WELCOME_NEU/TAG0/Knowledge-Base.png'
+          redirectInfo: null
+          analyticsInfo: null
+          matches: {  }
+        -
+          urlItem:
+            url: 'https://download.inxshare.com/Inxmail_Kommunikation/TEMPLATE/2020/Inxmail-Professional-Testen.png'
+          redirectInfo: null
+          analyticsInfo: null
+          matches: {  }
+        -
+          urlItem:
+            url: 'https://download.inxshare.com/Inxmail_Kommunikation/WELCOME_NEU/TAG0/STOERER-RECHTS-DESKTOP-WELCOME-TAG0.jpg'
+          redirectInfo: null
+          analyticsInfo: null
+          matches: {  }
+        -
+          urlItem:
+            url: 'https://download.inxshare.com/Inxmail_Kommunikation/TEMPLATE/2020/Channel-Facebook-32px.gif'
+          redirectInfo: null
+          analyticsInfo: null
+          matches: {  }
+        -
+          urlItem:
+            url: 'https://download.inxshare.com/Inxmail_Kommunikation/TEMPLATE/2020/Channel-Twitter-32px.gif'
+          redirectInfo: null
+          analyticsInfo: null
+          matches: {  }
+        -
+          urlItem:
+            url: 'https://download.inxshare.com/Inxmail_Kommunikation/TEMPLATE/2020/Channel-Instagram-32px.gif'
+          redirectInfo: null
+          analyticsInfo: null
+          matches: {  }
+        -
+          urlItem:
+            url: 'https://download.inxshare.com/Inxmail_Kommunikation/TEMPLATE/2020/Channel-Linkedin-32px.gif'
+          redirectInfo: null
+          analyticsInfo: null
+          matches: {  }
+        -
+          urlItem:
+            url: 'https://download.inxshare.com/Inxmail_Kommunikation/TEMPLATE/2020/Channel-Xing-32px.gif'
+          redirectInfo: null
+          analyticsInfo: null
+          matches: {  }
+        -
+          urlItem:
+            url: 'https://download.inxshare.com/Inxmail_Kommunikation/TEMPLATE/2020/Channel-Youtube-32px.gif'
+          redirectInfo: null
+          analyticsInfo: null
+          matches: {  }
+    cnameChainList:
+      chaneChainsByDomain:
+        INX.14ee2f8a2c994de468fb21dea4f.3e8bb.18100.1.1865b71f297274@newsletter.inxmail.de:
+          aliasDomains: {  }
+          domain: INX.14ee2f8a2c994de468fb21dea4f.3e8bb.18100.1.1865b71f297274@newsletter.inxmail.de
+        15.14ee2f8a2c994de468fb21dea4f.localhost:
+          aliasDomains: {  }
+          domain: 15.14ee2f8a2c994de468fb21dea4f.localhost
+        newsletter.inxmail.de:
+          aliasDomains:
+            - rdir.inxmail.com
+          domain: newsletter.inxmail.de
+        '':
+          aliasDomains: {  }
+          domain: ''

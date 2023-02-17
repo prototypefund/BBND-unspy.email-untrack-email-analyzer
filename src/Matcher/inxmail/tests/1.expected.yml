@@ -571,9 +571,6 @@ fullResult:
           matches: {  }
     cnameChainList:
       cnaneChainsByDomain:
-        '':
-          domain: ''
-          aliasDomains: {  }
         15.14ee2f8a2c994de468fb21dea4f.localhost:
           domain: 15.14ee2f8a2c994de468fb21dea4f.localhost
           aliasDomains: {  }

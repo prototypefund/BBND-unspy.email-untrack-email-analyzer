@@ -8,8 +8,10 @@ use Geeks4change\UntrackEmailAnalyzer\Analyzer\Result\Header\HeaderItem;
 use Geeks4change\UntrackEmailAnalyzer\Analyzer\Result\Header\HeaderItemMatch;
 use Geeks4change\UntrackEmailAnalyzer\Analyzer\Result\Url\Match\ProviderMatch;
 use Geeks4change\UntrackEmailAnalyzer\Analyzer\Result\Url\UrlItem;
+use Geeks4change\UntrackEmailAnalyzer\Globals;
 use Geeks4change\UntrackEmailAnalyzer\Matcher\MatcherBase;
 use Geeks4change\UntrackEmailAnalyzer\Matcher\MatcherInterface;
+use Geeks4change\UntrackEmailAnalyzer\Utility\Extract;
 use Geeks4change\UntrackEmailAnalyzer\Utility\UrlMatcher;
 
 final class MailchimpMatcher extends MatcherBase implements MatcherInterface {
@@ -19,8 +21,8 @@ final class MailchimpMatcher extends MatcherBase implements MatcherInterface {
       'mailchimp.com',
       'mailchimpapp.net',
       'mailchi.mp',
-      'list-manage.com',
-      'list-manage.com.edgekey.net',
+      '.list-manage.com',
+      '.list-manage.com.edgekey.net',
       'mcusercontent.com',
       'agentofficemail.com',
       'answerbook.com',
@@ -28,8 +30,8 @@ final class MailchimpMatcher extends MatcherBase implements MatcherInterface {
       'list-manage1.com',
       'mandrillapp.com',
       'tinyletter.com',
-      'mcsv.net',
-      'mcdlv.net',
+      '.mcsv.net',
+      '.mcdlv.net',
     ];
   }
 
@@ -41,14 +43,25 @@ final class MailchimpMatcher extends MatcherBase implements MatcherInterface {
   }
 
   public function matchHeader(HeaderItem $item): ?HeaderItemMatch {
+    // Message-ID: <b00ccdbb39a8456492b99ae9e.be24ad69fc.20220626160230.a8d0ad03b7.fd6563fe@mail16.sea31.mcsv.net>
+    // Message-ID: '<{sender}.{recipient}.{_somedate:dec(14)}.{campaign}.{:hex(8)}@{=mail16}.{=sea31}.mcsv.net>'
+    // But may be different domains, so check for any.
     if ($item->name === 'message-id') {
-      $isMatch = $this->stringMatchesDomain($item->value);
+      $isMatch = UrlMatcher::create('', $this->getDomains())->match($item->value);
     }
+    // List-Unsubscribe: <https://voeoe.us1.list-manage.com/unsubscribe?u=b00ccdbb39a8456492b99ae9e&id=ede4b53575&e=be24ad69fc&c=a8d0ad03b7>, <mailto:unsubscribe-mc.{region}_b00ccdbb39a8456492b99ae9e.a8d0ad03b7-be24ad69fc@unsubscribe.mailchimpapp.net?subject=unsubscribe>
+    // List-Unsubscribe: '<https://{sender-slug}.{region}.list-manage.com/unsubscribe?u={sender}&id={subscription}&e={recipient}&c={campaign}>, <mailto:unsubscribe-mc.{region}_{sender}.{campaign}-{recipient}@unsubscribe.mailchimpapp.net?subject=unsubscribe>'
     elseif ($item->name === 'list-unsubscribe') {
-      $isMatch = $this->anyHostInAngleBracketsMatchesAnyDomain($item->value);
+      $inAngleBrackets = Extract::angleBrackets($item->value);
+      $isMatch = $inAngleBrackets && UrlMatcher::create('.list-manage.com/unsubscribe', $this->getDomains())
+        ->match($inAngleBrackets[0]);
     }
+    // List-ID: b00ccdbb39a8456492b99ae9emc list <b00ccdbb39a8456492b99ae9e.1621274.list-id.mcsv.net>
+    // List-ID: '{sender}mc list <{sender}.{?1621274}.list-id.mcsv.net>'
     elseif ($item->name === 'list-id') {
-      $isMatch = $this->anyValueInAngleBracketsMatchesAnyDomain($item->value);
+      $inAngleBrackets = Extract::angleBrackets($item->value);
+      $isMatch = $inAngleBrackets && UrlMatcher::create('', $this->getDomains())
+          ->match($inAngleBrackets[0]);
     }
     elseif ($item->name === 'x-mailer') {
       $isMatch = str_starts_with($item->value, 'Mailchimp Mailer ');
@@ -77,10 +90,11 @@ final class MailchimpMatcher extends MatcherBase implements MatcherInterface {
 
     // User tracking.
     # https://mailchi.mp/f84d35f613cc/voeoe-03-8987958?e=be24ad69fc
-    if (UrlMatcher::create('//mailchi.mp/{}/{}?e={}')->match($urlItem->url)) {
+    if (UrlMatcher::create('//mailchi.mp/{}/{}?e=')->match($urlItem->url)) {
       return new ProviderMatch($this->getId(), 'webview', true, false);
     }
     # https://voeoe.us1.list-manage.com/track/click?u=b00ccdbb39a8456492b99ae9e&id=e269fce298&e=be24ad69fc
+    // The 'e' query is the user tracking part.
     if (UrlMatcher::create('//.list-manage.com/track/click?e=')->match($urlItem->url)) {
       return new ProviderMatch($this->getId(), 'spy-link', true, false);
     }
@@ -114,7 +128,8 @@ final class MailchimpMatcher extends MatcherBase implements MatcherInterface {
       return new ProviderMatch($this->getId(), 'technical image', false, false);
     }
     # https://voeoe.us1.list-manage.com/track/open.php?u=b00ccdbb39a8456492b99ae9e&id=a8d0ad03b7&e=be24ad69fc
-    if (UrlMatcher::create('//.list-manage.com/track/open.php?u={sender}&id={}&e={}')->match($urlItem->url)) {
+    // The 'e' query is the user tracking part.
+    if (UrlMatcher::create('//.list-manage.com/track/open.php?e=')->match($urlItem->url)) {
       return new ProviderMatch($this->getId(), 'tracking pixel', true, false);
     }
 

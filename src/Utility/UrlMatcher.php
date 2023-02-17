@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace Geeks4change\UntrackEmailAnalyzer\Utility;
 
 use Geeks4change\UntrackEmailAnalyzer\CnameResolver;
+use Geeks4change\UntrackEmailAnalyzer\Globals;
 use GuzzleHttp\Psr7\Uri;
 use loophp\collection\Collection;
 
@@ -22,14 +23,21 @@ final class UrlMatcher {
     public readonly string $pathRegexes,
     public readonly array  $queryPatterns,
   ) {
-    $this->cnameResolver = new CnameResolver();
+    $this->cnameResolver = Globals::get()->getCnameResolver();
   }
 
   public function match(string $uriString): bool {
+    // Add empty schema if needed to ensure parsing.
+    if (!str_contains($uriString, '//')) {
+      $uriString = "//$uriString";
+    }
     $uri = new Uri($uriString);
     $domainMatch = $this->hostOrCnameMatchesAnyDomain($uri->getHost());
     $pathMatch = $this->pathMatchesPattern($uri->getPath());
     $queryMatch = $this->queryMatchesPattern($uri->getQuery());
+    if (Globals::$isDebug) {
+      dump(get_defined_vars() + [$this]);
+    }
     return $domainMatch && $pathMatch && $queryMatch;
   }
 
@@ -38,7 +46,7 @@ final class UrlMatcher {
   }
 
   protected function hostOrCnameMatchesSomeDomain(string $host, string $domain): bool {
-    $hostCnames = $this->cnameResolver->getCnames($host);
+    $hostCnames = $this->cnameResolver->getCnameChain($host);
     return boolval(array_filter($hostCnames, fn(string $hostCname) => $this->hostMatchesSomeDomain($hostCname, $domain)));
   }
 
@@ -70,15 +78,6 @@ final class UrlMatcher {
     return $queryMatch;
   }
 
-  protected static function createRegex(string $pattern, $separator): string {
-    $quotedPattern = preg_quote($pattern, '~');
-    $wildcard = $separator ? "[^{$separator}]+" : '.+';
-    $regexPart = preg_replace('#\\\\{.*?\\\\}#u', $wildcard, $quotedPattern);
-    /** @noinspection PhpUnnecessaryLocalVariableInspection */
-    $regex = "~^{$regexPart}($|[?]|[&]|#)~u";
-    return $regex;
-  }
-
   /**
    * @param string $uriPattern
    *   A pattern containing {} as placeholder with contextual semantics.
@@ -95,16 +94,52 @@ final class UrlMatcher {
    * @return \Geeks4change\UntrackEmailAnalyzer\Utility\UrlMatcher
    */
   public static function create(string $uriPattern, array $domains = []): UrlMatcher {
-    $uri = new Uri($uriPattern);
-    $domains = $uri->getHost() ? [$uri->getHost()] : $domains;
-    $pathPattern = self::createRegex($uri->getPath(), '?');
+    // Add empty schema if needed to ensure parsing.
+    // Paths must start with '/', otherwise it's host.
+    if (!str_starts_with($uriPattern, '/') && !str_contains($uriPattern, '//')) {
+      $uriPattern = "//$uriPattern";
+    }
+    // Contrary to psr parsers, parse_url does not cough on e.g. '//.foo.bar'.
+    $uriParts = parse_url($uriPattern);
+    $host = $uriParts['host'] ?? '';
+    $path = $uriParts['path'] ?? '';
+    $query = $uriParts['query'] ?? '';
+
+    $domains = $host ? [$host] : $domains;
+    $pathPattern = self::createPathRegex($path);
     // Empty key (with or without '=') maps to empty string.
-    parse_str($uri->getQuery(), $queryArray);
-    $createQueryRegexes = fn(string $pattern) => $pattern ?
-      // No '&' separator necessary, query is parsed beforehand.
-      self::createRegex($pattern, '') : NULL;
+    parse_str($query, $queryArray);
+    // No '&' separator necessary, query is parsed beforehand.
+    // If no queryPattern, regex must be NULL.
+    $createQueryRegexes = fn(string $queryPattern) => $queryPattern ?
+      self::createQueryRegex($queryPattern) : NULL;
     $queryPatterns = array_map($createQueryRegexes, $queryArray);
     return new self($domains, $pathPattern, $queryPatterns);
+  }
+
+  protected static function createPathRegex(string $pattern): string {
+    $regexPart = self::createRegex($pattern, '/');
+    if (!$regexPart) {
+      $regexPart = '/?';
+    }
+    /** @noinspection PhpUnnecessaryLocalVariableInspection */
+    $regex = "~^{$regexPart}[?]?[&]?[#]?$~u";
+    return $regex;
+  }
+
+  protected static function createQueryRegex(string $pattern): string {
+    $regexPart = self::createRegex($pattern, '');
+    /** @noinspection PhpUnnecessaryLocalVariableInspection */
+    $regex = "~^{$regexPart}$~u";
+    return $regex;
+  }
+
+  protected static function createRegex(string $pattern, $separator): string {
+    $quotedPattern = preg_quote($pattern, '~');
+    $wildcard = $separator ? "[^{$separator}]+" : '.+';
+    /** @noinspection PhpUnnecessaryLocalVariableInspection */
+    $regexPart = preg_replace('#[{].*?[}]#u', $wildcard, $quotedPattern);
+    return $regexPart;
   }
 
 }

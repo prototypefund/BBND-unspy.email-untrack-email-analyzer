@@ -6,48 +6,60 @@ namespace Geeks4change\UntrackEmailAnalyzer\Utility;
 
 use Geeks4change\UntrackEmailAnalyzer\CnameResolver;
 use Geeks4change\UntrackEmailAnalyzer\Globals;
-use GuzzleHttp\Psr7\Uri;
 use loophp\collection\Collection;
 
 final class UrlMatcher {
 
-  protected CnameResolver $cnameResolver;
+  protected ?CnameResolver $cnameResolver;
 
   /**
    * @param string[] $domains
-   * @param string $pathRegexes
+   * @param ?string $pathRegexes
    * @param string[] $queryPatterns
    */
   protected function __construct(
     public readonly array  $domains,
-    public readonly string $pathRegexes,
+    public readonly ?string $pathRegexes,
     public readonly array  $queryPatterns,
   ) {
     $this->cnameResolver = Globals::get()->getCnameResolver();
   }
 
+  /**
+   * @param string $uriPattern
+   *
+   * @return string
+   */
+  public static function fixUriSchema(string $uriPattern): string {
+    if (!str_starts_with($uriPattern, '/') && !str_contains($uriPattern, '//')) {
+      $uriPattern = "//$uriPattern";
+    }
+    return $uriPattern;
+  }
+
   public function match(string $uriString): bool {
     // Add empty schema if needed to ensure parsing.
-    if (!str_contains($uriString, '//')) {
-      $uriString = "//$uriString";
-    }
+    $uriString = self::fixUriSchema($uriString);
     [$host, $path, $query] = self::parseUrl($uriString);
 
     $domainMatch = $this->hostOrCnameMatchesAnyDomain($host);
     $pathMatch = $this->pathMatchesPattern($path);
     $queryMatch = $this->queryMatchesPattern($query);
     if (Globals::$isDebug) {
-      dump(get_defined_vars() + [$this]);
+      dump(get_defined_vars() + [array_diff_key(get_object_vars($this), ['cnameResolver' => null])]);
     }
     return $domainMatch && $pathMatch && $queryMatch;
   }
 
   protected function hostOrCnameMatchesAnyDomain(string $host): bool {
+    if (!$this->domains) {
+      return true;
+    }
     return boolval(array_filter($this->domains, fn(string $domain) => $this->hostOrCnameMatchesSomeDomain($host, $domain)));
   }
 
   protected function hostOrCnameMatchesSomeDomain(string $host, string $domain): bool {
-    $hostCnames = $this->cnameResolver->getCnameChain($host);
+    $hostCnames = $this->cnameResolver?->getCnameChain($host) ?? [$host];
     return boolval(array_filter($hostCnames, fn(string $hostCname) => $this->hostMatchesSomeDomain($hostCname, $domain)));
   }
 
@@ -62,7 +74,7 @@ final class UrlMatcher {
   }
 
   public function pathMatchesPattern(string $path): bool {
-    return boolval(preg_match($this->pathRegexes, $path));
+    return !$this->pathRegexes || boolval(preg_match($this->pathRegexes, $path));
   }
 
   public function queryMatchesPattern(string $query): bool {
@@ -97,12 +109,15 @@ final class UrlMatcher {
   public static function create(string $uriPattern, array $domains = []): UrlMatcher {
     // Add empty schema if needed to ensure parsing.
     // Paths must start with '/', otherwise it's host.
-    if (!str_starts_with($uriPattern, '/') && !str_contains($uriPattern, '//')) {
-      $uriPattern = "//$uriPattern";
-    }
+    $uriPattern = self::fixUriSchema($uriPattern);
     [$host, $path, $query] = self::parseUrl($uriPattern);
 
-    $domains = $host ? [$host] : $domains;
+    if ($host) {
+      if ($domains) {
+        throw new \UnexpectedValueException('Can only give host or domains.');
+      }
+      $domains = [$host];
+    }
     $pathPattern = self::createPathRegex($path);
     // Empty key (with or without '=') maps to empty string.
     parse_str($query, $queryArray);
@@ -114,7 +129,10 @@ final class UrlMatcher {
     return new self($domains, $pathPattern, $queryPatterns);
   }
 
-  protected static function createPathRegex(string $pattern): string {
+  protected static function createPathRegex(string $pattern): ?string {
+    if (!$pattern) {
+      return null;
+    }
     $regexPart = self::createRegex($pattern, '/');
     if (!$regexPart) {
       $regexPart = '/?';
@@ -135,7 +153,8 @@ final class UrlMatcher {
     $quotedPattern = preg_quote($pattern, '~');
     $wildcard = $separator ? "[^{$separator}]+" : '.+';
     /** @noinspection PhpUnnecessaryLocalVariableInspection */
-    $regexPart = preg_replace('#[{].*?[}]#u', $wildcard, $quotedPattern);
+    // The curly braces are quoted now.
+    $regexPart = preg_replace('#[\\\\][{].*?[\\\\][}]#u', $wildcard, $quotedPattern);
     return $regexPart;
   }
 
@@ -146,6 +165,13 @@ final class UrlMatcher {
     $path = $uriParts['path'] ?? '';
     $query = $uriParts['query'] ?? '';
     return [$host, $path, $query];
+  }
+
+  /**
+   * @param \Geeks4change\UntrackEmailAnalyzer\CnameResolver|null $cnameResolver
+   */
+  public function setCnameResolver(?CnameResolver $cnameResolver): void {
+    $this->cnameResolver = $cnameResolver;
   }
 
 }

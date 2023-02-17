@@ -1,0 +1,2153 @@
+Return-Path: <bounces+20825006-bae0-hpot2212u2=untrack.email@mail.casida.com>
+X-Spam-Checker-Version: SpamAssassin 3.4.4 (2020-01-24) on
+	dd20708.kasserver.com
+X-Original-To: hpot2212u2@untrack.email
+Delivered-To: m0666426@dd20708.kasserver.com
+X-policyd-weight:  NOT_IN_SPAMCOP=-1.5 NOT_IN_IX_MANITU=-1.5 CL_IP_EQ_HELO_IP=-2 (check from: .casida. - helo: .o1363.shared.klaviyomail. - helo-domain: .klaviyomail.)  FROM/MX_MATCHES_NOT_HELO(DOMAIN)=1; rate: -4
+Authentication-Results: dd20708.kasserver.com;
+	dkim=pass (2048-bit key; unprotected) header.d=casida.com header.i=@casida.com header.a=rsa-sha256 header.s=kl header.b=bXKwTW4W;
+	dkim-atps=neutral
+Received: from o1363.shared.klaviyomail.com (o1363.shared.klaviyomail.com [149.72.196.56])
+	by dd20708.kasserver.com (Postfix) with ESMTPS id 892BE18800A8
+	for <hpot2212u2@untrack.email>; Fri, 17 Feb 2023 18:46:14 +0100 (CET)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=casida.com;
+	h=content-type:from:mime-version:subject:list-unsubscribe:to:cc:
+	content-type:from:subject:to;
+	s=kl; bh=m5Nb4SZOscYRsZC4IM9ig2IhlWUrKJvKXiscNBKEV7E=;
+	b=bXKwTW4WcCPPE/Qx2GCqIBsIoCbT2+P6tUgGV5Qs7jklxQuyWbNcS+rZXkm7+twaf+U0
+	tDeABNIle64Zs7T1J5vcLCVxBhwcyqWBZOYnfcgjYAS1TL0w6pQZpYnVGsvvBnU/SKp0cZ
+	jgNUrHsNEHylqA94Z7jDWgN89NfAAySpKj6rtm+NBa6DZ3uvqoqRfJ/z6M7DZ8Wvh9uiys
+	NjdD1+zvwANJUx65FgFR/fKjCWpKnCTvbtQVxOuRsZUT0YLHD/IdBRKsp4hav6y6kyD2G+
+	hi73UFgyj36R/Ag8unkYnS9Skv9C5yej5ity7d5yrGoFJLTJBG924IbubFRdGBpw==
+Received: by filterdrecv-7765ff4f7d-qqvbf with SMTP id filterdrecv-7765ff4f7d-qqvbf-1-63EFBD64-29
+        2023-02-17 17:46:12.627110274 +0000 UTC m=+600325.575818012
+Received: from MjA4MjUwMDY (unknown)
+	by geopod-ismtpd-2-0 (SG) with HTTP
+	id UWbuX1FXTEm-hx8jo5bZCA
+	Fri, 17 Feb 2023 17:46:12.515 +0000 (UTC)
+Content-Type: multipart/alternative; boundary=798f9494094d4464bae64caf6a044bc215f22e0e68321fa507eea2643751
+Date: Fri, 17 Feb 2023 17:46:12 +0000 (UTC)
+From: Alexander von Casida <info@casida.de>
+Mime-Version: 1.0
+Message-ID: <UWbuX1FXTEm-hx8jo5bZCA@geopod-ismtpd-2-0>
+Subject: Herzlich Willkommen zum Casida Newsletter
+X-Kmail-Message: TjNfnE
+X-Kmail-Account: UmQHWZ
+X-Kmail-Relay: [1548072.krelaymail.com]:587
+List-Unsubscribe: 
+ =?us-ascii?Q?=3Chttps=3A=2F=2Fmanage=2Ekmail-lists=2Ecom=2Fsubscriptions=2Funsubscribe=3Fa=3DUm?=
+ =?us-ascii?Q?QHWZ&c=3D01GSG7PE3RX493KW60E3011DMQ&k=3D4ae?=
+ =?us-ascii?Q?8a2ccabe369619d37d39090d47570&g=3DXCidzR&?=
+ =?us-ascii?Q?m=3DTjNfnE&r=3D5Sjp49Q=3E?=
+X-Kmail-Flow: XxF52f
+X-Kmail-Ops: 01GSG7PE3RX493KW60E3011DMQ
+X-SG-EID: 
+ =?us-ascii?Q?pQvG=2FfOGssFJDqjVGiadQnohzO0Fp96utJNDk0d3qNpyugJsiWwnnq9oDu8S9E?=
+ =?us-ascii?Q?mRwpAoKHWljefbDOkIttzy=2Fm3DijZvadPqXB81L?=
+ =?us-ascii?Q?8=2FirRnD=2F50u6KNEdHtQO61FaBWCqlJ9d6fSe9Hj?=
+ =?us-ascii?Q?aV75P40BXdLukcqK34VVb246R79eYkhaDedtqWS?=
+ =?us-ascii?Q?CbaZGpl6uTRCMBYog++=2FpKEN88=2FMtpQWmbjhP97?=
+ =?us-ascii?Q?0VMow46ZIVHoGHoPjYJvV0G0J4hBVsJX12QwRm?=
+X-SG-ID: 
+ =?us-ascii?Q?N2C25iY2uzGMFz6rgvQsb3WdckyvbC2eFaxvdDHn8D1nndBBW0fUClUlZF2fTQ?=
+ =?us-ascii?Q?6KNEga6S9FTU0VTsuZAjQYihfiajdQemtrzyzWV?=
+ =?us-ascii?Q?5nI5uguLWxL8IYWOTMYyHJpy3OeqfTP3QdVq=2FAN?=
+ =?us-ascii?Q?owVtOB93jBD+zMBsyA8+tWfH3w8KAWLC4v=2FHtGg?=
+ =?us-ascii?Q?FI+ajq9QE3xyH?=
+To: hpot2212u2@untrack.email
+X-Entity-ID: aFraYAyz0tevTEZZJQThNA==
+X-Spamd-Bar: +
+X-KasLoop: m0666426
+
+--798f9494094d4464bae64caf6a044bc215f22e0e68321fa507eea2643751
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/plain; charset=utf-8
+Mime-Version: 1.0
+
+NAT=C3=9CRLICHE GESUNDHEITSPRODUKTE - AUS DER APOTHEKE
+
+[Logo](https://casida.com/de/)
+
+[NEU](https://casida.com/de/produkte-uebersicht/?orderby=3Ddate)
+[GESUNDHEIT](https://casida.com/de/produkt-kategorie/gesundheit/)
+[KOSMETIK](https://casida.com/de/produkt-kategorie/kosmetik/)
+
+WILLKOMMEN BEI CASIDA!=F0=9F=8E=89
+
+[<h2 style=3D"text-align: center;"><span style=3D"font-size:28px;"><span st=
+yle=3D"color:#000000;"><span style=3D"font-family:century gothic,applegothi=
+c,sans-serif;"><strong>WELCOME TO Casida GmbH<span class=3D"iconos" id=3D"a=
+693" title=3D"Wrapped Present">!<span class=3D"iconos" id=3D"a695" title=3D=
+"Party Popper">=F0=9F=8E=89</span></span><span class=3D"iconos" id=3D"a22" =
+title=3D"Crying Face"></span></strong></span></span></span></h2>](https://c=
+asida.com/de/)
+
+Hallo=C2=A0liebe=C2=A0Casida-Kundin/=C2=A0lieber Casida-Kunde,
+
+herzlich willkommen zum Casida Newsletter!=C2=A0Als kleines Willkommensgesc=
+henk erh=C3=A4ltst Du 10% Sofortrabatt*=C2=A0und unseren Ratgeber "=C3=84th=
+erische =C3=96le"=C2=A0als gratis eBook.
+
+https://casida.com/wp-content/uploads/2021/01/Casida-Ratgeber-Aetherische-O=
+ele-klein.pdf
+
+[eBook HIER gratis downloaden](https://casida.com/wp-content/uploads/2021/0=
+1/Casida-Ratgeber-Aetherische-Oele-klein.pdf)
+
+L=C3=B6se gleich Deinen=C2=A010% Willkommensrabatt* ein - einfach den Rabat=
+tcode im Kassenbereich=C2=A0auf www.casida.de eingeben:
+
+=C2=A0
+
+=C2=A0
+
+Dein Rabattcode*:=C2=A0CFU2124
+
+*Der Code ist nur 7 Tage g=C3=BCltig.
+Ohne Mindestbestellwert.
+Nicht auf bereits rabattierte Artikel, Sets, Geschenkgutscheine und Selbstt=
+ests anwendbar.
+=E2=80=8BNur f=C3=BCr Privatkunden.
+
+[Jetzt Gutschein einl=C3=B6sen >](https://casida.com/de/)
+
+BELIEBTESTE PRODUKTE
+
+[Image of Engelwurzbalsam Baby & Kinder](https://casida.com/de/produkte/eng=
+elwurzbalsam/)
+
+Engelwurzbalsam Baby & Kinder
+
+=E2=82=AC 11,45
+
+[Image of Epsom Salz Vitalbad](https://casida.com/de/produkte/epsom-salz-vi=
+talbad/)
+
+Epsom Salz Vitalbad
+
+=E2=82=AC 12,42
+
+[Image of Nagel=C3=B6l Repair & Protect](https://casida.com/de/produkte/nag=
+eloel-repair-protect/)
+
+Nagel=C3=B6l Repair & Protect
+
+=E2=82=AC 21,82
+
+[Image of Retinol Serum mit Hyaluron](https://casida.com/de/produkte/retino=
+l-serum/)
+
+Retinol Serum mit Hyaluron
+
+=E2=82=AC 24,95
+
+[Image of Engelwurzbalsam & Thymianbalsam Myrte Kinder Set](https://casida.=
+com/de/produkte/engelwurzbalsam-thymian-kinder-set/)
+
+Engelwurzbalsam & Thymianbalsam Myrte Kinder Set
+
+=E2=82=AC 19,95
+
+[Image of Lavendel=C3=B6l](https://casida.com/de/produkte/lavendeloel/)
+
+Lavendel=C3=B6l
+
+=E2=82=AC 9,95
+
+[Mehr nat=C3=BCrliche Gesundheitsprodukte >](https://casida.com/de/produkte=
+-uebersicht/)
+
+[Facebook](https://www.facebook.com/CasidaDE/)
+[Instagram](https://www.instagram.com/casida_DE/)
+[Youtube](https://www.youtube.com/channel/UCco8z1l6zT6wdI38-zLBKwg)
+[Pinterest](https://de.pinterest.com/casida0090/)
+
+KONTAKT & INFORMATIONEN
+
+Tel. : [+ 49 (0) 3761 - 7608015](tel:%20+%2049%20(0)%203761%20-%207608015)
+E-Mail : [info@casida.de](mailto:%20info@casida.de)
+
+[Kontakt](https://casida.com/de/kontakt/) | [Casida Partner werden](https:/=
+/casida.com/de/casida-partnerprogramm/) | [=C3=9Cber Casida](https://casida=
+.com/de/ueber-uns/)[Casida Partner werden](https://casida.com/de/casida-par=
+tnerprogramm/)[Kontakt](https://casida.com/de/kontakt/)
+
+[Payments]
+
+Du m=C3=B6chtest=C2=A0keine E-Mails mehr erhalten? Klicke=C2=A0[HIER](https=
+://manage.kmail-lists.com/subscriptions/unsubscribe?a=3DUmQHWZ&c=3D01GSG7PE=
+3RX493KW60E3011DMQ&k=3D4ae8a2ccabe369619d37d39090d47570&g=3DXCidzR&m=3DTjNf=
+nE&r=3D5Sjp49Q), um dich abzumelden. Casida GmbH Br=C3=BCderstra=C3=9Fe 33 =
+08412 Werdau, Deutschland
+--798f9494094d4464bae64caf6a044bc215f22e0e68321fa507eea2643751
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/html; charset=utf-8
+Mime-Version: 1.0
+
+<!DOCTYPE html><html xmlns=3D"http://www.w3.org/1999/xhtml" xmlns:o=3D"urn:=
+schemas-microsoft-com:office:office" xmlns:v=3D"urn:schemas-microsoft-com:v=
+ml"><head>
+<title>
+</title>
+<!--[if !mso]><!-->
+<meta content=3D"IE=3Dedge" http-equiv=3D"X-UA-Compatible">
+<!--<![endif]-->
+<meta content=3D"text/html; charset=3Dutf-8" http-equiv=3D"Content-Type">
+<meta content=3D"width=3Ddevice-width, initial-scale=3D1" name=3D"viewport"=
+>
+<!--[if mso]>
+        <noscript>
+        <xml>
+        <o:OfficeDocumentSettings>
+          <o:AllowPNG/>
+          <o:PixelsPerInch>96</o:PixelsPerInch>
+        </o:OfficeDocumentSettings>
+        </xml>
+        </noscript>
+        <![endif]-->
+<!--[if lte mso 11]>
+        <style type=3D"text/css" data-inliner=3D"ignore">
+          .mj-outlook-group-fix { width:100% !important; }
+        </style>
+        <![endif]-->
+<!--[if !mso]><!--><!--<![endif]-->
+<style>a:link {color:#000;font-weight:normal;text-decoration:underline;font=
+-style:normal}
+a:visited {color:#000;font-weight:normal;text-decoration:underline;font-sty=
+le:normal}
+a:active {color:#000;font-weight:normal;text-decoration:underline;font-styl=
+e:normal}
+a:hover {color:#000;font-weight:normal;text-decoration:underline;font-style=
+:normal}</style><style>@import url(https://static-forms.klaviyo.com/fonts/a=
+pi/v1/UmQHWZ/custom_fonts.css);
+#outlook a {
+    padding: 0
+    }
+body {
+    margin: 0;
+    padding: 0;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%
+    }
+table, td {
+    border-collapse: collapse;
+    mso-table-lspace: 0;
+    mso-table-rspace: 0
+    }
+img {
+    border: 0;
+    height: auto;
+    line-height: 100%;
+    outline: none;
+    text-decoration: none;
+    -ms-interpolation-mode: bicubic
+    }
+p {
+    display: block;
+    margin: 13px 0
+    }
+@media only screen and (min-width: 480px) {
+    .mj-column-per-100 {
+        width: 100% !important;
+        max-width: 100%
+        }
+    }
+.moz-text-html .mj-column-per-100 {
+    width: 100% !important;
+    max-width: 100%
+    }
+@media only screen and (max-width: 480px) {
+    .kl-text {
+        padding-right: 18px !important;
+        padding-left: 18px !important
+        }
+    }
+.kl-text-table-layout > table {
+    table-layout: fixed
+    }
+.kl-text-table-layout > table > tbody > tr > td > table {
+    table-layout: fixed
+    }
+@media only screen and (max-width: 480px) {
+    .component-wrapper .mob-no-spc {
+        padding-left: 0 !important;
+        padding-right: 0 !important
+        }
+    }
+@media only screen and (max-width: 480px) {
+    td.kl-img-base-auto-width {
+        width: 100% !important
+        }
+    }
+.hlb-subblk td {
+    word-break: normal
+    }
+@media only screen and (max-width: 480px) {
+    .hlb-wrapper .hlb-block-settings-content {
+        padding: 9px !important
+        }
+    .hlb-logo {
+        padding-bottom: 9px !important
+        }
+    .r2-tbl {
+        width: 100%
+        }
+    .r2-tbl .lnk {
+        width: 100%
+        }
+    .r2-tbl .hlb-subblk:last-child {
+        padding-right: 0 !important
+        }
+    .r2-tbl .hlb-subblk {
+        padding-right: 10px !important
+        }
+    .kl-hlb-stack {
+        display: block !important;
+        width: 100% !important;
+        padding-right: 0 !important
+        }
+    .kl-hlb-stack.vspc {
+        margin-bottom: 9px
+        }
+    .kl-hlb-wrap {
+        display: inline-block !important;
+        width: auto !important
+        }
+    .kl-hlb-no-wrap {
+        display: table-cell !important
+        }
+    .kl-hlb-wrap.nospc.nospc {
+        padding-right: 0 !important
+        }
+    }
+.kl-button a {
+    display: block !important
+    }
+@media only screen and (max-width: 480px) {
+    .kl-product-cell-stack {
+        display: block !important;
+        width: 100% !important
+        }
+    }
+@media screen and (max-width: 480px) {
+    .kl-sl-stk {
+        display: block !important;
+        width: 100% !important;
+        padding: 0 0 9px !important;
+        text-align: center !important
+        }
+    .kl-sl-stk.lbls {
+        padding: 0 !important
+        }
+    .kl-sl-stk.spcblk {
+        display: none !important
+        }
+    }
+img {
+    border: 0;
+    height: auto;
+    line-height: 100%;
+    outline: none;
+    text-decoration: none;
+    max-width: 100%
+    }
+.root-container {
+    background-repeat: repeat !important;
+    background-size: auto !important;
+    background-position: left top !important
+    }
+.root-container-spacing {
+    padding-top: 10px !important;
+    padding-bottom: 20px !important;
+    font-size: 0 !important
+    }
+.content-padding {
+    padding-left: 0 !important;
+    padding-right: 0 !important
+    }
+.content-padding.first {
+    padding-top: 0 !important
+    }
+.content-padding.last {
+    padding-bottom: 0 !important
+    }
+@media only screen and (max-width: 480px) {
+    td.mobile-only {
+        display: table-cell !important
+        }
+    div.mobile-only {
+        display: block !important
+        }
+    table.mobile-only {
+        display: table !important
+        }
+    .desktop-only {
+        display: none !important
+        }
+    }
+@media only screen and (max-width: 480px) {
+    .table-mobile-only {
+        display: table-cell !important;
+        max-height: none !important
+        }
+    .table-mobile-only.block {
+        display: block !important
+        }
+    .table-mobile-only.inline-block {
+        display: inline-block !important
+        }
+    .table-desktop-only {
+        max-height: 0 !important;
+        display: none !important;
+        mso-hide: all !important;
+        overflow: hidden !important
+        }
+    }
+.kl-text div {
+    margin: 0
+    }
+p {
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-bottom: 1em
+    }
+@media only screen and (max-width: 480px) {
+    .kl-text div, .kl-table-subblock div, .kl-split-subblock div {
+        font-size: 14px !important;
+        line-height: 1.3 !important
+        }
+    }
+h1 {
+    color: #222;
+    font-family: "Helvetica Neue", Arial;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: normal;
+    line-height: 1.1;
+    letter-spacing: 0;
+    margin: 0;
+    margin-bottom: 20px;
+    text-align: left
+    }
+@media only screen and (max-width: 480px) {
+    h1 {
+        font-size: 40px !important;
+        line-height: 1.3 !important
+        }
+    }
+h2 {
+    color: #222;
+    font-family: "Helvetica Neue", Arial;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: bold;
+    line-height: 1.1;
+    letter-spacing: 0;
+    margin: 0;
+    margin-bottom: 16px;
+    text-align: left
+    }
+@media only screen and (max-width: 480px) {
+    h2 {
+        font-size: 32px !important;
+        line-height: 1.3 !important
+        }
+    }
+h3 {
+    color: #222;
+    font-family: "Helvetica Neue", Arial;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: bold;
+    line-height: 1.1;
+    letter-spacing: 0;
+    margin: 0;
+    margin-bottom: 12px;
+    text-align: left
+    }
+@media only screen and (max-width: 480px) {
+    h3 {
+        font-size: 24px !important;
+        line-height: 1.3 !important
+        }
+    }
+h4 {
+    color: #222;
+    font-family: "Helvetica Neue", Arial;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.1;
+    letter-spacing: 0;
+    margin: 0;
+    margin-bottom: 9px;
+    text-align: left
+    }
+@media only screen and (max-width: 480px) {
+    h4 {
+        font-size: 18px !important;
+        line-height: 1.3 !important
+        }
+    }
+@media only screen and (max-width: 480px) {
+    .root-container {
+        width: 100% !important
+        }
+    .root-container-spacing {
+        padding: 10px !important
+        }
+    .content-padding {
+        padding-left: 0 !important;
+        padding-right: 0 !important
+        }
+    .content-padding.first {
+        padding-top: 0 !important
+        }
+    .content-padding.last {
+        padding-bottom: 0 !important
+        }
+    .component-wrapper {
+        padding-left: 0 !important;
+        padding-right: 0 !important
+        }
+    }</style></head>
+<body style=3D"word-spacing:normal;background-color:#eeeeee;">
+<div style=3D"display:none;font-size:1px;color:#ffffff;line-height:1px;max-=
+height:0px;max-width:0px;opacity:0;overflow:hidden;">
+      Dein Geschenk: 10% Rabatt und GRATIS Ratgeber =C3=84therische =C3=96l=
+e=CD=8F =E2=80=8C &nbsp; =CD=8F =E2=80=8C &nbsp; =CD=8F =E2=80=8C &nbsp; =
+=CD=8F =E2=80=8C &nbsp; =CD=8F =E2=80=8C &nbsp; =CD=8F =E2=80=8C &nbsp; =CD=
+=8F =E2=80=8C &nbsp; =CD=8F =E2=80=8C &nbsp; =CD=8F =E2=80=8C &nbsp; =CD=8F=
+ =E2=80=8C &nbsp; =CD=8F =E2=80=8C &nbsp; =CD=8F =E2=80=8C &nbsp; =CD=8F =
+=E2=80=8C &nbsp; =CD=8F =E2=80=8C &nbsp; =CD=8F =E2=80=8C &nbsp; =CD=8F =E2=
+=80=8C &nbsp; =CD=8F =E2=80=8C &nbsp; =CD=8F =E2=80=8C &nbsp; =CD=8F =E2=80=
+=8C &nbsp; =CD=8F =E2=80=8C &nbsp; =CD=8F =E2=80=8C &nbsp; =CD=8F =E2=80=8C=
+ &nbsp; =CD=8F =E2=80=8C &nbsp; =CD=8F =E2=80=8C &nbsp; =CD=8F =E2=80=8C &n=
+bsp; =CD=8F =E2=80=8C &nbsp; =CD=8F =E2=80=8C &nbsp; =CD=8F =E2=80=8C &nbsp=
+; =CD=8F =E2=80=8C &nbsp; =CD=8F =E2=80=8C &nbsp; =CD=8F =E2=80=8C &nbsp; =
+=CD=8F =E2=80=8C &nbsp; =CD=8F =E2=80=8C &nbsp; =CD=8F =E2=80=8C &nbsp; =CD=
+=8F =E2=80=8C &nbsp; =CD=8F =E2=80=8C &nbsp; =CD=8F =E2=80=8C &nbsp; =CD=8F=
+ =E2=80=8C &nbsp; =CD=8F =E2=80=8C &nbsp; =CD=8F =E2=80=8C &nbsp; =CD=8F =
+=E2=80=8C &nbsp; =CD=8F =E2=80=8C &nbsp; =CD=8F =E2=80=8C &nbsp; =CD=8F =E2=
+=80=8C &nbsp; =CD=8F =E2=80=8C &nbsp; =CD=8F =E2=80=8C &nbsp; =CD=8F =E2=80=
+=8C &nbsp; =CD=8F =E2=80=8C &nbsp; =CD=8F =E2=80=8C &nbsp; =CD=8F =E2=80=8C=
+ &nbsp; =CD=8F =E2=80=8C &nbsp; =CD=8F =E2=80=8C &nbsp; =CD=8F =E2=80=8C &n=
+bsp; =CD=8F =E2=80=8C &nbsp; =CD=8F =E2=80=8C &nbsp; =CD=8F =E2=80=8C &nbsp=
+; =CD=8F =E2=80=8C &nbsp; =CD=8F =E2=80=8C &nbsp; =CD=8F =E2=80=8C &nbsp; =
+=CD=8F =E2=80=8C &nbsp; =CD=8F =E2=80=8C &nbsp; =CD=8F =E2=80=8C &nbsp; =CD=
+=8F =E2=80=8C &nbsp; =CD=8F =E2=80=8C &nbsp; =CD=8F =E2=80=8C &nbsp; =CD=8F=
+ =E2=80=8C &nbsp; =CD=8F =E2=80=8C &nbsp; =CD=8F =E2=80=8C &nbsp; =CD=8F =
+=E2=80=8C &nbsp; =CD=8F =E2=80=8C &nbsp; =CD=8F =E2=80=8C &nbsp; =CD=8F =E2=
+=80=8C &nbsp; =CD=8F =E2=80=8C &nbsp; =CD=8F =E2=80=8C &nbsp; =CD=8F =E2=80=
+=8C &nbsp; =CD=8F =E2=80=8C &nbsp; =CD=8F =E2=80=8C &nbsp; =CD=8F =E2=80=8C=
+ &nbsp; =CD=8F =E2=80=8C &nbsp; =CD=8F =E2=80=8C &nbsp; =CD=8F =E2=80=8C &n=
+bsp; =CD=8F =E2=80=8C &nbsp; =CD=8F =E2=80=8C &nbsp; =CD=8F =E2=80=8C &nbsp=
+; =CD=8F =E2=80=8C &nbsp; =CD=8F =E2=80=8C &nbsp; =CD=8F =E2=80=8C &nbsp; =
+=CD=8F =E2=80=8C &nbsp; =CD=8F =E2=80=8C &nbsp; =CD=8F =E2=80=8C &nbsp; =CD=
+=8F =E2=80=8C &nbsp; =CD=8F =E2=80=8C &nbsp; =CD=8F =E2=80=8C &nbsp; =CD=8F=
+ =E2=80=8C &nbsp; =CD=8F =E2=80=8C &nbsp; =CD=8F =E2=80=8C &nbsp; =CD=8F =
+=E2=80=8C &nbsp; =CD=8F =E2=80=8C &nbsp; =CD=8F =E2=80=8C &nbsp; =CD=8F =E2=
+=80=8C &nbsp; =CD=8F =E2=80=8C &nbsp; =CD=8F =E2=80=8C &nbsp; =CD=8F =E2=80=
+=8C &nbsp; =CD=8F =E2=80=8C &nbsp; =CD=8F =E2=80=8C &nbsp; =CD=8F =E2=80=8C=
+ &nbsp; =CD=8F =E2=80=8C &nbsp; =CD=8F =E2=80=8C &nbsp; =CD=8F =E2=80=8C &n=
+bsp; =CD=8F =E2=80=8C &nbsp; =CD=8F =E2=80=8C &nbsp; =CD=8F =E2=80=8C &nbsp=
+; =CD=8F =E2=80=8C &nbsp; =CD=8F =E2=80=8C &nbsp; =CD=8F =E2=80=8C &nbsp; =
+=CD=8F =E2=80=8C &nbsp; =CD=8F =E2=80=8C &nbsp; =CD=8F =E2=80=8C &nbsp; =CD=
+=8F =E2=80=8C &nbsp; =CD=8F =E2=80=8C &nbsp; =CD=8F =E2=80=8C &nbsp; =CD=8F=
+ =E2=80=8C &nbsp; =CD=8F =E2=80=8C &nbsp; =CD=8F =E2=80=8C &nbsp; =CD=8F =
+=E2=80=8C &nbsp; =CD=8F =E2=80=8C &nbsp; =CD=8F =E2=80=8C &nbsp; =CD=8F =E2=
+=80=8C &nbsp; =CD=8F =E2=80=8C &nbsp; =CD=8F =E2=80=8C &nbsp; =CD=8F =E2=80=
+=8C &nbsp; =CD=8F =E2=80=8C &nbsp; =CD=8F =E2=80=8C &nbsp; =CD=8F =E2=80=8C=
+ &nbsp; =CD=8F =E2=80=8C &nbsp; =CD=8F =E2=80=8C &nbsp; =CD=8F =E2=80=8C &n=
+bsp; =CD=8F =E2=80=8C &nbsp; =CD=8F =E2=80=8C &nbsp; =CD=8F =E2=80=8C &nbsp=
+;=20
+    </div>
+<div class=3D"root-container" id=3D"bodyTable" style=3D"background-color:#e=
+eeeee;">
+<div class=3D"root-container-spacing">
+<table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" cl=
+ass=3D"kl-section" role=3D"presentation" style=3D"width:100%;">
+<tbody>
+<tr>
+<td>
+<!--[if mso | IE]><table align=3D"center" border=3D"0" cellpadding=3D"0" ce=
+llspacing=3D"0" class=3D"kl-section-outlook" style=3D"width:600px;" width=
+=3D"600" ><tr><td style=3D"line-height:0px;font-size:0px;mso-line-height-ru=
+le:exactly;"><![endif]-->
+<div style=3D"margin:0px auto;max-width:600px;">
+<table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" ro=
+le=3D"presentation" style=3D"width:100%;">
+<tbody>
+<tr>
+<td style=3D"direction:ltr;font-size:0px;padding:0px;text-align:center;">
+<!--[if mso | IE]><table role=3D"presentation" border=3D"0" cellpadding=3D"=
+0" cellspacing=3D"0"><table align=3D"center" border=3D"0" cellpadding=3D"0"=
+ cellspacing=3D"0" class=3D"" style=3D"width:600px;" width=3D"600" bgcolor=
+=3D"#ffffff" ><tr><td style=3D"line-height:0px;font-size:0px;mso-line-heigh=
+t-rule:exactly;"><![endif]-->
+<div style=3D"background:#ffffff;background-color:#ffffff;margin:0px auto;b=
+order-radius:0px 0px 0px 0px;max-width:600px;">
+<table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" ro=
+le=3D"presentation" style=3D"background:#ffffff;background-color:#ffffff;wi=
+dth:100%;border-radius:0px 0px 0px 0px;">
+<tbody>
+<tr>
+<td style=3D"direction:ltr;font-size:0px;padding:20px 0;padding-bottom:0px;=
+padding-left:0px;padding-right:0px;padding-top:0px;text-align:center;">
+<!--[if mso | IE]><table role=3D"presentation" border=3D"0" cellpadding=3D"=
+0" cellspacing=3D"0"><![endif]-->
+<div class=3D"content-padding first last">
+<!--[if mso | IE]><table align=3D"center" border=3D"0" cellpadding=3D"0" ce=
+llspacing=3D"0" class=3D"kl-row-outlook" style=3D"width:600px;" width=3D"60=
+0" ><tr><td style=3D"line-height:0px;font-size:0px;mso-line-height-rule:exa=
+ctly;"><![endif]-->
+<div class=3D"kl-row" style=3D"margin:0px auto;max-width:600px;">
+<table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" ro=
+le=3D"presentation" style=3D"width:100%;">
+<tbody>
+<tr>
+<td style=3D"direction:ltr;font-size:0px;padding:0;text-align:center;">
+<!--[if mso | IE]><table role=3D"presentation" border=3D"0" cellpadding=3D"=
+0" cellspacing=3D"0"><tr><td class=3D"kl-column-outlook" style=3D"vertical-=
+align:top;width:600px;" ><![endif]-->
+<div class=3D"mj-column-per-100 mj-outlook-group-fix kl-column" style=3D"fo=
+nt-size:0px;text-align:left;direction:ltr;display:inline-block;vertical-ali=
+gn:top;width:100%;">
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentatio=
+n" style=3D"vertical-align:top;table-layout:fixed;" width=3D"100%">
+<tbody>
+<tr>
+<td style=3D"font-size:0px;word-break:break-word;">
+<div class=3D"mj-column-per-100 mj-outlook-group-fix component-wrapper kl-t=
+ext-table-layout" style=3D"font-size:0px;text-align:left;direction:ltr;disp=
+lay:inline-block;vertical-align:top;width:100%;">
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentatio=
+n" style=3D"table-layout:fixed;" width=3D"100%">
+<tbody>
+<tr>
+<td class=3D"" style=3D"background-color:#91C24F;vertical-align:top;padding=
+-top:0px;padding-right:0px;padding-bottom:0px;padding-left:0px;">
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentatio=
+n" style=3D"" width=3D"100%">
+<tbody>
+<tr>
+<td align=3D"left" class=3D"kl-text" style=3D"font-size:0px;padding:0px;pad=
+ding-top:9px;padding-right:18px;padding-bottom:9px;padding-left:18px;word-b=
+reak:break-word;">
+<div style=3D"font-family:Arial;font-size:14px;font-style:normal;font-weigh=
+t:400;letter-spacing:0px;line-height:1.3;text-align:left;color:#ffffff;"><p=
+ style=3D"padding-bottom:0; text-align:center"><strong style=3D"text-align:=
+ center;"><span style=3D"font-family: &quot;century gothic&quot;, applegoth=
+ic, sans-serif;"><span style=3D"font-size: 12px;">NAT=C3=9CRLICHE GESUNDHEI=
+TSPRODUKTE - AUS DER APOTHEKE</span></span></strong></p></div>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</td>
+</tr>
+<tr>
+<td align=3D"center" style=3D"font-size:0px;word-break:break-word;">
+<div class=3D"mj-column-per-100 mj-outlook-group-fix component-wrapper" sty=
+le=3D"font-size:0px;text-align:left;direction:ltr;display:inline-block;vert=
+ical-align:top;width:100%;">
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentatio=
+n" style=3D"table-layout:fixed;" width=3D"100%">
+<tbody>
+<tr>
+<td class=3D"" style=3D"background-color:#ffffff;vertical-align:top;padding=
+-top:5px;padding-right:0px;padding-bottom:5px;padding-left:0px;">
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentatio=
+n" style=3D"" width=3D"100%">
+<tbody>
+<tr>
+<td align=3D"center" class=3D"kl-image kl-image-177920" style=3D"font-size:=
+0px;word-break:break-word;">
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"border-col=
+lapse:collapse;border-spacing:0px;">
+<tbody>
+<tr>
+<td class=3D"" style=3D"width:160px;border:0;padding:0px 0px 0px 0px;" vali=
+gn=3D"top">
+<a style=3D"color:#000; font-style:normal; font-weight:normal; text-decorat=
+ion:underline" href=3D"https://trk.klclick1.com/ls/click?upn=3DYb5GCmH5NAN8=
+hwB7qdPPzs7j66wBDcoiqCkgwZJ6Q3mjusPeLjFScEe5Fi4OcrZ-2Fkz-2Bl-2BbuGf-2FB9zrq=
+n5yjNRuSBtV0z5yOa-2FNCTiUHT34wcPsdR50mpZnJFKoHxhOG5TxyMdUqBVJh-2FcIPhylm9Jt=
+NvCI0mmJ1Dfwfy5PvJkTA2Spp2tO2AFGuIqQ4X0975DTG7_jGBhewFDuaYzBogJSwKTxRFJegVf=
+Yab6FzNQqcpei7-2B6MYizum0tjmpLydjV6p8JmxTcDEBqGhC0wBnEmmAZXT3zftRSuRJE51PFn=
+x3FW6jMllXmphwcnGbNvoAZvDShsNpZxH-2Bu0wkUM8pHo8WUZFVxYF3tmcPSgKIJS9v-2FdPfH=
+HHxOWX3HwIEhEO240uRq4BKL5UHCK7KYnipo-2FJcG6IbWdyKayLxOErbn6MVSjlJ-2BDqiKqmu=
+5Z0bGAeNtoCegk9ZtXBZ1y0jv-2BgJDQHsHs0AoLTwW-2ByZJF5WUdFSRN7ZQx8Pd2K5jJ9Eflw=
+CuKY1-2FEldZegDndn0Uer2O00yHQUDT7QHAFjsdLsF2BDmjHLCcSO1Nb0pPl7-2FmhMLDZ-2B7=
+8XaBT47guHOo0-2BoIAWoPzjw-3D-3D">
+<img alt=3D"Logo" src=3D"https://d3k81ch9hvuctc.cloudfront.net/company/UmQH=
+WZ/images/8e4d6c72-6324-4f27-9922-3d8a72c1d186.jpeg" style=3D"display:block=
+;outline:none;text-decoration:none;height:auto;width:100%;font-size:13px;" =
+title=3D"Logo" width=3D"160">
+</a>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</td>
+</tr>
+<tr>
+<td style=3D"font-size:0px;word-break:break-word;" vertical-align=3D"middle=
+">
+<div class=3D"mj-column-per-100 mj-outlook-group-fix component-wrapper hlb-=
+wrapper" style=3D"font-size:0px;text-align:left;direction:ltr;display:inlin=
+e-block;vertical-align:top;width:100%;">
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentatio=
+n" style=3D"table-layout:fixed;" width=3D"100%">
+<tbody>
+<tr>
+<td class=3D"hlb-block-settings-content" style=3D"vertical-align:top;paddin=
+g-top:5px;padding-right:14px;padding-bottom:5px;padding-left:14px;">
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentatio=
+n" style=3D"" width=3D"100%">
+<tbody>
+<tr>
+<td align=3D"top" class=3D"kl-header-link-bar" style=3D"font-size:0px;paddi=
+ng:0px 0px 0px 0px;word-break:break-word;">
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"color:#000=
+000;font-family:Ubuntu, Helvetica, Arial, sans-serif;font-size:13px;line-he=
+ight:22px;table-layout:auto;width:100%;border:0;" width=3D"100%">
+<tbody>
+<tr>
+<td>
+<table align=3D"center" cellpadding=3D"0" cellspacing=3D"0" class=3D"r2-tbl=
+" style=3D"table-layout:fixed;">
+<tbody><tr style=3D"text-align:center;">
+<td align=3D"center" class=3D"kl-hlb-no-wrap hlb-subblk" style=3D"display:i=
+nline-block;padding-right:0px;" valign=3D"middle">
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" class=3D"lnk" style=
+=3D"border-collapse:separate;line-height:100%;">
+<tbody><tr>
+<td align=3D"center" bgcolor=3D"transparent" role=3D"presentation" style=3D=
+"border:none;border-radius:0px;cursor:auto;font-style:normal;mso-padding-al=
+t:6px 10px 6px 10px;background:transparent;" valign=3D"middle">
+<a style=3D"color:#333; font-style:normal; font-weight:bold; text-decoratio=
+n:none; display:inline-block; background:transparent; font-family:Century G=
+othic, AppleGothic, Arial; font-size:14px; line-height:100%; letter-spacing=
+:0; margin:0; text-transform:none; padding:6px 10px 6px 10px; mso-padding-a=
+lt:0; border-radius:0" target=3D"_blank" href=3D"https://trk.klclick1.com/l=
+s/click?upn=3DYb5GCmH5NAN8hwB7qdPPzn89xFEMebWrHwP4jWjPmv9CyGuqh4y67u2tvrzFw=
+zfuHY-2BJxvi4Pgbub7O1JzphrjAS3jERHJFE4XVoVyTefgjJyPEPP-2BlUtP0uSF1TvQA51pWf=
+QbXEOeW3xYwrp-2FmbwFPNSot8B2b6iXc4z1iXOP9nDjCprqd-2BMU-2FlqqVeS96jqoR5O-2Bb=
+mL-2BwjPBbBYWhS-2BMuQSjvupOcIquXNpic-2BUh4-3DHy-e_jGBhewFDuaYzBogJSwKTxRFJe=
+gVfYab6FzNQqcpei7-2B6MYizum0tjmpLydjV6p8JmxTcDEBqGhC0wBnEmmAZXT3zftRSuRJE51=
+PFnx3FW6jMllXmphwcnGbNvoAZvDShsNpZxH-2Bu0wkUM8pHo8WUZFVxYF3tmcPSgKIJS9v-2Fd=
+PfHHHxOWX3HwIEhEO240uRq4BKL5UHCK7KYnipo-2FJcG6PCkZaWXjdPzyQJOA6t38FzsUe3XQy=
+i1MizUhUAYEAQcrtGhPURHeKLej1ommGgG5wnT0OlH9nOol4hpOKDlB3rjd9JXimCKqPY7YRIwp=
+GKCTG8OQpvpLnwwoUAezwDXWXb6d-2FEcfCn0uDcvsDDzyILIGD2Zh4-2Feq1ts-2BKro9nMR4V=
+5TPy5HYWTp2GqGaksCjg-3D-3D">
+              NEU
+            </a>
+</td>
+</tr>
+</tbody></table>
+</td>
+<td align=3D"center" class=3D"kl-hlb-no-wrap hlb-subblk" style=3D"display:i=
+nline-block;padding-right:0px;" valign=3D"middle">
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" class=3D"lnk" style=
+=3D"border-collapse:separate;line-height:100%;">
+<tbody><tr>
+<td align=3D"center" bgcolor=3D"transparent" role=3D"presentation" style=3D=
+"border:none;border-radius:0px;cursor:auto;font-style:normal;mso-padding-al=
+t:6px 10px 6px 10px;background:transparent;" valign=3D"middle">
+<a style=3D"color:#333; font-style:normal; font-weight:bold; text-decoratio=
+n:none; display:inline-block; background:transparent; font-family:Century G=
+othic, AppleGothic, Arial; font-size:14px; line-height:100%; letter-spacing=
+:0; margin:0; text-transform:none; padding:6px 10px 6px 10px; mso-padding-a=
+lt:0; border-radius:0" target=3D"_blank" href=3D"https://trk.klclick1.com/l=
+s/click?upn=3DYb5GCmH5NAN8hwB7qdPPzn89xFEMebWrHwP4jWjPmv-2BMITvPNltA4A2jKKU=
+luNDuxQDH20BA3cw34kiIxqU78U7HhQUdsv5p9OHaxgebVQOEE-2FOxJlrel-2FTDPvB0MXpPOu=
+nJeH6rg-2FXTCX9Wdaoe6tEkvz09EYyUA8rCLdaTMI9kCMreYQBqQJj0nstBAb0CIexu-2BqyoG=
+7CJ6ij1xn2wtaxsKCmP8Ek85-2FYZPUshPUw-3D7V3g_jGBhewFDuaYzBogJSwKTxRFJegVfYab=
+6FzNQqcpei7-2B6MYizum0tjmpLydjV6p8JmxTcDEBqGhC0wBnEmmAZXT3zftRSuRJE51PFnx3F=
+W6jMllXmphwcnGbNvoAZvDShsNpZxH-2Bu0wkUM8pHo8WUZFVxYF3tmcPSgKIJS9v-2FdPfHHHx=
+OWX3HwIEhEO240uRq4BKL5UHCK7KYnipo-2FJcG6JLVbYVB8WrpcpcGgbx0qW3rUJ7Yaij1NOhI=
+ILI73f38ClsGcAMK5IapI5xyXxuSb2tym3x0N-2B5pvh50IKzbVnyhtWkB5Dto9TRKrybWGH5db=
+HARq0vR2VOsepa9J2zRxBf1bw0CiYC17xDmwvBzqXsMbmwLMUY-2BV6sCjjdI-2BmcHMHoSwR06=
+M-2F4W68-2F0BERMDw-3D-3D">
+              GESUNDHEIT
+            </a>
+</td>
+</tr>
+</tbody></table>
+</td>
+<td align=3D"center" class=3D"kl-hlb-no-wrap hlb-subblk" style=3D"display:i=
+nline-block;" valign=3D"middle">
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" class=3D"lnk" style=
+=3D"border-collapse:separate;line-height:100%;">
+<tbody><tr>
+<td align=3D"center" bgcolor=3D"transparent" role=3D"presentation" style=3D=
+"border:none;border-radius:0px;cursor:auto;font-style:normal;mso-padding-al=
+t:6px 10px 6px 10px;background:transparent;" valign=3D"middle">
+<a style=3D"color:#333; font-style:normal; font-weight:bold; text-decoratio=
+n:none; display:inline-block; background:transparent; font-family:Century G=
+othic, AppleGothic, Arial; font-size:14px; line-height:100%; letter-spacing=
+:0; margin:0; text-transform:none; padding:6px 10px 6px 10px; mso-padding-a=
+lt:0; border-radius:0" target=3D"_blank" href=3D"https://trk.klclick1.com/l=
+s/click?upn=3DYb5GCmH5NAN8hwB7qdPPzn89xFEMebWrHwP4jWjPmv-2BMITvPNltA4A2jKKU=
+luNDuKTcJ4Eq-2FY9m9ZAXuGseN-2BIDgOA1-2FN-2FwN6O6RfY1LGctfo-2F1BuwNVMES1WvuX=
+-2F14qLQkXKkEq8PVt0-2BQmP-2BVKCJrG9wh3lQZv6BQKxf60xUQWxWnEURrTJAbQu-2F3R-2B=
+1GB9q3fV6tCP4aIjQSCLm3yX-2By3Lf71INC7LOa-2FW0JqRqU-3DgdRE_jGBhewFDuaYzBogJS=
+wKTxRFJegVfYab6FzNQqcpei7-2B6MYizum0tjmpLydjV6p8JmxTcDEBqGhC0wBnEmmAZXT3zft=
+RSuRJE51PFnx3FW6jMllXmphwcnGbNvoAZvDShsNpZxH-2Bu0wkUM8pHo8WUZFVxYF3tmcPSgKI=
+JS9v-2FdPfHHHxOWX3HwIEhEO240uRq4BKL5UHCK7KYnipo-2FJcG6MpXeWuAjVNYu0FCcpjJo5=
+c3SWMyxAaylffsJILekz5WVWt2a83cC15xXI4ZlMqF22q-2FFyHIEebRZKDGsRQzNWQhLLB2byy=
+IxJRmHNKngN67GgxL930uAFuquEUSlqhf9W26Z2NJQVmxDoFDIVOplf9xWm29RghBUTYIHnv2Lf=
+i-2FzEykMZzsG4-2Byqyi-2BufQ3ug-3D-3D">
+              KOSMETIK
+            </a>
+</td>
+</tr>
+</tbody></table>
+</td>
+</tr>
+</tbody></table>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</td>
+</tr>
+<tr>
+<td style=3D"font-size:0px;word-break:break-word;">
+<div class=3D"mj-column-per-100 mj-outlook-group-fix component-wrapper" sty=
+le=3D"font-size:0px;text-align:left;direction:ltr;display:inline-block;vert=
+ical-align:top;width:100%;">
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentatio=
+n" style=3D"table-layout:fixed;" width=3D"100%">
+<tbody>
+<tr>
+<td class=3D"" style=3D"vertical-align:top;padding-top:0px;padding-right:0p=
+x;padding-bottom:0px;padding-left:0px;">
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentatio=
+n" style=3D"" width=3D"100%">
+<tbody>
+<tr>
+<td align=3D"center" style=3D"font-size:0px;padding:0px;word-break:break-wo=
+rd;">
+<p style=3D"padding-bottom:0; border-top:solid 0 #2a9d8f; font-size:1px; ma=
+rgin:0 auto; width:100%">
+</p>
+<!--[if mso | IE]><table align=3D"center" border=3D"0" cellpadding=3D"0" ce=
+llspacing=3D"0" style=3D"border-top:solid 0px #2a9d8f;font-size:1px;margin:=
+0px auto;width:600px;" role=3D"presentation" width=3D"600px" ><tr><td style=
+=3D"height:0;line-height:0;"> &nbsp;
+</td></tr></table><![endif]-->
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</td>
+</tr>
+<tr>
+<td style=3D"font-size:0px;word-break:break-word;">
+<div class=3D"mj-column-per-100 mj-outlook-group-fix component-wrapper kl-t=
+ext-table-layout" style=3D"font-size:0px;text-align:left;direction:ltr;disp=
+lay:inline-block;vertical-align:top;width:100%;">
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentatio=
+n" style=3D"table-layout:fixed;" width=3D"100%">
+<tbody>
+<tr>
+<td class=3D"" style=3D"background-color:#91C24F;vertical-align:top;padding=
+-top:0px;padding-right:0px;padding-bottom:0px;padding-left:0px;">
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentatio=
+n" style=3D"" width=3D"100%">
+<tbody>
+<tr>
+<td align=3D"left" class=3D"kl-text" style=3D"font-size:0px;padding:0px;pad=
+ding-top:5px;padding-right:10px;padding-bottom:0px;padding-left:10px;word-b=
+reak:break-word;">
+<div style=3D"font-family:Arial;font-size:14px;font-style:normal;font-weigh=
+t:400;letter-spacing:0px;line-height:1.3;text-align:left;color:#2d2a2a;"><h=
+3 style=3D"text-align: center;"><span style=3D"color:#FFFFFF;"><span style=
+=3D"font-size:24px;"><span style=3D"font-family:century gothic,applegothic,=
+sans-serif;"><strong>WILLKOMMEN BEI CASIDA<span class=3D"iconos" id=3D"a693=
+" title=3D"Wrapped Present">!<span class=3D"iconos" id=3D"a695" title=3D"Pa=
+rty Popper">=F0=9F=8E=89</span></span></strong></span></span></span></h3></=
+div>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</td>
+</tr>
+<tr>
+<td align=3D"center" style=3D"font-size:0px;word-break:break-word;">
+<div class=3D"mj-column-per-100 mj-outlook-group-fix component-wrapper" sty=
+le=3D"font-size:0px;text-align:left;direction:ltr;display:inline-block;vert=
+ical-align:top;width:100%;">
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentatio=
+n" style=3D"table-layout:fixed;" width=3D"100%">
+<tbody>
+<tr>
+<td class=3D"" style=3D"vertical-align:top;padding-top:0px;padding-right:0p=
+x;padding-bottom:0px;padding-left:0px;">
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentatio=
+n" style=3D"" width=3D"100%">
+<tbody>
+<tr>
+<td align=3D"center" class=3D"kl-image kl-image-177921" style=3D"font-size:=
+0px;word-break:break-word;">
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"border-col=
+lapse:collapse;border-spacing:0px;">
+<tbody>
+<tr>
+<td class=3D"kl-img-base-auto-width" style=3D"width:600px;border:0;padding:=
+0px 0px 0px 0px;" valign=3D"top">
+<a style=3D"color:#000; font-style:normal; font-weight:normal; text-decorat=
+ion:underline" href=3D"https://trk.klclick1.com/ls/click?upn=3DYb5GCmH5NAN8=
+hwB7qdPPzs7j66wBDcoiqCkgwZJ6Q3mjusPeLjFScEe5Fi4OcrZ-2Fkz-2Bl-2BbuGf-2FB9zrq=
+n5yjNRuSBtV0z5yOa-2FNCTiUHT34wcPsdR50mpZnJFKoHxhOG5TxyMdUqBVJh-2FcIPhylm9Jt=
+NvCI0mmJ1Dfwfy5PvJkTA2Spp2tO2AFGuIqQ4X0975peBX_jGBhewFDuaYzBogJSwKTxRFJegVf=
+Yab6FzNQqcpei7-2B6MYizum0tjmpLydjV6p8JmxTcDEBqGhC0wBnEmmAZXT3zftRSuRJE51PFn=
+x3FW6jMllXmphwcnGbNvoAZvDShsNpZxH-2Bu0wkUM8pHo8WUZFVxYF3tmcPSgKIJS9v-2FdPfH=
+HHxOWX3HwIEhEO240uRq4BKL5UHCK7KYnipo-2FJcG6NTbhAh5nRY2q0SRBJNUhLJfh45Rd9PE1=
+slG0JVNSJV7u2i7-2FGYYHH-2FXawcbRM1jYcDBiIfaYuiZfd38dw-2B4I-2BhSE76CV111kLw-=
+2FmSs7sS6XC6RZnGx9sugvAd68VGvu84jUf8tfJn17pNXCp3yYGFWHIljTeEfS-2BZz84y5EP1x=
+cA2ONy6x3FrjLzYoU1IP1rA-3D-3D">
+<img alt=3D"<h2 style=3D&quot;text-align: center;&quot;><span style=3D&quot=
+;font-size:28px;&quot;><span style=3D&quot;color:#000000;&quot;><span style=
+=3D&quot;font-family:century gothic,applegothic,sans-serif;&quot;><strong>W=
+ELCOME TO Casida GmbH<span class=3D&quot;iconos&quot; id=3D&quot;a693&quot;=
+ title=3D&quot;Wrapped Present&quot;>!<span class=3D&quot;iconos&quot; id=
+=3D&quot;a695&quot; title=3D&quot;Party Popper&quot;>=F0=9F=8E=89</span></s=
+pan><span class=3D&quot;iconos&quot; id=3D&quot;a22&quot; title=3D&quot;Cry=
+ing Face&quot;></span></strong></span></span></span></h2>" src=3D"https://d=
+3k81ch9hvuctc.cloudfront.net/company/UmQHWZ/images/2afdb939-cdf9-4d04-92e2-=
+b6f349a57a91.jpeg" style=3D"display:block;outline:none;text-decoration:none=
+;height:auto;width:100%;font-size:13px;" title=3D"<h2 style=3D&quot;text-al=
+ign: center;&quot;><span style=3D&quot;font-size:28px;&quot;><span style=3D=
+&quot;color:#000000;&quot;><span style=3D&quot;font-family:century gothic,a=
+pplegothic,sans-serif;&quot;><strong>WELCOME TO Casida GmbH<span class=3D&q=
+uot;iconos&quot; id=3D&quot;a693&quot; title=3D&quot;Wrapped Present&quot;>=
+!<span class=3D&quot;iconos&quot; id=3D&quot;a695&quot; title=3D&quot;Party=
+ Popper&quot;>=F0=9F=8E=89</span></span><span class=3D&quot;iconos&quot; id=
+=3D&quot;a22&quot; title=3D&quot;Crying Face&quot;></span></strong></span><=
+/span></span></h2>" width=3D"600">
+</a>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</td>
+</tr>
+<tr>
+<td style=3D"font-size:0px;word-break:break-word;">
+<div class=3D"mj-column-per-100 mj-outlook-group-fix component-wrapper kl-t=
+ext-table-layout" style=3D"font-size:0px;text-align:left;direction:ltr;disp=
+lay:inline-block;vertical-align:top;width:100%;">
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentatio=
+n" style=3D"table-layout:fixed;" width=3D"100%">
+<tbody>
+<tr>
+<td class=3D"" style=3D"vertical-align:top;padding-top:0px;padding-right:0p=
+x;padding-bottom:0px;padding-left:0px;">
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentatio=
+n" style=3D"" width=3D"100%">
+<tbody>
+<tr>
+<td align=3D"left" class=3D"kl-text" style=3D"font-size:0px;padding:0px;pad=
+ding-top:30px;padding-right:30px;padding-bottom:10px;padding-left:30px;word=
+-break:break-word;">
+<div style=3D"font-family:Arial;font-size:14px;font-style:normal;font-weigh=
+t:400;letter-spacing:0px;line-height:1.5;text-align:left;color:#222222;"><p=
+ style=3D"text-align: center;"><span style=3D"font-size:16px;"><span style=
+=3D"font-family:century gothic,applegothic,sans-serif;">Hallo&nbsp;liebe&nb=
+sp;Casida-Kundin/&nbsp;lieber Casida-Kunde,</span></span></p>
+<p style=3D"text-align: center;"><span style=3D"font-size:16px;"><span styl=
+e=3D"font-family:century gothic,applegothic,sans-serif;"></span></span></p>
+<p style=3D"padding-bottom:0; text-align:center"><font face=3D"century goth=
+ic, applegothic, sans-serif"><span style=3D"font-size: 16px;">herzlich will=
+kommen zum Casida Newsletter!&nbsp;Als kleines Willkommensgeschenk erh=C3=
+=A4ltst Du <strong>10% Sofortrabatt*</strong>&nbsp;und unseren <strong>Ratg=
+eber "=C3=84therische =C3=96le"</strong>&nbsp;als gratis eBook.</span></fon=
+t></p></div>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</td>
+</tr>
+<tr>
+<td align=3D"center" style=3D"font-size:0px;word-break:break-word;">
+<div class=3D"mj-column-per-100 mj-outlook-group-fix component-wrapper" sty=
+le=3D"font-size:0px;text-align:left;direction:ltr;display:inline-block;vert=
+ical-align:top;width:100%;">
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentatio=
+n" style=3D"table-layout:fixed;" width=3D"100%">
+<tbody>
+<tr>
+<td class=3D"" style=3D"vertical-align:top;padding-top:9px;padding-right:9p=
+x;padding-bottom:9px;padding-left:9px;">
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentatio=
+n" style=3D"" width=3D"100%">
+<tbody>
+<tr>
+<td align=3D"center" class=3D"kl-image kl-image-177922" style=3D"font-size:=
+0px;word-break:break-word;">
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"border-col=
+lapse:collapse;border-spacing:0px;">
+<tbody>
+<tr>
+<td class=3D"kl-img-base-auto-width" style=3D"width:480px;border:0;padding:=
+0px 9px 0px 9px;" valign=3D"top">
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"border-col=
+lapse:collapse;border-spacing:0px;"><tbody><tr>
+<td valign=3D"top">
+<a style=3D"color:#000; font-style:normal; font-weight:normal; text-decorat=
+ion:underline" href=3D"https://trk.klclick1.com/ls/click?upn=3DYb5GCmH5NAN8=
+hwB7qdPPznfPI94cuYqcaBMEOaR8rHBxy416qDN19Lf4LQsNGovlXWKyqmo0UIgGbWwz-2FOciC=
+lKksIHo8riurf2tPJg5lD2UEAbsYVzkgzNNZA2ytpxuERUN2QnDNnLJ1tKuhEOPmx6Rr-2FKdaY=
+n7X8lYHUxU9K4v5R4P6mQBB7Iacn9fd6txSEUqWHwHJv2I703LOiaA7yvyYehpouV-2Br-2BLUa=
+2g9KBo6-2FeeRi6sQ68P9TNX7UUYm4RG2IoHzFZX6JuDXFR7wAMR4AUyf5Y-2B0PbJbpor-2B52=
+s-3Dvfez_jGBhewFDuaYzBogJSwKTxRFJegVfYab6FzNQqcpei7-2B6MYizum0tjmpLydjV6p8J=
+mxTcDEBqGhC0wBnEmmAZXT3zftRSuRJE51PFnx3FW6jMllXmphwcnGbNvoAZvDShsNpZxH-2Bu0=
+wkUM8pHo8WUZFVxYF3tmcPSgKIJS9v-2FdPfHHHxOWX3HwIEhEO240uRq4BKL5UHCK7KYnipo-2=
+FJcG6MeRKUwGoYwKyyAF-2FFrbV8kpfepTyu-2FhqMJZeC8xfKIrXDj4KzgLo8nt9vyZZ85FPbp=
+bkbiX8sF3gPHCRyJ4H2p6xKLyaiOz6HN0BGwSBvYFP6NkSUw-2B7D9FUmtnT6KSyBr0t1i5J2ay=
+89UqJ9Wl3LLFyTq-2FZEsFwnjwt2ZnRSsvL2O-2FSyo0-2BtXs-2FYY7WxPB2g-3D-3D">
+<img src=3D"https://d3k81ch9hvuctc.cloudfront.net/company/UmQHWZ/images/1c8=
+4c8d6-b233-4a04-b9ef-c3a741898273.png" style=3D"display:block;outline:none;=
+text-decoration:none;height:auto;width:100%;font-size:13px;" width=3D"480">
+</a>
+</td></tr></tbody></table>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</td>
+</tr>
+<tr>
+<td style=3D"font-size:0px;word-break:break-word;">
+<div class=3D"mj-column-per-100 mj-outlook-group-fix component-wrapper" sty=
+le=3D"font-size:0px;text-align:left;direction:ltr;display:inline-block;vert=
+ical-align:top;width:100%;">
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentatio=
+n" style=3D"table-layout:fixed;" width=3D"100%">
+<tbody>
+<tr>
+<td class=3D"" style=3D"vertical-align:top;padding-top:20px;padding-right:1=
+0px;padding-bottom:20px;padding-left:10px;">
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentatio=
+n" style=3D"" width=3D"100%">
+<tbody>
+<tr>
+<td align=3D"center" class=3D"kl-button" style=3D"font-size:0px;padding:0px=
+;word-break:break-word;" vertical-align=3D"middle">
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"border-col=
+lapse:separate;line-height:100%;">
+<tbody><tr>
+<td align=3D"center" bgcolor=3D"#91C24F" role=3D"presentation" style=3D"bor=
+der:none;border-radius:4px;cursor:auto;mso-padding-alt:16px 32px 16px 32px;=
+background:#91C24F;" valign=3D"middle">
+<a style=3D"color:#fff; font-style:normal; font-weight:bold; text-decoratio=
+n:none; display:inline-block; background:#91C24F; font-family:Century Gothi=
+c, AppleGothic, Arial; font-size:14px; line-height:100%; letter-spacing:0; =
+margin:0; text-transform:none; padding:16px 32px 16px 32px; mso-padding-alt=
+:0; border-radius:4px" target=3D"_blank" href=3D"https://trk.klclick1.com/l=
+s/click?upn=3DYb5GCmH5NAN8hwB7qdPPznfPI94cuYqcaBMEOaR8rHBxy416qDN19Lf4LQsNG=
+ovlXWKyqmo0UIgGbWwz-2FOciClKksIHo8riurf2tPJg5lD2UEAbsYVzkgzNNZA2ytpxuERUN2Q=
+nDNnLJ1tKuhEOPmx6Rr-2FKdaYn7X8lYHUxU9K4v5R4P6mQBB7Iacn9fd6txSEUqWHwHJv2I703=
+LOiaA7yvyYehpouV-2Br-2BLUa2g9KBo6-2FeeRi6sQ68P9TNX7UUYm4RG2IoHzFZX6JuDXFR7w=
+AMR4AUyf5Y-2B0PbJbpor-2B52s-3DLIzC_jGBhewFDuaYzBogJSwKTxRFJegVfYab6FzNQqcpe=
+i7-2B6MYizum0tjmpLydjV6p8JmxTcDEBqGhC0wBnEmmAZXT3zftRSuRJE51PFnx3FW6jMllXmp=
+hwcnGbNvoAZvDShsNpZxH-2Bu0wkUM8pHo8WUZFVxYF3tmcPSgKIJS9v-2FdPfHHHxOWX3HwIEh=
+EO240uRq4BKL5UHCK7KYnipo-2FJcG6C2mzM33D42Ic5a39cErPebY4BgzeXzyRYr148PVuZzi2=
+2jHJlhuj-2Bb5o5p0ZdtBKET2Iupzu1ilP2LRtLF6PP8hi-2B9U2NROl0rmNP6Z9Gp6la33a1rF=
+TUfczipwyL1G2kT0xfRIpRXzrZIH7GUFSQO8EKHLU-2FADXt5Ykl0zCA6wBUw5T4n2BOfozsyW-=
+2BgfXyA-3D-3D">
+              eBook HIER gratis downloaden
+            </a>
+</td>
+</tr>
+</tbody></table>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</td>
+</tr>
+<tr>
+<td style=3D"font-size:0px;word-break:break-word;">
+<div class=3D"mj-column-per-100 mj-outlook-group-fix component-wrapper kl-t=
+ext-table-layout" style=3D"font-size:0px;text-align:left;direction:ltr;disp=
+lay:inline-block;vertical-align:top;width:100%;">
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentatio=
+n" style=3D"table-layout:fixed;" width=3D"100%">
+<tbody>
+<tr>
+<td class=3D"" style=3D"vertical-align:top;padding-top:0px;padding-right:0p=
+x;padding-bottom:0px;padding-left:0px;">
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentatio=
+n" style=3D"" width=3D"100%">
+<tbody>
+<tr>
+<td align=3D"left" class=3D"kl-text" style=3D"font-size:0px;padding:0px;pad=
+ding-top:30px;padding-right:30px;padding-bottom:10px;padding-left:30px;word=
+-break:break-word;">
+<div style=3D"font-family:Arial;font-size:14px;font-style:normal;font-weigh=
+t:400;letter-spacing:0px;line-height:1.5;text-align:left;color:#222222;"><p=
+ style=3D"padding-bottom:0; text-align:center"><span style=3D"font-family: =
+&quot;century gothic&quot;, applegothic, sans-serif; font-size: 16px; text-=
+align: center;">L=C3=B6se gleich Deinen&nbsp;<strong>10% Willkommensrabatt<=
+/strong>* ein - einfach den Rabattcode im Kassenbereich&nbsp;auf www.casida=
+.de eingeben:</span></p></div>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</td>
+</tr>
+<tr>
+<td style=3D"font-size:0px;word-break:break-word;">
+<div class=3D"mj-column-per-100 mj-outlook-group-fix component-wrapper kl-t=
+ext-table-layout" style=3D"font-size:0px;text-align:left;direction:ltr;disp=
+lay:inline-block;vertical-align:top;width:100%;">
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentatio=
+n" style=3D"table-layout:fixed;" width=3D"100%">
+<tbody>
+<tr>
+<td class=3D"" style=3D"vertical-align:top;padding-top:0px;padding-right:30=
+px;padding-bottom:0px;padding-left:30px;">
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentatio=
+n" style=3D"border:dotted 1px #222222;" width=3D"100%">
+<tbody>
+<tr>
+<td align=3D"left" class=3D"kl-text" style=3D"font-size:0px;padding:0px;pad=
+ding-top:10px;padding-right:30px;padding-bottom:30px;padding-left:30px;word=
+-break:break-word;">
+<div style=3D"font-family:Arial;font-size:14px;font-style:normal;font-weigh=
+t:400;letter-spacing:0px;line-height:1.5;text-align:left;color:#222222;"><d=
+iv><p style=3D"text-align: center;"><span style=3D"font-family: century got=
+hic,applegothic,sans-serif;"><strong><span style=3D"font-size: 20px;">&nbsp=
+;</span></strong></span></p>
+<div><span style=3D"font-family: century gothic,applegothic,sans-serif;">&n=
+bsp;</span></div>
+<p style=3D"text-align: center;"><span style=3D"font-size: 18px;"><span sty=
+le=3D"font-family: century gothic,applegothic,sans-serif;">Dein Rabattcode*=
+:<strong>&nbsp;CFU2124</strong></span></span></p>
+<p style=3D"padding-bottom:0; text-align:center"><span style=3D"color: #404=
+040; font-family: Arial; font-size: 12px; text-align: center;">*Der Code is=
+t nur 7 Tage g=C3=BCltig.<br>Ohne Mindestbestellwert.<br>Nicht auf bereits =
+rabattierte Artikel, Sets, Geschenkgutscheine und Selbsttests anwendbar.<br=
+>=E2=80=8BNur f=C3=BCr Privatkunden.</span></p></div></div>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</td>
+</tr>
+<tr>
+<td style=3D"font-size:0px;word-break:break-word;">
+<div class=3D"mj-column-per-100 mj-outlook-group-fix component-wrapper" sty=
+le=3D"font-size:0px;text-align:left;direction:ltr;display:inline-block;vert=
+ical-align:top;width:100%;">
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentatio=
+n" style=3D"table-layout:fixed;" width=3D"100%">
+<tbody>
+<tr>
+<td class=3D"" style=3D"vertical-align:top;padding-top:20px;padding-right:1=
+0px;padding-bottom:20px;padding-left:10px;">
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentatio=
+n" style=3D"" width=3D"100%">
+<tbody>
+<tr>
+<td align=3D"center" class=3D"kl-button" style=3D"font-size:0px;padding:0px=
+;word-break:break-word;" vertical-align=3D"middle">
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"border-col=
+lapse:separate;line-height:100%;">
+<tbody><tr>
+<td align=3D"center" bgcolor=3D"#fb9e2f" role=3D"presentation" style=3D"bor=
+der:none;border-bottom:solid 1px #fb9e2f;border-left:solid 1px #fb9e2f;bord=
+er-radius:4px;border-right:solid 1px #fb9e2f;border-top:solid 1px #fb9e2f;c=
+ursor:auto;mso-padding-alt:16px 32px 16px 32px;background:#fb9e2f;" valign=
+=3D"middle">
+<a style=3D"color:#fff; font-style:normal; font-weight:bold; text-decoratio=
+n:none; display:inline-block; background:#fb9e2f; font-family:Century Gothi=
+c, AppleGothic, Arial; font-size:14px; line-height:100%; letter-spacing:0; =
+margin:0; text-transform:none; padding:16px 32px 16px 32px; mso-padding-alt=
+:0; border-radius:4px" target=3D"_blank" href=3D"https://trk.klclick1.com/l=
+s/click?upn=3DYb5GCmH5NAN8hwB7qdPPzs7j66wBDcoiqCkgwZJ6Q3mjusPeLjFScEe5Fi4Oc=
+rZ-2Fkz-2Bl-2BbuGf-2FB9zrqn5yjNRuSBtV0z5yOa-2FNCTiUHT34wcPsdR50mpZnJFKoHxhO=
+G5TxyMdUqBVJh-2FcIPhylm9JtNvCI0mmJ1Dfwfy5PvJkTA2Spp2tO2AFGuIqQ4X0975sGXv_jG=
+BhewFDuaYzBogJSwKTxRFJegVfYab6FzNQqcpei7-2B6MYizum0tjmpLydjV6p8JmxTcDEBqGhC=
+0wBnEmmAZXT3zftRSuRJE51PFnx3FW6jMllXmphwcnGbNvoAZvDShsNpZxH-2Bu0wkUM8pHo8WU=
+ZFVxYF3tmcPSgKIJS9v-2FdPfHHHxOWX3HwIEhEO240uRq4BKL5UHCK7KYnipo-2FJcG6Awv-2F=
+qVcOd-2FOhd3S1mKPwrBJkfH4Bj-2FcnZlp51KGZC-2Ft7BF40OhpE3UeD3fcKIGeQwjOpttAoz=
+Rrzo3lfw8lXzQphWl7-2Fde5heN-2BJQzgfCXJQgDEOrxKFjol-2FLZVfvI9izGrUHZwQvGTE4N=
+pSkwQ1vyZaib2EHpUoHPxFPCU6gWjdLOktUwV9o-2FUy7r3LihJMg-3D-3D">
+              Jetzt Gutschein einl=C3=B6sen &gt;
+            </a>
+</td>
+</tr>
+</tbody></table>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</td>
+</tr>
+<tr>
+<td style=3D"font-size:0px;word-break:break-word;">
+<div class=3D"mj-column-per-100 mj-outlook-group-fix component-wrapper kl-t=
+ext-table-layout" style=3D"font-size:0px;text-align:left;direction:ltr;disp=
+lay:inline-block;vertical-align:top;width:100%;">
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentatio=
+n" style=3D"table-layout:fixed;" width=3D"100%">
+<tbody>
+<tr>
+<td class=3D"" style=3D"background-color:#fafafa;vertical-align:top;padding=
+-top:0px;padding-right:0px;padding-bottom:0px;padding-left:0px;">
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentatio=
+n" style=3D"" width=3D"100%">
+<tbody>
+<tr>
+<td align=3D"left" class=3D"kl-text" style=3D"font-size:0px;padding:0px;pad=
+ding-top:29px;padding-right:18px;padding-bottom:19px;padding-left:18px;word=
+-break:break-word;">
+<div style=3D"font-family:Arial;font-size:14px;font-style:normal;font-weigh=
+t:400;letter-spacing:0px;line-height:1.3;text-align:left;color:#222222;"><p=
+ style=3D"padding-bottom:0; text-align:center"><span style=3D"font-family:c=
+entury gothic,applegothic,sans-serif;"><strong><span style=3D"font-size:20p=
+x;">BELIEBTESTE PRODUKTE</span></strong></span></p></div>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</td>
+</tr>
+<tr>
+<td style=3D"font-size:0px;word-break:break-word;">
+<div class=3D"mj-column-per-100 mj-outlook-group-fix component-wrapper" sty=
+le=3D"font-size:0px;text-align:left;direction:ltr;display:inline-block;vert=
+ical-align:top;width:100%;">
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentatio=
+n" style=3D"table-layout:fixed;" width=3D"100%">
+<tbody>
+<tr>
+<td class=3D"" style=3D"background-color:#fafafa;vertical-align:top;padding=
+-top:9px;padding-right:9px;padding-bottom:9px;padding-left:9px;">
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentatio=
+n" style=3D"" width=3D"100%">
+<tbody>
+<tr>
+<td align=3D"left" style=3D"font-size:0px;padding:0px;word-break:break-word=
+;">
+<div style=3D"font-family:Ubuntu, Helvetica, Arial, sans-serif;font-size:13=
+px;line-height:1;text-align:left;color:#000000;"><!--[if true]><table class=
+=3D"kl-product" role=3D"presentation" width=3D"100%" style=3D"all:unset;opa=
+city:0;"><tr><![endif]-->
+<!--[if false]></td></tr></table><![endif]-->
+<div class=3D"kl-product" style=3D"display:table;width:100%;">
+<!--[if true]><td width=3D"50%"><![endif]-->
+<!--[if !true]><!--><div class=3D"kl-product-cell-stack" style=3D"display:t=
+able-cell;vertical-align:middle;font-size:0;width:50%;"><!--<![endif]-->
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentatio=
+n" width=3D"100%">
+<tbody>
+<tr>
+<td style=3D"font-size:0px;padding:9px 9px 9px 9px;word-break:break-word;" =
+vertical-align=3D"top">
+<table align=3D"left" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" clas=
+s=3D"kl-product-subblock" style=3D"table-layout:fixed;" width=3D"100%">
+<tbody>
+<tr>
+<td align=3D"center">
+<a style=3D"color:#000; font-style:normal; font-weight:normal; text-decorat=
+ion:underline" href=3D"https://trk.klclick1.com/ls/click?upn=3DYb5GCmH5NAN8=
+hwB7qdPPzn89xFEMebWrHwP4jWjPmv9yZ-2BOxSL-2FyugZb0XAeOUCygKg4-2Bd13KoRbad6Tv=
+fdxCrxpXj0GBEc-2Ff6ycoilXSUAPSo69D-2F1wwv-2BqU3qG-2FFzPpf4iMBS2CYlUdxkf6t2H=
+ZoZ1JKszq3VV6TB-2ByhmxDcXItWIJ2j25pOy0G7-2FWkQ38RixhRtLE2-2BEUOCZR5wFMDRAKe=
+916dfdfFRD3hfUx52g-3DcYSA_jGBhewFDuaYzBogJSwKTxRFJegVfYab6FzNQqcpei7-2B6MYi=
+zum0tjmpLydjV6p8JmxTcDEBqGhC0wBnEmmAZXT3zftRSuRJE51PFnx3FW6jMllXmphwcnGbNvo=
+AZvDShsNpZxH-2Bu0wkUM8pHo8WUZFVxYF3tmcPSgKIJS9v-2FdPfHHHxOWX3HwIEhEO240uRq4=
+BKL5UHCK7KYnipo-2FJcG6Iwrjq-2Be7lwORVI9O-2FDr7y-2BnXpyIYckTSABIQX2Oucl5usfy=
+I4-2B7udeDTSEZ-2BoAMBzLV2ea0-2BvVOP21MBcgq0yT-2BK63Ztgk3Z7iaw6LDqQABepq5vV-=
+2FXfYFejeqW5H8DpGsh4pruQwDjDDZ-2FJ-2B7mz3NcojxUYHETpH7FoXTc8at6E8dFLV2Ek4uh=
+8d9J-2F4lsXg-3D-3D">
+<img alt=3D"Image of Engelwurzbalsam Baby &amp; Kinder" src=3D"https://casi=
+da.com/wp-content/uploads/2016/01/Casida-Engelwurzbalsam-fuer-Kinder-15-g-1=
+0086729-PZN-Apotheke-Schnupfen-Baby-1.jpg" style=3D"display:block;max-width=
+:100%;width:auto;max-height:200px;" width=3D"176">
+</a>
+</td>
+</tr>
+<tr><td align=3D"center"><table align=3D"center"><tbody><tr><td align=3D"ce=
+nter" style=3D"color:#000000;font-family:Century Gothic,AppleGothic,Arial;f=
+ont-size:14px;font-weight:bold;font-style:normal;text-align:center;letter-s=
+pacing:0px;padding-top:5px;padding-bottom:0px;line-height:1.3;">Engelwurzba=
+lsam Baby &amp; Kinder</td></tr></tbody></table></td></tr>
+<tr><td align=3D"center"><table align=3D"center"><tbody><tr><td align=3D"ce=
+nter" style=3D"color:#222222;font-family:Century Gothic,AppleGothic,Arial;f=
+ont-size:14px;font-weight:normal;font-style:normal;text-align:center;letter=
+-spacing:0px;padding-top:5px;padding-bottom:0px;line-height:1.3;">=E2=82=AC=
+ 11,45</td></tr></tbody></table></td></tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+<!--[if !true]><!--></div><!--<![endif]-->
+<!--[if true]></td><![endif]-->
+<!--[if true]><td width=3D"50%"><![endif]-->
+<!--[if !true]><!--><div class=3D"kl-product-cell-stack" style=3D"display:t=
+able-cell;vertical-align:middle;font-size:0;width:50%;"><!--<![endif]-->
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentatio=
+n" width=3D"100%">
+<tbody>
+<tr>
+<td style=3D"font-size:0px;padding:9px 9px 9px 9px;word-break:break-word;" =
+vertical-align=3D"top">
+<table align=3D"left" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" clas=
+s=3D"kl-product-subblock" style=3D"table-layout:fixed;" width=3D"100%">
+<tbody>
+<tr>
+<td align=3D"center">
+<a style=3D"color:#000; font-style:normal; font-weight:normal; text-decorat=
+ion:underline" href=3D"https://trk.klclick1.com/ls/click?upn=3DYb5GCmH5NAN8=
+hwB7qdPPzn89xFEMebWrHwP4jWjPmv9NHMIMDAnk7rxT0yb0OVZIe5ZJOLlFx0pbDgegfAGJGYW=
+6-2FioajLBDnZG2ckm7l33tJIc2ZS6t7qWYEx-2BCm1U6NXrqCdVN-2B-2Bmn8cEsu7J9LWn18G=
+AGW2hHOy7JRAHZzA-2FmueRpnaS3ioxvfxscVw4cC2RLoqWhtc78lmoyFe28uNMSBT-2B-2FmLk=
+KDRwRCg98FGI-3DGxb5_jGBhewFDuaYzBogJSwKTxRFJegVfYab6FzNQqcpei7-2B6MYizum0tj=
+mpLydjV6p8JmxTcDEBqGhC0wBnEmmAZXT3zftRSuRJE51PFnx3FW6jMllXmphwcnGbNvoAZvDSh=
+sNpZxH-2Bu0wkUM8pHo8WUZFVxYF3tmcPSgKIJS9v-2FdPfHHHxOWX3HwIEhEO240uRq4BKL5UH=
+CK7KYnipo-2FJcG6PPDzQ0NAxVUYSi-2BdkbcWYlguYFUcet-2BF7MDw-2BfErIGCZjpoinDj6u=
+BCXOXEFlJkCyOY6Yflt30YMgTBc0bc0XZ5Vb-2BnlMfPNqdSYrO6E6HCTZBBsh5C1kkp9YPGRkp=
+VfcGNK0nIqsERTSZB-2FPDer0DbasxVwbHcQTAyt995zpCfp-2Fde3fdBTdnnFPk7VCZ-2BzQ-3=
+D-3D">
+<img alt=3D"Image of Epsom Salz Vitalbad" src=3D"https://casida.com/wp-cont=
+ent/uploads/2016/01/Casida-Epsom-Salz-Vitalbad-1-kg-1110334-PZN-Apotheke-Bi=
+ttersalz.jpg" style=3D"display:block;max-width:100%;width:auto;max-height:2=
+00px;" width=3D"176">
+</a>
+</td>
+</tr>
+<tr><td align=3D"center"><table align=3D"center"><tbody><tr><td align=3D"ce=
+nter" style=3D"color:#000000;font-family:Century Gothic,AppleGothic,Arial;f=
+ont-size:14px;font-weight:bold;font-style:normal;text-align:center;letter-s=
+pacing:0px;padding-top:5px;padding-bottom:0px;line-height:1.3;">Epsom Salz =
+Vitalbad</td></tr></tbody></table></td></tr>
+<tr><td align=3D"center"><table align=3D"center"><tbody><tr><td align=3D"ce=
+nter" style=3D"color:#222222;font-family:Century Gothic,AppleGothic,Arial;f=
+ont-size:14px;font-weight:normal;font-style:normal;text-align:center;letter=
+-spacing:0px;padding-top:5px;padding-bottom:0px;line-height:1.3;">=E2=82=AC=
+ 12,42</td></tr></tbody></table></td></tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+<!--[if !true]><!--></div><!--<![endif]-->
+<!--[if true]></td><![endif]-->
+</div>
+<!--[if true]></tr></table><![endif]-->
+<!--[if true]><table class=3D"kl-product" role=3D"presentation" width=3D"10=
+0%" style=3D"all:unset;opacity:0;"><tr><![endif]-->
+<!--[if false]></td></tr></table><![endif]-->
+<div class=3D"kl-product" style=3D"display:table;width:100%;">
+<!--[if true]><td width=3D"50%"><![endif]-->
+<!--[if !true]><!--><div class=3D"kl-product-cell-stack" style=3D"display:t=
+able-cell;vertical-align:middle;font-size:0;width:50%;"><!--<![endif]-->
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentatio=
+n" width=3D"100%">
+<tbody>
+<tr>
+<td style=3D"font-size:0px;padding:9px 9px 9px 9px;word-break:break-word;" =
+vertical-align=3D"top">
+<table align=3D"left" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" clas=
+s=3D"kl-product-subblock" style=3D"table-layout:fixed;" width=3D"100%">
+<tbody>
+<tr>
+<td align=3D"center">
+<a style=3D"color:#000; font-style:normal; font-weight:normal; text-decorat=
+ion:underline" href=3D"https://trk.klclick1.com/ls/click?upn=3DYb5GCmH5NAN8=
+hwB7qdPPzn89xFEMebWrHwP4jWjPmv-2B6FM-2B0LG9FOUO9Zgg35EO9jqlwrskFK80176XN-2F=
+ZyL-2F6lyG1-2FMbI1idBrK-2F1PDY8pJt8OutqCLSAILbClbNNdHZ4zAtRfgIh914CKgmcBwVp=
+py3ueJZognXOogMFeE-2F6RNaroTRYc6-2FXzn1jn-2ByvE8FTE4cNgbJc68ov5RrhiyGTYWCKr=
+W4qLsDtTtCNkQaVY-3DFtBv_jGBhewFDuaYzBogJSwKTxRFJegVfYab6FzNQqcpei7-2B6MYizu=
+m0tjmpLydjV6p8JmxTcDEBqGhC0wBnEmmAZXT3zftRSuRJE51PFnx3FW6jMllXmphwcnGbNvoAZ=
+vDShsNpZxH-2Bu0wkUM8pHo8WUZFVxYF3tmcPSgKIJS9v-2FdPfHHHxOWX3HwIEhEO240uRq4BK=
+L5UHCK7KYnipo-2FJcG6PyyKganEdoMEqNFAxikQf6vX7RPB-2FYTCJwD5nHkOM36hGE-2FGqw7=
+I7RRbOIieoO3J3RakV-2FmpGNaAvmbJ7WAqHJxBnxpeA5y6fSvJzjWdAX2zYI-2Fa0TewDu7DBo=
+kHJLXwwCynbNKsBiUKRTiznfrqu6hgY71CVwQkPx9kEpKreFUH9g9V52Id5xlzTbfGQUJmA-3D-=
+3D">
+<img alt=3D"Image of Nagel=C3=B6l Repair &amp; Protect" src=3D"https://casi=
+da.com/wp-content/uploads/2020/12/Casida-Nageloel-Repair-Protect-10-ml-PZN-=
+10022445-Apotheke-Nagelpilz-Fuesse-Haende.jpg" style=3D"display:block;max-w=
+idth:100%;width:auto;max-height:200px;" width=3D"176">
+</a>
+</td>
+</tr>
+<tr><td align=3D"center"><table align=3D"center"><tbody><tr><td align=3D"ce=
+nter" style=3D"color:#000000;font-family:Century Gothic,AppleGothic,Arial;f=
+ont-size:14px;font-weight:bold;font-style:normal;text-align:center;letter-s=
+pacing:0px;padding-top:5px;padding-bottom:0px;line-height:1.3;">Nagel=C3=B6=
+l Repair &amp; Protect</td></tr></tbody></table></td></tr>
+<tr><td align=3D"center"><table align=3D"center"><tbody><tr><td align=3D"ce=
+nter" style=3D"color:#222222;font-family:Century Gothic,AppleGothic,Arial;f=
+ont-size:14px;font-weight:normal;font-style:normal;text-align:center;letter=
+-spacing:0px;padding-top:5px;padding-bottom:0px;line-height:1.3;">=E2=82=AC=
+ 21,82</td></tr></tbody></table></td></tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+<!--[if !true]><!--></div><!--<![endif]-->
+<!--[if true]></td><![endif]-->
+<!--[if true]><td width=3D"50%"><![endif]-->
+<!--[if !true]><!--><div class=3D"kl-product-cell-stack" style=3D"display:t=
+able-cell;vertical-align:middle;font-size:0;width:50%;"><!--<![endif]-->
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentatio=
+n" width=3D"100%">
+<tbody>
+<tr>
+<td style=3D"font-size:0px;padding:9px 9px 9px 9px;word-break:break-word;" =
+vertical-align=3D"top">
+<table align=3D"left" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" clas=
+s=3D"kl-product-subblock" style=3D"table-layout:fixed;" width=3D"100%">
+<tbody>
+<tr>
+<td align=3D"center">
+<a style=3D"color:#000; font-style:normal; font-weight:normal; text-decorat=
+ion:underline" href=3D"https://trk.klclick1.com/ls/click?upn=3DYb5GCmH5NAN8=
+hwB7qdPPzn89xFEMebWrHwP4jWjPmv-2BVSmzTqAZ8xTYKKwo-2FTjm4WXTHylpTvSGN8ysecmo=
+wEEk8vo8YqxCR61jkLarCL0Pn-2BqN72tBWDHnrfCrEai13Frx15fMKU2FqSAeboQI2tbgQNQqi=
+IbSeiTdXFPXEJi2tdj8eeRrsvw1rvddnhSnxo1Qp5B0GICepZfwX4IopQ9bDJq8qvRr-2Fw2-2B=
+39AGgxVw-3DfSbw_jGBhewFDuaYzBogJSwKTxRFJegVfYab6FzNQqcpei7-2B6MYizum0tjmpLy=
+djV6p8JmxTcDEBqGhC0wBnEmmAZXT3zftRSuRJE51PFnx3FW6jMllXmphwcnGbNvoAZvDShsNpZ=
+xH-2Bu0wkUM8pHo8WUZFVxYF3tmcPSgKIJS9v-2FdPfHHHxOWX3HwIEhEO240uRq4BKL5UHCK7K=
+Ynipo-2FJcG6Ps-2BiuNX55UzZ1B3Y6adApgPIHlyrqCjy4ObgXnaCVyzSh0Bu7bih-2BFinI57=
+cSgAaLHOTx3FlaSOVDD-2B7k0Ba-2BSmvJjxnz7qUc8Aoq7h50-2FTjUtr6o45xfnenfz0AFFSY=
+R3edvNyc1vGzx46-2BIzSC9f8gLiN0kH50kW3Fuj9WLeCdTIR-2FyKHZq4swgh1XdnA8g-3D-3D=
+">
+<img alt=3D"Image of Retinol Serum mit Hyaluron" src=3D"https://casida.com/=
+wp-content/uploads/2018/07/Casida-Retinol-Serum-mit-Hyaluron-=E2=80=93-30-m=
+l-14044047-PZN-Apotheke-Vitamin-A-Anti-Aging-Falten-Rosacea-periorale-Derma=
+titis.jpg" style=3D"display:block;max-width:100%;width:auto;max-height:200p=
+x;" width=3D"176">
+</a>
+</td>
+</tr>
+<tr><td align=3D"center"><table align=3D"center"><tbody><tr><td align=3D"ce=
+nter" style=3D"color:#000000;font-family:Century Gothic,AppleGothic,Arial;f=
+ont-size:14px;font-weight:bold;font-style:normal;text-align:center;letter-s=
+pacing:0px;padding-top:5px;padding-bottom:0px;line-height:1.3;">Retinol Ser=
+um mit Hyaluron</td></tr></tbody></table></td></tr>
+<tr><td align=3D"center"><table align=3D"center"><tbody><tr><td align=3D"ce=
+nter" style=3D"color:#222222;font-family:Century Gothic,AppleGothic,Arial;f=
+ont-size:14px;font-weight:normal;font-style:normal;text-align:center;letter=
+-spacing:0px;padding-top:5px;padding-bottom:0px;line-height:1.3;">=E2=82=AC=
+ 24,95</td></tr></tbody></table></td></tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+<!--[if !true]><!--></div><!--<![endif]-->
+<!--[if true]></td><![endif]-->
+</div>
+<!--[if true]></tr></table><![endif]-->
+<!--[if true]><table class=3D"kl-product" role=3D"presentation" width=3D"10=
+0%" style=3D"all:unset;opacity:0;"><tr><![endif]-->
+<!--[if false]></td></tr></table><![endif]-->
+<div class=3D"kl-product" style=3D"display:table;width:100%;">
+<!--[if true]><td width=3D"50%"><![endif]-->
+<!--[if !true]><!--><div class=3D"kl-product-cell-stack" style=3D"display:t=
+able-cell;vertical-align:middle;font-size:0;width:50%;"><!--<![endif]-->
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentatio=
+n" width=3D"100%">
+<tbody>
+<tr>
+<td style=3D"font-size:0px;padding:9px 9px 9px 9px;word-break:break-word;" =
+vertical-align=3D"top">
+<table align=3D"left" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" clas=
+s=3D"kl-product-subblock" style=3D"table-layout:fixed;" width=3D"100%">
+<tbody>
+<tr>
+<td align=3D"center">
+<a style=3D"color:#000; font-style:normal; font-weight:normal; text-decorat=
+ion:underline" href=3D"https://trk.klclick1.com/ls/click?upn=3DYb5GCmH5NAN8=
+hwB7qdPPzn89xFEMebWrHwP4jWjPmv9yZ-2BOxSL-2FyugZb0XAeOUCyX8gXKLg9hew-2F4rWAB=
+devBIffT3MPFWwB6R3SGDtBU8DcbDg2-2F4Szt595TchuP3bEKyjtOoLCsEkDanhFbr1XGJCbkI=
+4g0HPFX-2BMc9phUcsspgqKqZxniLkJdQX8Bo5pYxCRGqrjK4EI3nXVAKomWQ5SGHBX3CW3CBPx=
+fZaDue7vVCDCEqEJyjX-2FBYsFXhlRx7GU7_jGBhewFDuaYzBogJSwKTxRFJegVfYab6FzNQqcp=
+ei7-2B6MYizum0tjmpLydjV6p8JmxTcDEBqGhC0wBnEmmAZXT3zftRSuRJE51PFnx3FW6jMllXm=
+phwcnGbNvoAZvDShsNpZxH-2Bu0wkUM8pHo8WUZFVxYF3tmcPSgKIJS9v-2FdPfHHHxOWX3HwIE=
+hEO240uRq4BKL5UHCK7KYnipo-2FJcG6O0AAjBmY4lEMLNkgOXzklvNeocPn7jfSpRZnfUZqi6H=
+CixJB4myXZ4GIL4C4OAaDE1S-2F8XPFhtL5lUZIIHmXgZGB0QftRjCU7ytJeJ-2BkEaIlv-2Bfs=
+ZtqdrjXenLbjH9aSrEnYdkOpJSnXsA0DidGQmMxsGMpbKvWOxxJ063r5VXOz2etTg0zZvBCGQZu=
+uJqFhA-3D-3D">
+<img alt=3D"Image of Engelwurzbalsam &amp; Thymianbalsam Myrte Kinder Set" =
+src=3D"https://casida.com/wp-content/uploads/2019/11/Casida-Set-Engelwurzba=
+lsam-Thymianbalsam-mit-Myrte-Kinder-10209008-10086729-PZN-Apotheke-Erkaeltu=
+ng-Baby-pflanzlich-behandeln.jpg" style=3D"display:block;max-width:100%;wid=
+th:auto;max-height:200px;" width=3D"176">
+</a>
+</td>
+</tr>
+<tr><td align=3D"center"><table align=3D"center"><tbody><tr><td align=3D"ce=
+nter" style=3D"color:#000000;font-family:Century Gothic,AppleGothic,Arial;f=
+ont-size:14px;font-weight:bold;font-style:normal;text-align:center;letter-s=
+pacing:0px;padding-top:5px;padding-bottom:0px;line-height:1.3;">Engelwurzba=
+lsam &amp; Thymianbalsam Myrte Kinder Set</td></tr></tbody></table></td></t=
+r>
+<tr><td align=3D"center"><table align=3D"center"><tbody><tr><td align=3D"ce=
+nter" style=3D"color:#222222;font-family:Century Gothic,AppleGothic,Arial;f=
+ont-size:14px;font-weight:normal;font-style:normal;text-align:center;letter=
+-spacing:0px;padding-top:5px;padding-bottom:0px;line-height:1.3;">=E2=82=AC=
+ 19,95</td></tr></tbody></table></td></tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+<!--[if !true]><!--></div><!--<![endif]-->
+<!--[if true]></td><![endif]-->
+<!--[if true]><td width=3D"50%"><![endif]-->
+<!--[if !true]><!--><div class=3D"kl-product-cell-stack" style=3D"display:t=
+able-cell;vertical-align:middle;font-size:0;width:50%;"><!--<![endif]-->
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentatio=
+n" width=3D"100%">
+<tbody>
+<tr>
+<td style=3D"font-size:0px;padding:9px 9px 9px 9px;word-break:break-word;" =
+vertical-align=3D"top">
+<table align=3D"left" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" clas=
+s=3D"kl-product-subblock" style=3D"table-layout:fixed;" width=3D"100%">
+<tbody>
+<tr>
+<td align=3D"center">
+<a style=3D"color:#000; font-style:normal; font-weight:normal; text-decorat=
+ion:underline" href=3D"https://trk.klclick1.com/ls/click?upn=3DYb5GCmH5NAN8=
+hwB7qdPPzn89xFEMebWrHwP4jWjPmv-2Bfyb1Y3c6Nx94LjRj-2BhJCZu8n9Fwmv-2BWrSiaPjP=
+NPthXavW3-2FuuMbjG53536gO6DtivixS6Wh79-2BHiCHUcG6Kj1gysAsThsjC0Gi4w-2BJfZGW=
+mMFmJK8U6z51AXa5Jp0elkZGfyeFscstGvcKkEFkK-2BdRpItOhl3PcYC9ZXVsyw7vFzotSag1t=
+ca2s0QJ8L2Gk-3D9dCr_jGBhewFDuaYzBogJSwKTxRFJegVfYab6FzNQqcpei7-2B6MYizum0tj=
+mpLydjV6p8JmxTcDEBqGhC0wBnEmmAZXT3zftRSuRJE51PFnx3FW6jMllXmphwcnGbNvoAZvDSh=
+sNpZxH-2Bu0wkUM8pHo8WUZFVxYF3tmcPSgKIJS9v-2FdPfHHHxOWX3HwIEhEO240uRq4BKL5UH=
+CK7KYnipo-2FJcG6PgaKZe2wkRHd3VmDvlLnkFopOkQDdinOa7D-2FUKqCYeiuFKjgSgF02TyKP=
+53FD8rmpvLY9YEjYLJsB-2BRUBuylLegxZ72Z8SW0CcX77MP2-2FOfv5Cs463ZdYa9vcyXJc4q6=
+t-2BfqrAbUwboS56-2F7-2FU1dMPJrGbPJfsMLKRnhflWmzgHH6fQC67ACUQLoBDTeGPKgw-3D-=
+3D">
+<img alt=3D"Image of Lavendel=C3=B6l" src=3D"https://casida.com/wp-content/=
+uploads/2019/07/Casida-Lavendeloel-naturrein-neu-=E2=80=93-10-ml-15880722-P=
+ZN-Apotheke-aetherische-Oele-Diffuser.jpg" style=3D"display:block;max-width=
+:100%;width:auto;max-height:200px;" width=3D"176">
+</a>
+</td>
+</tr>
+<tr><td align=3D"center"><table align=3D"center"><tbody><tr><td align=3D"ce=
+nter" style=3D"color:#000000;font-family:Century Gothic,AppleGothic,Arial;f=
+ont-size:14px;font-weight:bold;font-style:normal;text-align:center;letter-s=
+pacing:0px;padding-top:5px;padding-bottom:0px;line-height:1.3;">Lavendel=C3=
+=B6l</td></tr></tbody></table></td></tr>
+<tr><td align=3D"center"><table align=3D"center"><tbody><tr><td align=3D"ce=
+nter" style=3D"color:#222222;font-family:Century Gothic,AppleGothic,Arial;f=
+ont-size:14px;font-weight:normal;font-style:normal;text-align:center;letter=
+-spacing:0px;padding-top:5px;padding-bottom:0px;line-height:1.3;">=E2=82=AC=
+ 9,95</td></tr></tbody></table></td></tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+<!--[if !true]><!--></div><!--<![endif]-->
+<!--[if true]></td><![endif]-->
+</div>
+<!--[if true]></tr></table><![endif]--></div>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</td>
+</tr>
+<tr>
+<td style=3D"font-size:0px;word-break:break-word;">
+<div class=3D"mj-column-per-100 mj-outlook-group-fix component-wrapper" sty=
+le=3D"font-size:0px;text-align:left;direction:ltr;display:inline-block;vert=
+ical-align:top;width:100%;">
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentatio=
+n" style=3D"table-layout:fixed;" width=3D"100%">
+<tbody>
+<tr>
+<td class=3D"" style=3D"background-color:#fafafa;vertical-align:top;padding=
+-top:20px;padding-right:10px;padding-bottom:20px;padding-left:10px;">
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentatio=
+n" style=3D"" width=3D"100%">
+<tbody>
+<tr>
+<td align=3D"center" class=3D"kl-button" style=3D"font-size:0px;padding:0px=
+;word-break:break-word;" vertical-align=3D"middle">
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"border-col=
+lapse:separate;line-height:100%;">
+<tbody><tr>
+<td align=3D"center" bgcolor=3D"#fb9e2f" role=3D"presentation" style=3D"bor=
+der:none;border-bottom:solid 1px #fb9e2f;border-left:solid 1px #fb9e2f;bord=
+er-radius:4px;border-right:solid 1px #fb9e2f;border-top:solid 1px #fb9e2f;c=
+ursor:auto;mso-padding-alt:16px 32px 16px 32px;background:#fb9e2f;" valign=
+=3D"middle">
+<a style=3D"color:#fff; font-style:normal; font-weight:bold; text-decoratio=
+n:none; display:inline-block; background:#fb9e2f; font-family:Century Gothi=
+c, AppleGothic, Arial; font-size:16px; line-height:100%; letter-spacing:0; =
+margin:0; text-transform:none; padding:16px 32px 16px 32px; mso-padding-alt=
+:0; border-radius:4px" target=3D"_blank" href=3D"https://trk.klclick1.com/l=
+s/click?upn=3DYb5GCmH5NAN8hwB7qdPPzn89xFEMebWrHwP4jWjPmv9CyGuqh4y67u2tvrzFw=
+zfuV-2BgOzhg7EGZm9N0ycODUQW5NU-2F2eHamqBoF2VXQh-2B9p-2FIONV4uAXE4W69laO-2FJ=
+lEKS27S3H6foIbO8ZRSpe0sjCxc2ZB1QRPUAnzqZz7LlCwmLBTl52O-2Bi-2BG4W6-2FilPj13J=
+px1EoNTWBRghjLEt3QybUrFoN-2BarzjE8n6LfQxro-3DViFB_jGBhewFDuaYzBogJSwKTxRFJe=
+gVfYab6FzNQqcpei7-2B6MYizum0tjmpLydjV6p8JmxTcDEBqGhC0wBnEmmAZXT3zftRSuRJE51=
+PFnx3FW6jMllXmphwcnGbNvoAZvDShsNpZxH-2Bu0wkUM8pHo8WUZFVxYF3tmcPSgKIJS9v-2Fd=
+PfHHHxOWX3HwIEhEO240uRq4BKL5UHCK7KYnipo-2FJcG6AA5YIgev3LpN54ATrvNpLR37Yfk6u=
+mTVqYzqhV7CdX9LcE8aJkHNOqvjW4J-2F9ULOptz6hu24iT9U9YudbUyFSR6kw68CaZUgCoafGD=
+-2FHU3jIV0o5-2B11qGyn5FrFTGAtKCqvYouJWjy51uH2d5ju5nUcnKpGAmFTqq0hJyD-2FXJqx=
+-2BtTKXmV2cdirY2cy2Uq8hg-3D-3D">
+              Mehr nat=C3=BCrliche Gesundheitsprodukte &gt;
+            </a>
+</td>
+</tr>
+</tbody></table>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!--[if mso | IE]></td></tr></table><![endif]-->
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!--[if mso | IE]></td></tr></table><table align=3D"center" border=3D"0" ce=
+llpadding=3D"0" cellspacing=3D"0" class=3D"kl-row-outlook" style=3D"width:6=
+00px;" width=3D"600" ><tr><td style=3D"line-height:0px;font-size:0px;mso-li=
+ne-height-rule:exactly;"><![endif]-->
+<div class=3D"kl-row" style=3D"margin:0px auto;max-width:600px;">
+<table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" ro=
+le=3D"presentation" style=3D"width:100%;">
+<tbody>
+<tr>
+<td style=3D"direction:ltr;font-size:0px;padding:0;text-align:center;">
+<!--[if mso | IE]><table role=3D"presentation" border=3D"0" cellpadding=3D"=
+0" cellspacing=3D"0"><tr><td class=3D"kl-column-outlook" style=3D"vertical-=
+align:top;width:600px;" ><![endif]-->
+<div class=3D"mj-column-per-100 mj-outlook-group-fix kl-column" style=3D"fo=
+nt-size:0px;text-align:left;direction:ltr;display:inline-block;vertical-ali=
+gn:top;width:100%;">
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentatio=
+n" style=3D"vertical-align:top;table-layout:fixed;" width=3D"100%">
+<tbody>
+<tr>
+<td align=3D"center" style=3D"font-size:0px;word-break:break-word;">
+<div class=3D"mj-column-per-100 mj-outlook-group-fix component-wrapper" sty=
+le=3D"font-size:0px;text-align:left;direction:ltr;display:inline-block;vert=
+ical-align:top;width:100%;">
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentatio=
+n" style=3D"table-layout:fixed;" width=3D"100%">
+<tbody>
+<tr>
+<td class=3D"" style=3D"background-color:#f7f7f7;vertical-align:top;padding=
+-top:0px;padding-right:0px;padding-bottom:0px;padding-left:0px;">
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentatio=
+n" style=3D"" width=3D"100%">
+<tbody>
+<tr>
+<td>
+<div style=3D"width:100%;text-align:center">
+<!--[if true]><table style=3D"all:unset;opacity:0;" border=3D"0" cellpaddin=
+g=3D"0" cellspacing=3D"0" ><tr><![endif]-->
+<!--[if !true]><!--><div class=3D"" style=3D"display:inline-block;padding-r=
+ight:10px;"><!--<![endif]-->
+<!--[if true]><td style=3D"padding-right:10px;"><![endif]-->
+<div style=3D"text-align: center;">
+<a style=3D"color:#000; font-style:normal; font-weight:normal; text-decorat=
+ion:underline" target=3D"_blank" href=3D"https://trk.klclick1.com/ls/click?=
+upn=3DYb5GCmH5NAN8hwB7qdPPzq1s6Nfcq9ZlEmO1gbpQ2ztB0GiT6bYmi1RNhPRvGT5yePNd5=
+BC6jpzOYGwzoh-2Bh3NwZc6h-2FWlurvHgHpqhXvVwS0uV8OLbAAmFH9sJKMkBooZ9lNKO-2Fa-=
+2FH1nFm11gkr1cPdolClYt-2FZXK4pvrFM-2FkDFJ8XFDs2yiyurgn45Pw-2F76J5lgdfu8zO-2=
+FMrsUzBVlFw-3D-3DOxkV_jGBhewFDuaYzBogJSwKTxRFJegVfYab6FzNQqcpei7-2B6MYizum0=
+tjmpLydjV6p8JmxTcDEBqGhC0wBnEmmAZXT3zftRSuRJE51PFnx3FW6jMllXmphwcnGbNvoAZvD=
+ShsNpZxH-2Bu0wkUM8pHo8WUZFVxYF3tmcPSgKIJS9v-2FdPfHHHxOWX3HwIEhEO240uRq4BKL5=
+UHCK7KYnipo-2FJcG6EEXiPAPFfjgCJ1U2bx67N9ugl0MbXYl-2BPRMwROWkBiQKQEsRiWZyQnA=
+A6tQs6vvssDlYBsAgFZr-2FC1ML-2B524PWquHi0el-2FK5yeMv1oMLRsBYfYA7VNArCyJWDNuG=
+ajlvpszPLHVXr2TNY1HnYDSXI9X9T7FIcjFlPJeYyoGrmdJbEcCNEV5yLib8N9KuZP-2FZA-3D-=
+3D">
+<img alt=3D"Facebook" src=3D"https://d3k81ch9hvuctc.cloudfront.net/assets/e=
+mail/buttons/default/facebook_96.png" style=3D"width:32;" width=3D"32">
+</a>
+</div>
+<!--[if true]></td><![endif]-->
+<!--[if !true]><!--></div><!--<![endif]-->
+<!--[if !true]><!--><div class=3D"" style=3D"display:inline-block;padding-r=
+ight:10px;"><!--<![endif]-->
+<!--[if true]><td style=3D"padding-right:10px;"><![endif]-->
+<div style=3D"text-align: center;">
+<a style=3D"color:#000; font-style:normal; font-weight:normal; text-decorat=
+ion:underline" target=3D"_blank" href=3D"https://trk.klclick1.com/ls/click?=
+upn=3DYb5GCmH5NAN8hwB7qdPPzr9HgWuEIGcEriajen-2Bv-2BxvAk1dlT3jDoUlt28-2B214H=
+rYA-2FoSN3LMEWeCES1xZxn52qyhMYZVQ2RSHSxl4Hy-2F6VHiFTz8aRuO-2FxGWFyJsrBHux-2=
+BxVmYGN8DXisGDGtOBYnQV-2F6SzR9vTlwr0CPhHPy8XiHic3xXfm71tQXg2UqvEdgqcgO24qGG=
+4-2BdyFVf-2Foog-3D-3DjFxE_jGBhewFDuaYzBogJSwKTxRFJegVfYab6FzNQqcpei7-2B6MYi=
+zum0tjmpLydjV6p8JmxTcDEBqGhC0wBnEmmAZXT3zftRSuRJE51PFnx3FW6jMllXmphwcnGbNvo=
+AZvDShsNpZxH-2Bu0wkUM8pHo8WUZFVxYF3tmcPSgKIJS9v-2FdPfHHHxOWX3HwIEhEO240uRq4=
+BKL5UHCK7KYnipo-2FJcG6G1-2BtsPgZVjZbdG0itQmv7Dg5xhD3VpG2gvpX-2BclPZjj7BJYcv=
+NGf0CWJYRZXtOxLpIUwtdjUi7KonqOc3tniHtS9iZe4QslSRIPq6XoVYcaxHuYe4l9fygsjRLm5=
+yDuFCPSfwv60H2nplo5t-2F24D-2BINKrWFAj-2B7iXzlpLpOCs4PxK8-2F9mMKTVVk1yoBWQ34=
+jQ-3D-3D">
+<img alt=3D"Instagram" src=3D"https://d3k81ch9hvuctc.cloudfront.net/assets/=
+email/buttons/default/instagram_96.png" style=3D"width:32;" width=3D"32">
+</a>
+</div>
+<!--[if true]></td><![endif]-->
+<!--[if !true]><!--></div><!--<![endif]-->
+<!--[if !true]><!--><div class=3D"" style=3D"display:inline-block;padding-r=
+ight:10px;"><!--<![endif]-->
+<!--[if true]><td style=3D"padding-right:10px;"><![endif]-->
+<div style=3D"text-align: center;">
+<a style=3D"color:#000; font-style:normal; font-weight:normal; text-decorat=
+ion:underline" target=3D"_blank" href=3D"https://trk.klclick1.com/ls/click?=
+upn=3DYb5GCmH5NAN8hwB7qdPPzlAIfaQSPvF1KrxlQpQQr26p-2Fu9a1f0qZUiiMI7ZZUxCzO9=
+kfwtu-2BYt0Qa4NYGIRxBB-2BAXpsES9UMGUdDm9E-2FMkihl1Ow0IRSAaxcJLPCjnk6u0HZkMR=
+GA7zGA-2B9BETc9pNDUAXjnxYdLuR6MS7iqo0SqZChyHEofRdY8NyN7yVOr7dQ1hriVciyoYy9l=
+Pw7L6Enp86LFrx-2BCIHRzCOjZfmzHzER8wyIlNgJuzWJ-2B9-2Fvw0A9_jGBhewFDuaYzBogJS=
+wKTxRFJegVfYab6FzNQqcpei7-2B6MYizum0tjmpLydjV6p8JmxTcDEBqGhC0wBnEmmAZXT3zft=
+RSuRJE51PFnx3FW6jMllXmphwcnGbNvoAZvDShsNpZxH-2Bu0wkUM8pHo8WUZFVxYF3tmcPSgKI=
+JS9v-2FdPfHHHxOWX3HwIEhEO240uRq4BKL5UHCK7KYnipo-2FJcG6Orpde-2Bgg1t7lRHQ63F2=
+it7gYRDTF0PQ-2BvX3zKVgDf0S3bRvpoi7paCUfLdEUzxUZE1GFz6t8O0oYqih-2FfWXpHDpt-2=
+BANvRTpXY4-2BakZQqNvUMtbYfAynvXJ6AvoxNxpduNhvf619AZJV8xUOASqi8YIlSW3gSkenLH=
+O0U-2FWccvw0GWTM6U2tbL-2BfGeQGWixnxA-3D-3D">
+<img alt=3D"Youtube" src=3D"https://d3k81ch9hvuctc.cloudfront.net/assets/em=
+ail/buttons/default/youtube_96.png" style=3D"width:32;" width=3D"32">
+</a>
+</div>
+<!--[if true]></td><![endif]-->
+<!--[if !true]><!--></div><!--<![endif]-->
+<!--[if !true]><!--><div class=3D"" style=3D"display:inline-block;"><!--<![=
+endif]-->
+<!--[if true]><td style=3D""><![endif]-->
+<div style=3D"text-align: center;">
+<a style=3D"color:#000; font-style:normal; font-weight:normal; text-decorat=
+ion:underline" target=3D"_blank" href=3D"https://trk.klclick1.com/ls/click?=
+upn=3DYb5GCmH5NAN8hwB7qdPPzqEHia5MEE6YMMtFE16g-2BQdJM7rCJgZoSb9td3Tog-2BKvR=
+5Wh5Xa1B5Xbcb8Ttx81lUqptH4fnyG-2FcgJCeBjUxxzEjh9SxW-2BGAVPxOIPFGQAzHrwpkEMq=
+GS3GIOyqK-2FGhMmnI5BzYsGWMeX0tosIy0KkiBtOz-2BXW8te1TGdMjpxB7qzqwD1mYUbUD4LN=
+OQixTDg-3D-3DcAFy_jGBhewFDuaYzBogJSwKTxRFJegVfYab6FzNQqcpei7-2B6MYizum0tjmp=
+LydjV6p8JmxTcDEBqGhC0wBnEmmAZXT3zftRSuRJE51PFnx3FW6jMllXmphwcnGbNvoAZvDShsN=
+pZxH-2Bu0wkUM8pHo8WUZFVxYF3tmcPSgKIJS9v-2FdPfHHHxOWX3HwIEhEO240uRq4BKL5UHCK=
+7KYnipo-2FJcG6Pd-2FgNwcHkAlWLIbxC5fzWCi2c9EtfLFJwCLQbNaXbcBF5gZdCb4LLchh8Wu=
+EOO2Q-2FzM3fN1s0XlegYl8Oizh8TLbHtGekhiHUeKx471KOYaefouGp4rCmuGj5p2EoBUZ4ELv=
+-2FEGNj9OLUyOQSwLupFXamqCwceadExHpXz6xIXCUuTfBPPiFI1gX9qkyd9k0g-3D-3D">
+<img alt=3D"Pinterest" src=3D"https://d3k81ch9hvuctc.cloudfront.net/assets/=
+email/buttons/default/pinterest_96.png" style=3D"width:32;" width=3D"32">
+</a>
+</div>
+<!--[if true]></td><![endif]-->
+<!--[if !true]><!--></div><!--<![endif]-->
+<!--[if true]></tr></table><![endif]-->
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</td>
+</tr>
+<tr>
+<td style=3D"font-size:0px;word-break:break-word;">
+<div class=3D"mj-column-per-100 mj-outlook-group-fix component-wrapper kl-t=
+ext-table-layout" style=3D"font-size:0px;text-align:left;direction:ltr;disp=
+lay:inline-block;vertical-align:top;width:100%;">
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentatio=
+n" style=3D"table-layout:fixed;" width=3D"100%">
+<tbody>
+<tr>
+<td class=3D"" style=3D"background-color:#f7f7f7;vertical-align:top;padding=
+-top:0px;padding-right:0px;padding-bottom:0px;padding-left:0px;">
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentatio=
+n" style=3D"" width=3D"100%">
+<tbody>
+<tr>
+<td align=3D"left" class=3D"kl-text" style=3D"font-size:0px;padding:0px;pad=
+ding-top:9px;padding-right:18px;padding-bottom:0px;padding-left:18px;word-b=
+reak:break-word;">
+<div style=3D"font-family:Arial;font-size:14px;font-style:normal;font-weigh=
+t:400;letter-spacing:0px;line-height:1.3;text-align:left;color:#ffffff;"><p=
+ style=3D"text-align: center;"><span style=3D"color:#000000;"><span style=
+=3D"font-family:century gothic,applegothic,sans-serif;"><strong>KONTAKT &am=
+p; INFORMATIONEN</strong></span></span></p>
+<p style=3D"text-align: center;"><span style=3D"font-family:century gothic,=
+applegothic,sans-serif;"><span style=3D"color:#000000;"><strong>Tel. :</str=
+ong> </span><a href=3D"tel:%20+%2049%20(0)%203761%20-%207608015" style=3D"c=
+olor:#000; font-style:normal; font-weight:normal; text-decoration:underline=
+"><span style=3D"color:#000000;"> + 49 (0) 3761 - 7608015</span></a><span s=
+tyle=3D"color:#000000;"><br>
+<strong>E-Mail :</strong> </span><a href=3D"mailto:%20info@casida.de" style=
+=3D"color:#000; font-style:normal; font-weight:normal; text-decoration:unde=
+rline"><span style=3D"color:#000000;"> info@casida.de</span></a></span><spa=
+n style=3D"color:#000000;"><span style=3D"font-family:century gothic,appleg=
+othic,sans-serif;"></span></span></p>
+<div class=3D"toggle_content">
+<p style=3D"padding-bottom:0; text-align:center"><span style=3D"font-family=
+:century gothic,applegothic,sans-serif;"></span><span style=3D"font-family:=
+century gothic,applegothic,sans-serif;"><a style=3D"color:#000; font-style:=
+normal; font-weight:normal; text-decoration:underline" title=3D"Kontakt" hr=
+ef=3D"https://trk.klclick1.com/ls/click?upn=3DYb5GCmH5NAN8hwB7qdPPzss5uFyNo=
+BaGyL6q9oy3Z5YEHzUDXU64iiYab9rmrX4q6-2BYoby-2BCiiB3r1Hx6BL93vqyViD6w2kWDYM2=
+B4SzBs2HM-2FI-2BtYfRNFL0ghXpG0e2ZQPC2Tyabjn2lciU1QloBV0gdZY1rcHSCqytmt4BvwO=
+tLbin7SuLhUHyofR-2BAWY9-2FUPvIOZgOVruUYNOSHNByA-3D-3DyDHD_jGBhewFDuaYzBogJS=
+wKTxRFJegVfYab6FzNQqcpei7-2B6MYizum0tjmpLydjV6p8JmxTcDEBqGhC0wBnEmmAZXT3zft=
+RSuRJE51PFnx3FW6jMllXmphwcnGbNvoAZvDShsNpZxH-2Bu0wkUM8pHo8WUZFVxYF3tmcPSgKI=
+JS9v-2FdPfHHHxOWX3HwIEhEO240uRq4BKL5UHCK7KYnipo-2FJcG6Ea5NrK0DsqJ47BqzMY-2B=
+bpoo7WwlUsGKiq1Yw26Lfq8HuXitbAkdmIpxHb7fkEbk17iK6dhe8ek6gNw5mDCQsu-2B2ETrVl=
+n2yCXGk8XN5jIpaWl9muY30-2FgpmfkCAssJK9IFgeCg-2FU-2B7Jfp-2FOUN28FvX-2F79RHjD=
+kY6W4L-2FkkGYX8EPDc47BjgbeGWdg3C6-2FBDgg-3D-3D"><span style=3D"color:#00000=
+0;"><span class=3D"nav-link-text">Kontakt</span></span></a><span style=3D"c=
+olor:#000000;"><span class=3D"nav-link-text"> | </span></span><span style=
+=3D"color:#000000;"><span class=3D"nav-link-text"></span></span><a style=3D=
+"color:#000; font-style:normal; font-weight:normal; text-decoration:underli=
+ne" title=3D"Casida Partner werden" href=3D"https://trk.klclick1.com/ls/cli=
+ck?upn=3DYb5GCmH5NAN8hwB7qdPPzseirExPcu1t29s6qTrbMZ54V-2BQKe1c05RusWaCt-2FA=
+Z1pY5t9Aul0VmfPrCQqeFW4NDgTwe5Iuw-2B8hBy5Jz29p3RMkeOceoDNaClxKvVFdwx-2B3dIo=
+lbSXtqAeNnFVg-2Fh6IyZdTY8NpGN-2F4tmzHQpVp1VOZNGJbWyROmtLBboX0em-2FsD0LE09p7=
+tOFiOSU3BYTIw8ismFKNedGfT1KGp3DMg-3Dt_zG_jGBhewFDuaYzBogJSwKTxRFJegVfYab6Fz=
+NQqcpei7-2B6MYizum0tjmpLydjV6p8JmxTcDEBqGhC0wBnEmmAZXT3zftRSuRJE51PFnx3FW6j=
+MllXmphwcnGbNvoAZvDShsNpZxH-2Bu0wkUM8pHo8WUZFVxYF3tmcPSgKIJS9v-2FdPfHHHxOWX=
+3HwIEhEO240uRq4BKL5UHCK7KYnipo-2FJcG6MN1U-2F74Fp-2FTO8PlIpLNPLfySvH1oOG2zNW=
+eDuGaztm7mLtIVk6QgFeQB6SWVJSCxahDJxe5ru1WR1xCB3P2DmdPJZeHZx6kiqCRI7cnsmrDy1=
+X5mTuxe2e-2B0nvvqVbZjmpkzLbjKvcnYXtpcNqqj6sKRF1HAGKP5SPjiQz78ZUfNO3cQ4299tV=
+gUu4cNIUnkA-3D-3D"><span style=3D"color:#000000;"><span class=3D"nav-link-t=
+ext">Casida Partner werden</span></span></a><span style=3D"color:#000000;">=
+<span class=3D"nav-link-text"> | </span></span><span style=3D"color:#000000=
+;"><span class=3D"nav-link-text"></span></span><a style=3D"color:#000; font=
+-style:normal; font-weight:normal; text-decoration:underline" title=3D"=C3=
+=9Cber Casida" href=3D"https://trk.klclick1.com/ls/click?upn=3DYb5GCmH5NAN8=
+hwB7qdPPzuGNy78ORVDA0imydUkuU2jTEy9pYb20xOE3fIPPOxdbAzYvWW8H-2BSeYxhDeTLdJo=
+N1B1xCcgOqS5p4ud9JYZdHBBCN35-2BtL5tLGQle-2Bi4mTmsOiPawJIkVjEBjQWMXYgw5odflz=
+A9sKic2aQH77TeEKTdrxW-2FmcY5n0PkBlGsGtQxJgG4AEsvzyoNgroVVEuA-3D-3DkkIC_jGBh=
+ewFDuaYzBogJSwKTxRFJegVfYab6FzNQqcpei7-2B6MYizum0tjmpLydjV6p8JmxTcDEBqGhC0w=
+BnEmmAZXT3zftRSuRJE51PFnx3FW6jMllXmphwcnGbNvoAZvDShsNpZxH-2Bu0wkUM8pHo8WUZF=
+VxYF3tmcPSgKIJS9v-2FdPfHHHxOWX3HwIEhEO240uRq4BKL5UHCK7KYnipo-2FJcG6C982Bbic=
+LU-2BwpjqaOjdneNAOEzR9Itj-2FA7UwXokqv4rlBEUFc5ZFdcUgVr1aItZAqqVlDHmm1-2FrTE=
+Q948PopfiVTkPOG9I48cteUW7c5PRiXRnazUdC21Xd4GvuEd81MYk73fmdlrZc8S7V-2FJGCgcm=
+bOGAjxAFzihUCEawShVeFhvz0rYCSHYDhuVuSO9hCtg-3D-3D"><span style=3D"color:#00=
+0000;"><span class=3D"nav-link-text">=C3=9Cber Casida</span></span></a><a s=
+tyle=3D"color:#000; font-style:normal; font-weight:normal; text-decoration:=
+underline" title=3D"Casida Partner werden" href=3D"https://trk.klclick1.com=
+/ls/click?upn=3DYb5GCmH5NAN8hwB7qdPPzseirExPcu1t29s6qTrbMZ54V-2BQKe1c05RusW=
+aCt-2FAZ1pY5t9Aul0VmfPrCQqeFW4NDgTwe5Iuw-2B8hBy5Jz29p3RMkeOceoDNaClxKvVFdwx=
+-2B3dIolbSXtqAeNnFVg-2Fh6IyZdTY8NpGN-2F4tmzHQpVp1VOZNGJbWyROmtLBboX0em-2FsD=
+0LE09p7tOFiOSU3BYTIw8ismFKNedGfT1KGp3DMg-3D-duC_jGBhewFDuaYzBogJSwKTxRFJegV=
+fYab6FzNQqcpei7-2B6MYizum0tjmpLydjV6p8JmxTcDEBqGhC0wBnEmmAZXT3zftRSuRJE51PF=
+nx3FW6jMllXmphwcnGbNvoAZvDShsNpZxH-2Bu0wkUM8pHo8WUZFVxYF3tmcPSgKIJS9v-2FdPf=
+HHHxOWX3HwIEhEO240uRq4BKL5UHCK7KYnipo-2FJcG6EyRVWZBJrqvoL6tA7nB32KhCrorwliO=
+ueRVVALKrY2yfujK-2Fu9eHxv2a8ckbrYI2xognYFNzoXKG4fQ2cQt75A2lCtDlCC738AQTP1eR=
+DCBWYD1nSb3gXjTbPwAKjlv-2F8mrgVECP4Abhfk6BVELqtlW9zGHHWlEBQP97f8uBZZ4x1F8vo=
+qsbdppXctBu2-2FdBg-3D-3D"><span style=3D"color:#000000;"><span class=3D"nav=
+-link-text"></span></span></a><a style=3D"color:#000; font-style:normal; fo=
+nt-weight:normal; text-decoration:underline" title=3D"Kontakt" href=3D"http=
+s://trk.klclick1.com/ls/click?upn=3DYb5GCmH5NAN8hwB7qdPPzss5uFyNoBaGyL6q9oy=
+3Z5YEHzUDXU64iiYab9rmrX4q6-2BYoby-2BCiiB3r1Hx6BL93vqyViD6w2kWDYM2B4SzBs2HM-=
+2FI-2BtYfRNFL0ghXpG0e2ZQPC2Tyabjn2lciU1QloBV0gdZY1rcHSCqytmt4BvwOtLbin7SuLh=
+UHyofR-2BAWY9-2FUPvIOZgOVruUYNOSHNByA-3D-3De0vq_jGBhewFDuaYzBogJSwKTxRFJegV=
+fYab6FzNQqcpei7-2B6MYizum0tjmpLydjV6p8JmxTcDEBqGhC0wBnEmmAZXT3zftRSuRJE51PF=
+nx3FW6jMllXmphwcnGbNvoAZvDShsNpZxH-2Bu0wkUM8pHo8WUZFVxYF3tmcPSgKIJS9v-2FdPf=
+HHHxOWX3HwIEhEO240uRq4BKL5UHCK7KYnipo-2FJcG6K-2F-2B02SbPhvV04WWttuxXpOl7fOE=
+Xvpd1QzyHnhn1g3pDu046lRvhtpclqT9Vi4Ks7ccRhgQQrJJXICia8v1ahhNZ63aNxlO74wWTC8=
+hHzIfiCS9fXjcDY-2FXVp2ashJs-2Ba-2FOfWlnA228h5OrxRQobCrYP7-2B97lFKmRhnb0mNeK=
+-2FR9h0-2BV-2B2sUxp34jVGklWDuQ-3D-3D"><span style=3D"color:#000000;"><span =
+class=3D"nav-link-text"></span></span></a></span><span style=3D"color:#0000=
+00;"></span></p>
+</div></div>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</td>
+</tr>
+<tr>
+<td align=3D"center" style=3D"font-size:0px;word-break:break-word;">
+<div class=3D"mj-column-per-100 mj-outlook-group-fix component-wrapper" sty=
+le=3D"font-size:0px;text-align:left;direction:ltr;display:inline-block;vert=
+ical-align:top;width:100%;">
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentatio=
+n" style=3D"table-layout:fixed;" width=3D"100%">
+<tbody>
+<tr>
+<td class=3D"" style=3D"background-color:#f7f7f7;vertical-align:top;padding=
+-top:0px;padding-right:0px;padding-bottom:0px;padding-left:0px;">
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentatio=
+n" style=3D"" width=3D"100%">
+<tbody>
+<tr>
+<td align=3D"center" class=3D"kl-image kl-image-177923" style=3D"font-size:=
+0px;word-break:break-word;">
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"border-col=
+lapse:collapse;border-spacing:0px;">
+<tbody>
+<tr>
+<td class=3D"" style=3D"width:510px;border:0;padding:0px 0px 0px 0px;" vali=
+gn=3D"top">
+<img alt=3D"Payments" src=3D"https://d3k81ch9hvuctc.cloudfront.net/company/=
+UmQHWZ/images/d140cea0-93f5-474d-a9b5-b8b392ba0bda.png" style=3D"display:bl=
+ock;outline:none;text-decoration:none;height:auto;width:100%;font-size:13px=
+;" title=3D"Payments" width=3D"510">
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</td>
+</tr>
+<tr>
+<td style=3D"font-size:0px;word-break:break-word;">
+<div class=3D"mj-column-per-100 mj-outlook-group-fix component-wrapper" sty=
+le=3D"font-size:0px;text-align:left;direction:ltr;display:inline-block;vert=
+ical-align:top;width:100%;">
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentatio=
+n" style=3D"table-layout:fixed;" width=3D"100%">
+<tbody>
+<tr>
+<td class=3D"" style=3D"background-color:#f7f7f7;vertical-align:top;padding=
+-top:5px;padding-right:0px;padding-bottom:5px;padding-left:0px;">
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentatio=
+n" style=3D"" width=3D"100%">
+<tbody>
+<tr>
+<td align=3D"center" style=3D"font-size:0px;padding:0px;word-break:break-wo=
+rd;">
+<p style=3D"padding-bottom:0; border-top:solid 1px #000; font-size:1px; mar=
+gin:0 auto; width:100%">
+</p>
+<!--[if mso | IE]><table align=3D"center" border=3D"0" cellpadding=3D"0" ce=
+llspacing=3D"0" style=3D"border-top:solid 1px #000000;font-size:1px;margin:=
+0px auto;width:600px;" role=3D"presentation" width=3D"600px" ><tr><td style=
+=3D"height:0;line-height:0;"> &nbsp;
+</td></tr></table><![endif]-->
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</td>
+</tr>
+<tr>
+<td style=3D"font-size:0px;word-break:break-word;">
+<div class=3D"mj-column-per-100 mj-outlook-group-fix component-wrapper kl-t=
+ext-table-layout" style=3D"font-size:0px;text-align:left;direction:ltr;disp=
+lay:inline-block;vertical-align:top;width:100%;">
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentatio=
+n" style=3D"table-layout:fixed;" width=3D"100%">
+<tbody>
+<tr>
+<td class=3D"" style=3D"background-color:#f7f7f7;vertical-align:top;padding=
+-top:0px;padding-right:0px;padding-bottom:0px;padding-left:0px;">
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentatio=
+n" style=3D"" width=3D"100%">
+<tbody>
+<tr>
+<td align=3D"left" class=3D"kl-text" style=3D"font-size:0px;padding:0px;pad=
+ding-top:0px;padding-right:18px;padding-bottom:30px;padding-left:18px;word-=
+break:break-word;">
+<div style=3D"font-family:Palatino Linotype,Palatino,Georgia;font-size:14px=
+;font-style:normal;font-weight:400;letter-spacing:0px;line-height:1.3;text-=
+align:left;color:#000000;"><p style=3D"padding-bottom:0; text-align:center"=
+><span style=3D"font-family:century gothic,applegothic,sans-serif;">Du m=C3=
+=B6chtest&nbsp;keine E-Mails mehr erhalten? Klicke&nbsp;<a class=3D"unsubsc=
+ribe-link" style=3D"color:#000000;font-weight:normal;text-decoration:underl=
+ine;" href=3D"https://trk.klclick1.com/ls/click?upn=3DYb5GCmH5NAN8hwB7qdPPz=
+jnH3KzZ3AoRUzPpGwDqiWwg3AWRIys3MvIlDk8K4-2BrZRfsibp9QKkiZoAmqt-2BbY-2FZWA1M=
+A5p1P26EHoYTzaM8lOsWvk28Y1TLZQR1-2FfAuWwrNrkNZXwuX5C6QWPzRUYUZPhga-2F7W974H=
+ptV2LsfCFtEQUDf4pmvRFqDyCSlRTvV2PQjmWLRlmSceC-2BhnX9KgJbcO21SJTyq0aCLbW-2Fb=
+sKI-3DU2qQ_jGBhewFDuaYzBogJSwKTxRFJegVfYab6FzNQqcpei7-2B6MYizum0tjmpLydjV6p=
+8JmxTcDEBqGhC0wBnEmmAZXT3zftRSuRJE51PFnx3FW6jMllXmphwcnGbNvoAZvDShsNpZxH-2B=
+u0wkUM8pHo8WUZFVxYF3tmcPSgKIJS9v-2FdPfHHHxOWX3HwIEhEO240uRq4BKL5UHCK7KYnipo=
+-2FJcG6OGlQ-2FWb5xM5wmwmSdDrmuH9oT5SfM-2Bmw40wTEtuUjrM3aE2p7BgfuazZaNK7mp1W=
+VfPjyq1C-2FDauBBeiRsgbG-2F88J4G0yvA4Y-2BoOndHYebP-2BQ3Px0Plm8FR6UVBfYl6FAv8=
+DLK6QQa9sw9A4TATs24t7ovUHfwwHVGGLmWYKiVO01PWqx1CnOhVQmsEYdLpLw-3D-3D">HIER<=
+/a>, um dich abzumelden. Casida GmbH Br=C3=BCderstra=C3=9Fe 33 08412 Werdau=
+, Deutschland</span></p></div>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!--[if mso | IE]></td></tr></table><![endif]-->
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!--[if mso | IE]></td></tr></table><![endif]-->
+</div>
+<!--[if mso | IE]></table><![endif]-->
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!--[if mso | IE]></td></tr></table></table><![endif]-->
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!--[if mso | IE]></td></tr></table><![endif]-->
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+
+<img src=3D"https://trk.klclick1.com/wf/open?upn=3D8DVaPYyYoG9qGLemYc-2FqlW=
+oCWs-2FW72rR86Jh-2FT5lIPVom4cr-2B4RbCi-2BbrOXn-2FbbndSYiuTEQyJJt8mM5ULbf4q0=
+Ix8AEXO2SuWTEWq0nhyeIat2yPQeaFk-2F4bRMEBzzs4dcDfsyheHO7iyQpWUB9cEFXHu7Nb3p4=
+RdRxg044Mfd1lOpWLm5so0SrOrUIy4UuPuVml38whHOvvFKAyKUhigDRBuR3cSB-2BFiHatx9At=
+-2BIHJEpZshvD3zpB4KoZ7j51NGyHNaQOhkE1AqCwcivED9gA32jwwBV3UNZ9OqnZtMs0fla7dG=
+g1-2B1O19cT5aUwSYgTyBMY4r752Pkt4XK1etvSUPMp5cLObU9rjuSdz6OAex4b7NIhp-2FRor4=
+5Ux21wLZKpIepbnhgdp-2BXEPfryyXw-3D-3D" alt=3D"" width=3D"1" height=3D"1" bo=
+rder=3D"0" style=3D"height:1px !important;width:1px !important;border-width=
+:0 !important;margin-top:0 !important;margin-bottom:0 !important;margin-rig=
+ht:0 !important;margin-left:0 !important;padding-top:0 !important;padding-b=
+ottom:0 !important;padding-right:0 !important;padding-left:0 !important;"/>=
+</body></html>
+--798f9494094d4464bae64caf6a044bc215f22e0e68321fa507eea2643751--
+

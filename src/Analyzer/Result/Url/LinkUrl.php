@@ -15,6 +15,10 @@ final class LinkUrl extends UrlItem {
     parent::__construct($url);
   }
 
+  protected function getType(): string {
+    return 'link';
+  }
+
   public function anonymize(): self {
     return new static(
       Anon::url($this->url),

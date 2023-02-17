@@ -100,6 +100,7 @@ fullResult:
       urlItemInfos:
         -
           urlItem:
+            type: link
             url: 'https://schreibsuchti.us3.list-manage.com/track/click?u=5e78d7ef2297cc80842b7591e&id=c3569d2df3&e=6496a8003f'
             text: 'Das E-Mail-Money-System'
           redirectInfo: null
@@ -119,6 +120,7 @@ fullResult:
               noRedirectCheck: false
         -
           urlItem:
+            type: link
             url: 'https://schreibsuchti.us3.list-manage.com/track/click?u=5e78d7ef2297cc80842b7591e&id=f74d35f6b6&e=6496a8003f'
             text: 'Das E-Mail-Money-System'
           redirectInfo: null
@@ -138,6 +140,7 @@ fullResult:
               noRedirectCheck: false
         -
           urlItem:
+            type: link
             url: 'https://schreibsuchti.us3.list-manage.com/vcard?u=5e78d7ef2297cc80842b7591e&id=93b720b585'
             text: 'Zu Kontakten hinzufügen'
           redirectInfo:
@@ -157,6 +160,7 @@ fullResult:
               noRedirectCheck: true
         -
           urlItem:
+            type: link
             url: 'https://schreibsuchti.us3.list-manage.com/unsubscribe?u=5e78d7ef2297cc80842b7591e&id=93b720b585&e=6496a8003f&c=2ed1232679'
             text: abmelden
           redirectInfo:
@@ -178,6 +182,7 @@ fullResult:
               noRedirectCheck: true
         -
           urlItem:
+            type: image
             url: 'https://schreibsuchti.us3.list-manage.com/track/open.php?u=5e78d7ef2297cc80842b7591e&id=2ed1232679&e=6496a8003f'
           redirectInfo: null
           analyticsInfo: null

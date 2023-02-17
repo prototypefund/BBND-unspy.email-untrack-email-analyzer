@@ -12,6 +12,8 @@ abstract class UrlItem {
     public readonly string      $url,
   ) {}
 
+  abstract public function getType(): string;
+
   public function anonymize(): self {
     return new static(
       Anon::url($this->url),

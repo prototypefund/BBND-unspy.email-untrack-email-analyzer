@@ -18,4 +18,24 @@ final class HeaderItemInfo {
     return new self($this->headerItem->anonymize(), $this->matches);
   }
 
+  public function forProviderIds(array $providerIds): self {
+    $builder = new HeaderItemInfoBuilder($this->headerItem);
+    foreach ($this->matches as $match) {
+      if (in_array($match->providerId, $providerIds)) {
+        $builder->addMatch($match);
+      }
+    }
+    return $builder->freeze();
+  }
+
+  public function getPositivelyMatchingProviderIds(): array {
+    $providerIds = [];
+    foreach ($this->matches as $match) {
+      if ($match->isMatch) {
+        $providerIds[] = $match->providerId;
+      }
+    }
+    return $providerIds;
+  }
+
 }

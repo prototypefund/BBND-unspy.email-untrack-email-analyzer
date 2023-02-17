@@ -25,7 +25,7 @@ final class MatcherManager {
         }
       }
     }
-    return $builder->freeze();
+    return $builder->freeze()->cleanupProviders();
   }
 
   public function matchUrls(UrlItemInfoBag $urlItemInfoBag): UrlItemInfoBag {

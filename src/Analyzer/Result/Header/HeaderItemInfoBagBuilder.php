@@ -15,7 +15,6 @@ final class HeaderItemInfoBagBuilder {
     protected \SplObjectStorage $infos,
   ) {}
 
-
   public static function fromHeaderItemBag(HeaderItemBag $headerItemBag): self {
     // For convenience, index HeaderItemInfoBuilders by their HeaderItems.
     $infos = new \SplObjectStorage();
@@ -52,6 +51,7 @@ final class HeaderItemInfoBagBuilder {
     $headerItemInfos = Collection::fromIterable($this->infos)
       ->map($this->getHeaderItemInfoBuilder(...))
       ->map(fn(HeaderItemInfoBuilder $builder) => $builder->freeze())
+      // Only keep header items that have matches at all.
       ->filter(fn(HeaderItemInfo $info) => !empty($info->matches))
       ->all();
     return new HeaderItemInfoBag($headerItemInfos);

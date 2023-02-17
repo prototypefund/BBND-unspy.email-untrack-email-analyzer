@@ -20,16 +20,43 @@ final class HeaderItemInfoBag {
     ));
   }
 
+  public function getHeaderItemBag(): HeaderItemBag {
+    $builder = new HeaderItemBagBuilder();
+    foreach ($this->infos as $info) {
+      $builder->addItem($info->headerItem);
+    }
+    return $builder->freeze();
+  }
+
+  public function cleanupProviders(): self {
+    // Remove all providerIds without positive matches.
+    $builder = HeaderItemInfoBagBuilder::fromHeaderItemBag($this->getHeaderItemBag());
+    $providerIds = [];
+    foreach ($this->infos as $info) {
+      $providerIds = array_merge($providerIds, $info->getPositivelyMatchingProviderIds());
+    }
+    $providerIds = array_unique($providerIds);
+    foreach ($this->infos as $info) {
+      foreach ($info->forProviderIds($providerIds)->matches as $match) {
+        $builder->addMatch($info->headerItem, $match);
+      }
+    }
+    return $builder->freeze();
+  }
+
   public function getProviderIds(): array {
+    // Used in template.
     $keys = array_keys($this->getSummary());
     return $keys;
   }
 
   public function getMatchingHeaderNames(string $providerId): array {
+    // Used in template.
     return $this->getSummary()[$providerId]['match'] ?? [];
   }
 
   public function getNonMatchingHeaderNames(string $providerId): array {
+    // Used in template.
     return $this->getSummary()[$providerId]['nomatch'] ?? [];
   }
 

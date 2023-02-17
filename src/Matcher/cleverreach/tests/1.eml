@@ -1,0 +1,2543 @@
+Return-Path: <bounce+121070@bounce-eu2.crsend.com>
+X-Spam-Checker-Version: SpamAssassin 3.4.4 (2020-01-24) on
+	dd20708.kasserver.com
+X-Original-To: hpot2212u1@untrack.email
+Delivered-To: m0666425@dd20708.kasserver.com
+X-policyd-weight: using cached result; rate: -7
+Authentication-Results: dd20708.kasserver.com;
+	dkim=pass (1024-bit key; unprotected) header.d=crsend.com header.i=@crsend.com header.a=rsa-sha256 header.s=mail header.b=KQfn323G;
+	dkim=pass (1024-bit key; unprotected) header.d=121070.c.crsend.com header.i=@121070.c.crsend.com header.a=rsa-sha256 header.s=mail header.b=PeveU3NT;
+	dkim-atps=neutral
+Received: from 003.de-mx.crsend.com (003.de-mx.crsend.com [178.77.121.164])
+	by dd20708.kasserver.com (Postfix) with ESMTPS id 116341880618
+	for <hpot2212u1@untrack.email>; Tue, 10 Jan 2023 09:28:05 +0100 (CET)
+Received: from ngw-pn.crsend.com (ngw-pn.crsend.com [52.50.216.172])
+	by 003.de-mx.crsend.com (Postfix) with ESMTP id 1C03A5C07E4
+	for <hpot2212u1@untrack.email>; Tue, 10 Jan 2023 09:28:04 +0100 (CET)
+X-DKIM: OpenDKIM Filter v2.6.8 003.de-mx.crsend.com 1C03A5C07E4
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=crsend.com; s=mail;
+	t=1673339284; r=y; bh=+LY9fVMiNexdcRMjAISfUlc70Zcx3/q9F2DKwvz4Gxo=;
+	h=Date:From:To:Subject:List-Unsubscribe:List-Unsubscribe-Post:
+	 X-CSA-Complaints:Message-ID:Content-Type:From;
+	b=KQfn323G/rHlD0rJaqS2QeXYgAWHJJBGbkvVxBdUVlKx7ZGHt1EiLR+8+zr1qiuJ7
+	 0vtIE5xpg+lPKfjVlVRgFZcWD+EqwasADULp9wrP4Nwhiruam+2K3siIB2Fv8wqLB1
+	 Vy9xVKFjCyhOTGeB+pL+opB9gy+g389uCHwl4KxU=
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
+ s=mail; d=121070.c.crsend.com; t=1673339284; x=1675969284;
+  h=subject:date:content-type:from:to:message-id:list-unsubscribe:
+ list-unsubscribe-post:list-id:x-email:x-csa-complaints:
+ require-recipient-valid-since:feedback-id;
+ bh=+LY9fVMiNexdcRMjAISfUlc70Zcx3/q9F2DKwvz4Gxo=;
+ b=PeveU3NT7thlcEsw+JP0ATfDAvgbSygqMcpqUcr7YWpDFX6FY9j/SUt7BXwQCS6Lfgrj9V
+ mLcDGO1uoVjxSbhY6zNxm8g/gB0SjpWy++2NSp/Y94piW94XR2pUbAZ4MjlSlfDKWVaVWG
+ QFM/UydgVOZRb6HVZWqh3nvSsp81DoY=
+MIME-Version: 1.0
+Date: Tue, 10 Jan 2023 09:28:04 +0100
+X-Client: 121070
+From: =?UTF-8?q?=C3=96kumenisches_Asylforum_Freiburg?=
+ <news.asylforum@diakonie-freiburg.de>
+To: hpot2212u1@untrack.email
+Subject: Januar-Newsletter "Flucht und Migration in Freiburg"
+X-Mailing: 14141611
+X-email: hpot2212u1@untrack.email
+Feedback-ID: 121070:14141611:1284:121070
+X-Customer: 1284
+List-Unsubscribe: <https://121070.seu2.cleverreach.com/rmftlp.php?cid=0&mid=14141611&h=0-b09ec13a504>
+List-Unsubscribe-Post: List-Unsubscribe=One-Click
+X-CSA-Complaints: <csa-complaints@eco.de>
+Message-ID: <20230110092804.121070.14141611.1284@bounce-eu2.crsend.com>
+X-Mailer: gomailer-v2.0.19-8-gb4dfced4
+List-Id: <14141611.121070.crsend.com>
+Require-Recipient-Valid-Since: hpot2212u1@untrack.email; Mon, 02 Jan 2023
+ 22:17:55 +0100
+Content-Type: multipart/alternative;
+ boundary=27b4ab10a6f47fe3229b994a048054634f9689fd91ed04381d838bb50283
+X-Spamd-Bar: /
+X-KasLoop: m0666425
+
+--27b4ab10a6f47fe3229b994a048054634f9689fd91ed04381d838bb50283
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/plain; charset=UTF-8
+
+Ihr E-Mail Programm unterst=C3=BCtzt leider keine HTML E-Mails.
+
+Hier finden Sie diesen Newsletter online:
+https://121070.seu2.cleverreach.com/m/14141611/0-48f6d5f8da476d6a272d09d3d3=
+6a9fddd98475b588c6e74fb0ed96a664b56cb60f53c3bee0807090a730fcd3c3d19303
+-----------
+Wenn Sie diese E-Mail nicht mehr empfangen m=C3=B6chten, k=C3=B6nnen
+Sie diese kostenlos abbestellen:
+https://121070.seu2.cleverreach.com/rmftlp.php?cid=3D0&mid=3D14141611&h=3D0=
+-b09ec13a504-ro9gus
+-----------
+Diakonisches Werk Freiburg
+Dreisamstr. 3-5
+79098 Freiburg im Breisgau
+Deutschland
+
+076128561348
+zentrale@diakonie-freiburg.de
+CEO: Angelika H=C3=A4gele, Gesch=C3=A4ftsf=C3=BChrerin; Angela Heider, Deka=
+nin
+
+
+--27b4ab10a6f47fe3229b994a048054634f9689fd91ed04381d838bb50283
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/html; charset=UTF-8
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org=
+/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns=3D"http://www.w3.org/1999/xhtml">
+<head><meta http-equiv=3D'Content-Type' content=3D'text/html; charset=3DUTF=
+-8'>
+	<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3DUTF-8"/>
+	<meta name=3D"viewport" content=3D"width=3Ddevice-width"/>
+<style  hash=3D"86660864afc32afef14ef8a93ccd74f9">
+.background {background-color: #ffffff;}
+a {color: #006c52;text-decoration: none;}
+.text {color: #000000;font-size: 16px;font-family: Arial;}
+body {margin: 0px;padding: 0px;background-color: #ffffff;width: 100% ! impo=
+rtant;color: #000000;font-size: 16px;font-family: Arial;min-width: 100%;-we=
+bkit-text-size-adjust: 100%;-ms-text-size-adjust: 100%;}
+.ExternalClass {width: 100%;}
+.ExternalClass,.ExternalClass p,.ExternalClass span,.ExternalClass font,.Ex=
+ternalClass td,.ExternalClass div {line-height: 100%;}
+#backgroundTable {width: 100%!important;line-height: 100%!important;}
+img {outline: none;text-decoration: none;-ms-interpolation-mode: bicubic;di=
+splay: block;}
+center {width: 100%;min-width: 580px;}
+a img {border: none;}
+table {border-collapse: collapse;}
+td {word-break: break-word;-webkit-hyphens: auto;-moz-hyphens: auto;hyphens=
+: auto;border-collapse: collapse!important;}
+table,tr,td {vertical-align: top;text-align: left;}
+table.body {height: 100%;width: 100%;}
+table.container {width: 580px;margin: 0 auto;text-align: inherit;}
+table.row {padding: 0px;width: 100%;position: relative;}
+td.wrapper {padding: 0px 0px 0px 0px;position: relative;}
+table.columns,table.column {margin: 0 auto;}
+table.columns td,table.column td {padding: 0px 0px 0px;}
+table.columns td.sub-columns,table.column td.sub-columns,table.columns td.s=
+ub-column,table.column td.sub-column {padding-right: 10px;}
+td.sub-column,td.sub-columns {min-width: 0px;}
+table.row td.last,table.container td.last {padding-right: 0px;}
+table.one center {min-width: 30px;}
+table.two center {min-width: 80px;}
+table.three center {min-width: 130px;}
+table.four center {min-width: 180px;}
+table.five center {min-width: 230px;}
+table.six center {min-width: 280px;}
+table.seven center {min-width: 330px;}
+table.eight center {min-width: 380px;}
+table.nine center {min-width: 430px;}
+table.ten center {min-width: 480px;}
+table.eleven center {min-width: 530px;}
+table.twelve center {min-width: 580px;}
+table.one .panel center {min-width: 10px;}
+table.two .panel center {min-width: 60px;}
+table.three .panel center {min-width: 110px;}
+table.four .panel center {min-width: 160px;}
+table.five .panel center {min-width: 210px;}
+table.six .panel center {min-width: 260px;}
+table.seven .panel center {min-width: 310px;}
+table.eight .panel center {min-width: 360px;}
+table.nine .panel center {min-width: 410px;}
+table.ten .panel center {min-width: 460px;}
+table.eleven .panel center {min-width: 510px;}
+table.twelve .panel center {min-width: 560px;}
+.body .columns td.one,.body .column td.one {width: 8.333333%;}
+.body .columns td.two,.body .column td.two {width: 16.666666%;}
+.body .columns td.three,.body .column td.three {width: 25%;}
+.body .columns td.four,.body .column td.four {width: 33.333333%;}
+.body .columns td.five,.body .column td.five {width: 41.666666%;}
+.body .columns td.six,.body .column td.six {width: 50%;}
+.body .columns td.seven,.body .column td.seven {width: 58.333333%;}
+.body .columns td.eight,.body .column td.eight {width: 66.666666%;}
+.body .columns td.nine,.body .column td.nine {width: 75%;}
+.body .columns td.ten,.body .column td.ten {width: 83.333333%;}
+.body .columns td.eleven,.body .column td.eleven {width: 91.666666%;}
+.body .columns td.twelve,.body .column td.twelve {width: 100%;}
+td.offset-by-one {padding-left: 50px;}
+td.offset-by-two {padding-left: 100px;}
+td.offset-by-three {padding-left: 150px;}
+td.offset-by-four {padding-left: 200px;}
+td.offset-by-five {padding-left: 250px;}
+td.offset-by-six {padding-left: 300px;}
+td.offset-by-seven {padding-left: 350px;}
+td.offset-by-eight {padding-left: 400px;}
+td.offset-by-nine {padding-left: 450px;}
+td.offset-by-ten {padding-left: 500px;}
+td.offset-by-eleven {padding-left: 550px;}
+td.expander {visibility: hidden;width: 0px;padding: 0!important;}
+table.columns .text-pad,table.column .text-pad {padding-left: 10px;padding-=
+right: 10px;}
+table.columns .left-text-pad,table.columns .text-pad-left,table.column .lef=
+t-text-pad,table.column .text-pad-left {padding-left: 10px;}
+table.columns .right-text-pad,table.columns .text-pad-right,table.column .r=
+ight-text-pad,table.column .text-pad-right {padding-right: 10px;}
+.block-grid {width: 100%;max-width: 580px;}
+.block-grid td {display: inline-block;padding: 10px;}
+.two-up td {width: 270px;}
+.three-up td {width: 173px;}
+.four-up td {width: 125px;}
+.five-up td {width: 96px;}
+.six-up td {width: 76px;}
+.seven-up td {width: 62px;}
+.eight-up td {width: 52px;}
+table.center,td.center {text-align: center;}
+h1.center,h2.center,h3.center,h4.center,h5.center,h6.center {text-align: ce=
+nter;}
+span.center {display: block;width: 100%;text-align: center;}
+img.center {margin: 0 auto;float: none;}
+.show-for-small,.hide-for-desktop {display: none;}
+table.button,table.tiny-button,table.small-button,table.medium-button,table=
+.large-button {width: 100%;overflow: hidden;}
+table.button td,table.tiny-button td,table.small-button td,table.medium-but=
+ton td,table.large-button td {display: block;width: auto!important;text-ali=
+gn: center;background: #2ba6cb;border: 1px solid #2284a1;color: #ffffff;pad=
+ding: 8px 0;}
+.sub-grid table {width: 100%;}
+body.outlook p {display: inline!important;}
+#crMainContent {background-color: #ffffff;border: 10px solid #fff;padding: =
+10px 20px;font-family: Arial;font-size: 12px;color: #000000;}
+u + #body a {color: #006c52;}
+@media only screen and (max-width: 600px) {img {width: auto;max-width: 100%=
+;}
+.hide-for-small {display: none;}
+.show-for-desktop {display: none;}
+table[class=3D"body"] .columns td.force-twelve,table[class=3D"body"] .colum=
+n td.force-twelve {width: 100% !important;}
+table[class=3D"body"] img {width: auto!important;height: auto!important;}
+table[class=3D"body"] center {min-width: 0!important;}
+table[class=3D"body"] .container {width: 95%!important;}
+table[class=3D"body"] .wrapper {display: block!important;padding-right: 0!i=
+mportant;}
+table[class=3D"body"] .columns,table[class=3D"body"] .column {table-layout:=
+ fixed!important;float: none!important;width: 100%!important;padding-right:=
+ 0px!important;padding-left: 0px!important;xdisplay: block!important;}
+table[class=3D"body"] .wrapper.first .columns,table[class=3D"body"] .wrappe=
+r.first .column {display: table!important;}
+table[class=3D"body"] table.columns td,table[class=3D"body"] table.column t=
+d {width: 100%!important;}
+table[class=3D"body"] .columns td.one,table[class=3D"body"] .column td.one =
+{width: 8.333333%!important;}
+table[class=3D"body"] .columns td.two,table[class=3D"body"] .column td.two =
+{width: 16.666666%!important;}
+table[class=3D"body"] .columns td.three,table[class=3D"body"] .column td.th=
+ree {width: 25%!important;}
+table[class=3D"body"] .columns td.four,table[class=3D"body"] .column td.fou=
+r {width: 33.333333%!important;}
+table[class=3D"body"] .columns td.five,table[class=3D"body"] .column td.fiv=
+e {width: 41.666666%!important;}
+table[class=3D"body"] .columns td.six,table[class=3D"body"] .column td.six =
+{width: 50%!important;}
+table[class=3D"body"] .columns td.seven,table[class=3D"body"] .column td.se=
+ven {width: 58.333333%!important;}
+table[class=3D"body"] .columns td.eight,table[class=3D"body"] .column td.ei=
+ght {width: 66.666666%!important;}
+table[class=3D"body"] .columns td.nine,table[class=3D"body"] .column td.nin=
+e {width: 75%!important;}
+table[class=3D"body"] .columns td.ten,table[class=3D"body"] .column td.ten =
+{width: 83.333333%!important;}
+table[class=3D"body"] .columns td.eleven,table[class=3D"body"] .column td.e=
+leven {width: 91.666666%!important;}
+}
+</style>
+
+
+
+
+
+<meta name=3D"robots" content=3D"noindex,nofollow">
+<meta charset=3D"UTF-8" />
+<style data-source=3D"autogenerated google-fixes">
+u + #body a { color: #006c52;text-decoration: none; }
+u + #body { margin: 0px;padding: 0px;background-color: #ffffff;width: 100% =
+! important;color: #000000;font-size: 16px;font-family: Arial;min-width: 10=
+0%;-webkit-text-size-adjust: 100%;-ms-text-size-adjust: 100%; }
+</style>
+
+<style  hash=3D"39ecbcf2ebf27047e142cd975e5850c3">
+    /*  @title Text=20
+        @group General=20
+        @order 1 */
+        .cr-text  {
+          font-family: Helvetica, Arial, sans-serif !important;
+          color: inherit;
+          font-size: 15px;
+          line-height: 140%;
+          font-weight: normal;
+          letter-spacing: inherit;
+        }
+
+      /*  @title Max width=20
+          @group General=20
+          @order 1
+      */
+      .cr-maxwidth {
+        max-width:600px;
+      }
+
+    </style>
+
+<style  hash=3D"6b4c9efc6ba4db1f1250125fbe2bd123">
+    /* @title  Mobile view padding
+        @group Images=20
+        @order 1 */
+        @media (max-width: 600px) {
+      .cr-image {
+        padding: 20px !important;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .cr-image img{
+        width: 100% !important;
+        height: 100% !important;
+        display: inline !important;      }
+    }
+
+    </style>
+
+<style  hash=3D"d998e4e551e1560e62c821d1319d745f">
+      .cr-col{
+        width: 100%;
+        display: inline-block;
+        vertical-align: top;
+      }
+      .cr-col-3 {
+        max-width: 33.333%;
+      }
+      .cr-col-6 {
+        max-width: 50%;
+      }
+      .cr-col-9 {
+        max-width: 66.666%;
+      }
+      @media screen and (max-width: 600px) {
+        .cr-col { max-width: 100%; padding:10px 0px !important; }
+        .cr-col-first, .cr-col-last { padding: 0px !important;}
+        .cr-col img{=20
+          width: 100% !important;=20
+          /* height: 100% !important;  */
+        }
+      }
+      </style>
+</head>
+<body>
+	<table class=3D"body">
+		<tbody>
+			<tr>
+				<td class=3D"center" align=3D"center" valign=3D"top"><center>
+					<p style=3D"text-align: center;"  class=3D"text"><!--#online_version#-=
+->Wird diese Nachricht nicht richtig dargestellt, klicken Sie bitte <a href=
+=3D"https://121070.seu2.cleverreach.com/m/14141611/0-d234a2f09557ef527dc744=
+d4bea36283ce7249ec4a863b3969a94071faef7c51d847c60e2eac96c8702606207be761d1"=
+>hier</a>.<!--#/online_version#--></p>
+					<table class=3D"container">
+						<tbody>
+							<tr>
+								<td data-cr-edit=3D"Main Content" id=3D"crMainContent"             =
+                                                                           =
+                                                                           =
+                                                                           =
+                                                                           =
+                                                                           =
+                                                                           =
+                                                                           =
+                                                                           =
+                                                                           =
+                                                                           =
+                                                                           =
+                                                                           =
+                                                               >
+									<!--#loop#--><!-- loop1 --><!--#loopitem#--><a data-title=3D"" id=
+=3D"cra-43621866173" name=3D"cra-43621866173" data-visible=3D"true" class=
+=3D"cred-index-anchor" ></a><table class=3D"row" cellpadding=3D"0" cellspac=
+ing=3D"0" width=3D"100%">
+	<tr>
+		<td class=3D"wrapper last" valign=3D"top">
+			<table class=3D"twelve columns" cellpadding=3D"0" cellspacing=3D"0" widt=
+h=3D"100%">
+			  <tr>
+			    <td valign=3D"top"  style=3D"padding:5px" class=3D"text">
+			    <center>
+					<!--#image#--><img src=3D"https://files.crsend.com/121000/121070/image=
+s/Newsletter_Grafik_150dpi.png" alt=3D"Newsletter Header" title=3D""  width=
+=3D"580" vspace=3D"" hspace=3D"" height=3D"335" border=3D"0"><!--#/image#--=
+>
+				</center>
+				</td>
+			  </tr>
+			</table>
+		</td>
+	</tr>
+</table><!--#/loopitem#-->
+<!--#loopitem#--><a data-title=3D"Ausgabe Januar=C2=A02022" id=3D"cra-34091=
+27" name=3D"cra-3409127" data-visible=3D"true" class=3D"cred-index-anchor">=
+</a>=20
+									<table class=3D"row cred_loopitem_multiple" style=3D"width: 100%;"=
+ cellspacing=3D"0" cellpadding=3D"0">
+  <tbody>
+    <tr><td class=3D"wrapper last cred_is_frame cred_modal_top" valign=3D"t=
+op" style=3D"padding: 0px; background-color: rgb(255, 255, 255);">
+													<table class=3D"twelve columns" style=3D"width: 100%;" cellspa=
+cing=3D"0" cellpadding=3D"0"><tbody><tr><td style=3D"padding: 5px 0px; colo=
+r: rgb(255, 255, 255); background-color: rgb(134, 188, 37); border: 0px non=
+e rgb(247, 237, 247);" valign=3D"top" class=3D"text"><!--#html#--><div alig=
+n=3D"center"><span style=3D"font-size: 2em; color: #ffffff;"><strong>Ausgab=
+e Januar 2023</strong></span></div><!--#/html#--></td>
+															</tr></tbody></table></td>
+											</tr>
+  </tbody>
+</table><!--#/loopitem#-->=20
+<!--#loopitem#--><a data-title=3D"herzlich willkommen beim eher kurzen News=
+letter f=C3=BCr den &quot;langen Dezember&quot;, d.h. =C3=BCber den Jahresw=
+echsel hinaus bis zum Ende der Weihnachtsferien! Informationen f=C3=BCr den=
+ Januar-Newsletter k=C3=B6nnen bis 10. Januar=C2=A02022 12 Uhr an die Redak=
+tion gesandt werden. Der n=C3=A4chste Newsletter erscheint dann voraussicht=
+lich am gleichen Tag. Ihnen frohe Feiertage!=C2=A0Die Newsletter-Redaktion"=
+ id=3D"cra-8582372" name=3D"cra-8582372" data-visible=3D"true" class=3D"cre=
+d-index-anchor"></a>=20
+									<table class=3D"row cred_loopitem_multiple" style=3D"width: 100%;"=
+ cellspacing=3D"0" cellpadding=3D"0">
+  <tbody>
+    <tr><td class=3D"wrapper last cred_is_frame cred_modal_top" valign=3D"t=
+op" style=3D"padding: 5px 0px; background-color: rgb(255, 255, 255);">
+													<table class=3D"twelve columns" style=3D"width: 100%;" cellspa=
+cing=3D"0" cellpadding=3D"0"><tbody><tr><td style=3D"padding: 5px; color: r=
+gb(0, 0, 0); background-color: rgb(255, 255, 255); border: 0px none rgb(247=
+, 237, 247);" valign=3D"top" class=3D"text"><!--#html#--><span style=3D"fon=
+t-size: 18px;">Liebe Lesende, <br><br>wir w=C3=BCnschen Ihnen viel Kraft, Z=
+uversicht und Neugier in diesem Jahr!<br><br>Neues gibt es auch beim Newsle=
+tter: Ab sofort erscheint monatlich der Steckbrief einer Initiative, die in=
+ der Freiburger Landschaft neu bzw. noch nicht so lange etabliert ist. M=C3=
+=B6glich ist das durch unsere Kooperationspartnerinnen der St=C3=A4dtischen=
+ Koordinierungsstelle f=C3=BCr B=C3=BCrgerschaftliches Engagement. Herzlich=
+en Dank!<br><br>Der n=C3=A4chste Newsletter erscheint am Mi., 1. Februar 20=
+23. Beitr=C3=A4ge k=C3=B6nnen bis 31.01., 12 Uhr an die <a href=3D"mailto:n=
+ews.asylforum@diakonie-freiburg.de" target=3D"_blank" rel=3D"noopener">Reda=
+ktion</a> geschickt werden. <br class=3D"false"><br class=3D"false">Alles G=
+ute w=C3=BCnscht</span><br><span style=3D"font-size: 18px;">Ihre Newsletter=
+-Redaktion</span><!--#/html#--></td>
+															</tr></tbody></table></td>
+											</tr>
+  </tbody>
+</table><!--#/loopitem#-->=20
+<!--#loopitem name=3D"Devider"#--><a data-title=3D"" id=3D"cra-10123202204"=
+ name=3D"cra-10123202204" data-visible=3D"true" class=3D"cred-index-anchor"=
+></a>=20
+									<table class=3D"row cred_loopitem_multiple" style=3D"width: 100%;"=
+ cellspacing=3D"0" cellpadding=3D"0">
+  <tbody>
+    <tr><td class=3D"wrapper last cred_is_frame cred_modal_top" valign=3D"t=
+op" style=3D"background-color: rgb(255, 255, 255); padding: 5px 0px;">
+													<table class=3D"twelve columns" style=3D"width: 100%;" cellspa=
+cing=3D"0" cellpadding=3D"0"><tbody><tr><td style=3D"padding: 15px 5px 5px;=
+ background-color: rgb(134, 188, 37); font-size: 5px; color: rgb(247, 237, =
+247); border: 0px none rgb(247, 237, 247);" valign=3D"top" class=3D"text"><=
+!--#html#--><!--#/html#--></td>
+															</tr></tbody></table></td>
+											</tr>
+  </tbody>
+</table><!--#/loopitem#-->=20
+<!--#loopitem#--><a data-title=3D"=C3=9Cbersicht" id=3D"cra-8017871" name=
+=3D"cra-8017871" data-visible=3D"true" class=3D"cred-index-anchor"></a>=20
+									<table class=3D"row cred_loopitem_multiple" style=3D"width: 100%;"=
+ cellspacing=3D"0" cellpadding=3D"0">
+  <tbody>
+    <tr><td class=3D"wrapper last cred_is_frame cred_modal_top" valign=3D"t=
+op" style=3D"padding: 5px 0px; background-color: rgb(255, 255, 255);">
+													<table class=3D"twelve columns" style=3D"width: 100%;" cellspa=
+cing=3D"0" cellpadding=3D"0"><tbody><tr><td style=3D"padding: 5px; color: r=
+gb(0, 0, 0); background-color: rgb(255, 255, 255); border: 0px none rgb(247=
+, 237, 247);" valign=3D"top" class=3D"text"><!--#html#--><span style=3D"fon=
+t-size: 1.6em;"><strong><span style=3D"color: #006b52;"><a id=3D"Uebersicht=
+"></a>=C3=9Cbersicht</span></strong></span>
+<p><span style=3D"font-size: 1.2em;"><strong><span style=3D"color: #006c52;=
+"><a style=3D"color: #006c52;" href=3D"#Akteur">Aktuelles von den Akteur*in=
+nen</a><br><a href=3D"#Steckbrief"><span style=3D"color: #86bc25;">Neu: </s=
+pan><span style=3D"color: #86bc25;">Initiativen-Steckbrief</span></a></span=
+></strong></span><br><span style=3D"font-size: 1.2em;"><strong><span style=
+=3D"color: #bca580;"><a style=3D"color: #bca580;" href=3D"#Termine">Termine=
+ & Veranstaltungen</a></span><span style=3D"color: #000000;"><a style=3D"co=
+lor: #000000;" href=3D"#Fortbildung"> <br><span style=3D"color: #00847e;">F=
+ortbildungen & Qualifikationen</span></a></span></strong></span><br><span s=
+tyle=3D"font-size: 1.2em;"><strong><span style=3D"color: #86bc25;"><a style=
+=3D"color: #86bc25;" href=3D"#Ausblick">Ausblick</a><br><a href=3D"#Datensc=
+hutz"><span style=3D"color: #006c52;">Datenschutz & Impressum</span></a></s=
+pan></strong></span></p><!--#/html#--></td>
+															</tr></tbody></table></td>
+											</tr>
+  </tbody>
+</table><!--#/loopitem#-->
+<!--#loopitem#--><a data-title=3D"zur=C3=BCck zur =C3=9Cbersicht" id=3D"cra=
+-2202062" name=3D"cra-2202062" data-visible=3D"true" class=3D"cred-index-an=
+chor"></a>=20
+									<table class=3D"row cred_loopitem_multiple" style=3D"width: 100%;"=
+ cellspacing=3D"0" cellpadding=3D"0">
+  <tbody>
+    <tr><td class=3D"wrapper last cred_is_frame cred_modal_top" valign=3D"t=
+op" style=3D"padding: 5px 0px; background-color: rgb(255, 255, 255);">
+													<table class=3D"twelve columns" style=3D"width: 100%;" cellspa=
+cing=3D"0" cellpadding=3D"0"><tbody><tr><td style=3D"padding: 5px; color: r=
+gb(255, 255, 255); background-color: rgb(0, 108, 82); border: 0px none rgb(=
+247, 237, 247);" valign=3D"top" class=3D"text"><!--#html#--><span style=3D"=
+color: #ffffff; font-size: 18px;"><a id=3D"Akteur" name=3D"Akteur"></a><a s=
+tyle=3D"color: #ffffff;" href=3D"#Uebersicht">zur=C3=BCck zur =C3=9Cbersich=
+t</a></span><!--#/html#--></td>
+															</tr></tbody></table></td>
+											</tr>
+  </tbody>
+</table><!--#/loopitem#-->=20
+ <!--#loopitem#--><a data-title=3D"Aktuelles=C2=A0von den Akteur*innen" id=
+=3D"cra-9767782" name=3D"cra-9767782" data-visible=3D"true" class=3D"cred-i=
+ndex-anchor"></a>=20
+									<table class=3D"row cred_loopitem_multiple" style=3D"width: 100%;"=
+ cellspacing=3D"0" cellpadding=3D"0">
+  <tbody>
+    <tr><td class=3D"wrapper last cred_is_frame cred_modal_top" valign=3D"t=
+op" style=3D"padding: 5px 0px; background-color: rgb(255, 255, 255);">
+													<table class=3D"twelve columns" style=3D"width: 100%;" cellspa=
+cing=3D"0" cellpadding=3D"0"><tbody><tr><td style=3D"padding: 5px; color: r=
+gb(0, 107, 82); background-color: rgb(255, 255, 255); border: 0px none rgb(=
+247, 237, 247);" valign=3D"top" class=3D"text"><!--#html#--><span style=3D"=
+font-size: 1.2em;"><strong><span style=3D"color: #006c52;"><strong class=3D=
+"false">Aktuelles&nbsp;von der st=C3=A4dtischen Koordinierungsstelle</stron=
+g><br></span></strong></span><!--#/html#--></td>
+															</tr></tbody></table></td>
+											</tr>
+  </tbody>
+</table><!--#/loopitem#-->  <!--#loopitem#-->
+       =20
+     =20
+ =20
+
+        <table width=3D"100%" cellspacing=3D"0" cellpadding=3D"0" border=3D=
+"0">
+          <tbody><tr>
+          <td style=3D"background-color:inherit;padding: 0px 5px 0px 5px ;b=
+order:0px;" data-style=3D"background-color:inherit;" class=3D"cr-container =
+editable" data-name=3D"Container" valign=3D"top" align=3D"center">
+          <!--[if (gte mso 9)|(IE)]><table align=3D"center" border=3D"0" ce=
+llspacing=3D"0" cellpadding=3D"0" width=3D"600" gc-width-fix=3D".cr-maxwidt=
+h:max-width"><tr><td align=3D"center" valign=3D"top" width=3D"600" gc-width=
+-fix=3D".cr-maxwidth:max-width"><![endif]-->
+          <table class=3D"cr-maxwidth editable" style=3D"" data-style=3D"ba=
+ckground-color:inherit;border:inherit;" data-name=3D"Inner container" width=
+=3D"100%" cellspacing=3D"0" cellpadding=3D"0" border=3D"0">
+          <tbody><tr>
+          <td style=3D"font-family: Arial, Gadget, sans-serif !important;co=
+lor:  ;line-height:inherit;letter-spacing:inherit;padding:0px;" data-style=
+=3D"font-family:inherit !important;color:inherit;line-height:inherit;letter=
+-spacing:inherit;padding:0px;" class=3D"cr-text editable" data-name=3D"Text=
+" valign=3D"top" align=3D"left">
+          <!--#html#--><div align=3D"left">
+<p class=3D"false"><span style=3D"font-size: 18px;"><strong class=3D"false"=
+>Personelle Ver=C3=A4nderungen in der Koordinationsstelle<br></strong></spa=
+n><span style=3D"font-size: 18px;">Katrin Werkle ist zuk=C3=BCnftig f=C3=BC=
+r den Zentralen Dolmetschendenpool und den Bereich Sprache zust=C3=A4ndig, =
+aber auch weiterhin f=C3=BCr die Antr=C3=A4ge f=C3=BCr finanzielle F=C3=B6r=
+derungen im Bereich Migration und Engagement. Thomas Tritschler (<a href=3D=
+"mailto:thomas.tritschler@stadt.freiburg.de">Email</a>, 0761 201 6342) kehr=
+t zur=C3=BCck in die Koordinationsstelle und =C3=BCbernimmt unter anderem d=
+ie zentrale Fahrradwerkstatt. F=C3=BCr die Vermittlung und Koordination des=
+ Engagements ist ebenfalls weiterhin Antje Reinhard zust=C3=A4ndig.</span><=
+/p>
+</div><!--#/html#-->
+          </td>
+          </tr>
+          </tbody></table>
+          <!--[if (gte mso 9)|(IE)]></td></tr></table><![endif]-->
+          </td>
+          </tr>
+          </tbody></table>
+    <!--#/loopitem#--> <!--#loopitem#-->
+       =20
+     =20
+ =20
+
+        <table width=3D"100%" cellspacing=3D"0" cellpadding=3D"0" border=3D=
+"0">
+          <tbody><tr>
+          <td style=3D"background-color:inherit;padding: 0px 5px 0px 5px ;b=
+order:0px;" data-style=3D"background-color:inherit;" class=3D"cr-container =
+editable" data-name=3D"Container" valign=3D"top" align=3D"center">
+          <!--[if (gte mso 9)|(IE)]><table align=3D"center" border=3D"0" ce=
+llspacing=3D"0" cellpadding=3D"0" width=3D"600" gc-width-fix=3D".cr-maxwidt=
+h:max-width"><tr><td align=3D"center" valign=3D"top" width=3D"600" gc-width=
+-fix=3D".cr-maxwidth:max-width"><![endif]-->
+          <table class=3D"cr-maxwidth editable" style=3D"" data-style=3D"ba=
+ckground-color:inherit;border:inherit;" data-name=3D"Inner container" width=
+=3D"100%" cellspacing=3D"0" cellpadding=3D"0" border=3D"0">
+          <tbody><tr>
+          <td style=3D"font-family: Arial, Gadget, sans-serif !important;co=
+lor:  ;line-height:inherit;letter-spacing:inherit;padding:0px;" data-style=
+=3D"font-family:inherit !important;color:inherit;line-height:inherit;letter=
+-spacing:inherit;padding:0px;" class=3D"cr-text editable" data-name=3D"Text=
+" valign=3D"top" align=3D"left">
+          <!--#html#--><div align=3D"left">
+<p class=3D"false"><span style=3D"font-size: 18px;"><strong class=3D"false"=
+>F=C3=B6rdergelder f=C3=BCr Freiburger Initiativen im Bereich Migration =E2=
+=80=93 jetzt Antr=C3=A4ge f=C3=BCr 2023 einreichen <br></strong>Beim Amt f=
+=C3=BCr Migration und Integration k=C3=B6nnen pro Jahr bis zu 2000=E2=82=AC=
+ beantragt werden. F=C3=B6rderf=C3=A4hig sind z.B. Honorare f=C3=BCr extern=
+e Referent_innen, Materialien (z.B. Flyer) sowie Verpflegung (z.B. interkul=
+turelle Festveranstaltungen, Fortbildungen). Weitere Informationen sowie Fo=
+rmulare <a href=3D"https://121070.seu2.cleverreach.com/c/79180030/b09ec13a5=
+04-ro9gus" target=3D"_blank" rel=3D"noopener">hier</a>. Kontakt f=C3=BCr Fr=
+agen & Beratung: Katrin Werkle (<a href=3D"mailto:katrin.werkle@stadt.freib=
+urg.de">Email</a>; Tel. 0761 201-6344).<br></span></p>
+</div><!--#/html#-->
+          </td>
+          </tr>
+          </tbody></table>
+          <!--[if (gte mso 9)|(IE)]></td></tr></table><![endif]-->
+          </td>
+          </tr>
+          </tbody></table>
+    <!--#/loopitem#--> <!--#loopitem#-->
+       =20
+     =20
+ =20
+
+        <table width=3D"100%" cellspacing=3D"0" cellpadding=3D"0" border=3D=
+"0">
+          <tbody><tr>
+          <td style=3D"background-color:inherit;padding: 0px 5px 0px 5px ;b=
+order:0px;" data-style=3D"background-color:inherit;" class=3D"cr-container =
+editable" data-name=3D"Container" valign=3D"top" align=3D"center">
+          <!--[if (gte mso 9)|(IE)]><table align=3D"center" border=3D"0" ce=
+llspacing=3D"0" cellpadding=3D"0" width=3D"600" gc-width-fix=3D".cr-maxwidt=
+h:max-width"><tr><td align=3D"center" valign=3D"top" width=3D"600" gc-width=
+-fix=3D".cr-maxwidth:max-width"><![endif]-->
+          <table class=3D"cr-maxwidth editable" style=3D"" data-style=3D"ba=
+ckground-color:inherit;border:inherit;" data-name=3D"Inner container" width=
+=3D"100%" cellspacing=3D"0" cellpadding=3D"0" border=3D"0">
+          <tbody><tr>
+          <td style=3D"font-family: Arial, Gadget, sans-serif !important;co=
+lor:  ;line-height:inherit;letter-spacing:inherit;padding:0px;" data-style=
+=3D"font-family:inherit !important;color:inherit;line-height:inherit;letter=
+-spacing:inherit;padding:0px;" class=3D"cr-text editable" data-name=3D"Text=
+" valign=3D"top" align=3D"left">
+          <!--#html#--><div align=3D"left">
+<p class=3D"false"><span style=3D"font-size: 18px;"><strong class=3D"false"=
+>Fahrradwerkstatt bis 15.02.2023 geschlossen<br></strong>Die zentrale Fahrr=
+adwerkstatt in der Schopfheimerstra=C3=9Fe 5 wird erst wieder ab dem 15.02.=
+2023 Fahrr=C3=A4der jeweils Mittwochs von 8.00 bis 11.30 Uhr ausgeben. In d=
+ringenden F=C3=A4llen bitte kurze <a href=3D"mailto:fahrradwerkstatt@stadt.=
+freiburg.de">Email</a> =E2=80=93 dann werden wir eine M=C3=B6glichkeit find=
+en. Die ehrenamtlichen Schrauber wollen die Zeit nutzen, um R=C3=A4der herz=
+urichten. </span></p>
+</div><!--#/html#-->
+          </td>
+          </tr>
+          </tbody></table>
+          <!--[if (gte mso 9)|(IE)]></td></tr></table><![endif]-->
+          </td>
+          </tr>
+          </tbody></table>
+    <!--#/loopitem#--> <!--#loopitem#-->
+       =20
+     =20
+ =20
+
+        <table width=3D"100%" cellspacing=3D"0" cellpadding=3D"0" border=3D=
+"0">
+          <tbody><tr>
+          <td style=3D"background-color:inherit;padding: 0px 5px 0px 5px ;b=
+order:0px;" data-style=3D"background-color:inherit;" class=3D"cr-container =
+editable" data-name=3D"Container" valign=3D"top" align=3D"center">
+          <!--[if (gte mso 9)|(IE)]><table align=3D"center" border=3D"0" ce=
+llspacing=3D"0" cellpadding=3D"0" width=3D"600" gc-width-fix=3D".cr-maxwidt=
+h:max-width"><tr><td align=3D"center" valign=3D"top" width=3D"600" gc-width=
+-fix=3D".cr-maxwidth:max-width"><![endif]-->
+          <table class=3D"cr-maxwidth editable" style=3D"" data-style=3D"ba=
+ckground-color:inherit;border:inherit;" data-name=3D"Inner container" width=
+=3D"100%" cellspacing=3D"0" cellpadding=3D"0" border=3D"0">
+          <tbody><tr>
+          <td style=3D"font-family: Arial, Gadget, sans-serif !important;co=
+lor:  ;line-height:inherit;letter-spacing:inherit;padding:0px;" data-style=
+=3D"font-family:inherit !important;color:inherit;line-height:inherit;letter=
+-spacing:inherit;padding:0px;" class=3D"cr-text editable" data-name=3D"Text=
+" valign=3D"top" align=3D"left">
+          <!--#html#--><div align=3D"left">
+<p class=3D"false"><span style=3D"font-size: 18px;"><strong class=3D"false"=
+>Start des neuen ESF Plus-Bundesprogramms =E2=80=9EMY TURN - Frauen mit Mig=
+rationserfahrung starten durch=E2=80=9C<br></strong></span><span style=3D"f=
+ont-size: 18px;">Zielgruppe des Projekts ab 1.2.2023 sind neuzugewanderte F=
+rauen, die (formal) geringqualifiziert oder bspw. nach l=C3=A4ngerer Famili=
+enphase wieder als ungelernt gelten und einen erh=C3=B6hten Unterst=C3=BCtz=
+ungsbedarf haben.</span></p>
+<ul class=3D"false">
+<li class=3D"false"><span style=3D"font-size: 18px;">Angebot f=C3=BCr Fraue=
+n mit geringen Deutschkenntnissen:&nbsp; niederschwelliger Deutschkurs mit =
+Zielniveau A2 (an 2 Vormittagen), bei Bedarf mit Kinderbetreuung sowie eine=
+ individuelle Einzelbegleitung in alltagsrelevanten Fragen.</span></li>
+<li class=3D"false"><span style=3D"font-size: 18px;">Angebot f=C3=BCr Fraue=
+n mit Deutschkenntnissen ab B1: Gruppenangebot mit Workshops zu den Themen =
+berufliche Orientierung, Stellensuche, Bewerbungscheck (inkl. professionell=
+es Bewerbungsfoto), EDV-Kurs & individuelles Berufscoaching.</span></li>
+</ul>
+<p class=3D"false"><span style=3D"font-size: 18px;">Anmeldungen ab sofort b=
+ei Nadya Sahutoglu (<a href=3D"mailto:Nadya.Sahutoglu@Stadt.Freiburg.de">Em=
+ail</a>, 0761 201 6338)</span></p>
+</div><!--#/html#-->
+          </td>
+          </tr>
+          </tbody></table>
+          <!--[if (gte mso 9)|(IE)]></td></tr></table><![endif]-->
+          </td>
+          </tr>
+          </tbody></table>
+    <!--#/loopitem#-->               =20
+
+=20
+=20
+<!--#loopitem#--><a data-title=3D"Aktuelles=C2=A0von den Akteur*innen" id=
+=3D"cra-38874" name=3D"cra-38874" data-visible=3D"true" class=3D"cred-index=
+-anchor"></a>=20
+									<table class=3D"row cred_loopitem_multiple" style=3D"width: 100%;"=
+ cellspacing=3D"0" cellpadding=3D"0">
+  <tbody>
+    <tr><td class=3D"wrapper last cred_is_frame cred_modal_top" valign=3D"t=
+op" style=3D"padding: 5px 0px; background-color: rgb(255, 255, 255);">
+													<table class=3D"twelve columns" style=3D"width: 100%;" cellspa=
+cing=3D"0" cellpadding=3D"0"><tbody><tr><td style=3D"padding: 5px; color: r=
+gb(0, 107, 82); background-color: rgb(255, 255, 255); border: 0px none rgb(=
+247, 237, 247);" valign=3D"top" class=3D"text"><!--#html#--><span style=3D"=
+font-size: 1.2em;"><strong class=3D"false"><a id=3D"Akteur" name=3D"Akteur"=
+></a>Aktuelles&nbsp;von den Akteur*innen</strong></span><!--#/html#--></td>
+															</tr></tbody></table></td>
+											</tr>
+  </tbody>
+</table><!--#/loopitem#-->     <!--#loopitem#-->
+       =20
+     =20
+ =20
+
+        <table width=3D"100%" cellspacing=3D"0" cellpadding=3D"0" border=3D=
+"0">
+          <tbody><tr>
+          <td style=3D"background-color:inherit;padding: 0px 5px 0px 5px ;b=
+order:0px;" data-style=3D"background-color:inherit;" class=3D"cr-container =
+editable" data-name=3D"Container" valign=3D"top" align=3D"center">
+          <!--[if (gte mso 9)|(IE)]><table align=3D"center" border=3D"0" ce=
+llspacing=3D"0" cellpadding=3D"0" width=3D"600" gc-width-fix=3D".cr-maxwidt=
+h:max-width"><tr><td align=3D"center" valign=3D"top" width=3D"600" gc-width=
+-fix=3D".cr-maxwidth:max-width"><![endif]-->
+          <table class=3D"cr-maxwidth editable" style=3D"" data-style=3D"ba=
+ckground-color:inherit;border:inherit;" data-name=3D"Inner container" width=
+=3D"100%" cellspacing=3D"0" cellpadding=3D"0" border=3D"0">
+          <tbody><tr>
+          <td style=3D"font-family: Arial, Gadget, sans-serif !important;co=
+lor:  ;line-height:inherit;letter-spacing:inherit;padding:0px;" data-style=
+=3D"font-family:inherit !important;color:inherit;line-height:inherit;letter=
+-spacing:inherit;padding:0px;" class=3D"cr-text editable" data-name=3D"Text=
+" valign=3D"top" align=3D"left">
+          <!--#html#--><div align=3D"left">
+<p class=3D"false"><span style=3D"font-size: 18px;"><strong>Refugium: jetzt=
+ bewerben als Gesundheitslotse</strong><br class=3D"false">Im Projekt =E2=
+=80=9EGesundheitslotsen f=C3=BCr Menschen mit Flucht- und Zuwanderungserfah=
+rung=E2=80=9C beginnt im Februar die n=C3=A4chste Schulung. An zehn Termine=
+n setzen sich die Teilnehmenden mit dem Gesundheitssystem und individuellem=
+ Gesundheitsverhalten auseinander. Sie sollen selbst Gruppenangebote zur Ge=
+sundheitsf=C3=B6rderung auf deutsch oder in ihrer Muttersprache leiten. Kon=
+takt/ Anmeldung: Silke Marzluff (<a href=3D"mailto:gesundheitslotsen@carita=
+s-freiburg.de">Email,</a> Tel. 0761 31916713) <br></span></p>
+</div><!--#/html#-->
+          </td>
+          </tr>
+          </tbody></table>
+          <!--[if (gte mso 9)|(IE)]></td></tr></table><![endif]-->
+          </td>
+          </tr>
+          </tbody></table>
+    <!--#/loopitem#--> <!--#loopitem#-->
+       =20
+     =20
+ =20
+
+        <table width=3D"100%" cellspacing=3D"0" cellpadding=3D"0" border=3D=
+"0">
+          <tbody><tr>
+          <td style=3D"background-color:inherit;padding: 0px 5px 0px 5px ;b=
+order:0px;" data-style=3D"background-color:inherit;" class=3D"cr-container =
+editable" data-name=3D"Container" valign=3D"top" align=3D"center">
+          <!--[if (gte mso 9)|(IE)]><table align=3D"center" border=3D"0" ce=
+llspacing=3D"0" cellpadding=3D"0" width=3D"600" gc-width-fix=3D".cr-maxwidt=
+h:max-width"><tr><td align=3D"center" valign=3D"top" width=3D"600" gc-width=
+-fix=3D".cr-maxwidth:max-width"><![endif]-->
+          <table class=3D"cr-maxwidth editable" style=3D"" data-style=3D"ba=
+ckground-color:inherit;border:inherit;" data-name=3D"Inner container" width=
+=3D"100%" cellspacing=3D"0" cellpadding=3D"0" border=3D"0">
+          <tbody><tr>
+          <td style=3D"font-family: Arial, Gadget, sans-serif !important;co=
+lor:  ;line-height:inherit;letter-spacing:inherit;padding:0px;" data-style=
+=3D"font-family:inherit !important;color:inherit;line-height:inherit;letter=
+-spacing:inherit;padding:0px;" class=3D"cr-text editable" data-name=3D"Text=
+" valign=3D"top" align=3D"left">
+          <!--#html#--><div align=3D"left">
+<p class=3D"false"><span style=3D"font-size: 18px;"><strong>Stadtbibliothek=
+: Sprachcaf=C3=A9 f=C3=BCr Frauen - neue Termine</strong><br><span style=3D=
+"color: #34495e;"><em>14t=C3=A4gig dienstags, 10-12 Uhr, Stadtbibliothek, M=
+u=CC=88nsterplatz 17, 3. OG</em></span><br>Deutsch lernen - kostenlos und o=
+hne Anmeldung, offen fu=CC=88r alle Frauen.<br class=3D"false">Die Teilnehm=
+enden sprechen und spielen, um Deutsch zu u=CC=88ben und sich kennenzulerne=
+n. N=C3=A4chste Termine: 10.1. / 24.1. / 7.2. / 21.2.2023<br></span></p>
+</div><!--#/html#-->
+          </td>
+          </tr>
+          </tbody></table>
+          <!--[if (gte mso 9)|(IE)]></td></tr></table><![endif]-->
+          </td>
+          </tr>
+          </tbody></table>
+    <!--#/loopitem#--> <!--#loopitem#-->
+       =20
+     =20
+ =20
+
+        <table width=3D"100%" cellspacing=3D"0" cellpadding=3D"0" border=3D=
+"0">
+          <tbody><tr>
+          <td style=3D"background-color:inherit;padding: 0px 5px 0px 5px ;b=
+order:0px;" data-style=3D"background-color:inherit;" class=3D"cr-container =
+editable" data-name=3D"Container" valign=3D"top" align=3D"center">
+          <!--[if (gte mso 9)|(IE)]><table align=3D"center" border=3D"0" ce=
+llspacing=3D"0" cellpadding=3D"0" width=3D"600" gc-width-fix=3D".cr-maxwidt=
+h:max-width"><tr><td align=3D"center" valign=3D"top" width=3D"600" gc-width=
+-fix=3D".cr-maxwidth:max-width"><![endif]-->
+          <table class=3D"cr-maxwidth editable" style=3D"" data-style=3D"ba=
+ckground-color:inherit;border:inherit;" data-name=3D"Inner container" width=
+=3D"100%" cellspacing=3D"0" cellpadding=3D"0" border=3D"0">
+          <tbody><tr>
+          <td style=3D"font-family: Arial, Gadget, sans-serif !important;co=
+lor:  ;line-height:inherit;letter-spacing:inherit;padding:0px;" data-style=
+=3D"font-family:inherit !important;color:inherit;line-height:inherit;letter=
+-spacing:inherit;padding:0px;" class=3D"cr-text editable" data-name=3D"Text=
+" valign=3D"top" align=3D"left">
+          <!--#html#--><div align=3D"left">
+<p class=3D"false"><span style=3D"font-size: 18px;"><strong>Audioguide "Leb=
+ensalltag von osteurop=C3=A4ischen Migrant:innen auf Freiburgs Stra=C3=9Fen=
+"<br></strong>Der Audioguide gew=C3=A4hrt =C3=BCber 6 Stationen rund um die=
+ Freiburger Innenstadt Einblicke in die Lebensrealit=C3=A4ten rum=C3=A4nisc=
+her und bulgarischer Migrant:innen, die hier von Armut und Wohnungslosigkei=
+t betroffen sind. Zu h=C3=B6ren sind Interviews mit Betroffenen, Sozialarbe=
+itenden sowie Kontextinformationen. Der Guide entstand im Rahmen eines Stud=
+ienprojekts der EH Freiburg. Info/ Stream<a href=3D"https://121070.seu2.cle=
+verreach.com/c/79204308/b09ec13a504-ro9gus" target=3D"_blank" rel=3D"noopen=
+er"> hier.</a> <strong><br></strong></span></p>
+</div><!--#/html#-->
+          </td>
+          </tr>
+          </tbody></table>
+          <!--[if (gte mso 9)|(IE)]></td></tr></table><![endif]-->
+          </td>
+          </tr>
+          </tbody></table>
+    <!--#/loopitem#--> <!--#loopitem#-->
+       =20
+     =20
+ =20
+
+        <table width=3D"100%" cellspacing=3D"0" cellpadding=3D"0" border=3D=
+"0">
+          <tbody><tr>
+          <td style=3D"background-color:inherit;padding: 0px 5px 0px 5px ;b=
+order:0px;" data-style=3D"background-color:inherit;" class=3D"cr-container =
+editable" data-name=3D"Container" valign=3D"top" align=3D"center">
+          <!--[if (gte mso 9)|(IE)]><table align=3D"center" border=3D"0" ce=
+llspacing=3D"0" cellpadding=3D"0" width=3D"600" gc-width-fix=3D".cr-maxwidt=
+h:max-width"><tr><td align=3D"center" valign=3D"top" width=3D"600" gc-width=
+-fix=3D".cr-maxwidth:max-width"><![endif]-->
+          <table class=3D"cr-maxwidth editable" style=3D"" data-style=3D"ba=
+ckground-color:inherit;border:inherit;" data-name=3D"Inner container" width=
+=3D"100%" cellspacing=3D"0" cellpadding=3D"0" border=3D"0">
+          <tbody><tr>
+          <td style=3D"font-family: Arial, Gadget, sans-serif !important;co=
+lor:  ;line-height:inherit;letter-spacing:inherit;padding:0px;" data-style=
+=3D"font-family:inherit !important;color:inherit;line-height:inherit;letter=
+-spacing:inherit;padding:0px;" class=3D"cr-text editable" data-name=3D"Text=
+" valign=3D"top" align=3D"left">
+          <!--#html#--><div align=3D"left">
+<p class=3D"false"><span style=3D"font-size: 18px;"><strong>Schwere(s)los: =
+"Mama Africa: Move and Groove your Mind"<br></strong>Das neue Projekt soll =
+einen Schnittpunkt zwischen den =C3=BCberwiegend jungen M=C3=A4nnern auf de=
+m St=C3=BChlinger Kirchplatz und dem Rest der Bev=C3=B6lkerung herstellen -=
+ durch Musik, Tanz und Gespr=C3=A4che: Donnerstags, 17-19 Uhr afrokaribisch=
+es Trommeln mit Beuz Thiombane (Kleineschholzweg 5); freitags 15-17 Uhr wes=
+tafrikanische Teezeremonie =E2=80=9EAtaya=E2=80=9C mit George Senghore und =
+Janine B=C3=B6hl =E2=80=93 im Winter in den Schwere(s)los R=C3=A4umen und i=
+m Sommer auf dem St=C3=BChlinger Kirchplatz. Mehr Infos: <a href=3D"https:/=
+/121070.seu2.cleverreach.com/c/79204309/b09ec13a504-ro9gus" target=3D"_blan=
+k" rel=3D"noopener">Website</a><br></span></p>
+</div><!--#/html#-->
+          </td>
+          </tr>
+          </tbody></table>
+          <!--[if (gte mso 9)|(IE)]></td></tr></table><![endif]-->
+          </td>
+          </tr>
+          </tbody></table>
+    <!--#/loopitem#--> <!--#loopitem#-->
+       =20
+     =20
+ =20
+
+        <table width=3D"100%" cellspacing=3D"0" cellpadding=3D"0" border=3D=
+"0">
+          <tbody><tr>
+          <td style=3D"background-color:inherit;padding: 0px 5px 0px 5px ;b=
+order:0px;" data-style=3D"background-color:inherit;" class=3D"cr-container =
+editable" data-name=3D"Container" valign=3D"top" align=3D"center">
+          <!--[if (gte mso 9)|(IE)]><table align=3D"center" border=3D"0" ce=
+llspacing=3D"0" cellpadding=3D"0" width=3D"600" gc-width-fix=3D".cr-maxwidt=
+h:max-width"><tr><td align=3D"center" valign=3D"top" width=3D"600" gc-width=
+-fix=3D".cr-maxwidth:max-width"><![endif]-->
+          <table class=3D"cr-maxwidth editable" style=3D"" data-style=3D"ba=
+ckground-color:inherit;border:inherit;" data-name=3D"Inner container" width=
+=3D"100%" cellspacing=3D"0" cellpadding=3D"0" border=3D"0">
+          <tbody><tr>
+          <td style=3D"font-family: Arial, Gadget, sans-serif !important;co=
+lor:  ;line-height:inherit;letter-spacing:inherit;padding:0px;" data-style=
+=3D"font-family:inherit !important;color:inherit;line-height:inherit;letter=
+-spacing:inherit;padding:0px;" class=3D"cr-text editable" data-name=3D"Text=
+" valign=3D"top" align=3D"left">
+          <!--#html#--><div align=3D"left">
+<p class=3D"false"><span style=3D"font-size: 18px;"><strong>Interkulturelle=
+s Theater Freiburg: Mitspieler*innen gesucht</strong><br class=3D"false">Da=
+s neue St=C3=BCck "Unsichtbar" soll wahre Geschichten versammeln =C3=BCber =
+Menschen, die wie unsichtbar leben m=C3=BCssen - aufgrund von mehrfachen Di=
+skriminierungserfahrungen. Dazu werden Mitspieler*innen gesucht.<br class=
+=3D"false">Proben ab 25.01., mittwochs 18 Uhr, Bergiselstr. 11, 79111 Freib=
+urg Anmeldung per <a href=3D"mailto:post@interkulturelles-theater.de">Email=
+</a>; Informationen auf der <a href=3D"https://121070.seu2.cleverreach.com/=
+c/79211447/b09ec13a504-ro9gus" target=3D"_blank" rel=3D"noopener">Website</=
+a><br></span></p>
+</div><!--#/html#-->
+          </td>
+          </tr>
+          </tbody></table>
+          <!--[if (gte mso 9)|(IE)]></td></tr></table><![endif]-->
+          </td>
+          </tr>
+          </tbody></table>
+    <!--#/loopitem#-->      <!--#loopitem#--><a data-title=3D"Ausgabe Janua=
+r=C2=A02022" id=3D"cra-3409127" name=3D"cra-3409127" data-visible=3D"true" =
+class=3D"cred-index-anchor"></a>=20
+									<table class=3D"row cred_loopitem_multiple" style=3D"width: 100%;"=
+ cellspacing=3D"0" cellpadding=3D"0">
+  <tbody>
+    <tr><td class=3D"wrapper last cred_is_frame cred_modal_top" valign=3D"t=
+op" style=3D"padding: 0px; background-color: rgb(255, 255, 255);">
+													<table class=3D"twelve columns" style=3D"width: 100%;" cellspa=
+cing=3D"0" cellpadding=3D"0"><tbody><tr><td style=3D"padding: 5px 0px; colo=
+r: rgb(255, 255, 255); background-color: rgb(134, 188, 37); border: 0px non=
+e rgb(247, 237, 247);" valign=3D"top" class=3D"text"><!--#html#--><div styl=
+e=3D"text-align: left;" align=3D"center"><span style=3D"font-size: 18px; co=
+lor: #ffffff;"><a id=3D"Steckbrief" name=3D"Steckbrief"></a>&nbsp;<a style=
+=3D"color: #ffffff;" href=3D"#Uebersicht">zur=C3=BCck zur =C3=9Cbersicht</a=
+><br></span></div><!--#/html#--></td>
+															</tr></tbody></table></td>
+											</tr>
+  </tbody>
+</table><!--#/loopitem#-->      <!--#loopitem#--><a data-title=3D"Publikati=
+onen & Material" id=3D"cra-4032951" name=3D"cra-4032951" data-visible=3D"tr=
+ue" class=3D"cred-index-anchor"></a>=20
+									<table class=3D"row cred_loopitem_multiple" style=3D"width: 100%;"=
+ cellspacing=3D"0" cellpadding=3D"0">
+  <tbody>
+    <tr><td class=3D"wrapper last cred_is_frame cred_modal_top" valign=3D"t=
+op" style=3D"padding: 5px 0px; background-color: rgb(255, 255, 255);">
+													<table class=3D"twelve columns" style=3D"width: 100%;" cellspa=
+cing=3D"0" cellpadding=3D"0"><tbody><tr><td style=3D"padding: 5px; color: r=
+gb(0, 107, 82); background-color: rgb(255, 255, 255); border: 0px none rgb(=
+247, 237, 247);" valign=3D"top" class=3D"text"><!--#html#--><span style=3D"=
+font-size: 1.2em;"><strong><span style=3D"color: #86bc25;">Initiativen-Stec=
+kbrief</span></strong></span><!--#/html#--></td>
+															</tr></tbody></table></td>
+											</tr>
+  </tbody>
+</table><!--#/loopitem#-->     <!--#loopitem#-->
+     =20
+     =20
+ =20
+     =20
+   =20
+
+ =20
+     =20
+   =20
+ =20
+
+  <!--#layout resource=3D"default"#-->
+   =20
+     =20
+ =20
+   =20
+   =20
+
+ =20
+   =20
+   =20
+ =20
+
+
+   =20
+    <table class=3D"" data-dynamic=3D"false" width=3D"100%" cellspacing=3D"=
+0" cellpadding=3D"0" border=3D"0">
+      <tbody><tr>
+        <td style=3D"background-color:inherit;padding:10px 20px;border:0px;=
+" class=3D"editable" data-name=3D"container" valign=3D"top">
+        <!--[if (gte mso 9)|(IE)]>
+        <table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"60=
+0" gc-width-fix=3D".cr-maxwidth:max-width" align=3D"center">
+        <tbody><tr>
+        <td valign=3D"top">
+        <![endif]-->
+        <table class=3D"cr-maxwidth editable" style=3D"background-color:inh=
+erit;border:0px;" data-name=3D"Inner container" width=3D"100%" cellspacing=
+=3D"0" cellpadding=3D"0" border=3D"0" align=3D"center">
+          <tbody><tr>
+            <td class=3D"" style=3D"font-size:0px;" valign=3D"top">
+              <div class=3D"cr-col cr-col-6 " align=3D"left">
+                <table width=3D"100%" cellspacing=3D"0" cellpadding=3D"0" b=
+order=3D"0">
+                  <tbody>
+                    <tr>
+                      <td class=3D"cr-col-first" style=3D"padding-right:10p=
+x;" valign=3D"top">
+                        <!--#image name=3D"image" forcepx=3D"true"#--><tabl=
+e style=3D"width:100%;border:0px;padding:0px;margin:0px;" cellspacing=3D"0"=
+ cellpadding=3D"0"><tbody><tr><td style=3D"text-align: left;" align=3D"left=
+">
+                        <a href=3D"https://121070.seu2.cleverreach.com/c/79=
+189433/b09ec13a504-ro9gus" target=3D"_blank" style=3D"width: 100%; display:=
+ inline-block; line-height: 0px;" title=3D"Capoa Logo und Website"><img src=
+=3D"https://files.crsend.com/121000/121070/images/Capoa-Logo_200px.png" alt=
+=3D"Logo CaPoA" style=3D"border: 0px none; margin: 0px; padding: 0px; displ=
+ay: inline; max-width: 100%; width: 200px; height: auto;" class=3D"cred_Fi"=
+   width=3D"200" height=3D"200" align=3D""></a>
+                        </td></tr></tbody></table><!--#/image#-->
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class=3D"cr-col-first" style=3D"padding-right:10p=
+x;" valign=3D"top">
+                        <div style=3D"font-family:inherit !important;color:=
+inherit;line-height:inherit;letter-spacing:inherit;padding:5px 0px 0px 10px=
+;" data-name=3D"Text 1" class=3D"cr-text editable">
+                          <!--#html name=3D"title"#--><h3 class=3D"false">C=
+aPoA =E2=80=93 Cooperation and Progress of Africans e.V.</h3><!--#/html#-->
+                          <!--#html name=3D"description"#--><div><span styl=
+e=3D"font-size: 18px;"><strong class=3D"false">Wir engagieren uns f=C3=BCr.=
+..</strong></span><br class=3D"false">
+<ol class=3D"false">
+<li class=3D"false"><span style=3D"font-size: 18px;">Integration in Arbeit,=
+ Bildung und soziales Leben</span></li>
+<li class=3D"false"><span style=3D"font-size: 18px;">Begleiten, beraten, zu=
+h=C3=B6ren, auffangen. (Betreuung der Afrikanerinnen auf dem St=C3=BChlinge=
+r Kirchplatz)</span></li>
+<li class=3D"false"><span style=3D"font-size: 18px;">Begegnung f=C3=B6rdern=
+ (Sport, Feste, Kultur, Gespr=C3=A4che, Workshops)</span></li>
+</ol>
+</div><!--#/html#-->
+                          <!--#html name=3D"url" mode=3D"simple"#--><div><b=
+r><a href=3D"#" target=3D"_blank" rel=3D"noopener">Kontakt: Nelson Momoh, <=
+/a><a href=3D"https://121070.seu2.cleverreach.com/c/79188341/b09ec13a504-ro=
+9gus" target=3D"_blank" rel=3D"noopener">Website</a></div><!--#/html#-->
+                        </div>
+                      </td>
+                   </tr>
+                </tbody>
+                </table>
+              </div>
+            <!--[if (gte mso 9)|(IE)]>
+            </td><td valign=3D"top">
+            <![endif]-->
+            <div class=3D"cr-col cr-col-6" align=3D"right">
+              <table width=3D"100%" cellspacing=3D"0" cellpadding=3D"0" bor=
+der=3D"0">
+                <tbody>
+                  <tr>
+                    <td class=3D"cr-col-last" style=3D"padding-left:10px;" =
+valign=3D"top">
+                      <!--#image name=3D"image" forcepx=3D"true"#--><table =
+style=3D"width:100%;border:0px;padding:0px;margin:0px;" cellspacing=3D"0" c=
+ellpadding=3D"0"><tbody><tr><td style=3D"text-align: right;" align=3D"right=
+">
+                      <a href=3D"#" target=3D"_blank" style=3D"width: 100%;=
+ display: inline-block; line-height: 0px;" title=3D""><img src=3D"https://f=
+iles.crsend.com/121000/121070/images/eddytor/m_14141611/6b625196409f6798b3c=
+750090a171ecb.png" alt=3D"" style=3D"border: 0px none; margin: 0px; padding=
+: 0px; display: inline; max-width: 100%; width: 265px; height: auto;" class=
+=3D"cred_Fi"   width=3D"265" height=3D"1" align=3D""></a>
+                      </td></tr></tbody></table><!--#/image#-->
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class=3D"cr-col-last" style=3D"padding-left:10px;" =
+valign=3D"top">
+                      <div style=3D"font-family:inherit !important;color:in=
+herit;line-height:inherit;letter-spacing:inherit;padding:5px 0px 0px 10px;"=
+ data-name=3D"Text 2" class=3D"cr-text editable">
+                        <!--#html name=3D"title"#--><div><strong><span styl=
+e=3D"font-size: 18px;">Wir wollen...</span></strong></div><!--#/html#-->
+                        <!--#html name=3D"description"#--><ul class=3D"fals=
+e">
+<li class=3D"false"><span style=3D"font-size: 18px;">weiter Ansprechpartner=
+ bleiben, unvoreingenommen f=C3=BCr Jede und Jeden</span></li>
+<li class=3D"false"><span style=3D"font-size: 18px;">den St=C3=BChlinger Ki=
+rchplatz zu einem Ort kulturellen Austauschs werden lassen</span></li>
+<li class=3D"false"><span style=3D"font-size: 18px;">in einer Gesellschaft =
+leben, die =E2=80=9EAnderssein=E2=80=9C als Gewinn und nicht Gefahr ansieht=
+</span></li>
+<li class=3D"false"><span style=3D"font-size: 18px;">Interesse und Verst=C3=
+=A4ndnis in der Freiburger Bev=C3=B6lkerung wecken,&nbsp; Bindeglied f=C3=
+=BCr beide Seiten sein</span></li>
+</ul>
+<p class=3D"false"><span style=3D"font-size: 18px;"><strong class=3D"false"=
+>Unsere St=C3=A4rken sind=E2=80=A6</strong></span></p>
+<ul class=3D"false">
+<li class=3D"false"><span style=3D"font-size: 18px;">Integrationsschwierig-=
+keiten =C3=BCberwinden</span></li>
+<li class=3D"false"><span style=3D"font-size: 18px;">Zuh=C3=B6ren und Begle=
+iten</span></li>
+</ul>
+<p class=3D"false"><span style=3D"font-size: 18px;"><strong>Wir brauchen/ s=
+uchen...</strong></span></p>
+<ul>
+<li class=3D"false"><span style=3D"font-size: 18px;">Raum f=C3=BCr Events u=
+nd Sport z.B. Tischtennis-Raum;</span></li>
+<li class=3D"false"><span style=3D"font-size: 18px;">=C3=96ffentlichkeitsar=
+beit und finanzielle Unterst=C3=BCtzung</span></li>
+</ul><!--#/html#-->
+                        <!--#html name=3D"url" mode=3D"simple"#--><div>&nbs=
+p;</div><!--#/html#-->
+                      </div>
+                    </td>
+                 </tr>
+              </tbody>
+              </table>
+          </div>
+          </td>
+        </tr>
+      </tbody></table>
+      <!--[if (gte mso 9)|(IE)]>
+      </td>
+      </tr>
+      </tbody></table>
+    <![endif]-->
+  </td>
+</tr>
+</tbody></table>
+
+<!--#/layout#-->
+  <!--#/loopitem#-->                                            =20
+
+
+
+<!--#loopitem#--><a data-title=3D"zur=C3=BCck zur =C3=9Cbersicht" id=3D"cra=
+-9731401" name=3D"cra-9731401" data-visible=3D"true" class=3D"cred-index-an=
+chor"></a>=20
+									<table class=3D"row cred_loopitem_multiple" style=3D"width: 100%;"=
+ cellspacing=3D"0" cellpadding=3D"0">
+  <tbody>
+    <tr><td class=3D"wrapper last cred_is_frame cred_modal_top" valign=3D"t=
+op" style=3D"padding: 5px 0px; background-color: rgb(255, 255, 255);">
+													<table class=3D"twelve columns" style=3D"width: 100%;" cellspa=
+cing=3D"0" cellpadding=3D"0"><tbody><tr><td style=3D"padding: 5px; color: r=
+gb(255, 255, 255); background-color: rgb(188, 165, 128); border: 0px none r=
+gb(0, 0, 0);" valign=3D"top" class=3D"text"><!--#html#--><span style=3D"col=
+or: #ffffff; font-size: 18px;"><a id=3D"Termine" name=3D"Termine"></a><a st=
+yle=3D"color: #ffffff;" href=3D"#Uebersicht">zur=C3=BCck zur =C3=9Cbersicht=
+</a></span><!--#/html#--></td>
+															</tr></tbody></table></td>
+											</tr>
+  </tbody>
+</table><!--#/loopitem#--> =20
+ <!--#loopitem#--><a data-title=3D"Termine und Veranstaltungen" id=3D"cra-5=
+759239" name=3D"cra-5759239" data-visible=3D"true" class=3D"cred-index-anch=
+or"></a>=20
+									<table class=3D"row cred_loopitem_multiple" style=3D"width: 100%;"=
+ cellspacing=3D"0" cellpadding=3D"0">
+  <tbody>
+    <tr><td class=3D"wrapper last cred_is_frame cred_modal_top" valign=3D"t=
+op" style=3D"padding: 5px 0px; background-color: rgb(255, 255, 255);">
+													<table class=3D"twelve columns" style=3D"width: 100%;" cellspa=
+cing=3D"0" cellpadding=3D"0"><tbody><tr><td style=3D"padding: 5px; color: r=
+gb(0, 107, 82); background-color: rgb(255, 255, 255); border: 0px none rgb(=
+247, 237, 247);" valign=3D"top" class=3D"text"><!--#html#--><span style=3D"=
+font-size: 1.2em; color: #bca580;"><strong>Termine und Veranstaltungen</str=
+ong></span><!--#/html#--></td>
+															</tr></tbody></table></td>
+											</tr>
+  </tbody>
+</table><!--#/loopitem#-->    =20
+
+
+
+                                                                           =
+<!--#loopitem#-->
+       =20
+     =20
+ =20
+
+        <table width=3D"100%" cellspacing=3D"0" cellpadding=3D"0" border=3D=
+"0">
+          <tbody><tr>
+          <td style=3D"background-color:inherit;padding: 0px 5px 0px 5px ;b=
+order:0px;" data-style=3D"background-color:inherit;" class=3D"cr-container =
+editable" data-name=3D"Container" valign=3D"top" align=3D"center">
+          <!--[if (gte mso 9)|(IE)]><table align=3D"center" border=3D"0" ce=
+llspacing=3D"0" cellpadding=3D"0" width=3D"600" gc-width-fix=3D".cr-maxwidt=
+h:max-width"><tr><td align=3D"center" valign=3D"top" width=3D"600" gc-width=
+-fix=3D".cr-maxwidth:max-width"><![endif]-->
+          <table class=3D"cr-maxwidth editable" style=3D"" data-style=3D"ba=
+ckground-color:inherit;border:inherit;" data-name=3D"Inner container" width=
+=3D"100%" cellspacing=3D"0" cellpadding=3D"0" border=3D"0">
+          <tbody><tr>
+          <td style=3D"font-family: Arial, Gadget, sans-serif !important;co=
+lor:  ;line-height:inherit;letter-spacing:inherit;padding:0px;" data-style=
+=3D"font-family:inherit !important;color:inherit;line-height:inherit;letter=
+-spacing:inherit;padding:0px;" class=3D"cr-text editable" data-name=3D"Text=
+" valign=3D"top" align=3D"left">
+          <!--#html#--><div align=3D"left">
+<p class=3D"false"><span style=3D"font-size: 18px;"><strong class=3D"false"=
+>Do., 19.01.: Walk & Talk =E2=80=93 Besuch bei Bildungsberatung Garantiefon=
+ds Hochschule und Jugendmigrationsdienst</strong><strong class=3D"false"><b=
+r class=3D"false"></strong><span style=3D"color: #34495e;"><em>15 - 17 Uhr,=
+ Ort wird nach Anmeldung bekannt gegeben</em></span><br class=3D"false">Bei=
+ Walk & Talk von Wegweiser Bildung spazieren Bildungsberaterinnen und -bera=
+ter gemeinsam zu einer Beratungseinrichtung und lernen sich untereinander u=
+nd die gastgebende Institution besser kennen. Heute f=C3=BChrt der Weg zur =
+Bildungsberatung Garantiefonds Hochschule und dem Caritas-Jugendmigrationsd=
+ienst. Nur mit Anmeldung<a class=3D"false" href=3D"mailto:veranstaltung@weg=
+weiser-bildung.de" target=3D"_blank" rel=3D"noopener noreferrer"> (Email)</=
+a>. <br></span></p>
+</div><!--#/html#-->
+          </td>
+          </tr>
+          </tbody></table>
+          <!--[if (gte mso 9)|(IE)]></td></tr></table><![endif]-->
+          </td>
+          </tr>
+          </tbody></table>
+    <!--#/loopitem#--> <!--#loopitem#-->
+       =20
+     =20
+ =20
+
+        <table width=3D"100%" cellspacing=3D"0" cellpadding=3D"0" border=3D=
+"0">
+          <tbody><tr>
+          <td style=3D"background-color:inherit;padding: 0px 5px 0px 5px ;b=
+order:0px;" data-style=3D"background-color:inherit;" class=3D"cr-container =
+editable" data-name=3D"Container" valign=3D"top" align=3D"center">
+          <!--[if (gte mso 9)|(IE)]><table align=3D"center" border=3D"0" ce=
+llspacing=3D"0" cellpadding=3D"0" width=3D"600" gc-width-fix=3D".cr-maxwidt=
+h:max-width"><tr><td align=3D"center" valign=3D"top" width=3D"600" gc-width=
+-fix=3D".cr-maxwidth:max-width"><![endif]-->
+          <table class=3D"cr-maxwidth editable" style=3D"" data-style=3D"ba=
+ckground-color:inherit;border:inherit;" data-name=3D"Inner container" width=
+=3D"100%" cellspacing=3D"0" cellpadding=3D"0" border=3D"0">
+          <tbody><tr>
+          <td style=3D"font-family: Arial, Gadget, sans-serif !important;co=
+lor:  ;line-height:inherit;letter-spacing:inherit;padding:0px;" data-style=
+=3D"font-family:inherit !important;color:inherit;line-height:inherit;letter=
+-spacing:inherit;padding:0px;" class=3D"cr-text editable" data-name=3D"Text=
+" valign=3D"top" align=3D"left">
+          <!--#html#--><div align=3D"left">
+<p class=3D"false"><span style=3D"font-size: 18px;"><strong>Di., 24.01.: =
+=C3=96kumen. Asylforum - Ehrenamtst=C3=A4tigkeit in der LEA</strong><br cla=
+ss=3D"false"><span style=3D"color: #34495e;"><em>18-20 Uhr, Caritasverband =
+Freiburg Stadt, Herrenstr. 6</em></span><br class=3D"false">Das =C3=96kumen=
+ische Asylforum ist ein Austauschforum von haupt- und ehrenamtlich Aktiven =
+in der Freiburger Fl=C3=BCchtlingsarbeit. Zu Gast wird Felicitas Hartl, Ehr=
+enamtskoordinatorin in der Landeserstaufnahmestelle (LEA) sein und von ihre=
+r Arbeit und den dortigen ehrenamtlich getragenen Projekten berichten. Inte=
+ressierte sind herzlich zu dem Treffen eingeladen. Anmeldung bei <a href=3D=
+"mailto:Ilona.mueller@caritas-freiburg.de">Ilona M=C3=BCller</a><br></span>=
+</p>
+</div><!--#/html#-->
+          </td>
+          </tr>
+          </tbody></table>
+          <!--[if (gte mso 9)|(IE)]></td></tr></table><![endif]-->
+          </td>
+          </tr>
+          </tbody></table>
+    <!--#/loopitem#-->  <!--#loopitem#-->
+       =20
+     =20
+ =20
+
+        <table width=3D"100%" cellspacing=3D"0" cellpadding=3D"0" border=3D=
+"0">
+          <tbody><tr>
+          <td style=3D"background-color:inherit;padding: 0px 5px 0px 5px ;b=
+order:0px;" data-style=3D"background-color:inherit;" class=3D"cr-container =
+editable" data-name=3D"Container" valign=3D"top" align=3D"center">
+          <!--[if (gte mso 9)|(IE)]><table align=3D"center" border=3D"0" ce=
+llspacing=3D"0" cellpadding=3D"0" width=3D"600" gc-width-fix=3D".cr-maxwidt=
+h:max-width"><tr><td align=3D"center" valign=3D"top" width=3D"600" gc-width=
+-fix=3D".cr-maxwidth:max-width"><![endif]-->
+          <table class=3D"cr-maxwidth editable" style=3D"" data-style=3D"ba=
+ckground-color:inherit;border:inherit;" data-name=3D"Inner container" width=
+=3D"100%" cellspacing=3D"0" cellpadding=3D"0" border=3D"0">
+          <tbody><tr>
+          <td style=3D"font-family: Arial, Gadget, sans-serif !important;co=
+lor:  ;line-height:inherit;letter-spacing:inherit;padding:0px;" data-style=
+=3D"font-family:inherit !important;color:inherit;line-height:inherit;letter=
+-spacing:inherit;padding:0px;" class=3D"cr-text editable" data-name=3D"Text=
+" valign=3D"top" align=3D"left">
+          <!--#html#--><div align=3D"left">
+<p class=3D"false"><span style=3D"font-size: 18px;"><strong>Mi., 25.01.: We=
+btalk "Sint_zze und Rom_nja im Nationalsozialismus in Freiburg"<br></strong=
+><span style=3D"color: #34495e;"><em>20:15-21:45 Uhr, Online (<a href=3D"ht=
+tps://121070.seu2.cleverreach.com/c/79204310/b09ec13a504-ro9gus" target=3D"=
+_blank" rel=3D"noopener">Link</a>, big blue button)</em></span><strong><br>=
+</strong>Ins Gespr=C3=A4ch kommen der Historiker Heiko Haumann von der Univ=
+ersit=C3=A4t Basel und Tomas Wald vom Roma B=C3=BCro Freiburg e.V. Die Vera=
+nstaltung ist Teil der Reihe =E2=80=9EFreiburger Vereine und Verb=C3=A4nde =
+in der Zeit des Nationalsozialismus. Versuch einer lokalen und regionalen B=
+estandsaufnahme=E2=80=9C und wird u.a. veranstaltet von den St=C3=A4dtische=
+n Museen Freiburg. Mehr Info <a href=3D"https://121070.seu2.cleverreach.com=
+/c/79204311/b09ec13a504-ro9gus" target=3D"_blank" rel=3D"noopener">hier</a>=
+<br></span></p>
+</div><!--#/html#-->
+          </td>
+          </tr>
+          </tbody></table>
+          <!--[if (gte mso 9)|(IE)]></td></tr></table><![endif]-->
+          </td>
+          </tr>
+          </tbody></table>
+    <!--#/loopitem#-->  <!--#loopitem#--><a data-title=3D"Ank=C3=BCndigunge=
+n" id=3D"cra-6379633" name=3D"cra-6379633" data-visible=3D"true" class=3D"c=
+red-index-anchor"></a>=20
+									<table class=3D"row cred_loopitem_multiple" style=3D"width: 100%;"=
+ cellspacing=3D"0" cellpadding=3D"0">
+  <tbody>
+    <tr><td class=3D"wrapper last cred_is_frame cred_modal_top" valign=3D"t=
+op" style=3D"padding: 5px 0px; background-color: rgb(255, 255, 255);">
+													<table class=3D"twelve columns" style=3D"width: 100%;" cellspa=
+cing=3D"0" cellpadding=3D"0"><tbody><tr><td style=3D"padding: 5px; color: r=
+gb(0, 107, 82); background-color: rgb(255, 255, 255); border: 0px none rgb(=
+247, 237, 247);" valign=3D"top" class=3D"text"><!--#html#--><span style=3D"=
+font-size: 1.2em;" ><span style=3D"color: rgb(188, 165, 128);" >Ank=C3=BCnd=
+igungen</span><strong><br></strong></span><!--#/html#--></td>
+															</tr></tbody></table></td>
+											</tr>
+  </tbody>
+</table><!--#/loopitem#-->   <!--#loopitem#-->
+       =20
+     =20
+ =20
+
+        <table width=3D"100%" cellspacing=3D"0" cellpadding=3D"0" border=3D=
+"0">
+          <tbody><tr>
+          <td style=3D"background-color:inherit;padding: 0px 5px 0px 5px ;b=
+order:0px;" data-style=3D"background-color:inherit;" class=3D"cr-container =
+editable" data-name=3D"Container" valign=3D"top" align=3D"center">
+          <!--[if (gte mso 9)|(IE)]><table align=3D"center" border=3D"0" ce=
+llspacing=3D"0" cellpadding=3D"0" width=3D"600" gc-width-fix=3D".cr-maxwidt=
+h:max-width"><tr><td align=3D"center" valign=3D"top" width=3D"600" gc-width=
+-fix=3D".cr-maxwidth:max-width"><![endif]-->
+          <table class=3D"cr-maxwidth editable" style=3D"" data-style=3D"ba=
+ckground-color:inherit;border:inherit;" data-name=3D"Inner container" width=
+=3D"100%" cellspacing=3D"0" cellpadding=3D"0" border=3D"0">
+          <tbody><tr>
+          <td style=3D"font-family: Arial, Gadget, sans-serif !important;co=
+lor:  ;line-height:inherit;letter-spacing:inherit;padding:0px;" data-style=
+=3D"font-family:inherit !important;color:inherit;line-height:inherit;letter=
+-spacing:inherit;padding:0px;" class=3D"cr-text editable" data-name=3D"Text=
+" valign=3D"top" align=3D"left">
+          <!--#html#--><div align=3D"left">
+<p class=3D"false"><span style=3D"font-size: 18px;"><strong>Di., 28.02.: Wo=
+rkshop - Kulturelle Einfl=C3=BCsse auf die Psychotherapie mit Menschen mit =
+Fluchthintergrund</strong><br><span style=3D"color: #34495e;"><em>19-21 Uhr=
+, Ort wird noch bekannt gegeben</em></span><br class=3D"false">Psychotherap=
+eut*innen sind eingeladen Ph=C3=A4nomene der therapeutischen Arbeit mit gef=
+l=C3=BCchteten Menschen zu diskutieren. Zu verschiedenen Themen (s. <a href=
+=3D"https://121070.seu2.cleverreach.com/c/79180040/b09ec13a504-ro9gus" targ=
+et=3D"_blank" rel=3D"noopener">Website</a>) erfolgt ein kurzer Input auf Ba=
+sis von Forschungsergebnissen und Fallbeispielen aus dem Refugium. <br clas=
+s=3D"false">Info, Anmeldung bei Magdalena Koch (<a href=3D"mailto:magdalena=
+.koch@caritas-freiburg.de">Email</a>)<br></span></p>
+</div><!--#/html#-->
+          </td>
+          </tr>
+          </tbody></table>
+          <!--[if (gte mso 9)|(IE)]></td></tr></table><![endif]-->
+          </td>
+          </tr>
+          </tbody></table>
+    <!--#/loopitem#--> <!--#loopitem#-->
+       =20
+     =20
+ =20
+
+        <table width=3D"100%" cellspacing=3D"0" cellpadding=3D"0" border=3D=
+"0">
+          <tbody><tr>
+          <td style=3D"background-color:inherit;padding: 0px 5px 0px 5px ;b=
+order:0px;" data-style=3D"background-color:inherit;" class=3D"cr-container =
+editable" data-name=3D"Container" valign=3D"top" align=3D"center">
+          <!--[if (gte mso 9)|(IE)]><table align=3D"center" border=3D"0" ce=
+llspacing=3D"0" cellpadding=3D"0" width=3D"600" gc-width-fix=3D".cr-maxwidt=
+h:max-width"><tr><td align=3D"center" valign=3D"top" width=3D"600" gc-width=
+-fix=3D".cr-maxwidth:max-width"><![endif]-->
+          <table class=3D"cr-maxwidth editable" style=3D"" data-style=3D"ba=
+ckground-color:inherit;border:inherit;" data-name=3D"Inner container" width=
+=3D"100%" cellspacing=3D"0" cellpadding=3D"0" border=3D"0">
+          <tbody><tr>
+          <td style=3D"font-family: Arial, Gadget, sans-serif !important;co=
+lor:  ;line-height:inherit;letter-spacing:inherit;padding:0px;" data-style=
+=3D"font-family:inherit !important;color:inherit;line-height:inherit;letter=
+-spacing:inherit;padding:0px;" class=3D"cr-text editable" data-name=3D"Text=
+" valign=3D"top" align=3D"left">
+          <!--#html#--><div align=3D"left">
+<p class=3D"false"><span style=3D"font-size: 18px;"><strong class=3D"false"=
+>Mo., 13.03.: Beruflicher Einstieg. Themennachmittag f=C3=BCr Frauen aus de=
+r Ukraine <br></strong><span style=3D"color: #34495e;"><em>16 - 19 Uhr, Sta=
+dtbibliothek, M=C3=BCnsterplatz 17, Freiburg</em></span><br>Veranstaltung d=
+es Wegweiser Bildung mit zahlreichen PartnerInnen im Rahmen der Frauenwoche=
+ auf Ukrainisch. Information und Beratung zu Stellensuche und Bewerbung, Au=
+sbildung, Umschulung, Weiterbildung, Anerkennung von Abschl=C3=BCssen und F=
+=C3=B6rderm=C3=B6glichkeiten. Information und Anmeldung bei Olena Neumann (=
+<a href=3D"mailto:neumann@vhs-freiburg.de">Email</a>) </span></p>
+</div><!--#/html#-->
+          </td>
+          </tr>
+          </tbody></table>
+          <!--[if (gte mso 9)|(IE)]></td></tr></table><![endif]-->
+          </td>
+          </tr>
+          </tbody></table>
+    <!--#/loopitem#--> =20
+
+<!--#loopitem#--><a data-title=3D"Regelm=C3=A4=C3=9Fige Termine" id=3D"cra-=
+3508511" name=3D"cra-3508511" data-visible=3D"true" class=3D"cred-index-anc=
+hor"></a>=20
+									<table class=3D"row cred_loopitem_multiple" style=3D"width: 100%;"=
+ cellspacing=3D"0" cellpadding=3D"0">
+  <tbody>
+    <tr><td class=3D"wrapper last cred_is_frame cred_modal_top" valign=3D"t=
+op" style=3D"padding: 5px 0px; background-color: rgb(255, 255, 255);">
+													<table class=3D"twelve columns" style=3D"width: 100%;" cellspa=
+cing=3D"0" cellpadding=3D"0"><tbody><tr><td style=3D"padding: 5px; color: r=
+gb(0, 107, 82); background-color: rgb(255, 255, 255); border: 0px none rgb(=
+247, 237, 247);" valign=3D"top" class=3D"text"><!--#html#--><span style=3D"=
+font-size: 1.2em;" ><span style=3D"color: rgb(188, 165, 128);" >Regelm=C3=
+=A4=C3=9Fige Termine</span><strong><br></strong></span><!--#/html#--></td>
+															</tr></tbody></table></td>
+											</tr>
+  </tbody>
+</table><!--#/loopitem#--> <!--#loopitem#-->
+       =20
+     =20
+ =20
+
+        <table width=3D"100%" cellspacing=3D"0" cellpadding=3D"0" border=3D=
+"0">
+          <tbody><tr>
+          <td style=3D"background-color:inherit;padding: 0px 5px 0px 5px ;b=
+order:0px;" data-style=3D"background-color:inherit;" class=3D"cr-container =
+editable" data-name=3D"Container" valign=3D"top" align=3D"center">
+          <!--[if (gte mso 9)|(IE)]><table align=3D"center" border=3D"0" ce=
+llspacing=3D"0" cellpadding=3D"0" width=3D"600" gc-width-fix=3D".cr-maxwidt=
+h:max-width"><tr><td align=3D"center" valign=3D"top" width=3D"600" gc-width=
+-fix=3D".cr-maxwidth:max-width"><![endif]-->
+          <table class=3D"cr-maxwidth editable" style=3D"" data-style=3D"ba=
+ckground-color:inherit;border:inherit;" data-name=3D"Inner container" width=
+=3D"100%" cellspacing=3D"0" cellpadding=3D"0" border=3D"0">
+          <tbody><tr>
+          <td style=3D"font-family: Arial, Gadget, sans-serif !important;co=
+lor:  ;line-height:inherit;letter-spacing:inherit;padding:0px;" data-style=
+=3D"font-family:inherit !important;color:inherit;line-height:inherit;letter=
+-spacing:inherit;padding:0px;" class=3D"cr-text editable" data-name=3D"Text=
+" valign=3D"top" align=3D"left">
+          <!--#html#--><div align=3D"left">
+<p class=3D"false"><span style=3D"font-size: 18px;"><strong>Hotline f=C3=BC=
+r Gefl=C3=BCchtete aus der Ukraine</strong><br class=3D"false">Montag =E2=
+=80=93 Freitag, 8-12 Uhr, Tel. 0761 / 201 80 80<br></span></p>
+</div><!--#/html#-->
+          </td>
+          </tr>
+          </tbody></table>
+          <!--[if (gte mso 9)|(IE)]></td></tr></table><![endif]-->
+          </td>
+          </tr>
+          </tbody></table>
+    <!--#/loopitem#-->  <!--#loopitem#-->
+       =20
+     =20
+ =20
+
+        <table width=3D"100%" cellspacing=3D"0" cellpadding=3D"0" border=3D=
+"0">
+          <tbody><tr>
+          <td style=3D"background-color:inherit;padding: 0px 5px 0px 5px ;b=
+order:0px;" data-style=3D"background-color:inherit;" class=3D"cr-container =
+editable" data-name=3D"Container" valign=3D"top" align=3D"center">
+          <!--[if (gte mso 9)|(IE)]><table align=3D"center" border=3D"0" ce=
+llspacing=3D"0" cellpadding=3D"0" width=3D"600" gc-width-fix=3D".cr-maxwidt=
+h:max-width"><tr><td align=3D"center" valign=3D"top" width=3D"600" gc-width=
+-fix=3D".cr-maxwidth:max-width"><![endif]-->
+          <table class=3D"cr-maxwidth editable" style=3D"" data-style=3D"ba=
+ckground-color:inherit;border:inherit;" data-name=3D"Inner container" width=
+=3D"100%" cellspacing=3D"0" cellpadding=3D"0" border=3D"0">
+          <tbody><tr>
+          <td style=3D"font-family: Arial, Gadget, sans-serif !important;co=
+lor:  ;line-height:inherit;letter-spacing:inherit;padding:0px;" data-style=
+=3D"font-family:inherit !important;color:inherit;line-height:inherit;letter=
+-spacing:inherit;padding:0px;" class=3D"cr-text editable" data-name=3D"Text=
+" valign=3D"top" align=3D"left">
+          <!--#html#--><div align=3D"left">
+<p class=3D"false"><span style=3D"font-size: 18px;"><strong>Kinderschutzbun=
+d: M=C3=BCtter-Treff f=C3=BCr Frauen mit Migrationserfahrung</strong><br cl=
+ass=3D"false"><span style=3D"color: #34495e;"><em>montags, 9:30-11:30 Uhr, =
+Kinderschutzbund Freiburg, Kart=C3=A4userstr. 49a</em></span><br class=3D"f=
+alse">Austausch & Sprachpraxis mit Kinderbetreuung. kostenfrei, Anmeldung e=
+rforderlich: Chiara Platten, Tel.: 01573 9277699, <a href=3D"mailto:koordin=
+ation.familienpaten@kinderschutzbund-freiburg.de">Email</a>; Infos <a href=
+=3D"https://121070.seu2.cleverreach.com/c/79180041/b09ec13a504-ro9gus" targ=
+et=3D"_blank" rel=3D"noopener">hier</a>. <br></span></p>
+</div><!--#/html#-->
+          </td>
+          </tr>
+          </tbody></table>
+          <!--[if (gte mso 9)|(IE)]></td></tr></table><![endif]-->
+          </td>
+          </tr>
+          </tbody></table>
+    <!--#/loopitem#--> <!--#loopitem#-->
+       =20
+     =20
+ =20
+
+        <table width=3D"100%" cellspacing=3D"0" cellpadding=3D"0" border=3D=
+"0">
+          <tbody><tr>
+          <td style=3D"background-color:inherit;padding: 0px 5px 0px 5px ;b=
+order:0px;" data-style=3D"background-color:inherit;" class=3D"cr-container =
+editable" data-name=3D"Container" valign=3D"top" align=3D"center">
+          <!--[if (gte mso 9)|(IE)]><table align=3D"center" border=3D"0" ce=
+llspacing=3D"0" cellpadding=3D"0" width=3D"600" gc-width-fix=3D".cr-maxwidt=
+h:max-width"><tr><td align=3D"center" valign=3D"top" width=3D"600" gc-width=
+-fix=3D".cr-maxwidth:max-width"><![endif]-->
+          <table class=3D"cr-maxwidth editable" style=3D"" data-style=3D"ba=
+ckground-color:inherit;border:inherit;" data-name=3D"Inner container" width=
+=3D"100%" cellspacing=3D"0" cellpadding=3D"0" border=3D"0">
+          <tbody><tr>
+          <td style=3D"font-family: Arial, Gadget, sans-serif !important;co=
+lor:  ;line-height:inherit;letter-spacing:inherit;padding:0px;" data-style=
+=3D"font-family:inherit !important;color:inherit;line-height:inherit;letter=
+-spacing:inherit;padding:0px;" class=3D"cr-text editable" data-name=3D"Text=
+" valign=3D"top" align=3D"left">
+          <!--#html#--><div align=3D"left">
+<p class=3D"false"><span style=3D"font-size: 18px;"><strong>Wegweiser Bildu=
+ng: Pers=C3=B6nliche Beratung - ohne Termin</strong><br class=3D"false"><sp=
+an style=3D"color: #34495e;"><em>Di-Fr 14-17 Uhr sowie Di 10-13 Uhr, Stadtb=
+ibliothek am M=C3=BCnsterplatz</em></span><br class=3D"false">Info <a href=
+=3D"https://121070.seu2.cleverreach.com/c/79180042/b09ec13a504-ro9gus" targ=
+et=3D"_blank" rel=3D"noopener">hier</a><br></span></p>
+</div><!--#/html#-->
+          </td>
+          </tr>
+          </tbody></table>
+          <!--[if (gte mso 9)|(IE)]></td></tr></table><![endif]-->
+          </td>
+          </tr>
+          </tbody></table>
+    <!--#/loopitem#--> <!--#loopitem#-->
+       =20
+     =20
+ =20
+
+        <table width=3D"100%" cellspacing=3D"0" cellpadding=3D"0" border=3D=
+"0">
+          <tbody><tr>
+          <td style=3D"background-color:inherit;padding: 0px 5px 0px 5px ;b=
+order:0px;" data-style=3D"background-color:inherit;" class=3D"cr-container =
+editable" data-name=3D"Container" valign=3D"top" align=3D"center">
+          <!--[if (gte mso 9)|(IE)]><table align=3D"center" border=3D"0" ce=
+llspacing=3D"0" cellpadding=3D"0" width=3D"600" gc-width-fix=3D".cr-maxwidt=
+h:max-width"><tr><td align=3D"center" valign=3D"top" width=3D"600" gc-width=
+-fix=3D".cr-maxwidth:max-width"><![endif]-->
+          <table class=3D"cr-maxwidth editable" style=3D"" data-style=3D"ba=
+ckground-color:inherit;border:inherit;" data-name=3D"Inner container" width=
+=3D"100%" cellspacing=3D"0" cellpadding=3D"0" border=3D"0">
+          <tbody><tr>
+          <td style=3D"font-family: Arial, Gadget, sans-serif !important;co=
+lor:  ;line-height:inherit;letter-spacing:inherit;padding:0px;" data-style=
+=3D"font-family:inherit !important;color:inherit;line-height:inherit;letter=
+-spacing:inherit;padding:0px;" class=3D"cr-text editable" data-name=3D"Text=
+" valign=3D"top" align=3D"left">
+          <!--#html#--><div align=3D"left">
+<p class=3D"false"><span style=3D"font-size: 18px;"><strong>Zentrale Fahrra=
+dwerkstatt</strong> (Pause bis 15.02.)<br class=3D"false"><span style=3D"co=
+lor: #34495e;"><em>mittwochs 8-11:30 Uhr, Schopfheimer Str. 5, Freiburg</em=
+></span><br class=3D"false">R=C3=A4der reparieren, gebrauchte R=C3=A4der ge=
+gen Spende erwerben, mitschrauben. Kontakt: Thomas Tritschler (<a class=3D"=
+false" href=3D"mailto:fahrradwerkstatt@stadt.freiburg.de">Email</a>)<br></s=
+pan></p>
+</div><!--#/html#-->
+          </td>
+          </tr>
+          </tbody></table>
+          <!--[if (gte mso 9)|(IE)]></td></tr></table><![endif]-->
+          </td>
+          </tr>
+          </tbody></table>
+    <!--#/loopitem#--> <!--#loopitem#-->
+       =20
+     =20
+ =20
+
+        <table width=3D"100%" cellspacing=3D"0" cellpadding=3D"0" border=3D=
+"0">
+          <tbody><tr>
+          <td style=3D"background-color:inherit;padding: 0px 5px 0px 5px ;b=
+order:0px;" data-style=3D"background-color:inherit;" class=3D"cr-container =
+editable" data-name=3D"Container" valign=3D"top" align=3D"center">
+          <!--[if (gte mso 9)|(IE)]><table align=3D"center" border=3D"0" ce=
+llspacing=3D"0" cellpadding=3D"0" width=3D"600" gc-width-fix=3D".cr-maxwidt=
+h:max-width"><tr><td align=3D"center" valign=3D"top" width=3D"600" gc-width=
+-fix=3D".cr-maxwidth:max-width"><![endif]-->
+          <table class=3D"cr-maxwidth editable" style=3D"" data-style=3D"ba=
+ckground-color:inherit;border:inherit;" data-name=3D"Inner container" width=
+=3D"100%" cellspacing=3D"0" cellpadding=3D"0" border=3D"0">
+          <tbody><tr>
+          <td style=3D"font-family: Arial, Gadget, sans-serif !important;co=
+lor:  ;line-height:inherit;letter-spacing:inherit;padding:0px;" data-style=
+=3D"font-family:inherit !important;color:inherit;line-height:inherit;letter=
+-spacing:inherit;padding:0px;" class=3D"cr-text editable" data-name=3D"Text=
+" valign=3D"top" align=3D"left">
+          <!--#html#--><div align=3D"left">
+<p class=3D"false"><span style=3D"font-size: 18px;"><strong>Ukraine-Caf=C3=
+=A9<br class=3D"false"></strong><span style=3D"color: #34495e;"><em>Mi+Fr 1=
+0:30-13 Uhr, Interkultureller Verein Fairburg, Schwarzwaldstr. 6 (Eingang F=
+alkensteinstr.), Freib<span style=3D"color: #34495e;">urg</span></em><em>-W=
+iehre</em></span><br class=3D"false">Selbstorganisation der ukrainischen Ne=
+u-Freiburger_innen<strong><br></strong></span></p>
+</div><!--#/html#-->
+          </td>
+          </tr>
+          </tbody></table>
+          <!--[if (gte mso 9)|(IE)]></td></tr></table><![endif]-->
+          </td>
+          </tr>
+          </tbody></table>
+    <!--#/loopitem#--> <!--#loopitem#-->
+       =20
+     =20
+ =20
+
+        <table width=3D"100%" cellspacing=3D"0" cellpadding=3D"0" border=3D=
+"0">
+          <tbody><tr>
+          <td style=3D"background-color:inherit;padding: 0px 5px 0px 5px ;b=
+order:0px;" data-style=3D"background-color:inherit;" class=3D"cr-container =
+editable" data-name=3D"Container" valign=3D"top" align=3D"center">
+          <!--[if (gte mso 9)|(IE)]><table align=3D"center" border=3D"0" ce=
+llspacing=3D"0" cellpadding=3D"0" width=3D"600" gc-width-fix=3D".cr-maxwidt=
+h:max-width"><tr><td align=3D"center" valign=3D"top" width=3D"600" gc-width=
+-fix=3D".cr-maxwidth:max-width"><![endif]-->
+          <table class=3D"cr-maxwidth editable" style=3D"" data-style=3D"ba=
+ckground-color:inherit;border:inherit;" data-name=3D"Inner container" width=
+=3D"100%" cellspacing=3D"0" cellpadding=3D"0" border=3D"0">
+          <tbody><tr>
+          <td style=3D"font-family: Arial, Gadget, sans-serif !important;co=
+lor:  ;line-height:inherit;letter-spacing:inherit;padding:0px;" data-style=
+=3D"font-family:inherit !important;color:inherit;line-height:inherit;letter=
+-spacing:inherit;padding:0px;" class=3D"cr-text editable" data-name=3D"Text=
+" valign=3D"top" align=3D"left">
+          <!--#html#--><div align=3D"left">
+<p class=3D"false"><span style=3D"font-size: 18px;"><strong>Diakonie S=C3=
+=BCdwest: "Kaffeezeit" in Weingarten<br class=3D"false"></strong><span styl=
+e=3D"color: #34495e;"><em>Mi 15-17 Uhr (au=C3=9Fer Ferien), Buggingerstr. 5=
+0, Freiburg-Weingarten</em></span><br class=3D"false">f=C3=BCr &nbsp;Mensch=
+en aus der Ukraine und Unterst=C3=BCtzer*innen; Kontakt: Beate Breiholz (<a=
+ href=3D"mailto:breiholz@diakonie-suedwest.de">Email</a>, Tel.: 0157 7378 3=
+708)<strong><br></strong></span></p>
+</div><!--#/html#-->
+          </td>
+          </tr>
+          </tbody></table>
+          <!--[if (gte mso 9)|(IE)]></td></tr></table><![endif]-->
+          </td>
+          </tr>
+          </tbody></table>
+    <!--#/loopitem#--> <!--#loopitem#-->
+       =20
+     =20
+ =20
+
+        <table width=3D"100%" cellspacing=3D"0" cellpadding=3D"0" border=3D=
+"0">
+          <tbody><tr>
+          <td style=3D"background-color:inherit;padding: 0px 5px 0px 5px ;b=
+order:0px;" data-style=3D"background-color:inherit;" class=3D"cr-container =
+editable" data-name=3D"Container" valign=3D"top" align=3D"center">
+          <!--[if (gte mso 9)|(IE)]><table align=3D"center" border=3D"0" ce=
+llspacing=3D"0" cellpadding=3D"0" width=3D"600" gc-width-fix=3D".cr-maxwidt=
+h:max-width"><tr><td align=3D"center" valign=3D"top" width=3D"600" gc-width=
+-fix=3D".cr-maxwidth:max-width"><![endif]-->
+          <table class=3D"cr-maxwidth editable" style=3D"" data-style=3D"ba=
+ckground-color:inherit;border:inherit;" data-name=3D"Inner container" width=
+=3D"100%" cellspacing=3D"0" cellpadding=3D"0" border=3D"0">
+          <tbody><tr>
+          <td style=3D"font-family: Arial, Gadget, sans-serif !important;co=
+lor:  ;line-height:inherit;letter-spacing:inherit;padding:0px;" data-style=
+=3D"font-family:inherit !important;color:inherit;line-height:inherit;letter=
+-spacing:inherit;padding:0px;" class=3D"cr-text editable" data-name=3D"Text=
+" valign=3D"top" align=3D"left">
+          <!--#html#--><div align=3D"left">
+<p class=3D"false"><span style=3D"font-size: 18px;"><strong>Mosaik am Mittw=
+och<br class=3D"false"></strong><span style=3D"color: #34495e;"><em>mittwoc=
+hs 16-18 Uhr, Sundgauallee 9 (Haus Albert), Freiburg&nbsp;</em></span><br c=
+lass=3D"false">Treff f=C3=BCr Kontakt, Kommunikation, Deutsch lernen, Kaffe=
+e, Kuchen, Spiele, Singen, Kontakt: Markus Fugmann <a href=3D"mailto:quarti=
+ersarbeit-mooswald@caritas-freiburg.de">Email</a>, Tel.: 0151-12177911<br><=
+/span></p>
+</div><!--#/html#-->
+          </td>
+          </tr>
+          </tbody></table>
+          <!--[if (gte mso 9)|(IE)]></td></tr></table><![endif]-->
+          </td>
+          </tr>
+          </tbody></table>
+    <!--#/loopitem#--> <!--#loopitem#-->
+       =20
+     =20
+ =20
+
+        <table width=3D"100%" cellspacing=3D"0" cellpadding=3D"0" border=3D=
+"0">
+          <tbody><tr>
+          <td style=3D"background-color:inherit;padding: 0px 5px 0px 5px ;b=
+order:0px;" data-style=3D"background-color:inherit;" class=3D"cr-container =
+editable" data-name=3D"Container" valign=3D"top" align=3D"center">
+          <!--[if (gte mso 9)|(IE)]><table align=3D"center" border=3D"0" ce=
+llspacing=3D"0" cellpadding=3D"0" width=3D"600" gc-width-fix=3D".cr-maxwidt=
+h:max-width"><tr><td align=3D"center" valign=3D"top" width=3D"600" gc-width=
+-fix=3D".cr-maxwidth:max-width"><![endif]-->
+          <table class=3D"cr-maxwidth editable" style=3D"" data-style=3D"ba=
+ckground-color:inherit;border:inherit;" data-name=3D"Inner container" width=
+=3D"100%" cellspacing=3D"0" cellpadding=3D"0" border=3D"0">
+          <tbody><tr>
+          <td style=3D"font-family: Arial, Gadget, sans-serif !important;co=
+lor:  ;line-height:inherit;letter-spacing:inherit;padding:0px;" data-style=
+=3D"font-family:inherit !important;color:inherit;line-height:inherit;letter=
+-spacing:inherit;padding:0px;" class=3D"cr-text editable" data-name=3D"Text=
+" valign=3D"top" align=3D"left">
+          <!--#html#--><div align=3D"left">
+<p class=3D"false"><span style=3D"font-size: 18px;"><strong>Zusammenleben e=
+.V.: Buchstabensuppe - Sprachcaf=C3=A9</strong><br class=3D"false"><span st=
+yle=3D"color: #34495e;"><em>mittwochs, 15-17 Uhr, zuka solicaf=C3=A9, Uhlan=
+dstra=C3=9Fe 2</em></span><br class=3D"false">offen f=C3=BCr alle, ohne Anm=
+eldung, kostenlos, einfach. <a href=3D"https://121070.seu2.cleverreach.com/=
+c/79180043/b09ec13a504-ro9gus" target=3D"_blank" rel=3D"noopener">Website</=
+a><br></span></p>
+</div><!--#/html#-->
+          </td>
+          </tr>
+          </tbody></table>
+          <!--[if (gte mso 9)|(IE)]></td></tr></table><![endif]-->
+          </td>
+          </tr>
+          </tbody></table>
+    <!--#/loopitem#-->  <!--#loopitem#-->
+       =20
+     =20
+ =20
+
+        <table width=3D"100%" cellspacing=3D"0" cellpadding=3D"0" border=3D=
+"0">
+          <tbody><tr>
+          <td style=3D"background-color:inherit;padding: 0px 5px 0px 5px ;b=
+order:0px;" data-style=3D"background-color:inherit;" class=3D"cr-container =
+editable" data-name=3D"Container" valign=3D"top" align=3D"center">
+          <!--[if (gte mso 9)|(IE)]><table align=3D"center" border=3D"0" ce=
+llspacing=3D"0" cellpadding=3D"0" width=3D"600" gc-width-fix=3D".cr-maxwidt=
+h:max-width"><tr><td align=3D"center" valign=3D"top" width=3D"600" gc-width=
+-fix=3D".cr-maxwidth:max-width"><![endif]-->
+          <table class=3D"cr-maxwidth editable" style=3D"" data-style=3D"ba=
+ckground-color:inherit;border:inherit;" data-name=3D"Inner container" width=
+=3D"100%" cellspacing=3D"0" cellpadding=3D"0" border=3D"0">
+          <tbody><tr>
+          <td style=3D"font-family: Arial, Gadget, sans-serif !important;co=
+lor:  ;line-height:inherit;letter-spacing:inherit;padding:0px;" data-style=
+=3D"font-family:inherit !important;color:inherit;line-height:inherit;letter=
+-spacing:inherit;padding:0px;" class=3D"cr-text editable" data-name=3D"Text=
+" valign=3D"top" align=3D"left">
+          <!--#html#--><div align=3D"left">
+<p class=3D"false"><span style=3D"font-size: 18px;"><strong>Zusammenleben e=
+.V.: Kikaffee und Kinderbibliothek</strong><br class=3D"false"><span style=
+=3D"color: #34495e;"><em>donnerstags (au=C3=9Fer Ferien), 15-17 Uhr, zuka s=
+olicaf=C3=A9, Uhlandstra=C3=9Fe 2</em></span><br class=3D"false">Austausch,=
+ Mitmachangebote, Workshops und empowernde Kinder-Lesungen.<br></span></p>
+</div><!--#/html#-->
+          </td>
+          </tr>
+          </tbody></table>
+          <!--[if (gte mso 9)|(IE)]></td></tr></table><![endif]-->
+          </td>
+          </tr>
+          </tbody></table>
+    <!--#/loopitem#--> <!--#loopitem#-->
+       =20
+     =20
+ =20
+
+        <table width=3D"100%" cellspacing=3D"0" cellpadding=3D"0" border=3D=
+"0">
+          <tbody><tr>
+          <td style=3D"background-color:inherit;padding: 0px 5px 0px 5px ;b=
+order:0px;" data-style=3D"background-color:inherit;" class=3D"cr-container =
+editable" data-name=3D"Container" valign=3D"top" align=3D"center">
+          <!--[if (gte mso 9)|(IE)]><table align=3D"center" border=3D"0" ce=
+llspacing=3D"0" cellpadding=3D"0" width=3D"600" gc-width-fix=3D".cr-maxwidt=
+h:max-width"><tr><td align=3D"center" valign=3D"top" width=3D"600" gc-width=
+-fix=3D".cr-maxwidth:max-width"><![endif]-->
+          <table class=3D"cr-maxwidth editable" style=3D"" data-style=3D"ba=
+ckground-color:inherit;border:inherit;" data-name=3D"Inner container" width=
+=3D"100%" cellspacing=3D"0" cellpadding=3D"0" border=3D"0">
+          <tbody><tr>
+          <td style=3D"font-family: Arial, Gadget, sans-serif !important;co=
+lor:  ;line-height:inherit;letter-spacing:inherit;padding:0px;" data-style=
+=3D"font-family:inherit !important;color:inherit;line-height:inherit;letter=
+-spacing:inherit;padding:0px;" class=3D"cr-text editable" data-name=3D"Text=
+" valign=3D"top" align=3D"left">
+          <!--#html#--><div align=3D"left">
+<p class=3D"false"><span style=3D"font-size: 18px;"><strong>LEA watch/ OurV=
+oice: Kontakt-Caf=C3=A9 - Essen & Austausch<br></strong><span style=3D"colo=
+r: #34495e;"><em>14t=C3=A4gig freitags 14-18 Uhr, Strandcaf=C3=A9 Adlerstr.=
+ 12, Freiburg</em></span><br><a href=3D"https://121070.seu2.cleverreach.com=
+/c/79180044/b09ec13a504-ro9gus" target=3D"_blank" rel=3D"noopener">genaue T=
+ermine auf der Website</a><br></span></p>
+</div><!--#/html#-->
+          </td>
+          </tr>
+          </tbody></table>
+          <!--[if (gte mso 9)|(IE)]></td></tr></table><![endif]-->
+          </td>
+          </tr>
+          </tbody></table>
+    <!--#/loopitem#--> <!--#loopitem#-->
+       =20
+     =20
+ =20
+
+        <table width=3D"100%" cellspacing=3D"0" cellpadding=3D"0" border=3D=
+"0">
+          <tbody><tr>
+          <td style=3D"background-color:inherit;padding: 0px 5px 0px 5px ;b=
+order:0px;" data-style=3D"background-color:inherit;" class=3D"cr-container =
+editable" data-name=3D"Container" valign=3D"top" align=3D"center">
+          <!--[if (gte mso 9)|(IE)]><table align=3D"center" border=3D"0" ce=
+llspacing=3D"0" cellpadding=3D"0" width=3D"600" gc-width-fix=3D".cr-maxwidt=
+h:max-width"><tr><td align=3D"center" valign=3D"top" width=3D"600" gc-width=
+-fix=3D".cr-maxwidth:max-width"><![endif]-->
+          <table class=3D"cr-maxwidth editable" style=3D"" data-style=3D"ba=
+ckground-color:inherit;border:inherit;" data-name=3D"Inner container" width=
+=3D"100%" cellspacing=3D"0" cellpadding=3D"0" border=3D"0">
+          <tbody><tr>
+          <td style=3D"font-family: Arial, Gadget, sans-serif !important;co=
+lor:  ;line-height:inherit;letter-spacing:inherit;padding:0px;" data-style=
+=3D"font-family:inherit !important;color:inherit;line-height:inherit;letter=
+-spacing:inherit;padding:0px;" class=3D"cr-text editable" data-name=3D"Text=
+" valign=3D"top" align=3D"left">
+          <!--#html#--><div align=3D"left">
+<p class=3D"false"><span style=3D"font-size: 18px;"><strong>Zusammenleben e=
+.V.: "Offener Gartentreff"</strong><br class=3D"false"><span style=3D"color=
+: #34495e;"><em>pausiert bis M=C3=A4rz 2023!</em> </span>Gemeinschaftsgarte=
+n "zusammen g=C3=A4rtnern", Weierweg 41, Freiburg, Kontakt: <a href=3D"mail=
+to:stefanie.koch@zlev.de">Email</a>, <a href=3D"https://121070.seu2.cleverr=
+each.com/c/79180045/b09ec13a504-ro9gus" target=3D"_blank" rel=3D"noopener">=
+Website</a><br></span></p>
+</div><!--#/html#-->
+          </td>
+          </tr>
+          </tbody></table>
+          <!--[if (gte mso 9)|(IE)]></td></tr></table><![endif]-->
+          </td>
+          </tr>
+          </tbody></table>
+    <!--#/loopitem#-->   <!--#loopitem#-->
+       =20
+     =20
+ =20
+
+        <table width=3D"100%" cellspacing=3D"0" cellpadding=3D"0" border=3D=
+"0">
+          <tbody><tr>
+          <td style=3D"background-color:inherit;padding: 0px 5px 0px 5px ;b=
+order:0px;" data-style=3D"background-color:inherit;" class=3D"cr-container =
+editable" data-name=3D"Container" valign=3D"top" align=3D"center">
+          <!--[if (gte mso 9)|(IE)]><table align=3D"center" border=3D"0" ce=
+llspacing=3D"0" cellpadding=3D"0" width=3D"600" gc-width-fix=3D".cr-maxwidt=
+h:max-width"><tr><td align=3D"center" valign=3D"top" width=3D"600" gc-width=
+-fix=3D".cr-maxwidth:max-width"><![endif]-->
+          <table class=3D"cr-maxwidth editable" style=3D"" data-style=3D"ba=
+ckground-color:inherit;border:inherit;" data-name=3D"Inner container" width=
+=3D"100%" cellspacing=3D"0" cellpadding=3D"0" border=3D"0">
+          <tbody><tr>
+          <td style=3D"font-family: Arial, Gadget, sans-serif !important;co=
+lor:  ;line-height:inherit;letter-spacing:inherit;padding:0px;" data-style=
+=3D"font-family:inherit !important;color:inherit;line-height:inherit;letter=
+-spacing:inherit;padding:0px;" class=3D"cr-text editable" data-name=3D"Text=
+" valign=3D"top" align=3D"left">
+          <!--#html#--><div align=3D"left">
+<p class=3D"false"><span style=3D"font-size: 18px;"><strong>Interkulturelle=
+s Orchester Con Anima: Instrumente lernen</strong><br class=3D"false"><span=
+ style=3D"color: #34495e;"><em>samstags 13-14 Uhr, Albert-Schweizer Schule,=
+ Habichtweg 46, Freiburg</em></span><br class=3D"false">Kontakt per <a href=
+=3D"https://121070.seu2.cleverreach.com/c/79180046/b09ec13a504-ro9gus" targ=
+et=3D"_blank" rel=3D"noopener">Website</a>, <a href=3D"mailto:orchestercona=
+nima@gmx.de">Email</a>, Telefon: +49 1525410216, 0761 201-2112<br></span></=
+p>
+</div><!--#/html#-->
+          </td>
+          </tr>
+          </tbody></table>
+          <!--[if (gte mso 9)|(IE)]></td></tr></table><![endif]-->
+          </td>
+          </tr>
+          </tbody></table>
+    <!--#/loopitem#-->   =20
+
+
+
+<!--#loopitem#--><a data-title=3D"zur=C3=BCck zur =C3=9Cbersicht" id=3D"cra=
+-8372352" name=3D"cra-8372352" data-visible=3D"true" class=3D"cred-index-an=
+chor"></a>=20
+									<table class=3D"row cred_loopitem_multiple" style=3D"width: 100%;"=
+ cellspacing=3D"0" cellpadding=3D"0">
+  <tbody>
+    <tr><td class=3D"wrapper last cred_is_frame cred_modal_top" valign=3D"t=
+op" style=3D"padding: 5px 0px; background-color: rgb(255, 255, 255);">
+													<table class=3D"twelve columns" style=3D"width: 100%;" cellspa=
+cing=3D"0" cellpadding=3D"0"><tbody><tr><td style=3D"padding: 5px; color: r=
+gb(255, 255, 255); background-color: rgb(0, 132, 126); border: 0px none rgb=
+(247, 237, 247);" valign=3D"top" class=3D"text"><!--#html#--><span style=3D=
+"color: #ffffff; font-size: 1.2em;"><a id=3D"Fortbildung" name=3D"Fortbildu=
+ng"></a><a style=3D"color: #ffffff;" href=3D"#Uebersicht">zur=C3=BCck zur =
+=C3=9Cbersicht</a></span><!--#/html#--></td>
+															</tr></tbody></table></td>
+											</tr>
+  </tbody>
+</table><!--#/loopitem#-->
+<!--#loopitem#--><a data-title=3D"Fortbildungen & Qualifikationen" id=3D"cr=
+a-1918831" name=3D"cra-1918831" data-visible=3D"true" class=3D"cred-index-a=
+nchor"></a>=20
+									<table class=3D"row cred_loopitem_multiple" style=3D"width: 100%;"=
+ cellspacing=3D"0" cellpadding=3D"0">
+  <tbody>
+    <tr><td class=3D"wrapper last cred_is_frame cred_modal_top" valign=3D"t=
+op" style=3D"padding: 5px 0px; background-color: rgb(255, 255, 255);">
+													<table class=3D"twelve columns" style=3D"width: 100%;" cellspa=
+cing=3D"0" cellpadding=3D"0"><tbody><tr><td style=3D"padding: 5px; color: r=
+gb(0, 107, 82); background-color: rgb(255, 255, 255); border: 0px none rgb(=
+247, 237, 247);" valign=3D"top" class=3D"text"><!--#html#--><span style=3D"=
+font-size: 1.2em;"><strong>Fortbildungen & Qualifikationen<br></strong></sp=
+an><!--#/html#--></td>
+															</tr></tbody></table></td>
+											</tr>
+  </tbody>
+</table><!--#/loopitem#-->  <!--#loopitem#-->
+       =20
+     =20
+ =20
+
+        <table width=3D"100%" cellspacing=3D"0" cellpadding=3D"0" border=3D=
+"0">
+          <tbody><tr>
+          <td style=3D"background-color:inherit;padding: 0px 5px 0px 5px ;b=
+order:0px;" data-style=3D"background-color:inherit;" class=3D"cr-container =
+editable" data-name=3D"Container" valign=3D"top" align=3D"center">
+          <!--[if (gte mso 9)|(IE)]><table align=3D"center" border=3D"0" ce=
+llspacing=3D"0" cellpadding=3D"0" width=3D"600" gc-width-fix=3D".cr-maxwidt=
+h:max-width"><tr><td align=3D"center" valign=3D"top" width=3D"600" gc-width=
+-fix=3D".cr-maxwidth:max-width"><![endif]-->
+          <table class=3D"cr-maxwidth editable" style=3D"" data-style=3D"ba=
+ckground-color:inherit;border:inherit;" data-name=3D"Inner container" width=
+=3D"100%" cellspacing=3D"0" cellpadding=3D"0" border=3D"0">
+          <tbody><tr>
+          <td style=3D"font-family: Arial, Gadget, sans-serif !important;co=
+lor:  ;line-height:inherit;letter-spacing:inherit;padding:0px;" data-style=
+=3D"font-family:inherit !important;color:inherit;line-height:inherit;letter=
+-spacing:inherit;padding:0px;" class=3D"cr-text editable" data-name=3D"Text=
+" valign=3D"top" align=3D"left">
+          <!--#html#--><div align=3D"left">
+<p class=3D"false"><span style=3D"font-size: 18px;"><strong class=3D"false"=
+>Do., 19.01.: Online Seminar zum Chancenaufenthaltsrecht<br></strong><span =
+style=3D"color: #34495e;"><em>18-19:30 Uhr, Zoom (Link nach Anmeldung)<br><=
+/em></span></span><span style=3D"font-size: 18px;">In dem Online-Seminar f=
+=C3=BCr ehrenamtlich Engagierte werden die Voraussetzungen des Chancenaufen=
+thaltsrechts vorgestellt, m=C3=B6gliche Fallstricke benannt und praktische =
+Tipps gegeben. </span><span style=3D"font-size: 18px;">Mit Sebastian R=C3=
+=B6der, Mitarbeiter des Fl=C3=BCchtlingsrats Baden-W=C3=BCrttemberg. </span=
+><span style=3D"font-size: 18px;">Infos/ kostenlose Anmeldung <a href=3D"ht=
+tps://121070.seu2.cleverreach.com/c/79204312/b09ec13a504-ro9gus" target=3D"=
+_blank" rel=3D"noopener">hier</a></span></p>
+</div><!--#/html#-->
+          </td>
+          </tr>
+          </tbody></table>
+          <!--[if (gte mso 9)|(IE)]></td></tr></table><![endif]-->
+          </td>
+          </tr>
+          </tbody></table>
+    <!--#/loopitem#--> <!--#loopitem#-->
+       =20
+     =20
+ =20
+
+        <table width=3D"100%" cellspacing=3D"0" cellpadding=3D"0" border=3D=
+"0">
+          <tbody><tr>
+          <td style=3D"background-color:inherit;padding: 0px 5px 0px 5px ;b=
+order:0px;" data-style=3D"background-color:inherit;" class=3D"cr-container =
+editable" data-name=3D"Container" valign=3D"top" align=3D"center">
+          <!--[if (gte mso 9)|(IE)]><table align=3D"center" border=3D"0" ce=
+llspacing=3D"0" cellpadding=3D"0" width=3D"600" gc-width-fix=3D".cr-maxwidt=
+h:max-width"><tr><td align=3D"center" valign=3D"top" width=3D"600" gc-width=
+-fix=3D".cr-maxwidth:max-width"><![endif]-->
+          <table class=3D"cr-maxwidth editable" style=3D"" data-style=3D"ba=
+ckground-color:inherit;border:inherit;" data-name=3D"Inner container" width=
+=3D"100%" cellspacing=3D"0" cellpadding=3D"0" border=3D"0">
+          <tbody><tr>
+          <td style=3D"font-family: Arial, Gadget, sans-serif !important;co=
+lor:  ;line-height:inherit;letter-spacing:inherit;padding:0px;" data-style=
+=3D"font-family:inherit !important;color:inherit;line-height:inherit;letter=
+-spacing:inherit;padding:0px;" class=3D"cr-text editable" data-name=3D"Text=
+" valign=3D"top" align=3D"left">
+          <!--#html#--><div align=3D"left">
+<p class=3D"false"><span style=3D"font-size: 18px;"><strong class=3D"false"=
+>Sa., 21.01.: Humor und Gelassene Heiterkeit im Engagement <br></strong><sp=
+an style=3D"color: #34495e;"><em>10-17 Uhr, Freiwilligen-Agentur, Schwabent=
+orring 2, 79098 Freiburg</em></span><br>Muster durchbrechen durch Perspekti=
+vwechsel und Leichtigkeit, mit dem Dipl. P=C3=A4dagogen, Coach, Trainer Ger=
+d Hasenj=C3=A4ger. TN-Geb=C3=BChr: 35 EUR; </span><span style=3D"font-size:=
+ 18px;"> Info und Anmeldung =C3=BCber <a href=3D"https://121070.seu2.clever=
+reach.com/c/79190364/b09ec13a504-ro9gus" target=3D"_blank" rel=3D"noopener"=
+>Website</a></span></p>
+</div><!--#/html#-->
+          </td>
+          </tr>
+          </tbody></table>
+          <!--[if (gte mso 9)|(IE)]></td></tr></table><![endif]-->
+          </td>
+          </tr>
+          </tbody></table>
+    <!--#/loopitem#--> <!--#loopitem#-->
+       =20
+     =20
+ =20
+
+        <table width=3D"100%" cellspacing=3D"0" cellpadding=3D"0" border=3D=
+"0">
+          <tbody><tr>
+          <td style=3D"background-color:inherit;padding: 0px 5px 0px 5px ;b=
+order:0px;" data-style=3D"background-color:inherit;" class=3D"cr-container =
+editable" data-name=3D"Container" valign=3D"top" align=3D"center">
+          <!--[if (gte mso 9)|(IE)]><table align=3D"center" border=3D"0" ce=
+llspacing=3D"0" cellpadding=3D"0" width=3D"600" gc-width-fix=3D".cr-maxwidt=
+h:max-width"><tr><td align=3D"center" valign=3D"top" width=3D"600" gc-width=
+-fix=3D".cr-maxwidth:max-width"><![endif]-->
+          <table class=3D"cr-maxwidth editable" style=3D"" data-style=3D"ba=
+ckground-color:inherit;border:inherit;" data-name=3D"Inner container" width=
+=3D"100%" cellspacing=3D"0" cellpadding=3D"0" border=3D"0">
+          <tbody><tr>
+          <td style=3D"font-family: Arial, Gadget, sans-serif !important;co=
+lor:  ;line-height:inherit;letter-spacing:inherit;padding:0px;" data-style=
+=3D"font-family:inherit !important;color:inherit;line-height:inherit;letter=
+-spacing:inherit;padding:0px;" class=3D"cr-text editable" data-name=3D"Text=
+" valign=3D"top" align=3D"left">
+          <!--#html#--><div align=3D"left">
+<p class=3D"false"><span style=3D"font-size: 18px;"><strong class=3D"false"=
+>Di., 24.01.: Online Workshop "Who profits from the Chancenaufenthaltsrecht=
+" (englisch)<br></strong><span style=3D"color: #34495e;"><em>18-19:30 Uhr, =
+Zoom (<a href=3D"https://121070.seu2.cleverreach.com/c/79204313/b09ec13a504=
+-ro9gus">Link</a>)<br></em></span>This workshop for refugees will look into=
+ the criteria for the Chancen-Aufenthalts-Recht, possible pitfalls and prac=
+tical tips. There will be enough room for questions. Prerequisites: Partici=
+pants live in Baden-W=C3=BCrttemberg, have a mobile phone / laptop / tablet=
+ with good internet. No registration is necessary. Speaker: Maren Schulz, R=
+efugee Council Baden-W=C3=BCrttemberg; full info at <a href=3D"https://1210=
+70.seu2.cleverreach.com/c/79204314/b09ec13a504-ro9gus" target=3D"_blank" re=
+l=3D"noopener">website</a>, contact (<a href=3D"mailto:info@fluechtlingsrat=
+-bw.de">Email</a>)</span></p>
+</div><!--#/html#-->
+          </td>
+          </tr>
+          </tbody></table>
+          <!--[if (gte mso 9)|(IE)]></td></tr></table><![endif]-->
+          </td>
+          </tr>
+          </tbody></table>
+    <!--#/loopitem#--> <!--#loopitem#-->
+       =20
+     =20
+ =20
+
+        <table width=3D"100%" cellspacing=3D"0" cellpadding=3D"0" border=3D=
+"0">
+          <tbody><tr>
+          <td style=3D"background-color:inherit;padding: 0px 5px 0px 5px ;b=
+order:0px;" data-style=3D"background-color:inherit;" class=3D"cr-container =
+editable" data-name=3D"Container" valign=3D"top" align=3D"center">
+          <!--[if (gte mso 9)|(IE)]><table align=3D"center" border=3D"0" ce=
+llspacing=3D"0" cellpadding=3D"0" width=3D"600" gc-width-fix=3D".cr-maxwidt=
+h:max-width"><tr><td align=3D"center" valign=3D"top" width=3D"600" gc-width=
+-fix=3D".cr-maxwidth:max-width"><![endif]-->
+          <table class=3D"cr-maxwidth editable" style=3D"" data-style=3D"ba=
+ckground-color:inherit;border:inherit;" data-name=3D"Inner container" width=
+=3D"100%" cellspacing=3D"0" cellpadding=3D"0" border=3D"0">
+          <tbody><tr>
+          <td style=3D"font-family: Arial, Gadget, sans-serif !important;co=
+lor:  ;line-height:inherit;letter-spacing:inherit;padding:0px;" data-style=
+=3D"font-family:inherit !important;color:inherit;line-height:inherit;letter=
+-spacing:inherit;padding:0px;" class=3D"cr-text editable" data-name=3D"Text=
+" valign=3D"top" align=3D"left">
+          <!--#html#--><div align=3D"left">
+<p class=3D"false"><span style=3D"font-size: 18px;"><strong class=3D"false"=
+>Do., 2.2.: Trauerprozesse kennenlernen und verstehen<br></strong><em><span=
+ style=3D"color: #34495e;">18-21 Uhr, Ernst-Lange-Forum, Habsburger Str. 2,=
+ 79104 Freiburg<br></span></em><span style=3D"color: #34495e;"><span style=
+=3D"color: #000000;">Abschiede gehen mit Trauer einher =E2=80=93 gerade im =
+Kontext von Flucht und Migration. Das Wissen um Trauerprozesse hilft einem =
+selbst und auch in der Begleitung von anderen z.B. Gefl=C3=BCchteten. Mit D=
+r. Judith Winkelmann, Zentrum f=C3=BCr Seelsorge Heidelberg und Supervisori=
+n. Kostenlos, Spende willkommen; Anmeldung (bis 1 Woche vor VA) und Informa=
+tion auf der</span> <a href=3D"https://121070.seu2.cleverreach.com/c/792043=
+15/b09ec13a504-ro9gus" target=3D"_blank" rel=3D"noopener">Website der Evang=
+. Erwachsenenbildung</a></span></span></p>
+</div><!--#/html#-->
+          </td>
+          </tr>
+          </tbody></table>
+          <!--[if (gte mso 9)|(IE)]></td></tr></table><![endif]-->
+          </td>
+          </tr>
+          </tbody></table>
+    <!--#/loopitem#-->          =20
+
+<!--#loopitem#--><a data-title=3D"zur=C3=BCck zur =C3=9Cbersicht" id=3D"cra=
+-7914095" name=3D"cra-7914095" data-visible=3D"true" class=3D"cred-index-an=
+chor"></a>=20
+									<table class=3D"row cred_loopitem_multiple" style=3D"width: 100%;"=
+ cellspacing=3D"0" cellpadding=3D"0">
+  <tbody>
+    <tr><td class=3D"wrapper last cred_is_frame cred_modal_top" valign=3D"t=
+op" style=3D"padding: 5px 0px; background-color: rgb(255, 255, 255);">
+													<table class=3D"twelve columns" style=3D"width: 100%;" cellspa=
+cing=3D"0" cellpadding=3D"0"><tbody><tr><td style=3D"padding: 5px; color: r=
+gb(255, 255, 255); background-color: rgb(134, 188, 37); border: 0px none rg=
+b(247, 237, 247);" valign=3D"top" class=3D"text"><!--#html#--><span style=
+=3D"color: #ffffff; font-size: 1.2em;"><a id=3D"Ausblick" name=3D"Ausblick"=
+></a><a style=3D"color: #ffffff;" href=3D"#Uebersicht">zur=C3=BCck zur =C3=
+=9Cbersicht</a></span><!--#/html#--></td>
+															</tr></tbody></table></td>
+											</tr>
+  </tbody>
+</table><!--#/loopitem#-->
+  <!--#loopitem#--><a data-title=3D"Publikationen & Material" id=3D"cra-403=
+2951" name=3D"cra-4032951" data-visible=3D"true" class=3D"cred-index-anchor=
+"></a>=20
+									<table class=3D"row cred_loopitem_multiple" style=3D"width: 100%;"=
+ cellspacing=3D"0" cellpadding=3D"0">
+  <tbody>
+    <tr><td class=3D"wrapper last cred_is_frame cred_modal_top" valign=3D"t=
+op" style=3D"padding: 5px 0px; background-color: rgb(255, 255, 255);">
+													<table class=3D"twelve columns" style=3D"width: 100%;" cellspa=
+cing=3D"0" cellpadding=3D"0"><tbody><tr><td style=3D"padding: 5px; color: r=
+gb(0, 107, 82); background-color: rgb(255, 255, 255); border: 0px none rgb(=
+247, 237, 247);" valign=3D"top" class=3D"text"><!--#html#--><span style=3D"=
+font-size: 1.2em;"><strong><span style=3D"color: #86bc25;">Ausblick</span><=
+/strong></span><!--#/html#--></td>
+															</tr></tbody></table></td>
+											</tr>
+  </tbody>
+</table><!--#/loopitem#--> <!--#loopitem#-->
+       =20
+     =20
+ =20
+
+        <table width=3D"100%" cellspacing=3D"0" cellpadding=3D"0" border=3D=
+"0">
+          <tbody><tr>
+          <td style=3D"background-color:inherit;padding: 0px 5px 0px 5px ;b=
+order:0px;" data-style=3D"background-color:inherit;" class=3D"cr-container =
+editable" data-name=3D"Container" valign=3D"top" align=3D"center">
+          <!--[if (gte mso 9)|(IE)]><table align=3D"center" border=3D"0" ce=
+llspacing=3D"0" cellpadding=3D"0" width=3D"600" gc-width-fix=3D".cr-maxwidt=
+h:max-width"><tr><td align=3D"center" valign=3D"top" width=3D"600" gc-width=
+-fix=3D".cr-maxwidth:max-width"><![endif]-->
+          <table class=3D"cr-maxwidth editable" style=3D"" data-style=3D"ba=
+ckground-color:inherit;border:inherit;" data-name=3D"Inner container" width=
+=3D"100%" cellspacing=3D"0" cellpadding=3D"0" border=3D"0">
+          <tbody><tr>
+          <td style=3D"font-family: Arial, Gadget, sans-serif !important;co=
+lor:  ;line-height:inherit;letter-spacing:inherit;padding:0px;" data-style=
+=3D"font-family:inherit !important;color:inherit;line-height:inherit;letter=
+-spacing:inherit;padding:0px;" class=3D"cr-text editable" data-name=3D"Text=
+" valign=3D"top" align=3D"left">
+          <!--#html#--><div align=3D"left">
+<p class=3D"false"><span style=3D"font-size: 18px;"><strong class=3D"false"=
+>Materialien zum Chancenaufenthaltsrecht<br></strong>ProAsyl hat relativ au=
+sf=C3=BChrliche und <a href=3D"https://121070.seu2.cleverreach.com/c/792043=
+16/b09ec13a504-ro9gus" target=3D"_blank" rel=3D"noopener">grundlegende Hinw=
+eise</a> sowie <a href=3D"https://121070.seu2.cleverreach.com/c/79204317/b0=
+9ec13a504-ro9gus" target=3D"_blank" rel=3D"noopener">FAQs</a> zum Chancenau=
+fenthaltsrecht ver=C3=B6ffentlicht. Auch die Diakonischen Werke sowie Di=C3=
+=B6zesancaritasverb=C3=A4nde in BW haben ein <a href=3D"https://121070.seu2=
+.cleverreach.com/c/79204318/b09ec13a504-ro9gus">=C3=9Cbersichtspapier</a> e=
+rarbeitet, das sich eher an ein Fachpublikum wendet. <br>Das Berliner Netzw=
+erk f=C3=BCr Bleiberecht hat die Regelungen des Chancenaufenthalts</span><s=
+pan style=3D"font-size: 18px;">rechts auf eine <a href=3D"https://121070.se=
+u2.cleverreach.com/c/79204319/b09ec13a504-ro9gus">Checkliste</a> herunterge=
+brochen. Diese ersetzt keine Beratung. <br></span></p>
+</div><!--#/html#-->
+          </td>
+          </tr>
+          </tbody></table>
+          <!--[if (gte mso 9)|(IE)]></td></tr></table><![endif]-->
+          </td>
+          </tr>
+          </tbody></table>
+    <!--#/loopitem#--> <!--#loopitem#-->
+       =20
+     =20
+ =20
+
+        <table width=3D"100%" cellspacing=3D"0" cellpadding=3D"0" border=3D=
+"0">
+          <tbody><tr>
+          <td style=3D"background-color:inherit;padding: 0px 5px 0px 5px ;b=
+order:0px;" data-style=3D"background-color:inherit;" class=3D"cr-container =
+editable" data-name=3D"Container" valign=3D"top" align=3D"center">
+          <!--[if (gte mso 9)|(IE)]><table align=3D"center" border=3D"0" ce=
+llspacing=3D"0" cellpadding=3D"0" width=3D"600" gc-width-fix=3D".cr-maxwidt=
+h:max-width"><tr><td align=3D"center" valign=3D"top" width=3D"600" gc-width=
+-fix=3D".cr-maxwidth:max-width"><![endif]-->
+          <table class=3D"cr-maxwidth editable" style=3D"" data-style=3D"ba=
+ckground-color:inherit;border:inherit;" data-name=3D"Inner container" width=
+=3D"100%" cellspacing=3D"0" cellpadding=3D"0" border=3D"0">
+          <tbody><tr>
+          <td style=3D"font-family: Arial, Gadget, sans-serif !important;co=
+lor:  ;line-height:inherit;letter-spacing:inherit;padding:0px;" data-style=
+=3D"font-family:inherit !important;color:inherit;line-height:inherit;letter=
+-spacing:inherit;padding:0px;" class=3D"cr-text editable" data-name=3D"Text=
+" valign=3D"top" align=3D"left">
+          <!--#html#--><div align=3D"left">
+<p class=3D"false"><span style=3D"font-size: 18px;"><strong class=3D"false"=
+>NZFH: Plattform Fr=C3=BChe Hilfen und Flucht</strong> </span><br class=3D"=
+false"><span style=3D"font-size: 18px;">Mit der neuen Plattform unterst=C3=
+=BCtzt das Nationale Zentrum Fr=C3=BChe Hilfen (NZFH) Fachkr=C3=A4fte und F=
+reiwillige, die aus der Ukraine oder anderen Regionen gefl=C3=BCchtete Fami=
+lien mit kleinen Kindern beraten und begleiten. Die <a href=3D"https://1210=
+70.seu2.cleverreach.com/c/79204320/b09ec13a504-ro9gus" target=3D"_blank" re=
+l=3D"noopener">Plattform</a> enth=C3=A4lt kostenfreie digitale Sprechstunde=
+n, ein Telefon-Dolmetsch-Angebot, weiterf=C3=BChrende Informationen u.</spa=
+n><span style=3D"font-size: 18px;">a. zu Fortbildungsangeboten und FAQs. <b=
+r>F=C3=BCr ukrainische Familien gibt es zudem eine eigene <a href=3D"https:=
+//121070.seu2.cleverreach.com/c/79204321/b09ec13a504-ro9gus" target=3D"_bla=
+nk" rel=3D"noopener">Website des NZFH mit Unterseiten auf Deutsch, Englisch=
+, Russisch und Ukrainisch</a>. <br></span></p>
+</div><!--#/html#-->
+          </td>
+          </tr>
+          </tbody></table>
+          <!--[if (gte mso 9)|(IE)]></td></tr></table><![endif]-->
+          </td>
+          </tr>
+          </tbody></table>
+    <!--#/loopitem#--> <!--#loopitem#-->
+       =20
+     =20
+ =20
+
+        <table width=3D"100%" cellspacing=3D"0" cellpadding=3D"0" border=3D=
+"0">
+          <tbody><tr>
+          <td style=3D"background-color:inherit;padding: 0px 5px 0px 5px ;b=
+order:0px;" data-style=3D"background-color:inherit;" class=3D"cr-container =
+editable" data-name=3D"Container" valign=3D"top" align=3D"center">
+          <!--[if (gte mso 9)|(IE)]><table align=3D"center" border=3D"0" ce=
+llspacing=3D"0" cellpadding=3D"0" width=3D"600" gc-width-fix=3D".cr-maxwidt=
+h:max-width"><tr><td align=3D"center" valign=3D"top" width=3D"600" gc-width=
+-fix=3D".cr-maxwidth:max-width"><![endif]-->
+          <table class=3D"cr-maxwidth editable" style=3D"" data-style=3D"ba=
+ckground-color:inherit;border:inherit;" data-name=3D"Inner container" width=
+=3D"100%" cellspacing=3D"0" cellpadding=3D"0" border=3D"0">
+          <tbody><tr>
+          <td style=3D"font-family: Arial, Gadget, sans-serif !important;co=
+lor:  ;line-height:inherit;letter-spacing:inherit;padding:0px;" data-style=
+=3D"font-family:inherit !important;color:inherit;line-height:inherit;letter=
+-spacing:inherit;padding:0px;" class=3D"cr-text editable" data-name=3D"Text=
+" valign=3D"top" align=3D"left">
+          <!--#html#--><div align=3D"left">
+<p class=3D"false"><strong><span style=3D"font-size: 18px;">Bildungsministe=
+rium BW: Mehrsprachige Info =C3=BCber Schulsystem<br></span></strong><span =
+style=3D"font-size: 18px;">Auf einer Veranstaltung am 13.12.2022 wurden gru=
+nds=C3=A4tzliche Informationen zum Schulsystem in Baden-W=C3=BCrttemberg er=
+l=C3=A4utert, h=C3=A4ufige Fragen beantwortet, Tipps und Hinweise zu lokale=
+n Stellen gegeben. Mitschnitte der Veranstaltung auf Englisch, Arabisch, T=
+=C3=BCrkisch, Ukrainisch und Russisch wurden nun auf einer <a href=3D"https=
+://121070.seu2.cleverreach.com/c/79211507/b09ec13a504-ro9gus" target=3D"_bl=
+ank" rel=3D"noopener">Website</a> ver=C3=B6ffentlicht. </span></p>
+</div><!--#/html#-->
+          </td>
+          </tr>
+          </tbody></table>
+          <!--[if (gte mso 9)|(IE)]></td></tr></table><![endif]-->
+          </td>
+          </tr>
+          </tbody></table>
+    <!--#/loopitem#--> <!--#loopitem#-->
+       =20
+     =20
+ =20
+
+        <table width=3D"100%" cellspacing=3D"0" cellpadding=3D"0" border=3D=
+"0">
+          <tbody><tr>
+          <td style=3D"background-color:inherit;padding: 0px 5px 0px 5px ;b=
+order:0px;" data-style=3D"background-color:inherit;" class=3D"cr-container =
+editable" data-name=3D"Container" valign=3D"top" align=3D"center">
+          <!--[if (gte mso 9)|(IE)]><table align=3D"center" border=3D"0" ce=
+llspacing=3D"0" cellpadding=3D"0" width=3D"600" gc-width-fix=3D".cr-maxwidt=
+h:max-width"><tr><td align=3D"center" valign=3D"top" width=3D"600" gc-width=
+-fix=3D".cr-maxwidth:max-width"><![endif]-->
+          <table class=3D"cr-maxwidth editable" style=3D"" data-style=3D"ba=
+ckground-color:inherit;border:inherit;" data-name=3D"Inner container" width=
+=3D"100%" cellspacing=3D"0" cellpadding=3D"0" border=3D"0">
+          <tbody><tr>
+          <td style=3D"font-family: Arial, Gadget, sans-serif !important;co=
+lor:  ;line-height:inherit;letter-spacing:inherit;padding:0px;" data-style=
+=3D"font-family:inherit !important;color:inherit;line-height:inherit;letter=
+-spacing:inherit;padding:0px;" class=3D"cr-text editable" data-name=3D"Text=
+" valign=3D"top" align=3D"left">
+          <!--#html#--><div align=3D"left">
+<p class=3D"false"><strong><span style=3D"font-size: 18px;">"Organisiert Eu=
+ch:" Kostenlose Selbstlernkurse f=C3=BCr Engagierte</span></strong><br><spa=
+n style=3D"font-size: 18px;">Aktivist*innen aus verschiedenen Themenbereich=
+en haben f=C3=BCr Engagierte und Aktive kostenlose Selbstlernkurse erstellt=
+. Dabei geht es darum Treffen gut zu moderieren, Projekte zu managen, zielg=
+enau die eigene =C3=96ffentlichkeit zu erreichen und mehr Mitstreiter*innen=
+ zu gewinnen. Keine Kosten und keine Registrierung. Mehr: <a href=3D"https:=
+//121070.seu2.cleverreach.com/c/79204323/b09ec13a504-ro9gus" target=3D"_bla=
+nk" rel=3D"noopener">Website</a></span></p>
+</div><!--#/html#-->
+          </td>
+          </tr>
+          </tbody></table>
+          <!--[if (gte mso 9)|(IE)]></td></tr></table><![endif]-->
+          </td>
+          </tr>
+          </tbody></table>
+    <!--#/loopitem#-->      =20
+
+<!--#loopitem#--><a data-title=3D"zur=C3=BCck zur =C3=9Cbersicht" id=3D"cra=
+-4967825" name=3D"cra-4967825" data-visible=3D"true" class=3D"cred-index-an=
+chor"></a>=20
+									<table class=3D"row cred_loopitem_multiple" style=3D"width: 100%;"=
+ cellspacing=3D"0" cellpadding=3D"0">
+  <tbody>
+    <tr><td class=3D"wrapper last cred_is_frame cred_modal_top" valign=3D"t=
+op" style=3D"padding: 5px 0px; background-color: rgb(255, 255, 255);">
+													<table class=3D"twelve columns" style=3D"width: 100%;" cellspa=
+cing=3D"0" cellpadding=3D"0"><tbody><tr><td style=3D"padding: 5px; color: r=
+gb(255, 255, 255); background-color: rgb(188, 165, 128); border: 0px none r=
+gb(247, 237, 247);" valign=3D"top" class=3D"text"><!--#html#--><span style=
+=3D"color: #ffffff; font-size: 1.2em;"><a id=3D"Datenschutz" name=3D"Datens=
+chutz"></a><a style=3D"color: #ffffff;" href=3D"#Uebersicht">zur=C3=BCck zu=
+r =C3=9Cbersicht</a></span><!--#/html#--></td>
+															</tr></tbody></table></td>
+											</tr>
+  </tbody>
+</table><!--#/loopitem#-->
+<!--#loopitem#--><a data-title=3D"Informationen zum Datenschutz" id=3D"cra-=
+1856965" name=3D"cra-1856965" data-visible=3D"true" class=3D"cred-index-anc=
+hor"></a>=20
+									<table class=3D"row cred_loopitem_multiple" style=3D"width: 100%;"=
+ cellspacing=3D"0" cellpadding=3D"0">
+  <tbody>
+    <tr><td class=3D"wrapper last cred_is_frame cred_modal_top" valign=3D"t=
+op" style=3D"padding: 5px 0px; background-color: rgb(255, 255, 255);">
+													<table class=3D"twelve columns" style=3D"width: 100%;" cellspa=
+cing=3D"0" cellpadding=3D"0"><tbody><tr><td style=3D"padding: 5px; color: r=
+gb(0, 107, 82); background-color: rgb(255, 255, 255); border: 0px none rgb(=
+247, 237, 247);" valign=3D"top" class=3D"text"><!--#html#--><span style=3D"=
+color: #bca580; font-size: 1.2em;">Informationen zum Datenschutz</span><!--=
+#/html#--></td>
+															</tr></tbody></table></td>
+											</tr>
+  </tbody>
+</table><!--#/loopitem#-->
+<!--#loopitem#--><a data-title=3D"M=C3=B6chten Sie diesen Newsletter regelm=
+=C3=A4=C3=9Fig erhalten?" id=3D"cra-4647427" name=3D"cra-4647427" data-visi=
+ble=3D"true" class=3D"cred-index-anchor"></a>=20
+									<table class=3D"row cred_loopitem_multiple" style=3D"width: 100%;"=
+ cellspacing=3D"0" cellpadding=3D"0">
+  <tbody>
+    <tr><td class=3D"wrapper last cred_is_frame cred_modal_top" valign=3D"t=
+op" style=3D"padding: 5px 0px; background-color: rgb(255, 255, 255);">
+													<table class=3D"twelve columns" style=3D"width: 100%;" cellspa=
+cing=3D"0" cellpadding=3D"0"><tbody><tr><td style=3D"padding: 5px; color: r=
+gb(0, 0, 0); background-color: rgb(255, 255, 255); border: 0px none rgb(247=
+, 237, 247);" valign=3D"top" class=3D"text"><!--#html#--><div><span style=
+=3D"font-size: 18px;">Unser kostenloser Newsletter informiert Sie regelm=C3=
+=A4=C3=9Fig per E-Mail =C3=BCber Neuigkeiten und Veranstaltungen zum Thema =
+Flucht und Migration in Freiburg. Sofern es sich nicht um eine Weiterleitun=
+g handelt, erhalten Sie diesen Newsletter, weil Sie sich daf=C3=BCr angemel=
+det haben. Ihre hier eingegebenen Daten werden lediglich zur Erstellung, Ve=
+rwaltung und Versand des Newsletters verwendet und nicht an Dritte weiterge=
+geben. </span><br><br><span style=3D"font-size: 18px;"><strong>M=C3=B6chten=
+ Sie diesen Newsletter regelm=C3=A4=C3=9Fig erhalten?</strong> Dann unterst=
+=C3=BCtzen Sie uns bitte, indem Sie sich&nbsp;<a href=3D"https://121070.seu=
+2.cleverreach.com/c/79180049/b09ec13a504-ro9gus">hier</a> direkt anmelden. =
+Wenn Sie diese E-Mails nicht mehr empfangen m=C3=B6chten, k=C3=B6nnen Sie d=
+iese <a title=3D"hier" href=3D"https://121070.seu2.cleverreach.com/c/791800=
+50/b09ec13a504-ro9gus"><strong>hier</strong> </a>abbestellen oder Ihre Einw=
+illigung per <a href=3D"mailto:news.asylforum@diakonie-freiburg.de">E-Mail<=
+/a> widerrufen. F=C3=BCr den Versand des Newsletters verwenden wir Dienste =
+der Plattform CleverReach=C2=AE, CleverReach GmbH & Co. KG in 26180 Rastede=
+. </span><br><span style=3D"font-size: 18px;">Der Newsletter "Flucht und Mi=
+gration" wird im Auftrag des =C3=96kumenischen Asylforums vom Diakonischen =
+Werk Freiburg herausgegeben. Hier finden Sie das&nbsp;<a href=3D"https://12=
+1070.seu2.cleverreach.com/c/79180051/b09ec13a504-ro9gus">Impressum </a>sowi=
+e die&nbsp;<a href=3D"https://121070.seu2.cleverreach.com/c/79180052/b09ec1=
+3a504-ro9gus">Datenschutzerkl=C3=A4rung</a> des Diakonischen Werks Freiburg=
+.&nbsp;</span></div><!--#/html#--></td>
+															</tr></tbody></table></td>
+											</tr>
+  </tbody>
+</table><!--#/loopitem#-->
+<!--#loopitem#--><a data-title=3D"Informationen zum Datenschutz" id=3D"cra-=
+228944" name=3D"cra-228944" data-visible=3D"true" class=3D"cred-index-ancho=
+r"></a>=20
+									<table class=3D"row cred_loopitem_multiple" style=3D"width: 100%;"=
+ cellspacing=3D"0" cellpadding=3D"0">
+  <tbody>
+    <tr><td class=3D"wrapper last cred_is_frame cred_modal_top" valign=3D"t=
+op" style=3D"padding: 5px 0px; background-color: rgb(255, 255, 255);">
+													<table class=3D"twelve columns" style=3D"width: 100%;" cellspa=
+cing=3D"0" cellpadding=3D"0"><tbody><tr><td style=3D"padding: 5px; color: r=
+gb(0, 107, 82); background-color: rgb(255, 255, 255); border: 0px none rgb(=
+247, 237, 247);" valign=3D"top" class=3D"text"><!--#html#--><span style=3D"=
+font-size: 1.2em;" >Mitglieder des =C3=96kumenischen Asylforums</span><!--#=
+/html#--></td>
+															</tr></tbody></table></td>
+											</tr>
+  </tbody>
+</table><!--#/loopitem#-->
+<!--#loopitem#--><a data-title=3D"M=C3=B6chten Sie diesen Newsletter regelm=
+=C3=A4=C3=9Fig erhalten?" id=3D"cra-1736584" name=3D"cra-1736584" data-visi=
+ble=3D"true" class=3D"cred-index-anchor"></a>=20
+									<table class=3D"row cred_loopitem_multiple" style=3D"width: 100%;"=
+ cellspacing=3D"0" cellpadding=3D"0">
+  <tbody>
+    <tr><td class=3D"wrapper last cred_is_frame cred_modal_top" valign=3D"t=
+op" style=3D"padding: 5px 0px; background-color: rgb(255, 255, 255);">
+													<table class=3D"twelve columns" style=3D"width: 100%;" cellspa=
+cing=3D"0" cellpadding=3D"0"><tbody><tr><td style=3D"padding: 5px; color: r=
+gb(0, 0, 0); background-color: rgb(255, 255, 255); border: 0px none rgb(247=
+, 237, 247);" valign=3D"top" class=3D"text"><!--#html#--><span style=3D"fon=
+t-size: 18px;">Zu inhaltlichen Fragen k=C3=B6nnen Sie sich gern&nbsp;an fol=
+gende Mitglieder des =C3=96kumenischen Asylforums wenden:&nbsp;</span><br>
+<ul>
+<li><span style=3D"font-size: 18px;">ACK / Arbeitsgemeinschaft&nbsp;Christl=
+icher Kirchen und Gemeinden: </span><br><span style=3D"font-size: 18px;"><a=
+ href=3D"https://121070.seu2.cleverreach.com/c/79180053/b09ec13a504-ro9gus"=
+>Website</a>,&nbsp;<a href=3D"mailto:ack-freiburg@gmx.de">Email</a></span><=
+/li>
+<li><span style=3D"font-size: 18px;">Caritasverband Freiburg-Stadt e.V.</sp=
+an><br><span style=3D"font-size: 18px;"><a href=3D"https://121070.seu2.clev=
+erreach.com/c/79180054/b09ec13a504-ro9gus">Website</a>, <a href=3D"mailto:a=
+sylforum@caritas-freiburg.de">Email</a>, Tel. 0761 31916-705</span></li>
+<li><span style=3D"font-size: 18px;">Diakonisches Werk Freiburg</span><br><=
+span style=3D"font-size: 18px;"><a href=3D"https://121070.seu2.cleverreach.=
+com/c/79180055/b09ec13a504-ro9gus">Website</a>, <a href=3D"mailto:news.asyl=
+forum@diakonie-freiburg.de">Email</a>, Tel.: 0761 36891-0</span></li>
+</ul><!--#/html#--></td>
+															</tr></tbody></table></td>
+											</tr>
+  </tbody>
+</table><!--#/loopitem#-->
+<!--#loopitem#--><a data-title=3D"Wir bedanken uns f=C3=BCr jede Spende, di=
+e unsere Arbeit und den Newsletter sichert:" id=3D"cra-1751730" name=3D"cra=
+-1751730" data-visible=3D"true" class=3D"cred-index-anchor"></a>=20
+									<table class=3D"row cred_loopitem_multiple" style=3D"width: 100%;"=
+ cellspacing=3D"0" cellpadding=3D"0">
+  <tbody>
+    <tr><td class=3D"wrapper last cred_is_frame cred_modal_top" style=3D"pa=
+dding: 5px 0px; background-color: rgb(255, 255, 255);" valign=3D"top">
+													<table class=3D"twelve columns" style=3D"width: 100%;" cellspa=
+cing=3D"0" cellpadding=3D"0"><tbody><tr><td style=3D"padding: 5px; color: r=
+gb(255, 255, 255); background-color: rgb(0, 108, 82); border: 0px none rgb(=
+247, 237, 247);" class=3D"text" valign=3D"top"><!--#html#--><div><span styl=
+e=3D"font-size: 1.1em;" ><strong>Wir bedanken uns f=C3=BCr jede Spende, die=
+ unsere Arbeit und den Newsletter sichert: </strong>Diakonisches Werk Freib=
+urg, Stichwort: =E2=80=9E=C3=96kumenisches Asylforum Freiburg-Newsletter=E2=
+=80=9C, Evang. Bank Kassel eG,</span><br><span style=3D"font-size: 1.1em;" =
+>IBAN: DE69 5206 0410 0000 5073 34;&nbsp;SWIFT-BIC: GENODEF1EK1 </span><br>=
+<span style=3D"font-size: 1.1em;" ><strong> </strong></span></div><!--#/htm=
+l#--></td>
+															</tr></tbody></table></td>
+											</tr>
+  </tbody>
+</table><!--#/loopitem#-->
+<!--#loopitem#--><a data-title=3D"zur=C3=BCck zur =C3=9Cbersicht" id=3D"cra=
+-4929251" name=3D"cra-4929251" data-visible=3D"true" class=3D"cred-index-an=
+chor"></a>=20
+									<table class=3D"row cred_loopitem_multiple" style=3D"width: 100%;"=
+ cellspacing=3D"0" cellpadding=3D"0">
+  <tbody>
+    <tr><td class=3D"wrapper last cred_is_frame cred_modal_top" valign=3D"t=
+op" style=3D"padding: 5px 0px; background-color: rgb(255, 255, 255);">
+													<table class=3D"twelve columns" style=3D"width: 100%;" cellspa=
+cing=3D"0" cellpadding=3D"0"><tbody><tr><td style=3D"padding: 5px; color: r=
+gb(255, 255, 255); background-color: rgb(134, 188, 37); border: 0px none rg=
+b(247, 237, 247);" valign=3D"top" class=3D"text"><!--#html#--><span style=
+=3D"color: rgb(255, 255, 255); font-size: 1.2em;" ><a href=3D"#Uebersicht" =
+style=3D"color: #ffffff;"  >zur=C3=BCck zur =C3=9Cbersicht</a></span><!--#/=
+html#--></td>
+															</tr></tbody></table></td>
+											</tr>
+  </tbody>
+</table><!--#/loopitem#-->
+<!--#/loop#-->
+									</td>
+								</tr>
+							</tbody>
+						</table>
+						<p style=3D"text-align: center;" class=3D"text"><!--#unsubscribe#--><=
+table width=3D"659" align=3D"center">
+<tbody>
+<tr>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+</tbody>
+</table>
+<p>&nbsp;</p><!--#/unsubscribe#--></p>
+						<p>&nbsp;</p>
+						<p class=3D"text"><!--#aboutus#--><br><!--#/aboutus#--></p>
+					</center></td>
+				</tr>
+			</tbody>
+		</table>
+	<img src=3D"https://stats-eu2.crsend.com/stats/mc_121070_14141611_b09ec13a=
+504-ro9gus.gif" border=3D"0" alt=3D"" height=3D"1" width=3D"1"></body>
+	</html>
+--27b4ab10a6f47fe3229b994a048054634f9689fd91ed04381d838bb50283--
+

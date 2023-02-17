@@ -1,0 +1,849 @@
+log:
+  messages:
+    - '[1970-01-01T00:00:00+00:00] Start'
+    - '[1970-01-01T00:00:00+00:00] Finished'
+fullResult:
+  listInfo:
+    emailLabel: 'Ökumenisches Asylforum Freiburg'
+    emailAddress: news.asylforum@diakonie-freiburg.de
+    listId: 14141611.121070.crsend.com
+  messageInfo:
+    timeStamp: 1673339284
+  verdict:
+    matchLevel:
+      name: Sure
+      value: sure
+    serviceName: cleverreach
+    explanation: 'Header and body matches point to exactly one provider.'
+  details:
+    dkimResult:
+      status:
+        name: Valid
+        value: valid
+      summaryLines:
+        - 'Signature 1: DKIM signature verified successfully!'
+        - 'Signature 2: Signature has expired. DKIM signature verified successfully!'
+    headerItemInfoBag:
+      infos:
+        -
+          headerItem:
+            name: feedback-id
+            value: '121070:14141611:1284:121070'
+          matches:
+            -
+              providerId: cleverreach
+              isMatch: true
+        -
+          headerItem:
+            name: list-unsubscribe
+            value: '<https://121070.seu2.cleverreach.com/rmftlp.php?cid=0&mid=14141611&h=0-b09ec13a504>'
+          matches:
+            -
+              providerId: cleverreach
+              isMatch: true
+        -
+          headerItem:
+            name: message-id
+            value: 20230110092804.121070.14141611.1284@bounce-eu2.crsend.com
+          matches:
+            -
+              providerId: cleverreach
+              isMatch: true
+        -
+          headerItem:
+            name: list-id
+            value: '<14141611.121070.crsend.com>'
+          matches:
+            -
+              providerId: cleverreach
+              isMatch: true
+    urlItemInfoBag:
+      urlItemInfos:
+        -
+          urlItem:
+            type: link
+            url: 'https://121070.seu2.cleverreach.com/m/14141611/0-d234a2f09557ef527dc744d4bea36283ce7249ec4a863b3969a94071faef7c51d847c60e2eac96c8702606207be761d1'
+            text: hier
+          redirectInfo: null
+          analyticsInfo: null
+          matches:
+            cleverreach:
+              providerId: cleverreach
+              name: webview
+              isUserTracking: true
+              noRedirectCheck: false
+        -
+          urlItem:
+            type: link
+            url: 'mailto:news.asylforum@diakonie-freiburg.de'
+            text: Email
+          redirectInfo: null
+          analyticsInfo: null
+          matches: {  }
+        -
+          urlItem:
+            type: link
+            url: 'https://example.com/#Akteur'
+            text: 'Aktuelles von den Akteur*innen'
+          redirectInfo: null
+          analyticsInfo: null
+          matches: {  }
+        -
+          urlItem:
+            type: link
+            url: 'https://example.com/#Steckbrief'
+            text: 'Neu: Initiativen-Steckbrief'
+          redirectInfo: null
+          analyticsInfo: null
+          matches: {  }
+        -
+          urlItem:
+            type: link
+            url: 'https://example.com/#Termine'
+            text: 'Termine & Veranstaltungen'
+          redirectInfo: null
+          analyticsInfo: null
+          matches: {  }
+        -
+          urlItem:
+            type: link
+            url: 'https://example.com/#Fortbildung'
+            text: ' Fortbildungen & Qualifikationen'
+          redirectInfo: null
+          analyticsInfo: null
+          matches: {  }
+        -
+          urlItem:
+            type: link
+            url: 'https://example.com/#Ausblick'
+            text: Ausblick
+          redirectInfo: null
+          analyticsInfo: null
+          matches: {  }
+        -
+          urlItem:
+            type: link
+            url: 'https://example.com/#Datenschutz'
+            text: 'Datenschutz & Impressum'
+          redirectInfo: null
+          analyticsInfo: null
+          matches: {  }
+        -
+          urlItem:
+            type: link
+            url: 'https://example.com/#Uebersicht'
+            text: 'zurück zur Übersicht'
+          redirectInfo: null
+          analyticsInfo: null
+          matches: {  }
+        -
+          urlItem:
+            type: link
+            url: 'mailto:thomas.tritschler@stadt.freiburg.de'
+            text: Email
+          redirectInfo: null
+          analyticsInfo: null
+          matches: {  }
+        -
+          urlItem:
+            type: link
+            url: 'https://121070.seu2.cleverreach.com/c/79180030/b09ec13a504-ro9gus'
+            text: hier
+          redirectInfo: null
+          analyticsInfo: null
+          matches:
+            cleverreach:
+              providerId: cleverreach
+              name: spy-link
+              isUserTracking: true
+              noRedirectCheck: false
+        -
+          urlItem:
+            type: link
+            url: 'mailto:katrin.werkle@stadt.freiburg.de'
+            text: Email
+          redirectInfo: null
+          analyticsInfo: null
+          matches: {  }
+        -
+          urlItem:
+            type: link
+            url: 'mailto:fahrradwerkstatt@stadt.freiburg.de'
+            text: Email
+          redirectInfo: null
+          analyticsInfo: null
+          matches: {  }
+        -
+          urlItem:
+            type: link
+            url: 'mailto:Nadya.Sahutoglu@Stadt.Freiburg.de'
+            text: Email
+          redirectInfo: null
+          analyticsInfo: null
+          matches: {  }
+        -
+          urlItem:
+            type: link
+            url: 'mailto:gesundheitslotsen@caritas-freiburg.de'
+            text: 'Email,'
+          redirectInfo: null
+          analyticsInfo: null
+          matches: {  }
+        -
+          urlItem:
+            type: link
+            url: 'https://121070.seu2.cleverreach.com/c/79204308/b09ec13a504-ro9gus'
+            text: ' hier.'
+          redirectInfo: null
+          analyticsInfo: null
+          matches:
+            cleverreach:
+              providerId: cleverreach
+              name: spy-link
+              isUserTracking: true
+              noRedirectCheck: false
+        -
+          urlItem:
+            type: link
+            url: 'https://121070.seu2.cleverreach.com/c/79204309/b09ec13a504-ro9gus'
+            text: Website
+          redirectInfo: null
+          analyticsInfo: null
+          matches:
+            cleverreach:
+              providerId: cleverreach
+              name: spy-link
+              isUserTracking: true
+              noRedirectCheck: false
+        -
+          urlItem:
+            type: link
+            url: 'mailto:post@interkulturelles-theater.de'
+            text: Email
+          redirectInfo: null
+          analyticsInfo: null
+          matches: {  }
+        -
+          urlItem:
+            type: link
+            url: 'https://121070.seu2.cleverreach.com/c/79211447/b09ec13a504-ro9gus'
+            text: Website
+          redirectInfo: null
+          analyticsInfo: null
+          matches:
+            cleverreach:
+              providerId: cleverreach
+              name: spy-link
+              isUserTracking: true
+              noRedirectCheck: false
+        -
+          urlItem:
+            type: link
+            url: 'https://121070.seu2.cleverreach.com/c/79189433/b09ec13a504-ro9gus'
+            text: ''
+          redirectInfo: null
+          analyticsInfo: null
+          matches:
+            cleverreach:
+              providerId: cleverreach
+              name: spy-link
+              isUserTracking: true
+              noRedirectCheck: false
+        -
+          urlItem:
+            type: link
+            url: 'https://example.com/#'
+            text: ''
+          redirectInfo: null
+          analyticsInfo: null
+          matches: {  }
+        -
+          urlItem:
+            type: link
+            url: 'https://121070.seu2.cleverreach.com/c/79188341/b09ec13a504-ro9gus'
+            text: Website
+          redirectInfo: null
+          analyticsInfo: null
+          matches:
+            cleverreach:
+              providerId: cleverreach
+              name: spy-link
+              isUserTracking: true
+              noRedirectCheck: false
+        -
+          urlItem:
+            type: link
+            url: 'mailto:veranstaltung@wegweiser-bildung.de'
+            text: ' (Email)'
+          redirectInfo: null
+          analyticsInfo: null
+          matches: {  }
+        -
+          urlItem:
+            type: link
+            url: 'mailto:Ilona.mueller@caritas-freiburg.de'
+            text: 'Ilona Müller'
+          redirectInfo: null
+          analyticsInfo: null
+          matches: {  }
+        -
+          urlItem:
+            type: link
+            url: 'https://121070.seu2.cleverreach.com/c/79204310/b09ec13a504-ro9gus'
+            text: Link
+          redirectInfo: null
+          analyticsInfo: null
+          matches:
+            cleverreach:
+              providerId: cleverreach
+              name: spy-link
+              isUserTracking: true
+              noRedirectCheck: false
+        -
+          urlItem:
+            type: link
+            url: 'https://121070.seu2.cleverreach.com/c/79204311/b09ec13a504-ro9gus'
+            text: hier
+          redirectInfo: null
+          analyticsInfo: null
+          matches:
+            cleverreach:
+              providerId: cleverreach
+              name: spy-link
+              isUserTracking: true
+              noRedirectCheck: false
+        -
+          urlItem:
+            type: link
+            url: 'https://121070.seu2.cleverreach.com/c/79180040/b09ec13a504-ro9gus'
+            text: Website
+          redirectInfo: null
+          analyticsInfo: null
+          matches:
+            cleverreach:
+              providerId: cleverreach
+              name: spy-link
+              isUserTracking: true
+              noRedirectCheck: false
+        -
+          urlItem:
+            type: link
+            url: 'mailto:magdalena.koch@caritas-freiburg.de'
+            text: Email
+          redirectInfo: null
+          analyticsInfo: null
+          matches: {  }
+        -
+          urlItem:
+            type: link
+            url: 'mailto:neumann@vhs-freiburg.de'
+            text: Email
+          redirectInfo: null
+          analyticsInfo: null
+          matches: {  }
+        -
+          urlItem:
+            type: link
+            url: 'mailto:koordination.familienpaten@kinderschutzbund-freiburg.de'
+            text: Email
+          redirectInfo: null
+          analyticsInfo: null
+          matches: {  }
+        -
+          urlItem:
+            type: link
+            url: 'https://121070.seu2.cleverreach.com/c/79180041/b09ec13a504-ro9gus'
+            text: hier
+          redirectInfo: null
+          analyticsInfo: null
+          matches:
+            cleverreach:
+              providerId: cleverreach
+              name: spy-link
+              isUserTracking: true
+              noRedirectCheck: false
+        -
+          urlItem:
+            type: link
+            url: 'https://121070.seu2.cleverreach.com/c/79180042/b09ec13a504-ro9gus'
+            text: hier
+          redirectInfo: null
+          analyticsInfo: null
+          matches:
+            cleverreach:
+              providerId: cleverreach
+              name: spy-link
+              isUserTracking: true
+              noRedirectCheck: false
+        -
+          urlItem:
+            type: link
+            url: 'mailto:breiholz@diakonie-suedwest.de'
+            text: Email
+          redirectInfo: null
+          analyticsInfo: null
+          matches: {  }
+        -
+          urlItem:
+            type: link
+            url: 'mailto:quartiersarbeit-mooswald@caritas-freiburg.de'
+            text: Email
+          redirectInfo: null
+          analyticsInfo: null
+          matches: {  }
+        -
+          urlItem:
+            type: link
+            url: 'https://121070.seu2.cleverreach.com/c/79180043/b09ec13a504-ro9gus'
+            text: Website
+          redirectInfo: null
+          analyticsInfo: null
+          matches:
+            cleverreach:
+              providerId: cleverreach
+              name: spy-link
+              isUserTracking: true
+              noRedirectCheck: false
+        -
+          urlItem:
+            type: link
+            url: 'https://121070.seu2.cleverreach.com/c/79180044/b09ec13a504-ro9gus'
+            text: 'genaue Termine auf der Website'
+          redirectInfo: null
+          analyticsInfo: null
+          matches:
+            cleverreach:
+              providerId: cleverreach
+              name: spy-link
+              isUserTracking: true
+              noRedirectCheck: false
+        -
+          urlItem:
+            type: link
+            url: 'mailto:stefanie.koch@zlev.de'
+            text: Email
+          redirectInfo: null
+          analyticsInfo: null
+          matches: {  }
+        -
+          urlItem:
+            type: link
+            url: 'https://121070.seu2.cleverreach.com/c/79180045/b09ec13a504-ro9gus'
+            text: Website
+          redirectInfo: null
+          analyticsInfo: null
+          matches:
+            cleverreach:
+              providerId: cleverreach
+              name: spy-link
+              isUserTracking: true
+              noRedirectCheck: false
+        -
+          urlItem:
+            type: link
+            url: 'https://121070.seu2.cleverreach.com/c/79180046/b09ec13a504-ro9gus'
+            text: Website
+          redirectInfo: null
+          analyticsInfo: null
+          matches:
+            cleverreach:
+              providerId: cleverreach
+              name: spy-link
+              isUserTracking: true
+              noRedirectCheck: false
+        -
+          urlItem:
+            type: link
+            url: 'mailto:orchesterconanima@gmx.de'
+            text: Email
+          redirectInfo: null
+          analyticsInfo: null
+          matches: {  }
+        -
+          urlItem:
+            type: link
+            url: 'https://121070.seu2.cleverreach.com/c/79204312/b09ec13a504-ro9gus'
+            text: hier
+          redirectInfo: null
+          analyticsInfo: null
+          matches:
+            cleverreach:
+              providerId: cleverreach
+              name: spy-link
+              isUserTracking: true
+              noRedirectCheck: false
+        -
+          urlItem:
+            type: link
+            url: 'https://121070.seu2.cleverreach.com/c/79190364/b09ec13a504-ro9gus'
+            text: Website
+          redirectInfo: null
+          analyticsInfo: null
+          matches:
+            cleverreach:
+              providerId: cleverreach
+              name: spy-link
+              isUserTracking: true
+              noRedirectCheck: false
+        -
+          urlItem:
+            type: link
+            url: 'https://121070.seu2.cleverreach.com/c/79204313/b09ec13a504-ro9gus'
+            text: Link
+          redirectInfo: null
+          analyticsInfo: null
+          matches:
+            cleverreach:
+              providerId: cleverreach
+              name: spy-link
+              isUserTracking: true
+              noRedirectCheck: false
+        -
+          urlItem:
+            type: link
+            url: 'https://121070.seu2.cleverreach.com/c/79204314/b09ec13a504-ro9gus'
+            text: website
+          redirectInfo: null
+          analyticsInfo: null
+          matches:
+            cleverreach:
+              providerId: cleverreach
+              name: spy-link
+              isUserTracking: true
+              noRedirectCheck: false
+        -
+          urlItem:
+            type: link
+            url: 'mailto:info@fluechtlingsrat-bw.de'
+            text: Email
+          redirectInfo: null
+          analyticsInfo: null
+          matches: {  }
+        -
+          urlItem:
+            type: link
+            url: 'https://121070.seu2.cleverreach.com/c/79204315/b09ec13a504-ro9gus'
+            text: 'Website der Evang. Erwachsenenbildung'
+          redirectInfo: null
+          analyticsInfo: null
+          matches:
+            cleverreach:
+              providerId: cleverreach
+              name: spy-link
+              isUserTracking: true
+              noRedirectCheck: false
+        -
+          urlItem:
+            type: link
+            url: 'https://121070.seu2.cleverreach.com/c/79204316/b09ec13a504-ro9gus'
+            text: 'grundlegende Hinweise'
+          redirectInfo: null
+          analyticsInfo: null
+          matches:
+            cleverreach:
+              providerId: cleverreach
+              name: spy-link
+              isUserTracking: true
+              noRedirectCheck: false
+        -
+          urlItem:
+            type: link
+            url: 'https://121070.seu2.cleverreach.com/c/79204317/b09ec13a504-ro9gus'
+            text: FAQs
+          redirectInfo: null
+          analyticsInfo: null
+          matches:
+            cleverreach:
+              providerId: cleverreach
+              name: spy-link
+              isUserTracking: true
+              noRedirectCheck: false
+        -
+          urlItem:
+            type: link
+            url: 'https://121070.seu2.cleverreach.com/c/79204318/b09ec13a504-ro9gus'
+            text: Übersichtspapier
+          redirectInfo: null
+          analyticsInfo: null
+          matches:
+            cleverreach:
+              providerId: cleverreach
+              name: spy-link
+              isUserTracking: true
+              noRedirectCheck: false
+        -
+          urlItem:
+            type: link
+            url: 'https://121070.seu2.cleverreach.com/c/79204319/b09ec13a504-ro9gus'
+            text: Checkliste
+          redirectInfo: null
+          analyticsInfo: null
+          matches:
+            cleverreach:
+              providerId: cleverreach
+              name: spy-link
+              isUserTracking: true
+              noRedirectCheck: false
+        -
+          urlItem:
+            type: link
+            url: 'https://121070.seu2.cleverreach.com/c/79204320/b09ec13a504-ro9gus'
+            text: Plattform
+          redirectInfo: null
+          analyticsInfo: null
+          matches:
+            cleverreach:
+              providerId: cleverreach
+              name: spy-link
+              isUserTracking: true
+              noRedirectCheck: false
+        -
+          urlItem:
+            type: link
+            url: 'https://121070.seu2.cleverreach.com/c/79204321/b09ec13a504-ro9gus'
+            text: 'Website des NZFH mit Unterseiten auf Deutsch, Englisch, Russisch und Ukrainisch'
+          redirectInfo: null
+          analyticsInfo: null
+          matches:
+            cleverreach:
+              providerId: cleverreach
+              name: spy-link
+              isUserTracking: true
+              noRedirectCheck: false
+        -
+          urlItem:
+            type: link
+            url: 'https://121070.seu2.cleverreach.com/c/79211507/b09ec13a504-ro9gus'
+            text: Website
+          redirectInfo: null
+          analyticsInfo: null
+          matches:
+            cleverreach:
+              providerId: cleverreach
+              name: spy-link
+              isUserTracking: true
+              noRedirectCheck: false
+        -
+          urlItem:
+            type: link
+            url: 'https://121070.seu2.cleverreach.com/c/79204323/b09ec13a504-ro9gus'
+            text: Website
+          redirectInfo: null
+          analyticsInfo: null
+          matches:
+            cleverreach:
+              providerId: cleverreach
+              name: spy-link
+              isUserTracking: true
+              noRedirectCheck: false
+        -
+          urlItem:
+            type: link
+            url: 'https://121070.seu2.cleverreach.com/c/79180049/b09ec13a504-ro9gus'
+            text: hier
+          redirectInfo: null
+          analyticsInfo: null
+          matches:
+            cleverreach:
+              providerId: cleverreach
+              name: spy-link
+              isUserTracking: true
+              noRedirectCheck: false
+        -
+          urlItem:
+            type: link
+            url: 'https://121070.seu2.cleverreach.com/c/79180050/b09ec13a504-ro9gus'
+            text: 'hier '
+          redirectInfo: null
+          analyticsInfo: null
+          matches:
+            cleverreach:
+              providerId: cleverreach
+              name: spy-link
+              isUserTracking: true
+              noRedirectCheck: false
+        -
+          urlItem:
+            type: link
+            url: 'https://121070.seu2.cleverreach.com/c/79180051/b09ec13a504-ro9gus'
+            text: 'Impressum '
+          redirectInfo: null
+          analyticsInfo: null
+          matches:
+            cleverreach:
+              providerId: cleverreach
+              name: spy-link
+              isUserTracking: true
+              noRedirectCheck: false
+        -
+          urlItem:
+            type: link
+            url: 'https://121070.seu2.cleverreach.com/c/79180052/b09ec13a504-ro9gus'
+            text: Datenschutzerklärung
+          redirectInfo: null
+          analyticsInfo: null
+          matches:
+            cleverreach:
+              providerId: cleverreach
+              name: spy-link
+              isUserTracking: true
+              noRedirectCheck: false
+        -
+          urlItem:
+            type: link
+            url: 'https://121070.seu2.cleverreach.com/c/79180053/b09ec13a504-ro9gus'
+            text: Website
+          redirectInfo: null
+          analyticsInfo: null
+          matches:
+            cleverreach:
+              providerId: cleverreach
+              name: spy-link
+              isUserTracking: true
+              noRedirectCheck: false
+        -
+          urlItem:
+            type: link
+            url: 'mailto:ack-freiburg@gmx.de'
+            text: Email
+          redirectInfo: null
+          analyticsInfo: null
+          matches: {  }
+        -
+          urlItem:
+            type: link
+            url: 'https://121070.seu2.cleverreach.com/c/79180054/b09ec13a504-ro9gus'
+            text: Website
+          redirectInfo: null
+          analyticsInfo: null
+          matches:
+            cleverreach:
+              providerId: cleverreach
+              name: spy-link
+              isUserTracking: true
+              noRedirectCheck: false
+        -
+          urlItem:
+            type: link
+            url: 'mailto:asylforum@caritas-freiburg.de'
+            text: Email
+          redirectInfo: null
+          analyticsInfo: null
+          matches: {  }
+        -
+          urlItem:
+            type: link
+            url: 'https://121070.seu2.cleverreach.com/c/79180055/b09ec13a504-ro9gus'
+            text: Website
+          redirectInfo: null
+          analyticsInfo: null
+          matches:
+            cleverreach:
+              providerId: cleverreach
+              name: spy-link
+              isUserTracking: true
+              noRedirectCheck: false
+        -
+          urlItem:
+            type: image
+            url: 'https://files.crsend.com/121000/121070/images/Newsletter_Grafik_150dpi.png'
+          redirectInfo: null
+          analyticsInfo: null
+          matches:
+            cleverreach:
+              providerId: cleverreach
+              name: referral
+              isUserTracking: false
+              noRedirectCheck: false
+        -
+          urlItem:
+            type: image
+            url: 'https://files.crsend.com/121000/121070/images/Capoa-Logo_200px.png'
+          redirectInfo: null
+          analyticsInfo: null
+          matches:
+            cleverreach:
+              providerId: cleverreach
+              name: referral
+              isUserTracking: false
+              noRedirectCheck: false
+        -
+          urlItem:
+            type: image
+            url: 'https://files.crsend.com/121000/121070/images/eddytor/m_14141611/6b625196409f6798b3c750090a171ecb.png'
+          redirectInfo: null
+          analyticsInfo: null
+          matches:
+            cleverreach:
+              providerId: cleverreach
+              name: referral
+              isUserTracking: false
+              noRedirectCheck: false
+        -
+          urlItem:
+            type: image
+            url: 'https://stats-eu2.crsend.com/stats/mc_121070_14141611_b09ec13a504-ro9gus.gif'
+          redirectInfo: null
+          analyticsInfo: null
+          matches:
+            cleverreach:
+              providerId: cleverreach
+              name: 'user tracking pixel'
+              isUserTracking: true
+              noRedirectCheck: false
+    cnameChainList:
+      cnaneChainsByDomain:
+        121070.seu2.cleverreach.com:
+          domain: 121070.seu2.cleverreach.com
+          aliasDomains: {  }
+        14141611.121070.crsend.com:
+          domain: 14141611.121070.crsend.com
+          aliasDomains: {  }
+        Stadt.Freiburg.de:
+          domain: Stadt.Freiburg.de
+          aliasDomains: {  }
+        bounce-eu2.crsend.com:
+          domain: bounce-eu2.crsend.com
+          aliasDomains: {  }
+        caritas-freiburg.de:
+          domain: caritas-freiburg.de
+          aliasDomains: {  }
+        diakonie-freiburg.de:
+          domain: diakonie-freiburg.de
+          aliasDomains: {  }
+        diakonie-suedwest.de:
+          domain: diakonie-suedwest.de
+          aliasDomains: {  }
+        example.com:
+          domain: example.com
+          aliasDomains: {  }
+        files.crsend.com:
+          domain: files.crsend.com
+          aliasDomains: {  }
+        fluechtlingsrat-bw.de:
+          domain: fluechtlingsrat-bw.de
+          aliasDomains: {  }
+        gmx.de:
+          domain: gmx.de
+          aliasDomains: {  }
+        interkulturelles-theater.de:
+          domain: interkulturelles-theater.de
+          aliasDomains: {  }
+        kinderschutzbund-freiburg.de:
+          domain: kinderschutzbund-freiburg.de
+          aliasDomains: {  }
+        stadt.freiburg.de:
+          domain: stadt.freiburg.de
+          aliasDomains: {  }
+        stats-eu2.crsend.com:
+          domain: stats-eu2.crsend.com
+          aliasDomains: {  }
+        vhs-freiburg.de:
+          domain: vhs-freiburg.de
+          aliasDomains: {  }
+        wegweiser-bildung.de:
+          domain: wegweiser-bildung.de
+          aliasDomains: {  }
+        zlev.de:
+          domain: zlev.de
+          aliasDomains: {  }

@@ -12,7 +12,14 @@ use Symfony\Component\DomCrawler\Crawler;
 
 final class UrlExtractor {
 
-  public function extract(Crawler $crawler): UrlItemBag {
+  public function extract(string $html): UrlItemBag {
+    // Do we need all the bells and whistles of HtmlPageCrawler and underlying
+    // DomCrawler? Not really, but seems to add some namespace and encoding
+    // safeguards that can not be wrong.
+    // Set URI (and implicitly basehref), so relative links do not throw.
+    $crawler = new Crawler($html, 'https://example.com/');
+
+
     $builder = new UrlItemBagBuilder();
     foreach ($crawler->filterXPath('//a[@href]')->links() as $link) {
       // @todo Add link text.

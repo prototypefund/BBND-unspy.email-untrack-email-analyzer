@@ -59,11 +59,7 @@ final class Analyzer {
 
       // Analyze body html.
       $html = $message->getHtmlContent();
-      // Do we need all the bells and whistles of HtmlPageCrawler and underlying
-      // DomCrawler? Not really, but seems to add some namespace and encoding
-      // safeguards that can not be wrong.
-      $crawler = new Crawler($html);
-      $urlItemBag = $this->urlExtractor->extract($crawler);
+      $urlItemBag = $this->urlExtractor->extract($html);
 
       // Now...
       // - match urls for Unsubscribe

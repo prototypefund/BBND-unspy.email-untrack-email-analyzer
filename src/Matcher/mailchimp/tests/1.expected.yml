@@ -11,10 +11,10 @@ fullResult:
     timeStamp: 1673950647
   verdict:
     matchLevel:
-      name: Likely
-      value: likely
+      name: Sure
+      value: sure
     serviceName: mailchimp
-    explanation: 'There are matches for well-known tracking patterns, but no provider matches header and body.'
+    explanation: 'Header and body matches point to exactly one provider.'
   details:
     dkimResult:
       status:

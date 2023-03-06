@@ -11,14 +11,7 @@ use Geeks4change\UntrackEmailAnalyzer\Analyzer\Verdict\ResultVerdict;
  *
  * @api Will be serialized in persistent storage, any change needs a migration.
  */
-final class FullResult {
-
-  public function __construct(
-    public readonly ListInfo      $listInfo,
-    public readonly MessageInfo   $messageInfo,
-    public readonly ResultVerdict $verdict,
-    public readonly ResultDetails $details,
-  ) {}
+final class FullResult extends Result {
 
   /**
    * Create persistent result from full result.

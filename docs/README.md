@@ -1,7 +1,16 @@
-# BBND Analyzer Docs
+# BBND Analyzer Technical Docs
 
-To describe:
-- DomainParser: Add caching wrapper for https://github.com/jeremykendall/php-domain-parser
-- DeterministicCache: Extract from w4c
-- GranularTimeCache
+## Installing
+Require this package via composer the usual way.
 
+## Stability
+This project is not considered stable and makes no BC promises. It is tightly coupled to the geeks4change/untrack_email_storage component, and any API changes there will be reflected here, and vice versa.
+
+## Contributing matchers
+Follow the steps in [matchers.md](matchers.md), and open a MR accordingly.
+
+# Contributing docs changes
+Feel free to open a MR.
+
+# Other contributions
+Before opening a MR, please open an issue to discuss if and how the contribution may be accepted.

@@ -14,3 +14,6 @@ Feel free to open a MR.
 
 # Other contributions
 Before opening a MR, please open an issue to discuss if and how the contribution may be accepted.
+
+# Architecture decisions
+See Architecture Decision Records (ADRs) in [decisions directory](decisions).
